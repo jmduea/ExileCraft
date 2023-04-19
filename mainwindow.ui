@@ -2,991 +2,3351 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>959</width>
-    <height>752</height>
+    <width>1129</width>
+    <height>739</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>2560</width>
+    <height>1440</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::ClickFocus</enum>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>ExileCraft</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="toolTipDuration">
+   <number>0</number>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="enabled">
     <bool>true</bool>
    </property>
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
+   <property name="maximumSize">
+    <size>
+     <width>2560</width>
+     <height>1440</height>
+    </size>
+   </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>-10</x>
-      <y>-10</y>
-      <width>971</width>
-      <height>721</height>
-     </rect>
+   <layout class="QGridLayout" name="gridLayout" columnminimumwidth="0">
+    <property name="leftMargin">
+     <number>0</number>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
+    <property name="topMargin">
+     <number>0</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QGroupBox {
-  border: none;
-  background-color: white;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  margin: 10px;
-}
-</string>
+    <property name="rightMargin">
+     <number>0</number>
     </property>
-    <property name="title">
-     <string>Crafting Project</string>
+    <property name="bottomMargin">
+     <number>0</number>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+    <property name="spacing">
+     <number>0</number>
     </property>
-    <widget class="QWidget" name="gridLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>140</y>
-       <width>291</width>
-       <height>361</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="ItemLayout">
-      <property name="sizeConstraint">
-       <enum>QLayout::SetFixedSize</enum>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
-      <property name="leftMargin">
-       <number>10</number>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
       </property>
-      <property name="topMargin">
-       <number>10</number>
+      <property name="maximumSize">
+       <size>
+        <width>2560</width>
+        <height>1440</height>
+       </size>
       </property>
-      <property name="rightMargin">
-       <number>10</number>
+      <property name="autoFillBackground">
+       <bool>true</bool>
       </property>
-      <property name="bottomMargin">
-       <number>10</number>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
-      <item>
-       <widget class="QLabel" name="Base">
-        <property name="lineWidth">
-         <number>0</number>
-        </property>
-        <property name="text">
-         <string>Item Base</string>
-        </property>
-        <property name="textFormat">
-         <enum>Qt::AutoText</enum>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="Quality">
-        <property name="text">
-         <string>Quality</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="BaseItemStat">
-        <property name="text">
-         <string>Base Item Stat</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="ILvl">
-        <property name="text">
-         <string>Item Level</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="Requirements">
-        <property name="text">
-         <string>Item Requirements</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QTextEdit" name="ItemAffixes">
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Item Prefixes/suffixes here&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QGroupBox" name="CraftingMods">
-     <property name="geometry">
-      <rect>
-       <x>410</x>
-       <y>140</y>
-       <width>471</width>
-       <height>361</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="title">
-      <string>Crafting Mods</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="flat">
-      <bool>false</bool>
-     </property>
-     <widget class="QWidget" name="verticalLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>30</y>
-        <width>471</width>
-        <height>331</height>
-       </rect>
+      <property name="title">
+       <string/>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="spacing">
-        <number>5</number>
-       </property>
-       <property name="sizeConstraint">
-        <enum>QLayout::SetDefaultConstraint</enum>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
        </property>
        <property name="topMargin">
-        <number>5</number>
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
        </property>
        <property name="bottomMargin">
-        <number>5</number>
+        <number>0</number>
        </property>
-       <item>
-        <widget class="QLineEdit" name="SearchBar">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="ItemCraftingBox">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-         <property name="text">
-          <string/>
+         <property name="autoFillBackground">
+          <bool>false</bool>
          </property>
-         <property name="frame">
-          <bool>true</bool>
+         <property name="title">
+          <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
          </property>
-         <property name="placeholderText">
-          <string>Search for an affix</string>
-         </property>
-         <property name="clearButtonEnabled">
-          <bool>true</bool>
-         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item row="2" column="1">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="1">
+           <widget class="QGroupBox" name="ItemInfoDisplay">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>418</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>537</width>
+              <height>418</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>537</width>
+              <height>319</height>
+             </size>
+            </property>
+            <property name="tabletTracking">
+             <bool>false</bool>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetFixedSize</enum>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>5</number>
+             </property>
+             <property name="verticalSpacing">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QWidget" name="ItemInfo" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>400</width>
+                 <height>318</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>400</width>
+                 <height>418</height>
+                </size>
+               </property>
+               <property name="mouseTracking">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">Border: 1px black;</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QFrame" name="ItemHeader">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>400</width>
+                    <height>54</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>400</width>
+                    <height>54</height>
+                   </size>
+                  </property>
+                  <property name="baseSize">
+                   <size>
+                    <width>400</width>
+                    <height>54</height>
+                   </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QFrame" name="ItemHeaderBackgroundFrame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>400</width>
+                       <height>54</height>
+                      </size>
+                     </property>
+                     <property name="lineWidth">
+                      <number>-3</number>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_2">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="ItemHeaderBackground">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>400</width>
+                          <height>54</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>400</width>
+                          <height>54</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap>C:/Users/spark/source/repos/ExileCraft/ExileCraft/assets/images/item-header-oth (1).png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="ItemInfoBox" native="true">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>400</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>400</width>
+                    <height>400</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(0, 0, 0);</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_5">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QWidget" name="Affixes" native="true">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>400</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>142</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: #827a6c;
+padding: 2px 10px;
+    font-size: 14px;
+    line-height: 14px;</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_3">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="Quality">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>-1</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">color: #827a6c;
+padding: 2px 10px;
+    font-size: 14px;
+    line-height: 14px;</string>
+                        </property>
+                        <property name="text">
+                         <string>Quality: {}</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="DamageStats">
+                        <property name="styleSheet">
+                         <string notr="true">color: #827a6c;
+padding: 2px 10px;
+    font-size: 14px;
+    line-height: 14px;</string>
+                        </property>
+                        <property name="text">
+                         <string>{} to {} {} Damage</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="CriticalStrikeChance">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">color: #827a6c;
+padding: 2px 10px;
+    font-size: 14px;
+    line-height: 14px;</string>
+                        </property>
+                        <property name="text">
+                         <string>Critical Strike Chance: {}</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="AttacksPerSecond">
+                        <property name="styleSheet">
+                         <string notr="true">color: #827a6c;
+padding: 2px 10px;
+    font-size: 14px;
+    line-height: 14px;</string>
+                        </property>
+                        <property name="text">
+                         <string>Attacks Per Second: {}</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="ItemSpacer1">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>400</width>
+                          <height>2</height>
+                         </size>
+                        </property>
+                        <property name="baseSize">
+                         <size>
+                          <width>0</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap>C:/Users/spark/source/repos/ExileCraft/ExileCraft/assets/images/item-sep.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>false</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="ItemLevel">
+                        <property name="text">
+                         <string>Item Level: {}</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="ItemRequirements">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">color: #827a6c;
+padding: 2px 10px;
+    font-size: 14px;
+    line-height: 14px;</string>
+                        </property>
+                        <property name="text">
+                         <string>Requires Level: {}, {} {}</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="ItemSpacer2">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>400</width>
+                          <height>2</height>
+                         </size>
+                        </property>
+                        <property name="baseSize">
+                         <size>
+                          <width>0</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap>C:/Users/spark/source/repos/ExileCraft/ExileCraft/assets/images/item-sep.png</pixmap>
+                        </property>
+                        <property name="scaledContents">
+                         <bool>false</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item alignment="Qt::AlignHCenter">
+                    <widget class="QWidget" name="Modifiers" native="true">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>400</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: #827a6c;
+padding: 2px 10px;
+    font-size: 14px;
+    line-height: 14px;</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_6">
+                      <item>
+                       <widget class="QLabel" name="PrefixInfo1">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>-1</pointsize>
+                          <italic>true</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>PrefixInfo1</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="Prefix1">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Prefix1</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="PrefixInfo2">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>-1</pointsize>
+                          <italic>true</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>PrefixInfo2</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_3">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Prefix2</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_7">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>-1</pointsize>
+                          <italic>true</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>PrefixInfo3</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_8">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Prefix3</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_14">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>-1</pointsize>
+                          <italic>true</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>SuffixInfo1</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="Suffix1">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Suffix1</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="SuffixInfo2">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>-1</pointsize>
+                          <italic>true</italic>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>SuffixInfo2</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="Suffix2">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Suffix2</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="SuffixInfo3">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <pointsize>-1</pointsize>
+                          <italic>true</italic>
+                         </font>
+                        </property>
+                        <property name="lineWidth">
+                         <number>1</number>
+                        </property>
+                        <property name="text">
+                         <string>SuffixInfo3</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_9">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Suffix3</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QGroupBox" name="CraftingMods">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>475</width>
+              <height>350</height>
+             </size>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <layout class="QGridLayout" name="gridLayout_6">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetDefaultConstraint</enum>
+               </property>
+               <property name="leftMargin">
+                <number>3</number>
+               </property>
+               <property name="topMargin">
+                <number>3</number>
+               </property>
+               <property name="rightMargin">
+                <number>3</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QLineEdit" name="SearchBar">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="frame">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Search for an affix</string>
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QTabWidget" name="ModTypes">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>469</width>
+                   <height>498</height>
+                  </size>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <property name="usesScrollButtons">
+                  <bool>true</bool>
+                 </property>
+                 <property name="documentMode">
+                  <bool>false</bool>
+                 </property>
+                 <property name="tabBarAutoHide">
+                  <bool>false</bool>
+                 </property>
+                 <widget class="QWidget" name="Prefixes">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <attribute name="title">
+                   <string>Prefixes</string>
+                  </attribute>
+                  <layout class="QGridLayout" name="gridLayout_7">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QScrollArea" name="scrollArea_4">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="autoFillBackground">
+                      <bool>false</bool>
+                     </property>
+                     <property name="sizeAdjustPolicy">
+                      <enum>QAbstractScrollArea::AdjustToContents</enum>
+                     </property>
+                     <property name="widgetResizable">
+                      <bool>true</bool>
+                     </property>
+                     <widget class="QWidget" name="scrollAreaWidgetContents_4">
+                      <property name="geometry">
+                       <rect>
+                        <x>0</x>
+                        <y>0</y>
+                        <width>253</width>
+                        <height>350</height>
+                       </rect>
+                      </property>
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="autoFillBackground">
+                       <bool>true</bool>
+                      </property>
+                      <widget class="QTreeWidget" name="treeWidget_3">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="geometry">
+                        <rect>
+                         <x>-5</x>
+                         <y>0</y>
+                         <width>261</width>
+                         <height>401</height>
+                        </rect>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::Box</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Sunken</enum>
+                       </property>
+                       <property name="sizeAdjustPolicy">
+                        <enum>QAbstractScrollArea::AdjustToContents</enum>
+                       </property>
+                       <property name="showDropIndicator" stdset="0">
+                        <bool>true</bool>
+                       </property>
+                       <property name="selectionBehavior">
+                        <enum>QAbstractItemView::SelectRows</enum>
+                       </property>
+                       <property name="uniformRowHeights">
+                        <bool>false</bool>
+                       </property>
+                       <property name="itemsExpandable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="animated">
+                        <bool>true</bool>
+                       </property>
+                       <property name="allColumnsShowFocus">
+                        <bool>false</bool>
+                       </property>
+                       <attribute name="headerVisible">
+                        <bool>false</bool>
+                       </attribute>
+                       <attribute name="headerHighlightSections">
+                        <bool>true</bool>
+                       </attribute>
+                       <column>
+                        <property name="text">
+                         <string>Prefixes</string>
+                        </property>
+                       </column>
+                       <item>
+                        <property name="text">
+                         <string>Base Modpool</string>
+                        </property>
+                        <property name="flags">
+                         <set>ItemIsSelectable|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Shaper</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Elder</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Crusader</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Hunter</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Warlord</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Redeemer</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Incursion</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Veiled</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Crafted</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Delve</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Essence</string>
+                        </property>
+                        <item>
+                         <property name="text">
+                          <string>New Subitem</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>New Subitem</string>
+                          </property>
+                         </item>
+                        </item>
+                       </item>
+                      </widget>
+                     </widget>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                 <widget class="QWidget" name="Suffixes">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
+                  <attribute name="title">
+                   <string>Suffixes</string>
+                  </attribute>
+                  <widget class="QScrollArea" name="scrollArea_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>461</width>
+                     <height>161</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="autoFillBackground">
+                    <bool>false</bool>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>459</width>
+                      <height>159</height>
+                     </rect>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="autoFillBackground">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QTreeWidget" name="treeWidget_2">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>461</width>
+                       <height>161</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Box</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Sunken</enum>
+                     </property>
+                     <property name="sizeAdjustPolicy">
+                      <enum>QAbstractScrollArea::AdjustIgnored</enum>
+                     </property>
+                     <property name="showDropIndicator" stdset="0">
+                      <bool>true</bool>
+                     </property>
+                     <property name="selectionBehavior">
+                      <enum>QAbstractItemView::SelectRows</enum>
+                     </property>
+                     <property name="uniformRowHeights">
+                      <bool>false</bool>
+                     </property>
+                     <property name="itemsExpandable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="animated">
+                      <bool>true</bool>
+                     </property>
+                     <property name="allColumnsShowFocus">
+                      <bool>false</bool>
+                     </property>
+                     <attribute name="headerVisible">
+                      <bool>false</bool>
+                     </attribute>
+                     <attribute name="headerHighlightSections">
+                      <bool>false</bool>
+                     </attribute>
+                     <column>
+                      <property name="text">
+                       <string>Prefixes</string>
+                      </property>
+                     </column>
+                     <item>
+                      <property name="text">
+                       <string>Base Modpool</string>
+                      </property>
+                      <property name="flags">
+                       <set>ItemIsSelectable|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Shaper</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Elder</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Crusader</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Hunter</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Warlord</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Redeemer</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Incursion</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Veiled</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Crafted</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Delve</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Essence</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                    </widget>
+                   </widget>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="Implicits">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <attribute name="title">
+                   <string>Implicits</string>
+                  </attribute>
+                  <widget class="QScrollArea" name="scrollArea_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>461</width>
+                     <height>161</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="autoFillBackground">
+                    <bool>false</bool>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="scrollAreaWidgetContents_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>459</width>
+                      <height>159</height>
+                     </rect>
+                    </property>
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="autoFillBackground">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QTreeWidget" name="treeWidget_4">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>461</width>
+                       <height>161</height>
+                      </rect>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::Box</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Sunken</enum>
+                     </property>
+                     <property name="sizeAdjustPolicy">
+                      <enum>QAbstractScrollArea::AdjustIgnored</enum>
+                     </property>
+                     <property name="showDropIndicator" stdset="0">
+                      <bool>true</bool>
+                     </property>
+                     <property name="selectionBehavior">
+                      <enum>QAbstractItemView::SelectRows</enum>
+                     </property>
+                     <property name="uniformRowHeights">
+                      <bool>false</bool>
+                     </property>
+                     <property name="itemsExpandable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="animated">
+                      <bool>true</bool>
+                     </property>
+                     <property name="allColumnsShowFocus">
+                      <bool>false</bool>
+                     </property>
+                     <attribute name="headerVisible">
+                      <bool>false</bool>
+                     </attribute>
+                     <attribute name="headerHighlightSections">
+                      <bool>false</bool>
+                     </attribute>
+                     <column>
+                      <property name="text">
+                       <string>Implicits</string>
+                      </property>
+                     </column>
+                     <item>
+                      <property name="text">
+                       <string>Vaal Implicits</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Searing Exarch</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Eater Of Worlds</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                    </widget>
+                   </widget>
+                  </widget>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="0" column="1" rowspan="2">
+              <widget class="QTabWidget" name="tabWidget">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="currentIndex">
+                <number>1</number>
+               </property>
+               <widget class="QWidget" name="CraftingHistory">
+                <attribute name="title">
+                 <string>History</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="Spending">
+                <attribute name="title">
+                 <string>Spending</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="ExportData">
+                <attribute name="title">
+                 <string>Export</string>
+                </attribute>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="1">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="2">
+           <widget class="QWidget" name="ItemView" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>128</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>145</width>
+              <height>418</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="ItemBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>128</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>128</width>
+                 <height>229</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>assets/images/item_box.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignHCenter|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="CraftingButton">
+               <property name="maximumSize">
+                <size>
+                 <width>128</width>
+                 <height>39</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>assets/images/craftbtn.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignHCenter|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="ItemAInfo">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignHCenter|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="3">
+           <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </widget>
        </item>
-       <item>
-        <widget class="QTabWidget" name="ModTypes">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="ButtonBar">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
          <property name="maximumSize">
           <size>
-           <width>469</width>
-           <height>498</height>
+           <width>2566</width>
+           <height>150</height>
           </size>
          </property>
-         <property name="autoFillBackground">
-          <bool>false</bool>
-         </property>
-         <property name="currentIndex">
-          <number>1</number>
-         </property>
-         <property name="usesScrollButtons">
-          <bool>true</bool>
-         </property>
-         <property name="documentMode">
-          <bool>false</bool>
-         </property>
-         <property name="tabBarAutoHide">
-          <bool>false</bool>
-         </property>
-         <widget class="QWidget" name="tab">
-          <attribute name="title">
-           <string>Page</string>
-          </attribute>
-          <widget class="QScrollArea" name="scrollArea_4">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>461</width>
-             <height>261</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="autoFillBackground">
-            <bool>false</bool>
-           </property>
-           <property name="widgetResizable">
-            <bool>true</bool>
-           </property>
-           <widget class="QWidget" name="scrollAreaWidgetContents_4">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>0</y>
-              <width>459</width>
-              <height>259</height>
-             </rect>
+         <layout class="QGridLayout" name="CraftingButtonGrid" columnstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>1</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="4">
+           <widget class="QPushButton" name="RegalButton">
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
             </property>
-            <property name="autoFillBackground">
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Upgrades a Magic Item to a Rare Item</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_regal.png</normaloff>:/icons/assets/images/method_regal.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
              <bool>true</bool>
             </property>
-            <widget class="QTreeWidget" name="treeWidget_3">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>461</width>
-               <height>261</height>
-              </rect>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::Box</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <property name="sizeAdjustPolicy">
-              <enum>QAbstractScrollArea::AdjustIgnored</enum>
-             </property>
-             <property name="showDropIndicator" stdset="0">
-              <bool>true</bool>
-             </property>
-             <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectRows</enum>
-             </property>
-             <property name="uniformRowHeights">
-              <bool>false</bool>
-             </property>
-             <property name="itemsExpandable">
-              <bool>true</bool>
-             </property>
-             <property name="animated">
-              <bool>true</bool>
-             </property>
-             <property name="allColumnsShowFocus">
-              <bool>false</bool>
-             </property>
-             <attribute name="headerVisible">
-              <bool>false</bool>
-             </attribute>
-             <attribute name="headerHighlightSections">
-              <bool>false</bool>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>Prefixes</string>
-              </property>
-             </column>
-             <item>
-              <property name="text">
-               <string>Base Modpool</string>
-              </property>
-              <property name="flags">
-               <set>ItemIsSelectable|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Shaper</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Elder</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Crusader</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Hunter</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Warlord</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Redeemer</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Incursion</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Veiled</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Crafted</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Delve</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Essence</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-            </widget>
            </widget>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="Suffixes">
-          <property name="autoFillBackground">
-           <bool>false</bool>
-          </property>
-          <attribute name="title">
-           <string>Suffixes</string>
-          </attribute>
-          <widget class="QScrollArea" name="scrollArea_2">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>461</width>
-             <height>261</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="autoFillBackground">
-            <bool>false</bool>
-           </property>
-           <property name="widgetResizable">
-            <bool>true</bool>
-           </property>
-           <widget class="QWidget" name="scrollAreaWidgetContents_2">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>0</y>
-              <width>459</width>
-              <height>259</height>
-             </rect>
+          </item>
+          <item row="1" column="13">
+           <widget class="QPushButton" name="SyndicateButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
             </property>
-            <widget class="QTreeWidget" name="treeWidget_2">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>461</width>
-               <height>261</height>
-              </rect>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::Box</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <property name="sizeAdjustPolicy">
-              <enum>QAbstractScrollArea::AdjustIgnored</enum>
-             </property>
-             <property name="showDropIndicator" stdset="0">
-              <bool>true</bool>
-             </property>
-             <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectRows</enum>
-             </property>
-             <property name="uniformRowHeights">
-              <bool>false</bool>
-             </property>
-             <property name="itemsExpandable">
-              <bool>true</bool>
-             </property>
-             <property name="animated">
-              <bool>true</bool>
-             </property>
-             <property name="allColumnsShowFocus">
-              <bool>false</bool>
-             </property>
-             <attribute name="headerVisible">
-              <bool>false</bool>
-             </attribute>
-             <attribute name="headerHighlightSections">
-              <bool>false</bool>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>Prefixes</string>
-              </property>
-             </column>
-             <item>
-              <property name="text">
-               <string>Base Modpool</string>
-              </property>
-              <property name="flags">
-               <set>ItemIsSelectable|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled|ItemIsTristate</set>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Shaper</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Elder</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Crusader</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Hunter</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Warlord</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Redeemer</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Incursion</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Veiled</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Crafted</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Delve</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Essence</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-            </widget>
-           </widget>
-          </widget>
-         </widget>
-         <widget class="QWidget" name="Implicits">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <attribute name="title">
-           <string>Implicits</string>
-          </attribute>
-          <widget class="QScrollArea" name="scrollArea_3">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>461</width>
-             <height>261</height>
-            </rect>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="autoFillBackground">
-            <bool>false</bool>
-           </property>
-           <property name="widgetResizable">
-            <bool>true</bool>
-           </property>
-           <widget class="QWidget" name="scrollAreaWidgetContents_3">
-            <property name="geometry">
-             <rect>
-              <x>0</x>
-              <y>0</y>
-              <width>459</width>
-              <height>259</height>
-             </rect>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
             </property>
-            <property name="autoFillBackground">
+            <property name="toolTip">
+             <string>Syndicate</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/sim_syndicate.png</normaloff>:/icons/assets/images/sim_syndicate.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
              <bool>true</bool>
             </property>
-            <widget class="QTreeWidget" name="treeWidget_4">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>461</width>
-               <height>261</height>
-              </rect>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::Box</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Sunken</enum>
-             </property>
-             <property name="sizeAdjustPolicy">
-              <enum>QAbstractScrollArea::AdjustIgnored</enum>
-             </property>
-             <property name="showDropIndicator" stdset="0">
-              <bool>true</bool>
-             </property>
-             <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectRows</enum>
-             </property>
-             <property name="uniformRowHeights">
-              <bool>false</bool>
-             </property>
-             <property name="itemsExpandable">
-              <bool>true</bool>
-             </property>
-             <property name="animated">
-              <bool>true</bool>
-             </property>
-             <property name="allColumnsShowFocus">
-              <bool>false</bool>
-             </property>
-             <attribute name="headerVisible">
-              <bool>false</bool>
-             </attribute>
-             <attribute name="headerHighlightSections">
-              <bool>false</bool>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>Implicits</string>
-              </property>
-             </column>
-             <item>
-              <property name="text">
-               <string>Vaal Implicits</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Searing Exarch</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-             <item>
-              <property name="text">
-               <string>Eater Of Worlds</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>New Subitem</string>
-               </property>
-               <item>
-                <property name="text">
-                 <string>New Subitem</string>
-                </property>
-               </item>
-              </item>
-             </item>
-            </widget>
            </widget>
-          </widget>
-         </widget>
+          </item>
+          <item row="1" column="15">
+           <widget class="QPushButton" name="RecombinateButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Destroys two Items to create a new Item with a combination of their properties. Sometimes, the resultant Item is modified unpredictably</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/recombinate.png</normaloff>:/icons/assets/images/recombinate.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="12">
+           <widget class="QPushButton" name="LocusButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Potently corrupts an Item, modifying it drastically and unpredictably</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/locus.png</normaloff>:/icons/assets/images/locus.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QPushButton" name="FracturingButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Fractures a random modifier on a Rare Item with at least 4 modifiers, locking it in place.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_fracturing.png</normaloff>:/icons/assets/images/method_fracturing.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QPushButton" name="AlchemyButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Upgrades a Normal Item to a Rare Item</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_alchemy.png</normaloff>:/icons/assets/images/method_alchemy.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="9">
+           <widget class="QPushButton" name="CatalystButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Catalysts</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/acatalyst.png</normaloff>:/icons/assets/images/acatalyst.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="15">
+           <widget class="QPushButton" name="DivineButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Randomises the numeric values of the random properties on an Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_divine.png</normaloff>:/icons/assets/images/method_divine.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="AugmentationButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Magic Item with a new random property</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_augmentation.png</normaloff>:/icons/assets/images/method_augmentation.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="10">
+           <widget class="QPushButton" name="BeastButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Beast crafting</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_imprint.png</normaloff>:/icons/assets/images/method_imprint.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="MavenButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Removes one Influenced modifier from an Item with at least two Influenced modifiers and upgrades another Influenced modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_maven.png</normaloff>:/icons/assets/images/method_maven.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="7">
+           <widget class="QPushButton" name="ExaltedButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Rare Item with a new random property</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_exalted.png</normaloff>:/icons/assets/images/method_exalted.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="9">
+           <widget class="QPushButton" name="AnnulButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Removes a random modifier from an Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_annul.png</normaloff>:/icons/assets/images/method_annul.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QPushButton" name="VaalButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Corrupts an Item, modifying it unpredictably</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_vaal.png</normaloff>:/icons/assets/images/method_vaal.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="VeiledChaosButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Reforges a Rare Item with new random modifiers, including a Veiled modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_veiled.png</normaloff>:/icons/assets/images/method_veiled.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="13">
+           <widget class="QPushButton" name="WarlordButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Rare Item with a new Warlord modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_warlord.png</normaloff>:/icons/assets/images/method_warlord.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="10">
+           <widget class="QPushButton" name="CrusaderButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Rare Item with a new Crusader modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_crusader.png</normaloff>:/icons/assets/images/method_crusader.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="6">
+           <widget class="QPushButton" name="FossilButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Fossil crafting</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_fossil.png</normaloff>:/icons/assets/images/method_fossil.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="AlterationButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Reforges a Magic Item with new random properties</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_alteration.png</normaloff>:/icons/assets/images/method_alteration.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QPushButton" name="ChaosButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Reforges a Rare Item with new random modifiers</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_chaos.png</normaloff>:/icons/assets/images/method_chaos.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="14">
+           <widget class="QPushButton" name="VendorButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Vendor recipes</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/vendor.png</normaloff>:/icons/assets/images/vendor.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="TransmuteButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Upgrades a Normal Item to a Magic Item</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_transmute.png</normaloff>:/icons/assets/images/method_transmute.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="12">
+           <widget class="QPushButton" name="RedeenerButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Rare Item with a new Redeemer modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_redeemer.png</normaloff>:/icons/assets/images/method_redeemer.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="11">
+           <widget class="QPushButton" name="HunterButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Rare Item with a new Hunter modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_hunter.png</normaloff>:/icons/assets/images/method_hunter.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="WokeButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Destroys an Item, applying it's Influence to another of the same Item class. The second Item is reforged as a Rare Item with both Influence types and new modifiers</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_woke.png</normaloff>:/icons/assets/images/method_woke.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="7">
+           <widget class="QPushButton" name="HarvestButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Harvest crafting</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/aharvest.png</normaloff>:/icons/assets/images/aharvest.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="16">
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="8">
+           <widget class="QPushButton" name="ScourButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Removes all properties from an Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_scour.png</normaloff>:/icons/assets/images/method_scour.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="8">
+           <widget class="QPushButton" name="EssenceButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Essences</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_essence.png</normaloff>:/icons/assets/images/method_essence.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="14">
+           <widget class="QPushButton" name="BlessedButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Randomises the numeric values of the Implicit properties of an Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_blessed.png</normaloff>:/icons/assets/images/method_blessed.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="11">
+           <widget class="QPushButton" name="EldritchButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Eldritch crafting</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/EldritchChaosOrb.png</normaloff>:/icons/assets/images/EldritchChaosOrb.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QWidget" name="CraftingOptionsExtended" native="true">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>45</width>
+           <height>45</height>
+          </size>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
      </widget>
-    </widget>
-   </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>959</width>
+     <width>1129</width>
      <height>26</height>
     </rect>
    </property>
@@ -1070,6 +3430,26 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
  </widget>
- <resources/>
+ <layoutdefault spacing="0" margin="0"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>5</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>5</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
 </ui>
