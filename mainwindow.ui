@@ -147,7 +147,7 @@
        <property name="spacing">
         <number>10</number>
        </property>
-       <item row="2" column="0">
+       <item row="1" column="0">
         <widget class="QGroupBox" name="ItemCraftingBox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
@@ -766,7 +766,7 @@ padding: 2px 10px;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_3">
+                       <widget class="QLabel" name="Prefix2">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
@@ -782,7 +782,7 @@ padding: 2px 10px;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_7">
+                       <widget class="QLabel" name="PrefixInfo3">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
@@ -804,7 +804,7 @@ padding: 2px 10px;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_8">
+                       <widget class="QLabel" name="Prefix3">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
@@ -820,7 +820,7 @@ padding: 2px 10px;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_14">
+                       <widget class="QLabel" name="SuffixInfo1">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
@@ -933,7 +933,7 @@ padding: 2px 10px;
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="label_9">
+                       <widget class="QLabel" name="Suffix3">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
@@ -1121,7 +1121,7 @@ padding: 2px 10px;
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>253</width>
+                        <width>459</width>
                         <height>350</height>
                        </rect>
                       </property>
@@ -1832,34 +1832,6 @@ padding: 2px 10px;
                </item>
               </layout>
              </item>
-             <item row="0" column="1" rowspan="2">
-              <widget class="QTabWidget" name="tabWidget">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="currentIndex">
-                <number>1</number>
-               </property>
-               <widget class="QWidget" name="CraftingHistory">
-                <attribute name="title">
-                 <string>History</string>
-                </attribute>
-               </widget>
-               <widget class="QWidget" name="Spending">
-                <attribute name="title">
-                 <string>Spending</string>
-                </attribute>
-               </widget>
-               <widget class="QWidget" name="ExportData">
-                <attribute name="title">
-                 <string>Export</string>
-                </attribute>
-               </widget>
-              </widget>
-             </item>
             </layout>
            </widget>
           </item>
@@ -2075,7 +2047,7 @@ padding: 2px 10px;
            <height>150</height>
           </size>
          </property>
-         <layout class="QGridLayout" name="CraftingButtonGrid" columnstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+         <layout class="QGridLayout" name="CraftingButtonGrid" columnstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
           <property name="sizeConstraint">
            <enum>QLayout::SetDefaultConstraint</enum>
           </property>
@@ -2094,43 +2066,8 @@ padding: 2px 10px;
           <property name="spacing">
            <number>0</number>
           </property>
-          <item row="0" column="4">
-           <widget class="QPushButton" name="RegalButton">
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Upgrades a Magic Item to a Rare Item</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_regal.png</normaloff>:/icons/assets/images/method_regal.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="13">
-           <widget class="QPushButton" name="SyndicateButton">
+          <item row="1" column="2">
+           <widget class="QPushButton" name="WokeButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -2147,128 +2084,14 @@ padding: 2px 10px;
              <cursorShape>OpenHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Syndicate</string>
+             <string>Destroys an Item, applying it's Influence to another of the same Item class. The second Item is reforged as a Rare Item with both Influence types and new modifiers</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/sim_syndicate.png</normaloff>:/icons/assets/images/sim_syndicate.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="15">
-           <widget class="QPushButton" name="RecombinateButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Destroys two Items to create a new Item with a combination of their properties. Sometimes, the resultant Item is modified unpredictably</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/recombinate.png</normaloff>:/icons/assets/images/recombinate.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="12">
-           <widget class="QPushButton" name="LocusButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Potently corrupts an Item, modifying it drastically and unpredictably</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/locus.png</normaloff>:/icons/assets/images/locus.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="5">
-           <widget class="QPushButton" name="FracturingButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Fractures a random modifier on a Rare Item with at least 4 modifiers, locking it in place.</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_fracturing.png</normaloff>:/icons/assets/images/method_fracturing.png</iconset>
+              <normaloff>:/icons/assets/images/method_woke.png</normaloff>:/icons/assets/images/method_woke.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -2322,8 +2145,8 @@ padding: 2px 10px;
             </property>
            </widget>
           </item>
-          <item row="1" column="9">
-           <widget class="QPushButton" name="CatalystButton">
+          <item row="1" column="11">
+           <widget class="QPushButton" name="EldritchButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -2340,14 +2163,14 @@ padding: 2px 10px;
              <cursorShape>OpenHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Catalysts</string>
+             <string>Eldritch crafting</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/acatalyst.png</normaloff>:/icons/assets/images/acatalyst.png</iconset>
+              <normaloff>:/icons/assets/images/EldritchChaosOrb.png</normaloff>:/icons/assets/images/EldritchChaosOrb.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -2360,8 +2183,8 @@ padding: 2px 10px;
             </property>
            </widget>
           </item>
-          <item row="0" column="15">
-           <widget class="QPushButton" name="DivineButton">
+          <item row="1" column="12">
+           <widget class="QPushButton" name="LocusButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -2378,14 +2201,14 @@ padding: 2px 10px;
              <cursorShape>OpenHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Randomises the numeric values of the random properties on an Item</string>
+             <string>Potently corrupts an Item, modifying it drastically and unpredictably</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_divine.png</normaloff>:/icons/assets/images/method_divine.png</iconset>
+              <normaloff>:/icons/assets/images/locus.png</normaloff>:/icons/assets/images/locus.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -2398,8 +2221,8 @@ padding: 2px 10px;
             </property>
            </widget>
           </item>
-          <item row="0" column="3">
-           <widget class="QPushButton" name="AugmentationButton">
+          <item row="0" column="12">
+           <widget class="QPushButton" name="RedeenerButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -2416,489 +2239,14 @@ padding: 2px 10px;
              <cursorShape>OpenHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Enchants a Magic Item with a new random property</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
+             <string>Enchants a Rare Item with a new Redeemer modifier</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_augmentation.png</normaloff>:/icons/assets/images/method_augmentation.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="10">
-           <widget class="QPushButton" name="BeastButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Beast crafting</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_imprint.png</normaloff>:/icons/assets/images/method_imprint.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QPushButton" name="MavenButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Removes one Influenced modifier from an Item with at least two Influenced modifiers and upgrades another Influenced modifier</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_maven.png</normaloff>:/icons/assets/images/method_maven.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="7">
-           <widget class="QPushButton" name="ExaltedButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Enchants a Rare Item with a new random property</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_exalted.png</normaloff>:/icons/assets/images/method_exalted.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="9">
-           <widget class="QPushButton" name="AnnulButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Removes a random modifier from an Item</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_annul.png</normaloff>:/icons/assets/images/method_annul.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="4">
-           <widget class="QPushButton" name="VaalButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Corrupts an Item, modifying it unpredictably</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_vaal.png</normaloff>:/icons/assets/images/method_vaal.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QPushButton" name="VeiledChaosButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Reforges a Rare Item with new random modifiers, including a Veiled modifier</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_veiled.png</normaloff>:/icons/assets/images/method_veiled.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="13">
-           <widget class="QPushButton" name="WarlordButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Enchants a Rare Item with a new Warlord modifier</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_warlord.png</normaloff>:/icons/assets/images/method_warlord.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="10">
-           <widget class="QPushButton" name="CrusaderButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Enchants a Rare Item with a new Crusader modifier</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_crusader.png</normaloff>:/icons/assets/images/method_crusader.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <spacer name="horizontalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="1" column="6">
-           <widget class="QPushButton" name="FossilButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Fossil crafting</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_fossil.png</normaloff>:/icons/assets/images/method_fossil.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QPushButton" name="AlterationButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Reforges a Magic Item with new random properties</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_alteration.png</normaloff>:/icons/assets/images/method_alteration.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="6">
-           <widget class="QPushButton" name="ChaosButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Reforges a Rare Item with new random modifiers</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_chaos.png</normaloff>:/icons/assets/images/method_chaos.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="14">
-           <widget class="QPushButton" name="VendorButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Vendor recipes</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/vendor.png</normaloff>:/icons/assets/images/vendor.png</iconset>
+              <normaloff>:/icons/assets/images/method_redeemer.png</normaloff>:/icons/assets/images/method_redeemer.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -2955,8 +2303,8 @@ padding: 2px 10px;
             </property>
            </widget>
           </item>
-          <item row="0" column="12">
-           <widget class="QPushButton" name="RedeenerButton">
+          <item row="1" column="13">
+           <widget class="QPushButton" name="SyndicateButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -2973,14 +2321,14 @@ padding: 2px 10px;
              <cursorShape>OpenHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Enchants a Rare Item with a new Redeemer modifier</string>
+             <string>Syndicate</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_redeemer.png</normaloff>:/icons/assets/images/method_redeemer.png</iconset>
+              <normaloff>:/icons/assets/images/sim_syndicate.png</normaloff>:/icons/assets/images/sim_syndicate.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -3031,8 +2379,8 @@ padding: 2px 10px;
             </property>
            </widget>
           </item>
-          <item row="1" column="2">
-           <widget class="QPushButton" name="WokeButton">
+          <item row="1" column="10">
+           <widget class="QPushButton" name="BeastButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -3049,14 +2397,14 @@ padding: 2px 10px;
              <cursorShape>OpenHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Destroys an Item, applying it's Influence to another of the same Item class. The second Item is reforged as a Rare Item with both Influence types and new modifiers</string>
+             <string>Beast crafting</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_woke.png</normaloff>:/icons/assets/images/method_woke.png</iconset>
+              <normaloff>:/icons/assets/images/method_imprint.png</normaloff>:/icons/assets/images/method_imprint.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -3069,8 +2417,8 @@ padding: 2px 10px;
             </property>
            </widget>
           </item>
-          <item row="1" column="7">
-           <widget class="QPushButton" name="HarvestButton">
+          <item row="1" column="6">
+           <widget class="QPushButton" name="FossilButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -3087,103 +2435,14 @@ padding: 2px 10px;
              <cursorShape>OpenHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Harvest crafting</string>
+             <string>Fossil crafting</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/aharvest.png</normaloff>:/icons/assets/images/aharvest.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="16">
-           <spacer name="horizontalSpacer_4">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="8">
-           <widget class="QPushButton" name="ScourButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Removes all properties from an Item</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_scour.png</normaloff>:/icons/assets/images/method_scour.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="8">
-           <widget class="QPushButton" name="EssenceButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>45</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>OpenHandCursor</cursorShape>
-            </property>
-            <property name="toolTip">
-             <string>Essences</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/method_essence.png</normaloff>:/icons/assets/images/method_essence.png</iconset>
+              <normaloff>:/icons/assets/images/method_fossil.png</normaloff>:/icons/assets/images/method_fossil.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -3234,8 +2493,81 @@ padding: 2px 10px;
             </property>
            </widget>
           </item>
-          <item row="1" column="11">
-           <widget class="QPushButton" name="EldritchButton">
+          <item row="0" column="4">
+           <widget class="QPushButton" name="RegalButton">
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Upgrades a Magic Item to a Rare Item</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_regal.png</normaloff>:/icons/assets/images/method_regal.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="VeiledChaosButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Reforges a Rare Item with new random modifiers, including a Veiled modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_veiled.png</normaloff>:/icons/assets/images/method_veiled.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="7">
+           <widget class="QPushButton" name="ExaltedButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -3252,14 +2584,14 @@ padding: 2px 10px;
              <cursorShape>OpenHandCursor</cursorShape>
             </property>
             <property name="toolTip">
-             <string>Eldritch crafting</string>
+             <string>Enchants a Rare Item with a new random property</string>
             </property>
             <property name="text">
              <string/>
             </property>
             <property name="icon">
              <iconset resource="resources.qrc">
-              <normaloff>:/icons/assets/images/EldritchChaosOrb.png</normaloff>:/icons/assets/images/EldritchChaosOrb.png</iconset>
+              <normaloff>:/icons/assets/images/method_exalted.png</normaloff>:/icons/assets/images/method_exalted.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -3272,46 +2604,10 @@ padding: 2px 10px;
             </property>
            </widget>
           </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QWidget" name="CraftingOptionsExtended" native="true">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>45</width>
-           <height>45</height>
-          </size>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_8">
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="rightMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <property name="spacing">
-           <number>0</number>
-          </property>
-          <item row="0" column="0">
-           <widget class="QPushButton" name="pushButton">
+          <item row="1" column="4">
+           <widget class="QPushButton" name="VaalButton">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -3322,16 +2618,637 @@ padding: 2px 10px;
               <height>45</height>
              </size>
             </property>
-            <property name="maximumSize">
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Corrupts an Item, modifying it unpredictably</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_vaal.png</normaloff>:/icons/assets/images/method_vaal.png</iconset>
+            </property>
+            <property name="iconSize">
              <size>
               <width>45</width>
               <height>45</height>
              </size>
             </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QPushButton" name="ChaosButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Reforges a Rare Item with new random modifiers</string>
+            </property>
             <property name="text">
              <string/>
             </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_chaos.png</normaloff>:/icons/assets/images/method_chaos.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
            </widget>
+          </item>
+          <item row="0" column="10">
+           <widget class="QPushButton" name="CrusaderButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Rare Item with a new Crusader modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_crusader.png</normaloff>:/icons/assets/images/method_crusader.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="AlterationButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Reforges a Magic Item with new random properties</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_alteration.png</normaloff>:/icons/assets/images/method_alteration.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="7">
+           <widget class="QPushButton" name="HarvestButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Harvest crafting</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/aharvest.png</normaloff>:/icons/assets/images/aharvest.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="9">
+           <widget class="QPushButton" name="AnnulButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Removes a random modifier from an Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_annul.png</normaloff>:/icons/assets/images/method_annul.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="AugmentationButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Magic Item with a new random property</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_augmentation.png</normaloff>:/icons/assets/images/method_augmentation.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QPushButton" name="FracturingButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Fractures a random modifier on a Rare Item with at least 4 modifiers, locking it in place.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_fracturing.png</normaloff>:/icons/assets/images/method_fracturing.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="15">
+           <widget class="QPushButton" name="RecombinateButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Destroys two Items to create a new Item with a combination of their properties. Sometimes, the resultant Item is modified unpredictably</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/recombinate.png</normaloff>:/icons/assets/images/recombinate.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="9">
+           <widget class="QPushButton" name="CatalystButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Catalysts</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/acatalyst.png</normaloff>:/icons/assets/images/acatalyst.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="MavenButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Removes one Influenced modifier from an Item with at least two Influenced modifiers and upgrades another Influenced modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_maven.png</normaloff>:/icons/assets/images/method_maven.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="13">
+           <widget class="QPushButton" name="WarlordButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Enchants a Rare Item with a new Warlord modifier</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_warlord.png</normaloff>:/icons/assets/images/method_warlord.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="8">
+           <widget class="QPushButton" name="EssenceButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Essences</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_essence.png</normaloff>:/icons/assets/images/method_essence.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="14">
+           <widget class="QPushButton" name="VendorButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Vendor recipes</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/vendor.png</normaloff>:/icons/assets/images/vendor.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="15">
+           <widget class="QPushButton" name="DivineButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Randomises the numeric values of the random properties on an Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_divine.png</normaloff>:/icons/assets/images/method_divine.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="8">
+           <widget class="QPushButton" name="ScourButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
+            <property name="toolTip">
+             <string>Removes all properties from an Item</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/icons/assets/images/method_scour.png</normaloff>:/icons/assets/images/method_scour.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" rowspan="2">
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QComboBox" name="itemBaseBox">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="currentText">
+               <string/>
+              </property>
+              <property name="sizeAdjustPolicy">
+               <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+              </property>
+              <property name="placeholderText">
+               <string>Pick an Item Base</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </widget>

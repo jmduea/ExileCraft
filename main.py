@@ -1,16 +1,21 @@
 import ctypes
+import os
+import re
+import sys
 from ctypes import wintypes
-import sys, os
+
+import pyautogui
+import pygetwindow as gw
+import pywintypes
 import win32con
 import win32gui
-
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
+from game_data import base_items_objects
 from mainwindow_ui import Ui_MainWindow
-import resources_rc
 
 basedir = os.path.dirname(__file__)
 
@@ -27,8 +32,27 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
-        self.CraftingOptionsExtended.hide()
+        self.populate_item_bases_dropdown()
 
+        self.labels = {
+            "PrefixInfo1": self.PrefixInfo1,
+            "Prefix1": self.Prefix1,
+            "PrefixInfo2": self.PrefixInfo2,
+            "Prefix2": self.Prefix2,
+            "PrefixInfo3": self.PrefixInfo3,
+            "Prefix3": self.Prefix3,
+            "SuffixInfo1": self.SuffixInfo1,
+            "Suffix1": self.Suffix1,
+            "SuffixInfo2": self.SuffixInfo2,
+            "Suffix2": self.Suffix2,
+            "SuffixInfo3": self.SuffixInfo3,
+            "Suffix3": self.Suffix3
+        }
+
+    def populate_item_bases_dropdown(self):
+        item_bases = [base_item.name for base_item in base_items_objects]
+        for item_base in item_bases:
+            self.itemBaseBox.addItem(item_base)
 
 
         @pyqtSlot()
@@ -37,6 +61,67 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.CraftingOptionsExtended.show()
             else:
                 self.CraftingOptionsExtended.hide()
+
+            self.toggle_widget = toggle_widget
+
+    def update_labels(self, info, labels):
+        for key, value in info.items():
+            if key.startswith("Prefix") or key.startswith("Suffix"):
+                idx = int(key[-1]) - 1
+                modifier_info_key = key + "Info"
+                if modifier_info_key in labels:
+                    labels[modifier_info_key].setText(value["modifier"])
+                if key in labels:
+                    labels[key].setText(value["text"])
+            else:
+                if key in labels:
+                    labels[key].setText(f"{key}: {value}")
+
+    def update_labels_from_clipboard(self):
+        clipboard = QtWidgets.QApplication.clipboard()
+        clipboard_data = clipboard.text()
+        info = self.parse_clipboard_data(clipboard_data)
+        self.update_labels(info, self.labels)
+
+    def parse_clipboard_data(self, clipboard_data):
+        info = {}
+        prefix_count = 0
+        suffix_count = 0
+
+        for line in clipboard_data.splitlines():
+            line = line.strip()
+
+            # Handle the cases where modifier types are present
+            if line.startswith("{ Prefix Modifier"):
+                modifier_data = re.search(r'\{ Prefix Modifier "(.+)" \(Tier: (\d+)\) — .+}', line)
+                if modifier_data:
+                    modifier_name = modifier_data.group(1)
+                    modifier_tier = modifier_data.group(2)
+                    info[f"Prefix{prefix_count}"] = {
+                        "modifier": f"{modifier_name} (Tier: {modifier_tier})",
+                        "text": ""
+                    }
+                    prefix_count += 1
+            elif line.startswith("{ Suffix Modifier"):
+                modifier_data = re.search(r'\{ Suffix Modifier "(.+)" \(Tier: (\d+)\) — .+}', line)
+                if modifier_data:
+                    modifier_name = modifier_data.group(1)
+                    modifier_tier = modifier_data.group(2)
+                    info[f"Suffix{suffix_count}"] = {
+                        "modifier": f"{modifier_name} (Tier: {modifier_tier})",
+                        "text": ""
+                    }
+                    suffix_count += 1
+            else:
+                # Extract the actual effect of the modifier and store it in the corresponding key
+                if prefix_count > 1:
+                    effect = line
+                    info[f"Prefix{prefix_count - 1}"]["text"] = effect
+                if suffix_count > 1:
+                    effect = line
+                    info[f"Suffix{suffix_count - 1}"]["text"] = effect
+
+        return info
 
 
 class HotkeyEventFilter(QAbstractNativeEventFilter):
@@ -48,9 +133,27 @@ class HotkeyEventFilter(QAbstractNativeEventFilter):
         if eventType == "windows_generic_MSG":
             msg = ctypes.wintypes.MSG.from_address(int(message))
             if msg.message == win32con.WM_HOTKEY:
-                toggle_visibility(self.window)
+                if msg.wParam == 1:  # The Ctrl+D hotkey
+                    toggle_visibility(self.window)
+                elif msg.wParam == 2:  # The Ctrl+Alt+C hotkey
+                    copy_data_to_clipboard()  # Add a function to handle the new hotkey
                 return True, 0
         return False, 0
+
+
+def copy_data_to_clipboard():
+    # Get the active window's title
+    active_window_title = gw.getActiveWindowTitle()
+
+    # Use Ctrl+Alt+C to copy the selected text
+    pyautogui.hotkey('ctrl', 'c')
+
+    # Get the data from the clipboard
+    clipboard = QtWidgets.QApplication.clipboard()
+    data = clipboard.text()
+
+    # Return the copied data
+    return data
 
 
 # Function for toggling the overlay
@@ -58,10 +161,13 @@ def toggle_visibility(window=None):
     if window.isVisible():
         window.hide()
     else:
+        copy_data_to_clipboard()
+        window.update_labels_from_clipboard()
+
         window.showNormal()
         window.raise_()
         window.activateWindow()
-
+        print(copy_data_to_clipboard())
 
 # Define the UnregisterHotKey function
 user32 = ctypes.WinDLL('user32', use_last_error=True)
@@ -85,13 +191,13 @@ if __name__ == "__main__":
 
     # Create the menu
     menu = QMenu()
-    showexilecraft = QAction("Show Crafting Window")
-    menu.addAction(showexilecraft)
+    showExileCraft = QAction("Show Crafting Window")
+    menu.addAction(showExileCraft)
 
     # Add a Quit option to the menu
-    quitexilecraft = QAction("Quit")
-    quitexilecraft.triggered.connect(app.quit)
-    menu.addAction(quitexilecraft)
+    quitExileCraft = QAction("Quit")
+    quitExileCraft.triggered.connect(app.quit)
+    menu.addAction(quitExileCraft)
 
     # Add menu to the tray
     tray.setContextMenu(menu)
@@ -105,9 +211,13 @@ if __name__ == "__main__":
     window.show()
     print("Main Window Activated")
 
-    # Register the hotkey
+    # Register the Ctrl+D hotkey
     hotkey_id = 1
-    UnregisterHotKey(None, hotkey_id)
+    try:
+        UnregisterHotKey(None, hotkey_id)
+    except pywintypes.error:
+        pass  # Ignore the error if the hotkey is not registered
+    # Register the hotkey
     win32gui.RegisterHotKey(None, hotkey_id, win32con.MOD_CONTROL, 68)
     print("Ctrl+D Hotkey set")
 
