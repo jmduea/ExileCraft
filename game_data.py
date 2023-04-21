@@ -23,7 +23,7 @@ stats = {key: Stat(key, data.get('alias', {}), data.get('is_aliased', False),
                    data.get('is_local', False)) for key, data in stats_data.items()}
 
 stat_translations_data = load_json_file('data/json/stat_translations.json')
-stat_translations = [StatTranslation(entry.get('condition', []), entry.get('format', []),
+stat_translations = [StatTranslation(entry.get('ids', []), entry.get('condition', []), entry.get('format', []),
                                      entry.get('index_handlers', []),
                                      entry.get('string', '')) for entry in stat_translations_data]
 

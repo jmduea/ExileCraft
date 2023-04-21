@@ -12,7 +12,9 @@ class BaseItem:
         self.release_state = data.get("release_state")
         self.requirements = data.get("requirements")
         self.tags = data.get("tags", [])
+        self.groups = data.get("groups", [])
         self.visual_identity = data.get("visual_identity", {})
+        self.mod_groups = []  # initialize an empty list for mod groups
 
     def __repr__(self):
         return f"{self.__class__.__name__}({self.name!r}, {self.item_class!r})"

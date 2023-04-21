@@ -14,19 +14,19 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from game_data import base_items_objects
+from game_data import base_items_objects, mods
 from mainwindow_ui import Ui_MainWindow
 from item_base_selector import ItemBaseSelector
+from item_mod_finder import ItemModFinder
 
 basedir = os.path.dirname(__file__)
 
 
-class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, ItemBaseSelector):
+class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, ItemBaseSelector, ItemModFinder):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.setWindowOpacity(0.9)
-
         palette = QPalette()
         palette.setColor(QPalette.Window, QColor(0, 0, 0))
         self.setPalette(palette)
@@ -35,6 +35,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, ItemBaseSelector):
 
         self.base_types = self.get_unique_base_types()
         self.populate_base_type_dropdown()
+        self.base_item_selector = ItemBaseSelector()
+
 
         self.base_type_box.currentTextChanged.connect(self.populate_subtype_dropdown)
         self.base_subtype_box.currentTextChanged.connect(self.populate_base_item_box)
@@ -43,6 +45,28 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, ItemBaseSelector):
         self.base_subtype_box.hide()
         self.base_item_box.setEnabled(False)
         self.base_item_box.hide()
+
+        self.base_item_box = self.base_item_box
+        self.mods_tabs = self.mods_tabs
+        self.item_mod_finder = ItemModFinder(base_items_objects, mods, self.base_item_box, self.mods_tabs)
+        self.item_mod_finder.map_mod_groups_to_base_items(base_items_objects, mods)
+        self.item_mod_finder.populate_mods_tree()
+
+        self.base_type_box.currentTextChanged.connect(self.populate_subtype_dropdown)
+        print(
+            f"Connected base_type_box signal to populate_subtype_dropdown: {self.base_type_box.currentTextChanged.connect(self.populate_subtype_dropdown)}")
+
+        self.base_subtype_box.currentTextChanged.connect(self.populate_base_item_box)
+        print(
+            f"Connected base_subtype_box signal to populate_base_item_box: {self.base_subtype_box.currentTextChanged.connect(self.populate_base_item_box)}")
+
+        self.base_item_box.currentTextChanged.connect(self.find_mods)
+        print(
+            f"Connected base_item_box signal to find_mods: {self.base_item_box.currentTextChanged.connect(self.find_mods)}")
+
+        self.base_item_box.currentIndexChanged.connect(self.item_mod_finder.find_mods)
+        print(
+            f"Connected base_item_box signal to item_mod_finder.find_mods: {self.base_item_box.currentIndexChanged.connect(self.item_mod_finder.find_mods)}")
 
     def update_labels(self, info, labels):
         for key, value in info.items():
@@ -148,6 +172,7 @@ def toggle_visibility(window=None):
         window.raise_()
         window.activateWindow()
         print(copy_data_to_clipboard())
+
 
 # Define the UnregisterHotKey function
 user32 = ctypes.WinDLL('user32', use_last_error=True)

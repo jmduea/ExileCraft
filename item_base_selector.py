@@ -40,6 +40,10 @@ base_type_to_tag = {
     "Warstaff": "warstaff",
 }
 
+prefixes = {}
+suffixes = {}
+implicits = {}
+
 
 class ItemBaseSelector:
     def convert_tag_to_readable_format(self, tag):
@@ -131,6 +135,7 @@ class ItemBaseSelector:
             self.base_subtype_box.setEnabled(False)
             self.populate_base_item_box_with_base_type(selected_base_type)
 
+
     def populate_base_item_box_with_base_type(self, base_type):
         items = set()
         for base_item in base_items_objects:
@@ -166,7 +171,3 @@ class ItemBaseSelector:
         else:
             self.base_item_box.clear()
             self.base_item_box.setEnabled(False)
-
-
-
-
