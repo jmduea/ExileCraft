@@ -121,8 +121,6 @@ class CraftingSimulator:
         def syndicate_craft(self, game_data):
             pass
 
-
-
         # Function to add random modifiers to an item
         # TODO: add accounting for mod weights, item tags, and mod groups
         def apply_random_mods(self, game_data, min_mods, max_mods):

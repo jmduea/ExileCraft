@@ -16,11 +16,12 @@ from PyQt5.QtWidgets import *
 
 from game_data import base_items_objects
 from mainwindow_ui import Ui_MainWindow
+from item_base_selector import ItemBaseSelector
 
 basedir = os.path.dirname(__file__)
 
 
-class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, ItemBaseSelector):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -32,37 +33,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
-        self.populate_item_bases_dropdown()
+        self.base_types = self.get_unique_base_types()
+        self.populate_base_type_dropdown()
 
-        self.labels = {
-            "PrefixInfo1": self.PrefixInfo1,
-            "Prefix1": self.Prefix1,
-            "PrefixInfo2": self.PrefixInfo2,
-            "Prefix2": self.Prefix2,
-            "PrefixInfo3": self.PrefixInfo3,
-            "Prefix3": self.Prefix3,
-            "SuffixInfo1": self.SuffixInfo1,
-            "Suffix1": self.Suffix1,
-            "SuffixInfo2": self.SuffixInfo2,
-            "Suffix2": self.Suffix2,
-            "SuffixInfo3": self.SuffixInfo3,
-            "Suffix3": self.Suffix3
-        }
+        self.base_type_box.currentTextChanged.connect(self.populate_subtype_dropdown)
+        self.base_subtype_box.currentTextChanged.connect(self.populate_base_item_box)
 
-    def populate_item_bases_dropdown(self):
-        item_bases = [base_item.name for base_item in base_items_objects]
-        for item_base in item_bases:
-            self.itemBaseBox.addItem(item_base)
-
-
-        @pyqtSlot()
-        def toggle_widget(self):
-            if self.CraftingOptionsExtended.isHidden():
-                self.CraftingOptionsExtended.show()
-            else:
-                self.CraftingOptionsExtended.hide()
-
-            self.toggle_widget = toggle_widget
+        self.base_subtype_box.setEnabled(False)
+        self.base_subtype_box.hide()
+        self.base_item_box.setEnabled(False)
+        self.base_item_box.hide()
 
     def update_labels(self, info, labels):
         for key, value in info.items():
@@ -209,7 +189,6 @@ if __name__ == "__main__":
 
     window = MainWindow()
     window.show()
-    print("Main Window Activated")
 
     # Register the Ctrl+D hotkey
     hotkey_id = 1
@@ -219,16 +198,13 @@ if __name__ == "__main__":
         pass  # Ignore the error if the hotkey is not registered
     # Register the hotkey
     win32gui.RegisterHotKey(None, hotkey_id, win32con.MOD_CONTROL, 68)
-    print("Ctrl+D Hotkey set")
 
     # Set event filters
     hotkey_event_filter = HotkeyEventFilter(window)
     app.installNativeEventFilter(hotkey_event_filter)
-    print("Hotkey event filter set")
 
     shortcut = QShortcut(QKeySequence("Ctrl+D"), window)
     shortcut.activated.connect(toggle_visibility)
-    print("Shortcut activated")
 
     try:
         sys.exit(app.exec_())

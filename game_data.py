@@ -1,7 +1,8 @@
 import json
+
 from game_elements import (
     BaseItem, Tag, Stat, StatTranslation, Mod, ModType, ItemClass, HeistEquipment, Fossil, Essence, EssenceType,
-    CraftingBenchOption, ClusterJewel, ClusterJewelNotable, AdvancedMod
+    CraftingBenchOption, ClusterJewel, ClusterJewelNotable, AdvancedMod, CostType
 )
 
 
@@ -35,7 +36,8 @@ mods = {mod_id: Mod(mod_id, mod_info.get('adds_tags', []), mod_info.get('domain'
                     mod_info.get('type', '')) for mod_id, mod_info in mods_data.items()}
 
 mod_types_data = load_json_file('data/json/mod_types.json')
-mod_types = {mod_type_id: ModType(mod_type_id, mod_type_info.get('sell_price_types', [])) for mod_type_id, mod_type_info in mod_types_data.items()}
+mod_types = {mod_type_id: ModType(mod_type_id, mod_type_info.get('sell_price_types', [])) for
+             mod_type_id, mod_type_info in mod_types_data.items()}
 
 advanced_mod_data = load_json_file('data/json/advanced_mod.json')
 advanced_mod_objects = [
@@ -43,7 +45,8 @@ advanced_mod_objects = [
 ]
 
 item_classes_data = load_json_file('data/json/item_classes.json')
-item_classes = {item_class_id: ItemClass(item_class_id, item_class_info.get('name', '')) for item_class_id, item_class_info in item_classes_data.items()}
+item_classes = {item_class_id: ItemClass(item_class_id, item_class_info.get('name', '')) for
+                item_class_id, item_class_info in item_classes_data.items()}
 
 heist_equipment_data = load_json_file('data/json/heist_equipment.json')
 heist_equipment_list = []
@@ -68,7 +71,8 @@ essences_data = load_json_file('data/json/essences.json')
 essences_objects = {essence_id: Essence(essence_data) for essence_id, essence_data in essences_data.items()}
 
 essence_types_data = load_json_file('data/json/essences.json')
-essence_types = {essence_type_id: EssenceType(essence_type_data) for essence_type_id, essence_type_data in essence_types_data.items()}
+essence_types = {essence_type_id: EssenceType(essence_type_data) for
+                 essence_type_id, essence_type_data in essence_types_data.items()}
 
 crafting_bench_options_data = load_json_file('data/json/crafting_bench_options.json')
 crafting_bench_options_objects = [CraftingBenchOption(option_data) for option_data in crafting_bench_options_data]
@@ -83,5 +87,6 @@ cluster_jewel_notables_objects = [
     ClusterJewelNotable(notable_data) for notable_data in cluster_jewel_notables_data
 ]
 
-
-
+cost_types_data = load_json_file('data/json/cost_types.json')
+cost_types = {cost_type_id: CostType(cost_type_id, cost_type_data.get('format_text'), cost_type_data.get('stat')) for
+              cost_type_id, cost_type_data in cost_types_data.items()}
