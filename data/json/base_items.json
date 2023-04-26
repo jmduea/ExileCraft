@@ -1261,6 +1261,7 @@
     "release_state": "released",
     "requirements": null,
     "tags": [
+      "talisman",
       "amulet",
       "default"
     ],

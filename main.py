@@ -1,11 +1,7 @@
 import ctypes
 import os
-import re
 import sys
 from ctypes import wintypes
-
-import pyautogui
-import pygetwindow as gw
 import pywintypes
 import win32con
 import win32gui
@@ -14,118 +10,45 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from game_data import base_items_objects, mods
+import ui_updater
 from mainwindow_ui import Ui_MainWindow
-from item_base_selector import ItemBaseSelector
-from item_mod_finder import ItemModFinder
+from ui_updater import UIUpdater
 
 basedir = os.path.dirname(__file__)
 
 
-class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, ItemBaseSelector, ItemModFinder):
+class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.setWindowOpacity(0.9)
+        self.ui_updater = ui_updater
         palette = QPalette()
         palette.setColor(QPalette.Window, QColor(0, 0, 0))
         self.setPalette(palette)
-
         self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
-        self.base_types = self.get_unique_base_types()
-        self.populate_base_type_dropdown()
-        self.base_item_selector = ItemBaseSelector()
-
-
-        self.base_type_box.currentTextChanged.connect(self.populate_subtype_dropdown)
-        self.base_subtype_box.currentTextChanged.connect(self.populate_base_item_box)
-
-        self.base_subtype_box.setEnabled(False)
-        self.base_subtype_box.hide()
-        self.base_item_box.setEnabled(False)
-        self.base_item_box.hide()
-
-        self.base_item_box = self.base_item_box
-        self.mods_tabs = self.mods_tabs
-        self.item_mod_finder = ItemModFinder(base_items_objects, mods, self.base_item_box, self.mods_tabs)
-        self.item_mod_finder.map_mod_groups_to_base_items(base_items_objects, mods)
-        self.item_mod_finder.populate_mods_tree()
-
-        self.base_type_box.currentTextChanged.connect(self.populate_subtype_dropdown)
-        print(
-            f"Connected base_type_box signal to populate_subtype_dropdown: {self.base_type_box.currentTextChanged.connect(self.populate_subtype_dropdown)}")
-
-        self.base_subtype_box.currentTextChanged.connect(self.populate_base_item_box)
-        print(
-            f"Connected base_subtype_box signal to populate_base_item_box: {self.base_subtype_box.currentTextChanged.connect(self.populate_base_item_box)}")
-
-        self.base_item_box.currentTextChanged.connect(self.find_mods)
-        print(
-            f"Connected base_item_box signal to find_mods: {self.base_item_box.currentTextChanged.connect(self.find_mods)}")
-
-        self.base_item_box.currentIndexChanged.connect(self.item_mod_finder.find_mods)
-        print(
-            f"Connected base_item_box signal to item_mod_finder.find_mods: {self.base_item_box.currentIndexChanged.connect(self.item_mod_finder.find_mods)}")
-
-    def update_labels(self, info, labels):
-        for key, value in info.items():
-            if key.startswith("Prefix") or key.startswith("Suffix"):
-                idx = int(key[-1]) - 1
-                modifier_info_key = key + "Info"
-                if modifier_info_key in labels:
-                    labels[modifier_info_key].setText(value["modifier"])
-                if key in labels:
-                    labels[key].setText(value["text"])
-            else:
-                if key in labels:
-                    labels[key].setText(f"{key}: {value}")
-
-    def update_labels_from_clipboard(self):
-        clipboard = QtWidgets.QApplication.clipboard()
-        clipboard_data = clipboard.text()
-        info = self.parse_clipboard_data(clipboard_data)
-        self.update_labels(info, self.labels)
-
-    def parse_clipboard_data(self, clipboard_data):
-        info = {}
-        prefix_count = 0
-        suffix_count = 0
-
-        for line in clipboard_data.splitlines():
-            line = line.strip()
-
-            # Handle the cases where modifier types are present
-            if line.startswith("{ Prefix Modifier"):
-                modifier_data = re.search(r'\{ Prefix Modifier "(.+)" \(Tier: (\d+)\) — .+}', line)
-                if modifier_data:
-                    modifier_name = modifier_data.group(1)
-                    modifier_tier = modifier_data.group(2)
-                    info[f"Prefix{prefix_count}"] = {
-                        "modifier": f"{modifier_name} (Tier: {modifier_tier})",
-                        "text": ""
-                    }
-                    prefix_count += 1
-            elif line.startswith("{ Suffix Modifier"):
-                modifier_data = re.search(r'\{ Suffix Modifier "(.+)" \(Tier: (\d+)\) — .+}', line)
-                if modifier_data:
-                    modifier_name = modifier_data.group(1)
-                    modifier_tier = modifier_data.group(2)
-                    info[f"Suffix{suffix_count}"] = {
-                        "modifier": f"{modifier_name} (Tier: {modifier_tier})",
-                        "text": ""
-                    }
-                    suffix_count += 1
-            else:
-                # Extract the actual effect of the modifier and store it in the corresponding key
-                if prefix_count > 1:
-                    effect = line
-                    info[f"Prefix{prefix_count - 1}"]["text"] = effect
-                if suffix_count > 1:
-                    effect = line
-                    info[f"Suffix{suffix_count - 1}"]["text"] = effect
-
-        return info
+        self.item_subtype_combobox.clear()
+        self.item_subtype_combobox.hide()
+        self.base_item_combobox.clear()
+        self.base_item_combobox.hide()
+        self.base_item_influence_combobox.hide()
+        self.base_item_level_combobox.hide()
+        self.base_item_quality_combobox.hide()
+        self.combobox_updater = UIUpdater(
+            self.item_class_combobox,
+            self.item_subtype_combobox,
+            self.base_item_combobox,
+            self.base_item_level_combobox,
+            self.base_item_quality_combobox,
+            self.base_item_influence_combobox,
+            self.item_header_text_label,
+            self.ItemProperties,
+            self.ItemRequirements,
+            self.ItemImplicits,
+            self.ItemSpacer3,
+            self.Modifiers
+        )
 
 
 class HotkeyEventFilter(QAbstractNativeEventFilter):
@@ -139,25 +62,8 @@ class HotkeyEventFilter(QAbstractNativeEventFilter):
             if msg.message == win32con.WM_HOTKEY:
                 if msg.wParam == 1:  # The Ctrl+D hotkey
                     toggle_visibility(self.window)
-                elif msg.wParam == 2:  # The Ctrl+Alt+C hotkey
-                    copy_data_to_clipboard()  # Add a function to handle the new hotkey
                 return True, 0
         return False, 0
-
-
-def copy_data_to_clipboard():
-    # Get the active window's title
-    active_window_title = gw.getActiveWindowTitle()
-
-    # Use Ctrl+Alt+C to copy the selected text
-    pyautogui.hotkey('ctrl', 'c')
-
-    # Get the data from the clipboard
-    clipboard = QtWidgets.QApplication.clipboard()
-    data = clipboard.text()
-
-    # Return the copied data
-    return data
 
 
 # Function for toggling the overlay
@@ -165,13 +71,9 @@ def toggle_visibility(window=None):
     if window.isVisible():
         window.hide()
     else:
-        copy_data_to_clipboard()
-        window.update_labels_from_clipboard()
-
         window.showNormal()
         window.raise_()
         window.activateWindow()
-        print(copy_data_to_clipboard())
 
 
 # Define the UnregisterHotKey function
