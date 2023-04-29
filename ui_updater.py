@@ -2,12 +2,18 @@ import json
 import sqlite3
 import re
 import random
-import builtins
+
+from PyQt5 import QtGui
+from PyQt5.QtCore import Qt
+
+
 
 class UIUpdater:
     def __init__(self, item_class_combobox, item_subtype_combobox, base_item_combobox, base_item_level_combobox,
                  base_item_quality_combobox, base_item_influence_combobox, item_header_text_label,
-                 ItemProperties, ItemRequirements, ItemImplicits, ItemSpacer3, Modifiers):
+                 ItemProperties, ItemRequirements, ItemImplicits, ItemSpacer3, Modifiers, item_img_box, main_window):
+        self.item_img_box = item_img_box
+        self.set_item_view_box_background = self.set_item_view_box_background
         self.item_header_text_label = item_header_text_label
         self.ItemProperties = ItemProperties
         self.ItemRequirements = ItemRequirements
@@ -24,9 +30,11 @@ class UIUpdater:
         self.base_item_level_combobox = base_item_level_combobox
         self.base_item_quality_combobox = base_item_quality_combobox
         self.base_item_influence_combobox = base_item_influence_combobox
-        self.all_subtypes = {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
+        self.main_window = main_window
+        self.all_subtypes = {"armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
                              "str_dex_int_armour", "str_int_armour"}
         self.subtype_display_names = {
+            "armour": "Armour",
             "dex_armour": "Armour(dex)",
             "dex_int_armour": "Armour(dex/int)",
             "int_armour": "Armour(int)",
@@ -50,6 +58,63 @@ class UIUpdater:
             lambda item_level: self.update_item_stats(self.base_item_combobox.currentText(),
                                                       self.base_item_quality_combobox.currentText())
         )
+        self.base_item_combobox.currentTextChanged.connect(self.set_item_view_box_background)
+        self.base_item_combobox.currentTextChanged.connect(self.get_mods_for_item_class)
+        base_item_combobox.currentTextChanged.connect(self.update_mods_data)
+
+    def get_mods_for_item_class(self):
+        conn = sqlite3.connect("exilecraft.db")
+        cursor = conn.cursor()
+        if self.base_item_combobox.currentText() is not None:
+            item_name = self.base_item_combobox.currentText()
+            cursor.execute("""
+                SELECT
+                    tags
+                FROM
+                    base_items
+                WHERE
+                    name = ?
+            """, (item_name,))
+            item_tags_result = cursor.fetchone()
+            if item_tags_result is None:
+                return []
+            item_tags = json.loads(item_tags_result[0])
+            print(item_tags)
+            mods_data = []
+
+            for tag in item_tags:
+                cursor.execute("""
+                    SELECT
+                        valid_modifiers.*,
+                        json_each.value AS extracted_weights
+                    FROM
+                        modifiers AS valid_modifiers,
+                        json_each(valid_modifiers.spawn_weights)
+                    WHERE
+                        valid_modifiers.generation_type IN ('prefix', 'suffix', 'eater_implicit', 'exarch_implicit')
+                        AND domain = 'item'
+                        AND json_extract(json_each.value, '$.tag') = ?
+                        AND json_extract(json_each.value, '$.weight') > 0;
+                    """, (tag,))
+                results = cursor.fetchall()
+
+                mods_data.extend(results)
+
+            return mods_data
+
+    def update_mods_data(self):
+        mods_data = self.get_mods_for_item_class()
+        generation_type = "prefix"
+        self.main_window.prefixes_container.clear()
+        self.main_window.prefixes_container.populate_with_mod_data(mods_data, generation_type)
+
+    def set_item_view_box_background(self):
+        current_base_item = self.base_item_combobox.currentText().replace(' ', '_').lower()
+        image_path = f"assets/images/items/{current_base_item}.png"
+        pixmap = QtGui.QPixmap(image_path)
+        self.item_img_box.setPixmap(pixmap)
+        self.item_img_box.setAlignment(Qt.AlignCenter)
+        self.item_img_box.setScaledContents(False)
 
     def limit_selection(self):
         max_selections = 2
@@ -62,26 +127,32 @@ class UIUpdater:
     def populate_item_class_combobox(self):
         conn = sqlite3.connect('exilecraft.db')
         c = conn.cursor()
-        c.execute('''SELECT DISTINCT item_class FROM base_items ORDER BY item_class''')
+        c.execute('''SELECT DISTINCT base_items.item_class_id, item_classes.name 
+                     FROM base_items 
+                     JOIN item_classes ON base_items.item_class_id = item_classes.id 
+                     ORDER BY base_items.item_class_id''')
         item_classes = c.fetchall()
         conn.close()
         self.item_class_combobox.clear()
 
         for item_class in item_classes:
-            self.item_class_combobox.addItem(item_class[0])
+            self.item_class_combobox.addItem(item_class[1])
         return self.item_class_combobox.currentText()
 
     def on_item_class_combobox_changed(self):
-        item_class = self.item_class_combobox.currentText()
-
+        item_class_name = self.item_class_combobox.currentText()
         conn = sqlite3.connect('exilecraft.db')
         c = conn.cursor()
 
-        if item_class == "Amulet":
-            c.execute('''SELECT name FROM base_items WHERE item_class = ? AND tags NOT LIKE ?''',
-                      (item_class, '%"talisman"%'))
+        # Get the item_class_id from the item_classes table using the human-readable name
+        c.execute('''SELECT id FROM item_classes WHERE name = ?''', (item_class_name,))
+        item_class_id = c.fetchone()[0]
+
+        if item_class_name == "Amulets":
+            c.execute('''SELECT name FROM base_items WHERE item_class_id = ? AND tags NOT LIKE ?''',
+                      (item_class_id, '%"talisman"%'))
         else:
-            c.execute('''SELECT name FROM base_items WHERE item_class = ?''', (item_class,))
+            c.execute('''SELECT name FROM base_items WHERE item_class_id = ?''', (item_class_id,))
 
         base_items = c.fetchall()
 
@@ -104,37 +175,40 @@ class UIUpdater:
             self.base_item_influence_combobox.setVisible(True)
             self.base_item_influence_combobox.setEnabled(True)
 
-    def filter_item_subtypes(self, selected_item_class, all_subtypes):
-        selected_item_class = self.item_class_combobox.currentText()
+    def filter_item_subtypes(self, selected_item_class_name, all_subtypes):
+        selected_item_class_name = self.item_class_combobox.currentText()
         item_class_subtypes = {
-            'Body Armour': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-                            "str_dex_int_armour", "str_int_armour"},
-            'Boots': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour", "str_int_armour"},
-            'Gloves': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour", "str_int_armour"},
-            'Helmet': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour", "str_int_armour"},
-            'Shield': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour", "str_int_armour"}
+            'Body Armours': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
+                             "str_dex_int_armour", "str_int_armour"},
+            'Boots': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
+                      "str_int_armour"},
+            'Gloves': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
+                       "str_int_armour"},
+            'Helmets': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
+                        "str_int_armour"},
+            'Shields': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour", "str_int_armour"}
             # Add other item class to subtype mappings here
         }
 
-        filtered_subtypes = item_class_subtypes.get(selected_item_class, set())
+        filtered_subtypes = item_class_subtypes.get(selected_item_class_name, set())
         filtered_subtypes.discard("not_for_sale")
-        print(filtered_subtypes)
         return filtered_subtypes
 
     def populate_item_subtype_combobox(self):
-        selected_item_class = self.item_class_combobox.currentText()
+        selected_item_class_name = self.item_class_combobox.currentText()
 
         # Get valid subtypes for the selected item class
-        valid_subtypes = self.filter_item_subtypes(selected_item_class, self.all_subtypes)
-        print(valid_subtypes)
+        valid_subtypes = self.filter_item_subtypes(selected_item_class_name, self.all_subtypes)
         # Connect to the database
         conn = sqlite3.connect('exilecraft.db')
         c = conn.cursor()
 
+        # Get the item_class_id from the item_classes table using the human-readable name
+        c.execute('''SELECT id FROM item_classes WHERE name = ?''', (selected_item_class_name,))
+        item_class_id = c.fetchone()[0]
         # Execute a query to obtain the unique tags associated with the items from the selected item class
-        c.execute('''SELECT DISTINCT tags FROM base_items WHERE item_class = ?''', (selected_item_class,))
+        c.execute('''SELECT DISTINCT tags FROM base_items WHERE item_class_id = ?''', (item_class_id,))
         tags = c.fetchall()
-        print(tags)
         # Close the database connection
         conn.close()
 
@@ -156,12 +230,15 @@ class UIUpdater:
         self.base_item_combobox.setVisible(True)
 
     def populate_base_item_combobox(self, item_subtype):
-        selected_item_class = self.item_class_combobox.currentText()
+        selected_item_class_name = self.item_class_combobox.currentText()
 
         conn = sqlite3.connect('exilecraft.db')
         c = conn.cursor()
-        c.execute('''SELECT name FROM base_items WHERE item_class = ? AND tags LIKE ? ORDER BY drop_level ASC''',
-                  (selected_item_class, f'%"{item_subtype}"%'))
+        # Get the item_class_id from the item_classes table using the human-readable name
+        c.execute('''SELECT id FROM item_classes WHERE name = ?''', (selected_item_class_name,))
+        item_class_id = c.fetchone()[0]
+        c.execute('''SELECT name FROM base_items WHERE item_class_id = ? AND tags LIKE ? ORDER BY drop_level ASC''',
+                  (item_class_id, f'%"{item_subtype}"%'))
         base_items = c.fetchall()
         self.base_item_combobox.clear()
         conn.close()
@@ -177,52 +254,24 @@ class UIUpdater:
         self.base_item_quality_combobox.setEnabled(True)
         self.base_item_influence_combobox.setVisible(True)
         self.base_item_influence_combobox.setEnabled(True)
-        print(base_items)
-
-    def create_mods_dict(base_item_name):
-        # Load base_items.json and mods.json files
-        with open('data/json/base_items.json', 'r') as f:
-            base_items = json.load(f)
-        with open('data/json/mods.json', 'r') as f:
-            mods = json.load(f)
-
-        # Find the base item in base_items.json
-        base_item = base_items.get(base_item_name)
-        if not base_item:
-            return {}
-
-        # Extract the tags for the base item
-        tags = base_item.get('tags')
-        if not tags:
-            return {}
-
-        # Find all mods that can spawn on the base item
-        mods_dict = {}
-        for mod_name, mod_data in mods.items():
-            spawn_weights = mod_data.get('spawn_weights')
-            if not spawn_weights:
-                continue
-            for spawn_weight in spawn_weights:
-                if spawn_weight['tag'] in tags:
-                    mods_dict[mod_name] = mod_data
-                    break
-        return mods_dict
+        self.get_mods_for_item_class()
 
     def update_item_stats(self, base_item_name, quality_text=None):
         conn = sqlite3.connect('exilecraft.db')
         c = conn.cursor()
-        c.execute('''SELECT drop_level, implicits, name, properties_attack_time, properties_critical_strike_chance, properties_physical_damage_min,
-                          properties_physical_damage_max, requirements_strength, requirements_dexterity,
-                          requirements_intelligence, requirements_level, properties_armour, properties_evasion,
-                          properties_energy_shield, properties_movement_speed, properties_block, properties_range
+        c.execute('''SELECT drop_level, implicits, name, properties_attack_time,
+                        properties_critical_strike_chance,properties_physical_damage_min,
+                        properties_physical_damage_max, requirements_strength, requirements_dexterity,
+                        requirements_intelligence, requirements_level, properties_armour, properties_evasion,
+                        properties_energy_shield, properties_movement_speed, properties_block, properties_range
                      FROM base_items WHERE name = ?''', (base_item_name,))
         item_stats = c.fetchone()
         conn.close()
 
         if item_stats:
-            drop_level, implicits, name, attack_time, critical_strike_chance, physical_damage_min, physical_damage_max, \
-                req_strength, req_dexterity, req_intelligence, req_level, armour, evasion, energy_shield,\
-                movement_speed, block, range = item_stats
+            drop_level, implicits, name, attack_time, critical_strike_chance, physical_damage_min,\
+                physical_damage_max, req_strength, req_dexterity, req_intelligence, req_level,\
+                armour, evasion, energy_shield, movement_speed, block, range = item_stats
             self.item_header_text_label.setText(f'Crafting Project \n {name}')
 
             quality_text = self.base_item_quality_combobox.currentText()
@@ -231,7 +280,7 @@ class UIUpdater:
             else:
                 quality_value = int(quality_text)
 
-            properties_list = [f'Quality: {quality_text}%']
+            properties_list = [f'Quality: <span style="color:#8787fe;">{quality_text}</span>%']
 
             if block:
                 properties_list.append(f'Block: {block}')
@@ -241,35 +290,39 @@ class UIUpdater:
                     min_armour, max_armour = map(int, armour_values)
                     avg_armour = ((min_armour + max_armour) // 2) * ((100 + quality_value) / 100)
                     rounded_avg_armour = round(avg_armour)
-                    properties_list.append(f'Armour: {rounded_avg_armour}')
+                    properties_list.append(f'Armour: <span style="color:#8787fe;">{rounded_avg_armour}</span>')
             if evasion:
                 evasion_values = re.findall(r'(\d+)', evasion)
                 if len(evasion_values) == 2:
                     min_evasion, max_evasion = map(int, evasion_values)
                     avg_evasion = ((min_evasion + max_evasion) // 2) * ((100 + quality_value) / 100)
                     rounded_avg_evasion = round(avg_evasion)
-                    properties_list.append(f'Evasion: {rounded_avg_evasion}')
+                    properties_list.append(f'Evasion: <span style="color:#8787fe;">{rounded_avg_evasion}</span>')
             if energy_shield:
                 energy_shield_values = re.findall(r'(\d+)', energy_shield)
                 if len(energy_shield_values) == 2:
                     min_energy_shield, max_energy_shield = map(int, energy_shield_values)
                     avg_energy_shield = ((min_energy_shield + max_energy_shield) // 2) * ((100 + quality_value) / 100)
                     rounded_avg_energy_shield = round(avg_energy_shield)
-                    properties_list.append(f'Energy Shield: {rounded_avg_energy_shield}')
+                    properties_list.append(f'Energy Shield: <span style="color:#8787fe;">'
+                                           f'{rounded_avg_energy_shield}</span>')
             if physical_damage_min and physical_damage_max:
                 min_physical_damage, max_physical_damage = (int(physical_damage_min) * ((100 + quality_value) / 100)),\
                     (int(physical_damage_max) * ((100 + quality_value) / 100))
                 adjusted_min_physical_damage = round(min_physical_damage)
                 adjusted_max_physical_damage = round(max_physical_damage)
                 properties_list.append(
-                    f'{adjusted_min_physical_damage} To {adjusted_max_physical_damage} Physical Damage')
+                    f'<span style="color:#8787fe;">{adjusted_min_physical_damage}</span> To'
+                    f' <span style="color:#8787fe;">{adjusted_max_physical_damage}</span> Physical Damage')
 
             if critical_strike_chance:
-                properties_list.append(f'Critical Strike Chance: {critical_strike_chance / 100:.2f}%')
+                properties_list.append(f'Critical Strike Chance: <span style="color:#FFF;">'
+                                       f'{critical_strike_chance / 100:.2f}%</span>')
             if attack_time:
-                properties_list.append(f'Attacks Per Second: {1000 / attack_time:.2f}' if attack_time else '')
+                properties_list.append(f'Attacks Per Second: <span style="color:#FFF;">{1000 / attack_time:.2f}</span>'
+                                       if attack_time else '')
 
-            self.ItemProperties.setText('\n'.join(properties_list))
+            self.ItemProperties.setText('<br>'.join(properties_list))
 
             item_level = self.base_item_level_combobox.currentText()
             if item_level is None or item_level == '':
@@ -277,16 +330,16 @@ class UIUpdater:
             else:
                 item_level = int(item_level)
 
-            requirements_list = [f'Item Level: {item_level} \n']
+            requirements_list = [f'Item Level: <span style="color:#FFF;">{item_level}</span><br>']
 
             if req_level:
-                requirements_list.append(f'Requires Level: {req_level},')
+                requirements_list.append(f'Requires Level: <span style="color:#FFF;">{req_level}</span>,')
             if req_strength:
-                requirements_list.append(f'{req_strength} Str')
+                requirements_list.append(f'<span style="color:#FFF;">{req_strength}</span> Str')
             if req_dexterity:
-                requirements_list.append(f'{req_dexterity} Dex')
+                requirements_list.append(f'<span style="color:#FFF;">{req_dexterity}</span> Dex')
             if req_intelligence:
-                requirements_list.append(f'{req_intelligence} Int')
+                requirements_list.append(f'<span style="color:#FFF;">{req_intelligence}</span> Int')
 
             self.ItemRequirements.setText(' '.join(requirements_list))
 
@@ -319,7 +372,8 @@ class UIUpdater:
                         # Retrieve the mod data from mods_data
                         mod_data = mods_data[mod_id]
 
-                        # Query the resolved_mod_stats table to get the min_translation_text, max_translation_text, min, and max values
+                        # Query the resolved_mod_stats table to get the min_translation_text,
+                        # max_translation_text, min, and max values
                         cursor.execute(
                             "SELECT id, translation_text, min, max FROM resolved_mod_stats WHERE mod_id = ?",
                             (mod_id,))
@@ -365,14 +419,14 @@ class UIUpdater:
 
                             print(random_numbers)
 
-                    if len(formatted_values) == 1:
+                    if len(formatted_values) == 1 and min_val != max_val:
                         random_number = random_numbers[0]
                         final_parsed_string = translation_text.format(f"{random_number}{formatted_values[0]}")
+                    elif len(formatted_values) == 1:
+                        final_parsed_string = translation_text.format(f"{formatted_values[0]}")
                     elif len(formatted_values) == 2:
-                        random_number1 = random_numbers[0]
-                        random_number2 = random_numbers[1]
-                        final_parsed_string = translation_text.format(f"{random_number1}{formatted_values[0]}",
-                                                                      f"{random_number2}{formatted_values[1]}")
+                        final_parsed_string = translation_text.format(f"{formatted_values[0]}",
+                                                                      f"{formatted_values[1]}")
                     else:
                         # Handle other cases if necessary
                         pass
@@ -393,5 +447,3 @@ class UIUpdater:
                         self.ItemSpacer3.setVisible(False)
 
                     conn.close()
-
-
