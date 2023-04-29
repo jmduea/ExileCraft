@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>assets/images/item-header-normal.png</file>
     <file>assets/images/acatalyst.png</file>
     <file>assets/images/aharvest.png</file>
     <file>assets/images/bavian.png</file>
