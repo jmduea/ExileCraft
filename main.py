@@ -13,6 +13,8 @@ from PyQt5.QtWidgets import *
 import ui_updater
 from mainwindow_ui import Ui_MainWindow
 from ui_updater import UIUpdater
+from craftingsim import CraftingSimulator
+from databasehandler import DatabaseHandler
 
 basedir = os.path.dirname(__file__)
 
@@ -21,7 +23,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.setWindowOpacity(0.9)
+        self.setWindowOpacity(0.85)
         self.ui_updater = ui_updater
         palette = QPalette()
         palette.setColor(QPalette.Window, QColor(0, 0, 0))
@@ -35,7 +37,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.base_item_influence_combobox.hide()
         self.base_item_level_combobox.hide()
         self.base_item_quality_combobox.hide()
-        self.combobox_updater = UIUpdater(
+        self.ui_updater = UIUpdater(
             self.item_class_combobox,
             self.item_subtype_combobox,
             self.base_item_combobox,
@@ -47,8 +49,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.ItemRequirements,
             self.ItemImplicits,
             self.ItemSpacer3,
-            self.Modifiers
+            self.Modifiers,
+            self.item_img_box,
+            self
         )
+        db_handler = DatabaseHandler()
+        self.crafting_simulator = CraftingSimulator(db_handler)
+        self.import_custom_item = self.import_custom_item
+        self.import_custom_item.clicked.connect(lambda: self.crafting_simulator.open_crafting_project_dialog())
+
+        mods_data = self.ui_updater.get_mods_for_item_class()
 
 
 class HotkeyEventFilter(QAbstractNativeEventFilter):
