@@ -105,8 +105,8 @@ class UIUpdater:
     def update_mods_data(self):
         mods_data = self.get_mods_for_item_class()
         generation_type = "prefix"
-        self.main_window.prefixes_container.clear()
-        self.main_window.prefixes_container.populate_with_mod_data(mods_data, generation_type)
+        self.main_window.base_modpool_prefixes.clear()
+        self.main_window.base_modpool_prefixes.populate_with_mod_data(mods_data, generation_type)
 
     def set_item_view_box_background(self):
         current_base_item = self.base_item_combobox.currentText().replace(' ', '_').lower()

@@ -15,6 +15,7 @@ from mainwindow_ui import Ui_MainWindow
 from ui_updater import UIUpdater
 from craftingsim import CraftingSimulator
 from databasehandler import DatabaseHandler
+from ui.customtreewidget import CustomTreeWidget
 
 basedir = os.path.dirname(__file__)
 
@@ -59,6 +60,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.import_custom_item.clicked.connect(lambda: self.crafting_simulator.open_crafting_project_dialog())
 
         mods_data = self.ui_updater.get_mods_for_item_class()
+        self.base_modpool_prefixes = CustomTreeWidget(self.base_modpool)
+        self.base_modpool_prefixes.clear()
+        self.base_modpool_prefixes.setHeaderHidden(True)
+        self.base_modpool_prefixes.populate_with_mod_data(mods_data, generation_type='prefix')
+        self.verticalLayout_13.addWidget(self.base_modpool_prefixes)
 
 
 class HotkeyEventFilter(QAbstractNativeEventFilter):
