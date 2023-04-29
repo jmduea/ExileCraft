@@ -3,7 +3,7 @@
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
   <property name="windowModality">
-   <enum>Qt::NonModal</enum>
+   <enum>Qt::ApplicationModal</enum>
   </property>
   <property name="enabled">
    <bool>true</bool>
@@ -12,7 +12,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1320</width>
+    <width>1322</width>
     <height>770</height>
    </rect>
   </property>
@@ -52,6 +52,10 @@
   <property name="windowTitle">
    <string>ExileCraft</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/icons/assets/images/vendor.png</normaloff>:/icons/assets/images/vendor.png</iconset>
+  </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
   </property>
@@ -65,55 +69,49 @@
    <string notr="true">QMainWindow {
     border: 3px ridge #8f8f91;
     border-radius: 3px;
+	background-blend-mode: overlay;
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
-	background-blend-mode: overlay;
 }
 
 QLineEdit {
 	font: fontin-smallcaps;
-    border:1px inset #8f8f91;
+    border:0px inset #8f8f91;
     border-radius: 0px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
 	background-blend-mode: overlay;
-	border-image: none;
-	background-image: none;
+ background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);
+	filter: drop-shadow(8 px 8px 10px gray);
 }
 
 QToolBox {
 	font: fontin-smallcaps;
-    border:1px ridge #8f8f91;
+    border:0px ridge #8f8f91;
     border-radius: 0px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
 	background-blend-mode: overlay;
-	border-image: none;
-	background-image: none;
+ background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);
+	filter: drop-shadow(8 px 8px 10px gray);
 }
 
 QGroupBox {
 	font-family: fontin;
-    border:1px ridge #8f8f91;
+    border:0px ridge #8f8f91;
     border-radius: 0px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
 	background-blend-mode: overlay;
+
+	filter: drop-shadow(8 px 8px 10px gray);
 }
 QWidget {
 	font-family: fontin-smallcaps;
     border:1px ridge #8f8f91;
     border-radius: 0px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
 	background-blend-mode: overlay;
 }
 QLabel {
 	font-family: fontin;
     border:1px groove #8f8f91;
     border-radius: 0px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
 	background-blend-mode: overlay;
 }
 
@@ -121,24 +119,25 @@ QComboBox {
 	font-family: fontin;
     border:1px outset #8f8f91;
     border-radius: 0px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
 	background-blend-mode: overlay;
+ background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);
+	filter: drop-shadow(8 px 8px 10px gray);
 }
 QStackedWidget {
 	font-family: fontin;
     border:1px inset #8f8f91;
     border-radius: 0px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
 	background-blend-mode: overlay;
+	filter: drop-shadow(8 px 8px 10px gray);
 }
 
 QToolTip {
     border: 2px solid #8f8f91;
     border-radius: 6px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+ background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);
+	filter: drop-shadow(8 px 8px 10px gray);
 }
 
 QPushButton {
@@ -193,6 +192,9 @@ QPushButton:default {
      <family>fontin-smallcaps</family>
     </font>
    </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
@@ -235,11 +237,16 @@ QPushButton:default {
         <height>1440</height>
        </size>
       </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
       <property name="autoFillBackground">
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">QGroupBox {
+background-image: url(assets/images/emubg.png);
+}</string>
       </property>
       <property name="title">
        <string/>
@@ -304,7 +311,950 @@ border-image: url(assets/images/emubg.png)
           <property name="verticalSpacing">
            <number>0</number>
           </property>
-          <item row="0" column="0">
+          <item row="1" column="4">
+           <widget class="QWidget" name="available_mods" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>475</width>
+              <height>350</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>fontin-smallcaps</family>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <layout class="QGridLayout" name="modpool_table">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QWidget" name="search_bar_container" native="true">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_4">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <item row="1" column="0">
+                 <widget class="QLineEdit" name="affix_search_bar">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>fontin-smallcaps</family>
+                    <pointsize>12</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="frame">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Search for an affix</string>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QGroupBox" name="groupBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QWidget {
+
+	filter: drop-shadow(8 px 8px 10px gray);
+}
+</string>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QWidget" name="modpool" native="true">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>400</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <layout class="QHBoxLayout" name="modpool_layout">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QStackedWidget" name="modpool_tabs">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="currentIndex">
+                      <number>1</number>
+                     </property>
+                     <widget class="QWidget" name="implicits">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <layout class="QVBoxLayout" name="implicits_layout">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QGroupBox" name="implicits_container">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>fontin-smallcaps</family>
+                           <pointsize>18</pointsize>
+                           <weight>75</weight>
+                           <italic>false</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QGroupBox{
+border: 0px;
+color: white;
+background-color: black;
+border-image: none;
+font: fontin;
+font-weight: bold;
+}</string>
+                         </property>
+                         <property name="title">
+                          <string>Implicits</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_7">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>35</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QToolBox" name="implicits_toolbox">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>fontin-smallcaps</family>
+                              <pointsize>14</pointsize>
+                              <weight>50</weight>
+                              <italic>false</italic>
+                              <bold>false</bold>
+                             </font>
+                            </property>
+                            <property name="contextMenuPolicy">
+                             <enum>Qt::NoContextMenu</enum>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true"> background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);</string>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Sunken</enum>
+                            </property>
+                            <property name="lineWidth">
+                             <number>1</number>
+                            </property>
+                            <property name="currentIndex">
+                             <number>2</number>
+                            </property>
+                            <property name="tabSpacing">
+                             <number>0</number>
+                            </property>
+                            <widget class="QWidget" name="vaal_implicits">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/method_vaal.png</normaloff>:/icons/assets/images/method_vaal.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Vaal Implicits</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="searing_exarch">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/searing-symbol.png</normaloff>:/icons/assets/images/searing-symbol.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Searing Exarch</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="eater_of_worlds">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/tangled-symbol.png</normaloff>:/icons/assets/images/tangled-symbol.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Eater Of Worlds</string>
+                             </attribute>
+                            </widget>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="prefixes">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>fontin-smallcaps</family>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_8">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QGroupBox" name="prefixes_container">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>fontin-smallcaps</family>
+                           <pointsize>18</pointsize>
+                           <weight>75</weight>
+                           <italic>false</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QGroupBox{
+border: 0px;
+color: white;
+border-image: none;
+font: fontin;
+font-weight: bold;
+}</string>
+                         </property>
+                         <property name="title">
+                          <string>Prefixes</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                         </property>
+                         <layout class="QVBoxLayout" name="prefixes_layout">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>35</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                     <widget class="QWidget" name="suffixes">
+                      <property name="styleSheet">
+                       <string notr="true"> background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);</string>
+                      </property>
+                      <layout class="QVBoxLayout" name="suffix_modpool_layout">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QGroupBox" name="suffixes_container">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>fontin-smallcaps</family>
+                           <pointsize>18</pointsize>
+                           <weight>75</weight>
+                           <italic>false</italic>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QGroupBox{
+border: 0px;
+color: white;
+background-color: black;
+border-image: none;
+font: fontin;
+font-weight: bold;
+}</string>
+                         </property>
+                         <property name="title">
+                          <string>Suffixes</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="suffixes_layout">
+                          <property name="spacing">
+                           <number>0</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>35</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QToolBox" name="suffixes_toolbox">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>fontin-smallcaps</family>
+                              <pointsize>14</pointsize>
+                              <weight>50</weight>
+                              <italic>false</italic>
+                              <bold>false</bold>
+                             </font>
+                            </property>
+                            <property name="contextMenuPolicy">
+                             <enum>Qt::NoContextMenu</enum>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::NoFrame</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Plain</enum>
+                            </property>
+                            <property name="lineWidth">
+                             <number>1</number>
+                            </property>
+                            <property name="currentIndex">
+                             <number>0</number>
+                            </property>
+                            <property name="tabSpacing">
+                             <number>0</number>
+                            </property>
+                            <widget class="QWidget" name="base_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <attribute name="label">
+                              <string>Base Modpool</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="shaper_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_2.png</normaloff>:/icons/assets/images/smlinf_2.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Shaper</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="elder_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_3.png</normaloff>:/icons/assets/images/smlinf_3.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Elder</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="crusader_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_4.png</normaloff>:/icons/assets/images/smlinf_4.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Crusader</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="hunter_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>fontin-smallcaps</family>
+                               <pointsize>8</pointsize>
+                              </font>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_5.png</normaloff>:/icons/assets/images/smlinf_5.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Hunter</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="warlord_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_6.png</normaloff>:/icons/assets/images/smlinf_6.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Warlord</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="redeemer_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_7.png</normaloff>:/icons/assets/images/smlinf_7.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Redeemer</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="incursion_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_9.png</normaloff>:/icons/assets/images/smlinf_9.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Incursion</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="veiled_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_10.png</normaloff>:/icons/assets/images/smlinf_10.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Veiled</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="crafted_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_11.png</normaloff>:/icons/assets/images/smlinf_11.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Crafted</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="delve_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>fontin-smallcaps</family>
+                               <pointsize>14</pointsize>
+                              </font>
+                             </property>
+                             <property name="cursor">
+                              <cursorShape>ArrowCursor</cursorShape>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_12.png</normaloff>:/icons/assets/images/smlinf_12.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Delve</string>
+                             </attribute>
+                            </widget>
+                            <widget class="QWidget" name="essence_modpool_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>0</x>
+                               <y>0</y>
+                               <width>98</width>
+                               <height>28</height>
+                              </rect>
+                             </property>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <attribute name="icon">
+                              <iconset resource="resources.qrc">
+                               <normaloff>:/icons/assets/images/smlinf_13.png</normaloff>:/icons/assets/images/smlinf_13.png</iconset>
+                             </attribute>
+                             <attribute name="label">
+                              <string>Essence</string>
+                             </attribute>
+                            </widget>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolBox" name="crafting_history">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>202</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>fontin-smallcaps</family>
+                    <pointsize>18</pointsize>
+                    <weight>50</weight>
+                    <italic>false</italic>
+                    <bold>false</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"> background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);</string>
+                  </property>
+                  <property name="currentIndex">
+                   <number>2</number>
+                  </property>
+                  <property name="tabSpacing">
+                   <number>0</number>
+                  </property>
+                  <widget class="QWidget" name="history_tab">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>98</width>
+                     <height>28</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>fontin-smallcaps</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="autoFillBackground">
+                    <bool>false</bool>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <attribute name="label">
+                    <string>History</string>
+                   </attribute>
+                  </widget>
+                  <widget class="QWidget" name="spending_tab">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>98</width>
+                     <height>28</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>fontin-smallcaps</family>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <attribute name="label">
+                    <string>Spending</string>
+                   </attribute>
+                  </widget>
+                  <widget class="QWidget" name="export_tab">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>198</width>
+                     <height>367</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <attribute name="label">
+                    <string>Export</string>
+                   </attribute>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="3">
            <layout class="QFormLayout" name="formLayout">
             <property name="rowWrapPolicy">
              <enum>QFormLayout::DontWrapRows</enum>
@@ -447,9 +1397,9 @@ background-color: hsla(0, 0%, 0%, .8);
                    <number>0</number>
                   </property>
                   <item>
-                   <widget class="QFrame" name="item_header">
+                   <widget class="QWidget" name="item_header" native="true">
                     <property name="sizePolicy">
-                     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
@@ -457,7 +1407,7 @@ background-color: hsla(0, 0%, 0%, .8);
                     <property name="minimumSize">
                      <size>
                       <width>400</width>
-                      <height>44</height>
+                      <height>54</height>
                      </size>
                     </property>
                     <property name="maximumSize">
@@ -475,10 +1425,7 @@ background-color: hsla(0, 0%, 0%, .8);
                     <property name="contextMenuPolicy">
                      <enum>Qt::NoContextMenu</enum>
                     </property>
-                    <property name="styleSheet">
-                     <string notr="true">font-family: fontin;</string>
-                    </property>
-                    <layout class="QHBoxLayout" name="horizontalLayout">
+                    <layout class="QVBoxLayout" name="verticalLayout_10">
                      <property name="spacing">
                       <number>0</number>
                      </property>
@@ -495,9 +1442,12 @@ background-color: hsla(0, 0%, 0%, .8);
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QFrame" name="item_header_background_frame">
+                      <widget class="QLabel" name="item_header_text_label">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
                        <property name="sizePolicy">
-                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                          <horstretch>0</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
@@ -505,84 +1455,44 @@ background-color: hsla(0, 0%, 0%, .8);
                        <property name="minimumSize">
                         <size>
                          <width>400</width>
-                         <height>44</height>
+                         <height>54</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>400</width>
+                         <height>54</height>
                         </size>
                        </property>
                        <property name="font">
                         <font>
                          <family>fontin</family>
-                         <pointsize>12</pointsize>
+                         <pointsize>13</pointsize>
                          <weight>50</weight>
                          <italic>false</italic>
                          <bold>false</bold>
+                         <kerning>true</kerning>
                         </font>
                        </property>
-                       <property name="lineWidth">
-                        <number>0</number>
+                       <property name="styleSheet">
+                        <string notr="true">color: white;
+background-image: url(assets/images/item-header-normal.png);</string>
                        </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_2">
-                        <property name="spacing">
-                         <number>0</number>
-                        </property>
-                        <property name="leftMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
-                         <number>0</number>
-                        </property>
-                        <item alignment="Qt::AlignTop">
-                         <widget class="QLabel" name="item_header_text_label">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>400</width>
-                            <height>45</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>400</width>
-                            <height>54</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>fontin</family>
-                            <pointsize>13</pointsize>
-                            <weight>50</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">QLabel {
-background-image: url(assets/images/item-header-middle.png);
-color: white;
-}</string>
-                          </property>
-                          <property name="scaledContents">
-                           <bool>true</bool>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignHCenter|Qt::AlignTop</set>
-                          </property>
-                          <property name="wordWrap">
-                           <bool>true</bool>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="textFormat">
+                        <enum>Qt::AutoText</enum>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
                       </widget>
                      </item>
                     </layout>
@@ -607,9 +1517,6 @@ color: white;
                       <width>400</width>
                       <height>400</height>
                      </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">opacity: 0.8;</string>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_5">
                      <property name="spacing">
@@ -644,7 +1551,7 @@ color: white;
                        <property name="maximumSize">
                         <size>
                          <width>400</width>
-                         <height>142</height>
+                         <height>143</height>
                         </size>
                        </property>
                        <property name="styleSheet">
@@ -675,9 +1582,14 @@ padding: 2px 10px;
                          <widget class="QLabel" name="ItemProperties">
                           <property name="styleSheet">
                            <string notr="true">color: #827a6c;
-padding: 2px 10px;
     font-size: 14px;
     line-height: 14px;</string>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="textFormat">
+                           <enum>Qt::RichText</enum>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -728,9 +1640,11 @@ padding: 2px 10px;
                           </property>
                           <property name="styleSheet">
                            <string notr="true">color: #827a6c;
-padding: 2px 10px;
     font-size: 14px;
     line-height: 14px;</string>
+                          </property>
+                          <property name="textFormat">
+                           <enum>Qt::RichText</enum>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -776,8 +1690,16 @@ padding: 2px 10px;
                           <property name="enabled">
                            <bool>false</bool>
                           </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: #8787fe;
+    font-size: 14px;
+    line-height: 14px;</string>
+                          </property>
                           <property name="text">
                            <string/>
+                          </property>
+                          <property name="textFormat">
+                           <enum>Qt::RichText</enum>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -1171,7 +2093,7 @@ padding: 2px 10px;
             <item row="0" column="1">
              <widget class="QWidget" name="item_view" native="true">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+               <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -1202,7 +2124,7 @@ background-color: none;
                 <number>0</number>
                </property>
                <property name="topMargin">
-                <number>61</number>
+                <number>0</number>
                </property>
                <property name="rightMargin">
                 <number>0</number>
@@ -1213,7 +2135,7 @@ background-color: none;
                <item>
                 <widget class="QLabel" name="item_img_box">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                  <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -1221,26 +2143,26 @@ background-color: none;
                  <property name="minimumSize">
                   <size>
                    <width>128</width>
-                   <height>0</height>
+                   <height>228</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>128</width>
-                   <height>229</height>
+                   <height>228</height>
                   </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-image: url(assets/images/item_box.png);</string>
                  </property>
                  <property name="text">
                   <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap>assets/images/item_box.png</pixmap>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
                  </property>
                  <property name="alignment">
-                  <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -1272,7 +2194,7 @@ background-color: none;
                <item>
                 <widget class="QLabel" name="item_dps_box">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                  <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -1306,1233 +2228,6 @@ background-color: none;
             </item>
            </layout>
           </item>
-          <item row="0" column="1">
-           <widget class="QWidget" name="available_mods" native="true">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>475</width>
-              <height>350</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>fontin-smallcaps</family>
-              <pointsize>14</pointsize>
-             </font>
-            </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
-            </property>
-            <layout class="QGridLayout" name="modpool_table">
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <item row="0" column="0">
-              <widget class="QWidget" name="search_bar_container" native="true">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true"/>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_4">
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <item row="0" column="0">
-                 <widget class="QLineEdit" name="affix_search_bar">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <family>fontin-smallcaps</family>
-                    <pointsize>12</pointsize>
-                    <weight>50</weight>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="frame">
-                   <bool>true</bool>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                  </property>
-                  <property name="placeholderText">
-                   <string>Search for an affix</string>
-                  </property>
-                  <property name="clearButtonEnabled">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QGroupBox" name="groupBox">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="title">
-                <string/>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_5">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-                <item>
-                 <widget class="QWidget" name="modpool" native="true">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>240</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <layout class="QHBoxLayout" name="modpool_layout">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <property name="leftMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>0</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>0</number>
-                   </property>
-                   <item>
-                    <widget class="QStackedWidget" name="modpool_tabs">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::NoFrame</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Plain</enum>
-                     </property>
-                     <property name="currentIndex">
-                      <number>1</number>
-                     </property>
-                     <widget class="QWidget" name="implicits">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true"/>
-                      </property>
-                      <layout class="QVBoxLayout" name="implicits_layout">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QGroupBox" name="implicits_container">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>fontin-smallcaps</family>
-                           <pointsize>18</pointsize>
-                           <weight>75</weight>
-                           <italic>false</italic>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QGroupBox{
-border: 0px;
-color: white;
-background-color: black;
-border-image: none;
-font: fontin;
-font-weight: bold;
-}</string>
-                         </property>
-                         <property name="title">
-                          <string>Implicits</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_7">
-                          <property name="spacing">
-                           <number>0</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>35</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item>
-                           <widget class="QToolBox" name="implicits_toolbox">
-                            <property name="sizePolicy">
-                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                              <horstretch>0</horstretch>
-                              <verstretch>0</verstretch>
-                             </sizepolicy>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>fontin-smallcaps</family>
-                              <pointsize>14</pointsize>
-                              <weight>50</weight>
-                              <italic>false</italic>
-                              <bold>false</bold>
-                             </font>
-                            </property>
-                            <property name="contextMenuPolicy">
-                             <enum>Qt::NoContextMenu</enum>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::StyledPanel</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Sunken</enum>
-                            </property>
-                            <property name="lineWidth">
-                             <number>1</number>
-                            </property>
-                            <property name="currentIndex">
-                             <number>0</number>
-                            </property>
-                            <property name="tabSpacing">
-                             <number>0</number>
-                            </property>
-                            <widget class="QWidget" name="vaal_implicits">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/method_vaal.png</normaloff>:/icons/assets/images/method_vaal.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Vaal Implicits</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="searing_exarch">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/searing-symbol.png</normaloff>:/icons/assets/images/searing-symbol.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Searing Exarch</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="eater_of_worlds">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/tangled-symbol.png</normaloff>:/icons/assets/images/tangled-symbol.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Eater Of Worlds</string>
-                             </attribute>
-                            </widget>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                     <widget class="QWidget" name="prefixes">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>fontin-smallcaps</family>
-                        <pointsize>16</pointsize>
-                       </font>
-                      </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_8">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QGroupBox" name="prefixes_container">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>fontin-smallcaps</family>
-                           <pointsize>18</pointsize>
-                           <weight>75</weight>
-                           <italic>false</italic>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QGroupBox{
-border: 0px;
-color: white;
-background-color: black;
-border-image: none;
-font: fontin;
-font-weight: bold;
-}</string>
-                         </property>
-                         <property name="title">
-                          <string>Prefixes</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
-                         </property>
-                         <layout class="QVBoxLayout" name="prefixes_layout">
-                          <property name="spacing">
-                           <number>0</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>35</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item>
-                           <widget class="QToolBox" name="prefixes_toolbox">
-                            <property name="sizePolicy">
-                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                              <horstretch>0</horstretch>
-                              <verstretch>0</verstretch>
-                             </sizepolicy>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>fontin-smallcaps</family>
-                              <pointsize>14</pointsize>
-                              <weight>50</weight>
-                              <italic>false</italic>
-                              <bold>false</bold>
-                             </font>
-                            </property>
-                            <property name="contextMenuPolicy">
-                             <enum>Qt::NoContextMenu</enum>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true"/>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::NoFrame</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Plain</enum>
-                            </property>
-                            <property name="lineWidth">
-                             <number>1</number>
-                            </property>
-                            <property name="currentIndex">
-                             <number>1</number>
-                            </property>
-                            <property name="tabSpacing">
-                             <number>0</number>
-                            </property>
-                            <widget class="QWidget" name="base_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="label">
-                              <string>Base Modpool</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="shaper_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>339</width>
-                               <height>69</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_2.png</normaloff>:/icons/assets/images/smlinf_2.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Shaper</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="elder_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_3.png</normaloff>:/icons/assets/images/smlinf_3.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Elder</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="crusader_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_4.png</normaloff>:/icons/assets/images/smlinf_4.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Crusader</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="hunter_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <family>fontin-smallcaps</family>
-                               <pointsize>8</pointsize>
-                              </font>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_5.png</normaloff>:/icons/assets/images/smlinf_5.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Hunter</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="warlord_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_6.png</normaloff>:/icons/assets/images/smlinf_6.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Warlord</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="redeemer_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_7.png</normaloff>:/icons/assets/images/smlinf_7.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Redeemer</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="incursion_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_9.png</normaloff>:/icons/assets/images/smlinf_9.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Incursion</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="veiled_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_10.png</normaloff>:/icons/assets/images/smlinf_10.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Veiled</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="crafted_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_11.png</normaloff>:/icons/assets/images/smlinf_11.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Crafted</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="delve_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <family>fontin-smallcaps</family>
-                               <pointsize>14</pointsize>
-                              </font>
-                             </property>
-                             <property name="cursor">
-                              <cursorShape>ArrowCursor</cursorShape>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_12.png</normaloff>:/icons/assets/images/smlinf_12.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Delve</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="essence_modpool">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_13.png</normaloff>:/icons/assets/images/smlinf_13.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Essence</string>
-                             </attribute>
-                            </widget>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                     <widget class="QWidget" name="suffixes">
-                      <property name="styleSheet">
-                       <string notr="true">QGroupBox{
-border: 0px;
-background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
-border-image: none;
-}</string>
-                      </property>
-                      <layout class="QVBoxLayout" name="suffix_modpool_layout">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QGroupBox" name="suffixes_container">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>fontin-smallcaps</family>
-                           <pointsize>18</pointsize>
-                           <weight>75</weight>
-                           <italic>false</italic>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QGroupBox{
-border: 0px;
-color: white;
-background-color: black;
-border-image: none;
-font: fontin;
-font-weight: bold;
-}</string>
-                         </property>
-                         <property name="title">
-                          <string>Suffixes</string>
-                         </property>
-                         <layout class="QVBoxLayout" name="suffixes_layout">
-                          <property name="spacing">
-                           <number>0</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>35</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item>
-                           <widget class="QToolBox" name="suffixes_toolbox">
-                            <property name="sizePolicy">
-                             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                              <horstretch>0</horstretch>
-                              <verstretch>0</verstretch>
-                             </sizepolicy>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>fontin-smallcaps</family>
-                              <pointsize>14</pointsize>
-                              <weight>50</weight>
-                              <italic>false</italic>
-                              <bold>false</bold>
-                             </font>
-                            </property>
-                            <property name="contextMenuPolicy">
-                             <enum>Qt::NoContextMenu</enum>
-                            </property>
-                            <property name="frameShape">
-                             <enum>QFrame::NoFrame</enum>
-                            </property>
-                            <property name="frameShadow">
-                             <enum>QFrame::Plain</enum>
-                            </property>
-                            <property name="lineWidth">
-                             <number>1</number>
-                            </property>
-                            <property name="currentIndex">
-                             <number>0</number>
-                            </property>
-                            <property name="tabSpacing">
-                             <number>0</number>
-                            </property>
-                            <widget class="QWidget" name="base_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="label">
-                              <string>Base Modpool</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="shaper_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_2.png</normaloff>:/icons/assets/images/smlinf_2.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Shaper</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="elder_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_3.png</normaloff>:/icons/assets/images/smlinf_3.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Elder</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="crusader_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_4.png</normaloff>:/icons/assets/images/smlinf_4.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Crusader</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="hunter_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <family>fontin-smallcaps</family>
-                               <pointsize>8</pointsize>
-                              </font>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_5.png</normaloff>:/icons/assets/images/smlinf_5.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Hunter</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="warlord_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_6.png</normaloff>:/icons/assets/images/smlinf_6.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Warlord</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="redeemer_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_7.png</normaloff>:/icons/assets/images/smlinf_7.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Redeemer</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="incursion_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_9.png</normaloff>:/icons/assets/images/smlinf_9.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Incursion</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="veiled_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_10.png</normaloff>:/icons/assets/images/smlinf_10.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Veiled</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="crafted_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_11.png</normaloff>:/icons/assets/images/smlinf_11.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Crafted</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="delve_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <family>fontin-smallcaps</family>
-                               <pointsize>14</pointsize>
-                              </font>
-                             </property>
-                             <property name="cursor">
-                              <cursorShape>ArrowCursor</cursorShape>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_12.png</normaloff>:/icons/assets/images/smlinf_12.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Delve</string>
-                             </attribute>
-                            </widget>
-                            <widget class="QWidget" name="essence_modpool_2">
-                             <property name="geometry">
-                              <rect>
-                               <x>0</x>
-                               <y>0</y>
-                               <width>98</width>
-                               <height>28</height>
-                              </rect>
-                             </property>
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <attribute name="icon">
-                              <iconset resource="resources.qrc">
-                               <normaloff>:/icons/assets/images/smlinf_13.png</normaloff>:/icons/assets/images/smlinf_13.png</iconset>
-                             </attribute>
-                             <attribute name="label">
-                              <string>Essence</string>
-                             </attribute>
-                            </widget>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QToolBox" name="crafting_history">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>300</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <family>fontin-smallcaps</family>
-                    <pointsize>18</pointsize>
-                    <weight>50</weight>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true"/>
-                  </property>
-                  <property name="currentIndex">
-                   <number>2</number>
-                  </property>
-                  <property name="tabSpacing">
-                   <number>0</number>
-                  </property>
-                  <widget class="QWidget" name="history_tab">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>0</y>
-                     <width>98</width>
-                     <height>28</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>fontin-smallcaps</family>
-                     <pointsize>14</pointsize>
-                    </font>
-                   </property>
-                   <property name="autoFillBackground">
-                    <bool>false</bool>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <attribute name="label">
-                    <string>History</string>
-                   </attribute>
-                  </widget>
-                  <widget class="QWidget" name="spending_tab">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>0</y>
-                     <width>98</width>
-                     <height>28</height>
-                    </rect>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>fontin-smallcaps</family>
-                     <pointsize>14</pointsize>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <attribute name="label">
-                    <string>Spending</string>
-                   </attribute>
-                  </widget>
-                  <widget class="QWidget" name="export_tab">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>0</y>
-                     <width>296</width>
-                     <height>367</height>
-                    </rect>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true"/>
-                   </property>
-                   <attribute name="label">
-                    <string>Export</string>
-                   </attribute>
-                  </widget>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
          </layout>
         </widget>
        </item>
@@ -2544,22 +2239,33 @@ font-weight: bold;
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="mouseTracking">
+          <bool>true</bool>
+         </property>
          <property name="styleSheet">
           <string notr="true">QWidget {
 	border: 0px;
 }
+
+QListWidget {
+border: 1px groove #8f8f91;
+    border-radius: 0px;
+ background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);
+	filter: drop-shadow(8 px 8px 10px gray);
+}
 QComboBox {
  border: 1px groove #8f8f91;
     border-radius: 0px;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+ background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);
 	filter: drop-shadow(8 px 8px 10px gray);
 }
 QPushButton {
     border: 1px groove #8f8f91;
     border-radius: 0px;
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);
 	filter: drop-shadow(8 px 8px 10px gray);
 }
 
@@ -2606,10 +2312,28 @@ QPushButton:default {
               <height>150</height>
              </size>
             </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
             <layout class="QGridLayout" name="gridLayout_6">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <property name="spacing">
+              <number>0</number>
+             </property>
              <item row="0" column="1" rowspan="2">
               <widget class="QWidget" name="crafting_methods" native="true">
                <property name="sizePolicy">
@@ -2624,6 +2348,15 @@ QPushButton:default {
                  <pointsize>9</pointsize>
                 </font>
                </property>
+               <property name="mouseTracking">
+                <bool>true</bool>
+               </property>
+               <property name="focusPolicy">
+                <enum>Qt::ClickFocus</enum>
+               </property>
+               <property name="toolTipDuration">
+                <number>-3</number>
+               </property>
                <property name="styleSheet">
                 <string notr="true">QWidget {
 	border: 0px;
@@ -2633,7 +2366,7 @@ QPushButton {
     border: 2px outset #8f8f91;
     border-radius: 0px;
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+                                      stop: 0 #f6f7fa, stop: 1 #686d71);
 	filter: drop-shadow(8 px 8px 10px gray);
 }
 
@@ -2641,6 +2374,12 @@ QPushButton:pressed {
 	border: 2px inset #8f8f91;
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:checked {
+border: 2px outset #8f8f91;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
 }
 
 QPushButton:flat {
@@ -2653,22 +2392,22 @@ QPushButton:default {
                </property>
                <layout class="QGridLayout" name="gridLayout_8">
                 <property name="leftMargin">
-                 <number>0</number>
+                 <number>20</number>
                 </property>
                 <property name="topMargin">
-                 <number>0</number>
+                 <number>20</number>
                 </property>
                 <property name="rightMargin">
-                 <number>0</number>
+                 <number>20</number>
                 </property>
                 <property name="bottomMargin">
-                 <number>0</number>
+                 <number>20</number>
                 </property>
                 <property name="spacing">
                  <number>0</number>
                 </property>
                 <item row="1" column="14">
-                 <widget class="QPushButton" name="VendorButton">
+                 <widget class="CustomCursorButton" name="vendor">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2683,6 +2422,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Vendor recipes</string>
@@ -2706,7 +2448,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="7">
-                 <widget class="QPushButton" name="ExaltedButton">
+                 <widget class="CustomCursorButton" name="method_exalted">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2721,6 +2463,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Enchants a Rare Item with a new random property</string>
@@ -2744,7 +2489,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="7">
-                 <widget class="QPushButton" name="HarvestButton">
+                 <widget class="CustomCursorButton" name="aharvest">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2759,6 +2504,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Harvest crafting</string>
@@ -2782,7 +2530,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="10">
-                 <widget class="QPushButton" name="CrusaderButton">
+                 <widget class="CustomCursorButton" name="method_crusader">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2797,6 +2545,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Enchants a Rare Item with a new Crusader modifier</string>
@@ -2820,7 +2571,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="12">
-                 <widget class="QPushButton" name="RedeemerButton">
+                 <widget class="CustomCursorButton" name="method_redeemer">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2835,6 +2586,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Enchants a Rare Item with a new Redeemer modifier</string>
@@ -2858,7 +2612,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="11">
-                 <widget class="QPushButton" name="EldritchButton">
+                 <widget class="CustomCursorButton" name="EldritchChaosOrb">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2873,6 +2627,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Eldritch crafting</string>
@@ -2896,7 +2653,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="6">
-                 <widget class="QPushButton" name="ChaosButton">
+                 <widget class="CustomCursorButton" name="method_chaos">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2911,6 +2668,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Reforges a Rare Item with new random modifiers</string>
@@ -2934,7 +2694,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="1">
-                 <widget class="QPushButton" name="VeiledChaosButton">
+                 <widget class="CustomCursorButton" name="method_veiled">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2949,6 +2709,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Reforges a Rare Item with new random modifiers, including a Veiled modifier</string>
@@ -2972,7 +2735,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="8">
-                 <widget class="QPushButton" name="ScourButton">
+                 <widget class="CustomCursorButton" name="method_scour">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -2987,6 +2750,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Removes all properties from an Item</string>
@@ -3013,7 +2779,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="11">
-                 <widget class="QPushButton" name="HunterButton">
+                 <widget class="CustomCursorButton" name="method_hunter">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3028,6 +2794,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Enchants a Rare Item with a new Hunter modifier</string>
@@ -3051,7 +2820,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="5">
-                 <widget class="QPushButton" name="FracturingButton">
+                 <widget class="CustomCursorButton" name="method_fracturing">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3066,6 +2835,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Fractures a random modifier on a Rare Item with at least 4 modifiers, locking it in place.</string>
@@ -3089,7 +2861,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="5">
-                 <widget class="QPushButton" name="AlchemyButton">
+                 <widget class="CustomCursorButton" name="method_alchemy">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3104,6 +2876,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Upgrades a Normal Item to a Rare Item</string>
@@ -3127,7 +2902,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="8">
-                 <widget class="QPushButton" name="EssenceButton">
+                 <widget class="CustomCursorButton" name="method_essence">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3142,6 +2917,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Essences</string>
@@ -3165,7 +2943,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="15">
-                 <widget class="QPushButton" name="RecombinateButton">
+                 <widget class="CustomCursorButton" name="recombinate">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3180,6 +2958,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Destroys two Items to create a new Item with a combination of their properties. Sometimes, the resultant Item is modified unpredictably</string>
@@ -3203,7 +2984,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="2">
-                 <widget class="QPushButton" name="WokeButton">
+                 <widget class="CustomCursorButton" name="method_woke">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3218,6 +2999,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Destroys an Item, applying it's Influence to another of the same Item class. The second Item is reforged as a Rare Item with both Influence types and new modifiers</string>
@@ -3241,7 +3025,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="15">
-                 <widget class="QPushButton" name="DivineButton">
+                 <widget class="CustomCursorButton" name="method_divine">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3256,6 +3040,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Randomises the numeric values of the random properties on an Item</string>
@@ -3279,7 +3066,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="4">
-                 <widget class="QPushButton" name="VaalButton">
+                 <widget class="CustomCursorButton" name="method_vaal">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3294,6 +3081,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Corrupts an Item, modifying it unpredictably</string>
@@ -3317,7 +3107,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="3">
-                 <widget class="QPushButton" name="MavenButton">
+                 <widget class="CustomCursorButton" name="method_maven">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3332,6 +3122,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Removes one Influenced modifier from an Item with at least two Influenced modifiers and upgrades another Influenced modifier</string>
@@ -3355,7 +3148,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="13">
-                 <widget class="QPushButton" name="SyndicateButton">
+                 <widget class="CustomCursorButton" name="sim_syndicate">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3370,6 +3163,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Syndicate</string>
@@ -3393,7 +3189,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="10">
-                 <widget class="QPushButton" name="BeastButton">
+                 <widget class="CustomCursorButton" name="method_imprint">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3408,6 +3204,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Beast crafting</string>
@@ -3431,7 +3230,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="14">
-                 <widget class="QPushButton" name="BlessedButton">
+                 <widget class="CustomCursorButton" name="method_blessed">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3446,6 +3245,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Randomises the numeric values of the Implicit properties of an Item</string>
@@ -3469,7 +3271,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="9">
-                 <widget class="QPushButton" name="CatalystButton">
+                 <widget class="CustomCursorButton" name="acatalyst">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3484,6 +3286,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Catalysts</string>
@@ -3507,7 +3312,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="2">
-                 <widget class="QPushButton" name="AlterationButton">
+                 <widget class="CustomCursorButton" name="method_alteration">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3522,6 +3327,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Reforges a Magic Item with new random properties</string>
@@ -3545,7 +3353,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="9">
-                 <widget class="QPushButton" name="AnnulButton">
+                 <widget class="CustomCursorButton" name="method_annul">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3560,6 +3368,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Removes a random modifier from an Item</string>
@@ -3583,7 +3394,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="1">
-                 <widget class="QPushButton" name="TransmuteButton">
+                 <widget class="CustomCursorButton" name="method_transmute">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3598,6 +3409,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="contextMenuPolicy">
                    <enum>Qt::NoContextMenu</enum>
@@ -3627,7 +3441,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="4">
-                 <widget class="QPushButton" name="RegalButton">
+                 <widget class="CustomCursorButton" name="method_regal">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3642,6 +3456,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Upgrades a Magic Item to a Rare Item</string>
@@ -3665,7 +3482,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="6">
-                 <widget class="QPushButton" name="FossilButton">
+                 <widget class="CustomCursorButton" name="method_fossil">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3680,6 +3497,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Fossil crafting</string>
@@ -3703,7 +3523,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="13">
-                 <widget class="QPushButton" name="WarlordButton">
+                 <widget class="CustomCursorButton" name="method_warlord">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3718,6 +3538,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Enchants a Rare Item with a new Warlord modifier</string>
@@ -3741,7 +3564,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="1" column="12">
-                 <widget class="QPushButton" name="LocusButton">
+                 <widget class="CustomCursorButton" name="locus">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3756,6 +3579,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Potently corrupts an Item, modifying it drastically and unpredictably</string>
@@ -3779,7 +3605,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item row="0" column="3">
-                 <widget class="QPushButton" name="AugmentationButton">
+                 <widget class="CustomCursorButton" name="method_augmentation">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -3794,6 +3620,9 @@ QPushButton:default {
                   </property>
                   <property name="cursor">
                    <cursorShape>OpenHandCursor</cursorShape>
+                  </property>
+                  <property name="mouseTracking">
+                   <bool>true</bool>
                   </property>
                   <property name="toolTip">
                    <string>Enchants a Magic Item with a new random property</string>
@@ -3826,16 +3655,16 @@ QPushButton:default {
                  <number>0</number>
                 </property>
                 <property name="leftMargin">
-                 <number>0</number>
+                 <number>10</number>
                 </property>
                 <property name="topMargin">
-                 <number>0</number>
+                 <number>15</number>
                 </property>
                 <property name="rightMargin">
-                 <number>0</number>
+                 <number>10</number>
                 </property>
                 <property name="bottomMargin">
-                 <number>0</number>
+                 <number>15</number>
                 </property>
                 <item>
                  <widget class="QWidget" name="widget_4" native="true">
@@ -3846,6 +3675,21 @@ QPushButton:default {
                    </sizepolicy>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                   <property name="spacing">
+                    <number>10</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>10</number>
+                   </property>
                    <item>
                     <widget class="QComboBox" name="item_class_combobox">
                      <property name="sizePolicy">
@@ -3950,6 +3794,21 @@ QPushButton:default {
                    </sizepolicy>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <property name="spacing">
+                    <number>10</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>10</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>10</number>
+                   </property>
                    <item>
                     <widget class="QComboBox" name="base_item_quality_combobox">
                      <property name="enabled">
@@ -4689,8 +4548,11 @@ QPushButton:default {
                        <pointsize>14</pointsize>
                       </font>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
                      <property name="verticalScrollBarPolicy">
-                      <enum>Qt::ScrollBarAlwaysOn</enum>
+                      <enum>Qt::ScrollBarAsNeeded</enum>
                      </property>
                      <property name="selectionMode">
                       <enum>QAbstractItemView::MultiSelection</enum>
@@ -4788,19 +4650,19 @@ QPushButton:default {
                  <number>0</number>
                 </property>
                 <property name="leftMargin">
-                 <number>0</number>
+                 <number>20</number>
                 </property>
                 <property name="topMargin">
                  <number>0</number>
                 </property>
                 <property name="rightMargin">
-                 <number>0</number>
+                 <number>20</number>
                 </property>
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QPushButton" name="pushButton_2">
+                 <widget class="QPushButton" name="simulate_crafting">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                     <horstretch>0</horstretch>
@@ -4834,7 +4696,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton">
+                 <widget class="QPushButton" name="import_custom_item">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                     <horstretch>0</horstretch>
@@ -4859,7 +4721,7 @@ QPushButton:default {
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_3">
+                 <widget class="QPushButton" name="clear_item_options">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
                     <horstretch>0</horstretch>
@@ -4899,7 +4761,7 @@ QPushButton:default {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1320</width>
+     <width>1322</width>
      <height>22</height>
     </rect>
    </property>
@@ -4988,6 +4850,13 @@ QPushButton:default {
   </action>
  </widget>
  <layoutdefault spacing="0" margin="0"/>
+ <customwidgets>
+  <customwidget>
+   <class>CustomCursorButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">ui.customcursorbutton</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resources.qrc"/>
  </resources>
