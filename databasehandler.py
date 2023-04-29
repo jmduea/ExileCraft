@@ -31,7 +31,6 @@ ITEM_CLASS_WHITELIST = {
     "Sceptre",
     "UtilityFlask",
     "UtilityFlaskCritical",
-    "FishingRod",
     "Jewel",
     "AbyssJewel",
 
@@ -79,6 +78,7 @@ ITEM_CLASS_BLACKLIST = {
     "Active Skill Gem",
     "Support Skill Gem",
     "Currency",
+    'FishingRod',
 }
 
 tags_map = {
@@ -99,70 +99,13 @@ class DatabaseHandler:
     def __init__(self, db_name='exilecraft.db'):
         self.db_name = db_name
         self.conn = sqlite3.connect(db_name)
+        self.cursor = self.conn.cursor()
 
     def _connect(self):
         return sqlite3.connect(self.db_name)
 
     def close(self):
         self.conn.close()
-
-    def insert_translation_object(self, hidden):
-        with self._connect() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """
-                INSERT INTO translation_objects (hidden)
-                VALUES (?)
-                """,
-                (hidden,)
-            )
-            return cursor.lastrowid
-
-    def insert_stat_id(self, translation_object_id, stat_id):
-        with self._connect() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """
-                INSERT INTO stat_ids (translation_object_id, stat_id)
-                VALUES (?, ?)
-                """,
-                (translation_object_id, stat_id)
-            )
-
-    def insert_translation_info(self, translation_object_id):
-        with self._connect() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """
-                INSERT INTO translation_info (translation_object_id)
-                VALUES (?)
-                """,
-                (translation_object_id,)
-            )
-            return cursor.lastrowid
-
-    def insert_condition(self, translation_info_id, min_value, max_value, negated):
-        with self._connect() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """
-                INSERT INTO conditions (translation_info_id, min_value, max_value, negated)
-                VALUES (?, ?, ?, ?)
-                """,
-                (translation_info_id, min_value, max_value, negated)
-            )
-
-    def insert_formatting_info(self, translation_info_id, string, formats, index_handlers):
-        with self._connect() as conn:
-            cursor = conn.cursor()
-            cursor.execute(
-                """
-                INSERT INTO formatting_info
-                (translation_info_id, string, formats, index_handlers)
-                VALUES (?, ?, ?, ?)
-                """,
-                (translation_info_id, string, json.dumps(formats), json.dumps(index_handlers))
-            )
 
     def insert_stat_translations(self, json_file):
         with open(json_file) as f:
@@ -222,7 +165,7 @@ class DatabaseHandler:
                         stat_id TEXT,
                         min INTEGER,
                         max INTEGER,
-                        FOREIGN KEY (mod_id) REFERENCES mods (mod_id)
+                        FOREIGN KEY (mod_id) REFERENCES mods (id)
                     )
                 ''')
             c.execute('''
@@ -231,7 +174,7 @@ class DatabaseHandler:
                         mod_id TEXT,
                         granted_effect_id TEXT,
                         level INTEGER,
-                        FOREIGN KEY (mod_id) REFERENCES mods (mod_id)
+                        FOREIGN KEY (mod_id) REFERENCES mods (id)
                     )
                 ''')
             c.execute('''
@@ -239,7 +182,7 @@ class DatabaseHandler:
                         id INTEGER PRIMARY KEY,
                         mod_id TEXT,
                         tag TEXT,
-                        FOREIGN KEY (mod_id) REFERENCES mods (mod_id)
+                        FOREIGN KEY (mod_id) REFERENCES mods (id)
                     )
                 ''')
             c.execute('''
@@ -247,7 +190,7 @@ class DatabaseHandler:
                         id INTEGER PRIMARY KEY,
                         mod_id TEXT,
                         group_name TEXT,
-                        FOREIGN KEY (mod_id) REFERENCES mods (mod_id)
+                        FOREIGN KEY (mod_id) REFERENCES mods (id)
                     )
                 ''')
             c.execute('''
@@ -256,7 +199,7 @@ class DatabaseHandler:
                         mod_id TEXT,
                         tag TEXT,
                         weight INTEGER,
-                        FOREIGN KEY (mod_id) REFERENCES mods (mod_id)
+                        FOREIGN KEY (mod_id) REFERENCES mods (id)
                     )
                 ''')
             c.execute('''
@@ -299,7 +242,6 @@ class DatabaseHandler:
                               index_handlers TEXT,
                               translation TEXT,
                               formatting_info_id INTEGER,
-                              FOREIGN KEY (formatting_info_id) REFERENCES formatting_info(id),
                               FOREIGN KEY (stat_id) REFERENCES stat_ids (stat_id))''')
             c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='base_items'")
             if not c.fetchone():
@@ -353,7 +295,7 @@ class DatabaseHandler:
                 SELECT base_items.name
                 FROM base_items
                 JOIN tags ON base_items.tag_id = tags.id
-                WHERE base_items.item_class = ?
+                WHERE base_items.item_class_id = ?
             ''', (item_class,))
             base_items = c.fetchall()
         return base_items
@@ -465,102 +407,6 @@ class DatabaseHandler:
 
             return base_items
 
-    def insert_mod_data(self):
-        # Load the mods.json data
-        with open("data/json/mods.json", "r") as f:
-            mods_data = json.load(f)
-
-        # Connect to the SQLite database (or create a new one if it doesn't exist)
-        conn = sqlite3.connect("exilecraft.db")
-        cursor = conn.cursor()
-
-        # Insert the mods data into the mods table and the additional tables
-        for mod_id, mod_info in mods_data.items():
-            cursor.execute("""
-                INSERT INTO mods (mod_id, name, required_level, domain, generation_type, is_essence_only, type)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, (
-                mod_id,
-                mod_info.get("name", ""),
-                mod_info.get("required_level", 0),
-                mod_info.get("domain", 0),
-                mod_info.get("generation_type", 0),
-                mod_info.get("is_essence_only", False),
-                mod_info.get("type", "")
-            ))
-
-            for stat in mod_info.get("stats", []):
-                cursor.execute("""
-                    INSERT INTO mod_stats (mod_id, stat_id, min, max)
-                    VALUES (?, ?, ?, ?)
-                """, (
-                    mod_id,
-                    stat["id"],
-                    stat["min"],
-                    stat["max"]
-                ))
-
-            for effect in mod_info.get("grants_effects", []):
-                cursor.execute("""
-                    INSERT INTO mod_grants_effects (mod_id, granted_effect_id, level)
-                    VALUES (?, ?, ?)
-                """, (
-                    mod_id,
-                    effect["granted_effect_id"],
-                    effect["level"]
-                ))
-
-            for tag in mod_info.get("adds_tags", []):
-                cursor.execute("""
-                    INSERT INTO mod_adds_tags (mod_id, tag)
-                    VALUES (?, ?)
-                """, (
-                    mod_id,
-                    tag
-                ))
-
-            for group in mod_info.get("groups", []):
-                cursor.execute("""
-                    INSERT INTO mod_groups (mod_id, group_name)
-                    VALUES (?, ?)
-                """, (
-                    mod_id,
-                    group
-                ))
-
-            for spawn_weight in mod_info.get("spawn_weights", []):
-                cursor.execute("""
-                    INSERT INTO mod_spawn_weights (mod_id, tag, weight)
-                    VALUES (?, ?, ?)
-                """, (
-                    mod_id,
-                    spawn_weight["tag"],
-                    spawn_weight["weight"]
-                ))
-
-            for generation_weight in mod_info.get("generation_weights", []):
-                cursor.execute("""
-                    INSERT INTO mod_generation_weights (mod_id, tag, weight)
-                    VALUES (?, ?, ?)
-                """, (
-                    mod_id,
-                    generation_weight["tag"],
-                    generation_weight["weight"]
-                ))
-
-            for implicit_tag in mod_info.get("implicit_tags", []):
-                cursor.execute("""
-                    INSERT INTO mod_implicit_tags (mod_id, tag)
-                    VALUES (?, ?)
-                """, (
-                    mod_id,
-                    implicit_tag
-                ))
-
-        # Commit the changes and close the connection
-        conn.commit()
-        conn.close()
-
     def insert_ids_to_database(self, json_filename, database_name):
         # Connect to the SQLite database
         conn = sqlite3.connect(database_name)
@@ -662,15 +508,97 @@ class DatabaseHandler:
         conn.commit()
         conn.close()
 
+    def import_item_classes(self, json_file):
+        with open(json_file) as f:
+            item_classes_data = json.load(f)
+
+        for item_class_id, item_class_data in item_classes_data.items():
+            self.cursor.execute(
+                "INSERT INTO item_classes (id, name) VALUES (?, ?)",
+                (item_class_id, item_class_data["name"])
+            )
+
+        self.conn.commit()
+
+    def load_mods_json(json_file):
+        with open(json_file, "r") as f:
+            data = json.load(f)
+        return data
+
+    def insert_mods_to_db(conn, mods_data):
+        cursor = conn.cursor()
+
+        for mod_id, mod_data in mods_data.items():
+            cursor.execute(
+                '''
+                INSERT INTO modifiers (id, name, required_level, stats, grants_effects, adds_tags, domain, generation_type, groups, is_essence_only, spawn_weights, generation_weights, type, implicit_tags)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''',
+                (
+                    mod_id,
+                    mod_data.get("name", ""),
+                    mod_data.get("required_level", 0),
+                    json.dumps(mod_data.get("stats", [])),
+                    json.dumps(mod_data.get("grants_effects", [])),
+                    json.dumps(mod_data.get("adds_tags", [])),
+                    mod_data.get("domain", ""),
+                    mod_data.get("generation_type", ""),
+                    json.dumps(mod_data.get("groups", [])),
+                    mod_data.get("is_essence_only", False),
+                    json.dumps(mod_data.get("spawn_weights", [])),
+                    json.dumps(mod_data.get("generation_weights", [])),
+                    mod_data.get("type", ""),
+                    json.dumps(mod_data.get("implicit_tags", []))
+                )
+            )
+        conn.commit()
+
+    def get_translation_text_by_id(self, stat_id):
+        query = "SELECT translation_text FROM resolved_mod_stats WHERE stat_id = ?"
+        self.cursor.execute(query, (stat_id,))
+        result = self.cursor.fetchone()
+        if result:
+            return result[0]
+        return None
+
+
+import sqlite3
+import json
+
+def populate_modifiers_tags_table():
+    conn = sqlite3.connect('exilecraft.db')
+    c = conn.cursor()
+
+    # Get all the tags from the tags table
+    c.execute("SELECT * FROM tags")
+    tags = c.fetchall()
+
+    # Loop through each tag
+    for tag in tags:
+        tag_id = tag[0]
+        tag_name = tag[1]
+
+        # Get all mods that have a positive spawn weight for this tag
+        c.execute("""
+            SELECT DISTINCT modifiers.*
+            FROM modifiers, json_each(modifiers.spawn_weights)
+            WHERE json_extract(json_each.value, '$.tag') = ?
+            AND json_extract(json_each.value, '$.weight') > 0
+        """, (tag_name,))
+
+        mods = c.fetchall()
+
+        # Loop through each mod and insert a record into the modifiers_tags table
+        for mod in mods:
+            mod_id = mod[0]
+
+            c.execute("""
+                INSERT INTO modifiers_tags (modifier_id, tag_id)
+                VALUES (?, ?)
+            """, (mod_id, tag_id))
+
+    conn.commit()
+    conn.close()
 
 if __name__ == "__main__":
-    db_handler = DatabaseHandler()
-    db_handler.insert_resolved_stats()
-
-    # Define the paths and table name
-    json_file_path = 'data/json/stat_translations.json'
-    db_file_path = 'exilecraft.db'
-    table_name = 'stat_translations'
-
-    # Call the function to populate the stat_translations table with the data from the JSON file
-    db_handler.create_tables()
+    populate_modifiers_tags_table()
