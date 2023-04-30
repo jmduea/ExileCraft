@@ -600,5 +600,165 @@ def populate_modifiers_tags_table():
     conn.commit()
     conn.close()
 
+# Use this function to store the translations in the SQLite database
+def store_translations(conn, stat_translations):
+    cursor = conn.cursor()
+
+    for tr in stat_translations:
+        # Insert stat_translation entry
+        cursor.execute("INSERT INTO stat_translation (ids, hidden) VALUES (?, ?)",
+                       (' '.join(tr['ids']), int(tr.get('hidden', False))))
+        stat_translation_id = cursor.lastrowid
+
+        for eng in tr['English']:
+            # Insert translation entry
+            conditions = eng['condition']
+            cursor.execute("INSERT INTO translation (stat_translation_id, condition_min, condition_max, condition_negated, string, format, index_handlers) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                           (stat_translation_id,
+                            ' '.join([str(c.get('min', '')) for c in conditions]),
+                            ' '.join([str(c.get('max', '')) for c in conditions]),
+                            ' '.join([str(int(c.get('negated', False))) for c in conditions]),
+                            eng['string'],
+                            ' '.join(eng['format']),
+                            ' '.join([' '.join(h) for h in eng['index_handlers']])))
+    conn.commit()
+
+
+def _convert_tags(n_ids, tags, tags_types):
+    f = ["ignore" for _ in range(n_ids)]
+    for tag, tag_type in zip(tags, tags_types):
+        if tag_type == "+d":
+            f[tag] = "+#"
+        elif tag_type == "d":
+            f[tag] = "#"
+        elif tag_type == "":
+            f[tag] = "#"
+        else:
+            print("Unknown tag type:", tag_type)
+    return f
+
+
+def _convert_range(translation_range):
+    rs = []
+    for r in translation_range:
+        r_dict = {}
+        if r.min is not None:
+            r_dict["min"] = r.min
+        if r.max is not None:
+            r_dict["max"] = r.max
+        if r.negated:
+            r_dict["negated"] = True
+        rs.append(r_dict)
+    return rs
+
+
+def _convert_handlers(n_ids, index_handlers):
+    hs = [[] for _ in range(n_ids)]
+    for handler_name, ids in index_handlers.items():
+        for i in ids:
+            # Indices in the handler dict are 1-based
+            hs[i - 1].append(handler_name)
+    return hs
+
+
+def _convert(tr, tag_set):
+    ids = tr.ids
+    n_ids = len(ids)
+    english = []
+    for s in tr.get_language("English").strings:
+        tags = _convert_tags(n_ids, s.tags, s.tags_types)
+        tag_set.update(tags)
+        english.append(
+            {
+                "condition": _convert_range(s.range),
+                "string": s.as_format_string,
+                "format": tags,
+                "index_handlers": _convert_handlers(n_ids, s.quantifier.index_handlers),
+            }
+        )
+    return {"ids": ids, "English": english}
+
+
+def _get_stat_translations(tag_set, translations, custom_translations):
+    previous = set()
+    root = []
+    for tr in translations:
+        id_str = " ".join(tr.ids)
+        if id_str in previous:
+            print("Duplicate id", tr.ids)
+            continue
+        previous.add(id_str)
+        root.append(_convert(tr, tag_set))
+    for tr in custom_translations:
+        id_str = " ".join(tr.ids)
+        if id_str in previous:
+            continue
+        previous.add(id_str)
+        result = _convert(tr, tag_set)
+        result["hidden"] = True
+        root.append(result)
+    return root
+
+def get_stat_translation(conn, ids, stat_values):
+    cursor = conn.cursor()
+
+    # Query the stat_translation table
+    cursor.execute("SELECT id, hidden FROM stat_translation WHERE ids = ?", (' '.join(ids),))
+    stat_translation_data = cursor.fetchone()
+
+    if stat_translation_data is None:
+        return None
+
+    stat_translation_id, hidden = stat_translation_data
+
+    # Query the translation table
+    cursor.execute("SELECT condition_min, condition_max, condition_negated, string, format, index_handlers FROM translation WHERE stat_translation_id = ?", (stat_translation_id,))
+    translations = cursor.fetchall()
+
+    for translation in translations:
+        condition_min, condition_max, condition_negated, string, format_str, index_handlers = translation
+        condition_min = [float(v) if v else float('-inf') for v in condition_min.split()]
+        condition_max = [float(v) if v else float('inf') for v in condition_max.split()]
+        condition_negated = [bool(condition_negated)]
+        format_list = format_str.split()
+        index_handlers = [handler.split() for handler in index_handlers.split()]
+
+        all_conditions_met = True
+        for i, (min_value, max_value, negated, value) in enumerate(zip(condition_min, condition_max, condition_negated, stat_values)):
+            condition_met = min_value <= value <= max_value
+            if negated:
+                condition_met = not condition_met
+            if not condition_met:
+                all_conditions_met = False
+                break
+
+        if all_conditions_met:
+            # Build the translated string
+            translated_string = string
+            for i, (value, fmt, handlers) in enumerate(zip(stat_values, format_list, index_handlers)):
+                for handler in handlers:
+                    # Apply index_handlers here if any
+                    pass
+
+                if fmt == "#":
+                    formatted_value = str(value)
+                elif fmt == "+#":
+                    formatted_value = f"+{value}" if value >= 0 else str(value)
+                else:  # ignore
+                    continue
+
+                translated_string = translated_string.replace(f"{{{i}}}", formatted_value)
+
+            return translated_string, hidden
+
+    return None
+
 if __name__ == "__main__":
-    populate_modifiers_tags_table()
+    ids = ["local_physical_damage_+% local_weapon_no_physical_damage"]
+    stat_values = [4]  # Use the appropriate stat values for the given ids
+    conn = sqlite3.connect('exilecraft.db')
+    translated_string, hidden = get_stat_translation(conn, ids, stat_values)
+    if translated_string is not None:
+        print(translated_string, "(Hidden)" if hidden else "")
+    else:
+        print("No translation found.")
