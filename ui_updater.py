@@ -31,6 +31,7 @@ class UIUpdater:
         self.base_item_quality_combobox = base_item_quality_combobox
         self.base_item_influence_combobox = base_item_influence_combobox
         self.main_window = main_window
+        self.Prefixes = main_window.Prefixes
         self.all_subtypes = {"armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
                              "str_dex_int_armour", "str_int_armour"}
         self.subtype_display_names = {
@@ -67,6 +68,7 @@ class UIUpdater:
         cursor = conn.cursor()
         if self.base_item_combobox.currentText() is not None:
             item_name = self.base_item_combobox.currentText()
+            item_tags = []
             cursor.execute("""
                 SELECT
                     tags
@@ -75,38 +77,86 @@ class UIUpdater:
                 WHERE
                     name = ?
             """, (item_name,))
-            item_tags_result = cursor.fetchone()
-            if item_tags_result is None:
+            item_tags_result = cursor.fetchall()
+            if item_tags_result is None or not item_tags_result:
                 return []
-            item_tags = json.loads(item_tags_result[0])
-            print(item_tags)
+            item_tags_string = item_tags_result[0][0]
+
+            item_tags = json.loads(item_tags_string)
+            cursor.execute("""CREATE TEMPORARY TABLE valid_mod_ids (mod_id TEXT PRIMARY KEY, weight INTEGER);""")
+            cursor.execute("""CREATE TEMPORARY TABLE not_valid_mod_ids (mod_id TEXT PRIMARY KEY);""")
             mods_data = []
-
             for tag in item_tags:
+                # Query to get mod_ids with a spawn weight of 0
                 cursor.execute("""
-                    SELECT
-                        valid_modifiers.*,
-                        json_each.value AS extracted_weights
-                    FROM
-                        modifiers AS valid_modifiers,
-                        json_each(valid_modifiers.spawn_weights)
-                    WHERE
-                        valid_modifiers.generation_type IN ('prefix', 'suffix', 'eater_implicit', 'exarch_implicit')
-                        AND domain = 'item'
-                        AND json_extract(json_each.value, '$.tag') = ?
-                        AND json_extract(json_each.value, '$.weight') > 0;
-                    """, (tag,))
-                results = cursor.fetchall()
+                WITH modpool AS (
+                SELECT spawn_weights.mod_id,
+                    (CASE
+                        WHEN spawn_weights.tag_id = ? AND spawn_weights.weight = 0
+                        THEN 'not_valid_mod'
+                        ELSE NULL
+                    END) AS not_valid_mod,
+                    (CASE
+                        WHEN spawn_weights.tag_id = ? AND spawn_weights.weight > 0
+                        THEN 'valid_mod'
+                        ELSE NULL
+                    END) AS valid_mod
+                FROM spawn_weights)
+                INSERT OR IGNORE INTO not_valid_mod_ids (mod_id)
+                SELECT modpool.mod_id
+                FROM modpool
+                WHERE modpool.not_valid_mod IS NOT NULL;
+                """, (tag, tag))
 
+                cursor.execute("""
+                WITH modpool AS (
+                    SELECT spawn_weights.mod_id, spawn_weights.weight,
+                        (CASE
+                            WHEN spawn_weights.tag_id = ? AND spawn_weights.weight = 0
+                            THEN 'not_valid_mod'
+                            ELSE NULL
+                        END) AS not_valid_mod,
+                        (CASE
+                            WHEN spawn_weights.tag_id = ? AND spawn_weights.weight > 0
+                            THEN 'valid_mod'
+                            ELSE NULL
+                        END) AS valid_mod
+                    FROM spawn_weights)
+                INSERT OR REPLACE INTO valid_mod_ids (mod_id, weight)
+                SELECT modpool.mod_id,
+                    (SELECT MAX(weight) FROM modpool mp WHERE mp.mod_id = modpool.mod_id AND mp.valid_mod IS NOT NULL) AS max_weight
+                FROM modpool
+                WHERE modpool.valid_mod IS NOT NULL;
+                """, (tag, tag))
+
+                cursor.execute("""
+                SELECT
+                    modifiers.*
+                FROM
+                    modifiers
+                JOIN
+                    valid_mod_ids ON valid_mod_ids.mod_id = modifiers.id
+                LEFT JOIN
+                    not_valid_mod_ids ON not_valid_mod_ids.mod_id = modifiers.id
+                WHERE
+                    not_valid_mod_ids.mod_id IS NULL
+                    AND modifiers.domain = 'item'
+                    AND (modifiers.generation_type IN ('prefix', 'suffix', 'eater_implicit', 'exarch_implicit'));
+                """)
+                results = cursor.fetchall()
                 mods_data.extend(results)
+            mods_data = list(set(mods_data))
+            print(mods_data)
+            cursor.execute("DROP TABLE valid_mod_ids;")
+            cursor.execute("DROP TABLE not_valid_mod_ids;")
 
             return mods_data
 
     def update_mods_data(self):
         mods_data = self.get_mods_for_item_class()
         generation_type = "prefix"
-        self.main_window.base_modpool_prefixes.clear()
-        self.main_window.base_modpool_prefixes.populate_with_mod_data(mods_data, generation_type)
+        # self.main_window.base_modpool_prefixes.clear()
+        # self.main_window.base_modpool_prefixes.populate_with_mod_data(mods_data, generation_type)
 
     def set_item_view_box_background(self):
         current_base_item = self.base_item_combobox.currentText().replace(' ', '_').lower()
