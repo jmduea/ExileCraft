@@ -2,6 +2,7 @@ import ctypes
 import os
 import sys
 from ctypes import wintypes
+
 import pywintypes
 import win32con
 import win32gui
@@ -11,6 +12,9 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
 import ui_updater
+from ExileCraft.ui.customtreeitem import TreeItem
+from ExileCraft.ui.customtreemodel import CustomTreeModel
+from ExileCraft.ui.customtreeview import CustomTreeView
 from mainwindow_ui import Ui_MainWindow
 from ui_updater import UIUpdater
 from craftingsim import CraftingSimulator
@@ -58,13 +62,24 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.crafting_simulator = CraftingSimulator(db_handler)
         self.import_custom_item = self.import_custom_item
         self.import_custom_item.clicked.connect(lambda: self.crafting_simulator.open_crafting_project_dialog())
+        self.prefix_tree_view.setEnabled(True)
+        self.prefix_tree_view.setVisible(True)
+        # Connect the signal to a method that updates the model
+        self.base_item_combobox.currentIndexChanged.connect(self.update_tree_view)
+        # self.base_modpool_prefixes = CustomTreeWidget(self.base_modpool)
+        # self.base_modpool_prefixes.clear()
+        # self.base_modpool_prefixes.setHeaderHidden(True)
+        # self.base_modpool_prefixes.populate_with_mod_data(mods_data, generation_type='prefix')
+        # self.verticalLayout_13.addWidget(self.base_modpool_prefixes)
 
-        mods_data = self.ui_updater.get_mods_for_item_class()
-        self.base_modpool_prefixes = CustomTreeWidget(self.base_modpool)
-        self.base_modpool_prefixes.clear()
-        self.base_modpool_prefixes.setHeaderHidden(True)
-        self.base_modpool_prefixes.populate_with_mod_data(mods_data, generation_type='prefix')
-        self.verticalLayout_13.addWidget(self.base_modpool_prefixes)
+        # Add this method to update the tree view
+    def update_tree_view(self):
+        headers = ["Name", "Level", "Stats", "Tags", "Mods", "Weight"]
+        item_name = self.base_item_combobox.currentText()
+        all_results = self.ui_updater.get_mods_for_item_class()
+        generation_type = "prefix"  # Or "suffix" or other types as needed
+        model = CustomTreeModel(headers, item_name, all_results, generation_type)
+        self.prefix_tree_view.setModel(model)
 
 
 class HotkeyEventFilter(QAbstractNativeEventFilter):
