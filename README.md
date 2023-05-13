@@ -4,7 +4,7 @@ ExileCraft is an open-source crafting helper application designed for the popula
 
 ---
 # Getting Started
-ExileCraft is currently in the beginning stages of the development process and lacks most of the features that I would like/will implement, however, if you would like to see it in action head over to the Releases page to download the latest release.
+ExileCraft is currently in the beginning stages of the development process and lacks most of the features that I would like/will implement, however, if you would like to see it in action head over to the [Releases](https://github.com/jmduea/ExileCraft/releases) page to download the latest release.
 <br>
 <br>
 Any and all feedback is welcome and appreciated, users can find information about how they can help the development of this application in the Contributing section (specifically Bug Reports and Feature Suggestions). If you are a developer and would like to contribute to the development of ExileCraft, check out the Code Contributions selection below.
