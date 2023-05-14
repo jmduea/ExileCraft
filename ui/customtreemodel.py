@@ -3,18 +3,26 @@ import json
 from PyQt5.QtCore import QAbstractItemModel, QModelIndex, Qt
 
 from ExileCraft.ui.customtreeitem import TreeItem
-from ExileCraft.databasehandler import DatabaseHandler
+from ExileCraft.database_handler import DatabaseHandler
 
 
 class CustomTreeModel(QAbstractItemModel):
     def __init__(self, headers, item_name, all_results, generation_type):
         super().__init__()
         self.db_handler = DatabaseHandler()
+        self.headers = headers
         self.item_name = item_name
         self.root_item = TreeItem([""] * len(headers))
         self.all_results = all_results
         self.generation_type = generation_type
-        self.populate_tree_with_db_data()
+
+    def update_data(self, headers, item_name, all_results, generation_type):
+        self.headers = headers
+        self.item_name = item_name
+        self.root_item = TreeItem([""] * len(headers))
+        self.all_results = all_results
+        self.generation_type = generation_type
+        self.populate_data()
 
     def rowCount(self, parent=QModelIndex()):
         if parent.isValid():
@@ -39,7 +47,7 @@ class CustomTreeModel(QAbstractItemModel):
     def headerData(self, section, orientation, role):
         if orientation == Qt.Horizontal and role == Qt.DisplayRole:
             headers = [
-                "Mod Group",
+                "Mod",
                 "Required Level",
                 "Total Mods",
                 "Tags",
@@ -76,7 +84,18 @@ class CustomTreeModel(QAbstractItemModel):
 
         return self.createIndex(parent_item.row(), 0, parent_item)
 
-    def populate_tree_with_db_data(self):
+    def update_and_populate(self, generation_type):
+        # Assuming generation_type, headers, item_name, and all_results are instance variables
+        self.generation_type = generation_type
+        self.beginResetModel()
+        self.update_data(self.headers, self.item_name, self.all_results, self.generation_type)
+        self.endResetModel()
+
+    def populate_data(self):
+        """Populates the model with data based on the current generation type.
+
+        This is a placeholder method. You'll need to replace it with your actual data population logic.
+        """
         mods_data = self.all_results
         filtered_results = [mod for mod in mods_data if mod[4] == self.generation_type]
         mod_groups = {}
@@ -146,7 +165,7 @@ class CustomTreeModel(QAbstractItemModel):
                             translated_stat = translation_text.format(min_value, max_value)
                             translated_stats.append(translated_stat)
                 implicit_tags = mod[10]
-                spawn_weights = mod[12]  # Use index 14 instead of 12
+                spawn_weights = mod[12]
                 highest_weight = 0
                 if spawn_weights:
                     weight_dict = json.loads(spawn_weights)

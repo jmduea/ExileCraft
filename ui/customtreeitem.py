@@ -1,5 +1,3 @@
-
-
 class TreeItem:
     def __init__(self, data, parent=None):
         self.parent_item = parent
@@ -31,3 +29,6 @@ class TreeItem:
         if self.parent_item:
             return self.parent_item.child_items.index(self)
         return 0
+
+    def remove_all_children(self):
+        self.child_items.clear()

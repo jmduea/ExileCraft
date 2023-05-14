@@ -1,4 +1,4 @@
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QEvent, pyqtSignal
 from PyQt5.QtWidgets import QTreeView, QHeaderView
 
 
@@ -25,3 +25,9 @@ class CustomTreeView(QTreeView):
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.header().setSizeAdjustPolicy(QHeaderView.AdjustToContents)
+    enabled = pyqtSignal()
+
+    def setEnabled(self, enabled):
+        super().setEnabled(enabled)
+        if enabled:
+            self.enabled.emit()
