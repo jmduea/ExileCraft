@@ -1,111 +1,194 @@
 import sqlite3
 import json
 
-ITEM_CLASS_WHITELIST = {
-    "LifeFlask",
-    "ManaFlask",
-    "HybridFlask",
-    "Amulet",
-    "Ring",
-    "Claw",
-    "Dagger",
-    "Rune Dagger",
-    "Wand",
-    "One Hand Sword",
-    "Thrusting One Hand Sword",
-    "One Hand Axe",
-    "One Hand Mace",
-    "Bow",
-    "Staff",
-    "Warstaff",
-    "Two Hand Sword",
-    "Two Hand Axe",
-    "Two Hand Mace",
-    "Quiver",
-    "Belt",
-    "Gloves",
-    "Boots",
-    "Body Armour",
-    "Helmet",
-    "Shield",
-    "Sceptre",
-    "UtilityFlask",
-    "UtilityFlaskCritical",
-    "Jewel",
-    "AbyssJewel",
-
-}
-
-ITEM_CLASS_BLACKLIST = {
-    "LabyrinthTrinket",
-    "MiscMapItem",
-    "Leaguestone",
-    "LabyrinthItem",
-    "PantheonSoul",
-    "UniqueFragment",
-    "IncursionItem",
-    "MetamorphosisDNA",
-    "HideoutDoodad",
-    "LabyrinthMapItem",
-    "Incubator",
-    "Microtransaction",
-    "HarvestInfrastructure",
-    "HarvestSeed",
-    "HarvestPlantBooster",
-    "Trinket",
-    "HeistObjective",
-    "HiddenItem",
-    "ArchnemesisMod",
-    "MemoryLine",
-    "HeistContract",
-    "HeistBlueprint",
-    "HeistEquipmentWeapon",
-    "HeistEquipmentTool",
-    "HeistEquipmentUtility",
-    "HeistEquipmentReward",
-    "DivinationCard",
-    "Map",
-    "MapFragment",
-    "AtlasRegionUpgradeItem",
-    "ExpeditionLogbook",
-    "IncubatorStackable",
-    "AtlasUpgradeItem",
-    "SentinelDrone",
-    "DelveStackableSocketableCurrency",
-    "DelveSocketableCurrency",
-    "QuestItem",
-    "StackableCurrency",
-    "Active Skill Gem",
-    "Support Skill Gem",
-    "Currency",
-    'FishingRod',
-}
-
-tags_map = {
-    "Body Armour": {
-        "Body Armour (dex)": ["armour", "dex_armour"],
-        "Body Armour (dex/int)": ["armour", "dex_int_armour"],
-        "Body Armour (dex/str)": ["armour", "dex_str_armour"],
-        "Body Armour (dex/str/int)": ["armour", "dex_str_int_armour"],
-        "Body Armour (str)": ["armour", "str_armour"],
-        "Body Armour (str/int)": ["armour", "str_int_armour"],
-        "Body Armour (int)": ["armour", "int_armour"],
-    },
-    # Define tags map for other item classes
-}
+from ExileCraft.crafting_project import CraftingProject
 
 
-class DatabaseHandler:
-    def __init__(self, db_name='exilecraft.db'):
-        self.db_name = db_name
-        self.conn = sqlite3.connect(db_name)
+class DatabaseHandler():
+    def __init__(self):
+        self.conn = sqlite3.connect('exilecraft.db')
         self.cursor = self.conn.cursor()
 
-    def _connect(self):
-        return sqlite3.connect(self.db_name)
+    def get_crafting_project_data(self):
+        conn = sqlite3.connect('exilecraft.db')
+        conn.row_factory = self.dict_factory
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM crafting_project")
+        crafting_project_data = cursor.fetchone()
+        conn.close()
+        if crafting_project_data:
+            return CraftingProject(crafting_project_data)
+        else:
+            return None
 
-    def close(self):
-        self.conn.close()
+    def get_last_crafting_project_base_item_id(self):
+        conn = sqlite3.connect('exilecraft.db')
+        cursor = conn.cursor()
+        cursor.execute('SELECT base_item_id FROM crafting_project ORDER BY id DESC LIMIT 1')
+        result = cursor.fetchone()
+
+        conn.close()
+
+        if result is not None:
+            return result[0]  # Return the base_item_id of the most recently added row
+        else:
+            return None  # Return None if the table is empty
+
+
+    @staticmethod
+    def dict_factory(cursor, row):
+        d = {}
+        for idx, col in enumerate(cursor.description):
+            d[col[0]] = row[idx]
+        return d
+
+    def update_crafting_project(self, crafting_project):
+        self.cursor.execute("""
+            UPDATE crafting_project
+            SET item_class_id = ?,
+                rarity = ?,
+                name = ?,
+                base_item_id = ?,
+                quality = ?,
+                item_level = ?,
+                sockets = ?,
+                enchant = ?,
+                physical_damage_min = ?,
+                physical_damage_max = ?,
+                cold_damage_min = ?,
+                cold_damage_max = ?,
+                fire_damage_min = ?,
+                fire_damage_max = ?,
+                lightning_damage_min = ?,
+                lightning_damage_max = ?,
+                chaos_damage_min = ?,
+                chaos_damage_max = ?,
+                critical_strike_chance = ?,
+                attacks_per_second = ?,
+                requirements_level = ?,
+                requirements_str = ?,
+                requirements_dex = ?,
+                requirements_int = ?,
+                prefix_modifier_1 = ?,
+                prefix_modifier_2 = ?,
+                prefix_modifier_3 = ?,
+                suffix_modifier_1 = ?,
+                suffix_modifier_2 = ?,
+                suffix_modifier_3 = ?,
+                shaper_item = ?,
+                elder_item = ?,
+                hunter_item = ?,
+                redeemer_item = ?,
+                crusader_item = ?,
+                warlord_item = ?,
+                synthesis_item = ?,
+                implicits = ?,
+                item_tags = ?,
+                properties_armour = ?,
+                properties_evasion = ?,
+                properties_energy_shield = ?,
+                properties_movement_speed = ?,
+                properties_block = ?,
+                properties_range = ?
+            WHERE id = ?
+        """, (
+        crafting_project.item_class_id, crafting_project.rarity, crafting_project.name, crafting_project.base_item_id,
+        crafting_project.quality,
+        crafting_project.item_level, crafting_project.sockets, crafting_project.enchant,
+        crafting_project.physical_damage_min, crafting_project.physical_damage_max,
+        crafting_project.cold_damage_min, crafting_project.cold_damage_max, crafting_project.fire_damage_min,
+        crafting_project.fire_damage_max,
+        crafting_project.lightning_damage_min, crafting_project.lightning_damage_max, crafting_project.chaos_damage_min,
+        crafting_project.chaos_damage_max,
+        crafting_project.critical_strike_chance, crafting_project.attacks_per_second,
+        crafting_project.requirements_level, crafting_project.requirements_str,
+        crafting_project.requirements_dex, crafting_project.requirements_int, crafting_project.prefix_modifier_1,
+        crafting_project.prefix_modifier_2,
+        crafting_project.prefix_modifier_3, crafting_project.suffix_modifier_1, crafting_project.suffix_modifier_2,
+        crafting_project.suffix_modifier_3,
+        crafting_project.shaper_item, crafting_project.elder_item, crafting_project.hunter_item,
+        crafting_project.redeemer_item, crafting_project.crusader_item,
+        crafting_project.warlord_item, crafting_project.synthesis_item, crafting_project.implicits,
+        crafting_project.item_tags, crafting_project.properties_armour,
+        crafting_project.properties_evasion, crafting_project.properties_energy_shield,
+        crafting_project.properties_movement_speed, crafting_project.properties_block,
+        crafting_project.properties_range, crafting_project.id))
+
+        self.conn.commit()
+        self.close()
+
+    @staticmethod
+    def update_item_class_id(item_class_id):
+        conn = sqlite3.connect('exilecraft.db')
+        cursor = conn.cursor()
+        cursor.execute('''INSERT OR REPLACE INTO crafting_project (item_class_id)
+                            VALUES (?)''', (item_class_id,))
+        conn.commit()
+        conn.close()
+
+    def fetch_item_stats(self, base_item):
+        conn = sqlite3.connect('exilecraft.db')
+        c = conn.cursor()
+        c.execute('''SELECT drop_level, implicits, name, properties_attack_time,
+                            properties_critical_strike_chance,properties_physical_damage_min,
+                            properties_physical_damage_max, requirements_strength, requirements_dexterity,
+                            requirements_intelligence, requirements_level, properties_armour, properties_evasion,
+                            properties_energy_shield, properties_movement_speed, properties_block, properties_range
+                         FROM base_items WHERE name = ?''', (base_item,))
+        item_stats = c.fetchone()
+        conn.close()
+        return item_stats
+
+    def insert_base_item_into_crafting_project(self, base_item_name):
+        conn = sqlite3.connect('exilecraft.db')
+        cursor = conn.cursor()
+
+        cursor.execute('''with base_item as
+                        (SELECT item_class_id,
+                         name,
+                         properties_physical_damage_min,
+                         properties_physical_damage_max,
+                         properties_critical_strike_chance,
+                         properties_attack_time,
+                         requirements_level,
+                         requirements_strength,
+                         requirements_dexterity,
+                         requirements_intelligence,
+                         implicits,
+                         tags,
+                         properties_armour,
+                         properties_evasion,
+                         properties_energy_shield,
+                            properties_movement_speed,
+                            properties_block,
+                            properties_range
+                        FROM base_items
+                        WHERE name = ?)
+        INSERT or REPLACE INTO crafting_project (
+                        item_class_id,
+                        base_item_id,
+                        physical_damage_min,
+                        physical_damage_max,
+                        critical_strike_chance,
+                        attacks_per_second,
+                        requirements_level,
+                        requirements_str,
+                        requirements_dex,
+                        requirements_int,
+                        implicits,
+                        item_tags,
+                        properties_armour,
+                        properties_evasion,
+                        properties_energy_shield,
+                        properties_movement_speed,
+                        properties_block,
+                        properties_range
+                    )
+                    select *
+                    from base_item
+        ''', (base_item_name,))
+        conn.commit()
+        conn.close()
 
     def insert_stat_translations(self, json_file):
         with open(json_file) as f:
@@ -141,6 +224,64 @@ class DatabaseHandler:
     def create_tables(self):
         with self._connect() as conn:
             c = conn.cursor()
+            c.execute('''
+                    CREATE TABLE IF NOT EXISTS crafting_projects
+                    (
+                        id                     INTEGER               not null
+                            primary key CHECK (id = 1),
+                        item_class_id          TEXT
+                            constraint crafting_projects_base_items_item_class_id_fk
+                                references base_items (item_class_id),
+                        rarity                 TEXT,
+                        name                   TEXT,
+                        base_item_id           TEXT
+                            constraint crafting_projects_base_items_id_fk
+                                references base_items,
+                        quality                INTEGER,
+                        item_level             integer,
+                        sockets                TEXT,
+                        enchant                TEXT,
+                        physical_damage_min    integer,
+                        physical_damage_max    integer,
+                        cold_damage_min        integer,
+                        cold_damage_max        integer,
+                        fire_damage_min        integer,
+                        fire_damage_max        integer,
+                        lightning_damage_min   integer,
+                        lightning_damage_max   integer,
+                        chaos_damage_min       integer,
+                        chaos_damage_max       integer,
+                        critical_strike_chance integer,
+                        attacks_per_second     integer,
+                        requirements_level     integer
+                            constraint crafting_projects_base_items_requirements_level_fk
+                                references base_items (requirements_level),
+                        requirements_str       integer
+                            constraint crafting_projects_base_items_requirements_strength_fk
+                                references base_items (requirements_strength),
+                        requirements_dex       integer
+                            constraint crafting_projects_base_items_requirements_dexterity_fk
+                                references base_items (requirements_dexterity),
+                        requirements_int       integer
+                            constraint crafting_projects_base_items_requirements_intelligence_fk
+                                references base_items (requirements_intelligence),
+                        prefix_modifier_1      TEXT    default NULL  null on conflict replace,
+                        prefix_modifier_2      TEXT    default NULL  null on conflict replace,
+                        prefix_modifier_3      TEXT    default NULL  null on conflict replace,
+                        suffix_modifier_1      TEXT    default NULL  null on conflict replace,
+                        suffix_modifier_2      TEXT    default NULL  null on conflict replace,
+                        suffix_modifier_3      TEXT    default NULL  null on conflict replace,
+                        shaper_item            boolean default FALSE null on conflict replace,
+                        elder_item             boolean default FALSE null on conflict replace,
+                        hunter_item            boolean default FALSE null on conflict replace,
+                        redeemer_item          boolean default FALSE null on conflict replace,
+                        crusader_item          boolean default FALSE null on conflict replace,
+                        warlord_item           boolean default FALSE null on conflict replace,
+                        synthesis_item         boolean default FALSE null on conflict replace,
+                        implicits              TEXT                  null on conflict replace
+                    );
+                    
+                    ''')
             c.execute('''
                     CREATE TABLE IF NOT EXISTS tags (
                         id INTEGER PRIMARY KEY,
@@ -309,7 +450,8 @@ class DatabaseHandler:
             tags = c.fetchall()
         return tags
 
-    def load_tags_from_json(self, db_handler, file_path):
+    @staticmethod
+    def load_tags_from_json(db_handler, file_path):
         with open(file_path, 'r') as file:
             tag_names = json.load(file)
 
@@ -407,7 +549,8 @@ class DatabaseHandler:
 
             return base_items
 
-    def insert_ids_to_database(self, json_filename, database_name):
+    @staticmethod
+    def insert_ids_to_database(json_filename, database_name):
         # Connect to the SQLite database
         conn = sqlite3.connect(database_name)
 
@@ -432,7 +575,8 @@ class DatabaseHandler:
         conn.commit()
         conn.close()
 
-    def populate_stat_translations_table(self, json_file_path, db_file_path, table_name):
+    @staticmethod
+    def populate_stat_translations_table(json_file_path, db_file_path, table_name):
         # Open the JSON file and load the data
         with open(json_file_path) as f:
             data = json.load(f)
@@ -456,7 +600,8 @@ class DatabaseHandler:
         conn.commit()
         conn.close()
 
-    def insert_resolved_stats(self):
+    @staticmethod
+    def insert_resolved_stats():
         def find_translation_text(stat_id, stat_translations_data):
             for translation in stat_translations_data:
                 if stat_id in translation.get("ids", []):
@@ -561,9 +706,6 @@ class DatabaseHandler:
             return result[0]
         return None
 
-
-import sqlite3
-import json
 
 def populate_modifiers_tags_table():
     conn = sqlite3.connect('exilecraft.db')
@@ -679,26 +821,6 @@ def _convert(tr, tag_set):
     return {"ids": ids, "English": english}
 
 
-def _get_stat_translations(tag_set, translations, custom_translations):
-    previous = set()
-    root = []
-    for tr in translations:
-        id_str = " ".join(tr.ids)
-        if id_str in previous:
-            print("Duplicate id", tr.ids)
-            continue
-        previous.add(id_str)
-        root.append(_convert(tr, tag_set))
-    for tr in custom_translations:
-        id_str = " ".join(tr.ids)
-        if id_str in previous:
-            continue
-        previous.add(id_str)
-        result = _convert(tr, tag_set)
-        result["hidden"] = True
-        root.append(result)
-    return root
-
 def get_stat_translation(conn, ids, stat_values):
     cursor = conn.cursor()
 
@@ -712,7 +834,8 @@ def get_stat_translation(conn, ids, stat_values):
     stat_translation_id, hidden = stat_translation_data
 
     # Query the translation table
-    cursor.execute("SELECT condition_min, condition_max, condition_negated, string, format, index_handlers FROM translation WHERE stat_translation_id = ?", (stat_translation_id,))
+    cursor.execute("SELECT condition_min, condition_max, condition_negated, string, format, index_handlers FROM "
+                   "translation WHERE stat_translation_id = ?", (stat_translation_id,))
     translations = cursor.fetchall()
 
     for translation in translations:
@@ -752,13 +875,3 @@ def get_stat_translation(conn, ids, stat_values):
             return translated_string, hidden
 
     return None
-
-if __name__ == "__main__":
-    ids = ["local_physical_damage_+% local_weapon_no_physical_damage"]
-    stat_values = [4]  # Use the appropriate stat values for the given ids
-    conn = sqlite3.connect('exilecraft.db')
-    translated_string, hidden = get_stat_translation(conn, ids, stat_values)
-    if translated_string is not None:
-        print(translated_string, "(Hidden)" if hidden else "")
-    else:
-        print("No translation found.")
