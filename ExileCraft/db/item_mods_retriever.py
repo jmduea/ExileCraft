@@ -1,6 +1,6 @@
 import sqlite3
 import json
-
+from database_handler import DatabaseHandler
 
 def get_mods_for_item_class(self, item_name):
     """

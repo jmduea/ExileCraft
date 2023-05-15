@@ -1,7 +1,7 @@
 import sqlite3
 import json
 
-from ExileCraft.crafting_project import CraftingProject
+from ..emu.crafting_project import CraftingProject
 
 
 class DatabaseHandler():
