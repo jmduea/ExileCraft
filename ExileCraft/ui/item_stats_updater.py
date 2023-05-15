@@ -20,7 +20,7 @@ def update_item_stats(self, base_item_name, quality_text=None):
     :param base_item_name: The name of the base item to update.
     :param quality_text: The quality of the item as a string. Default is None.
     """
-    conn = sqlite3.connect('exilecraft.db')
+    conn = sqlite3.connect('../db/exilecraft.db')
     c = conn.cursor()
     c.execute('''SELECT drop_level, implicits, name, properties_attack_time,
                     properties_critical_strike_chance,properties_physical_damage_min,
@@ -119,11 +119,11 @@ def update_item_stats(self, base_item_name, quality_text=None):
                 print(implicits_list)
 
                 # Load the mods.json file
-                with open('data/json/mods.json', 'r') as f:
+                with open('../db/data/json/mods.json', 'r') as f:
                     mods_data = json.load(f)
 
                 # Connect to the database
-                conn = sqlite3.connect('exilecraft.db')
+                conn = sqlite3.connect('../db/exilecraft.db')
                 cursor = conn.cursor()
 
                 # Create lists to store min and max value ranges
