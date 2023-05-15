@@ -2,16 +2,16 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor
 
-from ui.mainwindow_ui import Ui_MainWindow
-from ui.base_selection import BaseSelection
-from ui.item_selection import ItemSelection
-from ui.landing_page import LandingPage
-from ui.item_options import ItemOptions
-from ui.customtreemodel import CustomTreeModel
-from ui_updater import UiUpdater
-from database_handler import DatabaseHandler
-import item_stats_updater
-import item_mods_retriever
+from ..ui.mainwindow_ui import Ui_MainWindow
+from ..ui.base_selection import BaseSelection
+from ..ui.item_selection import ItemSelection
+from ..ui.landing_page import LandingPage
+from ..ui.item_options import ItemOptions
+from ..ui.customtreemodel import CustomTreeModel
+from ..ui.ui_updater import UiUpdater
+from ..db.database_handler import DatabaseHandler
+from ..ui import item_stats_updater
+from ..db import item_mods_retriever
 
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):

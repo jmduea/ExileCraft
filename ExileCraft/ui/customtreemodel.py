@@ -2,8 +2,8 @@ import json
 
 from PyQt5.QtCore import QAbstractItemModel, QModelIndex, Qt
 
-from ExileCraft.ui.customtreeitem import TreeItem
-from ExileCraft.database_handler import DatabaseHandler
+from ..ui.customtreeitem import TreeItem
+from ..db.database_handler import DatabaseHandler
 
 
 class CustomTreeModel(QAbstractItemModel):

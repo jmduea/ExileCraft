@@ -5,8 +5,8 @@ from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtGui import QCursor
 from PyQt5.QtWidgets import QVBoxLayout, QPushButton, QWidget, QLabel, QGridLayout
 
-from ExileCraft.constants import BTN_STYLESHEET, LABEL_STYLESHEET, SUBTYPE_DISPLAY_NAMES
-from ExileCraft.database_handler import DatabaseHandler
+from ..config.constants import BTN_STYLESHEET, LABEL_STYLESHEET, SUBTYPE_DISPLAY_NAMES
+from ..db.database_handler import DatabaseHandler
 
 
 class ItemSelection(QWidget):

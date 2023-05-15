@@ -1,12 +1,9 @@
-# from PyQt5 import QtGui
-# from PyQt5.QtCore import Qt
 from PyQt5 import QtGui
 from PyQt5.QtCore import Qt
 
-from ExileCraft.item_mods_retriever import get_mods_for_item_class
-from ExileCraft.item_stats_updater import update_item_stats
-# from ExileCraft.item_mods_retriever import get_mods_for_item_class
-from constants import SUBTYPE_DISPLAY_NAMES, ALL_SUBTYPES
+from ..db.item_mods_retriever import get_mods_for_item_class
+from ..ui.item_stats_updater import update_item_stats
+from ..config.constants import SUBTYPE_DISPLAY_NAMES, ALL_SUBTYPES
 
 class UiUpdater:
     """

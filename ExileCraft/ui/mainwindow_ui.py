@@ -4794,11 +4794,11 @@ class Ui_MainWindow(object):
         self.actionTrade.setText(_translate("MainWindow", "Trade"))
         self.actionCrafting.setText(_translate("MainWindow", "Crafting"))
         self.actionCrafting_Tutorials.setText(_translate("MainWindow", "Crafting Tutorials"))
-from ui.base_selection import BaseSelection
-from ui.customcursorbutton import CustomCursorButton
-from ui.customtreeview import CustomTreeView
-from ui.item_selection import ItemSelection
-import ui.resources_rc
+from ..ui.base_selection import BaseSelection
+from ..ui.customcursorbutton import CustomCursorButton
+from ..ui.customtreeview import CustomTreeView
+from ..ui.item_selection import ItemSelection
+from ..ui import resources_rc
 
 
 if __name__ == "__main__":
