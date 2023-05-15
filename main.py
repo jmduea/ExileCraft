@@ -2,12 +2,10 @@ import os
 import sys
 
 from PyQt5 import QtGui, QtWidgets
-from PyQt5.QtGui import QFont, QFontDatabase
 
-from hotkey_methods import register_hotkey
-from tray_setup import SetupTray
-from main_window import MainWindow
-
+from ExileCraft.tray.hotkey_methods import register_hotkey
+from ExileCraft.tray.tray_setup import SetupTray
+from ExileCraft.ui.main_window import MainWindow
 
 basedir = os.path.dirname(__file__)
 
