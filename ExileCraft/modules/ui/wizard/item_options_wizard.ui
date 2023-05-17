@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ItemOptionsWizard</class>
+ <widget class="QWizard" name="ItemOptionsWizard">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>473</width>
+    <height>253</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>473</width>
+    <height>253</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16775</width>
+    <height>16755</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Item Options</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../assets.qrc">
+    <normaloff>:/icons/assets/icons/vendor.ico</normaloff>:/icons/assets/icons/vendor.ico</iconset>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <property name="wizardStyle">
+   <enum>QWizard::ClassicStyle</enum>
+  </property>
+  <property name="options">
+   <set>QWizard::IndependentPages|QWizard::NoBackButtonOnStartPage</set>
+  </property>
+  <property name="currentId">
+   <number>0</number>
+  </property>
+  <widget class="QWizardPage" name="wizard_start_page">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>342</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>342</width>
+     <height>113</height>
+    </size>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="title">
+    <string>Start a Crafting Project</string>
+   </property>
+   <property name="subTitle">
+    <string>Start a new crafting project with the name of your choice</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">wizard_start_page</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="wizard_start_page_container" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: none;</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="wizard_start_page_options" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QWidget" name="wizard_start_project_name" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <property name="spacing">
+              <number>6</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="project_name_label">
+               <property name="text">
+                <string>Project Name:</string>
+               </property>
+               <property name="buddy">
+                <cstring>project_name_input</cstring>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="project_name_input">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frame">
+                <bool>true</bool>
+               </property>
+               <property name="placeholderText">
+                <string>Type name of the project here</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizardPage" name="wizard_base_groups_page">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>452</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="title">
+    <string>Select A Base Group</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">wizard_base_groups_page</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item alignment="Qt::AlignHCenter">
+     <widget class="QWidget" name="base_group_btns" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+border-image: none;
+}
+QPushButton {
+                border: 1px solid #000;
+                  border-top-width: 1px;
+                   border-right-width: 1px;
+                   border-bottom-width: 1px;
+                   border-left-width: 1px;
+                   border-top-style: solid;
+                 border-right-style: solid;
+                  border-bottom-style: solid;
+                   border-left-style: solid;
+                   border-top-color: rgb(0, 0, 0);
+                  border-right-color: rgb(0, 0, 0);
+                   border-bottom-color: rgb(0, 0, 0);
+                   border-left-color: rgb(0, 0, 0);
+                  border-image-source: initial;
+                  border-image-slice: initial;
+                  border-image-width: initial;
+                  border-image-outset: initial;
+                border-image-repeat: initial;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               text-shadow: 1px 1px #000;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+           }
+            QPushButton::hover {
+                background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                                 stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+           }
+            QPushButton::pressed {
+                background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                                  stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                                 stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+				border: 5px inset #FFF;
+				box-shadow: none;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="base_group_btns_row1" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="body_armours_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Body Armours</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="boots_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Boots</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="helmets_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Helmets</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="gloves_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Gloves</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QWidget" name="base_group_btns_row2" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="one_handed_weapons_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>One Handed Weapons</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="two_handed_weapons_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Two Handed Weapons</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="offhands_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Offhands</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="base_group_btns_row3" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="jewellery_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Jewellery</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="jewels_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Jewels</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="cluster_jewels_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Cluster Jewels</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="flasks_btn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+                border: 1px solid #000;
+                border-radius: 4px;
+                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                border-image: none;
+              color: #FFF;
+               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                font-family: Open Sans;
+                font-size: 12px;
+               font-weight: bold;
+               height: 36px;
+                line-height: 36px;
+                text-align: center;
+				margin: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+				text-shadow: 1px 1px #000;
+				vertical-align: top;
+           }
+            QPushButton::hover {         
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+           }
+            QPushButton::pressed {
+                
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+            }
+			QPushButton::checked {
+				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+				color: #332211;
+text-shadow: 1px 1px #FFF;
+box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+font-weight: bold;
+			}
+            QPushButton::flat {
+                border: none;
+}</string>
+            </property>
+            <property name="text">
+             <string>Flasks</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">wizard_base_group_btns</string>
+            </attribute>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizardPage" name="wizard_base_selection_page">
+   <attribute name="pageId">
+    <string notr="true">wizard_base_selection_page</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <widget class="BaseSelection" name="base_selection_page" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizardPage" name="wizard_item_selection_page">
+   <attribute name="pageId">
+    <string notr="true">wizard_item_selection_page</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <widget class="ItemSelection" name="item_selection_page" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWizardPage" name="wizard_item_options_page">
+   <attribute name="pageId">
+    <string notr="true">wizard_item_options_page</string>
+   </attribute>
+  </widget>
+  <widget class="QWizardPage" name="wizard_confirm_options_page">
+   <attribute name="pageId">
+    <string notr="true">wizard_confirm_options_page</string>
+   </attribute>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ItemSelection</class>
+   <extends>QWidget</extends>
+   <header location="global">..pages.item_selection</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BaseSelection</class>
+   <extends>QWidget</extends>
+   <header location="global">..pages.base_selection</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../assets.qrc"/>
+ </resources>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="wizard_base_group_btns"/>
+ </buttongroups>
+</ui>
