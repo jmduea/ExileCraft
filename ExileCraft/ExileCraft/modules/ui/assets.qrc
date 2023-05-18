@@ -1054,7 +1054,7 @@
     <file>assets/images/items/zodiac_leather.png</file>
   </qresource>
   <qresource prefix="stylesheets">
-    <file>assets/stylesheets/main_stylesheet</file>
+    <file>assets/stylesheets/main_stylesheet.qss</file>
   </qresource>
   <qresource prefix="icons">
     <file>assets/icons/pencil.png</file>
