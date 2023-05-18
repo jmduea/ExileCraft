@@ -12,7 +12,10 @@ from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtWidgets import QWidget
 
 
-class ItemOptions(QWidget):
+class ItemOptionsPage(QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setupUi(self)
     def setupUi(self, item_options_page):
         item_options_page.setObjectName("item_options_page")
         item_options_page.resize(600, 400)
@@ -2418,7 +2421,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     item_options_page = QtWidgets.QWidget()
-    ui = ItemOptions()
+    ui = ItemOptionsPage()
     ui.setupUi(item_options_page)
     item_options_page.show()
     sys.exit(app.exec_())

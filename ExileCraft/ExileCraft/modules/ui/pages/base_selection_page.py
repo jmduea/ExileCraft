@@ -6,11 +6,11 @@ from ...config.constants import BTN_STYLESHEET, LABEL_STYLESHEET, ITEM_CLASS_SUB
 from ...db.database_handler import DatabaseHandler
 
 
-class BaseSelection(QWidget):
+class BaseSelectionPage(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.db_handler = DatabaseHandler()
-        self.item_class_name = ""
+        self.base_group = ""
         # Create the main layout
         self.layout = QVBoxLayout()
         self.setLayout(self.layout)
@@ -19,18 +19,6 @@ class BaseSelection(QWidget):
         # Create a vertical layout for the Previous, Next buttons and the header label
         self.top_layout = QVBoxLayout()
         self.layout.addLayout(self.top_layout)
-
-        # self.previous_button = QPushButton("Previous")
-        # self.previous_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
-        # self.previous_button.setStyleSheet(BTN_STYLESHEET)
-        #
-        # self.next_button = QPushButton("Next")
-        # self.next_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
-        # self.next_button.setStyleSheet(BTN_STYLESHEET)
-
-        # Add buttons to layout
-        # self.top_layout.addWidget(self.previous_button)
-        # self.top_layout.addWidget(self.next_button, 1)
 
         self.header_label = QLabel()
         self.header_label.setStyleSheet(LABEL_STYLESHEET)
@@ -44,6 +32,11 @@ class BaseSelection(QWidget):
         self.item_class_subtypes = ITEM_CLASS_SUBTYPES
         self.subtype_display_names = SUBTYPE_DISPLAY_NAMES
         self.subtype_original_names = {v: k for k, v in self.subtype_display_names.items()}
+        self.populate_buttons(self.base_group)
+
+    def set_base_group(self, base_group):
+        self.base_group = base_group
+        print(f"base_group_set: {self.base_group}")
 
     def update_header_label(self, item_class_name):
         self.header_label.setText(
@@ -63,9 +56,9 @@ class BaseSelection(QWidget):
                 if item is not None:
                     item.setParent(None)
 
-    def populate_buttons(self, item_class_name):
-        self.current_item_class_name = item_class_name
-        subtypes = self.item_class_subtypes.get(item_class_name, set())
+    def populate_buttons(self, base_group):
+        self.base_group = base_group
+        subtypes = self.item_class_subtypes.get(base_group, set())
 
         # Remove previous buttons
         self.clear_buttons()
@@ -79,7 +72,7 @@ class BaseSelection(QWidget):
         for i, subtype in enumerate(subtypes):
             # Get the display name for the subtype
             display_name = self.subtype_display_names.get(subtype, subtype)
-            button = QPushButton(display_name.format(item_class_name))
+            button = QPushButton(display_name.format(base_group))
             button.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
             button.setStyleSheet(BTN_STYLESHEET)
 
@@ -90,11 +83,3 @@ class BaseSelection(QWidget):
             button_layout.addWidget(button, i // 3, i % 3)  # Arrange buttons in a 3-column grid
         # Add the button widget to the main layout
         self.layout.addWidget(button_widget)
-
-    # def connect_buttons(self, previous_function, next_function):
-    #     self.previous_button.clicked.connect(previous_function)
-    #     self.next_button.clicked.connect(next_function)
-
-    # def on_button_clicked(self, display_name):
-    #     subtype = self.subtype_original_names.get(display_name, display_name)
-    #     self.base_selected.emit(self.current_item_class_name, subtype)
