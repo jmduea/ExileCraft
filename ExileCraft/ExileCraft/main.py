@@ -23,4 +23,4 @@ if __name__ == "__main__":
     # Registers hotkeys
     register_hotkey(window)
 
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
