@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8d194fc-f5a1-4e93-ab84-69ea085627b9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/parser/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/item_headers/item_header_normal_elder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/available_mods_table.ui.qml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/item_box_dock.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/mainwindow_ui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/wizard/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/wizard/exilecraft.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/wizard/item_options_wizard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/wizard/item_options_wizard_ui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/active_skill_types.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/active_skill_types.min.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/fossils.min.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/mods.min.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/stat_translations/atlas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/stat_translations/beam_skill.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/stat_translations/minion_skill.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/stat_translations/passive_skill_aura.min.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/json/stat_translations/skill.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/exilecraft.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/config/constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/advanced_mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/stat_translations/strongbox.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/base_items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/cluster_jewel_notables.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/cluster_jewels.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/cost_types.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/crafting_bench_options.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/essences.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/flavour.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/fossils.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/heist_equipment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/item_classes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/mod_types.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/mod_types.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/mods.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/stat_translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/json/stat_translations/leaguestone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/stats.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/tags.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/data/json/tags_map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/database_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/db/item_mods_retriever.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/emu/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/emu/crafting_project.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/tray/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/tray/hotkey_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/tray/hotkey_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/tray/tray_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/tray/tray_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/fonts/fontin-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/fonts/fontin-smallcaps.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/icons/vendor.ico" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/icons/vendor.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/EldritchChaosOrb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/EldritchExaltedOrb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/EldritchOrbofAnnulment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/ExceptionalEldritchEmber.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/ExceptionalEldritchIchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/GrandEldritchEmber.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/GrandEldritchIchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/GreaterEldritchEmber.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/GreaterEldritchIchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/LesserEldritchEmber.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/eldritch/lesser_eldritch_ember.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/LesserEldritchIchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/OrbofConflict.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/eldritch/orb_of_conflict.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/acatalyst.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/aharvest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/bavian.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/bcat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/bcrab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/bimprint.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/bpretsuf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/breroll.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/bspider.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/beasts/bspider.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/bsuftpre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/catalysts/imbued_catalyst.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/catalysts/catalyst_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/clip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/craftbtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/craftbtnov.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/emubg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Anger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Anguish.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Contempt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Delirium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Doubt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Dread.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Envy.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/essences/essence_Envy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Fear.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/essences/essence_Fear.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Greed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Hatred.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Horror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Hysteria.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Insanity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Loathing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Misery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Rage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Scorn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Sorrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Spite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Suffering.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Torment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Woe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Wrath.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/essences/essence_Wrath.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/essences/essence_Zeal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/aberrant_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/aetheric_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/bound_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/corroded_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/deft_fossil.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/fossils/deft_fossil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/dense_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/faceted_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/frigid_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/fundamental_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/gilded_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/glyphic_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/hollow_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/jagged_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/lucent_fossil.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/fossils/lucent_fossil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/metallic_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/perfect_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/prismatic_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/pristine_fossil.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/fossils/pristine_fossil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/sanctified_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/scorched_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/serrated_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/shuddering_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fossils/tangled_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/fullharvest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/hannul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/haugment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/hdivine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/hreplace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/hreroll.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/hrerollp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/influence_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/influences/shaper_influence.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/influence_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/influence_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/influence_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/influence_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/influences/warlord_influence.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/influence_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/item-header-normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/item-header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/item-sep.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/item_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/Grove_Bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/Hedron_Bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/Long_Bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/Recurve_Bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/Royal_Bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/Short_Bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/abyssal_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/abyssal_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/accumulator_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/agate_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/alder_spiked_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/alloyed_spike_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/alternating_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/amber_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ambush_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ambush_mitts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ambusher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/amethyst_flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/amethyst_flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/amethyst_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/anarchic_spiritblade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ancestral_club.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ancient_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ancient_greaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/ancient_greaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ancient_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ancient_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/angelic_kite_shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/angelic_kite_shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/antique_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/antique_greaves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/antique_greaves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/antique_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/apex_cleaver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/apex_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/apothecary's_gloves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/apothecary's_gloves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/aquamarine_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/arcanist_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/arcanist_slippers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/archdemon_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/archon_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/arena_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/arming_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/artillery_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/assassin's_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/assassin's_garb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/assassin's_mitts.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/assassin's_mitts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/assassin_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/assembler_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/astral_plate.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/astral_plate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/astrolabe_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/atonement_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/auric_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/aventail_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/awl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/banishing_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/barbed_club.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/barbute_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/baroque_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/basalt_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/baselard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/basemetal_treads.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/basket_rapier.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/basket_rapier.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bastard_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/battered_foil.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/battered_foil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/battered_helm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/battery_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/battle_buckler.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/battle_buckler.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/battle_hammer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/battle_lamellar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/battle_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/battle_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/behemoth_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bismuth_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bladed_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blasting_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blazing_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blinder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blizzard_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blood_raiment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blood_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blue_pearl_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blunt_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/blunt_force_condenser.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/blunt_force_condenser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/boarding_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bone_armour.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bone_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bone_circlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bone_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bone_ring.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/bone_ring.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bone_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/boom_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/boot_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/boot_knife.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/boot_knife.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/branded_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/brass_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/brass_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/brimstone_treads.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/broad_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/broad_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/broadhead_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bronze_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bronze_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bronze_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bronze_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bronzescale_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/bronzescale_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/buckskin_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/buckskin_tunic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/burnished_foil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/burnished_spike_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/butcher_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/butcher_knife.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/butcher_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cabalist_regalia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/calling_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/callous_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/capacity_rod.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/capricious_spiritblade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cardinal_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/carnal_armour.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/carnal_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/carnal_mitts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/carnal_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/carved_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/carving_knife.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cat's_paw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cedar_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ceremonial_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ceremonial_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ceremonial_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cerulean_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chain_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chain_boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/chain_boots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chain_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chain_hauberk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chainmail_doublet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chainmail_tunic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chainmail_vest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/champion_kite_shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/champion_kite_shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/charan's_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chest_splitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chestplate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/chiming_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/citadel_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/citrine_amulet.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/citrine_amulet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/clasped_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/clasped_mitts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cleaver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/close_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cloth_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cloudwhisper_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cobalt_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cogwork_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/coiled_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/coiled_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cold-attuned_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/colossal_hybrid_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/colossal_life_flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/colossal_life_flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/colossal_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/colossal_tower_shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/colossal_tower_shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/colosseum_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/colossus_mallet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/commander's_brigandine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/composite_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/compound_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/compound_spiked_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cone_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/conjurer's_vestment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/conjurer_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/conjurer_gloves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/conjurer_gloves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/conquest_chainmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/convening_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/convoking_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/copper_kris.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/copper_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/copper_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/copper_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/coral_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/coral_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/coronal_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/coronal_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/corroded_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/corroded_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/corrugated_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/corsair_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/corundum_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/courtesan_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crack_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crescent_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crested_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crimson_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crimson_raiment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crimson_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crude_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crusader_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crusader_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crusader_chainmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crusader_gloves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/crusader_gloves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crusader_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crusader_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crushing_force_magnifier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crypt_armour.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crystal_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crystal_sceptre.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/crystal_sceptre.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/crystal_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/curved_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cutlass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/cutthroat's_garb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dagger_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/darksteel_treads.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/darkwood_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/death_bow.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/death_bow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/debilitation_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/decimation_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/decorative_axe.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/decorative_axe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/decurve_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/deerskin_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/deerskin_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/deicide_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/demon's_horn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/demon_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/demon_dagger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/desert_brigandine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/despot_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/destiny_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/destroyer_regalia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/devout_chainmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/diamond_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/diamond_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/disapprobation_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/divine_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/divine_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/double_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/double_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dragon_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dragonbone_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dragonscale_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dragonscale_doublet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dragonscale_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dragoon_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dread_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dream_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dreamquest_slippers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/driftwood_club.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/driftwood_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/driftwood_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/driftwood_spiked_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/driftwood_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/dusk_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/duskwalk_slippers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eagle_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ebony_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eclipse_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eelskin_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eelskin_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eelskin_tunic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/elder_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/elegant_foil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/elegant_ringmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/elegant_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/elegant_sword.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/elegant_sword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/embroidered_gloves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/embroidered_gloves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/enameled_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/endothermic_buckler.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/endothermic_buckler.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/engraved_greatsword.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/engraved_greatsword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/engraved_hatchet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/engraved_wand.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/engraved_wand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/estoc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/etched_greatsword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/etched_hatchet.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/etched_hatchet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/etched_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eternal_burgonet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eternal_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eternal_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eternal_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eventuality_rod.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/exhausting_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/exothermic_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/exquisite_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/exquisite_leather.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/exquisite_leather.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/eye_gouger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ezomyte_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ezomyte_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ezomyte_burgonet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ezomyte_dagger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ezomyte_spiked_shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/ezomyte_spiked_shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ezomyte_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ezomyte_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fan's_horn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fancy_foil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/feathered_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fencer_helm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/festival_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fickle_spiritblade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/field_lamellar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fiend_dagger.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/fiend_dagger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fir_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fire_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fishscale_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/flanged_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/flare_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/flashfire_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/flaying_knife.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fleshripper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/flickerflame_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fluted_bascinet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/footman_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fossilised_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/foul_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/foundry_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fright_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fright_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/frontier_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/fugitive_boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/fugitive_boots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/full_chainmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/full_dragonscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/full_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/full_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/full_ringmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/full_scale_armour.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/full_wyrmscale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gale_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gavel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gemini_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gemstone_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/general's_brigandine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/geodesic_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ghastly_eye_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/giant_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/giant_mana_flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/giant_mana_flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gilded_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gilded_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gilded_sallet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/girded_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gladiator_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gladiator_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gladius.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/glass_shank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/glorious_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/glorious_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gnarled_branch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/goat's_horn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/goathide_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/goathide_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/goathide_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gold_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gold_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gold_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/golden_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/golden_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/golden_kris.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/golden_mantle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/golden_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/golden_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/golden_wreath.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/goliath_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/goliath_greaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gouger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/graceful_sword.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/graceful_sword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/grand_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/grand_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/granite_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/grappler.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/grappler.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/grasping_mail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/great_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/great_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/great_mallet.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/great_mallet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/great_white_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/greater_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/greater_mana_flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/greater_mana_flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/grinning_fetish.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gripped_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gut_ripper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/gutting_knife.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hallowed_hybrid_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hallowed_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hallowed_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hammered_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/harbinger_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/harlequin_mask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/harlequin_mask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/harmonic_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/harpy_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/headman's_sword.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/headman's_sword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/headsman_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/heat-attuned_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/heathen_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/heavy_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/heavy_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hellion's_paw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/highborn_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/highborn_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/highland_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hollowpoint_dagger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/holy_chainmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/honed_cleaver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hook_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/horned_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hubris_circlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hunter_hood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hussar_brigandine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hydrascale_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hydrascale_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/hypnotic_eye_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imbued_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imp_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imp_dagger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/impact_force_propagator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imperial_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imperial_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imperial_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imperial_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imperial_skean.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/imperial_skean.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/imperial_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/infantry_brigandine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/infernal_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/infernal_blade.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/infernal_blade.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/infernal_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iolite_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_circlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_greaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_hat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/iron_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ironscale_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ironscale_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ironwood_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ivory_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ivory_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jade_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jade_chopper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jade_flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/jade_flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jade_hatchet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jagged_foil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jagged_maul.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/jagged_maul.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jasper_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jasper_chopper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jewelled_foil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/jingling_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/judgement_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/karui_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/karui_chopper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/karui_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/karui_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/labrys.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/labrys.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lacewood_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lacquered_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lacquered_garb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lacquered_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/laminated_kite_shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/laminated_kite_shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lapis_amulet.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/lapis_amulet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/large_cluster_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/large_hybrid_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/large_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/large_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lathi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/latticed_ringmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/layered_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lead_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/leather_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/leather_cap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/leather_hood.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/leather_hood.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/leatherscale_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/legion_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/legion_gloves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/legion_gloves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/legion_hammer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/legion_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/leyline_gloves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/leyline_gloves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/light_brigandine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/linden_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lion_pelt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lion_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lithe_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/long_staff.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/long_staff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/longsword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lordly_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/loricated_ringmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/lunaris_circlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/maelström_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mage's_vestment.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/mage's_vestment.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/magistrate_crown.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/magistrate_crown.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/magmatic_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mahogany_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/majestic_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/malign_fangs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mallet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/maltreatment_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/maple_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/maraketh_bow.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/maraketh_bow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/marble_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/meatgrinder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mechalarm_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/medium_cluster_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/medium_hybrid_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/medium_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/medium_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mesh_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mesh_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/micro-distillery_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/midnight_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/military_staff.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/military_staff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mind_cage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mirrored_spiked_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/moon_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/moonstone_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/morning_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/mosaic_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/murder_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/murder_mitts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/murderous_eye_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/nailed_fist.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/nailed_fist.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/necromancer_circlet.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/necromancer_circlet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/necromancer_silks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/nexus_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/nightmare_bascinet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/nightmare_mace.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/nightmare_mace.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/nightwind_slippers.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/nightwind_slippers.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/noble_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/noble_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/noble_tricorne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/nubuck_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/nubuck_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/oak_buckler.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/oak_buckler.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/occultist's_vestment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ochre_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/oiled_coat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/oiled_vest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/omen_wand.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/omen_wand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/onyx_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/opal_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/opal_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/opal_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ornate_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ornate_ringmail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ornate_spiked_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ornate_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/oscillating_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/padded_jacket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/padded_vest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/pagan_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/painted_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/painted_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/paua_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/paua_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/pecoraro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/penetrating_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/penitent_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/pernach.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/petrified_club.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/petrified_club.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/phantom_mace.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/pig-faced_bascinet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/piledriver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/pine_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/pinnacle_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/plague_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/plank_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/plate_vest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/plated_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/plated_greaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/plated_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/platinum_kris.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/platinum_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/pneumatic_dagger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/poignard.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/poignard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/polar_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/poleaxe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/polished_spiked_shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/polished_spiked_shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/potentiality_rod.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/praetor_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/prehistoric_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/pressurised_dagger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/primal_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/prime_cleaver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/primeval_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/primitive_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/primordial_staff.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/primordial_staff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/prismatic_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/profane_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/prong_dagger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/prophecy_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/prophet_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/psychotic_axe.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/psychotic_axe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/quarterstaff.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/quarterstaff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/quartz_flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/quartz_flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/quartz_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/quartz_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/quicksilver_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/quilted_jacket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ranger_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/raven_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rawhide_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rawhide_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rawhide_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/reaver_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/reaver_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/reaver_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rebuking_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/reciprocation_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/redwood_spiked_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/reflex_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/regicide_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/reinforced_greaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/reinforced_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/reinforced_tower_shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/reinforced_tower_shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ringmail_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ringmail_coat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ringmail_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ritual_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/riveted_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/riveted_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rock_breaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rotted_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/royal_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/royal_burgonet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/royal_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/royal_skean.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/royal_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ruby_flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/ruby_flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ruby_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_crest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_gages.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_greaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_hatchet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_helm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_sabatons.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/runic_sabatons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/runic_sollerets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rusted_coif.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rusted_hatchet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rusted_spike.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rusted_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/rustic_sash.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/rustic_sash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sabre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sacred_hybrid_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sacred_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sacred_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sacrificial_garb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sadist_garb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sage's_robe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sage_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sai.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/sai.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/saint's_hauberk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/saintly_chainmail.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/saintly_chainmail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sallet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sambar_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/samite_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/samite_slippers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/samnite_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sanctified_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sanctified_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sapphire_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sapphire_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/satin_gloves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/satin_gloves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/satin_slippers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/savant's_robe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/scale_doublet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/scale_vest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/scare_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/scarlet_raiment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/scarlet_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/scholar's_robe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/scholar_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/seaglass_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/searching_eye_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/secutor_helm.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/secutor_helm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sekhem.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sentinel_jacket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/serpentine_staff.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/serpentine_staff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/serpentscale_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/serpentscale_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/serrated_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/serrated_foil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/shabby_jerkin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/shackled_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/shadow_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/shadow_fangs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/shadow_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/shagreen_boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/shagreen_boots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/shagreen_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/shagreen_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sharkskin_boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/sharkskin_boots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sharkskin_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sharkskin_tunic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sharktooth_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sharktooth_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/siege_axe.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/siege_axe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/siege_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/silk_gloves.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/silk_gloves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/silk_robe.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/silk_robe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/silk_slippers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/silken_garb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/silken_hood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/silken_vest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/silken_wrap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/silver_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/simple_robe.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/simple_robe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/simplex_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sinistral_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sinner_tricorne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/skean.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/skinning_knife.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/skinning_knife.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/slaughter_knife.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sledgehammer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sleek_coat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/slink_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/slink_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/small_cluster_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/small_hybrid_flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/small_hybrid_flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/small_life_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/small_mana_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/smallsword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sniper_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/solar_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/solarine_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/solaris_circlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/soldier's_brigandine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/soldier_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/soldier_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/soldier_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sorcerer_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sorcerer_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sorrow_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sovereign_spiked_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sparkling_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spectral_axe.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/spectral_axe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spectral_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spidersilk_robe.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/spidersilk_robe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spike-point_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spiked_bundle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spiked_club.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spiked_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spiked_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spine_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spiny_maul.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/spiny_maul.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spiny_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spiraled_foil.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/spiraled_foil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/spiraled_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/splendid_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/splintered_tower_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stabilising_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stag_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stealth_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stealth_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steel_circlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steel_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steel_greaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steel_kite_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steel_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steelhead.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steelscale_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steelscale_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/steelwood_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stibnite_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stiletto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stone_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stone_hammer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stormrider_boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/stormrider_boots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/strapped_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/strapped_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/strapped_mitts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/studded_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/studded_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/stygian_vise.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/subsuming_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sulphur_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sun_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sun_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/sundering_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/supreme_spiked_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/talon_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tarnished_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/teak_round_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tempered_foil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tenderizer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/terror_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/terror_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/thicket_bow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/thief's_garb.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/thief's_garb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/thorium_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/thorn_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/thresher_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/throat_stabber.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tiger's_paw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tiger_hook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tiger_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/timber_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/timeworn_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/titan_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/titan_greaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/titanium_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tomahawk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/topaz_flask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/topaz_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tornado_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/torture_cage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/totemic_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/transfer-attuned_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/transformer_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/trapper_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/trapper_mitts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tribal_circlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tribal_club.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tribal_maul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tricorne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/trisula.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/triumphant_lamellar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/turquoise_amulet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/twig_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/twilight_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/twin_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/two-handed_sword.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/two-handed_sword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/two-point_arrow_quiver.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/two-point_arrow_quiver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/two-stone_ring_ruby_and_topaz.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/two-stone_ring_ruby_and_topaz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/two-stone_ring_sapphire_and_topaz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/two-toned_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/two_stone_ring_ruby_and_sapphire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/tyrant's_sekhem.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/unset_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/ursine_pelt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_blade.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/vaal_blade.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_claw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_greatsword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_greaves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_hatchet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_regalia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vaal_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vanguard_belt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/variscite_blade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/varnished_coat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/velvet_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/velvet_slippers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vermillion_ring.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vile_arrow_quiver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vile_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/vine_circlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/viridian_jewel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/visored_sallet.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/visored_sallet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/void_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/void_fangs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/void_sceptre.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/walnut_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/war_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/war_buckler.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/war_hammer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/war_plate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/war_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/waxed_garb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/whalebone_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/widowsilk_robe.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/widowsilk_robe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wild_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/windbreak_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/winter_crown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wolf_pelt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/woodful_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/woodsplitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wool_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wool_shoes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wraith_axe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wraith_sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wrapped_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wrapped_mitts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wrist_chopper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wyrm_mace.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/wyrm_mace.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wyrmbone_rapier.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wyrmscale_boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/items/wyrmscale_boots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wyrmscale_doublet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/wyrmscale_gauntlets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/yew_spirit_shield.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/zealot_boots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/zealot_gloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/zealot_helmet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/items/zodiac_leather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/locus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_alchemy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_alteration.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_annul.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_augmentation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_blessed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_chaos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_crusader.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_divine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_essence.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_exalted.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_fossil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_fracturing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_hunter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_imprint.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_maven.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_meta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_redeemer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_regal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_scour.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_transmute.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_vaal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_veiled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_warlord.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/method_woke.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/mirror_sml.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/poeninja.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/recombinate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/searing-symbol.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/sim_imprint.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/sim_syndicate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/modules/ui/assets/images/redeemer_influence.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/smlinf_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/tainted_divine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/tainted_exalt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/tangled-symbol.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/unveilbtn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/unveilbtnov.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/vchoice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/vchoiceov.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/assets/images/vendor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/base_selection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/customcursorbutton.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/customtreeitem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/customtreemodel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/customtreeview.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/home.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/item_info_box.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/item_options.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/item_options.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/item_selection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/item_stats_updater.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/item_view.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/landing_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/landing_page.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/main_window.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/mainwindow.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/mainwindow_ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/resources.qrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/resources_rc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ui/ui_updater.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exilecraft.db" beforeDir="false" afterPath="$PROJECT_DIR$/exilecraft.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PvFeKpLVJqWeNVRyvDvoBN14Xe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/Dev/Projects/ExilecraftENV/ExileCraft",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8d194fc-f5a1-4e93-ab84-69ea085627b9" name="Changes" comment="" />
+      <created>1684329744268</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684329744268</updated>
+      <workItem from="1684329744858" duration="629000" />
+      <workItem from="1684339241259" duration="28000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

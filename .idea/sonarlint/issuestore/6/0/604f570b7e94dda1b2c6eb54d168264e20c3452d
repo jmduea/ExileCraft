@@ -1,0 +1,15 @@
+
+rpython:S116"VRename this field "ItemProperties" to match the regular expression ^[_a-z][_a-z0-9]*$.(™Ñ°şûÿÿÿÿ
+qpython:S116"URename this field "ItemImplicits" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ä¿Õøşÿÿÿÿ
+tpython:S116"XRename this field "ItemRequirements" to match the regular expression ^[_a-z][_a-z0-9]*$.(ºÇÀ™şÿÿÿÿ
+gpython:S116"QRename this field "Modifiers" to match the regular expression ^[_a-z][_a-z0-9]*$.(«¿¹
+opython:S116"SRename this field "ItemSpacer3" to match the regular expression ^[_a-z][_a-z0-9]*$.(å²¥ëıÿÿÿÿ
+upython:S117"YRename this parameter "ItemImplicits" to match the regular expression ^[_a-z][a-z0-9_]*$.(Áš˜¥ÿÿÿÿÿ
+vpython:S117"ZRename this parameter "ItemProperties" to match the regular expression ^[_a-z][a-z0-9_]*$.(Áš˜¥ÿÿÿÿÿ
+xpython:S117"\Rename this parameter "ItemRequirements" to match the regular expression ^[_a-z][a-z0-9_]*$.(Áš˜¥ÿÿÿÿÿ
+spython:S117"WRename this parameter "ItemSpacer3" to match the regular expression ^[_a-z][a-z0-9_]*$.(Áš˜¥ÿÿÿÿÿ
+qpython:S117"URename this parameter "Modifiers" to match the regular expression ^[_a-z][a-z0-9_]*$.(Áš˜¥ÿÿÿÿÿ
+Xpython:S1481"@Remove the unused local variable "set_item_view_box_background".(­³í
+;python:S125+"Remove this commented out code.(ñÁßşÿÿÿÿ
+Jpython:S2190<"2Add a way to break out of this method's recursion.(˜ŠŒ¢
+qpython:S930="URemove 1 unexpected arguments; 'filter_item_subtypes' expects 2 positional arguments.(—ù»ƒøÿÿÿÿ
