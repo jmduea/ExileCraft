@@ -12,8 +12,7 @@ def get_rel_path_to_db(base_dir):
     """Return the relative path from the base directory to the 'exilecraft.db' file."""
     return os.path.relpath(r"data/exilecraft.db", base_dir)
 
-def get_abs_path(script_path):
+def get_abs_path(script_path, rel_path):
     """Return the absolute path to the 'exilecraft.db' file."""
     base_dir = get_base_dir(script_path)
-    rel_path = get_rel_path_to_db(base_dir)
     return os.path.join(base_dir, rel_path)
