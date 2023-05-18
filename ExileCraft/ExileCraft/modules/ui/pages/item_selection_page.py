@@ -6,9 +6,13 @@ from PySide6.QtWidgets import QVBoxLayout, QPushButton, QWidget, QLabel, QGridLa
 
 from ...config.constants import BTN_STYLESHEET, LABEL_STYLESHEET, SUBTYPE_DISPLAY_NAMES
 from ...db.database_handler import DatabaseHandler
+from ...parser import path_utils
+
+rel_path_to_db = "data/exilecraft.db"  # replace this with the correct relative path
+db_path = path_utils.get_abs_path(__file__, rel_path_to_db)
 
 
-class ItemSelection(QWidget):
+class ItemSelectionPage(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.db_handler = DatabaseHandler()
@@ -23,18 +27,6 @@ class ItemSelection(QWidget):
         # Create a vertical layout for the Previous, Next buttons and the header label
         self.top_layout = QVBoxLayout()
         self.layout.addLayout(self.top_layout)
-
-        # Create buttons
-        # self.previous_button = QPushButton("Previous")
-        # self.previous_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
-        # self.previous_button.setStyleSheet(BTN_STYLESHEET)
-        #
-        # self.next_button = QPushButton("Next")
-        # self.next_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor))
-        # self.next_button.setStyleSheet(BTN_STYLESHEET)
-
-        # self.top_layout.addWidget(self.previous_button)
-        # self.top_layout.addWidget(self.next_button)
 
         self.header_label = QLabel()
         self.header_label.setStyleSheet(LABEL_STYLESHEET)
@@ -84,7 +76,7 @@ class ItemSelection(QWidget):
                     item.setParent(None)
 
     def populate_with_subtype(self, item_class_id, item_subtype):
-        conn = sqlite3.connect('data/exilecraft.db')
+        conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
 
         # Get the item_class_id from the crafting_project table
