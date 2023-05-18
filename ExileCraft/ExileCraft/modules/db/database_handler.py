@@ -4,7 +4,9 @@ import json
 from ..emu import CraftingProject
 from ..parser import path_utils
 
-db_path = path_utils.get_abs_path(__file__)
+rel_path_to_db = "data/exilecraft.db"  # replace this with the correct relative path
+db_path = path_utils.get_abs_path(__file__, rel_path_to_db)
+
 
 
 class DatabaseHandler:
@@ -608,11 +610,11 @@ class DatabaseHandler:
         # Loop through the objects in the JSON data
         for obj in data:
             # Get the id and string fields from the object
-            id = obj.get('ids', [])[0]
+            _id = obj.get('ids', [])[0]
             string = obj.get('English', [])[0].get('string')
 
             # Update the string field in the specified table for the given id
-            c.execute(f'UPDATE {table_name} SET string = ? WHERE id = ?', (string, id))
+            c.execute(f'UPDATE {table_name} SET string = ? WHERE id = ?', (string, _id))
 
         # Commit the changes to the database and close the connection
         conn.commit()
