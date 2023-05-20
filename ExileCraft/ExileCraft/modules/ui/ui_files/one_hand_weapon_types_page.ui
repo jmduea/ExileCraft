@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>one_hand_weapon_types</class>
+ <widget class="QWidget" name="one_hand_weapon_types">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>438</width>
+    <height>310</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>438</width>
+    <height>310</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="one_hand_weapon_types_container" native="true">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="claw_btn">
+        <property name="text">
+         <string>Claw</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="weapon_can_roll_minion_modifiers_btn">
+        <property name="text">
+         <string>Convoking Wand</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="one_hand_weapon_sword_btn">
+        <property name="text">
+         <string>One Hand Sword</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="one_hand_weapon_axe_btn">
+        <property name="text">
+         <string>One Hand Axe</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="one_hand_weapon_mace_btn">
+        <property name="text">
+         <string>One Hand Mace</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="one_hand_weapon_dagger_btn">
+        <property name="text">
+         <string>Rune Dagger</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="one_hand_weapon_sceptre_btn">
+        <property name="text">
+         <string>Sceptre</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="one_hand_weapon_wand_btn">
+        <property name="text">
+         <string>Wand</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="attack_dagger_btn">
+        <property name="text">
+         <string>Dagger</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="one_hand_weapon_rapier_btn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Thrusting One Hand Sword</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">one_hand_weapon_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="one_hand_weapon_types_btn_group"/>
+ </buttongroups>
+</ui>
