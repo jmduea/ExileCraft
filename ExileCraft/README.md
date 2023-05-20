@@ -12,7 +12,7 @@ Any and all feedback is welcome and appreciated, users can find information abou
 # Planned Features:
 
 ### Crafting project management
-Before risking your hard earned currency this application is here for you to simulate crafting items without ever having to tab out of the game. You can start from scratch as well as import items you already have in game to see what options you have available to you.
+Before risking your hard-earned currency this application is here for you to simulate crafting items without ever having to tab out of the game. You can start from scratch as well as import items you already have in game to see what options you have available to you.
 
 - See a list of all possible modifiers for the items based off of your selection using the GUI or based off of an item you imported from PathOfExile.
 - Save crafting projects to come back to later, along with a history of the crafting steps taken to create the item

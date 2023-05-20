@@ -4,6 +4,8 @@
     <file>assets/fonts/fontin-smallcaps.otf</file>
   </qresource>
   <qresource prefix="images">
+    <file>assets/images/down_arrow.png</file>
+    <file>assets/images/up_arrow.png</file>
     <file>assets/images/clip.png</file>
     <file>assets/images/craftbtn.png</file>
     <file>assets/images/craftbtnov.png</file>

@@ -29,4 +29,4 @@ class CustomTreeView(QTreeView):
     def setEnabled(self, enabled):
         super().setEnabled(enabled)
         if enabled:
-            self.enabled.emit()
+            self.isEnabled()

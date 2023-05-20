@@ -1,12 +1,22 @@
+# -*- coding: utf-8 -*-
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect,
-                            QSize, Qt)
-from PySide6.QtGui import (QAction, QCursor, QFont, QIcon, QPixmap)
-from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QButtonGroup,
-                               QFrame, QGridLayout, QHBoxLayout, QLabel, QLayout, QLineEdit, QMenu, QMenuBar,
-                               QPushButton, QSizePolicy,
-                               QSpacerItem, QStackedWidget, QTabWidget, QToolBox,
-                               QVBoxLayout, QWidget)
+################################################################################
+## Form generated from reading UI file 'mainwindowfgeaiD.ui'
+##
+## Created by: Qt User Interface Compiler version 6.5.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+import PySide6.QtGui
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QButtonGroup,
+    QFrame, QGridLayout, QHBoxLayout, QHeaderView,
+    QLabel, QMainWindow, QMenu, QMenuBar,
+    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
+    QTabWidget, QVBoxLayout, QWidget)
 
 from .customcursorbutton import CustomCursorButton
 from .customtreeview import CustomTreeView
@@ -17,23 +27,22 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(1239, 714)
+        MainWindow.resize(1239, 788)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QSize(0, 0))
-        MainWindow.setMaximumSize(QSize(2560, 1440))
-        font = QFont()
+        font = PySide6.QtGui.QFont()
         font.setFamilies([u"fontin-smallcaps"])
         font.setPointSize(16)
         MainWindow.setFont(font)
         MainWindow.setMouseTracking(True)
         MainWindow.setFocusPolicy(Qt.ClickFocus)
         MainWindow.setContextMenuPolicy(Qt.DefaultContextMenu)
-        icon = QIcon()
-        icon.addFile(u":/icons/assets/images/vendor.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon = PySide6.QtGui.QIcon()
+        icon.addFile(u":/icons/assets/images/vendor.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setWindowOpacity(1.000000000000000)
         MainWindow.setToolTipDuration(0)
@@ -41,38 +50,40 @@ class Ui_MainWindow(object):
         MainWindow.setAnimated(True)
         MainWindow.setTabShape(QTabWidget.Rounded)
         MainWindow.setDockNestingEnabled(True)
-        self.action_start_over = QAction(MainWindow)
+        self.action_start_over = PySide6.QtGui.QAction(MainWindow)
         self.action_start_over.setObjectName(u"action_start_over")
-        self.actionPOEDB_TW = QAction(MainWindow)
+        self.actionPOEDB_TW = PySide6.QtGui.QAction(MainWindow)
         self.actionPOEDB_TW.setObjectName(u"actionPOEDB_TW")
-        self.actionPrice_Checker = QAction(MainWindow)
+        self.actionPrice_Checker = PySide6.QtGui.QAction(MainWindow)
         self.actionPrice_Checker.setObjectName(u"actionPrice_Checker")
-        self.actionPOE_NINJA = QAction(MainWindow)
+        self.actionPOE_NINJA = PySide6.QtGui.QAction(MainWindow)
         self.actionPOE_NINJA.setObjectName(u"actionPOE_NINJA")
-        self.actionPATHOFEXILE_COM_TRADE = QAction(MainWindow)
+        icon1 = PySide6.QtGui.QIcon()
+        icon1.addFile(u":/images/assets/images/poeninja.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.On)
+        self.actionPOE_NINJA.setIcon(icon1)
+        self.actionPOE_NINJA.setMenuRole(PySide6.QtGui.QAction.ApplicationSpecificRole)
+        self.actionPATHOFEXILE_COM_TRADE = PySide6.QtGui.QAction(MainWindow)
         self.actionPATHOFEXILE_COM_TRADE.setObjectName(u"actionPATHOFEXILE_COM_TRADE")
-        self.actionUI = QAction(MainWindow)
+        self.actionUI = PySide6.QtGui.QAction(MainWindow)
         self.actionUI.setObjectName(u"actionUI")
-        self.actionTrade = QAction(MainWindow)
+        self.actionTrade = PySide6.QtGui.QAction(MainWindow)
         self.actionTrade.setObjectName(u"actionTrade")
-        self.actionCrafting = QAction(MainWindow)
+        self.actionCrafting = PySide6.QtGui.QAction(MainWindow)
         self.actionCrafting.setObjectName(u"actionCrafting")
-        self.actionCrafting_Tutorials = QAction(MainWindow)
+        self.actionCrafting_Tutorials = PySide6.QtGui.QAction(MainWindow)
         self.actionCrafting_Tutorials.setObjectName(u"actionCrafting_Tutorials")
-        self.action = QAction(MainWindow)
+        self.action = PySide6.QtGui.QAction(MainWindow)
         self.action.setObjectName(u"action")
-        icon1 = QIcon()
-        icon1.addFile(u"assets/images/pencil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.action.setIcon(icon1)
+        icon2 = PySide6.QtGui.QIcon()
+        icon2.addFile(u"assets/images/pencil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.action.setIcon(icon2)
         self.crafting_simulator_container = QWidget(MainWindow)
         self.crafting_simulator_container.setObjectName(u"crafting_simulator_container")
         self.crafting_simulator_container.setEnabled(True)
         sizePolicy.setHeightForWidth(self.crafting_simulator_container.sizePolicy().hasHeightForWidth())
         self.crafting_simulator_container.setSizePolicy(sizePolicy)
         self.crafting_simulator_container.setMaximumSize(QSize(2560, 1440))
-        font1 = QFont()
-        font1.setFamilies([u"fontin-smallcaps"])
-        self.crafting_simulator_container.setFont(font1)
+        self.crafting_simulator_container.setFont(font)
         self.crafting_simulator_container.setMouseTracking(True)
         self.crafting_simulator_container.setAutoFillBackground(False)
         self.gridLayout_2 = QGridLayout(self.crafting_simulator_container)
@@ -80,7 +91,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.crafting_simulator = QStackedWidget(self.crafting_simulator_container)
+        self.crafting_simulator = QFrame(self.crafting_simulator_container)
         self.crafting_simulator.setObjectName(u"crafting_simulator")
         sizePolicy.setHeightForWidth(self.crafting_simulator.sizePolicy().hasHeightForWidth())
         self.crafting_simulator.setSizePolicy(sizePolicy)
@@ -89,139 +100,35 @@ class Ui_MainWindow(object):
         self.crafting_simulator.setMouseTracking(True)
         self.crafting_simulator.setAutoFillBackground(False)
         self.crafting_simulator.setStyleSheet(u"border-image: url(:/images/assets/images/emubg.png);")
-        self.landing_page = QWidget()
-        self.landing_page.setObjectName(u"landing_page")
-        sizePolicy.setHeightForWidth(self.landing_page.sizePolicy().hasHeightForWidth())
-        self.landing_page.setSizePolicy(sizePolicy)
-        self.landing_page.setStyleSheet(u"QPushButton {\n"
-"                border: 1px solid #000;\n"
-"                border-radius: 4px;\n"
-"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
-"                border-image: none;\n"
-"              color: #FFF;\n"
-"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
-"                font-family: Open Sans;\n"
-"                font-size: 12px;\n"
-"               font-weight: bold;\n"
-"               height: 36px;\n"
-"                line-height: 36px;\n"
-"                text-align: center;\n"
-"				margin: 0px;\n"
-"				padding: 5px 10px;\n"
-"				cursor: pointer;\n"
-"				text-shadow: 1px 1px #000;\n"
-"				vertical-align: top;\n"
-"           }\n"
-"            QPushButton::hover {         \n"
-"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
-"           }\n"
-"            QPushButton::pressed {\n"
-"                \n"
-"	background-color: qlinear"
-                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
-"            }\n"
-"			QPushButton::checked {\n"
-"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
-"				color: #332211;\n"
-"text-shadow: 1px 1px #FFF;\n"
-"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
-"font-weight: bold;\n"
-"			}\n"
-"            QPushButton::flat {\n"
-"                border: none;\n"
-"}")
-        self.verticalLayout_9 = QVBoxLayout(self.landing_page)
-        self.verticalLayout_9.setSpacing(0)
-        self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.landing_page_container = QWidget(self.landing_page)
-        self.landing_page_container.setObjectName(u"landing_page_container")
+        self.gridLayout_3 = QGridLayout(self.crafting_simulator)
+        self.gridLayout_3.setSpacing(0)
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.crafting_methods_container = QWidget(self.crafting_simulator)
+        self.crafting_methods_container.setObjectName(u"crafting_methods_container")
         sizePolicy1 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.landing_page_container.sizePolicy().hasHeightForWidth())
-        self.landing_page_container.setSizePolicy(sizePolicy1)
-        self.landing_page_container.setStyleSheet(u"border-image: none;")
-        self.verticalLayout_11 = QVBoxLayout(self.landing_page_container)
-        self.verticalLayout_11.setSpacing(10)
-        self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
-        self.landing_page_label = QLabel(self.landing_page_container)
-        self.landing_page_label.setObjectName(u"landing_page_label")
-        sizePolicy2 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.landing_page_label.sizePolicy().hasHeightForWidth())
-        self.landing_page_label.setSizePolicy(sizePolicy2)
-        font2 = QFont()
-        font2.setFamilies([u"Open Sans"])
-        font2.setBold(True)
-        self.landing_page_label.setFont(font2)
-        self.landing_page_label.setStyleSheet(u"QWidget {\n"
-"	border-image: none;\n"
-"	border: 0px;\n"
-"}\n"
-"")
-        self.landing_page_label.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
-
-        self.verticalLayout_11.addWidget(self.landing_page_label, 0, Qt.AlignTop)
-
-        self.start_crafting_project_btn = QPushButton(self.landing_page_container)
-        self.start_crafting_project_btn.setObjectName(u"start_crafting_project_btn")
-        sizePolicy.setHeightForWidth(self.start_crafting_project_btn.sizePolicy().hasHeightForWidth())
-        self.start_crafting_project_btn.setSizePolicy(sizePolicy)
-
-        self.verticalLayout_11.addWidget(self.start_crafting_project_btn, 0, Qt.AlignHCenter|Qt.AlignVCenter)
-
-        self.load_saved_project_btn = QPushButton(self.landing_page_container)
-        self.load_saved_project_btn.setObjectName(u"load_saved_project_btn")
-
-        self.verticalLayout_11.addWidget(self.load_saved_project_btn, 0, Qt.AlignHCenter|Qt.AlignVCenter)
-
-        self.import_item_from_poe_btn = QPushButton(self.landing_page_container)
-        self.import_item_from_poe_btn.setObjectName(u"import_item_from_poe_btn")
-        sizePolicy.setHeightForWidth(self.import_item_from_poe_btn.sizePolicy().hasHeightForWidth())
-        self.import_item_from_poe_btn.setSizePolicy(sizePolicy)
-
-        self.verticalLayout_11.addWidget(self.import_item_from_poe_btn, 0, Qt.AlignHCenter|Qt.AlignVCenter)
-
-
-        self.verticalLayout_9.addWidget(self.landing_page_container, 0, Qt.AlignTop)
-
-        self.crafting_simulator.addWidget(self.landing_page)
-        self.crafting_page = QWidget()
-        self.crafting_page.setObjectName(u"crafting_page")
-        sizePolicy.setHeightForWidth(self.crafting_page.sizePolicy().hasHeightForWidth())
-        self.crafting_page.setSizePolicy(sizePolicy)
-        self.crafting_page.setStyleSheet(u"border-image: url(:/images/assets/images/emubg.png);")
-        self.verticalLayout_17 = QVBoxLayout(self.crafting_page)
-        self.verticalLayout_17.setSpacing(0)
-        self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
-        self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.crafting_methods = QWidget(self.crafting_page)
-        self.crafting_methods.setObjectName(u"crafting_methods")
-        sizePolicy1.setHeightForWidth(self.crafting_methods.sizePolicy().hasHeightForWidth())
-        self.crafting_methods.setSizePolicy(sizePolicy1)
-        self.crafting_methods.setMouseTracking(True)
-        self.crafting_methods.setStyleSheet(u"border-image: none;")
-        self.verticalLayout_7 = QVBoxLayout(self.crafting_methods)
+        sizePolicy1.setHeightForWidth(self.crafting_methods_container.sizePolicy().hasHeightForWidth())
+        self.crafting_methods_container.setSizePolicy(sizePolicy1)
+        self.crafting_methods_container.setMouseTracking(True)
+        self.crafting_methods_container.setStyleSheet(u"border-image: none;")
+        self.verticalLayout_7 = QVBoxLayout(self.crafting_methods_container)
         self.verticalLayout_7.setSpacing(0)
         self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.common_crafting_methods = QWidget(self.crafting_methods)
+        self.common_crafting_methods = QWidget(self.crafting_methods_container)
         self.common_crafting_methods.setObjectName(u"common_crafting_methods")
         sizePolicy1.setHeightForWidth(self.common_crafting_methods.sizePolicy().hasHeightForWidth())
         self.common_crafting_methods.setSizePolicy(sizePolicy1)
         self.common_crafting_methods.setMinimumSize(QSize(0, 0))
-        font3 = QFont()
-        font3.setFamilies([u"fontin-smallcaps"])
-        font3.setPointSize(9)
-        self.common_crafting_methods.setFont(font3)
-        self.common_crafting_methods.setCursor(QCursor(Qt.PointingHandCursor))
+        font1 = PySide6.QtGui.QFont()
+        font1.setFamilies([u"fontin-smallcaps"])
+        font1.setPointSize(9)
+        self.common_crafting_methods.setFont(font1)
+        self.common_crafting_methods.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.common_crafting_methods.setMouseTracking(True)
         self.common_crafting_methods.setFocusPolicy(Qt.ClickFocus)
         self.common_crafting_methods.setToolTipDuration(-3)
@@ -290,12 +197,12 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_transmute_btn.sizePolicy().hasHeightForWidth())
         self.method_transmute_btn.setSizePolicy(sizePolicy1)
         self.method_transmute_btn.setMinimumSize(QSize(0, 0))
-        self.method_transmute_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_transmute_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_transmute_btn.setMouseTracking(True)
         self.method_transmute_btn.setContextMenuPolicy(Qt.NoContextMenu)
-        icon2 = QIcon()
-        icon2.addFile(u":/crafting_methods/assets/images/crafting_methods/method_transmute.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_transmute_btn.setIcon(icon2)
+        icon3 = PySide6.QtGui.QIcon()
+        icon3.addFile(u":/crafting_methods/assets/images/crafting_methods/method_transmute.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_transmute_btn.setIcon(icon3)
         self.method_transmute_btn.setIconSize(QSize(30, 30))
         self.method_transmute_btn.setCheckable(True)
         self.method_transmute_btn.setChecked(False)
@@ -308,11 +215,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_alteration_btn.sizePolicy().hasHeightForWidth())
         self.method_alteration_btn.setSizePolicy(sizePolicy1)
         self.method_alteration_btn.setMinimumSize(QSize(0, 0))
-        self.method_alteration_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_alteration_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_alteration_btn.setMouseTracking(True)
-        icon3 = QIcon()
-        icon3.addFile(u":/crafting_methods/assets/images/crafting_methods/method_alteration.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_alteration_btn.setIcon(icon3)
+        icon4 = PySide6.QtGui.QIcon()
+        icon4.addFile(u":/crafting_methods/assets/images/crafting_methods/method_alteration.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_alteration_btn.setIcon(icon4)
         self.method_alteration_btn.setIconSize(QSize(30, 30))
         self.method_alteration_btn.setCheckable(True)
 
@@ -324,11 +231,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_augmentation_btn.sizePolicy().hasHeightForWidth())
         self.method_augmentation_btn.setSizePolicy(sizePolicy1)
         self.method_augmentation_btn.setMinimumSize(QSize(0, 0))
-        self.method_augmentation_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_augmentation_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_augmentation_btn.setMouseTracking(True)
-        icon4 = QIcon()
-        icon4.addFile(u":/crafting_methods/assets/images/crafting_methods/method_augmentation.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_augmentation_btn.setIcon(icon4)
+        icon5 = PySide6.QtGui.QIcon()
+        icon5.addFile(u":/crafting_methods/assets/images/crafting_methods/method_augmentation.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_augmentation_btn.setIcon(icon5)
         self.method_augmentation_btn.setIconSize(QSize(30, 30))
         self.method_augmentation_btn.setCheckable(True)
 
@@ -340,11 +247,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_regal_btn.sizePolicy().hasHeightForWidth())
         self.method_regal_btn.setSizePolicy(sizePolicy1)
         self.method_regal_btn.setMinimumSize(QSize(0, 0))
-        self.method_regal_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_regal_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_regal_btn.setMouseTracking(True)
-        icon5 = QIcon()
-        icon5.addFile(u":/crafting_methods/assets/images/crafting_methods/method_regal.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_regal_btn.setIcon(icon5)
+        icon6 = PySide6.QtGui.QIcon()
+        icon6.addFile(u":/crafting_methods/assets/images/crafting_methods/method_regal.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_regal_btn.setIcon(icon6)
         self.method_regal_btn.setIconSize(QSize(30, 30))
         self.method_regal_btn.setCheckable(True)
 
@@ -356,11 +263,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_alchemy_btn.sizePolicy().hasHeightForWidth())
         self.method_alchemy_btn.setSizePolicy(sizePolicy1)
         self.method_alchemy_btn.setMinimumSize(QSize(0, 0))
-        self.method_alchemy_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_alchemy_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_alchemy_btn.setMouseTracking(True)
-        icon6 = QIcon()
-        icon6.addFile(u":/crafting_methods/assets/images/crafting_methods/method_alchemy.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_alchemy_btn.setIcon(icon6)
+        icon7 = PySide6.QtGui.QIcon()
+        icon7.addFile(u":/crafting_methods/assets/images/crafting_methods/method_alchemy.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_alchemy_btn.setIcon(icon7)
         self.method_alchemy_btn.setIconSize(QSize(30, 30))
         self.method_alchemy_btn.setCheckable(True)
 
@@ -372,11 +279,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_chaos_btn.sizePolicy().hasHeightForWidth())
         self.method_chaos_btn.setSizePolicy(sizePolicy1)
         self.method_chaos_btn.setMinimumSize(QSize(0, 0))
-        self.method_chaos_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_chaos_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_chaos_btn.setMouseTracking(True)
-        icon7 = QIcon()
-        icon7.addFile(u":/crafting_methods/assets/images/crafting_methods/method_chaos.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_chaos_btn.setIcon(icon7)
+        icon8 = PySide6.QtGui.QIcon()
+        icon8.addFile(u":/crafting_methods/assets/images/crafting_methods/method_chaos.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_chaos_btn.setIcon(icon8)
         self.method_chaos_btn.setIconSize(QSize(30, 30))
         self.method_chaos_btn.setCheckable(True)
 
@@ -388,11 +295,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_exalted_btn.sizePolicy().hasHeightForWidth())
         self.method_exalted_btn.setSizePolicy(sizePolicy1)
         self.method_exalted_btn.setMinimumSize(QSize(0, 0))
-        self.method_exalted_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_exalted_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_exalted_btn.setMouseTracking(True)
-        icon8 = QIcon()
-        icon8.addFile(u":/crafting_methods/assets/images/crafting_methods/method_exalted.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_exalted_btn.setIcon(icon8)
+        icon9 = PySide6.QtGui.QIcon()
+        icon9.addFile(u":/crafting_methods/assets/images/crafting_methods/method_exalted.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_exalted_btn.setIcon(icon9)
         self.method_exalted_btn.setIconSize(QSize(30, 30))
         self.method_exalted_btn.setCheckable(True)
 
@@ -404,11 +311,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_scour_btn.sizePolicy().hasHeightForWidth())
         self.method_scour_btn.setSizePolicy(sizePolicy1)
         self.method_scour_btn.setMinimumSize(QSize(0, 0))
-        self.method_scour_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_scour_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_scour_btn.setMouseTracking(True)
-        icon9 = QIcon()
-        icon9.addFile(u":/crafting_methods/assets/images/crafting_methods/method_scour.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_scour_btn.setIcon(icon9)
+        icon10 = PySide6.QtGui.QIcon()
+        icon10.addFile(u":/crafting_methods/assets/images/crafting_methods/method_scour.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_scour_btn.setIcon(icon10)
         self.method_scour_btn.setIconSize(QSize(30, 30))
         self.method_scour_btn.setCheckable(True)
         self.method_scour_btn.setChecked(False)
@@ -421,11 +328,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_annul_btn.sizePolicy().hasHeightForWidth())
         self.method_annul_btn.setSizePolicy(sizePolicy1)
         self.method_annul_btn.setMinimumSize(QSize(0, 0))
-        self.method_annul_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_annul_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_annul_btn.setMouseTracking(True)
-        icon10 = QIcon()
-        icon10.addFile(u":/crafting_methods/assets/images/crafting_methods/method_annul.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_annul_btn.setIcon(icon10)
+        icon11 = PySide6.QtGui.QIcon()
+        icon11.addFile(u":/crafting_methods/assets/images/crafting_methods/method_annul.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_annul_btn.setIcon(icon11)
         self.method_annul_btn.setIconSize(QSize(30, 30))
         self.method_annul_btn.setCheckable(True)
 
@@ -437,11 +344,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_crusader_btn.sizePolicy().hasHeightForWidth())
         self.method_crusader_btn.setSizePolicy(sizePolicy1)
         self.method_crusader_btn.setMinimumSize(QSize(0, 0))
-        self.method_crusader_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_crusader_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_crusader_btn.setMouseTracking(True)
-        icon11 = QIcon()
-        icon11.addFile(u":/crafting_methods/assets/images/crafting_methods/method_crusader.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_crusader_btn.setIcon(icon11)
+        icon12 = PySide6.QtGui.QIcon()
+        icon12.addFile(u":/crafting_methods/assets/images/crafting_methods/method_crusader.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_crusader_btn.setIcon(icon12)
         self.method_crusader_btn.setIconSize(QSize(30, 30))
         self.method_crusader_btn.setCheckable(True)
 
@@ -453,11 +360,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_hunter_btn.sizePolicy().hasHeightForWidth())
         self.method_hunter_btn.setSizePolicy(sizePolicy1)
         self.method_hunter_btn.setMinimumSize(QSize(0, 0))
-        self.method_hunter_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_hunter_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_hunter_btn.setMouseTracking(True)
-        icon12 = QIcon()
-        icon12.addFile(u":/crafting_methods/assets/images/crafting_methods/method_hunter.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_hunter_btn.setIcon(icon12)
+        icon13 = PySide6.QtGui.QIcon()
+        icon13.addFile(u":/crafting_methods/assets/images/crafting_methods/method_hunter.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_hunter_btn.setIcon(icon13)
         self.method_hunter_btn.setIconSize(QSize(30, 30))
         self.method_hunter_btn.setCheckable(True)
 
@@ -469,11 +376,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_redeemer_btn.sizePolicy().hasHeightForWidth())
         self.method_redeemer_btn.setSizePolicy(sizePolicy1)
         self.method_redeemer_btn.setMinimumSize(QSize(0, 0))
-        self.method_redeemer_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_redeemer_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_redeemer_btn.setMouseTracking(True)
-        icon13 = QIcon()
-        icon13.addFile(u":/crafting_methods/assets/images/crafting_methods/method_redeemer.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_redeemer_btn.setIcon(icon13)
+        icon14 = PySide6.QtGui.QIcon()
+        icon14.addFile(u":/crafting_methods/assets/images/crafting_methods/method_redeemer.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_redeemer_btn.setIcon(icon14)
         self.method_redeemer_btn.setIconSize(QSize(30, 30))
         self.method_redeemer_btn.setCheckable(True)
 
@@ -485,11 +392,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_warlord_btn.sizePolicy().hasHeightForWidth())
         self.method_warlord_btn.setSizePolicy(sizePolicy1)
         self.method_warlord_btn.setMinimumSize(QSize(0, 0))
-        self.method_warlord_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_warlord_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_warlord_btn.setMouseTracking(True)
-        icon14 = QIcon()
-        icon14.addFile(u":/crafting_methods/assets/images/crafting_methods/method_warlord.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_warlord_btn.setIcon(icon14)
+        icon15 = PySide6.QtGui.QIcon()
+        icon15.addFile(u":/crafting_methods/assets/images/crafting_methods/method_warlord.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_warlord_btn.setIcon(icon15)
         self.method_warlord_btn.setIconSize(QSize(30, 30))
         self.method_warlord_btn.setCheckable(True)
 
@@ -501,11 +408,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_blessed_btn.sizePolicy().hasHeightForWidth())
         self.method_blessed_btn.setSizePolicy(sizePolicy1)
         self.method_blessed_btn.setMinimumSize(QSize(0, 0))
-        self.method_blessed_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_blessed_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_blessed_btn.setMouseTracking(True)
-        icon15 = QIcon()
-        icon15.addFile(u":/crafting_methods/assets/images/crafting_methods/method_blessed.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_blessed_btn.setIcon(icon15)
+        icon16 = PySide6.QtGui.QIcon()
+        icon16.addFile(u":/crafting_methods/assets/images/crafting_methods/method_blessed.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_blessed_btn.setIcon(icon16)
         self.method_blessed_btn.setIconSize(QSize(30, 30))
         self.method_blessed_btn.setCheckable(True)
 
@@ -517,11 +424,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_divine_btn.sizePolicy().hasHeightForWidth())
         self.method_divine_btn.setSizePolicy(sizePolicy1)
         self.method_divine_btn.setMinimumSize(QSize(0, 0))
-        self.method_divine_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_divine_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_divine_btn.setMouseTracking(True)
-        icon16 = QIcon()
-        icon16.addFile(u":/crafting_methods/assets/images/crafting_methods/method_divine.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_divine_btn.setIcon(icon16)
+        icon17 = PySide6.QtGui.QIcon()
+        icon17.addFile(u":/crafting_methods/assets/images/crafting_methods/method_divine.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_divine_btn.setIcon(icon17)
         self.method_divine_btn.setIconSize(QSize(30, 30))
         self.method_divine_btn.setCheckable(True)
 
@@ -533,11 +440,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_veiled_btn.sizePolicy().hasHeightForWidth())
         self.method_veiled_btn.setSizePolicy(sizePolicy1)
         self.method_veiled_btn.setMinimumSize(QSize(0, 0))
-        self.method_veiled_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_veiled_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_veiled_btn.setMouseTracking(True)
-        icon17 = QIcon()
-        icon17.addFile(u":/crafting_methods/assets/images/crafting_methods/method_veiled.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_veiled_btn.setIcon(icon17)
+        icon18 = PySide6.QtGui.QIcon()
+        icon18.addFile(u":/crafting_methods/assets/images/crafting_methods/method_veiled.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_veiled_btn.setIcon(icon18)
         self.method_veiled_btn.setIconSize(QSize(30, 30))
         self.method_veiled_btn.setCheckable(True)
 
@@ -549,11 +456,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_woke_btn.sizePolicy().hasHeightForWidth())
         self.method_woke_btn.setSizePolicy(sizePolicy1)
         self.method_woke_btn.setMinimumSize(QSize(0, 0))
-        self.method_woke_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_woke_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_woke_btn.setMouseTracking(True)
-        icon18 = QIcon()
-        icon18.addFile(u":/crafting_methods/assets/images/crafting_methods/method_woke.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_woke_btn.setIcon(icon18)
+        icon19 = PySide6.QtGui.QIcon()
+        icon19.addFile(u":/crafting_methods/assets/images/crafting_methods/method_woke.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_woke_btn.setIcon(icon19)
         self.method_woke_btn.setIconSize(QSize(30, 30))
         self.method_woke_btn.setCheckable(True)
 
@@ -565,11 +472,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_maven_btn.sizePolicy().hasHeightForWidth())
         self.method_maven_btn.setSizePolicy(sizePolicy1)
         self.method_maven_btn.setMinimumSize(QSize(0, 0))
-        self.method_maven_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_maven_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_maven_btn.setMouseTracking(True)
-        icon19 = QIcon()
-        icon19.addFile(u":/crafting_methods/assets/images/crafting_methods/method_maven.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_maven_btn.setIcon(icon19)
+        icon20 = PySide6.QtGui.QIcon()
+        icon20.addFile(u":/crafting_methods/assets/images/crafting_methods/method_maven.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_maven_btn.setIcon(icon20)
         self.method_maven_btn.setIconSize(QSize(30, 30))
         self.method_maven_btn.setCheckable(True)
 
@@ -581,11 +488,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_fracturing_btn.sizePolicy().hasHeightForWidth())
         self.method_fracturing_btn.setSizePolicy(sizePolicy1)
         self.method_fracturing_btn.setMinimumSize(QSize(0, 0))
-        self.method_fracturing_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_fracturing_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_fracturing_btn.setMouseTracking(True)
-        icon20 = QIcon()
-        icon20.addFile(u":/crafting_methods/assets/images/crafting_methods/method_fracturing.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_fracturing_btn.setIcon(icon20)
+        icon21 = PySide6.QtGui.QIcon()
+        icon21.addFile(u":/crafting_methods/assets/images/crafting_methods/method_fracturing.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_fracturing_btn.setIcon(icon21)
         self.method_fracturing_btn.setIconSize(QSize(30, 30))
         self.method_fracturing_btn.setCheckable(True)
 
@@ -597,11 +504,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.locus_btn.sizePolicy().hasHeightForWidth())
         self.locus_btn.setSizePolicy(sizePolicy1)
         self.locus_btn.setMinimumSize(QSize(0, 0))
-        self.locus_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.locus_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.locus_btn.setMouseTracking(True)
-        icon21 = QIcon()
-        icon21.addFile(u":/images/assets/images/locus.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.locus_btn.setIcon(icon21)
+        icon22 = PySide6.QtGui.QIcon()
+        icon22.addFile(u":/images/assets/images/locus.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.locus_btn.setIcon(icon22)
         self.locus_btn.setIconSize(QSize(30, 30))
         self.locus_btn.setCheckable(True)
 
@@ -613,11 +520,11 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_vaal_btn.sizePolicy().hasHeightForWidth())
         self.method_vaal_btn.setSizePolicy(sizePolicy1)
         self.method_vaal_btn.setMinimumSize(QSize(0, 0))
-        self.method_vaal_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_vaal_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_vaal_btn.setMouseTracking(True)
-        icon22 = QIcon()
-        icon22.addFile(u":/crafting_methods/assets/images/crafting_methods/method_vaal.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_vaal_btn.setIcon(icon22)
+        icon23 = PySide6.QtGui.QIcon()
+        icon23.addFile(u":/crafting_methods/assets/images/crafting_methods/method_vaal.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_vaal_btn.setIcon(icon23)
         self.method_vaal_btn.setIconSize(QSize(30, 30))
         self.method_vaal_btn.setCheckable(True)
 
@@ -626,13 +533,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addWidget(self.common_crafting_methods)
 
-        self.crafting_method_group_btns = QWidget(self.crafting_methods)
+        self.crafting_method_group_btns = QWidget(self.crafting_methods_container)
         self.crafting_method_group_btns.setObjectName(u"crafting_method_group_btns")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.crafting_method_group_btns.sizePolicy().hasHeightForWidth())
-        self.crafting_method_group_btns.setSizePolicy(sizePolicy3)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.crafting_method_group_btns.sizePolicy().hasHeightForWidth())
+        self.crafting_method_group_btns.setSizePolicy(sizePolicy2)
         self.crafting_method_group_btns.setStyleSheet(u"margin: 0px;\n"
 "padding: 0px;")
         self.horizontalLayout_9 = QHBoxLayout(self.crafting_method_group_btns)
@@ -648,7 +555,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_fossil_btn.sizePolicy().hasHeightForWidth())
         self.method_fossil_btn.setSizePolicy(sizePolicy1)
         self.method_fossil_btn.setMinimumSize(QSize(0, 0))
-        self.method_fossil_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_fossil_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_fossil_btn.setMouseTracking(True)
         self.method_fossil_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
@@ -687,9 +594,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon23 = QIcon()
-        icon23.addFile(u":/crafting_methods/assets/images/crafting_methods/method_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_fossil_btn.setIcon(icon23)
+        icon24 = PySide6.QtGui.QIcon()
+        icon24.addFile(u":/crafting_methods/assets/images/crafting_methods/method_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_fossil_btn.setIcon(icon24)
         self.method_fossil_btn.setIconSize(QSize(30, 30))
         self.method_fossil_btn.setCheckable(True)
         self.method_fossil_btn.setAutoExclusive(True)
@@ -702,7 +609,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_harvest_btn.sizePolicy().hasHeightForWidth())
         self.method_harvest_btn.setSizePolicy(sizePolicy1)
         self.method_harvest_btn.setMinimumSize(QSize(0, 0))
-        self.method_harvest_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_harvest_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_harvest_btn.setMouseTracking(True)
         self.method_harvest_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
@@ -741,11 +648,12 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon24 = QIcon()
-        icon24.addFile(u":/crafting_methods/assets/images/crafting_methods/method_harvest.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_harvest_btn.setIcon(icon24)
+        icon25 = PySide6.QtGui.QIcon()
+        icon25.addFile(u":/crafting_methods/assets/images/crafting_methods/method_harvest.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_harvest_btn.setIcon(icon25)
         self.method_harvest_btn.setIconSize(QSize(30, 30))
         self.method_harvest_btn.setCheckable(True)
+        self.method_harvest_btn.setAutoExclusive(True)
 
         self.horizontalLayout_9.addWidget(self.method_harvest_btn)
 
@@ -755,7 +663,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_essence_btn.sizePolicy().hasHeightForWidth())
         self.method_essence_btn.setSizePolicy(sizePolicy1)
         self.method_essence_btn.setMinimumSize(QSize(0, 0))
-        self.method_essence_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_essence_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_essence_btn.setMouseTracking(True)
         self.method_essence_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
@@ -794,11 +702,12 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon25 = QIcon()
-        icon25.addFile(u":/crafting_methods/assets/images/crafting_methods/method_essence.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_essence_btn.setIcon(icon25)
+        icon26 = PySide6.QtGui.QIcon()
+        icon26.addFile(u":/crafting_methods/assets/images/crafting_methods/method_essence.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_essence_btn.setIcon(icon26)
         self.method_essence_btn.setIconSize(QSize(30, 30))
         self.method_essence_btn.setCheckable(True)
+        self.method_essence_btn.setAutoExclusive(True)
 
         self.horizontalLayout_9.addWidget(self.method_essence_btn)
 
@@ -808,7 +717,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.catalyst_method_btn.sizePolicy().hasHeightForWidth())
         self.catalyst_method_btn.setSizePolicy(sizePolicy1)
         self.catalyst_method_btn.setMinimumSize(QSize(0, 0))
-        self.catalyst_method_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.catalyst_method_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.catalyst_method_btn.setMouseTracking(True)
         self.catalyst_method_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
@@ -847,11 +756,12 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon26 = QIcon()
-        icon26.addFile(u":/crafting_methods/assets/images/crafting_methods/method_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.catalyst_method_btn.setIcon(icon26)
+        icon27 = PySide6.QtGui.QIcon()
+        icon27.addFile(u":/crafting_methods/assets/images/crafting_methods/method_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.catalyst_method_btn.setIcon(icon27)
         self.catalyst_method_btn.setIconSize(QSize(30, 30))
         self.catalyst_method_btn.setCheckable(True)
+        self.catalyst_method_btn.setAutoExclusive(True)
 
         self.horizontalLayout_9.addWidget(self.catalyst_method_btn)
 
@@ -861,7 +771,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_imprint_btn.sizePolicy().hasHeightForWidth())
         self.method_imprint_btn.setSizePolicy(sizePolicy1)
         self.method_imprint_btn.setMinimumSize(QSize(0, 0))
-        self.method_imprint_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_imprint_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_imprint_btn.setMouseTracking(True)
         self.method_imprint_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
@@ -900,11 +810,12 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon27 = QIcon()
-        icon27.addFile(u":/crafting_methods/assets/images/crafting_methods/method_imprint.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_imprint_btn.setIcon(icon27)
+        icon28 = PySide6.QtGui.QIcon()
+        icon28.addFile(u":/crafting_methods/assets/images/crafting_methods/method_imprint.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_imprint_btn.setIcon(icon28)
         self.method_imprint_btn.setIconSize(QSize(30, 30))
         self.method_imprint_btn.setCheckable(True)
+        self.method_imprint_btn.setAutoExclusive(True)
 
         self.horizontalLayout_9.addWidget(self.method_imprint_btn)
 
@@ -914,7 +825,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.eldritch_method_btn.sizePolicy().hasHeightForWidth())
         self.eldritch_method_btn.setSizePolicy(sizePolicy1)
         self.eldritch_method_btn.setMinimumSize(QSize(0, 0))
-        self.eldritch_method_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.eldritch_method_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.eldritch_method_btn.setMouseTracking(True)
         self.eldritch_method_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
@@ -953,12 +864,13 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon28 = QIcon()
-        icon28.addFile(u":/crafting_methods/assets/images/crafting_methods/method_eldritch.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.eldritch_method_btn.setIcon(icon28)
+        icon29 = PySide6.QtGui.QIcon()
+        icon29.addFile(u":/crafting_methods/assets/images/crafting_methods/method_eldritch.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.eldritch_method_btn.setIcon(icon29)
         self.eldritch_method_btn.setIconSize(QSize(30, 30))
         self.eldritch_method_btn.setCheckable(True)
         self.eldritch_method_btn.setChecked(False)
+        self.eldritch_method_btn.setAutoExclusive(True)
 
         self.horizontalLayout_9.addWidget(self.eldritch_method_btn)
 
@@ -968,7 +880,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_syndicate_btn.sizePolicy().hasHeightForWidth())
         self.method_syndicate_btn.setSizePolicy(sizePolicy1)
         self.method_syndicate_btn.setMinimumSize(QSize(0, 0))
-        self.method_syndicate_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_syndicate_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_syndicate_btn.setMouseTracking(True)
         self.method_syndicate_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
@@ -1007,11 +919,12 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon29 = QIcon()
-        icon29.addFile(u":/crafting_methods/assets/images/crafting_methods/method_syndicate.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_syndicate_btn.setIcon(icon29)
+        icon30 = PySide6.QtGui.QIcon()
+        icon30.addFile(u":/crafting_methods/assets/images/crafting_methods/method_syndicate.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_syndicate_btn.setIcon(icon30)
         self.method_syndicate_btn.setIconSize(QSize(30, 30))
         self.method_syndicate_btn.setCheckable(True)
+        self.method_syndicate_btn.setAutoExclusive(True)
 
         self.horizontalLayout_9.addWidget(self.method_syndicate_btn)
 
@@ -1021,7 +934,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.method_crafting_bench_btn.sizePolicy().hasHeightForWidth())
         self.method_crafting_bench_btn.setSizePolicy(sizePolicy1)
         self.method_crafting_bench_btn.setMinimumSize(QSize(0, 0))
-        self.method_crafting_bench_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.method_crafting_bench_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.method_crafting_bench_btn.setMouseTracking(True)
         self.method_crafting_bench_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
@@ -1060,22 +973,23 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon30 = QIcon()
-        icon30.addFile(u":/crafting_methods/assets/images/crafting_methods/method_crafting_bench.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.method_crafting_bench_btn.setIcon(icon30)
+        icon31 = PySide6.QtGui.QIcon()
+        icon31.addFile(u":/crafting_methods/assets/images/crafting_methods/method_crafting_bench.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.method_crafting_bench_btn.setIcon(icon31)
         self.method_crafting_bench_btn.setIconSize(QSize(30, 30))
         self.method_crafting_bench_btn.setCheckable(True)
+        self.method_crafting_bench_btn.setAutoExclusive(True)
 
         self.horizontalLayout_9.addWidget(self.method_crafting_bench_btn)
 
 
         self.verticalLayout_7.addWidget(self.crafting_method_group_btns, 0, Qt.AlignTop)
 
-        self.crafting_method_pages = QStackedWidget(self.crafting_methods)
+        self.crafting_method_pages = QStackedWidget(self.crafting_methods_container)
         self.crafting_method_pages.setObjectName(u"crafting_method_pages")
         self.crafting_method_pages.setEnabled(True)
-        sizePolicy3.setHeightForWidth(self.crafting_method_pages.sizePolicy().hasHeightForWidth())
-        self.crafting_method_pages.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.crafting_method_pages.sizePolicy().hasHeightForWidth())
+        self.crafting_method_pages.setSizePolicy(sizePolicy2)
         self.crafting_method_pages.setStyleSheet(u"QStackedWidget {\n"
 "background-color: none;\n"
 "}\n"
@@ -1129,8 +1043,8 @@ class Ui_MainWindow(object):
         self.fossil_crafts = QWidget()
         self.fossil_crafts.setObjectName(u"fossil_crafts")
         self.fossil_crafts.setEnabled(True)
-        sizePolicy3.setHeightForWidth(self.fossil_crafts.sizePolicy().hasHeightForWidth())
-        self.fossil_crafts.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.fossil_crafts.sizePolicy().hasHeightForWidth())
+        self.fossil_crafts.setSizePolicy(sizePolicy2)
         self.verticalLayout_23 = QVBoxLayout(self.fossil_crafts)
         self.verticalLayout_23.setSpacing(0)
         self.verticalLayout_23.setContentsMargins(0, 0, 0, 0)
@@ -1149,11 +1063,11 @@ class Ui_MainWindow(object):
         self.fossil_btn_row1 = QWidget(self.fossil_btns_container)
         self.fossil_btn_row1.setObjectName(u"fossil_btn_row1")
         self.fossil_btn_row1.setEnabled(True)
-        sizePolicy4 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Maximum)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.fossil_btn_row1.sizePolicy().hasHeightForWidth())
-        self.fossil_btn_row1.setSizePolicy(sizePolicy4)
+        sizePolicy3 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Maximum)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.fossil_btn_row1.sizePolicy().hasHeightForWidth())
+        self.fossil_btn_row1.setSizePolicy(sizePolicy3)
         self.fossil_row1 = QHBoxLayout(self.fossil_btn_row1)
         self.fossil_row1.setSpacing(0)
         self.fossil_row1.setContentsMargins(0, 0, 0, 0)
@@ -1162,13 +1076,16 @@ class Ui_MainWindow(object):
         self.fossil_hide_button = QPushButton(self.fossil_btn_row1)
         self.fossil_hide_button.setObjectName(u"fossil_hide_button")
         self.fossil_hide_button.setEnabled(True)
-        sizePolicy5 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.fossil_hide_button.sizePolicy().hasHeightForWidth())
-        self.fossil_hide_button.setSizePolicy(sizePolicy5)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.fossil_hide_button.sizePolicy().hasHeightForWidth())
+        self.fossil_hide_button.setSizePolicy(sizePolicy4)
+        font2 = PySide6.QtGui.QFont()
+        font2.setFamilies([u"Open Sans"])
+        font2.setBold(True)
         self.fossil_hide_button.setFont(font2)
-        self.fossil_hide_button.setCursor(QCursor(Qt.PointingHandCursor))
+        self.fossil_hide_button.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.fossil_hide_button.setContextMenuPolicy(Qt.NoContextMenu)
         self.fossil_hide_button.setStyleSheet(u"QPushButton {\n"
 "border: 1px solid #90701b;\n"
@@ -1211,8 +1128,8 @@ class Ui_MainWindow(object):
         self.fossil_label = QLabel(self.fossil_btn_row1)
         self.fossil_label.setObjectName(u"fossil_label")
         self.fossil_label.setEnabled(True)
-        sizePolicy5.setHeightForWidth(self.fossil_label.sizePolicy().hasHeightForWidth())
-        self.fossil_label.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.fossil_label.sizePolicy().hasHeightForWidth())
+        self.fossil_label.setSizePolicy(sizePolicy4)
 
         self.fossil_row1.addWidget(self.fossil_label)
 
@@ -1225,7 +1142,7 @@ class Ui_MainWindow(object):
         self.abberant_fossil.setEnabled(True)
         sizePolicy.setHeightForWidth(self.abberant_fossil.sizePolicy().hasHeightForWidth())
         self.abberant_fossil.setSizePolicy(sizePolicy)
-        self.abberant_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.abberant_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.abberant_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1263,9 +1180,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon31 = QIcon()
-        icon31.addFile(u":/fossils/assets/images/fossils/aberrant_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.abberant_fossil.setIcon(icon31)
+        icon32 = PySide6.QtGui.QIcon()
+        icon32.addFile(u":/fossils/assets/images/fossils/aberrant_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.abberant_fossil.setIcon(icon32)
         self.abberant_fossil.setIconSize(QSize(30, 30))
         self.abberant_fossil.setCheckable(True)
 
@@ -1277,7 +1194,7 @@ class Ui_MainWindow(object):
         self.aetheric_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.aetheric_fossil.sizePolicy().hasHeightForWidth())
         self.aetheric_fossil.setSizePolicy(sizePolicy1)
-        self.aetheric_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.aetheric_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.aetheric_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1315,9 +1232,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon32 = QIcon()
-        icon32.addFile(u":/fossils/assets/images/fossils/aetheric_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.aetheric_fossil.setIcon(icon32)
+        icon33 = PySide6.QtGui.QIcon()
+        icon33.addFile(u":/fossils/assets/images/fossils/aetheric_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.aetheric_fossil.setIcon(icon33)
         self.aetheric_fossil.setIconSize(QSize(30, 30))
         self.aetheric_fossil.setCheckable(True)
 
@@ -1329,7 +1246,7 @@ class Ui_MainWindow(object):
         self.bound_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.bound_fossil.sizePolicy().hasHeightForWidth())
         self.bound_fossil.setSizePolicy(sizePolicy1)
-        self.bound_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.bound_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.bound_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1367,9 +1284,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon33 = QIcon()
-        icon33.addFile(u":/fossils/assets/images/fossils/bound_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bound_fossil.setIcon(icon33)
+        icon34 = PySide6.QtGui.QIcon()
+        icon34.addFile(u":/fossils/assets/images/fossils/bound_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.bound_fossil.setIcon(icon34)
         self.bound_fossil.setIconSize(QSize(30, 30))
         self.bound_fossil.setCheckable(True)
 
@@ -1381,7 +1298,7 @@ class Ui_MainWindow(object):
         self.corroded_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.corroded_fossil.sizePolicy().hasHeightForWidth())
         self.corroded_fossil.setSizePolicy(sizePolicy1)
-        self.corroded_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.corroded_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.corroded_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1419,9 +1336,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon34 = QIcon()
-        icon34.addFile(u":/fossils/assets/images/fossils/corroded_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.corroded_fossil.setIcon(icon34)
+        icon35 = PySide6.QtGui.QIcon()
+        icon35.addFile(u":/fossils/assets/images/fossils/corroded_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.corroded_fossil.setIcon(icon35)
         self.corroded_fossil.setIconSize(QSize(30, 30))
         self.corroded_fossil.setCheckable(True)
 
@@ -1433,7 +1350,7 @@ class Ui_MainWindow(object):
         self.dense_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.dense_fossil.sizePolicy().hasHeightForWidth())
         self.dense_fossil.setSizePolicy(sizePolicy1)
-        self.dense_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.dense_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.dense_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1471,9 +1388,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon35 = QIcon()
-        icon35.addFile(u":/fossils/assets/images/fossils/dense_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.dense_fossil.setIcon(icon35)
+        icon36 = PySide6.QtGui.QIcon()
+        icon36.addFile(u":/fossils/assets/images/fossils/dense_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.dense_fossil.setIcon(icon36)
         self.dense_fossil.setIconSize(QSize(30, 30))
 
         self.fossil_row1.addWidget(self.dense_fossil)
@@ -1484,7 +1401,7 @@ class Ui_MainWindow(object):
         self.faceted_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.faceted_fossil.sizePolicy().hasHeightForWidth())
         self.faceted_fossil.setSizePolicy(sizePolicy1)
-        self.faceted_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.faceted_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.faceted_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1522,9 +1439,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon36 = QIcon()
-        icon36.addFile(u":/fossils/assets/images/fossils/faceted_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.faceted_fossil.setIcon(icon36)
+        icon37 = PySide6.QtGui.QIcon()
+        icon37.addFile(u":/fossils/assets/images/fossils/faceted_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.faceted_fossil.setIcon(icon37)
         self.faceted_fossil.setIconSize(QSize(30, 30))
         self.faceted_fossil.setCheckable(True)
 
@@ -1536,7 +1453,7 @@ class Ui_MainWindow(object):
         self.frigid_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.frigid_fossil.sizePolicy().hasHeightForWidth())
         self.frigid_fossil.setSizePolicy(sizePolicy1)
-        self.frigid_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.frigid_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.frigid_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1574,9 +1491,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon37 = QIcon()
-        icon37.addFile(u":/fossils/assets/images/fossils/frigid_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.frigid_fossil.setIcon(icon37)
+        icon38 = PySide6.QtGui.QIcon()
+        icon38.addFile(u":/fossils/assets/images/fossils/frigid_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.frigid_fossil.setIcon(icon38)
         self.frigid_fossil.setIconSize(QSize(30, 30))
         self.frigid_fossil.setCheckable(True)
 
@@ -1588,7 +1505,7 @@ class Ui_MainWindow(object):
         self.jagged_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.jagged_fossil.sizePolicy().hasHeightForWidth())
         self.jagged_fossil.setSizePolicy(sizePolicy1)
-        self.jagged_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.jagged_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.jagged_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1626,9 +1543,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon38 = QIcon()
-        icon38.addFile(u":/fossils/assets/images/fossils/jagged_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.jagged_fossil.setIcon(icon38)
+        icon39 = PySide6.QtGui.QIcon()
+        icon39.addFile(u":/fossils/assets/images/fossils/jagged_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.jagged_fossil.setIcon(icon39)
         self.jagged_fossil.setIconSize(QSize(30, 30))
         self.jagged_fossil.setCheckable(True)
 
@@ -1640,7 +1557,7 @@ class Ui_MainWindow(object):
         self.lucent_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.lucent_fossil.sizePolicy().hasHeightForWidth())
         self.lucent_fossil.setSizePolicy(sizePolicy1)
-        self.lucent_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lucent_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.lucent_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1678,9 +1595,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon39 = QIcon()
-        icon39.addFile(u":/fossils/assets/images/fossils/lucent_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.lucent_fossil.setIcon(icon39)
+        icon40 = PySide6.QtGui.QIcon()
+        icon40.addFile(u":/fossils/assets/images/fossils/lucent_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.lucent_fossil.setIcon(icon40)
         self.lucent_fossil.setIconSize(QSize(30, 30))
         self.lucent_fossil.setCheckable(True)
 
@@ -1692,10 +1609,10 @@ class Ui_MainWindow(object):
         self.metallic_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.metallic_fossil.sizePolicy().hasHeightForWidth())
         self.metallic_fossil.setSizePolicy(sizePolicy1)
-        self.metallic_fossil.setCursor(QCursor(Qt.PointingHandCursor))
-        icon40 = QIcon()
-        icon40.addFile(u":/fossils/assets/images/fossils/metallic_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.metallic_fossil.setIcon(icon40)
+        self.metallic_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        icon41 = PySide6.QtGui.QIcon()
+        icon41.addFile(u":/fossils/assets/images/fossils/metallic_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.metallic_fossil.setIcon(icon41)
         self.metallic_fossil.setIconSize(QSize(30, 30))
         self.metallic_fossil.setCheckable(True)
 
@@ -1707,7 +1624,7 @@ class Ui_MainWindow(object):
         self.prismatic_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.prismatic_fossil.sizePolicy().hasHeightForWidth())
         self.prismatic_fossil.setSizePolicy(sizePolicy1)
-        self.prismatic_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.prismatic_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.prismatic_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1745,9 +1662,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon41 = QIcon()
-        icon41.addFile(u":/fossils/assets/images/fossils/prismatic_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.prismatic_fossil.setIcon(icon41)
+        icon42 = PySide6.QtGui.QIcon()
+        icon42.addFile(u":/fossils/assets/images/fossils/prismatic_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.prismatic_fossil.setIcon(icon42)
         self.prismatic_fossil.setIconSize(QSize(30, 30))
         self.prismatic_fossil.setCheckable(True)
 
@@ -1759,8 +1676,8 @@ class Ui_MainWindow(object):
         self.fossil_btn_row2 = QWidget(self.fossil_btns_container)
         self.fossil_btn_row2.setObjectName(u"fossil_btn_row2")
         self.fossil_btn_row2.setEnabled(True)
-        sizePolicy4.setHeightForWidth(self.fossil_btn_row2.sizePolicy().hasHeightForWidth())
-        self.fossil_btn_row2.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.fossil_btn_row2.sizePolicy().hasHeightForWidth())
+        self.fossil_btn_row2.setSizePolicy(sizePolicy3)
         self.fossil_row2 = QHBoxLayout(self.fossil_btn_row2)
         self.fossil_row2.setSpacing(0)
         self.fossil_row2.setContentsMargins(0, 0, 0, 0)
@@ -1772,7 +1689,7 @@ class Ui_MainWindow(object):
         self.pristine_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.pristine_fossil.sizePolicy().hasHeightForWidth())
         self.pristine_fossil.setSizePolicy(sizePolicy1)
-        self.pristine_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pristine_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.pristine_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1810,9 +1727,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon42 = QIcon()
-        icon42.addFile(u":/fossils/assets/images/fossils/pristine_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pristine_fossil.setIcon(icon42)
+        icon43 = PySide6.QtGui.QIcon()
+        icon43.addFile(u":/fossils/assets/images/fossils/pristine_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.pristine_fossil.setIcon(icon43)
         self.pristine_fossil.setIconSize(QSize(30, 30))
         self.pristine_fossil.setCheckable(True)
 
@@ -1824,7 +1741,7 @@ class Ui_MainWindow(object):
         self.scorched_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.scorched_fossil.sizePolicy().hasHeightForWidth())
         self.scorched_fossil.setSizePolicy(sizePolicy1)
-        self.scorched_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.scorched_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.scorched_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1862,9 +1779,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon43 = QIcon()
-        icon43.addFile(u":/fossils/assets/images/fossils/scorched_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.scorched_fossil.setIcon(icon43)
+        icon44 = PySide6.QtGui.QIcon()
+        icon44.addFile(u":/fossils/assets/images/fossils/scorched_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.scorched_fossil.setIcon(icon44)
         self.scorched_fossil.setIconSize(QSize(30, 30))
         self.scorched_fossil.setCheckable(True)
 
@@ -1876,7 +1793,7 @@ class Ui_MainWindow(object):
         self.serrated_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.serrated_fossil.sizePolicy().hasHeightForWidth())
         self.serrated_fossil.setSizePolicy(sizePolicy1)
-        self.serrated_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.serrated_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.serrated_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1914,9 +1831,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon44 = QIcon()
-        icon44.addFile(u":/fossils/assets/images/fossils/serrated_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.serrated_fossil.setIcon(icon44)
+        icon45 = PySide6.QtGui.QIcon()
+        icon45.addFile(u":/fossils/assets/images/fossils/serrated_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.serrated_fossil.setIcon(icon45)
         self.serrated_fossil.setIconSize(QSize(30, 30))
         self.serrated_fossil.setCheckable(True)
 
@@ -1928,7 +1845,7 @@ class Ui_MainWindow(object):
         self.shuddering_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.shuddering_fossil.sizePolicy().hasHeightForWidth())
         self.shuddering_fossil.setSizePolicy(sizePolicy1)
-        self.shuddering_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.shuddering_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.shuddering_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -1966,9 +1883,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon45 = QIcon()
-        icon45.addFile(u":/fossils/assets/images/fossils/shuddering_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.shuddering_fossil.setIcon(icon45)
+        icon46 = PySide6.QtGui.QIcon()
+        icon46.addFile(u":/fossils/assets/images/fossils/shuddering_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.shuddering_fossil.setIcon(icon46)
         self.shuddering_fossil.setIconSize(QSize(30, 30))
         self.shuddering_fossil.setCheckable(True)
 
@@ -1980,7 +1897,7 @@ class Ui_MainWindow(object):
         self.hollow_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.hollow_fossil.sizePolicy().hasHeightForWidth())
         self.hollow_fossil.setSizePolicy(sizePolicy1)
-        self.hollow_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.hollow_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.hollow_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2018,9 +1935,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon46 = QIcon()
-        icon46.addFile(u":/fossils/assets/images/fossils/hollow_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.hollow_fossil.setIcon(icon46)
+        icon47 = PySide6.QtGui.QIcon()
+        icon47.addFile(u":/fossils/assets/images/fossils/hollow_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.hollow_fossil.setIcon(icon47)
         self.hollow_fossil.setIconSize(QSize(30, 30))
         self.hollow_fossil.setCheckable(True)
 
@@ -2032,7 +1949,7 @@ class Ui_MainWindow(object):
         self.sanctified_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.sanctified_fossil.sizePolicy().hasHeightForWidth())
         self.sanctified_fossil.setSizePolicy(sizePolicy1)
-        self.sanctified_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.sanctified_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.sanctified_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2070,9 +1987,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon47 = QIcon()
-        icon47.addFile(u":/fossils/assets/images/fossils/sanctified_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.sanctified_fossil.setIcon(icon47)
+        icon48 = PySide6.QtGui.QIcon()
+        icon48.addFile(u":/fossils/assets/images/fossils/sanctified_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.sanctified_fossil.setIcon(icon48)
         self.sanctified_fossil.setIconSize(QSize(30, 30))
         self.sanctified_fossil.setCheckable(True)
 
@@ -2084,7 +2001,7 @@ class Ui_MainWindow(object):
         self.glyphic_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.glyphic_fossil.sizePolicy().hasHeightForWidth())
         self.glyphic_fossil.setSizePolicy(sizePolicy1)
-        self.glyphic_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.glyphic_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.glyphic_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2122,9 +2039,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon48 = QIcon()
-        icon48.addFile(u":/fossils/assets/images/fossils/glyphic_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.glyphic_fossil.setIcon(icon48)
+        icon49 = PySide6.QtGui.QIcon()
+        icon49.addFile(u":/fossils/assets/images/fossils/glyphic_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.glyphic_fossil.setIcon(icon49)
         self.glyphic_fossil.setIconSize(QSize(30, 30))
         self.glyphic_fossil.setCheckable(True)
 
@@ -2136,7 +2053,7 @@ class Ui_MainWindow(object):
         self.fundamental_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.fundamental_fossil.sizePolicy().hasHeightForWidth())
         self.fundamental_fossil.setSizePolicy(sizePolicy1)
-        self.fundamental_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.fundamental_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.fundamental_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2174,9 +2091,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon49 = QIcon()
-        icon49.addFile(u":/fossils/assets/images/fossils/fundamental_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.fundamental_fossil.setIcon(icon49)
+        icon50 = PySide6.QtGui.QIcon()
+        icon50.addFile(u":/fossils/assets/images/fossils/fundamental_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.fundamental_fossil.setIcon(icon50)
         self.fundamental_fossil.setIconSize(QSize(30, 30))
         self.fundamental_fossil.setCheckable(True)
 
@@ -2188,7 +2105,7 @@ class Ui_MainWindow(object):
         self.deft_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.deft_fossil.sizePolicy().hasHeightForWidth())
         self.deft_fossil.setSizePolicy(sizePolicy1)
-        self.deft_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.deft_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.deft_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2226,9 +2143,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon50 = QIcon()
-        icon50.addFile(u":/fossils/assets/images/fossils/deft_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.deft_fossil.setIcon(icon50)
+        icon51 = PySide6.QtGui.QIcon()
+        icon51.addFile(u":/fossils/assets/images/fossils/deft_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.deft_fossil.setIcon(icon51)
         self.deft_fossil.setIconSize(QSize(30, 30))
         self.deft_fossil.setCheckable(True)
 
@@ -2240,7 +2157,7 @@ class Ui_MainWindow(object):
         self.gilded_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.gilded_fossil.sizePolicy().hasHeightForWidth())
         self.gilded_fossil.setSizePolicy(sizePolicy1)
-        self.gilded_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.gilded_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.gilded_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2278,9 +2195,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon51 = QIcon()
-        icon51.addFile(u":/fossils/assets/images/fossils/gilded_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.gilded_fossil.setIcon(icon51)
+        icon52 = PySide6.QtGui.QIcon()
+        icon52.addFile(u":/fossils/assets/images/fossils/gilded_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.gilded_fossil.setIcon(icon52)
         self.gilded_fossil.setIconSize(QSize(30, 30))
         self.gilded_fossil.setCheckable(True)
 
@@ -2292,7 +2209,7 @@ class Ui_MainWindow(object):
         self.perfect_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.perfect_fossil.sizePolicy().hasHeightForWidth())
         self.perfect_fossil.setSizePolicy(sizePolicy1)
-        self.perfect_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.perfect_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.perfect_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2330,9 +2247,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon52 = QIcon()
-        icon52.addFile(u":/fossils/assets/images/fossils/perfect_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.perfect_fossil.setIcon(icon52)
+        icon53 = PySide6.QtGui.QIcon()
+        icon53.addFile(u":/fossils/assets/images/fossils/perfect_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.perfect_fossil.setIcon(icon53)
         self.perfect_fossil.setIconSize(QSize(30, 30))
         self.perfect_fossil.setCheckable(True)
 
@@ -2344,7 +2261,7 @@ class Ui_MainWindow(object):
         self.tangled_fossil.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.tangled_fossil.sizePolicy().hasHeightForWidth())
         self.tangled_fossil.setSizePolicy(sizePolicy1)
-        self.tangled_fossil.setCursor(QCursor(Qt.PointingHandCursor))
+        self.tangled_fossil.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.tangled_fossil.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2382,9 +2299,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon53 = QIcon()
-        icon53.addFile(u":/fossils/assets/images/fossils/tangled_fossil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.tangled_fossil.setIcon(icon53)
+        icon54 = PySide6.QtGui.QIcon()
+        icon54.addFile(u":/fossils/assets/images/fossils/tangled_fossil.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.tangled_fossil.setIcon(icon54)
         self.tangled_fossil.setIconSize(QSize(30, 30))
         self.tangled_fossil.setCheckable(True)
 
@@ -2399,8 +2316,8 @@ class Ui_MainWindow(object):
         self.crafting_method_pages.addWidget(self.fossil_crafts)
         self.harvest_crafts = QWidget()
         self.harvest_crafts.setObjectName(u"harvest_crafts")
-        sizePolicy3.setHeightForWidth(self.harvest_crafts.sizePolicy().hasHeightForWidth())
-        self.harvest_crafts.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.harvest_crafts.sizePolicy().hasHeightForWidth())
+        self.harvest_crafts.setSizePolicy(sizePolicy2)
         self.horizontalLayout_7 = QHBoxLayout(self.harvest_crafts)
         self.horizontalLayout_7.setSpacing(0)
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -2419,11 +2336,11 @@ class Ui_MainWindow(object):
         self.harvest_btn_row1 = QWidget(self.harvest_btns_container)
         self.harvest_btn_row1.setObjectName(u"harvest_btn_row1")
         self.harvest_btn_row1.setEnabled(True)
-        sizePolicy6 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Maximum)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.harvest_btn_row1.sizePolicy().hasHeightForWidth())
-        self.harvest_btn_row1.setSizePolicy(sizePolicy6)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Maximum)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.harvest_btn_row1.sizePolicy().hasHeightForWidth())
+        self.harvest_btn_row1.setSizePolicy(sizePolicy5)
         self.harvest_btn_row1.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2525,7 +2442,7 @@ class Ui_MainWindow(object):
         self.harvest_add_remove_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_add_remove_btn.sizePolicy().hasHeightForWidth())
         self.harvest_add_remove_btn.setSizePolicy(sizePolicy1)
-        self.harvest_add_remove_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_add_remove_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_add_remove_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2562,9 +2479,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon54 = QIcon()
-        icon54.addFile(u":/harvest/assets/images/harvest/harvest_augment.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.harvest_add_remove_btn.setIcon(icon54)
+        icon55 = PySide6.QtGui.QIcon()
+        icon55.addFile(u":/harvest/assets/images/harvest/harvest_augment.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.harvest_add_remove_btn.setIcon(icon55)
         self.harvest_add_remove_btn.setIconSize(QSize(30, 30))
         self.harvest_add_remove_btn.setCheckable(True)
         self.harvest_add_remove_btn.setChecked(False)
@@ -2578,7 +2495,7 @@ class Ui_MainWindow(object):
         self.harvest_reroll_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_reroll_btn.sizePolicy().hasHeightForWidth())
         self.harvest_reroll_btn.setSizePolicy(sizePolicy1)
-        self.harvest_reroll_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_reroll_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_reroll_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2615,9 +2532,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon55 = QIcon()
-        icon55.addFile(u":/harvest/assets/images/harvest/harvest_reroll.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.harvest_reroll_btn.setIcon(icon55)
+        icon56 = PySide6.QtGui.QIcon()
+        icon56.addFile(u":/harvest/assets/images/harvest/harvest_reroll.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.harvest_reroll_btn.setIcon(icon56)
         self.harvest_reroll_btn.setIconSize(QSize(30, 30))
         self.harvest_reroll_btn.setCheckable(True)
         self.harvest_reroll_btn.setAutoExclusive(True)
@@ -2630,7 +2547,7 @@ class Ui_MainWindow(object):
         self.harvest_resists_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_resists_btn.sizePolicy().hasHeightForWidth())
         self.harvest_resists_btn.setSizePolicy(sizePolicy1)
-        self.harvest_resists_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_resists_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_resists_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2667,7 +2584,7 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        self.harvest_resists_btn.setIcon(icon24)
+        self.harvest_resists_btn.setIcon(icon25)
         self.harvest_resists_btn.setIconSize(QSize(30, 30))
         self.harvest_resists_btn.setCheckable(True)
         self.harvest_resists_btn.setAutoExclusive(True)
@@ -2680,7 +2597,7 @@ class Ui_MainWindow(object):
         self.harvest_high_tier_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_high_tier_btn.sizePolicy().hasHeightForWidth())
         self.harvest_high_tier_btn.setSizePolicy(sizePolicy1)
-        self.harvest_high_tier_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_high_tier_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_high_tier_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2717,7 +2634,7 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        self.harvest_high_tier_btn.setIcon(icon24)
+        self.harvest_high_tier_btn.setIcon(icon25)
         self.harvest_high_tier_btn.setIconSize(QSize(30, 30))
         self.harvest_high_tier_btn.setCheckable(True)
         self.harvest_high_tier_btn.setAutoExclusive(True)
@@ -2730,7 +2647,7 @@ class Ui_MainWindow(object):
         self.harvest_other_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_other_btn.sizePolicy().hasHeightForWidth())
         self.harvest_other_btn.setSizePolicy(sizePolicy1)
-        self.harvest_other_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_other_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_other_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -2767,7 +2684,7 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        self.harvest_other_btn.setIcon(icon24)
+        self.harvest_other_btn.setIcon(icon25)
         self.harvest_other_btn.setIconSize(QSize(30, 30))
         self.harvest_other_btn.setCheckable(True)
         self.harvest_other_btn.setAutoExclusive(True)
@@ -2779,11 +2696,11 @@ class Ui_MainWindow(object):
 
         self.harvest_methods_container = QFrame(self.harvest_btns_container)
         self.harvest_methods_container.setObjectName(u"harvest_methods_container")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
-        sizePolicy7.setHeightForWidth(self.harvest_methods_container.sizePolicy().hasHeightForWidth())
-        self.harvest_methods_container.setSizePolicy(sizePolicy7)
+        sizePolicy6 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.harvest_methods_container.sizePolicy().hasHeightForWidth())
+        self.harvest_methods_container.setSizePolicy(sizePolicy6)
         self.harvest_methods_container.setFrameShape(QFrame.StyledPanel)
         self.harvest_methods_container.setFrameShadow(QFrame.Raised)
         self.verticalLayout_40 = QVBoxLayout(self.harvest_methods_container)
@@ -2793,12 +2710,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_40.setContentsMargins(0, 0, 0, 0)
         self.harvest_method_stack = QStackedWidget(self.harvest_methods_container)
         self.harvest_method_stack.setObjectName(u"harvest_method_stack")
-        sizePolicy7.setHeightForWidth(self.harvest_method_stack.sizePolicy().hasHeightForWidth())
-        self.harvest_method_stack.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.harvest_method_stack.sizePolicy().hasHeightForWidth())
+        self.harvest_method_stack.setSizePolicy(sizePolicy6)
         self.harvest_add_remove_reforge_methods = QWidget()
         self.harvest_add_remove_reforge_methods.setObjectName(u"harvest_add_remove_reforge_methods")
-        sizePolicy7.setHeightForWidth(self.harvest_add_remove_reforge_methods.sizePolicy().hasHeightForWidth())
-        self.harvest_add_remove_reforge_methods.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.harvest_add_remove_reforge_methods.sizePolicy().hasHeightForWidth())
+        self.harvest_add_remove_reforge_methods.setSizePolicy(sizePolicy6)
         self.verticalLayout_41 = QVBoxLayout(self.harvest_add_remove_reforge_methods)
         self.verticalLayout_41.setSpacing(0)
         self.verticalLayout_41.setContentsMargins(0, 0, 0, 0)
@@ -2807,8 +2724,8 @@ class Ui_MainWindow(object):
         self.harvest_add_remove_reforge_btn_container = QWidget(self.harvest_add_remove_reforge_methods)
         self.harvest_add_remove_reforge_btn_container.setObjectName(u"harvest_add_remove_reforge_btn_container")
         self.harvest_add_remove_reforge_btn_container.setEnabled(True)
-        sizePolicy4.setHeightForWidth(self.harvest_add_remove_reforge_btn_container.sizePolicy().hasHeightForWidth())
-        self.harvest_add_remove_reforge_btn_container.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.harvest_add_remove_reforge_btn_container.sizePolicy().hasHeightForWidth())
+        self.harvest_add_remove_reforge_btn_container.setSizePolicy(sizePolicy3)
         self.horizontalLayout_6 = QHBoxLayout(self.harvest_add_remove_reforge_btn_container)
         self.horizontalLayout_6.setSpacing(0)
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
@@ -2827,7 +2744,7 @@ class Ui_MainWindow(object):
         self.attack_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.attack_btn.sizePolicy().hasHeightForWidth())
         self.attack_btn.setSizePolicy(sizePolicy1)
-        self.attack_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.attack_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.attack_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #ff9000;\n"
 "}\n"
@@ -2850,7 +2767,7 @@ class Ui_MainWindow(object):
         self.caster_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.caster_btn.sizePolicy().hasHeightForWidth())
         self.caster_btn.setSizePolicy(sizePolicy1)
-        self.caster_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.caster_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.caster_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #d800ff;\n"
 "}\n"
@@ -2872,7 +2789,7 @@ class Ui_MainWindow(object):
         self.chaos_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.chaos_btn.sizePolicy().hasHeightForWidth())
         self.chaos_btn.setSizePolicy(sizePolicy1)
-        self.chaos_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.chaos_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.chaos_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #a944ff;\n"
 "}\n"
@@ -2894,7 +2811,7 @@ class Ui_MainWindow(object):
         self.cold_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.cold_btn.sizePolicy().hasHeightForWidth())
         self.cold_btn.setSizePolicy(sizePolicy1)
-        self.cold_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.cold_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.cold_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #5599FF;\n"
 "}\n"
@@ -2916,7 +2833,7 @@ class Ui_MainWindow(object):
         self.critical_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.critical_btn.sizePolicy().hasHeightForWidth())
         self.critical_btn.setSizePolicy(sizePolicy1)
-        self.critical_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.critical_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.critical_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #a8ff00;\n"
 "}\n"
@@ -2938,7 +2855,7 @@ class Ui_MainWindow(object):
         self.defences_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.defences_btn.sizePolicy().hasHeightForWidth())
         self.defences_btn.setSizePolicy(sizePolicy1)
-        self.defences_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.defences_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.defences_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #DDD;\n"
 "}\n"
@@ -2960,7 +2877,7 @@ class Ui_MainWindow(object):
         self.fire_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.fire_btn.sizePolicy().hasHeightForWidth())
         self.fire_btn.setSizePolicy(sizePolicy1)
-        self.fire_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.fire_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.fire_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #FF0000;\n"
 "}\n"
@@ -2982,7 +2899,7 @@ class Ui_MainWindow(object):
         self.life_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.life_btn.sizePolicy().hasHeightForWidth())
         self.life_btn.setSizePolicy(sizePolicy1)
-        self.life_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.life_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.life_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #ff00cc;\n"
 "}\n"
@@ -3004,7 +2921,7 @@ class Ui_MainWindow(object):
         self.lightning_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.lightning_btn.sizePolicy().hasHeightForWidth())
         self.lightning_btn.setSizePolicy(sizePolicy1)
-        self.lightning_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.lightning_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.lightning_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #FFF000;\n"
 "}\n"
@@ -3026,7 +2943,7 @@ class Ui_MainWindow(object):
         self.physical_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.physical_btn.sizePolicy().hasHeightForWidth())
         self.physical_btn.setSizePolicy(sizePolicy1)
-        self.physical_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.physical_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.physical_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #e1b900;\n"
 "}\n"
@@ -3048,7 +2965,7 @@ class Ui_MainWindow(object):
         self.speed_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.speed_btn.sizePolicy().hasHeightForWidth())
         self.speed_btn.setSizePolicy(sizePolicy1)
-        self.speed_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.speed_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.speed_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #00ffc0;\n"
 "}\n"
@@ -3070,7 +2987,7 @@ class Ui_MainWindow(object):
         self.influence_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.influence_btn.sizePolicy().hasHeightForWidth())
         self.influence_btn.setSizePolicy(sizePolicy1)
-        self.influence_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.influence_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.influence_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3120,8 +3037,8 @@ class Ui_MainWindow(object):
         self.harvest_method_stack.addWidget(self.harvest_add_remove_reforge_methods)
         self.harvest_resists_methods = QWidget()
         self.harvest_resists_methods.setObjectName(u"harvest_resists_methods")
-        sizePolicy7.setHeightForWidth(self.harvest_resists_methods.sizePolicy().hasHeightForWidth())
-        self.harvest_resists_methods.setSizePolicy(sizePolicy7)
+        sizePolicy6.setHeightForWidth(self.harvest_resists_methods.sizePolicy().hasHeightForWidth())
+        self.harvest_resists_methods.setSizePolicy(sizePolicy6)
         self.verticalLayout_42 = QVBoxLayout(self.harvest_resists_methods)
         self.verticalLayout_42.setSpacing(0)
         self.verticalLayout_42.setContentsMargins(0, 0, 0, 0)
@@ -3150,7 +3067,7 @@ class Ui_MainWindow(object):
         self.harvest_fire_to_cold_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_fire_to_cold_btn.sizePolicy().hasHeightForWidth())
         self.harvest_fire_to_cold_btn.setSizePolicy(sizePolicy1)
-        self.harvest_fire_to_cold_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_fire_to_cold_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_fire_to_cold_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #ff9000;\n"
 "}\n"
@@ -3173,7 +3090,7 @@ class Ui_MainWindow(object):
         self.harvest_fire_to_lightning_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_fire_to_lightning_btn.sizePolicy().hasHeightForWidth())
         self.harvest_fire_to_lightning_btn.setSizePolicy(sizePolicy1)
-        self.harvest_fire_to_lightning_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_fire_to_lightning_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_fire_to_lightning_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #d800ff;\n"
 "}\n"
@@ -3195,7 +3112,7 @@ class Ui_MainWindow(object):
         self.harvest_cold_to_fire_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_cold_to_fire_btn.sizePolicy().hasHeightForWidth())
         self.harvest_cold_to_fire_btn.setSizePolicy(sizePolicy1)
-        self.harvest_cold_to_fire_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_cold_to_fire_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_cold_to_fire_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #a944ff;\n"
 "}\n"
@@ -3217,7 +3134,7 @@ class Ui_MainWindow(object):
         self.harvest_cold_to_lightning_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_cold_to_lightning_btn.sizePolicy().hasHeightForWidth())
         self.harvest_cold_to_lightning_btn.setSizePolicy(sizePolicy1)
-        self.harvest_cold_to_lightning_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_cold_to_lightning_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_cold_to_lightning_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #5599FF;\n"
 "}\n"
@@ -3239,7 +3156,7 @@ class Ui_MainWindow(object):
         self.harvest_lightning_to_fire_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_lightning_to_fire_btn.sizePolicy().hasHeightForWidth())
         self.harvest_lightning_to_fire_btn.setSizePolicy(sizePolicy1)
-        self.harvest_lightning_to_fire_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_lightning_to_fire_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_lightning_to_fire_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #a8ff00;\n"
 "}\n"
@@ -3261,7 +3178,7 @@ class Ui_MainWindow(object):
         self.harvest_lightning_to_cold_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_lightning_to_cold_btn.sizePolicy().hasHeightForWidth())
         self.harvest_lightning_to_cold_btn.setSizePolicy(sizePolicy1)
-        self.harvest_lightning_to_cold_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_lightning_to_cold_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_lightning_to_cold_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #DDD;\n"
 "}\n"
@@ -3312,7 +3229,7 @@ class Ui_MainWindow(object):
         self.harvest_normal_to_magic_one_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_normal_to_magic_one_btn.sizePolicy().hasHeightForWidth())
         self.harvest_normal_to_magic_one_btn.setSizePolicy(sizePolicy1)
-        self.harvest_normal_to_magic_one_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_normal_to_magic_one_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_normal_to_magic_one_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #ff9000;\n"
 "}\n"
@@ -3335,7 +3252,7 @@ class Ui_MainWindow(object):
         self.harvest_normal_to_magic_two_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_normal_to_magic_two_btn.sizePolicy().hasHeightForWidth())
         self.harvest_normal_to_magic_two_btn.setSizePolicy(sizePolicy1)
-        self.harvest_normal_to_magic_two_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_normal_to_magic_two_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_normal_to_magic_two_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #d800ff;\n"
 "}\n"
@@ -3357,7 +3274,7 @@ class Ui_MainWindow(object):
         self.harvest_magic_to_rare_two_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_magic_to_rare_two_btn.sizePolicy().hasHeightForWidth())
         self.harvest_magic_to_rare_two_btn.setSizePolicy(sizePolicy1)
-        self.harvest_magic_to_rare_two_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_magic_to_rare_two_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_magic_to_rare_two_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #a944ff;\n"
 "}\n"
@@ -3379,7 +3296,7 @@ class Ui_MainWindow(object):
         self.harvest_magic_to_rare_three_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_magic_to_rare_three_btn.sizePolicy().hasHeightForWidth())
         self.harvest_magic_to_rare_three_btn.setSizePolicy(sizePolicy1)
-        self.harvest_magic_to_rare_three_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_magic_to_rare_three_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_magic_to_rare_three_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #5599FF;\n"
 "}\n"
@@ -3401,7 +3318,7 @@ class Ui_MainWindow(object):
         self.harvest_magic_to_rare_four_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_magic_to_rare_four_btn.sizePolicy().hasHeightForWidth())
         self.harvest_magic_to_rare_four_btn.setSizePolicy(sizePolicy1)
-        self.harvest_magic_to_rare_four_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_magic_to_rare_four_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_magic_to_rare_four_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #a8ff00;\n"
 "}\n"
@@ -3452,7 +3369,7 @@ class Ui_MainWindow(object):
         self.harvest_reforge_more_likely_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_reforge_more_likely_btn.sizePolicy().hasHeightForWidth())
         self.harvest_reforge_more_likely_btn.setSizePolicy(sizePolicy1)
-        self.harvest_reforge_more_likely_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_reforge_more_likely_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_reforge_more_likely_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #ff9000;\n"
 "}\n"
@@ -3475,7 +3392,7 @@ class Ui_MainWindow(object):
         self.harvest_reforge_less_likely_btn.setEnabled(True)
         sizePolicy1.setHeightForWidth(self.harvest_reforge_less_likely_btn.sizePolicy().hasHeightForWidth())
         self.harvest_reforge_less_likely_btn.setSizePolicy(sizePolicy1)
-        self.harvest_reforge_less_likely_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.harvest_reforge_less_likely_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.harvest_reforge_less_likely_btn.setStyleSheet(u"QPushButton {\n"
 "	color: #d800ff;\n"
 "}\n"
@@ -3508,8 +3425,8 @@ class Ui_MainWindow(object):
         self.crafting_method_pages.addWidget(self.harvest_crafts)
         self.essence_crafts = QWidget()
         self.essence_crafts.setObjectName(u"essence_crafts")
-        sizePolicy3.setHeightForWidth(self.essence_crafts.sizePolicy().hasHeightForWidth())
-        self.essence_crafts.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.essence_crafts.sizePolicy().hasHeightForWidth())
+        self.essence_crafts.setSizePolicy(sizePolicy2)
         self.essence_crafts.setStyleSheet(u"")
         self.gridLayout = QGridLayout(self.essence_crafts)
         self.gridLayout.setSpacing(0)
@@ -3542,9 +3459,9 @@ class Ui_MainWindow(object):
         self.essence_tier_btns_group.setObjectName(u"essence_tier_btns_group")
         self.essence_tier_btns_group.addButton(self.t6_btn)
         self.t6_btn.setObjectName(u"t6_btn")
-        sizePolicy6.setHeightForWidth(self.t6_btn.sizePolicy().hasHeightForWidth())
-        self.t6_btn.setSizePolicy(sizePolicy6)
-        self.t6_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy5.setHeightForWidth(self.t6_btn.sizePolicy().hasHeightForWidth())
+        self.t6_btn.setSizePolicy(sizePolicy5)
+        self.t6_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.t6_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3590,7 +3507,7 @@ class Ui_MainWindow(object):
         self.t5_btn = QPushButton(self.essence_tier_row)
         self.essence_tier_btns_group.addButton(self.t5_btn)
         self.t5_btn.setObjectName(u"t5_btn")
-        self.t5_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.t5_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.t5_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3636,7 +3553,7 @@ class Ui_MainWindow(object):
         self.t4_btn = QPushButton(self.essence_tier_row)
         self.essence_tier_btns_group.addButton(self.t4_btn)
         self.t4_btn.setObjectName(u"t4_btn")
-        self.t4_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.t4_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.t4_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3682,7 +3599,7 @@ class Ui_MainWindow(object):
         self.t3_btn = QPushButton(self.essence_tier_row)
         self.essence_tier_btns_group.addButton(self.t3_btn)
         self.t3_btn.setObjectName(u"t3_btn")
-        self.t3_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.t3_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.t3_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3728,7 +3645,7 @@ class Ui_MainWindow(object):
         self.t2_btn = QPushButton(self.essence_tier_row)
         self.essence_tier_btns_group.addButton(self.t2_btn)
         self.t2_btn.setObjectName(u"t2_btn")
-        self.t2_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.t2_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.t2_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3774,7 +3691,7 @@ class Ui_MainWindow(object):
         self.t1_btn = QPushButton(self.essence_tier_row)
         self.essence_tier_btns_group.addButton(self.t1_btn)
         self.t1_btn.setObjectName(u"t1_btn")
-        self.t1_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.t1_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.t1_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3822,8 +3739,8 @@ class Ui_MainWindow(object):
 
         self.essences_row1 = QWidget(self.essence_crafts)
         self.essences_row1.setObjectName(u"essences_row1")
-        sizePolicy4.setHeightForWidth(self.essences_row1.sizePolicy().hasHeightForWidth())
-        self.essences_row1.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.essences_row1.sizePolicy().hasHeightForWidth())
+        self.essences_row1.setSizePolicy(sizePolicy3)
         self.essences_row1.setStyleSheet(u"margin: 0px;\n"
 "padding: 0px;\n"
 "border-image: none;")
@@ -3835,13 +3752,13 @@ class Ui_MainWindow(object):
         self.essences_hide_btn = QPushButton(self.essences_row1)
         self.essences_hide_btn.setObjectName(u"essences_hide_btn")
         self.essences_hide_btn.setEnabled(True)
-        sizePolicy8 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Minimum)
-        sizePolicy8.setHorizontalStretch(0)
-        sizePolicy8.setVerticalStretch(0)
-        sizePolicy8.setHeightForWidth(self.essences_hide_btn.sizePolicy().hasHeightForWidth())
-        self.essences_hide_btn.setSizePolicy(sizePolicy8)
+        sizePolicy7 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Minimum)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.essences_hide_btn.sizePolicy().hasHeightForWidth())
+        self.essences_hide_btn.setSizePolicy(sizePolicy7)
         self.essences_hide_btn.setFont(font2)
-        self.essences_hide_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essences_hide_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essences_hide_btn.setContextMenuPolicy(Qt.NoContextMenu)
         self.essences_hide_btn.setStyleSheet(u"QPushButton {\n"
 "border: 1px solid #90701b;\n"
@@ -3877,13 +3794,14 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
+        self.essences_hide_btn.setCheckable(False)
 
         self.horizontalLayout_10.addWidget(self.essences_hide_btn)
 
         self.essences_label = QLabel(self.essences_row1)
         self.essences_label.setObjectName(u"essences_label")
-        sizePolicy3.setHeightForWidth(self.essences_label.sizePolicy().hasHeightForWidth())
-        self.essences_label.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.essences_label.sizePolicy().hasHeightForWidth())
+        self.essences_label.setSizePolicy(sizePolicy2)
         self.essences_label.setMinimumSize(QSize(0, 0))
 
         self.horizontalLayout_10.addWidget(self.essences_label)
@@ -3891,7 +3809,7 @@ class Ui_MainWindow(object):
         self.essence_anger_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_anger_btn)
         self.essence_anger_btn.setObjectName(u"essence_anger_btn")
-        self.essence_anger_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_anger_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_anger_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3929,9 +3847,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon56 = QIcon()
-        icon56.addFile(u":/essences/assets/images/essences/essence_Anger.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_anger_btn.setIcon(icon56)
+        icon57 = PySide6.QtGui.QIcon()
+        icon57.addFile(u":/essences/assets/images/essences/essence_Anger.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_anger_btn.setIcon(icon57)
         self.essence_anger_btn.setIconSize(QSize(30, 30))
         self.essence_anger_btn.setCheckable(True)
         self.essence_anger_btn.setAutoExclusive(True)
@@ -3941,7 +3859,7 @@ class Ui_MainWindow(object):
         self.essence_anguish_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_anguish_btn)
         self.essence_anguish_btn.setObjectName(u"essence_anguish_btn")
-        self.essence_anguish_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_anguish_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_anguish_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -3979,9 +3897,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon57 = QIcon()
-        icon57.addFile(u":/essences/assets/images/essences/essence_Anguish.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_anguish_btn.setIcon(icon57)
+        icon58 = PySide6.QtGui.QIcon()
+        icon58.addFile(u":/essences/assets/images/essences/essence_Anguish.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_anguish_btn.setIcon(icon58)
         self.essence_anguish_btn.setIconSize(QSize(30, 30))
         self.essence_anguish_btn.setCheckable(True)
         self.essence_anguish_btn.setAutoExclusive(True)
@@ -3991,7 +3909,7 @@ class Ui_MainWindow(object):
         self.essence_contempt_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_contempt_btn)
         self.essence_contempt_btn.setObjectName(u"essence_contempt_btn")
-        self.essence_contempt_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_contempt_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_contempt_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4029,9 +3947,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon58 = QIcon()
-        icon58.addFile(u":/essences/assets/images/essences/essence_Contempt.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_contempt_btn.setIcon(icon58)
+        icon59 = PySide6.QtGui.QIcon()
+        icon59.addFile(u":/essences/assets/images/essences/essence_Contempt.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_contempt_btn.setIcon(icon59)
         self.essence_contempt_btn.setIconSize(QSize(30, 30))
         self.essence_contempt_btn.setCheckable(True)
         self.essence_contempt_btn.setAutoExclusive(True)
@@ -4041,7 +3959,7 @@ class Ui_MainWindow(object):
         self.essence_delirium_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_delirium_btn)
         self.essence_delirium_btn.setObjectName(u"essence_delirium_btn")
-        self.essence_delirium_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_delirium_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_delirium_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4079,9 +3997,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon59 = QIcon()
-        icon59.addFile(u":/essences/assets/images/essences/essence_Delirium.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_delirium_btn.setIcon(icon59)
+        icon60 = PySide6.QtGui.QIcon()
+        icon60.addFile(u":/essences/assets/images/essences/essence_Delirium.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_delirium_btn.setIcon(icon60)
         self.essence_delirium_btn.setIconSize(QSize(30, 30))
         self.essence_delirium_btn.setCheckable(True)
         self.essence_delirium_btn.setAutoExclusive(True)
@@ -4091,7 +4009,7 @@ class Ui_MainWindow(object):
         self.essence_doubt_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_doubt_btn)
         self.essence_doubt_btn.setObjectName(u"essence_doubt_btn")
-        self.essence_doubt_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_doubt_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_doubt_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4129,9 +4047,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon60 = QIcon()
-        icon60.addFile(u":/essences/assets/images/essences/essence_Doubt.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_doubt_btn.setIcon(icon60)
+        icon61 = PySide6.QtGui.QIcon()
+        icon61.addFile(u":/essences/assets/images/essences/essence_Doubt.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_doubt_btn.setIcon(icon61)
         self.essence_doubt_btn.setIconSize(QSize(30, 30))
         self.essence_doubt_btn.setCheckable(True)
         self.essence_doubt_btn.setAutoExclusive(True)
@@ -4141,7 +4059,7 @@ class Ui_MainWindow(object):
         self.essence_dread_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_dread_btn)
         self.essence_dread_btn.setObjectName(u"essence_dread_btn")
-        self.essence_dread_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_dread_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_dread_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4179,9 +4097,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon61 = QIcon()
-        icon61.addFile(u":/essences/assets/images/essences/essence_Dread.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_dread_btn.setIcon(icon61)
+        icon62 = PySide6.QtGui.QIcon()
+        icon62.addFile(u":/essences/assets/images/essences/essence_Dread.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_dread_btn.setIcon(icon62)
         self.essence_dread_btn.setIconSize(QSize(30, 30))
         self.essence_dread_btn.setCheckable(True)
         self.essence_dread_btn.setAutoExclusive(True)
@@ -4191,7 +4109,7 @@ class Ui_MainWindow(object):
         self.essence_envy_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_envy_btn)
         self.essence_envy_btn.setObjectName(u"essence_envy_btn")
-        self.essence_envy_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_envy_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_envy_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4229,9 +4147,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon62 = QIcon()
-        icon62.addFile(u":/essences/assets/images/essences/essence_Envy.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_envy_btn.setIcon(icon62)
+        icon63 = PySide6.QtGui.QIcon()
+        icon63.addFile(u":/essences/assets/images/essences/essence_Envy.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_envy_btn.setIcon(icon63)
         self.essence_envy_btn.setIconSize(QSize(30, 30))
         self.essence_envy_btn.setCheckable(True)
         self.essence_envy_btn.setAutoExclusive(True)
@@ -4241,7 +4159,7 @@ class Ui_MainWindow(object):
         self.essence_fear_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_fear_btn)
         self.essence_fear_btn.setObjectName(u"essence_fear_btn")
-        self.essence_fear_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_fear_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_fear_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4279,9 +4197,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon63 = QIcon()
-        icon63.addFile(u":/essences/assets/images/essences/essence_Fear.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_fear_btn.setIcon(icon63)
+        icon64 = PySide6.QtGui.QIcon()
+        icon64.addFile(u":/essences/assets/images/essences/essence_Fear.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_fear_btn.setIcon(icon64)
         self.essence_fear_btn.setIconSize(QSize(30, 30))
         self.essence_fear_btn.setCheckable(True)
         self.essence_fear_btn.setAutoExclusive(True)
@@ -4291,7 +4209,7 @@ class Ui_MainWindow(object):
         self.essence_greed_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_greed_btn)
         self.essence_greed_btn.setObjectName(u"essence_greed_btn")
-        self.essence_greed_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_greed_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_greed_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4329,9 +4247,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon64 = QIcon()
-        icon64.addFile(u":/essences/assets/images/essences/essence_Greed.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_greed_btn.setIcon(icon64)
+        icon65 = PySide6.QtGui.QIcon()
+        icon65.addFile(u":/essences/assets/images/essences/essence_Greed.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_greed_btn.setIcon(icon65)
         self.essence_greed_btn.setIconSize(QSize(30, 30))
         self.essence_greed_btn.setCheckable(True)
         self.essence_greed_btn.setAutoExclusive(True)
@@ -4341,7 +4259,7 @@ class Ui_MainWindow(object):
         self.essence_hatred_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_hatred_btn)
         self.essence_hatred_btn.setObjectName(u"essence_hatred_btn")
-        self.essence_hatred_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_hatred_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_hatred_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4379,9 +4297,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon65 = QIcon()
-        icon65.addFile(u":/essences/assets/images/essences/essence_Hatred.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_hatred_btn.setIcon(icon65)
+        icon66 = PySide6.QtGui.QIcon()
+        icon66.addFile(u":/essences/assets/images/essences/essence_Hatred.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_hatred_btn.setIcon(icon66)
         self.essence_hatred_btn.setIconSize(QSize(30, 30))
         self.essence_hatred_btn.setCheckable(True)
         self.essence_hatred_btn.setAutoExclusive(True)
@@ -4391,7 +4309,7 @@ class Ui_MainWindow(object):
         self.essence_horror_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_horror_btn)
         self.essence_horror_btn.setObjectName(u"essence_horror_btn")
-        self.essence_horror_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_horror_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_horror_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4429,9 +4347,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon66 = QIcon()
-        icon66.addFile(u":/essences/assets/images/essences/essence_Horror.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_horror_btn.setIcon(icon66)
+        icon67 = PySide6.QtGui.QIcon()
+        icon67.addFile(u":/essences/assets/images/essences/essence_Horror.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_horror_btn.setIcon(icon67)
         self.essence_horror_btn.setIconSize(QSize(30, 30))
         self.essence_horror_btn.setCheckable(True)
         self.essence_horror_btn.setAutoExclusive(True)
@@ -4441,7 +4359,7 @@ class Ui_MainWindow(object):
         self.essence_hysteria_btn = CustomCursorButton(self.essences_row1)
         self.custom_cursor_btns_group.addButton(self.essence_hysteria_btn)
         self.essence_hysteria_btn.setObjectName(u"essence_hysteria_btn")
-        self.essence_hysteria_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_hysteria_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_hysteria_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4479,9 +4397,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon67 = QIcon()
-        icon67.addFile(u":/essences/assets/images/essences/essence_Hysteria.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_hysteria_btn.setIcon(icon67)
+        icon68 = PySide6.QtGui.QIcon()
+        icon68.addFile(u":/essences/assets/images/essences/essence_Hysteria.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_hysteria_btn.setIcon(icon68)
         self.essence_hysteria_btn.setIconSize(QSize(30, 30))
         self.essence_hysteria_btn.setCheckable(True)
         self.essence_hysteria_btn.setChecked(False)
@@ -4507,7 +4425,7 @@ class Ui_MainWindow(object):
         self.essence_insanity_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_insanity_btn)
         self.essence_insanity_btn.setObjectName(u"essence_insanity_btn")
-        self.essence_insanity_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_insanity_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_insanity_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4545,9 +4463,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon68 = QIcon()
-        icon68.addFile(u":/essences/assets/images/essences/essence_Insanity.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_insanity_btn.setIcon(icon68)
+        icon69 = PySide6.QtGui.QIcon()
+        icon69.addFile(u":/essences/assets/images/essences/essence_Insanity.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_insanity_btn.setIcon(icon69)
         self.essence_insanity_btn.setIconSize(QSize(30, 30))
         self.essence_insanity_btn.setCheckable(True)
         self.essence_insanity_btn.setAutoExclusive(True)
@@ -4557,7 +4475,7 @@ class Ui_MainWindow(object):
         self.essence_loathing_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_loathing_btn)
         self.essence_loathing_btn.setObjectName(u"essence_loathing_btn")
-        self.essence_loathing_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_loathing_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_loathing_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4595,9 +4513,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon69 = QIcon()
-        icon69.addFile(u":/essences/assets/images/essences/essence_Loathing.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_loathing_btn.setIcon(icon69)
+        icon70 = PySide6.QtGui.QIcon()
+        icon70.addFile(u":/essences/assets/images/essences/essence_Loathing.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_loathing_btn.setIcon(icon70)
         self.essence_loathing_btn.setIconSize(QSize(30, 30))
         self.essence_loathing_btn.setCheckable(True)
         self.essence_loathing_btn.setAutoExclusive(True)
@@ -4607,7 +4525,7 @@ class Ui_MainWindow(object):
         self.essence_misery_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_misery_btn)
         self.essence_misery_btn.setObjectName(u"essence_misery_btn")
-        self.essence_misery_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_misery_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_misery_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4645,9 +4563,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon70 = QIcon()
-        icon70.addFile(u":/essences/assets/images/essences/essence_Misery.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_misery_btn.setIcon(icon70)
+        icon71 = PySide6.QtGui.QIcon()
+        icon71.addFile(u":/essences/assets/images/essences/essence_Misery.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_misery_btn.setIcon(icon71)
         self.essence_misery_btn.setIconSize(QSize(30, 30))
         self.essence_misery_btn.setCheckable(True)
         self.essence_misery_btn.setAutoExclusive(True)
@@ -4657,7 +4575,7 @@ class Ui_MainWindow(object):
         self.essence_rage_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_rage_btn)
         self.essence_rage_btn.setObjectName(u"essence_rage_btn")
-        self.essence_rage_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_rage_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_rage_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4695,9 +4613,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon71 = QIcon()
-        icon71.addFile(u":/essences/assets/images/essences/essence_Rage.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_rage_btn.setIcon(icon71)
+        icon72 = PySide6.QtGui.QIcon()
+        icon72.addFile(u":/essences/assets/images/essences/essence_Rage.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_rage_btn.setIcon(icon72)
         self.essence_rage_btn.setIconSize(QSize(30, 30))
         self.essence_rage_btn.setCheckable(True)
         self.essence_rage_btn.setAutoExclusive(True)
@@ -4707,7 +4625,7 @@ class Ui_MainWindow(object):
         self.essence_scorn_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_scorn_btn)
         self.essence_scorn_btn.setObjectName(u"essence_scorn_btn")
-        self.essence_scorn_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_scorn_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_scorn_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4745,9 +4663,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon72 = QIcon()
-        icon72.addFile(u":/essences/assets/images/essences/essence_Scorn.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_scorn_btn.setIcon(icon72)
+        icon73 = PySide6.QtGui.QIcon()
+        icon73.addFile(u":/essences/assets/images/essences/essence_Scorn.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_scorn_btn.setIcon(icon73)
         self.essence_scorn_btn.setIconSize(QSize(30, 30))
         self.essence_scorn_btn.setCheckable(True)
         self.essence_scorn_btn.setAutoExclusive(True)
@@ -4757,7 +4675,7 @@ class Ui_MainWindow(object):
         self.essence_sorrow_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_sorrow_btn)
         self.essence_sorrow_btn.setObjectName(u"essence_sorrow_btn")
-        self.essence_sorrow_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_sorrow_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_sorrow_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4795,9 +4713,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon73 = QIcon()
-        icon73.addFile(u":/essences/assets/images/essences/essence_Sorrow.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_sorrow_btn.setIcon(icon73)
+        icon74 = PySide6.QtGui.QIcon()
+        icon74.addFile(u":/essences/assets/images/essences/essence_Sorrow.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_sorrow_btn.setIcon(icon74)
         self.essence_sorrow_btn.setIconSize(QSize(30, 30))
         self.essence_sorrow_btn.setCheckable(True)
         self.essence_sorrow_btn.setAutoExclusive(True)
@@ -4807,7 +4725,7 @@ class Ui_MainWindow(object):
         self.essence_spite_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_spite_btn)
         self.essence_spite_btn.setObjectName(u"essence_spite_btn")
-        self.essence_spite_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_spite_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_spite_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4845,9 +4763,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon74 = QIcon()
-        icon74.addFile(u":/essences/assets/images/essences/essence_Spite.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_spite_btn.setIcon(icon74)
+        icon75 = PySide6.QtGui.QIcon()
+        icon75.addFile(u":/essences/assets/images/essences/essence_Spite.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_spite_btn.setIcon(icon75)
         self.essence_spite_btn.setIconSize(QSize(30, 30))
         self.essence_spite_btn.setCheckable(True)
         self.essence_spite_btn.setAutoExclusive(True)
@@ -4857,7 +4775,7 @@ class Ui_MainWindow(object):
         self.essence_suffering_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_suffering_btn)
         self.essence_suffering_btn.setObjectName(u"essence_suffering_btn")
-        self.essence_suffering_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_suffering_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_suffering_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4895,9 +4813,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon75 = QIcon()
-        icon75.addFile(u":/essences/assets/images/essences/essence_Suffering.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_suffering_btn.setIcon(icon75)
+        icon76 = PySide6.QtGui.QIcon()
+        icon76.addFile(u":/essences/assets/images/essences/essence_Suffering.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_suffering_btn.setIcon(icon76)
         self.essence_suffering_btn.setIconSize(QSize(30, 30))
         self.essence_suffering_btn.setCheckable(True)
         self.essence_suffering_btn.setAutoExclusive(True)
@@ -4907,7 +4825,7 @@ class Ui_MainWindow(object):
         self.essence_torment_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_torment_btn)
         self.essence_torment_btn.setObjectName(u"essence_torment_btn")
-        self.essence_torment_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_torment_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_torment_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4945,9 +4863,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon76 = QIcon()
-        icon76.addFile(u":/essences/assets/images/essences/essence_Torment.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_torment_btn.setIcon(icon76)
+        icon77 = PySide6.QtGui.QIcon()
+        icon77.addFile(u":/essences/assets/images/essences/essence_Torment.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_torment_btn.setIcon(icon77)
         self.essence_torment_btn.setIconSize(QSize(30, 30))
         self.essence_torment_btn.setCheckable(True)
         self.essence_torment_btn.setAutoExclusive(True)
@@ -4957,7 +4875,7 @@ class Ui_MainWindow(object):
         self.essence_woe_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_woe_btn)
         self.essence_woe_btn.setObjectName(u"essence_woe_btn")
-        self.essence_woe_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_woe_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_woe_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -4995,9 +4913,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon77 = QIcon()
-        icon77.addFile(u":/essences/assets/images/essences/essence_Woe.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_woe_btn.setIcon(icon77)
+        icon78 = PySide6.QtGui.QIcon()
+        icon78.addFile(u":/essences/assets/images/essences/essence_Woe.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_woe_btn.setIcon(icon78)
         self.essence_woe_btn.setIconSize(QSize(30, 30))
         self.essence_woe_btn.setCheckable(True)
         self.essence_woe_btn.setAutoExclusive(True)
@@ -5007,7 +4925,7 @@ class Ui_MainWindow(object):
         self.essence_wrath_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_wrath_btn)
         self.essence_wrath_btn.setObjectName(u"essence_wrath_btn")
-        self.essence_wrath_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_wrath_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_wrath_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5045,9 +4963,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon78 = QIcon()
-        icon78.addFile(u":/essences/assets/images/essences/essence_Wrath.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_wrath_btn.setIcon(icon78)
+        icon79 = PySide6.QtGui.QIcon()
+        icon79.addFile(u":/essences/assets/images/essences/essence_Wrath.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_wrath_btn.setIcon(icon79)
         self.essence_wrath_btn.setIconSize(QSize(30, 30))
         self.essence_wrath_btn.setCheckable(True)
         self.essence_wrath_btn.setAutoExclusive(True)
@@ -5057,7 +4975,7 @@ class Ui_MainWindow(object):
         self.essence_zeal_btn = CustomCursorButton(self.essences_row2)
         self.custom_cursor_btns_group.addButton(self.essence_zeal_btn)
         self.essence_zeal_btn.setObjectName(u"essence_zeal_btn")
-        self.essence_zeal_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.essence_zeal_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.essence_zeal_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5095,9 +5013,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon79 = QIcon()
-        icon79.addFile(u":/essences/assets/images/essences/essence_Zeal.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.essence_zeal_btn.setIcon(icon79)
+        icon80 = PySide6.QtGui.QIcon()
+        icon80.addFile(u":/essences/assets/images/essences/essence_Zeal.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.essence_zeal_btn.setIcon(icon80)
         self.essence_zeal_btn.setIconSize(QSize(30, 30))
         self.essence_zeal_btn.setCheckable(True)
         self.essence_zeal_btn.setAutoExclusive(True)
@@ -5110,8 +5028,8 @@ class Ui_MainWindow(object):
         self.crafting_method_pages.addWidget(self.essence_crafts)
         self.catalysts = QWidget()
         self.catalysts.setObjectName(u"catalysts")
-        sizePolicy3.setHeightForWidth(self.catalysts.sizePolicy().hasHeightForWidth())
-        self.catalysts.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.catalysts.sizePolicy().hasHeightForWidth())
+        self.catalysts.setSizePolicy(sizePolicy2)
         self.catalysts.setStyleSheet(u"\n"
 "border-image: none;\n"
 "padding: 0px;\n"
@@ -5123,8 +5041,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_22.setContentsMargins(0, 0, 0, 0)
         self.catalyst_btn_row = QWidget(self.catalysts)
         self.catalyst_btn_row.setObjectName(u"catalyst_btn_row")
-        sizePolicy4.setHeightForWidth(self.catalyst_btn_row.sizePolicy().hasHeightForWidth())
-        self.catalyst_btn_row.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.catalyst_btn_row.sizePolicy().hasHeightForWidth())
+        self.catalyst_btn_row.setSizePolicy(sizePolicy3)
         self.catalyst_btn_row.setStyleSheet(u"margin: 0px;\n"
 "padding: 0px;\n"
 "border-image: none;")
@@ -5136,8 +5054,8 @@ class Ui_MainWindow(object):
         self.catalysts_hide_btn = QPushButton(self.catalyst_btn_row)
         self.catalysts_hide_btn.setObjectName(u"catalysts_hide_btn")
         self.catalysts_hide_btn.setEnabled(True)
-        sizePolicy8.setHeightForWidth(self.catalysts_hide_btn.sizePolicy().hasHeightForWidth())
-        self.catalysts_hide_btn.setSizePolicy(sizePolicy8)
+        sizePolicy7.setHeightForWidth(self.catalysts_hide_btn.sizePolicy().hasHeightForWidth())
+        self.catalysts_hide_btn.setSizePolicy(sizePolicy7)
         self.catalysts_hide_btn.setFont(font2)
         self.catalysts_hide_btn.setContextMenuPolicy(Qt.NoContextMenu)
         self.catalysts_hide_btn.setStyleSheet(u"QPushButton {\n"
@@ -5189,7 +5107,7 @@ class Ui_MainWindow(object):
         self.intrinsic_catalyst_btn.setObjectName(u"intrinsic_catalyst_btn")
         sizePolicy.setHeightForWidth(self.intrinsic_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.intrinsic_catalyst_btn.setSizePolicy(sizePolicy)
-        self.intrinsic_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.intrinsic_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.intrinsic_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5227,9 +5145,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon80 = QIcon()
-        icon80.addFile(u":/catalysts/assets/images/catalysts/intrinsic_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.intrinsic_catalyst_btn.setIcon(icon80)
+        icon81 = PySide6.QtGui.QIcon()
+        icon81.addFile(u":/catalysts/assets/images/catalysts/intrinsic_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.intrinsic_catalyst_btn.setIcon(icon81)
         self.intrinsic_catalyst_btn.setIconSize(QSize(30, 30))
         self.intrinsic_catalyst_btn.setCheckable(True)
         self.intrinsic_catalyst_btn.setChecked(False)
@@ -5242,7 +5160,7 @@ class Ui_MainWindow(object):
         self.abrasive_catalyst_btn.setObjectName(u"abrasive_catalyst_btn")
         sizePolicy.setHeightForWidth(self.abrasive_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.abrasive_catalyst_btn.setSizePolicy(sizePolicy)
-        self.abrasive_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.abrasive_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.abrasive_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5280,9 +5198,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon81 = QIcon()
-        icon81.addFile(u":/catalysts/assets/images/catalysts/abrasive_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.abrasive_catalyst_btn.setIcon(icon81)
+        icon82 = PySide6.QtGui.QIcon()
+        icon82.addFile(u":/catalysts/assets/images/catalysts/abrasive_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.abrasive_catalyst_btn.setIcon(icon82)
         self.abrasive_catalyst_btn.setIconSize(QSize(30, 30))
         self.abrasive_catalyst_btn.setCheckable(True)
         self.abrasive_catalyst_btn.setAutoExclusive(True)
@@ -5294,7 +5212,7 @@ class Ui_MainWindow(object):
         self.prismatic_catalyst_btn.setObjectName(u"prismatic_catalyst_btn")
         sizePolicy.setHeightForWidth(self.prismatic_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.prismatic_catalyst_btn.setSizePolicy(sizePolicy)
-        self.prismatic_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.prismatic_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.prismatic_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5332,9 +5250,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon82 = QIcon()
-        icon82.addFile(u":/catalysts/assets/images/catalysts/prismatic_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.prismatic_catalyst_btn.setIcon(icon82)
+        icon83 = PySide6.QtGui.QIcon()
+        icon83.addFile(u":/catalysts/assets/images/catalysts/prismatic_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.prismatic_catalyst_btn.setIcon(icon83)
         self.prismatic_catalyst_btn.setIconSize(QSize(30, 30))
         self.prismatic_catalyst_btn.setCheckable(True)
         self.prismatic_catalyst_btn.setAutoExclusive(True)
@@ -5346,7 +5264,7 @@ class Ui_MainWindow(object):
         self.fertile_catalyst_btn.setObjectName(u"fertile_catalyst_btn")
         sizePolicy.setHeightForWidth(self.fertile_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.fertile_catalyst_btn.setSizePolicy(sizePolicy)
-        self.fertile_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.fertile_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.fertile_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5384,9 +5302,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon83 = QIcon()
-        icon83.addFile(u":/catalysts/assets/images/catalysts/fertile_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.fertile_catalyst_btn.setIcon(icon83)
+        icon84 = PySide6.QtGui.QIcon()
+        icon84.addFile(u":/catalysts/assets/images/catalysts/fertile_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.fertile_catalyst_btn.setIcon(icon84)
         self.fertile_catalyst_btn.setIconSize(QSize(30, 30))
         self.fertile_catalyst_btn.setCheckable(True)
         self.fertile_catalyst_btn.setAutoExclusive(True)
@@ -5398,7 +5316,7 @@ class Ui_MainWindow(object):
         self.imbued_catalyst_btn.setObjectName(u"imbued_catalyst_btn")
         sizePolicy.setHeightForWidth(self.imbued_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.imbued_catalyst_btn.setSizePolicy(sizePolicy)
-        self.imbued_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.imbued_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.imbued_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5436,9 +5354,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon84 = QIcon()
-        icon84.addFile(u":/catalysts/assets/images/catalysts/imbued_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.imbued_catalyst_btn.setIcon(icon84)
+        icon85 = PySide6.QtGui.QIcon()
+        icon85.addFile(u":/catalysts/assets/images/catalysts/imbued_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.imbued_catalyst_btn.setIcon(icon85)
         self.imbued_catalyst_btn.setIconSize(QSize(30, 30))
         self.imbued_catalyst_btn.setCheckable(True)
         self.imbued_catalyst_btn.setAutoExclusive(True)
@@ -5450,7 +5368,7 @@ class Ui_MainWindow(object):
         self.tempering_catalyst_btn.setObjectName(u"tempering_catalyst_btn")
         sizePolicy.setHeightForWidth(self.tempering_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.tempering_catalyst_btn.setSizePolicy(sizePolicy)
-        self.tempering_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.tempering_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.tempering_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5488,9 +5406,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon85 = QIcon()
-        icon85.addFile(u":/catalysts/assets/images/catalysts/tempering_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.tempering_catalyst_btn.setIcon(icon85)
+        icon86 = PySide6.QtGui.QIcon()
+        icon86.addFile(u":/catalysts/assets/images/catalysts/tempering_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.tempering_catalyst_btn.setIcon(icon86)
         self.tempering_catalyst_btn.setIconSize(QSize(30, 30))
         self.tempering_catalyst_btn.setCheckable(True)
         self.tempering_catalyst_btn.setAutoExclusive(True)
@@ -5502,7 +5420,7 @@ class Ui_MainWindow(object):
         self.turbulent_catalyst_btn.setObjectName(u"turbulent_catalyst_btn")
         sizePolicy.setHeightForWidth(self.turbulent_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.turbulent_catalyst_btn.setSizePolicy(sizePolicy)
-        self.turbulent_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.turbulent_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.turbulent_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5540,9 +5458,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon86 = QIcon()
-        icon86.addFile(u":/catalysts/assets/images/catalysts/turbulent_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.turbulent_catalyst_btn.setIcon(icon86)
+        icon87 = PySide6.QtGui.QIcon()
+        icon87.addFile(u":/catalysts/assets/images/catalysts/turbulent_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.turbulent_catalyst_btn.setIcon(icon87)
         self.turbulent_catalyst_btn.setIconSize(QSize(30, 30))
         self.turbulent_catalyst_btn.setCheckable(True)
         self.turbulent_catalyst_btn.setAutoExclusive(True)
@@ -5554,7 +5472,7 @@ class Ui_MainWindow(object):
         self.accelerating_catalyst_btn.setObjectName(u"accelerating_catalyst_btn")
         sizePolicy.setHeightForWidth(self.accelerating_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.accelerating_catalyst_btn.setSizePolicy(sizePolicy)
-        self.accelerating_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.accelerating_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.accelerating_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5592,9 +5510,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon87 = QIcon()
-        icon87.addFile(u":/catalysts/assets/images/catalysts/accelerating_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.accelerating_catalyst_btn.setIcon(icon87)
+        icon88 = PySide6.QtGui.QIcon()
+        icon88.addFile(u":/catalysts/assets/images/catalysts/accelerating_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.accelerating_catalyst_btn.setIcon(icon88)
         self.accelerating_catalyst_btn.setIconSize(QSize(30, 30))
         self.accelerating_catalyst_btn.setCheckable(True)
         self.accelerating_catalyst_btn.setAutoExclusive(True)
@@ -5606,7 +5524,7 @@ class Ui_MainWindow(object):
         self.unstable_catalyst_btn.setObjectName(u"unstable_catalyst_btn")
         sizePolicy.setHeightForWidth(self.unstable_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.unstable_catalyst_btn.setSizePolicy(sizePolicy)
-        self.unstable_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.unstable_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.unstable_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5644,9 +5562,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon88 = QIcon()
-        icon88.addFile(u":/catalysts/assets/images/catalysts/unstable_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.unstable_catalyst_btn.setIcon(icon88)
+        icon89 = PySide6.QtGui.QIcon()
+        icon89.addFile(u":/catalysts/assets/images/catalysts/unstable_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.unstable_catalyst_btn.setIcon(icon89)
         self.unstable_catalyst_btn.setIconSize(QSize(30, 30))
         self.unstable_catalyst_btn.setCheckable(True)
         self.unstable_catalyst_btn.setAutoExclusive(True)
@@ -5658,7 +5576,7 @@ class Ui_MainWindow(object):
         self.noxious_catalyst_btn.setObjectName(u"noxious_catalyst_btn")
         sizePolicy.setHeightForWidth(self.noxious_catalyst_btn.sizePolicy().hasHeightForWidth())
         self.noxious_catalyst_btn.setSizePolicy(sizePolicy)
-        self.noxious_catalyst_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.noxious_catalyst_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.noxious_catalyst_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5696,9 +5614,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon89 = QIcon()
-        icon89.addFile(u":/catalysts/assets/images/catalysts/noxious_catalyst.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.noxious_catalyst_btn.setIcon(icon89)
+        icon90 = PySide6.QtGui.QIcon()
+        icon90.addFile(u":/catalysts/assets/images/catalysts/noxious_catalyst.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.noxious_catalyst_btn.setIcon(icon90)
         self.noxious_catalyst_btn.setIconSize(QSize(30, 30))
         self.noxious_catalyst_btn.setCheckable(True)
         self.noxious_catalyst_btn.setAutoExclusive(True)
@@ -5820,8 +5738,8 @@ class Ui_MainWindow(object):
         self.crafting_method_pages.addWidget(self.catalysts)
         self.beast_crafts = QWidget()
         self.beast_crafts.setObjectName(u"beast_crafts")
-        sizePolicy3.setHeightForWidth(self.beast_crafts.sizePolicy().hasHeightForWidth())
-        self.beast_crafts.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.beast_crafts.sizePolicy().hasHeightForWidth())
+        self.beast_crafts.setSizePolicy(sizePolicy2)
         self.beast_crafts.setStyleSheet(u"margin: 0px;\n"
 "padding: 0px;\n"
 "border-image: none;\n"
@@ -5845,10 +5763,10 @@ class Ui_MainWindow(object):
         self.beast_crafting_hide_btn = QPushButton(self.beast_crafting_methods_btns)
         self.beast_crafting_hide_btn.setObjectName(u"beast_crafting_hide_btn")
         self.beast_crafting_hide_btn.setEnabled(True)
-        sizePolicy8.setHeightForWidth(self.beast_crafting_hide_btn.sizePolicy().hasHeightForWidth())
-        self.beast_crafting_hide_btn.setSizePolicy(sizePolicy8)
+        sizePolicy7.setHeightForWidth(self.beast_crafting_hide_btn.sizePolicy().hasHeightForWidth())
+        self.beast_crafting_hide_btn.setSizePolicy(sizePolicy7)
         self.beast_crafting_hide_btn.setFont(font2)
-        self.beast_crafting_hide_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.beast_crafting_hide_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.beast_crafting_hide_btn.setContextMenuPolicy(Qt.NoContextMenu)
         self.beast_crafting_hide_btn.setStyleSheet(u"QPushButton {\n"
 "border: 1px solid #90701b;\n"
@@ -5899,7 +5817,7 @@ class Ui_MainWindow(object):
         self.beast_crafting_btns_group.setObjectName(u"beast_crafting_btns_group")
         self.beast_crafting_btns_group.addButton(self.bprefix__to_suffix_btn)
         self.bprefix__to_suffix_btn.setObjectName(u"bprefix__to_suffix_btn")
-        self.bprefix__to_suffix_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.bprefix__to_suffix_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.bprefix__to_suffix_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5937,9 +5855,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon90 = QIcon()
-        icon90.addFile(u":/beasts/assets/images/beasts/bpretsuf.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bprefix__to_suffix_btn.setIcon(icon90)
+        icon91 = PySide6.QtGui.QIcon()
+        icon91.addFile(u":/beasts/assets/images/beasts/bpretsuf.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.bprefix__to_suffix_btn.setIcon(icon91)
         self.bprefix__to_suffix_btn.setIconSize(QSize(30, 30))
         self.bprefix__to_suffix_btn.setCheckable(True)
         self.bprefix__to_suffix_btn.setAutoExclusive(True)
@@ -5949,7 +5867,7 @@ class Ui_MainWindow(object):
         self.bsuffix_to_prefix_btn = QPushButton(self.beast_crafting_methods_btns)
         self.beast_crafting_btns_group.addButton(self.bsuffix_to_prefix_btn)
         self.bsuffix_to_prefix_btn.setObjectName(u"bsuffix_to_prefix_btn")
-        self.bsuffix_to_prefix_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.bsuffix_to_prefix_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.bsuffix_to_prefix_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -5987,9 +5905,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon91 = QIcon()
-        icon91.addFile(u":/beasts/assets/images/beasts/bsuftpre.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bsuffix_to_prefix_btn.setIcon(icon91)
+        icon92 = PySide6.QtGui.QIcon()
+        icon92.addFile(u":/beasts/assets/images/beasts/bsuftpre.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.bsuffix_to_prefix_btn.setIcon(icon92)
         self.bsuffix_to_prefix_btn.setIconSize(QSize(30, 30))
         self.bsuffix_to_prefix_btn.setCheckable(True)
         self.bsuffix_to_prefix_btn.setAutoExclusive(True)
@@ -5999,7 +5917,7 @@ class Ui_MainWindow(object):
         self.bimprint_btn = QPushButton(self.beast_crafting_methods_btns)
         self.beast_crafting_btns_group.addButton(self.bimprint_btn)
         self.bimprint_btn.setObjectName(u"bimprint_btn")
-        self.bimprint_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.bimprint_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.bimprint_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6037,9 +5955,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon92 = QIcon()
-        icon92.addFile(u":/beasts/assets/images/beasts/bimprint.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bimprint_btn.setIcon(icon92)
+        icon93 = PySide6.QtGui.QIcon()
+        icon93.addFile(u":/beasts/assets/images/beasts/bimprint.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.bimprint_btn.setIcon(icon93)
         self.bimprint_btn.setIconSize(QSize(30, 30))
         self.bimprint_btn.setCheckable(True)
         self.bimprint_btn.setAutoExclusive(True)
@@ -6049,7 +5967,7 @@ class Ui_MainWindow(object):
         self.breroll_values_btn = QPushButton(self.beast_crafting_methods_btns)
         self.beast_crafting_btns_group.addButton(self.breroll_values_btn)
         self.breroll_values_btn.setObjectName(u"breroll_values_btn")
-        self.breroll_values_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.breroll_values_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.breroll_values_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6087,9 +6005,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon93 = QIcon()
-        icon93.addFile(u":/beasts/assets/images/beasts/breroll.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.breroll_values_btn.setIcon(icon93)
+        icon94 = PySide6.QtGui.QIcon()
+        icon94.addFile(u":/beasts/assets/images/beasts/breroll.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.breroll_values_btn.setIcon(icon94)
         self.breroll_values_btn.setIconSize(QSize(30, 30))
         self.breroll_values_btn.setCheckable(True)
         self.breroll_values_btn.setAutoExclusive(True)
@@ -6099,7 +6017,7 @@ class Ui_MainWindow(object):
         self.bcat_btn = QPushButton(self.beast_crafting_methods_btns)
         self.beast_crafting_btns_group.addButton(self.bcat_btn)
         self.bcat_btn.setObjectName(u"bcat_btn")
-        self.bcat_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.bcat_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.bcat_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6137,9 +6055,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon94 = QIcon()
-        icon94.addFile(u":/beasts/assets/images/beasts/bcat.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bcat_btn.setIcon(icon94)
+        icon95 = PySide6.QtGui.QIcon()
+        icon95.addFile(u":/beasts/assets/images/beasts/bcat.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.bcat_btn.setIcon(icon95)
         self.bcat_btn.setIconSize(QSize(30, 30))
         self.bcat_btn.setCheckable(True)
         self.bcat_btn.setAutoExclusive(True)
@@ -6149,7 +6067,7 @@ class Ui_MainWindow(object):
         self.bavian_btn = QPushButton(self.beast_crafting_methods_btns)
         self.beast_crafting_btns_group.addButton(self.bavian_btn)
         self.bavian_btn.setObjectName(u"bavian_btn")
-        self.bavian_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.bavian_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.bavian_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6187,9 +6105,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon95 = QIcon()
-        icon95.addFile(u":/beasts/assets/images/beasts/bavian.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bavian_btn.setIcon(icon95)
+        icon96 = PySide6.QtGui.QIcon()
+        icon96.addFile(u":/beasts/assets/images/beasts/bavian.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.bavian_btn.setIcon(icon96)
         self.bavian_btn.setIconSize(QSize(30, 30))
         self.bavian_btn.setCheckable(True)
         self.bavian_btn.setAutoExclusive(True)
@@ -6199,7 +6117,7 @@ class Ui_MainWindow(object):
         self.bspider_btn = QPushButton(self.beast_crafting_methods_btns)
         self.beast_crafting_btns_group.addButton(self.bspider_btn)
         self.bspider_btn.setObjectName(u"bspider_btn")
-        self.bspider_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.bspider_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.bspider_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6237,9 +6155,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon96 = QIcon()
-        icon96.addFile(u":/beasts/assets/images/beasts/bspider.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bspider_btn.setIcon(icon96)
+        icon97 = PySide6.QtGui.QIcon()
+        icon97.addFile(u":/beasts/assets/images/beasts/bspider.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.bspider_btn.setIcon(icon97)
         self.bspider_btn.setIconSize(QSize(30, 30))
         self.bspider_btn.setCheckable(True)
         self.bspider_btn.setAutoExclusive(True)
@@ -6249,7 +6167,7 @@ class Ui_MainWindow(object):
         self.bcrab_btn = QPushButton(self.beast_crafting_methods_btns)
         self.beast_crafting_btns_group.addButton(self.bcrab_btn)
         self.bcrab_btn.setObjectName(u"bcrab_btn")
-        self.bcrab_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.bcrab_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.bcrab_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6287,9 +6205,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon97 = QIcon()
-        icon97.addFile(u":/beasts/assets/images/beasts/bcrab.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.bcrab_btn.setIcon(icon97)
+        icon98 = PySide6.QtGui.QIcon()
+        icon98.addFile(u":/beasts/assets/images/beasts/bcrab.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.bcrab_btn.setIcon(icon98)
         self.bcrab_btn.setIconSize(QSize(30, 30))
         self.bcrab_btn.setCheckable(True)
         self.bcrab_btn.setAutoExclusive(True)
@@ -6306,8 +6224,8 @@ class Ui_MainWindow(object):
         self.crafting_method_pages.addWidget(self.beast_crafts)
         self.eldritch_crafts = QWidget()
         self.eldritch_crafts.setObjectName(u"eldritch_crafts")
-        sizePolicy3.setHeightForWidth(self.eldritch_crafts.sizePolicy().hasHeightForWidth())
-        self.eldritch_crafts.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.eldritch_crafts.sizePolicy().hasHeightForWidth())
+        self.eldritch_crafts.setSizePolicy(sizePolicy2)
         self.horizontalLayout_18 = QHBoxLayout(self.eldritch_crafts)
         self.horizontalLayout_18.setSpacing(0)
         self.horizontalLayout_18.setContentsMargins(0, 0, 0, 0)
@@ -6326,8 +6244,8 @@ class Ui_MainWindow(object):
         self.eldritch_btn_row1 = QWidget(self.eldritch_btns_container)
         self.eldritch_btn_row1.setObjectName(u"eldritch_btn_row1")
         self.eldritch_btn_row1.setEnabled(True)
-        sizePolicy3.setHeightForWidth(self.eldritch_btn_row1.sizePolicy().hasHeightForWidth())
-        self.eldritch_btn_row1.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.eldritch_btn_row1.sizePolicy().hasHeightForWidth())
+        self.eldritch_btn_row1.setSizePolicy(sizePolicy2)
         self.fossil_row1_3 = QHBoxLayout(self.eldritch_btn_row1)
         self.fossil_row1_3.setSpacing(0)
         self.fossil_row1_3.setContentsMargins(0, 0, 0, 0)
@@ -6336,10 +6254,10 @@ class Ui_MainWindow(object):
         self.eldritch_hide_btn = QPushButton(self.eldritch_btn_row1)
         self.eldritch_hide_btn.setObjectName(u"eldritch_hide_btn")
         self.eldritch_hide_btn.setEnabled(True)
-        sizePolicy5.setHeightForWidth(self.eldritch_hide_btn.sizePolicy().hasHeightForWidth())
-        self.eldritch_hide_btn.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.eldritch_hide_btn.sizePolicy().hasHeightForWidth())
+        self.eldritch_hide_btn.setSizePolicy(sizePolicy4)
         self.eldritch_hide_btn.setFont(font2)
-        self.eldritch_hide_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.eldritch_hide_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.eldritch_hide_btn.setContextMenuPolicy(Qt.NoContextMenu)
         self.eldritch_hide_btn.setStyleSheet(u"QPushButton {\n"
 "border: 1px solid #90701b;\n"
@@ -6382,8 +6300,8 @@ class Ui_MainWindow(object):
         self.eldritch_method_label = QLabel(self.eldritch_btn_row1)
         self.eldritch_method_label.setObjectName(u"eldritch_method_label")
         self.eldritch_method_label.setEnabled(True)
-        sizePolicy5.setHeightForWidth(self.eldritch_method_label.sizePolicy().hasHeightForWidth())
-        self.eldritch_method_label.setSizePolicy(sizePolicy5)
+        sizePolicy4.setHeightForWidth(self.eldritch_method_label.sizePolicy().hasHeightForWidth())
+        self.eldritch_method_label.setSizePolicy(sizePolicy4)
 
         self.fossil_row1_3.addWidget(self.eldritch_method_label)
 
@@ -6391,12 +6309,12 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.eldritch_chaos_btn)
         self.eldritch_chaos_btn.setObjectName(u"eldritch_chaos_btn")
         self.eldritch_chaos_btn.setEnabled(True)
-        sizePolicy9 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
-        sizePolicy9.setHorizontalStretch(0)
-        sizePolicy9.setVerticalStretch(0)
-        sizePolicy9.setHeightForWidth(self.eldritch_chaos_btn.sizePolicy().hasHeightForWidth())
-        self.eldritch_chaos_btn.setSizePolicy(sizePolicy9)
-        self.eldritch_chaos_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy8 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
+        sizePolicy8.setHorizontalStretch(0)
+        sizePolicy8.setVerticalStretch(0)
+        sizePolicy8.setHeightForWidth(self.eldritch_chaos_btn.sizePolicy().hasHeightForWidth())
+        self.eldritch_chaos_btn.setSizePolicy(sizePolicy8)
+        self.eldritch_chaos_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.eldritch_chaos_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6434,9 +6352,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon98 = QIcon()
-        icon98.addFile(u":/eldritch/assets/images/eldritch/eldritch_chaos.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.eldritch_chaos_btn.setIcon(icon98)
+        icon99 = PySide6.QtGui.QIcon()
+        icon99.addFile(u":/eldritch/assets/images/eldritch/eldritch_chaos.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.eldritch_chaos_btn.setIcon(icon99)
         self.eldritch_chaos_btn.setIconSize(QSize(30, 30))
         self.eldritch_chaos_btn.setCheckable(True)
         self.eldritch_chaos_btn.setAutoExclusive(True)
@@ -6447,12 +6365,12 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.eldritch_exalted_btn)
         self.eldritch_exalted_btn.setObjectName(u"eldritch_exalted_btn")
         self.eldritch_exalted_btn.setEnabled(True)
-        sizePolicy10 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.MinimumExpanding)
-        sizePolicy10.setHorizontalStretch(0)
-        sizePolicy10.setVerticalStretch(0)
-        sizePolicy10.setHeightForWidth(self.eldritch_exalted_btn.sizePolicy().hasHeightForWidth())
-        self.eldritch_exalted_btn.setSizePolicy(sizePolicy10)
-        self.eldritch_exalted_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy9 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.MinimumExpanding)
+        sizePolicy9.setHorizontalStretch(0)
+        sizePolicy9.setVerticalStretch(0)
+        sizePolicy9.setHeightForWidth(self.eldritch_exalted_btn.sizePolicy().hasHeightForWidth())
+        self.eldritch_exalted_btn.setSizePolicy(sizePolicy9)
+        self.eldritch_exalted_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.eldritch_exalted_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6490,9 +6408,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon99 = QIcon()
-        icon99.addFile(u":/eldritch/assets/images/eldritch/eldritch_exalted.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.eldritch_exalted_btn.setIcon(icon99)
+        icon100 = PySide6.QtGui.QIcon()
+        icon100.addFile(u":/eldritch/assets/images/eldritch/eldritch_exalted.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.eldritch_exalted_btn.setIcon(icon100)
         self.eldritch_exalted_btn.setIconSize(QSize(30, 30))
         self.eldritch_exalted_btn.setCheckable(True)
         self.eldritch_exalted_btn.setAutoExclusive(True)
@@ -6503,9 +6421,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.eldritch_annul_btn)
         self.eldritch_annul_btn.setObjectName(u"eldritch_annul_btn")
         self.eldritch_annul_btn.setEnabled(True)
-        sizePolicy10.setHeightForWidth(self.eldritch_annul_btn.sizePolicy().hasHeightForWidth())
-        self.eldritch_annul_btn.setSizePolicy(sizePolicy10)
-        self.eldritch_annul_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy9.setHeightForWidth(self.eldritch_annul_btn.sizePolicy().hasHeightForWidth())
+        self.eldritch_annul_btn.setSizePolicy(sizePolicy9)
+        self.eldritch_annul_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.eldritch_annul_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6543,9 +6461,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon100 = QIcon()
-        icon100.addFile(u":/eldritch/assets/images/eldritch/eldritch_annul.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.eldritch_annul_btn.setIcon(icon100)
+        icon101 = PySide6.QtGui.QIcon()
+        icon101.addFile(u":/eldritch/assets/images/eldritch/eldritch_annul.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.eldritch_annul_btn.setIcon(icon101)
         self.eldritch_annul_btn.setIconSize(QSize(30, 30))
         self.eldritch_annul_btn.setCheckable(True)
         self.eldritch_annul_btn.setAutoExclusive(True)
@@ -6556,9 +6474,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.orb_of_conflict_btn)
         self.orb_of_conflict_btn.setObjectName(u"orb_of_conflict_btn")
         self.orb_of_conflict_btn.setEnabled(True)
-        sizePolicy10.setHeightForWidth(self.orb_of_conflict_btn.sizePolicy().hasHeightForWidth())
-        self.orb_of_conflict_btn.setSizePolicy(sizePolicy10)
-        self.orb_of_conflict_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy9.setHeightForWidth(self.orb_of_conflict_btn.sizePolicy().hasHeightForWidth())
+        self.orb_of_conflict_btn.setSizePolicy(sizePolicy9)
+        self.orb_of_conflict_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.orb_of_conflict_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6596,9 +6514,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon101 = QIcon()
-        icon101.addFile(u":/eldritch/assets/images/eldritch/orb_of_conflict.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.orb_of_conflict_btn.setIcon(icon101)
+        icon102 = PySide6.QtGui.QIcon()
+        icon102.addFile(u":/eldritch/assets/images/eldritch/orb_of_conflict.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.orb_of_conflict_btn.setIcon(icon102)
         self.orb_of_conflict_btn.setIconSize(QSize(30, 30))
         self.orb_of_conflict_btn.setCheckable(True)
         self.orb_of_conflict_btn.setAutoExclusive(True)
@@ -6611,8 +6529,8 @@ class Ui_MainWindow(object):
         self.eldritch_btn_row2 = QWidget(self.eldritch_btns_container)
         self.eldritch_btn_row2.setObjectName(u"eldritch_btn_row2")
         self.eldritch_btn_row2.setEnabled(True)
-        sizePolicy3.setHeightForWidth(self.eldritch_btn_row2.sizePolicy().hasHeightForWidth())
-        self.eldritch_btn_row2.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.eldritch_btn_row2.sizePolicy().hasHeightForWidth())
+        self.eldritch_btn_row2.setSizePolicy(sizePolicy2)
         self.horizontalLayout_17 = QHBoxLayout(self.eldritch_btn_row2)
         self.horizontalLayout_17.setSpacing(0)
         self.horizontalLayout_17.setContentsMargins(0, 0, 0, 0)
@@ -6622,9 +6540,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.lesser_ember_btn)
         self.lesser_ember_btn.setObjectName(u"lesser_ember_btn")
         self.lesser_ember_btn.setEnabled(True)
-        sizePolicy10.setHeightForWidth(self.lesser_ember_btn.sizePolicy().hasHeightForWidth())
-        self.lesser_ember_btn.setSizePolicy(sizePolicy10)
-        self.lesser_ember_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy9.setHeightForWidth(self.lesser_ember_btn.sizePolicy().hasHeightForWidth())
+        self.lesser_ember_btn.setSizePolicy(sizePolicy9)
+        self.lesser_ember_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.lesser_ember_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6662,9 +6580,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon102 = QIcon()
-        icon102.addFile(u":/eldritch/assets/images/eldritch/lesser_eldritch_ember.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.lesser_ember_btn.setIcon(icon102)
+        icon103 = PySide6.QtGui.QIcon()
+        icon103.addFile(u":/eldritch/assets/images/eldritch/lesser_eldritch_ember.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.lesser_ember_btn.setIcon(icon103)
         self.lesser_ember_btn.setIconSize(QSize(30, 30))
         self.lesser_ember_btn.setAutoExclusive(True)
 
@@ -6674,9 +6592,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.greater_ember_btn)
         self.greater_ember_btn.setObjectName(u"greater_ember_btn")
         self.greater_ember_btn.setEnabled(True)
-        sizePolicy10.setHeightForWidth(self.greater_ember_btn.sizePolicy().hasHeightForWidth())
-        self.greater_ember_btn.setSizePolicy(sizePolicy10)
-        self.greater_ember_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy9.setHeightForWidth(self.greater_ember_btn.sizePolicy().hasHeightForWidth())
+        self.greater_ember_btn.setSizePolicy(sizePolicy9)
+        self.greater_ember_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.greater_ember_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6714,9 +6632,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon103 = QIcon()
-        icon103.addFile(u":/eldritch/assets/images/eldritch/greater_eldritch_ember.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.greater_ember_btn.setIcon(icon103)
+        icon104 = PySide6.QtGui.QIcon()
+        icon104.addFile(u":/eldritch/assets/images/eldritch/greater_eldritch_ember.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.greater_ember_btn.setIcon(icon104)
         self.greater_ember_btn.setIconSize(QSize(30, 30))
         self.greater_ember_btn.setCheckable(True)
         self.greater_ember_btn.setAutoExclusive(True)
@@ -6727,9 +6645,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.grand_ember_btn)
         self.grand_ember_btn.setObjectName(u"grand_ember_btn")
         self.grand_ember_btn.setEnabled(True)
-        sizePolicy10.setHeightForWidth(self.grand_ember_btn.sizePolicy().hasHeightForWidth())
-        self.grand_ember_btn.setSizePolicy(sizePolicy10)
-        self.grand_ember_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy9.setHeightForWidth(self.grand_ember_btn.sizePolicy().hasHeightForWidth())
+        self.grand_ember_btn.setSizePolicy(sizePolicy9)
+        self.grand_ember_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.grand_ember_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6767,9 +6685,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon104 = QIcon()
-        icon104.addFile(u":/eldritch/assets/images/eldritch/grand_eldritch_ember.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.grand_ember_btn.setIcon(icon104)
+        icon105 = PySide6.QtGui.QIcon()
+        icon105.addFile(u":/eldritch/assets/images/eldritch/grand_eldritch_ember.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.grand_ember_btn.setIcon(icon105)
         self.grand_ember_btn.setIconSize(QSize(30, 30))
         self.grand_ember_btn.setCheckable(True)
         self.grand_ember_btn.setAutoExclusive(True)
@@ -6780,9 +6698,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.exceptional_ember_btn)
         self.exceptional_ember_btn.setObjectName(u"exceptional_ember_btn")
         self.exceptional_ember_btn.setEnabled(True)
-        sizePolicy10.setHeightForWidth(self.exceptional_ember_btn.sizePolicy().hasHeightForWidth())
-        self.exceptional_ember_btn.setSizePolicy(sizePolicy10)
-        self.exceptional_ember_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy9.setHeightForWidth(self.exceptional_ember_btn.sizePolicy().hasHeightForWidth())
+        self.exceptional_ember_btn.setSizePolicy(sizePolicy9)
+        self.exceptional_ember_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.exceptional_ember_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6820,9 +6738,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon105 = QIcon()
-        icon105.addFile(u":/eldritch/assets/images/eldritch/exceptional_eldritch_ember.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.exceptional_ember_btn.setIcon(icon105)
+        icon106 = PySide6.QtGui.QIcon()
+        icon106.addFile(u":/eldritch/assets/images/eldritch/exceptional_eldritch_ember.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.exceptional_ember_btn.setIcon(icon106)
         self.exceptional_ember_btn.setIconSize(QSize(30, 30))
         self.exceptional_ember_btn.setCheckable(True)
         self.exceptional_ember_btn.setAutoExclusive(True)
@@ -6834,8 +6752,8 @@ class Ui_MainWindow(object):
 
         self.eldritch_btn_row3 = QWidget(self.eldritch_btns_container)
         self.eldritch_btn_row3.setObjectName(u"eldritch_btn_row3")
-        sizePolicy3.setHeightForWidth(self.eldritch_btn_row3.sizePolicy().hasHeightForWidth())
-        self.eldritch_btn_row3.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.eldritch_btn_row3.sizePolicy().hasHeightForWidth())
+        self.eldritch_btn_row3.setSizePolicy(sizePolicy2)
         self.horizontalLayout_16 = QHBoxLayout(self.eldritch_btn_row3)
         self.horizontalLayout_16.setSpacing(0)
         self.horizontalLayout_16.setContentsMargins(0, 0, 0, 0)
@@ -6845,9 +6763,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.lesser_ichor_btn)
         self.lesser_ichor_btn.setObjectName(u"lesser_ichor_btn")
         self.lesser_ichor_btn.setEnabled(True)
-        sizePolicy6.setHeightForWidth(self.lesser_ichor_btn.sizePolicy().hasHeightForWidth())
-        self.lesser_ichor_btn.setSizePolicy(sizePolicy6)
-        self.lesser_ichor_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy5.setHeightForWidth(self.lesser_ichor_btn.sizePolicy().hasHeightForWidth())
+        self.lesser_ichor_btn.setSizePolicy(sizePolicy5)
+        self.lesser_ichor_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.lesser_ichor_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6885,9 +6803,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon106 = QIcon()
-        icon106.addFile(u":/eldritch/assets/images/eldritch/lesser_eldritch_ichor.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.lesser_ichor_btn.setIcon(icon106)
+        icon107 = PySide6.QtGui.QIcon()
+        icon107.addFile(u":/eldritch/assets/images/eldritch/lesser_eldritch_ichor.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.lesser_ichor_btn.setIcon(icon107)
         self.lesser_ichor_btn.setIconSize(QSize(30, 30))
         self.lesser_ichor_btn.setCheckable(True)
         self.lesser_ichor_btn.setAutoExclusive(True)
@@ -6898,9 +6816,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.greater_icho_btn)
         self.greater_icho_btn.setObjectName(u"greater_icho_btn")
         self.greater_icho_btn.setEnabled(True)
-        sizePolicy6.setHeightForWidth(self.greater_icho_btn.sizePolicy().hasHeightForWidth())
-        self.greater_icho_btn.setSizePolicy(sizePolicy6)
-        self.greater_icho_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy5.setHeightForWidth(self.greater_icho_btn.sizePolicy().hasHeightForWidth())
+        self.greater_icho_btn.setSizePolicy(sizePolicy5)
+        self.greater_icho_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.greater_icho_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6938,9 +6856,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon107 = QIcon()
-        icon107.addFile(u":/eldritch/assets/images/eldritch/greater_eldritch_ichor.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.greater_icho_btn.setIcon(icon107)
+        icon108 = PySide6.QtGui.QIcon()
+        icon108.addFile(u":/eldritch/assets/images/eldritch/greater_eldritch_ichor.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.greater_icho_btn.setIcon(icon108)
         self.greater_icho_btn.setIconSize(QSize(30, 30))
         self.greater_icho_btn.setCheckable(True)
         self.greater_icho_btn.setAutoExclusive(True)
@@ -6951,9 +6869,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.grand_ichor_btn)
         self.grand_ichor_btn.setObjectName(u"grand_ichor_btn")
         self.grand_ichor_btn.setEnabled(True)
-        sizePolicy6.setHeightForWidth(self.grand_ichor_btn.sizePolicy().hasHeightForWidth())
-        self.grand_ichor_btn.setSizePolicy(sizePolicy6)
-        self.grand_ichor_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy5.setHeightForWidth(self.grand_ichor_btn.sizePolicy().hasHeightForWidth())
+        self.grand_ichor_btn.setSizePolicy(sizePolicy5)
+        self.grand_ichor_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.grand_ichor_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -6991,9 +6909,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon108 = QIcon()
-        icon108.addFile(u":/eldritch/assets/images/eldritch/grand_eldritch_ichor.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.grand_ichor_btn.setIcon(icon108)
+        icon109 = PySide6.QtGui.QIcon()
+        icon109.addFile(u":/eldritch/assets/images/eldritch/grand_eldritch_ichor.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.grand_ichor_btn.setIcon(icon109)
         self.grand_ichor_btn.setIconSize(QSize(30, 30))
         self.grand_ichor_btn.setCheckable(True)
         self.grand_ichor_btn.setAutoExclusive(True)
@@ -7004,9 +6922,9 @@ class Ui_MainWindow(object):
         self.custom_cursor_btns_group.addButton(self.exceptional_ichor_btn)
         self.exceptional_ichor_btn.setObjectName(u"exceptional_ichor_btn")
         self.exceptional_ichor_btn.setEnabled(True)
-        sizePolicy6.setHeightForWidth(self.exceptional_ichor_btn.sizePolicy().hasHeightForWidth())
-        self.exceptional_ichor_btn.setSizePolicy(sizePolicy6)
-        self.exceptional_ichor_btn.setCursor(QCursor(Qt.PointingHandCursor))
+        sizePolicy5.setHeightForWidth(self.exceptional_ichor_btn.sizePolicy().hasHeightForWidth())
+        self.exceptional_ichor_btn.setSizePolicy(sizePolicy5)
+        self.exceptional_ichor_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
         self.exceptional_ichor_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
@@ -7044,9 +6962,9 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        icon109 = QIcon()
-        icon109.addFile(u":/eldritch/assets/images/eldritch/exceptional_eldritch_ichor.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.exceptional_ichor_btn.setIcon(icon109)
+        icon110 = PySide6.QtGui.QIcon()
+        icon110.addFile(u":/eldritch/assets/images/eldritch/exceptional_eldritch_ichor.png", QSize(), PySide6.QtGui.QIcon.Normal, PySide6.QtGui.QIcon.Off)
+        self.exceptional_ichor_btn.setIcon(icon110)
         self.exceptional_ichor_btn.setIconSize(QSize(30, 30))
         self.exceptional_ichor_btn.setCheckable(True)
         self.exceptional_ichor_btn.setAutoExclusive(True)
@@ -7062,307 +6980,84 @@ class Ui_MainWindow(object):
         self.crafting_method_pages.addWidget(self.eldritch_crafts)
         self.syndicate_crafts = QWidget()
         self.syndicate_crafts.setObjectName(u"syndicate_crafts")
-        sizePolicy3.setHeightForWidth(self.syndicate_crafts.sizePolicy().hasHeightForWidth())
-        self.syndicate_crafts.setSizePolicy(sizePolicy3)
-        self.crafting_method_pages.addWidget(self.syndicate_crafts)
-
-        self.verticalLayout_7.addWidget(self.crafting_method_pages, 0, Qt.AlignTop)
-
-
-        self.verticalLayout_17.addWidget(self.crafting_methods, 0, Qt.AlignTop)
-
-        self.item_info_container = QWidget(self.crafting_page)
-        self.item_info_container.setObjectName(u"item_info_container")
-        sizePolicy1.setHeightForWidth(self.item_info_container.sizePolicy().hasHeightForWidth())
-        self.item_info_container.setSizePolicy(sizePolicy1)
-        self.item_info_container.setStyleSheet(u"QWidget {\n"
+        sizePolicy2.setHeightForWidth(self.syndicate_crafts.sizePolicy().hasHeightForWidth())
+        self.syndicate_crafts.setSizePolicy(sizePolicy2)
+        self.verticalLayout_12 = QVBoxLayout(self.syndicate_crafts)
+        self.verticalLayout_12.setSpacing(0)
+        self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.syndicate_btn_row = QWidget(self.syndicate_crafts)
+        self.syndicate_btn_row.setObjectName(u"syndicate_btn_row")
+        self.syndicate_btn_row.setEnabled(True)
+        sizePolicy3.setHeightForWidth(self.syndicate_btn_row.sizePolicy().hasHeightForWidth())
+        self.syndicate_btn_row.setSizePolicy(sizePolicy3)
+        self.fossil_row1_4 = QHBoxLayout(self.syndicate_btn_row)
+        self.fossil_row1_4.setSpacing(0)
+        self.fossil_row1_4.setContentsMargins(0, 0, 0, 0)
+        self.fossil_row1_4.setObjectName(u"fossil_row1_4")
+        self.fossil_row1_4.setContentsMargins(0, 0, 0, 0)
+        self.syndicate_hide_btn = QPushButton(self.syndicate_btn_row)
+        self.syndicate_hide_btn.setObjectName(u"syndicate_hide_btn")
+        self.syndicate_hide_btn.setEnabled(True)
+        sizePolicy4.setHeightForWidth(self.syndicate_hide_btn.sizePolicy().hasHeightForWidth())
+        self.syndicate_hide_btn.setSizePolicy(sizePolicy4)
+        self.syndicate_hide_btn.setFont(font2)
+        self.syndicate_hide_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.syndicate_hide_btn.setContextMenuPolicy(Qt.NoContextMenu)
+        self.syndicate_hide_btn.setStyleSheet(u"QPushButton {\n"
+"border: 1px solid #90701b;\n"
+"border-radius: 0px;\n"
 "border-image: none;\n"
-"}")
-        self.verticalLayout_27 = QVBoxLayout(self.item_info_container)
-        self.verticalLayout_27.setSpacing(0)
-        self.verticalLayout_27.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_27.setObjectName(u"verticalLayout_27")
-        self.verticalLayout_27.setContentsMargins(20, 0, 20, 20)
-        self.item_info_display = QWidget(self.item_info_container)
-        self.item_info_display.setObjectName(u"item_info_display")
-        sizePolicy1.setHeightForWidth(self.item_info_display.sizePolicy().hasHeightForWidth())
-        self.item_info_display.setSizePolicy(sizePolicy1)
-        self.item_info_display.setAutoFillBackground(False)
-        self.item_info_display.setStyleSheet(u"QFrame {\n"
-"border-image: none;\n"
+"box-shadow: inset 0 1px 1px #e6b15f,0 1px 2px rgba(0,0,0,0.61);\n"
+"font-family: Open Sans;\n"
+"font-size: 12px;\n"
+"font-weight: bold;\n"
+"color: #333;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"line-height: 29px;\n"
+"height: 29px;\n"
+"margin: 0px;\n"
+"padding: 0px 6px 0px 4px;\n"
+"cursor: pointer;\n"
+"	background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:1, stop:0 rgba(239, 232, 158, 255), stop:1 rgba(252, 199, 121, 255));\n"
 "}\n"
-"QWidget {\n"
-"border-image: none;\n"
-"}")
-        self.horizontalLayout_4 = QHBoxLayout(self.item_info_display)
-        self.horizontalLayout_4.setSpacing(60)
-        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalLayout_4.setContentsMargins(0, 20, 0, 0)
-        self.available_mods_container = QWidget(self.item_info_display)
-        self.available_mods_container.setObjectName(u"available_mods_container")
-        self.available_mods_container.setMaximumSize(QSize(500, 400))
-        self.verticalLayout_8 = QVBoxLayout(self.available_mods_container)
-        self.verticalLayout_8.setSpacing(0)
-        self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.search_bar_container = QFrame(self.available_mods_container)
-        self.search_bar_container.setObjectName(u"search_bar_container")
-        sizePolicy11 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
-        sizePolicy11.setHorizontalStretch(0)
-        sizePolicy11.setVerticalStretch(0)
-        sizePolicy11.setHeightForWidth(self.search_bar_container.sizePolicy().hasHeightForWidth())
-        self.search_bar_container.setSizePolicy(sizePolicy11)
-        self.horizontalLayout_3 = QHBoxLayout(self.search_bar_container)
-        self.horizontalLayout_3.setSpacing(0)
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.affix_search_bar = QLineEdit(self.search_bar_container)
-        self.affix_search_bar.setObjectName(u"affix_search_bar")
-        sizePolicy11.setHeightForWidth(self.affix_search_bar.sizePolicy().hasHeightForWidth())
-        self.affix_search_bar.setSizePolicy(sizePolicy11)
-        self.affix_search_bar.setMinimumSize(QSize(130, 30))
-        self.affix_search_bar.setMaximumSize(QSize(1675555, 30))
-        font4 = QFont()
-        font4.setFamilies([u"Open Sans"])
-        font4.setBold(False)
-        font4.setItalic(False)
-        self.affix_search_bar.setFont(font4)
-        self.affix_search_bar.setFrame(True)
-        self.affix_search_bar.setClearButtonEnabled(True)
-
-        self.horizontalLayout_3.addWidget(self.affix_search_bar)
-
-
-        self.verticalLayout_8.addWidget(self.search_bar_container)
-
-        self.modpool_history_widget = QWidget(self.available_mods_container)
-        self.modpool_history_widget.setObjectName(u"modpool_history_widget")
-        self.modpool_history_widget.setStyleSheet(u"")
-        self.horizontalLayout_5 = QHBoxLayout(self.modpool_history_widget)
-        self.horizontalLayout_5.setSpacing(0)
-        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.crafting_toolbox = QWidget(self.modpool_history_widget)
-        self.crafting_toolbox.setObjectName(u"crafting_toolbox")
-        sizePolicy1.setHeightForWidth(self.crafting_toolbox.sizePolicy().hasHeightForWidth())
-        self.crafting_toolbox.setSizePolicy(sizePolicy1)
-        self.crafting_toolbox.setMinimumSize(QSize(120, 0))
-        self.crafting_toolbox.setMaximumSize(QSize(200, 360))
-        self.crafting_toolbox.setStyleSheet(u"")
-        self.verticalLayout_37 = QVBoxLayout(self.crafting_toolbox)
-        self.verticalLayout_37.setSpacing(0)
-        self.verticalLayout_37.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_37.setObjectName(u"verticalLayout_37")
-        self.verticalLayout_37.setContentsMargins(0, 0, 0, 0)
-        self.crafting_history_container = QWidget(self.crafting_toolbox)
-        self.crafting_history_container.setObjectName(u"crafting_history_container")
-        self.crafting_history_container.setStyleSheet(u"")
-        self.verticalLayout_20 = QVBoxLayout(self.crafting_history_container)
-        self.verticalLayout_20.setSpacing(0)
-        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.verticalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.crafting_history = QToolBox(self.crafting_history_container)
-        self.crafting_history.setObjectName(u"crafting_history")
-        self.crafting_history.setEnabled(True)
-        sizePolicy1.setHeightForWidth(self.crafting_history.sizePolicy().hasHeightForWidth())
-        self.crafting_history.setSizePolicy(sizePolicy1)
-        self.crafting_history.setMinimumSize(QSize(0, 0))
-        font5 = QFont()
-        font5.setFamilies([u"Open Sans"])
-        font5.setBold(True)
-        font5.setItalic(False)
-        self.crafting_history.setFont(font5)
-        self.crafting_history.setStyleSheet(u"QWidget {\n"
-"	vertical-align: top;\n"
-"	padding: 5px 10px;\n"
-"	text-shadow: 1px 1px #000;\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(30, 30, 30, 255), stop:1 rgba(75, 75, 75, 255));\n"
-"\n"
-"	border: 0px solid #000;\n"
-"	box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0,.31);\n"
-"	box-sizing: border-box;\n"
-"	text-transform: uppercase;\n"
-"	font-weight: bold;\n"
-"	color: #f6e5b2;\n"
-"	font-family: Open Sans;\n"
-"	font-size: 14px;\n"
-"	margin: 0px;\n"
-"}")
-        self.crafting_history.setFrameShape(QFrame.NoFrame)
-        self.crafting_history.setFrameShadow(QFrame.Plain)
-        self.history_tab = QWidget()
-        self.history_tab.setObjectName(u"history_tab")
-        self.history_tab.setGeometry(QRect(0, 0, 160, 168))
-        self.history_tab.setFont(font2)
-        self.history_tab.setAutoFillBackground(False)
-        self.history_tab.setStyleSheet(u"")
-        self.verticalLayout_21 = QVBoxLayout(self.history_tab)
-        self.verticalLayout_21.setSpacing(0)
-        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
-        self.verticalLayout_21.setContentsMargins(0, 0, 0, 0)
-        self.crafting_history.addItem(self.history_tab, u"History")
-        self.spending_tab = QWidget()
-        self.spending_tab.setObjectName(u"spending_tab")
-        self.spending_tab.setGeometry(QRect(0, 0, 160, 168))
-        self.spending_tab.setFont(font2)
-        self.spending_tab.setStyleSheet(u"")
-        self.verticalLayout_25 = QVBoxLayout(self.spending_tab)
-        self.verticalLayout_25.setSpacing(0)
-        self.verticalLayout_25.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_25.setObjectName(u"verticalLayout_25")
-        self.verticalLayout_25.setContentsMargins(0, 0, 0, 0)
-        self.crafting_history.addItem(self.spending_tab, u"Spending")
-        self.export_tab = QWidget()
-        self.export_tab.setObjectName(u"export_tab")
-        self.export_tab.setGeometry(QRect(0, 0, 160, 168))
-        self.export_tab.setStyleSheet(u"")
-        self.verticalLayout_30 = QVBoxLayout(self.export_tab)
-        self.verticalLayout_30.setSpacing(0)
-        self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_30.setObjectName(u"verticalLayout_30")
-        self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
-        self.crafting_history.addItem(self.export_tab, u"Export")
-
-        self.verticalLayout_20.addWidget(self.crafting_history)
-
-        self.status_buttons = QWidget(self.crafting_history_container)
-        self.status_buttons.setObjectName(u"status_buttons")
-        sizePolicy1.setHeightForWidth(self.status_buttons.sizePolicy().hasHeightForWidth())
-        self.status_buttons.setSizePolicy(sizePolicy1)
-        self.status_buttons.setMinimumSize(QSize(120, 90))
-        self.status_buttons.setMaximumSize(QSize(400, 90))
-        self.status_buttons.setCursor(QCursor(Qt.PointingHandCursor))
-        self.status_buttons.setStyleSheet(u"QPushButton {\n"
-"                border: 1px solid #000;\n"
-"                  border-top-width: 1px;\n"
-"                   border-right-width: 1px;\n"
-"                   border-bottom-width: 1px;\n"
-"                   border-left-width: 1px;\n"
-"                   border-top-style: solid;\n"
-"                 border-right-style: solid;\n"
-"                  border-bottom-style: solid;\n"
-"                   border-left-style: solid;\n"
-"                   border-top-color: rgb(0, 0, 0);\n"
-"                  border-right-color: rgb(0, 0, 0);\n"
-"                   border-bottom-color: rgb(0, 0, 0);\n"
-"                   border-left-color: rgb(0, 0, 0);\n"
-"                  border-image-source: initial;\n"
-"                  border-image-slice: initial;\n"
-"                  border-image-width: initial;\n"
-"                  border-image-outset: initial;\n"
-"                border-image-repeat: initial;\n"
-"                border-radius: 4px;\n"
-"                background-color: qlineargradient(x1: 0, y"
-                        "1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
-"                border-image: none;\n"
-"              color: #FFF;\n"
-"               text-shadow: 1px 1px #000;\n"
-"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
-"                font-family: Open Sans;\n"
-"                font-size: 12px;\n"
-"               font-weight: bold;\n"
-"               height: 36px;\n"
-"                line-height: 36px;\n"
-"                text-align: center;\n"
-"				margin: 0px;\n"
-"           }\n"
 "            QPushButton::hover {\n"
-"                background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,\n"
-"                                                 stop: 0 #2d2d2d, stop: 1 #4b4b4b);\n"
+"	background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:1, stop:0 rgba(237, 231, 182, 255), stop:1 rgba(249, 206, 144, 255));\n"
 "           }\n"
 "            QPushButton::pressed {\n"
-"                background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                                  stop: 0 #4b4b4b, stop: 1 #2d2d2d);\n"
+"                \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
 "            }\n"
 "			QPushButton::checked {\n"
-"				background-col"
-                        "or: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,\n"
+"				background-color: qlineargradient(x1: 0, y1: 0,"
+                        " x2: 0 y2: 1,\n"
 "                                                 stop: 0 #2d2d2d, stop: 1 #4b4b4b);\n"
-"				border: 5px inset #FFF;\n"
+"				border: 1px inset #FFF;\n"
 "				box-shadow: none;\n"
 "			}\n"
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        self.verticalLayout_31 = QVBoxLayout(self.status_buttons)
-        self.verticalLayout_31.setSpacing(0)
-        self.verticalLayout_31.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_31.setObjectName(u"verticalLayout_31")
-        self.verticalLayout_31.setContentsMargins(0, 0, 0, 0)
-        self.clear_item_options = QPushButton(self.status_buttons)
-        self.clear_item_options.setObjectName(u"clear_item_options")
-        sizePolicy.setHeightForWidth(self.clear_item_options.sizePolicy().hasHeightForWidth())
-        self.clear_item_options.setSizePolicy(sizePolicy)
-        self.clear_item_options.setCursor(QCursor(Qt.PointingHandCursor))
-        self.clear_item_options.setCheckable(False)
-        self.clear_item_options.setAutoDefault(False)
-        self.clear_item_options.setFlat(False)
+        self.syndicate_hide_btn.setCheckable(False)
 
-        self.verticalLayout_31.addWidget(self.clear_item_options)
+        self.fossil_row1_4.addWidget(self.syndicate_hide_btn)
 
-        self.import_custom_item = QPushButton(self.status_buttons)
-        self.import_custom_item.setObjectName(u"import_custom_item")
-        sizePolicy.setHeightForWidth(self.import_custom_item.sizePolicy().hasHeightForWidth())
-        self.import_custom_item.setSizePolicy(sizePolicy)
-        self.import_custom_item.setCursor(QCursor(Qt.PointingHandCursor))
-        self.import_custom_item.setCheckable(False)
-        self.import_custom_item.setFlat(False)
+        self.syndicate_label = QLabel(self.syndicate_btn_row)
+        self.syndicate_label.setObjectName(u"syndicate_label")
+        self.syndicate_label.setEnabled(True)
+        sizePolicy4.setHeightForWidth(self.syndicate_label.sizePolicy().hasHeightForWidth())
+        self.syndicate_label.setSizePolicy(sizePolicy4)
 
-        self.verticalLayout_31.addWidget(self.import_custom_item)
+        self.fossil_row1_4.addWidget(self.syndicate_label)
 
-        self.simulate_crafting = QPushButton(self.status_buttons)
-        self.simulate_crafting.setObjectName(u"simulate_crafting")
-        sizePolicy.setHeightForWidth(self.simulate_crafting.sizePolicy().hasHeightForWidth())
-        self.simulate_crafting.setSizePolicy(sizePolicy)
-        self.simulate_crafting.setMinimumSize(QSize(0, 0))
-        self.simulate_crafting.setCursor(QCursor(Qt.PointingHandCursor))
-        self.simulate_crafting.setCheckable(False)
-        self.simulate_crafting.setChecked(False)
-        self.simulate_crafting.setFlat(False)
-
-        self.verticalLayout_31.addWidget(self.simulate_crafting)
-
-
-        self.verticalLayout_20.addWidget(self.status_buttons)
-
-
-        self.verticalLayout_37.addWidget(self.crafting_history_container)
-
-
-        self.horizontalLayout_5.addWidget(self.crafting_toolbox)
-
-        self.mods_container = QWidget(self.modpool_history_widget)
-        self.mods_container.setObjectName(u"mods_container")
-        sizePolicy1.setHeightForWidth(self.mods_container.sizePolicy().hasHeightForWidth())
-        self.mods_container.setSizePolicy(sizePolicy1)
-        self.verticalLayout_39 = QVBoxLayout(self.mods_container)
-        self.verticalLayout_39.setSpacing(0)
-        self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_39.setObjectName(u"verticalLayout_39")
-        self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
-        self.modpool_tabs = QWidget(self.mods_container)
-        self.modpool_tabs.setObjectName(u"modpool_tabs")
-        sizePolicy1.setHeightForWidth(self.modpool_tabs.sizePolicy().hasHeightForWidth())
-        self.modpool_tabs.setSizePolicy(sizePolicy1)
-        self.modpool_tabs.setMinimumSize(QSize(0, 0))
-        self.modpool_tabs.setMaximumSize(QSize(500, 500))
-        self.verticalLayout_32 = QVBoxLayout(self.modpool_tabs)
-        self.verticalLayout_32.setSpacing(0)
-        self.verticalLayout_32.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_32.setObjectName(u"verticalLayout_32")
-        self.verticalLayout_32.setContentsMargins(0, 0, 0, 0)
-        self.modpool_btns_layout = QFrame(self.modpool_tabs)
-        self.modpool_btns_layout.setObjectName(u"modpool_btns_layout")
-        sizePolicy11.setHeightForWidth(self.modpool_btns_layout.sizePolicy().hasHeightForWidth())
-        self.modpool_btns_layout.setSizePolicy(sizePolicy11)
-        self.modpool_btns_layout.setStyleSheet(u"QPushButton {\n"
+        self.aisling_veil_btn = QPushButton(self.syndicate_btn_row)
+        self.aisling_veil_btn.setObjectName(u"aisling_veil_btn")
+        self.aisling_veil_btn.setEnabled(True)
+        sizePolicy.setHeightForWidth(self.aisling_veil_btn.sizePolicy().hasHeightForWidth())
+        self.aisling_veil_btn.setSizePolicy(sizePolicy)
+        self.aisling_veil_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.aisling_veil_btn.setStyleSheet(u"QPushButton {\n"
 "                border: 1px solid #000;\n"
 "                border-radius: 4px;\n"
 "                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
@@ -7399,289 +7094,692 @@ class Ui_MainWindow(object):
 "            QPushButton::flat {\n"
 "                border: none;\n"
 "}")
-        self.horizontalLayout_2 = QHBoxLayout(self.modpool_btns_layout)
-        self.horizontalLayout_2.setSpacing(0)
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setSizeConstraint(QLayout.SetDefaultConstraint)
-        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.prefix_btn = QPushButton(self.modpool_btns_layout)
-        self.modpool_btns_group = QButtonGroup(MainWindow)
-        self.modpool_btns_group.setObjectName(u"modpool_btns_group")
-        self.modpool_btns_group.addButton(self.prefix_btn)
-        self.prefix_btn.setObjectName(u"prefix_btn")
-        sizePolicy1.setHeightForWidth(self.prefix_btn.sizePolicy().hasHeightForWidth())
-        self.prefix_btn.setSizePolicy(sizePolicy1)
-        self.prefix_btn.setStyleSheet(u"QPushButton {\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(84, 40, 109, 255), stop:1 rgba(108, 58, 136, 255));\n"
-"opacity: 0.5;\n"
+        self.aisling_veil_btn.setIcon(icon30)
+        self.aisling_veil_btn.setIconSize(QSize(30, 30))
+        self.aisling_veil_btn.setCheckable(True)
+
+        self.fossil_row1_4.addWidget(self.aisling_veil_btn)
+
+        self.leo_slam_btn = QPushButton(self.syndicate_btn_row)
+        self.leo_slam_btn.setObjectName(u"leo_slam_btn")
+        self.leo_slam_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.leo_slam_btn.sizePolicy().hasHeightForWidth())
+        self.leo_slam_btn.setSizePolicy(sizePolicy1)
+        self.leo_slam_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.leo_slam_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
+"font-weight: bold;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
+"}")
+        self.leo_slam_btn.setIcon(icon30)
+        self.leo_slam_btn.setIconSize(QSize(30, 30))
+        self.leo_slam_btn.setCheckable(True)
+
+        self.fossil_row1_4.addWidget(self.leo_slam_btn)
+
+
+        self.verticalLayout_12.addWidget(self.syndicate_btn_row, 0, Qt.AlignLeft|Qt.AlignTop)
+
+        self.widget = QWidget(self.syndicate_crafts)
+        self.widget.setObjectName(u"widget")
+
+        self.verticalLayout_12.addWidget(self.widget)
+
+        self.crafting_method_pages.addWidget(self.syndicate_crafts)
+        self.vendor_recipe_crafts = QWidget()
+        self.vendor_recipe_crafts.setObjectName(u"vendor_recipe_crafts")
+        self.verticalLayout_14 = QVBoxLayout(self.vendor_recipe_crafts)
+        self.verticalLayout_14.setSpacing(0)
+        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.vendor_recipe_pages = QStackedWidget(self.vendor_recipe_crafts)
+        self.vendor_recipe_pages.setObjectName(u"vendor_recipe_pages")
+        self.two_hand_weapon_recipes = QWidget()
+        self.two_hand_weapon_recipes.setObjectName(u"two_hand_weapon_recipes")
+        self.verticalLayout_13 = QVBoxLayout(self.two_hand_weapon_recipes)
+        self.verticalLayout_13.setSpacing(0)
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.fossil_btns_container_2 = QWidget(self.two_hand_weapon_recipes)
+        self.fossil_btns_container_2.setObjectName(u"fossil_btns_container_2")
+        self.fossil_btns_container_2.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.fossil_btns_container_2.sizePolicy().hasHeightForWidth())
+        self.fossil_btns_container_2.setSizePolicy(sizePolicy1)
+        self.verticalLayout_26 = QVBoxLayout(self.fossil_btns_container_2)
+        self.verticalLayout_26.setSpacing(0)
+        self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_26.setObjectName(u"verticalLayout_26")
+        self.verticalLayout_26.setContentsMargins(0, 0, 0, 0)
+        self.fossil_btn_row1_2 = QWidget(self.fossil_btns_container_2)
+        self.fossil_btn_row1_2.setObjectName(u"fossil_btn_row1_2")
+        self.fossil_btn_row1_2.setEnabled(True)
+        sizePolicy3.setHeightForWidth(self.fossil_btn_row1_2.sizePolicy().hasHeightForWidth())
+        self.fossil_btn_row1_2.setSizePolicy(sizePolicy3)
+        self.fossil_row1_5 = QHBoxLayout(self.fossil_btn_row1_2)
+        self.fossil_row1_5.setSpacing(0)
+        self.fossil_row1_5.setContentsMargins(0, 0, 0, 0)
+        self.fossil_row1_5.setObjectName(u"fossil_row1_5")
+        self.fossil_row1_5.setContentsMargins(0, 0, 0, 0)
+        self.vendor_recipe_hide_btn = QPushButton(self.fossil_btn_row1_2)
+        self.vendor_recipe_hide_btn.setObjectName(u"vendor_recipe_hide_btn")
+        self.vendor_recipe_hide_btn.setEnabled(True)
+        sizePolicy4.setHeightForWidth(self.vendor_recipe_hide_btn.sizePolicy().hasHeightForWidth())
+        self.vendor_recipe_hide_btn.setSizePolicy(sizePolicy4)
+        self.vendor_recipe_hide_btn.setFont(font2)
+        self.vendor_recipe_hide_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.vendor_recipe_hide_btn.setContextMenuPolicy(Qt.NoContextMenu)
+        self.vendor_recipe_hide_btn.setStyleSheet(u"QPushButton {\n"
+"border: 1px solid #90701b;\n"
+"border-radius: 0px;\n"
+"border-image: none;\n"
+"box-shadow: inset 0 1px 1px #e6b15f,0 1px 2px rgba(0,0,0,0.61);\n"
+"font-family: Open Sans;\n"
+"font-size: 12px;\n"
+"font-weight: bold;\n"
+"color: #333;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"line-height: 29px;\n"
+"height: 29px;\n"
+"margin: 0px;\n"
+"padding: 0px 6px 0px 4px;\n"
+"cursor: pointer;\n"
+"	background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:1, stop:0 rgba(239, 232, 158, 255), stop:1 rgba(252, 199, 121, 255));\n"
 "}\n"
-"QPushButton::hover {\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(84, 40, 109, 255), stop:1 rgba(108, 58, 136, 255));\n"
-"margin: 0px;\n"
-"font-family: Open Sans;\n"
-"font-size: 14px;\n"
+"            QPushButton::hover {\n"
+"	background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:1, stop:0 rgba(237, 231, 182, 255), stop:1 rgba(249, 206, 144, 255));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1: 0, y1: 0,"
+                        " x2: 0 y2: 1,\n"
+"                                                 stop: 0 #2d2d2d, stop: 1 #4b4b4b);\n"
+"				border: 1px inset #FFF;\n"
+"				box-shadow: none;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
+"}")
+        self.vendor_recipe_hide_btn.setCheckable(False)
+
+        self.fossil_row1_5.addWidget(self.vendor_recipe_hide_btn)
+
+        self.vendor_recipe_label = QLabel(self.fossil_btn_row1_2)
+        self.vendor_recipe_label.setObjectName(u"vendor_recipe_label")
+        self.vendor_recipe_label.setEnabled(True)
+        sizePolicy4.setHeightForWidth(self.vendor_recipe_label.sizePolicy().hasHeightForWidth())
+        self.vendor_recipe_label.setSizePolicy(sizePolicy4)
+
+        self.fossil_row1_5.addWidget(self.vendor_recipe_label)
+
+        self.add_phys_dmg_btn = QPushButton(self.fossil_btn_row1_2)
+        self.add_phys_dmg_btn.setObjectName(u"add_phys_dmg_btn")
+        self.add_phys_dmg_btn.setEnabled(True)
+        sizePolicy.setHeightForWidth(self.add_phys_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.add_phys_dmg_btn.setSizePolicy(sizePolicy)
+        self.add_phys_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.add_phys_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
 "font-weight: bold;\n"
-"text-transform: uppercase;\n"
-"box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba (0, 0, 0, 0.31);\n"
-"border: 1px solid #000;\n"
-"color: rgb(255, 255, 255);\n"
-"text-shadow: 1px 1px #000;\n"
-"}\n"
-"QPushButton::checked {\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(84, 40, 109, 255), stop:1 rgba(108, 58, 136, 255));\n"
-"margin: 0px;\n"
-"font-family: Open Sans;\n"
-"font-size: 14px;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
+"}")
+        self.add_phys_dmg_btn.setIcon(icon31)
+        self.add_phys_dmg_btn.setIconSize(QSize(30, 30))
+        self.add_phys_dmg_btn.setCheckable(True)
+
+        self.fossil_row1_5.addWidget(self.add_phys_dmg_btn)
+
+        self.add_high_tier_phys_dmg_btn = QPushButton(self.fossil_btn_row1_2)
+        self.add_high_tier_phys_dmg_btn.setObjectName(u"add_high_tier_phys_dmg_btn")
+        self.add_high_tier_phys_dmg_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.add_high_tier_phys_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.add_high_tier_phys_dmg_btn.setSizePolicy(sizePolicy1)
+        self.add_high_tier_phys_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.add_high_tier_phys_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
 "font-weight: bold;\n"
-"text-transform: uppercase;\n"
-"box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba (0, 0, 0, 0.31);\n"
-"border: 1px solid #000;\n"
-"color: rgb(25"
-                        "5, 255, 255);\n"
-"text-shadow: 1px 1px #000;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
 "}")
-        self.prefix_btn.setCheckable(True)
-        self.prefix_btn.setChecked(False)
-        self.prefix_btn.setFlat(False)
+        self.add_high_tier_phys_dmg_btn.setIcon(icon31)
+        self.add_high_tier_phys_dmg_btn.setIconSize(QSize(30, 30))
+        self.add_high_tier_phys_dmg_btn.setCheckable(True)
 
-        self.horizontalLayout_2.addWidget(self.prefix_btn)
+        self.fossil_row1_5.addWidget(self.add_high_tier_phys_dmg_btn)
 
-        self.suffix_btn = QPushButton(self.modpool_btns_layout)
-        self.modpool_btns_group.addButton(self.suffix_btn)
-        self.suffix_btn.setObjectName(u"suffix_btn")
-        sizePolicy1.setHeightForWidth(self.suffix_btn.sizePolicy().hasHeightForWidth())
-        self.suffix_btn.setSizePolicy(sizePolicy1)
-        self.suffix_btn.setMinimumSize(QSize(0, 0))
-        self.suffix_btn.setMaximumSize(QSize(16777215, 1677215))
-        self.suffix_btn.setStyleSheet(u"background-color: rgb(48, 95, 121);\n"
-"\n"
-"QPushButton {\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(109, 60, 60, 1), stop:1 rgba(136, 75, 75, 255));\n"
-"margin: 0px;\n"
-"font-family: Open Sans;\n"
-"font-size: 14px;\n"
+        self.add_cold_dmg_btn = QPushButton(self.fossil_btn_row1_2)
+        self.add_cold_dmg_btn.setObjectName(u"add_cold_dmg_btn")
+        self.add_cold_dmg_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.add_cold_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.add_cold_dmg_btn.setSizePolicy(sizePolicy1)
+        self.add_cold_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.add_cold_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
 "font-weight: bold;\n"
-"text-transform: uppercase;\n"
-"box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba (0, 0, 0, 0.31);\n"
-"border: 1px solid #000;\n"
-"color: #FFF;\n"
-"text-shadow: 1px 1px #000;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
 "}")
-        self.suffix_btn.setCheckable(True)
-        self.suffix_btn.setFlat(False)
+        self.add_cold_dmg_btn.setIcon(icon31)
+        self.add_cold_dmg_btn.setIconSize(QSize(30, 30))
+        self.add_cold_dmg_btn.setCheckable(True)
 
-        self.horizontalLayout_2.addWidget(self.suffix_btn)
+        self.fossil_row1_5.addWidget(self.add_cold_dmg_btn)
 
-        self.implicit_btn = QPushButton(self.modpool_btns_layout)
-        self.modpool_btns_group.addButton(self.implicit_btn)
-        self.implicit_btn.setObjectName(u"implicit_btn")
-        sizePolicy1.setHeightForWidth(self.implicit_btn.sizePolicy().hasHeightForWidth())
-        self.implicit_btn.setSizePolicy(sizePolicy1)
-        self.implicit_btn.setStyleSheet(u"background-color: rgb(125, 69, 69);\n"
-"\n"
-"QPushButton::flat {\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(109, 60, 60, 1), stop:1 rgba(136, 75, 75, 255));\n"
-"margin: 0px;\n"
-"font-family: Open Sans;\n"
-"font-size: 14px;\n"
+        self.add_high_tier_cold_dmg_btn = QPushButton(self.fossil_btn_row1_2)
+        self.add_high_tier_cold_dmg_btn.setObjectName(u"add_high_tier_cold_dmg_btn")
+        self.add_high_tier_cold_dmg_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.add_high_tier_cold_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.add_high_tier_cold_dmg_btn.setSizePolicy(sizePolicy1)
+        self.add_high_tier_cold_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.add_high_tier_cold_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
 "font-weight: bold;\n"
-"text-transform: uppercase;\n"
-"box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba (0, 0, 0, 0.31);\n"
-"border: 1px solid #000;\n"
-"color: #FFF;\n"
-"text-shadow: 1px 1px #000;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
 "}")
-        self.implicit_btn.setCheckable(True)
-        self.implicit_btn.setFlat(False)
+        self.add_high_tier_cold_dmg_btn.setIcon(icon31)
+        self.add_high_tier_cold_dmg_btn.setIconSize(QSize(30, 30))
+        self.add_high_tier_cold_dmg_btn.setCheckable(True)
 
-        self.horizontalLayout_2.addWidget(self.implicit_btn)
+        self.fossil_row1_5.addWidget(self.add_high_tier_cold_dmg_btn)
 
 
-        self.verticalLayout_32.addWidget(self.modpool_btns_layout, 0, Qt.AlignTop)
+        self.verticalLayout_26.addWidget(self.fossil_btn_row1_2)
 
-        self.modpool_container = QStackedWidget(self.modpool_tabs)
-        self.modpool_container.setObjectName(u"modpool_container")
-        sizePolicy1.setHeightForWidth(self.modpool_container.sizePolicy().hasHeightForWidth())
-        self.modpool_container.setSizePolicy(sizePolicy1)
-        self.modpool_container.setAutoFillBackground(False)
-        self.modpool_container.setFrameShape(QFrame.NoFrame)
-        self.modpool_container.setFrameShadow(QFrame.Plain)
-        self.prefixes = QWidget()
-        self.prefixes.setObjectName(u"prefixes")
-        sizePolicy1.setHeightForWidth(self.prefixes.sizePolicy().hasHeightForWidth())
-        self.prefixes.setSizePolicy(sizePolicy1)
-        self.prefixes.setStyleSheet(u"QWidget {\n"
-"	vertical-align: top;\n"
-"	padding: 5px 10px;\n"
-"	text-shadow: 1px 1px #000;\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(30, 30, 30, 255), stop:1 rgba(75, 75, 75, 255));\n"
-"\n"
-"	border: 0px solid #000;\n"
-"	box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0,.31);\n"
-"	box-sizing: border-box;\n"
-"	text-transform: uppercase;\n"
-"	font-weight: bold;\n"
-"	color: #f6e5b2;\n"
-"	font-family: Open Sans;\n"
-"	font-size: 14px;\n"
-"	margin: 0px;\n"
+        self.two_hand_recipes_row_2 = QWidget(self.fossil_btns_container_2)
+        self.two_hand_recipes_row_2.setObjectName(u"two_hand_recipes_row_2")
+        self.two_hand_recipes_row_2.setEnabled(True)
+        sizePolicy3.setHeightForWidth(self.two_hand_recipes_row_2.sizePolicy().hasHeightForWidth())
+        self.two_hand_recipes_row_2.setSizePolicy(sizePolicy3)
+        self.horizontalLayout = QHBoxLayout(self.two_hand_recipes_row_2)
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.add_fire_dmg_btn = QPushButton(self.two_hand_recipes_row_2)
+        self.add_fire_dmg_btn.setObjectName(u"add_fire_dmg_btn")
+        self.add_fire_dmg_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.add_fire_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.add_fire_dmg_btn.setSizePolicy(sizePolicy1)
+        self.add_fire_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.add_fire_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
+"font-weight: bold;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
 "}")
-        self.verticalLayout_33 = QVBoxLayout(self.prefixes)
-        self.verticalLayout_33.setSpacing(0)
-        self.verticalLayout_33.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_33.setObjectName(u"verticalLayout_33")
-        self.verticalLayout_33.setContentsMargins(0, 0, 0, 0)
-        self.prefix_tree_view = CustomTreeView(self.prefixes)
-        self.prefix_tree_view.setObjectName(u"prefix_tree_view")
-        sizePolicy1.setHeightForWidth(self.prefix_tree_view.sizePolicy().hasHeightForWidth())
-        self.prefix_tree_view.setSizePolicy(sizePolicy1)
-        self.prefix_tree_view.setFocusPolicy(Qt.TabFocus)
-        self.prefix_tree_view.setFrameShape(QFrame.NoFrame)
-        self.prefix_tree_view.setFrameShadow(QFrame.Plain)
-        self.prefix_tree_view.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.prefix_tree_view.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.prefix_tree_view.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
-        self.prefix_tree_view.setAlternatingRowColors(False)
-        self.prefix_tree_view.setTextElideMode(Qt.ElideRight)
-        self.prefix_tree_view.setHorizontalScrollMode(QAbstractItemView.ScrollPerItem)
-        self.prefix_tree_view.setIndentation(10)
-        self.prefix_tree_view.setUniformRowHeights(True)
-        self.prefix_tree_view.header().setCascadingSectionResizes(False)
-        self.prefix_tree_view.header().setMinimumSectionSize(80)
-        self.prefix_tree_view.header().setStretchLastSection(False)
+        self.add_fire_dmg_btn.setIcon(icon31)
+        self.add_fire_dmg_btn.setIconSize(QSize(30, 30))
 
-        self.verticalLayout_33.addWidget(self.prefix_tree_view)
+        self.horizontalLayout.addWidget(self.add_fire_dmg_btn)
 
-        self.modpool_container.addWidget(self.prefixes)
-        self.suffixes = QWidget()
-        self.suffixes.setObjectName(u"suffixes")
-        sizePolicy1.setHeightForWidth(self.suffixes.sizePolicy().hasHeightForWidth())
-        self.suffixes.setSizePolicy(sizePolicy1)
-        self.suffixes.setStyleSheet(u"QWidget {\n"
-"	vertical-align: top;\n"
-"	padding: 5px 10px;\n"
-"	text-shadow: 1px 1px #000;\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(30, 30, 30, 255), stop:1 rgba(75, 75, 75, 255));\n"
-"\n"
-"	border: 0px solid #000;\n"
-"	box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0,.31);\n"
-"	box-sizing: border-box;\n"
-"	text-transform: uppercase;\n"
-"	font-weight: bold;\n"
-"	color: #f6e5b2;\n"
-"	font-family: Open Sans;\n"
-"	font-size: 14px;\n"
-"	margin: 0px;\n"
+        self.add_high_tier_fire_dmg_btn = QPushButton(self.two_hand_recipes_row_2)
+        self.add_high_tier_fire_dmg_btn.setObjectName(u"add_high_tier_fire_dmg_btn")
+        self.add_high_tier_fire_dmg_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.add_high_tier_fire_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.add_high_tier_fire_dmg_btn.setSizePolicy(sizePolicy1)
+        self.add_high_tier_fire_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.add_high_tier_fire_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
+"font-weight: bold;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
 "}")
-        self.verticalLayout_34 = QVBoxLayout(self.suffixes)
-        self.verticalLayout_34.setSpacing(0)
-        self.verticalLayout_34.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_34.setObjectName(u"verticalLayout_34")
-        self.verticalLayout_34.setContentsMargins(0, 0, 0, 0)
-        self.suffix_tree_view = CustomTreeView(self.suffixes)
-        self.suffix_tree_view.setObjectName(u"suffix_tree_view")
-        sizePolicy1.setHeightForWidth(self.suffix_tree_view.sizePolicy().hasHeightForWidth())
-        self.suffix_tree_view.setSizePolicy(sizePolicy1)
-        self.suffix_tree_view.setFrameShape(QFrame.NoFrame)
-        self.suffix_tree_view.setFrameShadow(QFrame.Plain)
-        self.suffix_tree_view.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.suffix_tree_view.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.suffix_tree_view.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
-        self.suffix_tree_view.setAlternatingRowColors(False)
-        self.suffix_tree_view.setHorizontalScrollMode(QAbstractItemView.ScrollPerItem)
-        self.suffix_tree_view.setIndentation(10)
-        self.suffix_tree_view.setUniformRowHeights(True)
-        self.suffix_tree_view.header().setCascadingSectionResizes(False)
-        self.suffix_tree_view.header().setMinimumSectionSize(80)
-        self.suffix_tree_view.header().setStretchLastSection(False)
+        self.add_high_tier_fire_dmg_btn.setIcon(icon31)
+        self.add_high_tier_fire_dmg_btn.setIconSize(QSize(30, 30))
+        self.add_high_tier_fire_dmg_btn.setCheckable(True)
 
-        self.verticalLayout_34.addWidget(self.suffix_tree_view)
+        self.horizontalLayout.addWidget(self.add_high_tier_fire_dmg_btn)
 
-        self.modpool_container.addWidget(self.suffixes)
-        self.implicits = QWidget()
-        self.implicits.setObjectName(u"implicits")
-        sizePolicy1.setHeightForWidth(self.implicits.sizePolicy().hasHeightForWidth())
-        self.implicits.setSizePolicy(sizePolicy1)
-        self.implicits.setStyleSheet(u"QWidget {\n"
-"	vertical-align: top;\n"
-"	padding: 5px 10px;\n"
-"	text-shadow: 1px 1px #000;\n"
-"	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(30, 30, 30, 255), stop:1 rgba(75, 75, 75, 255));\n"
-"	border: 0px solid #000;\n"
-"	box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0,.31);\n"
-"	box-sizing: border-box;\n"
-"	text-transform: uppercase;\n"
-"	font-weight: bold;\n"
-"	color: #f6e5b2;\n"
-"	font-family: Open Sans;\n"
-"	font-size: 14px;\n"
-"	margin: 0px;\n"
+        self.add_light_dmg_btn = QPushButton(self.two_hand_recipes_row_2)
+        self.add_light_dmg_btn.setObjectName(u"add_light_dmg_btn")
+        self.add_light_dmg_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.add_light_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.add_light_dmg_btn.setSizePolicy(sizePolicy1)
+        self.add_light_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.add_light_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
+"font-weight: bold;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
 "}")
-        self.verticalLayout_35 = QVBoxLayout(self.implicits)
-        self.verticalLayout_35.setSpacing(0)
-        self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_35.setObjectName(u"verticalLayout_35")
-        self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
-        self.implicit_tree_view = CustomTreeView(self.implicits)
-        self.implicit_tree_view.setObjectName(u"implicit_tree_view")
-        sizePolicy1.setHeightForWidth(self.implicit_tree_view.sizePolicy().hasHeightForWidth())
-        self.implicit_tree_view.setSizePolicy(sizePolicy1)
-        self.implicit_tree_view.setFrameShape(QFrame.NoFrame)
-        self.implicit_tree_view.setFrameShadow(QFrame.Plain)
-        self.implicit_tree_view.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.implicit_tree_view.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.implicit_tree_view.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
-        self.implicit_tree_view.setAlternatingRowColors(False)
-        self.implicit_tree_view.setHorizontalScrollMode(QAbstractItemView.ScrollPerItem)
-        self.implicit_tree_view.setIndentation(10)
-        self.implicit_tree_view.setUniformRowHeights(True)
-        self.implicit_tree_view.header().setCascadingSectionResizes(False)
-        self.implicit_tree_view.header().setMinimumSectionSize(80)
-        self.implicit_tree_view.header().setStretchLastSection(False)
+        self.add_light_dmg_btn.setIcon(icon31)
+        self.add_light_dmg_btn.setIconSize(QSize(30, 30))
+        self.add_light_dmg_btn.setCheckable(True)
 
-        self.verticalLayout_35.addWidget(self.implicit_tree_view)
+        self.horizontalLayout.addWidget(self.add_light_dmg_btn)
 
-        self.modpool_container.addWidget(self.implicits)
-
-        self.verticalLayout_32.addWidget(self.modpool_container)
-
-
-        self.verticalLayout_39.addWidget(self.modpool_tabs)
-
-
-        self.horizontalLayout_5.addWidget(self.mods_container)
-
-
-        self.verticalLayout_8.addWidget(self.modpool_history_widget)
-
-
-        self.horizontalLayout_4.addWidget(self.available_mods_container)
-
-        self.item_view = QFrame(self.item_info_display)
-        self.item_view.setObjectName(u"item_view")
-        sizePolicy1.setHeightForWidth(self.item_view.sizePolicy().hasHeightForWidth())
-        self.item_view.setSizePolicy(sizePolicy1)
-        self.item_view.setMinimumSize(QSize(128, 298))
-        self.item_view.setMaximumSize(QSize(145, 418))
-        self.item_view.setStyleSheet(u"QWidget{\n"
-"border: 0px;\n"
-"background-color: none;\n"
+        self.add_high_tier_light_dmg_btn = QPushButton(self.two_hand_recipes_row_2)
+        self.add_high_tier_light_dmg_btn.setObjectName(u"add_high_tier_light_dmg_btn")
+        self.add_high_tier_light_dmg_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.add_high_tier_light_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.add_high_tier_light_dmg_btn.setSizePolicy(sizePolicy1)
+        self.add_high_tier_light_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.add_high_tier_light_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
+"font-weight: bold;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
 "}")
-        self.verticalLayout_2 = QVBoxLayout(self.item_view)
+        self.add_high_tier_light_dmg_btn.setIcon(icon31)
+        self.add_high_tier_light_dmg_btn.setIconSize(QSize(30, 30))
+        self.add_high_tier_light_dmg_btn.setCheckable(True)
+
+        self.horizontalLayout.addWidget(self.add_high_tier_light_dmg_btn)
+
+        self.percent_inc_phys_dmg_btn = QPushButton(self.two_hand_recipes_row_2)
+        self.percent_inc_phys_dmg_btn.setObjectName(u"percent_inc_phys_dmg_btn")
+        self.percent_inc_phys_dmg_btn.setEnabled(True)
+        sizePolicy1.setHeightForWidth(self.percent_inc_phys_dmg_btn.sizePolicy().hasHeightForWidth())
+        self.percent_inc_phys_dmg_btn.setSizePolicy(sizePolicy1)
+        self.percent_inc_phys_dmg_btn.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.percent_inc_phys_dmg_btn.setStyleSheet(u"QPushButton {\n"
+"                border: 1px solid #000;\n"
+"                border-radius: 4px;\n"
+"                background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);\n"
+"                border-image: none;\n"
+"              color: #FFF;\n"
+"               box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);\n"
+"                font-family: Open Sans;\n"
+"                font-size: 12px;\n"
+"               font-weight: bold;\n"
+"               height: 36px;\n"
+"                line-height: 36px;\n"
+"                text-align: center;\n"
+"				margin: 0px;\n"
+"				padding: 5px 10px;\n"
+"				cursor: pointer;\n"
+"				text-shadow: 1px 1px #000;\n"
+"				vertical-align: top;\n"
+"           }\n"
+"            QPushButton::hover {         \n"
+"	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));\n"
+"           }\n"
+"            QPushButton::pressed {\n"
+"                \n"
+"	background-color: qlinear"
+                        "gradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"            }\n"
+"			QPushButton::checked {\n"
+"				background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));\n"
+"				color: #332211;\n"
+"text-shadow: 1px 1px #FFF;\n"
+"box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);\n"
+"font-weight: bold;\n"
+"			}\n"
+"            QPushButton::flat {\n"
+"                border: none;\n"
+"}")
+        self.percent_inc_phys_dmg_btn.setIcon(icon31)
+        self.percent_inc_phys_dmg_btn.setIconSize(QSize(30, 30))
+        self.percent_inc_phys_dmg_btn.setCheckable(True)
+
+        self.horizontalLayout.addWidget(self.percent_inc_phys_dmg_btn)
+
+
+        self.verticalLayout_26.addWidget(self.two_hand_recipes_row_2)
+
+
+        self.verticalLayout_13.addWidget(self.fossil_btns_container_2, 0, Qt.AlignTop)
+
+        self.vendor_recipe_pages.addWidget(self.two_hand_weapon_recipes)
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"page_2")
+        self.vendor_recipe_pages.addWidget(self.page_2)
+
+        self.verticalLayout_14.addWidget(self.vendor_recipe_pages, 0, Qt.AlignTop)
+
+        self.crafting_method_pages.addWidget(self.vendor_recipe_crafts)
+        self.page = QWidget()
+        self.page.setObjectName(u"page")
+        self.crafting_method_pages.addWidget(self.page)
+
+        self.verticalLayout_7.addWidget(self.crafting_method_pages, 0, Qt.AlignTop)
+
+
+        self.gridLayout_3.addWidget(self.crafting_methods_container, 0, 0, 1, 1)
+
+        self.crafting_zone_container = QWidget(self.crafting_simulator)
+        self.crafting_zone_container.setObjectName(u"crafting_zone_container")
+        sizePolicy1.setHeightForWidth(self.crafting_zone_container.sizePolicy().hasHeightForWidth())
+        self.crafting_zone_container.setSizePolicy(sizePolicy1)
+        self.crafting_zone_container.setStyleSheet(u"QWidget {\n"
+"border-image: none;\n"
+"}")
+        self.horizontalLayout_4 = QHBoxLayout(self.crafting_zone_container)
+        self.horizontalLayout_4.setSpacing(0)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.item_display_frame = QFrame(self.crafting_zone_container)
+        self.item_display_frame.setObjectName(u"item_display_frame")
+        sizePolicy4.setHeightForWidth(self.item_display_frame.sizePolicy().hasHeightForWidth())
+        self.item_display_frame.setSizePolicy(sizePolicy4)
+        self.item_display_frame.setFrameShape(QFrame.StyledPanel)
+        self.item_display_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_2 = QVBoxLayout(self.item_display_frame)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.item_img_box = QLabel(self.item_view)
-        self.item_img_box.setObjectName(u"item_img_box")
-        sizePolicy1.setHeightForWidth(self.item_img_box.sizePolicy().hasHeightForWidth())
-        self.item_img_box.setSizePolicy(sizePolicy1)
-        self.item_img_box.setMinimumSize(QSize(128, 228))
-        self.item_img_box.setMaximumSize(QSize(128, 228))
-        self.item_img_box.setStyleSheet(u"QLabel{\n"
+        self.item_view_frame = QFrame(self.item_display_frame)
+        self.item_view_frame.setObjectName(u"item_view_frame")
+        sizePolicy1.setHeightForWidth(self.item_view_frame.sizePolicy().hasHeightForWidth())
+        self.item_view_frame.setSizePolicy(sizePolicy1)
+        self.item_view_frame.setMinimumSize(QSize(128, 269))
+        self.item_view_frame.setMaximumSize(QSize(145, 269))
+        self.item_view_frame.setStyleSheet(u"QWidget{\n"
+"border: 0px;\n"
+"background-color: none;\n"
+"}")
+        self.item_view_layout = QVBoxLayout(self.item_view_frame)
+        self.item_view_layout.setSpacing(0)
+        self.item_view_layout.setContentsMargins(0, 0, 0, 0)
+        self.item_view_layout.setObjectName(u"item_view_layout")
+        self.item_view_layout.setContentsMargins(0, 0, 0, 0)
+        self.item_img_frame = QFrame(self.item_view_frame)
+        self.item_img_frame.setObjectName(u"item_img_frame")
+        self.item_img_frame.setMinimumSize(QSize(0, 228))
+        self.item_img_frame.setFrameShape(QFrame.StyledPanel)
+        self.item_img_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout = QVBoxLayout(self.item_img_frame)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.item_img_label = QLabel(self.item_img_frame)
+        self.item_img_label.setObjectName(u"item_img_label")
+        sizePolicy10 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy10.setHorizontalStretch(0)
+        sizePolicy10.setVerticalStretch(0)
+        sizePolicy10.setHeightForWidth(self.item_img_label.sizePolicy().hasHeightForWidth())
+        self.item_img_label.setSizePolicy(sizePolicy10)
+        self.item_img_label.setMinimumSize(QSize(128, 228))
+        self.item_img_label.setMaximumSize(QSize(128, 228))
+        self.item_img_label.setStyleSheet(u"QLabel{\n"
 "	background-image: url(:/images/assets/images/item_box.png);\n"
 "opacity: 0.8;\n"
 "}\n"
@@ -7689,182 +7787,351 @@ class Ui_MainWindow(object):
 "background-color:#ffffff;\n"
 "opacity: 1;\n"
 "}")
-        self.item_img_box.setScaledContents(True)
-        self.item_img_box.setAlignment(Qt.AlignCenter)
+        self.item_img_label.setScaledContents(True)
+        self.item_img_label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_2.addWidget(self.item_img_box, 0, Qt.AlignVCenter)
+        self.verticalLayout.addWidget(self.item_img_label)
 
-        self.crafting_button = QLabel(self.item_view)
-        self.crafting_button.setObjectName(u"crafting_button")
-        sizePolicy1.setHeightForWidth(self.crafting_button.sizePolicy().hasHeightForWidth())
-        self.crafting_button.setSizePolicy(sizePolicy1)
-        self.crafting_button.setMinimumSize(QSize(0, 39))
-        self.crafting_button.setMaximumSize(QSize(128, 39))
-        self.crafting_button.setCursor(QCursor(Qt.PointingHandCursor))
-        self.crafting_button.setFocusPolicy(Qt.StrongFocus)
-        self.crafting_button.setStyleSheet(u"QLabel{\n"
+
+        self.item_view_layout.addWidget(self.item_img_frame)
+
+        self.crafting_btn_frame = QFrame(self.item_view_frame)
+        self.crafting_btn_frame.setObjectName(u"crafting_btn_frame")
+        sizePolicy11 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        sizePolicy11.setHorizontalStretch(0)
+        sizePolicy11.setVerticalStretch(0)
+        sizePolicy11.setHeightForWidth(self.crafting_btn_frame.sizePolicy().hasHeightForWidth())
+        self.crafting_btn_frame.setSizePolicy(sizePolicy11)
+        self.crafting_btn_frame.setFrameShape(QFrame.StyledPanel)
+        self.crafting_btn_frame.setFrameShadow(QFrame.Raised)
+        self.crafting_btn_layout = QVBoxLayout(self.crafting_btn_frame)
+        self.crafting_btn_layout.setSpacing(0)
+        self.crafting_btn_layout.setContentsMargins(0, 0, 0, 0)
+        self.crafting_btn_layout.setObjectName(u"crafting_btn_layout")
+        self.crafting_btn_layout.setContentsMargins(0, 0, 0, 0)
+        self.crafting_btn_label = QLabel(self.crafting_btn_frame)
+        self.crafting_btn_label.setObjectName(u"crafting_btn_label")
+        sizePolicy10.setHeightForWidth(self.crafting_btn_label.sizePolicy().hasHeightForWidth())
+        self.crafting_btn_label.setSizePolicy(sizePolicy10)
+        self.crafting_btn_label.setMinimumSize(QSize(0, 39))
+        self.crafting_btn_label.setMaximumSize(QSize(128, 39))
+        self.crafting_btn_label.setCursor(PySide6.QtGui.QCursor(Qt.PointingHandCursor))
+        self.crafting_btn_label.setFocusPolicy(Qt.StrongFocus)
+        self.crafting_btn_label.setStyleSheet(u"QLabel{\n"
 "	background-image: url(:/images/assets/images/craftbtn.png);\n"
 "}\n"
 "QLabel::hover{\n"
 "	background-image: url(:/images/assets/images/craftbtnov.png);\n"
 "}")
-        self.crafting_button.setScaledContents(True)
-        self.crafting_button.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.crafting_btn_label.setScaledContents(True)
+        self.crafting_btn_label.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
 
-        self.verticalLayout_2.addWidget(self.crafting_button)
+        self.crafting_btn_layout.addWidget(self.crafting_btn_label)
 
-        self.item_dps_container = QWidget(self.item_view)
-        self.item_dps_container.setObjectName(u"item_dps_container")
-        sizePolicy1.setHeightForWidth(self.item_dps_container.sizePolicy().hasHeightForWidth())
-        self.item_dps_container.setSizePolicy(sizePolicy1)
-        self.verticalLayout = QVBoxLayout(self.item_dps_container)
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.item_dps_box = QLabel(self.item_dps_container)
-        self.item_dps_box.setObjectName(u"item_dps_box")
-        sizePolicy1.setHeightForWidth(self.item_dps_box.sizePolicy().hasHeightForWidth())
-        self.item_dps_box.setSizePolicy(sizePolicy1)
-        self.item_dps_box.setStyleSheet(u"QLabel {\n"
-"    border: 2px solid #8f8f91;\n"
-"    border-radius: 6px;\n"
-"    background-color: hsla(100, 100%, 100%, 0.1);\n"
+
+        self.item_view_layout.addWidget(self.crafting_btn_frame, 0, Qt.AlignTop)
+
+
+        self.verticalLayout_2.addWidget(self.item_view_frame)
+
+        self.item_dps_frame = QFrame(self.item_display_frame)
+        self.item_dps_frame.setObjectName(u"item_dps_frame")
+        sizePolicy.setHeightForWidth(self.item_dps_frame.sizePolicy().hasHeightForWidth())
+        self.item_dps_frame.setSizePolicy(sizePolicy)
+        self.item_dps_frame.setFrameShape(QFrame.StyledPanel)
+        self.item_dps_frame.setFrameShadow(QFrame.Raised)
+        self.item_dps_layout = QVBoxLayout(self.item_dps_frame)
+        self.item_dps_layout.setSpacing(6)
+        self.item_dps_layout.setContentsMargins(0, 0, 0, 0)
+        self.item_dps_layout.setObjectName(u"item_dps_layout")
+        self.item_dps_layout.setContentsMargins(10, 10, 10, 10)
+        self.phys_dps_label = QLabel(self.item_dps_frame)
+        self.phys_dps_label.setObjectName(u"phys_dps_label")
+        sizePolicy3.setHeightForWidth(self.phys_dps_label.sizePolicy().hasHeightForWidth())
+        self.phys_dps_label.setSizePolicy(sizePolicy3)
+        self.phys_dps_label.setMinimumSize(QSize(0, 30))
+        self.phys_dps_label.setStyleSheet(u"QLabel {\n"
+"border: 1px solid #edc57d;\n"
+"background: #000;\n"
+"padding: 2px 3px 4px 2px;\n"
 "}")
-        self.item_dps_box.setFrameShape(QFrame.NoFrame)
-        self.item_dps_box.setFrameShadow(QFrame.Plain)
-        self.item_dps_box.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
-        self.item_dps_box.setMargin(0)
+        self.phys_dps_label.setFrameShape(QFrame.NoFrame)
+        self.phys_dps_label.setFrameShadow(QFrame.Plain)
+        self.phys_dps_label.setLineWidth(0)
+        self.phys_dps_label.setMidLineWidth(0)
+        self.phys_dps_label.setScaledContents(False)
+        self.phys_dps_label.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.phys_dps_label.setMargin(0)
 
-        self.verticalLayout.addWidget(self.item_dps_box)
+        self.item_dps_layout.addWidget(self.phys_dps_label)
 
-
-        self.verticalLayout_2.addWidget(self.item_dps_container)
-
-
-        self.horizontalLayout_4.addWidget(self.item_view, 0, Qt.AlignHCenter)
-
-        self.item_description = QWidget(self.item_info_display)
-        self.item_description.setObjectName(u"item_description")
-        sizePolicy12 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy12.setHorizontalStretch(0)
-        sizePolicy12.setVerticalStretch(0)
-        sizePolicy12.setHeightForWidth(self.item_description.sizePolicy().hasHeightForWidth())
-        self.item_description.setSizePolicy(sizePolicy12)
-        self.item_description.setMinimumSize(QSize(400, 400))
-        self.item_description.setMaximumSize(QSize(400, 500))
-        self.item_description.setBaseSize(QSize(400, 319))
-        self.item_description.setTabletTracking(False)
-        self.item_description.setContextMenuPolicy(Qt.NoContextMenu)
-        self.item_description.setLayoutDirection(Qt.LeftToRight)
-        self.item_description.setStyleSheet(u"QWidget {\n"
-"border: 0px;\n"
-"border-radius: 0px;\n"
-"font: fontin;\n"
-"background-color: black;\n"
-"background-color: hsla(0, 0%, 0%, .8);\n"
-"border-image: none;\n"
-"background-image: none;\n"
-"}\n"
-"\n"
-"QLabel {\n"
-"background-color: black;\n"
-"background-color: hsla(0, 0%, 0%, .8);\n"
-"\n"
+        self.ele_dps_label = QLabel(self.item_dps_frame)
+        self.ele_dps_label.setObjectName(u"ele_dps_label")
+        sizePolicy11.setHeightForWidth(self.ele_dps_label.sizePolicy().hasHeightForWidth())
+        self.ele_dps_label.setSizePolicy(sizePolicy11)
+        self.ele_dps_label.setMinimumSize(QSize(0, 30))
+        self.ele_dps_label.setStyleSheet(u"QLabel {\n"
+"border: 1px solid #edc57d;\n"
+"background: #000;\n"
+"padding: 2px 3px 4px 2px;\n"
+"magin-bottom: 0px;\n"
 "}")
-        self.verticalLayout_28 = QVBoxLayout(self.item_description)
-        self.verticalLayout_28.setSpacing(0)
-        self.verticalLayout_28.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_28.setObjectName(u"verticalLayout_28")
-        self.verticalLayout_28.setContentsMargins(0, 0, 0, 0)
-        self.item_description_layout = QFrame(self.item_description)
-        self.item_description_layout.setObjectName(u"item_description_layout")
-        sizePolicy13 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
-        sizePolicy13.setHorizontalStretch(0)
-        sizePolicy13.setVerticalStretch(0)
-        sizePolicy13.setHeightForWidth(self.item_description_layout.sizePolicy().hasHeightForWidth())
-        self.item_description_layout.setSizePolicy(sizePolicy13)
-        self.item_description_layout.setMinimumSize(QSize(400, 318))
-        self.item_description_layout.setMaximumSize(QSize(400, 800))
-        self.item_description_layout.setMouseTracking(False)
-        self.item_description_layout.setStyleSheet(u"")
-        self.verticalLayout_4 = QVBoxLayout(self.item_description_layout)
-        self.verticalLayout_4.setSpacing(0)
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.item_header = QWidget(self.item_description_layout)
-        self.item_header.setObjectName(u"item_header")
-        sizePolicy12.setHeightForWidth(self.item_header.sizePolicy().hasHeightForWidth())
-        self.item_header.setSizePolicy(sizePolicy12)
-        self.item_header.setMinimumSize(QSize(400, 54))
-        self.item_header.setMaximumSize(QSize(400, 54))
-        self.item_header.setBaseSize(QSize(400, 44))
-        self.item_header.setContextMenuPolicy(Qt.NoContextMenu)
-        self.verticalLayout_10 = QVBoxLayout(self.item_header)
-        self.verticalLayout_10.setSpacing(0)
-        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.item_header_text_label = QLabel(self.item_header)
-        self.item_header_text_label.setObjectName(u"item_header_text_label")
-        self.item_header_text_label.setEnabled(True)
-        sizePolicy14 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy14.setHorizontalStretch(0)
-        sizePolicy14.setVerticalStretch(0)
-        sizePolicy14.setHeightForWidth(self.item_header_text_label.sizePolicy().hasHeightForWidth())
-        self.item_header_text_label.setSizePolicy(sizePolicy14)
-        self.item_header_text_label.setMinimumSize(QSize(400, 54))
-        self.item_header_text_label.setMaximumSize(QSize(400, 54))
-        font6 = QFont()
-        font6.setFamilies([u"Open Sans"])
-        font6.setBold(False)
-        font6.setItalic(False)
-        font6.setKerning(True)
-        self.item_header_text_label.setFont(font6)
-        self.item_header_text_label.setStyleSheet(u"background-image: url(:/images/assets/images/item-header-normal.png);")
-        self.item_header_text_label.setTextFormat(Qt.RichText)
-        self.item_header_text_label.setScaledContents(True)
-        self.item_header_text_label.setAlignment(Qt.AlignCenter)
-        self.item_header_text_label.setWordWrap(True)
 
-        self.verticalLayout_10.addWidget(self.item_header_text_label)
+        self.item_dps_layout.addWidget(self.ele_dps_label)
+
+        self.total_dps_label = QLabel(self.item_dps_frame)
+        self.total_dps_label.setObjectName(u"total_dps_label")
+        sizePolicy11.setHeightForWidth(self.total_dps_label.sizePolicy().hasHeightForWidth())
+        self.total_dps_label.setSizePolicy(sizePolicy11)
+        self.total_dps_label.setMinimumSize(QSize(0, 30))
+        self.total_dps_label.setStyleSheet(u"QLabel {\n"
+"border: 1px solid #edc57d;\n"
+"background: #000;\n"
+"padding: 2px 3px 4px 2px;\n"
+"magin-bottom: 0px;\n"
+"}")
+
+        self.item_dps_layout.addWidget(self.total_dps_label)
+
+        self.affix_total_label = QLabel(self.item_dps_frame)
+        self.affix_total_label.setObjectName(u"affix_total_label")
+        sizePolicy11.setHeightForWidth(self.affix_total_label.sizePolicy().hasHeightForWidth())
+        self.affix_total_label.setSizePolicy(sizePolicy11)
+        self.affix_total_label.setMinimumSize(QSize(0, 30))
+        self.affix_total_label.setStyleSheet(u"QLabel {\n"
+"border: 1px solid #edc57d;\n"
+"background: #000;\n"
+"padding: 2px 3px 4px 2px;\n"
+"magin-bottom: 0px;\n"
+"}")
+
+        self.item_dps_layout.addWidget(self.affix_total_label, 0, Qt.AlignTop)
 
 
-        self.verticalLayout_4.addWidget(self.item_header)
+        self.verticalLayout_2.addWidget(self.item_dps_frame, 0, Qt.AlignVCenter)
 
-        self.item_info_box = QWidget(self.item_description_layout)
-        self.item_info_box.setObjectName(u"item_info_box")
-        sizePolicy.setHeightForWidth(self.item_info_box.sizePolicy().hasHeightForWidth())
-        self.item_info_box.setSizePolicy(sizePolicy)
-        self.item_info_box.setMinimumSize(QSize(400, 0))
-        self.item_info_box.setMaximumSize(QSize(400, 500))
-        self.verticalLayout_5 = QVBoxLayout(self.item_info_box)
+
+        self.horizontalLayout_4.addWidget(self.item_display_frame)
+
+        self.modpool_widget = QWidget(self.crafting_zone_container)
+        self.modpool_widget.setObjectName(u"modpool_widget")
+        sizePolicy1.setHeightForWidth(self.modpool_widget.sizePolicy().hasHeightForWidth())
+        self.modpool_widget.setSizePolicy(sizePolicy1)
+        self.modpool_widget.setMinimumSize(QSize(110, 200))
+        self.modpool_widget.setMaximumSize(QSize(360, 360))
+        self.verticalLayout_5 = QVBoxLayout(self.modpool_widget)
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.affixes = QWidget(self.item_info_box)
-        self.affixes.setObjectName(u"affixes")
-        sizePolicy14.setHeightForWidth(self.affixes.sizePolicy().hasHeightForWidth())
-        self.affixes.setSizePolicy(sizePolicy14)
-        self.affixes.setMinimumSize(QSize(400, 0))
-        self.affixes.setMaximumSize(QSize(400, 150))
-        self.affixes.setStyleSheet(u"color: #827a6c;\n"
-"padding: 2px 10px;\n"
-"    font-size: 14px;\n"
-"	font-style: fontin;\n"
-"    line-height: 14px;\n"
-"	font-align: center;")
-        self.verticalLayout_3 = QVBoxLayout(self.affixes)
+        self.modpool_btns_layout_2 = QWidget(self.modpool_widget)
+        self.modpool_btns_layout_2.setObjectName(u"modpool_btns_layout_2")
+        self.horizontalLayout_3 = QHBoxLayout(self.modpool_btns_layout_2)
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.prefix_btn_2 = QPushButton(self.modpool_btns_layout_2)
+        self.prefix_btn_2.setObjectName(u"prefix_btn_2")
+        self.prefix_btn_2.setCheckable(True)
+        self.prefix_btn_2.setFlat(False)
+
+        self.horizontalLayout_3.addWidget(self.prefix_btn_2)
+
+        self.suffix_btn_2 = QPushButton(self.modpool_btns_layout_2)
+        self.suffix_btn_2.setObjectName(u"suffix_btn_2")
+        self.suffix_btn_2.setCheckable(True)
+        self.suffix_btn_2.setFlat(False)
+
+        self.horizontalLayout_3.addWidget(self.suffix_btn_2)
+
+        self.implicit_btn_2 = QPushButton(self.modpool_btns_layout_2)
+        self.implicit_btn_2.setObjectName(u"implicit_btn_2")
+        self.implicit_btn_2.setStyleSheet(u"QPushButton {\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(109, 60, 60, 1), stop:1 rgba(136, 75, 75, 255));\n"
+"margin: 0px;\n"
+"font-family: Open Sans;\n"
+"font-size: 14px;\n"
+"font-weight: bold;\n"
+"text-transform: uppercase;\n"
+"box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba (0, 0, 0, 0.31);\n"
+"border: 1px solid #000;\n"
+"color: #FFF;\n"
+"text-shadow: 1px 1px #000;\n"
+"padding: 5px 10 px;\n"
+"}")
+        self.implicit_btn_2.setCheckable(True)
+        self.implicit_btn_2.setFlat(False)
+
+        self.horizontalLayout_3.addWidget(self.implicit_btn_2)
+
+
+        self.verticalLayout_5.addWidget(self.modpool_btns_layout_2)
+
+        self.modpool_container_2 = QStackedWidget(self.modpool_widget)
+        self.modpool_container_2.setObjectName(u"modpool_container_2")
+        sizePolicy1.setHeightForWidth(self.modpool_container_2.sizePolicy().hasHeightForWidth())
+        self.modpool_container_2.setSizePolicy(sizePolicy1)
+        self.modpool_container_2.setAutoFillBackground(False)
+        self.modpool_container_2.setFrameShape(QFrame.NoFrame)
+        self.modpool_container_2.setFrameShadow(QFrame.Plain)
+        self.prefix_container_2 = QWidget()
+        self.prefix_container_2.setObjectName(u"prefix_container_2")
+        self.verticalLayout_35 = QVBoxLayout(self.prefix_container_2)
+        self.verticalLayout_35.setSpacing(0)
+        self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_35.setObjectName(u"verticalLayout_35")
+        self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
+        self.prefix_tree_view_2 = CustomTreeView(self.prefix_container_2)
+        self.prefix_tree_view_2.setObjectName(u"prefix_tree_view_2")
+        sizePolicy1.setHeightForWidth(self.prefix_tree_view_2.sizePolicy().hasHeightForWidth())
+        self.prefix_tree_view_2.setSizePolicy(sizePolicy1)
+        self.prefix_tree_view_2.setFocusPolicy(Qt.TabFocus)
+        self.prefix_tree_view_2.setFrameShape(QFrame.StyledPanel)
+        self.prefix_tree_view_2.setFrameShadow(QFrame.Raised)
+        self.prefix_tree_view_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.prefix_tree_view_2.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
+        self.prefix_tree_view_2.setAlternatingRowColors(False)
+        self.prefix_tree_view_2.setTextElideMode(Qt.ElideRight)
+        self.prefix_tree_view_2.setHorizontalScrollMode(QAbstractItemView.ScrollPerItem)
+        self.prefix_tree_view_2.setIndentation(10)
+        self.prefix_tree_view_2.setUniformRowHeights(True)
+        self.prefix_tree_view_2.header().setCascadingSectionResizes(False)
+        self.prefix_tree_view_2.header().setMinimumSectionSize(80)
+        self.prefix_tree_view_2.header().setStretchLastSection(False)
+
+        self.verticalLayout_35.addWidget(self.prefix_tree_view_2)
+
+        self.modpool_container_2.addWidget(self.prefix_container_2)
+        self.suffix_container_2 = QWidget()
+        self.suffix_container_2.setObjectName(u"suffix_container_2")
+        self.verticalLayout_37 = QVBoxLayout(self.suffix_container_2)
+        self.verticalLayout_37.setSpacing(0)
+        self.verticalLayout_37.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_37.setObjectName(u"verticalLayout_37")
+        self.verticalLayout_37.setContentsMargins(0, 0, 0, 0)
+        self.suffix_tree_view_2 = CustomTreeView(self.suffix_container_2)
+        self.suffix_tree_view_2.setObjectName(u"suffix_tree_view_2")
+        sizePolicy.setHeightForWidth(self.suffix_tree_view_2.sizePolicy().hasHeightForWidth())
+        self.suffix_tree_view_2.setSizePolicy(sizePolicy)
+        self.suffix_tree_view_2.setFrameShape(QFrame.StyledPanel)
+        self.suffix_tree_view_2.setFrameShadow(QFrame.Raised)
+        self.suffix_tree_view_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.suffix_tree_view_2.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
+        self.suffix_tree_view_2.setAlternatingRowColors(False)
+        self.suffix_tree_view_2.setHorizontalScrollMode(QAbstractItemView.ScrollPerItem)
+        self.suffix_tree_view_2.setIndentation(10)
+        self.suffix_tree_view_2.setUniformRowHeights(True)
+        self.suffix_tree_view_2.header().setCascadingSectionResizes(False)
+        self.suffix_tree_view_2.header().setMinimumSectionSize(80)
+        self.suffix_tree_view_2.header().setStretchLastSection(False)
+
+        self.verticalLayout_37.addWidget(self.suffix_tree_view_2)
+
+        self.modpool_container_2.addWidget(self.suffix_container_2)
+        self.implicit_container_2 = QWidget()
+        self.implicit_container_2.setObjectName(u"implicit_container_2")
+        self.verticalLayout_38 = QVBoxLayout(self.implicit_container_2)
+        self.verticalLayout_38.setSpacing(0)
+        self.verticalLayout_38.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_38.setObjectName(u"verticalLayout_38")
+        self.verticalLayout_38.setContentsMargins(0, 0, 0, 0)
+        self.implicit_tree_view_2 = CustomTreeView(self.implicit_container_2)
+        self.implicit_tree_view_2.setObjectName(u"implicit_tree_view_2")
+        sizePolicy.setHeightForWidth(self.implicit_tree_view_2.sizePolicy().hasHeightForWidth())
+        self.implicit_tree_view_2.setSizePolicy(sizePolicy)
+        self.implicit_tree_view_2.setFrameShape(QFrame.StyledPanel)
+        self.implicit_tree_view_2.setFrameShadow(QFrame.Raised)
+        self.implicit_tree_view_2.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.implicit_tree_view_2.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
+        self.implicit_tree_view_2.setAlternatingRowColors(False)
+        self.implicit_tree_view_2.setHorizontalScrollMode(QAbstractItemView.ScrollPerItem)
+        self.implicit_tree_view_2.setIndentation(10)
+        self.implicit_tree_view_2.setUniformRowHeights(True)
+        self.implicit_tree_view_2.header().setCascadingSectionResizes(False)
+        self.implicit_tree_view_2.header().setMinimumSectionSize(80)
+        self.implicit_tree_view_2.header().setStretchLastSection(False)
+
+        self.verticalLayout_38.addWidget(self.implicit_tree_view_2)
+
+        self.modpool_container_2.addWidget(self.implicit_container_2)
+
+        self.verticalLayout_5.addWidget(self.modpool_container_2)
+
+
+        self.horizontalLayout_4.addWidget(self.modpool_widget)
+
+        self.item_info_frame = QFrame(self.crafting_zone_container)
+        self.item_info_frame.setObjectName(u"item_info_frame")
+        sizePolicy6.setHeightForWidth(self.item_info_frame.sizePolicy().hasHeightForWidth())
+        self.item_info_frame.setSizePolicy(sizePolicy6)
+        self.item_info_frame.setFrameShape(QFrame.StyledPanel)
+        self.item_info_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_3 = QVBoxLayout(self.item_info_frame)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.item_properties = QLabel(self.affixes)
+        self.item_header_frame = QFrame(self.item_info_frame)
+        self.item_header_frame.setObjectName(u"item_header_frame")
+        sizePolicy10.setHeightForWidth(self.item_header_frame.sizePolicy().hasHeightForWidth())
+        self.item_header_frame.setSizePolicy(sizePolicy10)
+        self.item_header_frame.setMinimumSize(QSize(400, 54))
+        self.item_header_frame.setMaximumSize(QSize(400, 54))
+        self.item_header_frame.setBaseSize(QSize(400, 44))
+        self.item_header_frame.setContextMenuPolicy(Qt.NoContextMenu)
+        self.item_header_layout = QVBoxLayout(self.item_header_frame)
+        self.item_header_layout.setSpacing(0)
+        self.item_header_layout.setContentsMargins(0, 0, 0, 0)
+        self.item_header_layout.setObjectName(u"item_header_layout")
+        self.item_header_layout.setContentsMargins(0, 0, 0, 0)
+        self.item_header_label = QLabel(self.item_header_frame)
+        self.item_header_label.setObjectName(u"item_header_label")
+        self.item_header_label.setEnabled(True)
+        sizePolicy12 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy12.setHorizontalStretch(0)
+        sizePolicy12.setVerticalStretch(0)
+        sizePolicy12.setHeightForWidth(self.item_header_label.sizePolicy().hasHeightForWidth())
+        self.item_header_label.setSizePolicy(sizePolicy12)
+        self.item_header_label.setMinimumSize(QSize(400, 54))
+        self.item_header_label.setMaximumSize(QSize(400, 54))
+        font3 = PySide6.QtGui.QFont()
+        font3.setFamilies([u"Open Sans"])
+        font3.setBold(False)
+        font3.setItalic(False)
+        font3.setKerning(True)
+        self.item_header_label.setFont(font3)
+        self.item_header_label.setStyleSheet(u"QLabel {\n"
+"	background-image: url(:/images/assets/images/item-header-normal.png);\n"
+"}")
+        self.item_header_label.setTextFormat(Qt.RichText)
+        self.item_header_label.setScaledContents(False)
+        self.item_header_label.setAlignment(Qt.AlignCenter)
+        self.item_header_label.setWordWrap(True)
+
+        self.item_header_layout.addWidget(self.item_header_label)
+
+
+        self.verticalLayout_3.addWidget(self.item_header_frame)
+
+        self.item_affix_frame = QFrame(self.item_info_frame)
+        self.item_affix_frame.setObjectName(u"item_affix_frame")
+        sizePolicy.setHeightForWidth(self.item_affix_frame.sizePolicy().hasHeightForWidth())
+        self.item_affix_frame.setSizePolicy(sizePolicy)
+        self.item_affix_frame.setStyleSheet(u"background-color: rgb(0, 0, 0);")
+        self.item_affix_frame.setFrameShape(QFrame.StyledPanel)
+        self.item_affix_frame.setFrameShadow(QFrame.Raised)
+        self.item_affix_layout = QVBoxLayout(self.item_affix_frame)
+        self.item_affix_layout.setSpacing(0)
+        self.item_affix_layout.setContentsMargins(0, 0, 0, 0)
+        self.item_affix_layout.setObjectName(u"item_affix_layout")
+        self.item_properties = QLabel(self.item_affix_frame)
         self.item_properties.setObjectName(u"item_properties")
-        sizePolicy.setHeightForWidth(self.item_properties.sizePolicy().hasHeightForWidth())
-        self.item_properties.setSizePolicy(sizePolicy)
+        sizePolicy13 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred)
+        sizePolicy13.setHorizontalStretch(0)
+        sizePolicy13.setVerticalStretch(0)
+        sizePolicy13.setHeightForWidth(self.item_properties.sizePolicy().hasHeightForWidth())
+        self.item_properties.setSizePolicy(sizePolicy13)
         self.item_properties.setMinimumSize(QSize(0, 0))
         self.item_properties.setMaximumSize(QSize(16777215, 100))
         self.item_properties.setStyleSheet(u"QLabel{\n"
@@ -7878,28 +8145,28 @@ class Ui_MainWindow(object):
         self.item_properties.setTextFormat(Qt.RichText)
         self.item_properties.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_3.addWidget(self.item_properties)
+        self.item_affix_layout.addWidget(self.item_properties)
 
-        self.item_spacer_1 = QLabel(self.affixes)
+        self.item_spacer_1 = QLabel(self.item_affix_frame)
         self.item_spacer_1.setObjectName(u"item_spacer_1")
-        sizePolicy15 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-        sizePolicy15.setHorizontalStretch(0)
-        sizePolicy15.setVerticalStretch(0)
-        sizePolicy15.setHeightForWidth(self.item_spacer_1.sizePolicy().hasHeightForWidth())
-        self.item_spacer_1.setSizePolicy(sizePolicy15)
+        sizePolicy14 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy14.setHorizontalStretch(0)
+        sizePolicy14.setVerticalStretch(0)
+        sizePolicy14.setHeightForWidth(self.item_spacer_1.sizePolicy().hasHeightForWidth())
+        self.item_spacer_1.setSizePolicy(sizePolicy14)
         self.item_spacer_1.setMaximumSize(QSize(400, 2))
         self.item_spacer_1.setBaseSize(QSize(0, 0))
         self.item_spacer_1.setTextFormat(Qt.RichText)
-        self.item_spacer_1.setPixmap(QPixmap(u":/images/assets/images/item-sep.png"))
+        self.item_spacer_1.setPixmap(PySide6.QtGui.QPixmap(u":/images/assets/images/item-sep.png"))
         self.item_spacer_1.setScaledContents(False)
         self.item_spacer_1.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_3.addWidget(self.item_spacer_1)
+        self.item_affix_layout.addWidget(self.item_spacer_1)
 
-        self.item_requirements = QLabel(self.affixes)
+        self.item_requirements = QLabel(self.item_affix_frame)
         self.item_requirements.setObjectName(u"item_requirements")
-        sizePolicy.setHeightForWidth(self.item_requirements.sizePolicy().hasHeightForWidth())
-        self.item_requirements.setSizePolicy(sizePolicy)
+        sizePolicy13.setHeightForWidth(self.item_requirements.sizePolicy().hasHeightForWidth())
+        self.item_requirements.setSizePolicy(sizePolicy13)
         self.item_requirements.setMaximumSize(QSize(16777215, 100))
         self.item_requirements.setStyleSheet(u"QLabel{\n"
 "color: #827a6c;\n"
@@ -7912,26 +8179,26 @@ class Ui_MainWindow(object):
         self.item_requirements.setTextFormat(Qt.RichText)
         self.item_requirements.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_3.addWidget(self.item_requirements)
+        self.item_affix_layout.addWidget(self.item_requirements)
 
-        self.item_spacer_2 = QLabel(self.affixes)
+        self.item_spacer_2 = QLabel(self.item_affix_frame)
         self.item_spacer_2.setObjectName(u"item_spacer_2")
-        sizePolicy15.setHeightForWidth(self.item_spacer_2.sizePolicy().hasHeightForWidth())
-        self.item_spacer_2.setSizePolicy(sizePolicy15)
+        sizePolicy14.setHeightForWidth(self.item_spacer_2.sizePolicy().hasHeightForWidth())
+        self.item_spacer_2.setSizePolicy(sizePolicy14)
         self.item_spacer_2.setMaximumSize(QSize(400, 2))
         self.item_spacer_2.setBaseSize(QSize(0, 0))
         self.item_spacer_2.setTextFormat(Qt.RichText)
-        self.item_spacer_2.setPixmap(QPixmap(u":/images/assets/images/item-sep.png"))
+        self.item_spacer_2.setPixmap(PySide6.QtGui.QPixmap(u":/images/assets/images/item-sep.png"))
         self.item_spacer_2.setScaledContents(False)
         self.item_spacer_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_3.addWidget(self.item_spacer_2)
+        self.item_affix_layout.addWidget(self.item_spacer_2)
 
-        self.item_implicits = QLabel(self.affixes)
+        self.item_implicits = QLabel(self.item_affix_frame)
         self.item_implicits.setObjectName(u"item_implicits")
         self.item_implicits.setEnabled(False)
-        sizePolicy.setHeightForWidth(self.item_implicits.sizePolicy().hasHeightForWidth())
-        self.item_implicits.setSizePolicy(sizePolicy)
+        sizePolicy13.setHeightForWidth(self.item_implicits.sizePolicy().hasHeightForWidth())
+        self.item_implicits.setSizePolicy(sizePolicy13)
         self.item_implicits.setMaximumSize(QSize(16777215, 100))
         self.item_implicits.setStyleSheet(u"QLabel{\n"
 "color: #8787fe;\n"
@@ -7945,41 +8212,45 @@ class Ui_MainWindow(object):
         self.item_implicits.setAlignment(Qt.AlignCenter)
         self.item_implicits.setWordWrap(True)
 
-        self.verticalLayout_3.addWidget(self.item_implicits)
+        self.item_affix_layout.addWidget(self.item_implicits)
 
-        self.item_spacer_3 = QLabel(self.affixes)
+        self.item_spacer_3 = QLabel(self.item_affix_frame)
         self.item_spacer_3.setObjectName(u"item_spacer_3")
         self.item_spacer_3.setEnabled(False)
-        sizePolicy15.setHeightForWidth(self.item_spacer_3.sizePolicy().hasHeightForWidth())
-        self.item_spacer_3.setSizePolicy(sizePolicy15)
+        sizePolicy14.setHeightForWidth(self.item_spacer_3.sizePolicy().hasHeightForWidth())
+        self.item_spacer_3.setSizePolicy(sizePolicy14)
         self.item_spacer_3.setMaximumSize(QSize(400, 2))
         self.item_spacer_3.setBaseSize(QSize(0, 0))
         self.item_spacer_3.setTextFormat(Qt.RichText)
-        self.item_spacer_3.setPixmap(QPixmap(u":/images/assets/images/item-sep.png"))
+        self.item_spacer_3.setPixmap(PySide6.QtGui.QPixmap(u":/images/assets/images/item-sep.png"))
         self.item_spacer_3.setScaledContents(False)
         self.item_spacer_3.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_3.addWidget(self.item_spacer_3)
+        self.item_affix_layout.addWidget(self.item_spacer_3)
 
 
-        self.verticalLayout_5.addWidget(self.affixes)
+        self.verticalLayout_3.addWidget(self.item_affix_frame)
 
-        self.modifiers = QWidget(self.item_info_box)
-        self.modifiers.setObjectName(u"modifiers")
-        self.modifiers.setEnabled(False)
-        sizePolicy13.setHeightForWidth(self.modifiers.sizePolicy().hasHeightForWidth())
-        self.modifiers.setSizePolicy(sizePolicy13)
-        self.modifiers.setMinimumSize(QSize(400, 0))
-        self.modifiers.setMaximumSize(QSize(400, 16777215))
-        self.modifiers.setStyleSheet(u"")
-        self.verticalLayout_6 = QVBoxLayout(self.modifiers)
-        self.verticalLayout_6.setSpacing(0)
-        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.prefix_info_1 = QLabel(self.modifiers)
+        self.item_mods_frame = QFrame(self.item_info_frame)
+        self.item_mods_frame.setObjectName(u"item_mods_frame")
+        self.item_mods_frame.setEnabled(False)
+        sizePolicy.setHeightForWidth(self.item_mods_frame.sizePolicy().hasHeightForWidth())
+        self.item_mods_frame.setSizePolicy(sizePolicy)
+        self.item_mods_frame.setMinimumSize(QSize(400, 300))
+        self.item_mods_frame.setMaximumSize(QSize(400, 16777215))
+        self.item_mods_frame.setStyleSheet(u"background-color: rgb(0, 0, 0);")
+        self.item_mods_layout = QVBoxLayout(self.item_mods_frame)
+        self.item_mods_layout.setSpacing(0)
+        self.item_mods_layout.setContentsMargins(0, 0, 0, 0)
+        self.item_mods_layout.setObjectName(u"item_mods_layout")
+        self.prefix_info_1 = QLabel(self.item_mods_frame)
         self.prefix_info_1.setObjectName(u"prefix_info_1")
         self.prefix_info_1.setEnabled(False)
         self.prefix_info_1.setMinimumSize(QSize(0, 0))
+        font4 = PySide6.QtGui.QFont()
+        font4.setFamilies([u"Open Sans"])
+        font4.setBold(False)
+        font4.setItalic(False)
         self.prefix_info_1.setFont(font4)
         self.prefix_info_1.setStyleSheet(u"QLabel {\n"
 "color: #7f7f7f;\n"
@@ -7996,9 +8267,9 @@ class Ui_MainWindow(object):
         self.prefix_info_1.setTextFormat(Qt.RichText)
         self.prefix_info_1.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.prefix_info_1, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.item_mods_layout.addWidget(self.prefix_info_1, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.prefix_1 = QLabel(self.modifiers)
+        self.prefix_1 = QLabel(self.item_mods_frame)
         self.prefix_1.setObjectName(u"prefix_1")
         self.prefix_1.setEnabled(False)
         self.prefix_1.setMinimumSize(QSize(0, 0))
@@ -8016,9 +8287,9 @@ class Ui_MainWindow(object):
         self.prefix_1.setTextFormat(Qt.RichText)
         self.prefix_1.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.prefix_1, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.item_mods_layout.addWidget(self.prefix_1, 0, Qt.AlignHCenter)
 
-        self.prefix_info_2 = QLabel(self.modifiers)
+        self.prefix_info_2 = QLabel(self.item_mods_frame)
         self.prefix_info_2.setObjectName(u"prefix_info_2")
         self.prefix_info_2.setEnabled(False)
         self.prefix_info_2.setMinimumSize(QSize(0, 0))
@@ -8038,9 +8309,9 @@ class Ui_MainWindow(object):
         self.prefix_info_2.setTextFormat(Qt.RichText)
         self.prefix_info_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.prefix_info_2, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.item_mods_layout.addWidget(self.prefix_info_2, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.prefix_2 = QLabel(self.modifiers)
+        self.prefix_2 = QLabel(self.item_mods_frame)
         self.prefix_2.setObjectName(u"prefix_2")
         self.prefix_2.setEnabled(False)
         self.prefix_2.setMinimumSize(QSize(0, 0))
@@ -8058,9 +8329,9 @@ class Ui_MainWindow(object):
         self.prefix_2.setTextFormat(Qt.RichText)
         self.prefix_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.prefix_2, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.item_mods_layout.addWidget(self.prefix_2, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.prefix_info_3 = QLabel(self.modifiers)
+        self.prefix_info_3 = QLabel(self.item_mods_frame)
         self.prefix_info_3.setObjectName(u"prefix_info_3")
         self.prefix_info_3.setEnabled(False)
         self.prefix_info_3.setMinimumSize(QSize(0, 0))
@@ -8080,9 +8351,9 @@ class Ui_MainWindow(object):
         self.prefix_info_3.setTextFormat(Qt.RichText)
         self.prefix_info_3.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.prefix_info_3, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.item_mods_layout.addWidget(self.prefix_info_3, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.prefix_3 = QLabel(self.modifiers)
+        self.prefix_3 = QLabel(self.item_mods_frame)
         self.prefix_3.setObjectName(u"prefix_3")
         self.prefix_3.setEnabled(False)
         self.prefix_3.setMinimumSize(QSize(0, 0))
@@ -8100,9 +8371,9 @@ class Ui_MainWindow(object):
         self.prefix_3.setTextFormat(Qt.RichText)
         self.prefix_3.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.prefix_3, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.item_mods_layout.addWidget(self.prefix_3, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.suffix_info_1 = QLabel(self.modifiers)
+        self.suffix_info_1 = QLabel(self.item_mods_frame)
         self.suffix_info_1.setObjectName(u"suffix_info_1")
         self.suffix_info_1.setEnabled(False)
         self.suffix_info_1.setMinimumSize(QSize(0, 0))
@@ -8122,9 +8393,9 @@ class Ui_MainWindow(object):
         self.suffix_info_1.setTextFormat(Qt.RichText)
         self.suffix_info_1.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.suffix_info_1)
+        self.item_mods_layout.addWidget(self.suffix_info_1)
 
-        self.suffix_1 = QLabel(self.modifiers)
+        self.suffix_1 = QLabel(self.item_mods_frame)
         self.suffix_1.setObjectName(u"suffix_1")
         self.suffix_1.setEnabled(False)
         self.suffix_1.setMinimumSize(QSize(0, 0))
@@ -8142,9 +8413,9 @@ class Ui_MainWindow(object):
         self.suffix_1.setTextFormat(Qt.RichText)
         self.suffix_1.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.suffix_1, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.item_mods_layout.addWidget(self.suffix_1, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.suffix_info_2 = QLabel(self.modifiers)
+        self.suffix_info_2 = QLabel(self.item_mods_frame)
         self.suffix_info_2.setObjectName(u"suffix_info_2")
         self.suffix_info_2.setEnabled(False)
         self.suffix_info_2.setMinimumSize(QSize(0, 0))
@@ -8164,9 +8435,9 @@ class Ui_MainWindow(object):
         self.suffix_info_2.setTextFormat(Qt.RichText)
         self.suffix_info_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.suffix_info_2)
+        self.item_mods_layout.addWidget(self.suffix_info_2)
 
-        self.suffix_2 = QLabel(self.modifiers)
+        self.suffix_2 = QLabel(self.item_mods_frame)
         self.suffix_2.setObjectName(u"suffix_2")
         self.suffix_2.setEnabled(False)
         self.suffix_2.setMinimumSize(QSize(0, 0))
@@ -8184,9 +8455,9 @@ class Ui_MainWindow(object):
         self.suffix_2.setTextFormat(Qt.RichText)
         self.suffix_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.suffix_2, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.item_mods_layout.addWidget(self.suffix_2, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.suffix_info_3 = QLabel(self.modifiers)
+        self.suffix_info_3 = QLabel(self.item_mods_frame)
         self.suffix_info_3.setObjectName(u"suffix_info_3")
         self.suffix_info_3.setEnabled(False)
         sizePolicy.setHeightForWidth(self.suffix_info_3.sizePolicy().hasHeightForWidth())
@@ -8210,9 +8481,9 @@ class Ui_MainWindow(object):
         self.suffix_info_3.setTextFormat(Qt.RichText)
         self.suffix_info_3.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.suffix_info_3)
+        self.item_mods_layout.addWidget(self.suffix_info_3)
 
-        self.suffix_3 = QLabel(self.modifiers)
+        self.suffix_3 = QLabel(self.item_mods_frame)
         self.suffix_3.setObjectName(u"suffix_3")
         self.suffix_3.setEnabled(False)
         self.suffix_3.setMinimumSize(QSize(0, 0))
@@ -8230,34 +8501,24 @@ class Ui_MainWindow(object):
         self.suffix_3.setTextFormat(Qt.RichText)
         self.suffix_3.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.suffix_3, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.item_mods_layout.addWidget(self.suffix_3, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
 
-        self.verticalLayout_5.addWidget(self.modifiers, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.verticalLayout_3.addWidget(self.item_mods_frame)
 
 
-        self.verticalLayout_4.addWidget(self.item_info_box)
+        self.horizontalLayout_4.addWidget(self.item_info_frame)
 
 
-        self.verticalLayout_28.addWidget(self.item_description_layout)
+        self.gridLayout_3.addWidget(self.crafting_zone_container, 1, 0, 1, 1)
 
-
-        self.horizontalLayout_4.addWidget(self.item_description)
-
-
-        self.verticalLayout_27.addWidget(self.item_info_display)
-
-
-        self.verticalLayout_17.addWidget(self.item_info_container)
-
-        self.crafting_simulator.addWidget(self.crafting_page)
 
         self.gridLayout_2.addWidget(self.crafting_simulator, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.crafting_simulator_container)
         self.menuBar = QMenuBar(MainWindow)
         self.menuBar.setObjectName(u"menuBar")
-        self.menuBar.setGeometry(QRect(0, 0, 1239, 26))
+        self.menuBar.setGeometry(QRect(0, 0, 1239, 29))
         self.menuBar.setStyleSheet(u"")
         self.menuCrafting = QMenu(self.menuBar)
         self.menuCrafting.setObjectName(u"menuCrafting")
@@ -8266,6 +8527,168 @@ class Ui_MainWindow(object):
         self.menuSettings = QMenu(self.menuBar)
         self.menuSettings.setObjectName(u"menuSettings")
         MainWindow.setMenuBar(self.menuBar)
+        QWidget.setTabOrder(self.method_transmute_btn, self.method_alteration_btn)
+        QWidget.setTabOrder(self.method_alteration_btn, self.method_augmentation_btn)
+        QWidget.setTabOrder(self.method_augmentation_btn, self.method_regal_btn)
+        QWidget.setTabOrder(self.method_regal_btn, self.method_alchemy_btn)
+        QWidget.setTabOrder(self.method_alchemy_btn, self.method_chaos_btn)
+        QWidget.setTabOrder(self.method_chaos_btn, self.method_exalted_btn)
+        QWidget.setTabOrder(self.method_exalted_btn, self.method_scour_btn)
+        QWidget.setTabOrder(self.method_scour_btn, self.method_annul_btn)
+        QWidget.setTabOrder(self.method_annul_btn, self.method_crusader_btn)
+        QWidget.setTabOrder(self.method_crusader_btn, self.method_hunter_btn)
+        QWidget.setTabOrder(self.method_hunter_btn, self.method_redeemer_btn)
+        QWidget.setTabOrder(self.method_redeemer_btn, self.method_warlord_btn)
+        QWidget.setTabOrder(self.method_warlord_btn, self.method_blessed_btn)
+        QWidget.setTabOrder(self.method_blessed_btn, self.method_divine_btn)
+        QWidget.setTabOrder(self.method_divine_btn, self.method_veiled_btn)
+        QWidget.setTabOrder(self.method_veiled_btn, self.method_woke_btn)
+        QWidget.setTabOrder(self.method_woke_btn, self.method_maven_btn)
+        QWidget.setTabOrder(self.method_maven_btn, self.method_fracturing_btn)
+        QWidget.setTabOrder(self.method_fracturing_btn, self.locus_btn)
+        QWidget.setTabOrder(self.locus_btn, self.method_vaal_btn)
+        QWidget.setTabOrder(self.method_vaal_btn, self.method_fossil_btn)
+        QWidget.setTabOrder(self.method_fossil_btn, self.method_harvest_btn)
+        QWidget.setTabOrder(self.method_harvest_btn, self.method_essence_btn)
+        QWidget.setTabOrder(self.method_essence_btn, self.catalyst_method_btn)
+        QWidget.setTabOrder(self.catalyst_method_btn, self.method_imprint_btn)
+        QWidget.setTabOrder(self.method_imprint_btn, self.eldritch_method_btn)
+        QWidget.setTabOrder(self.eldritch_method_btn, self.method_syndicate_btn)
+        QWidget.setTabOrder(self.method_syndicate_btn, self.method_crafting_bench_btn)
+        QWidget.setTabOrder(self.method_crafting_bench_btn, self.harvest_hide_btn)
+        QWidget.setTabOrder(self.harvest_hide_btn, self.harvest_add_remove_btn)
+        QWidget.setTabOrder(self.harvest_add_remove_btn, self.harvest_reroll_btn)
+        QWidget.setTabOrder(self.harvest_reroll_btn, self.harvest_resists_btn)
+        QWidget.setTabOrder(self.harvest_resists_btn, self.harvest_high_tier_btn)
+        QWidget.setTabOrder(self.harvest_high_tier_btn, self.harvest_other_btn)
+        QWidget.setTabOrder(self.harvest_other_btn, self.harvest_normal_to_magic_one_btn)
+        QWidget.setTabOrder(self.harvest_normal_to_magic_one_btn, self.harvest_normal_to_magic_two_btn)
+        QWidget.setTabOrder(self.harvest_normal_to_magic_two_btn, self.harvest_magic_to_rare_two_btn)
+        QWidget.setTabOrder(self.harvest_magic_to_rare_two_btn, self.harvest_magic_to_rare_three_btn)
+        QWidget.setTabOrder(self.harvest_magic_to_rare_three_btn, self.harvest_magic_to_rare_four_btn)
+        QWidget.setTabOrder(self.harvest_magic_to_rare_four_btn, self.sanctified_fossil)
+        QWidget.setTabOrder(self.sanctified_fossil, self.glyphic_fossil)
+        QWidget.setTabOrder(self.glyphic_fossil, self.fundamental_fossil)
+        QWidget.setTabOrder(self.fundamental_fossil, self.deft_fossil)
+        QWidget.setTabOrder(self.deft_fossil, self.gilded_fossil)
+        QWidget.setTabOrder(self.gilded_fossil, self.perfect_fossil)
+        QWidget.setTabOrder(self.perfect_fossil, self.tangled_fossil)
+        QWidget.setTabOrder(self.tangled_fossil, self.fossil_hide_button)
+        QWidget.setTabOrder(self.fossil_hide_button, self.abberant_fossil)
+        QWidget.setTabOrder(self.abberant_fossil, self.aetheric_fossil)
+        QWidget.setTabOrder(self.aetheric_fossil, self.attack_btn)
+        QWidget.setTabOrder(self.attack_btn, self.caster_btn)
+        QWidget.setTabOrder(self.caster_btn, self.chaos_btn)
+        QWidget.setTabOrder(self.chaos_btn, self.cold_btn)
+        QWidget.setTabOrder(self.cold_btn, self.critical_btn)
+        QWidget.setTabOrder(self.critical_btn, self.defences_btn)
+        QWidget.setTabOrder(self.defences_btn, self.fire_btn)
+        QWidget.setTabOrder(self.fire_btn, self.life_btn)
+        QWidget.setTabOrder(self.life_btn, self.lightning_btn)
+        QWidget.setTabOrder(self.lightning_btn, self.physical_btn)
+        QWidget.setTabOrder(self.physical_btn, self.speed_btn)
+        QWidget.setTabOrder(self.speed_btn, self.influence_btn)
+        QWidget.setTabOrder(self.influence_btn, self.harvest_fire_to_cold_btn)
+        QWidget.setTabOrder(self.harvest_fire_to_cold_btn, self.harvest_fire_to_lightning_btn)
+        QWidget.setTabOrder(self.harvest_fire_to_lightning_btn, self.harvest_cold_to_fire_btn)
+        QWidget.setTabOrder(self.harvest_cold_to_fire_btn, self.harvest_cold_to_lightning_btn)
+        QWidget.setTabOrder(self.harvest_cold_to_lightning_btn, self.harvest_lightning_to_fire_btn)
+        QWidget.setTabOrder(self.harvest_lightning_to_fire_btn, self.harvest_lightning_to_cold_btn)
+        QWidget.setTabOrder(self.harvest_lightning_to_cold_btn, self.bound_fossil)
+        QWidget.setTabOrder(self.bound_fossil, self.corroded_fossil)
+        QWidget.setTabOrder(self.corroded_fossil, self.dense_fossil)
+        QWidget.setTabOrder(self.dense_fossil, self.faceted_fossil)
+        QWidget.setTabOrder(self.faceted_fossil, self.frigid_fossil)
+        QWidget.setTabOrder(self.frigid_fossil, self.harvest_reforge_more_likely_btn)
+        QWidget.setTabOrder(self.harvest_reforge_more_likely_btn, self.harvest_reforge_less_likely_btn)
+        QWidget.setTabOrder(self.harvest_reforge_less_likely_btn, self.t6_btn)
+        QWidget.setTabOrder(self.t6_btn, self.t5_btn)
+        QWidget.setTabOrder(self.t5_btn, self.t4_btn)
+        QWidget.setTabOrder(self.t4_btn, self.t3_btn)
+        QWidget.setTabOrder(self.t3_btn, self.t2_btn)
+        QWidget.setTabOrder(self.t2_btn, self.t1_btn)
+        QWidget.setTabOrder(self.t1_btn, self.essences_hide_btn)
+        QWidget.setTabOrder(self.essences_hide_btn, self.essence_anger_btn)
+        QWidget.setTabOrder(self.essence_anger_btn, self.essence_anguish_btn)
+        QWidget.setTabOrder(self.essence_anguish_btn, self.essence_contempt_btn)
+        QWidget.setTabOrder(self.essence_contempt_btn, self.essence_delirium_btn)
+        QWidget.setTabOrder(self.essence_delirium_btn, self.essence_doubt_btn)
+        QWidget.setTabOrder(self.essence_doubt_btn, self.essence_dread_btn)
+        QWidget.setTabOrder(self.essence_dread_btn, self.essence_envy_btn)
+        QWidget.setTabOrder(self.essence_envy_btn, self.essence_fear_btn)
+        QWidget.setTabOrder(self.essence_fear_btn, self.essence_greed_btn)
+        QWidget.setTabOrder(self.essence_greed_btn, self.essence_hatred_btn)
+        QWidget.setTabOrder(self.essence_hatred_btn, self.essence_horror_btn)
+        QWidget.setTabOrder(self.essence_horror_btn, self.essence_hysteria_btn)
+        QWidget.setTabOrder(self.essence_hysteria_btn, self.essence_insanity_btn)
+        QWidget.setTabOrder(self.essence_insanity_btn, self.essence_loathing_btn)
+        QWidget.setTabOrder(self.essence_loathing_btn, self.essence_misery_btn)
+        QWidget.setTabOrder(self.essence_misery_btn, self.essence_rage_btn)
+        QWidget.setTabOrder(self.essence_rage_btn, self.essence_scorn_btn)
+        QWidget.setTabOrder(self.essence_scorn_btn, self.essence_sorrow_btn)
+        QWidget.setTabOrder(self.essence_sorrow_btn, self.essence_spite_btn)
+        QWidget.setTabOrder(self.essence_spite_btn, self.essence_suffering_btn)
+        QWidget.setTabOrder(self.essence_suffering_btn, self.essence_torment_btn)
+        QWidget.setTabOrder(self.essence_torment_btn, self.essence_woe_btn)
+        QWidget.setTabOrder(self.essence_woe_btn, self.essence_wrath_btn)
+        QWidget.setTabOrder(self.essence_wrath_btn, self.essence_zeal_btn)
+        QWidget.setTabOrder(self.essence_zeal_btn, self.catalysts_hide_btn)
+        QWidget.setTabOrder(self.catalysts_hide_btn, self.intrinsic_catalyst_btn)
+        QWidget.setTabOrder(self.intrinsic_catalyst_btn, self.abrasive_catalyst_btn)
+        QWidget.setTabOrder(self.abrasive_catalyst_btn, self.prismatic_catalyst_btn)
+        QWidget.setTabOrder(self.prismatic_catalyst_btn, self.fertile_catalyst_btn)
+        QWidget.setTabOrder(self.fertile_catalyst_btn, self.imbued_catalyst_btn)
+        QWidget.setTabOrder(self.imbued_catalyst_btn, self.tempering_catalyst_btn)
+        QWidget.setTabOrder(self.tempering_catalyst_btn, self.turbulent_catalyst_btn)
+        QWidget.setTabOrder(self.turbulent_catalyst_btn, self.accelerating_catalyst_btn)
+        QWidget.setTabOrder(self.accelerating_catalyst_btn, self.unstable_catalyst_btn)
+        QWidget.setTabOrder(self.unstable_catalyst_btn, self.noxious_catalyst_btn)
+        QWidget.setTabOrder(self.noxious_catalyst_btn, self.max_catalyst_btn)
+        QWidget.setTabOrder(self.max_catalyst_btn, self.single_catalys_btn)
+        QWidget.setTabOrder(self.single_catalys_btn, self.beast_crafting_hide_btn)
+        QWidget.setTabOrder(self.beast_crafting_hide_btn, self.bprefix__to_suffix_btn)
+        QWidget.setTabOrder(self.bprefix__to_suffix_btn, self.bsuffix_to_prefix_btn)
+        QWidget.setTabOrder(self.bsuffix_to_prefix_btn, self.bimprint_btn)
+        QWidget.setTabOrder(self.bimprint_btn, self.breroll_values_btn)
+        QWidget.setTabOrder(self.breroll_values_btn, self.bcat_btn)
+        QWidget.setTabOrder(self.bcat_btn, self.bavian_btn)
+        QWidget.setTabOrder(self.bavian_btn, self.bspider_btn)
+        QWidget.setTabOrder(self.bspider_btn, self.bcrab_btn)
+        QWidget.setTabOrder(self.bcrab_btn, self.eldritch_hide_btn)
+        QWidget.setTabOrder(self.eldritch_hide_btn, self.eldritch_chaos_btn)
+        QWidget.setTabOrder(self.eldritch_chaos_btn, self.eldritch_exalted_btn)
+        QWidget.setTabOrder(self.eldritch_exalted_btn, self.eldritch_annul_btn)
+        QWidget.setTabOrder(self.eldritch_annul_btn, self.orb_of_conflict_btn)
+        QWidget.setTabOrder(self.orb_of_conflict_btn, self.lesser_ember_btn)
+        QWidget.setTabOrder(self.lesser_ember_btn, self.greater_ember_btn)
+        QWidget.setTabOrder(self.greater_ember_btn, self.grand_ember_btn)
+        QWidget.setTabOrder(self.grand_ember_btn, self.exceptional_ember_btn)
+        QWidget.setTabOrder(self.exceptional_ember_btn, self.lesser_ichor_btn)
+        QWidget.setTabOrder(self.lesser_ichor_btn, self.greater_icho_btn)
+        QWidget.setTabOrder(self.greater_icho_btn, self.grand_ichor_btn)
+        QWidget.setTabOrder(self.grand_ichor_btn, self.exceptional_ichor_btn)
+        QWidget.setTabOrder(self.exceptional_ichor_btn, self.syndicate_hide_btn)
+        QWidget.setTabOrder(self.syndicate_hide_btn, self.aisling_veil_btn)
+        QWidget.setTabOrder(self.aisling_veil_btn, self.leo_slam_btn)
+        QWidget.setTabOrder(self.leo_slam_btn, self.vendor_recipe_hide_btn)
+        QWidget.setTabOrder(self.vendor_recipe_hide_btn, self.add_phys_dmg_btn)
+        QWidget.setTabOrder(self.add_phys_dmg_btn, self.add_high_tier_phys_dmg_btn)
+        QWidget.setTabOrder(self.add_high_tier_phys_dmg_btn, self.add_cold_dmg_btn)
+        QWidget.setTabOrder(self.add_cold_dmg_btn, self.add_high_tier_cold_dmg_btn)
+        QWidget.setTabOrder(self.add_high_tier_cold_dmg_btn, self.add_fire_dmg_btn)
+        QWidget.setTabOrder(self.add_fire_dmg_btn, self.add_high_tier_fire_dmg_btn)
+        QWidget.setTabOrder(self.add_high_tier_fire_dmg_btn, self.add_light_dmg_btn)
+        QWidget.setTabOrder(self.add_light_dmg_btn, self.add_high_tier_light_dmg_btn)
+        QWidget.setTabOrder(self.add_high_tier_light_dmg_btn, self.percent_inc_phys_dmg_btn)
+        QWidget.setTabOrder(self.percent_inc_phys_dmg_btn, self.jagged_fossil)
+        QWidget.setTabOrder(self.jagged_fossil, self.pristine_fossil)
+        QWidget.setTabOrder(self.pristine_fossil, self.scorched_fossil)
+        QWidget.setTabOrder(self.scorched_fossil, self.serrated_fossil)
+        QWidget.setTabOrder(self.serrated_fossil, self.lucent_fossil)
+        QWidget.setTabOrder(self.lucent_fossil, self.metallic_fossil)
+        QWidget.setTabOrder(self.metallic_fossil, self.prismatic_fossil)
+        QWidget.setTabOrder(self.prismatic_fossil, self.shuddering_fossil)
+        QWidget.setTabOrder(self.shuddering_fossil, self.hollow_fossil)
 
         self.menuBar.addAction(self.menuCrafting.menuAction())
         self.menuBar.addAction(self.menuTrade_Info.menuAction())
@@ -8288,24 +8711,11 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.action_start_over.triggered.connect(MainWindow.resetOptions)
-        self.start_crafting_project_btn.clicked.connect(MainWindow.show_wizard)
-        self.clear_item_options.clicked.connect(MainWindow.resetOptions)
-        self.fossil_hide_button.clicked.connect(self.crafting_method_pages.hide)
-        self.harvest_hide_btn.clicked.connect(self.crafting_method_pages.hide)
-        self.essences_hide_btn.clicked.connect(self.crafting_method_pages.hide)
-        self.catalysts_hide_btn.clicked.connect(self.crafting_method_pages.hide)
-        self.beast_crafting_hide_btn.clicked.connect(self.crafting_method_pages.hide)
-        self.eldritch_hide_btn.clicked.connect(self.eldritch_btns_container.hide)
+#        self.actionPOE_NINJA.triggered.connect(MainWindow.show_browser)
 
-        self.crafting_simulator.setCurrentIndex(1)
-        self.crafting_method_pages.setCurrentIndex(0)
+        self.crafting_method_pages.setCurrentIndex(2)
         self.harvest_method_stack.setCurrentIndex(2)
-        self.crafting_history.setCurrentIndex(2)
-        self.crafting_history.layout().setSpacing(0)
-        self.clear_item_options.setDefault(False)
-        self.import_custom_item.setDefault(False)
-        self.implicit_btn.setDefault(False)
-        self.modpool_container.setCurrentIndex(2)
+        self.implicit_btn_2.setDefault(False)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -8323,10 +8733,6 @@ class Ui_MainWindow(object):
         self.actionCrafting.setText(QCoreApplication.translate("MainWindow", u"Crafting", None))
         self.actionCrafting_Tutorials.setText(QCoreApplication.translate("MainWindow", u"Crafting Tutorials", None))
         self.action.setText(QCoreApplication.translate("MainWindow", u"Search for an affix", None))
-        self.landing_page_label.setText(QCoreApplication.translate("MainWindow", u"Welcome To ExileCraft", None))
-        self.start_crafting_project_btn.setText(QCoreApplication.translate("MainWindow", u"Start Crafting Project", None))
-        self.load_saved_project_btn.setText(QCoreApplication.translate("MainWindow", u"Load Saved Project", None))
-        self.import_item_from_poe_btn.setText(QCoreApplication.translate("MainWindow", u"Import Item Info From Path Of Exile", None))
 #if QT_CONFIG(tooltip)
         self.method_transmute_btn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#8787fe;\">Upgrades a Normal Item to a Magic Item</span></p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
@@ -8585,26 +8991,39 @@ class Ui_MainWindow(object):
         self.greater_icho_btn.setText(QCoreApplication.translate("MainWindow", u"Greater Ichor", None))
         self.grand_ichor_btn.setText(QCoreApplication.translate("MainWindow", u"Grand Ichor", None))
         self.exceptional_ichor_btn.setText(QCoreApplication.translate("MainWindow", u"Exceptional Ichor", None))
-        self.affix_search_bar.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search for an affix", None))
-        self.crafting_history.setItemText(self.crafting_history.indexOf(self.history_tab), QCoreApplication.translate("MainWindow", u"History", None))
-        self.crafting_history.setItemText(self.crafting_history.indexOf(self.spending_tab), QCoreApplication.translate("MainWindow", u"Spending", None))
-        self.crafting_history.setItemText(self.crafting_history.indexOf(self.export_tab), QCoreApplication.translate("MainWindow", u"Export", None))
+        self.syndicate_hide_btn.setText(QCoreApplication.translate("MainWindow", u"Close\n"
+" \u27a5", None))
+        self.syndicate_label.setText(QCoreApplication.translate("MainWindow", u"METHOD", None))
 #if QT_CONFIG(tooltip)
-        self.clear_item_options.setToolTip(QCoreApplication.translate("MainWindow", u"Clear the selected item and reset the interface", None))
+        self.aisling_veil_btn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#8787fe;\">More: Chaos</span></p><p><span style=\" font-size:12pt; color:#8787fe;\">No: Lightning</span></p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
-        self.clear_item_options.setText(QCoreApplication.translate("MainWindow", u"Clear Item Options", None))
-        self.import_custom_item.setText(QCoreApplication.translate("MainWindow", u"Import Custom Item", None))
+        self.aisling_veil_btn.setText(QCoreApplication.translate("MainWindow", u"Aisling Veil", None))
+        self.leo_slam_btn.setText(QCoreApplication.translate("MainWindow", u"Leo Slam", None))
+        self.vendor_recipe_hide_btn.setText(QCoreApplication.translate("MainWindow", u"Close\n"
+" \u27a5", None))
+        self.vendor_recipe_label.setText(QCoreApplication.translate("MainWindow", u"Vendor Recipes", None))
 #if QT_CONFIG(tooltip)
-        self.simulate_crafting.setToolTip("")
+        self.add_phys_dmg_btn.setToolTip(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; color:#8787fe;\">More: Chaos</span></p><p><span style=\" font-size:12pt; color:#8787fe;\">No: Lightning</span></p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
-        self.simulate_crafting.setText(QCoreApplication.translate("MainWindow", u"Simulate Crafting", None))
-        self.prefix_btn.setText(QCoreApplication.translate("MainWindow", u"Prefixes", None))
-        self.suffix_btn.setText(QCoreApplication.translate("MainWindow", u"Suffixes", None))
-        self.implicit_btn.setText(QCoreApplication.translate("MainWindow", u"Implicits", None))
-        self.item_img_box.setText("")
-        self.crafting_button.setText("")
-        self.item_dps_box.setText("")
-        self.item_header_text_label.setText("")
+        self.add_phys_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"Flat phys. dmg", None))
+        self.add_high_tier_phys_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"+flat phys. dmg", None))
+        self.add_cold_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"Flat cold dmg", None))
+        self.add_high_tier_cold_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"+flat cold dmg", None))
+        self.add_fire_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"Flat fire dmg", None))
+        self.add_high_tier_fire_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"+flat fire dmg", None))
+        self.add_light_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"Flat light. dmg", None))
+        self.add_high_tier_light_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"+flat light. dmg", None))
+        self.percent_inc_phys_dmg_btn.setText(QCoreApplication.translate("MainWindow", u"% phys. dmg", None))
+        self.item_img_label.setText("")
+        self.crafting_btn_label.setText("")
+        self.phys_dps_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#827a6c;\">pDPS : </span><span style=\" color:#8787fe;\">{}</span></p></body></html>", None))
+        self.ele_dps_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#827a6c;\">eDPS : </span><span style=\" color:#8787fe;\">{}</span></p></body></html>", None))
+        self.total_dps_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#827a6c;\">pDPS : </span><span style=\" color:#8787fe;\">{}</span></p></body></html>", None))
+        self.affix_total_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#999999;\">P S C</span></p></body></html>", None))
+        self.prefix_btn_2.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.suffix_btn_2.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.implicit_btn_2.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.item_header_label.setText("")
         self.item_properties.setText("")
         self.item_spacer_1.setText("")
         self.item_spacer_2.setText("")

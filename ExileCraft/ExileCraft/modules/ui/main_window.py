@@ -1,7 +1,9 @@
-from PySide6 import QtWidgets
+from PySide6 import QtCore, QtWidgets
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPalette, QColor, QShowEvent
+from PySide6.QtWidgets import QApplication, QGraphicsDropShadowEffect, QMainWindow
 
+from .ui_SplashScreen import Ui_SplashScreen
 from .ui_mainwindow import Ui_MainWindow
 from .customtreemodel import CustomTreeModel
 from .wizard.item_options_wizard import ItemOptionsWizard
@@ -9,7 +11,7 @@ from ..db.ui_updater import UiUpdater
 from ..db.database_handler import DatabaseHandler
 from ..db import item_mods_retriever, item_stats_updater
 from .slots.buttons import ButtonHandler
-
+counter = 0
 # fossil button index = 0
 # harvest button index = 1
 # essence button index = 2
@@ -41,19 +43,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # Initialize UiUpdater
         self.ui_updater = UiUpdater(
-            self.item_header_text_label,
             self.item_properties,
             self.item_requirements,
             self.item_implicits,
             self.item_spacer_3,
-            self.modifiers,
-            self.item_img_box,
             self
         )
 
-        # Add pages to the crafting simulator
-        self.crafting_simulator.addWidget(self.landing_page)
-        self.crafting_simulator.setCurrentIndex(0)
 
         # Connect the signal to a method that updates the model
         headers = ["Name", "Level", "Stats", "Tags", "Mods", "Weight"]
@@ -61,7 +57,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         all_results = self.item_mods_retriever.get_mods_for_item_class(self, item_name)
         generation_type = 'prefix'
         self.model = CustomTreeModel(headers, item_name, all_results, generation_type)
-        self.prefix_tree_view.setModel(self.model)
+        self.prefix_tree_view2.setModel(self.model)
         #self.modpool_tabs.clicked.connect(self.update_tree_view)
 
     def is_prefix_view_active(self):
@@ -173,4 +169,60 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Call set_item_influences from ButtonHandler instance
         self.button_handler.set_item_influences(button_id, checked, self.influence_btns, self.checked_btns)
 
+    def leaveEvent(self, event):
+        QApplication.instance().restoreOverrideCursor()
 
+
+class SplashScreen(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.ui = Ui_SplashScreen()
+        self.ui.setupUi(self)
+
+        # remove title bar
+        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+
+        # drop shadow effect
+        self.shadow = QGraphicsDropShadowEffect(self)
+        self.shadow.setBlurRadius(20)
+        self.shadow.setXOffset(0)
+        self.shadow.setYOffset(0)
+        self.shadow.setColor(QColor(0, 0, 0, 60))
+        self.ui.drop_shadow_frame.setGraphicsEffect(self.shadow)
+
+        # start qtimer
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.progress)
+        # timer in ms
+        self.timer.start(35)
+
+        # Initial Text
+        self.ui.app_description_label.setText("<strong>WELCOME</strong> TO MY APPLICATION")
+
+        # Change Texts
+        QtCore.QTimer.singleShot(1500, lambda: self.ui.app_description_label.setText("<strong>LOADING</strong> DATABASE"))
+        QtCore.QTimer.singleShot(3000,
+                                 lambda: self.ui.app_description_label.setText("<strong>LOADING</strong> USER INTERFACE"))
+
+        self.show()
+
+    def progress(self):
+
+        global counter
+
+        # set value to progress bar
+        self.ui.progress_bar.setValue(counter)
+
+        # Close Splash Screen and open the app
+        if counter > 100:
+            # Stop Timer
+            self.timer.stop()
+
+            # Show main window
+            self.main = MainWindow()
+            self.main.show()
+
+            self.close()
+
+        counter += 1

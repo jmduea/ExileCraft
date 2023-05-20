@@ -1,7 +1,7 @@
 class TreeItem:
-    def __init__(self, data, parent=None):
+    def __init__(self, mod, parent: "TreeItem" = None):
         self.parent_item = parent
-        self.item_data = data
+        self.mod = mod
         self.child_items = []
 
     def append_child(self, child):

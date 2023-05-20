@@ -1,13 +1,22 @@
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize, Qt)
+from PySide6.QtCore import (Property, QCoreApplication, QMetaObject, QSize, Qt)
 from PySide6.QtWidgets import (QButtonGroup, QHBoxLayout, QPushButton,
-                               QSizePolicy, QVBoxLayout, QWidget)
+                               QSizePolicy, QVBoxLayout, QWidget, QWizard, QWizardPage)
 
 
-class BaseGroupPage(QWidget):
+class BaseGroupPage(QWizardPage):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)
+        self._buttonObjectName = ''
+
+    @Property(str)
+    def buttonObjectName(self):
+        return self._buttonObjectName
+
+    @buttonObjectName.setter
+    def buttonObjectName(self, value):
+        self._buttonObjectName = value
 
     def setupUi(self, base_group_page):
         if not base_group_page.objectName():
@@ -47,23 +56,23 @@ class BaseGroupPage(QWidget):
 
         self.horizontalLayout_3.addWidget(self.body_armour_btn)
 
-        self.boots_btn = QPushButton(self.base_group_btns_row1)
-        self.base_group_btns_group.addButton(self.boots_btn)
-        self.boots_btn.setObjectName(u"boots_btn")
-        sizePolicy1.setHeightForWidth(self.boots_btn.sizePolicy().hasHeightForWidth())
-        self.boots_btn.setSizePolicy(sizePolicy1)
-        self.boots_btn.setCheckable(True)
+        self.boot_btn = QPushButton(self.base_group_btns_row1)
+        self.base_group_btns_group.addButton(self.boot_btn)
+        self.boot_btn.setObjectName(u"boot_btn")
+        sizePolicy1.setHeightForWidth(self.boot_btn.sizePolicy().hasHeightForWidth())
+        self.boot_btn.setSizePolicy(sizePolicy1)
+        self.boot_btn.setCheckable(True)
 
-        self.horizontalLayout_3.addWidget(self.boots_btn)
+        self.horizontalLayout_3.addWidget(self.boot_btn)
 
-        self.helmets_btn = QPushButton(self.base_group_btns_row1)
-        self.base_group_btns_group.addButton(self.helmets_btn)
-        self.helmets_btn.setObjectName(u"helmets_btn")
-        sizePolicy1.setHeightForWidth(self.helmets_btn.sizePolicy().hasHeightForWidth())
-        self.helmets_btn.setSizePolicy(sizePolicy1)
-        self.helmets_btn.setCheckable(True)
+        self.helmet_btn = QPushButton(self.base_group_btns_row1)
+        self.base_group_btns_group.addButton(self.helmet_btn)
+        self.helmet_btn.setObjectName(u"helmet_btn")
+        sizePolicy1.setHeightForWidth(self.helmet_btn.sizePolicy().hasHeightForWidth())
+        self.helmet_btn.setSizePolicy(sizePolicy1)
+        self.helmet_btn.setCheckable(True)
 
-        self.horizontalLayout_3.addWidget(self.helmets_btn)
+        self.horizontalLayout_3.addWidget(self.helmet_btn)
 
         self.gloves_btn = QPushButton(self.base_group_btns_row1)
         self.base_group_btns_group.addButton(self.gloves_btn)
@@ -82,35 +91,35 @@ class BaseGroupPage(QWidget):
         self.base_group_btns_row2.setSizePolicy(sizePolicy1)
         self.horizontalLayout_4 = QHBoxLayout(self.base_group_btns_row2)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.one_handed_weapons_btn = QPushButton(self.base_group_btns_row2)
-        self.base_group_btns_group.addButton(self.one_handed_weapons_btn)
-        self.one_handed_weapons_btn.setObjectName(u"one_handed_weapons_btn")
-        sizePolicy1.setHeightForWidth(self.one_handed_weapons_btn.sizePolicy().hasHeightForWidth())
-        self.one_handed_weapons_btn.setSizePolicy(sizePolicy1)
-        self.one_handed_weapons_btn.setCheckable(True)
+        self.one_hand_weapon_btn = QPushButton(self.base_group_btns_row2)
+        self.base_group_btns_group.addButton(self.one_hand_weapon_btn)
+        self.one_hand_weapon_btn.setObjectName(u"one_hand_weapon_btn")
+        sizePolicy1.setHeightForWidth(self.one_hand_weapon_btn.sizePolicy().hasHeightForWidth())
+        self.one_hand_weapon_btn.setSizePolicy(sizePolicy1)
+        self.one_hand_weapon_btn.setCheckable(True)
 
-        self.horizontalLayout_4.addWidget(self.one_handed_weapons_btn)
+        self.horizontalLayout_4.addWidget(self.one_hand_weapon_btn)
 
-        self.two_handed_weapons_btn = QPushButton(self.base_group_btns_row2)
-        self.base_group_btns_group.addButton(self.two_handed_weapons_btn)
-        self.two_handed_weapons_btn.setObjectName(u"two_handed_weapons_btn")
+        self.two_hand_weapon_btn = QPushButton(self.base_group_btns_row2)
+        self.base_group_btns_group.addButton(self.two_hand_weapon_btn)
+        self.two_hand_weapon_btn.setObjectName(u"two_hand_weapon_btn")
         sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
         sizePolicy2.setHorizontalStretch(0)
         sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.two_handed_weapons_btn.sizePolicy().hasHeightForWidth())
-        self.two_handed_weapons_btn.setSizePolicy(sizePolicy2)
-        self.two_handed_weapons_btn.setCheckable(True)
+        sizePolicy2.setHeightForWidth(self.two_hand_weapon_btn.sizePolicy().hasHeightForWidth())
+        self.two_hand_weapon_btn.setSizePolicy(sizePolicy2)
+        self.two_hand_weapon_btn.setCheckable(True)
 
-        self.horizontalLayout_4.addWidget(self.two_handed_weapons_btn)
+        self.horizontalLayout_4.addWidget(self.two_hand_weapon_btn)
 
-        self.offhands_btn = QPushButton(self.base_group_btns_row2)
-        self.base_group_btns_group.addButton(self.offhands_btn)
-        self.offhands_btn.setObjectName(u"offhands_btn")
-        sizePolicy2.setHeightForWidth(self.offhands_btn.sizePolicy().hasHeightForWidth())
-        self.offhands_btn.setSizePolicy(sizePolicy2)
-        self.offhands_btn.setCheckable(True)
+        self.offhand_btn = QPushButton(self.base_group_btns_row2)
+        self.base_group_btns_group.addButton(self.offhand_btn)
+        self.offhand_btn.setObjectName(u"offhand_btn")
+        sizePolicy2.setHeightForWidth(self.offhand_btn.sizePolicy().hasHeightForWidth())
+        self.offhand_btn.setSizePolicy(sizePolicy2)
+        self.offhand_btn.setCheckable(True)
 
-        self.horizontalLayout_4.addWidget(self.offhands_btn)
+        self.horizontalLayout_4.addWidget(self.offhand_btn)
 
         self.verticalLayout_5.addWidget(self.base_group_btns_row2, 0, Qt.AlignHCenter)
 
@@ -129,33 +138,33 @@ class BaseGroupPage(QWidget):
 
         self.horizontalLayout_2.addWidget(self.jewellery_btn)
 
-        self.jewels_btn = QPushButton(self.base_group_btns_row3)
-        self.base_group_btns_group.addButton(self.jewels_btn)
-        self.jewels_btn.setObjectName(u"jewels_btn")
-        sizePolicy1.setHeightForWidth(self.jewels_btn.sizePolicy().hasHeightForWidth())
-        self.jewels_btn.setSizePolicy(sizePolicy1)
-        self.jewels_btn.setCheckable(True)
-        self.jewels_btn.setChecked(False)
+        self.jewel_btn = QPushButton(self.base_group_btns_row3)
+        self.base_group_btns_group.addButton(self.jewel_btn)
+        self.jewel_btn.setObjectName(u"jewel_btn")
+        sizePolicy1.setHeightForWidth(self.jewel_btn.sizePolicy().hasHeightForWidth())
+        self.jewel_btn.setSizePolicy(sizePolicy1)
+        self.jewel_btn.setCheckable(True)
+        self.jewel_btn.setChecked(False)
 
-        self.horizontalLayout_2.addWidget(self.jewels_btn)
+        self.horizontalLayout_2.addWidget(self.jewel_btn)
 
-        self.cluster_jewels_btn = QPushButton(self.base_group_btns_row3)
-        self.base_group_btns_group.addButton(self.cluster_jewels_btn)
-        self.cluster_jewels_btn.setObjectName(u"cluster_jewels_btn")
-        sizePolicy1.setHeightForWidth(self.cluster_jewels_btn.sizePolicy().hasHeightForWidth())
-        self.cluster_jewels_btn.setSizePolicy(sizePolicy1)
-        self.cluster_jewels_btn.setCheckable(True)
+        self.cluster_jewel_btn = QPushButton(self.base_group_btns_row3)
+        self.base_group_btns_group.addButton(self.cluster_jewel_btn)
+        self.cluster_jewel_btn.setObjectName(u"cluster_jewel_btn")
+        sizePolicy1.setHeightForWidth(self.cluster_jewel_btn.sizePolicy().hasHeightForWidth())
+        self.cluster_jewel_btn.setSizePolicy(sizePolicy1)
+        self.cluster_jewel_btn.setCheckable(True)
 
-        self.horizontalLayout_2.addWidget(self.cluster_jewels_btn)
+        self.horizontalLayout_2.addWidget(self.cluster_jewel_btn)
 
-        self.flasks_btn = QPushButton(self.base_group_btns_row3)
-        self.base_group_btns_group.addButton(self.flasks_btn)
-        self.flasks_btn.setObjectName(u"flasks_btn")
-        sizePolicy1.setHeightForWidth(self.flasks_btn.sizePolicy().hasHeightForWidth())
-        self.flasks_btn.setSizePolicy(sizePolicy1)
-        self.flasks_btn.setCheckable(True)
+        self.flask_btn = QPushButton(self.base_group_btns_row3)
+        self.base_group_btns_group.addButton(self.flask_btn)
+        self.flask_btn.setObjectName(u"flask_btn")
+        sizePolicy1.setHeightForWidth(self.flask_btn.sizePolicy().hasHeightForWidth())
+        self.flask_btn.setSizePolicy(sizePolicy1)
+        self.flask_btn.setCheckable(True)
 
-        self.horizontalLayout_2.addWidget(self.flasks_btn)
+        self.horizontalLayout_2.addWidget(self.flask_btn)
 
         self.verticalLayout_5.addWidget(self.base_group_btns_row3)
 
@@ -170,14 +179,14 @@ class BaseGroupPage(QWidget):
     def retranslateUi(self, base_group_page):
         base_group_page.setWindowTitle(QCoreApplication.translate("base_group_page", u"Ui_Base_Group_Page", None))
         self.body_armour_btn.setText(QCoreApplication.translate("base_group_page", u"Body Armour", None))
-        self.boots_btn.setText(QCoreApplication.translate("base_group_page", u"Boots", None))
-        self.helmets_btn.setText(QCoreApplication.translate("base_group_page", u"Helmets", None))
+        self.boot_btn.setText(QCoreApplication.translate("base_group_page", u"Boots", None))
+        self.helmet_btn.setText(QCoreApplication.translate("base_group_page", u"Helmets", None))
         self.gloves_btn.setText(QCoreApplication.translate("base_group_page", u"Gloves", None))
-        self.one_handed_weapons_btn.setText(QCoreApplication.translate("base_group_page", u"One Handed Weapons", None))
-        self.two_handed_weapons_btn.setText(QCoreApplication.translate("base_group_page", u"Two Handed Weapons", None))
-        self.offhands_btn.setText(QCoreApplication.translate("base_group_page", u"Offhands", None))
+        self.one_hand_weapon_btn.setText(QCoreApplication.translate("base_group_page", u"One Handed Weapons", None))
+        self.two_hand_weapon_btn.setText(QCoreApplication.translate("base_group_page", u"Two Handed Weapons", None))
+        self.offhand_btn.setText(QCoreApplication.translate("base_group_page", u"Offhands", None))
         self.jewellery_btn.setText(QCoreApplication.translate("base_group_page", u"Jewellery", None))
-        self.jewels_btn.setText(QCoreApplication.translate("base_group_page", u"Jewels", None))
-        self.cluster_jewels_btn.setText(QCoreApplication.translate("base_group_page", u"Cluster Jewels", None))
-        self.flasks_btn.setText(QCoreApplication.translate("base_group_page", u"Flasks", None))
+        self.jewel_btn.setText(QCoreApplication.translate("base_group_page", u"Jewels", None))
+        self.cluster_jewel_btn.setText(QCoreApplication.translate("base_group_page", u"Cluster Jewels", None))
+        self.flask_btn.setText(QCoreApplication.translate("base_group_page", u"Flasks", None))
     # retranslateUi

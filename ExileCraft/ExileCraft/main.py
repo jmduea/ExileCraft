@@ -1,20 +1,21 @@
 import os
 import sys
 
-from PySide6 import QtGui, QtWidgets
+from PySide6 import QtGui
+from PySide6.QtQuick import QQuickView
+from PySide6.QtWidgets import QApplication
 
 from modules.tray.hotkey_methods import register_hotkey
 from modules.tray.tray_setup import SetupTray
-from modules.ui.main_window import MainWindow
-from modules.ui.wizard.item_options_wizard import ItemOptionsWizard
+from modules.ui.main_window import MainWindow, SplashScreen
+
 basedir = os.path.dirname(__file__)
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    app.setWindowIcon(QtGui.QIcon(os.path.join(basedir, 'assets/images/crafting_methods/method_crafting_bench.png')))
+    app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
 
-    window = MainWindow()
+    window = SplashScreen()
     window.show()
 
     # Set up tray icon

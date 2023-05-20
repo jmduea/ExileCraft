@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'item_options_wizarddXWLSc.ui'
+## Form generated from reading UI file 'item_options_wizardOsYMFk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.0
 ##
@@ -12,9 +12,6 @@ from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize, Qt)
 from PySide6.QtWidgets import (QSizePolicy, QVBoxLayout, QWizard, QWizardPage)
 
 from ..pages.base_group_page import BaseGroupPage
-from ..pages.base_selection_page import BaseSelectionPage
-from ..pages.item_options_page import ItemOptionsPage
-from ..pages.item_selection_page import ItemSelectionPage
 from ..pages.wizard_start_page import WizardStartPage
 
 
@@ -23,7 +20,7 @@ class UiItemOptionsWizard(object):
         if not UiItemOptionsWizard.objectName():
             UiItemOptionsWizard.setObjectName(u"UiItemOptionsWizard")
         UiItemOptionsWizard.setWindowModality(Qt.NonModal)
-        UiItemOptionsWizard.resize(500, 360)
+        UiItemOptionsWizard.resize(500, 253)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -68,42 +65,6 @@ class UiItemOptionsWizard(object):
         self.verticalLayout.addWidget(self.base_group_page)
 
         UiItemOptionsWizard.setPage(1, self.wizard_base_group_page)
-        self.wizard_base_selection_page = QWizardPage()
-        self.wizard_base_selection_page.setObjectName(u"wizard_base_selection_page")
-        self.verticalLayout_2 = QVBoxLayout(self.wizard_base_selection_page)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.base_selection_page = BaseSelectionPage(self.wizard_base_selection_page)
-        self.base_selection_page.setObjectName(u"base_selection_page")
-        sizePolicy1.setHeightForWidth(self.base_selection_page.sizePolicy().hasHeightForWidth())
-        self.base_selection_page.setSizePolicy(sizePolicy1)
-
-        self.verticalLayout_2.addWidget(self.base_selection_page)
-
-        UiItemOptionsWizard.setPage(2, self.wizard_base_selection_page)
-        self.wizard_item_selection_page = QWizardPage()
-        self.wizard_item_selection_page.setObjectName(u"wizard_item_selection_page")
-        self.verticalLayout_3 = QVBoxLayout(self.wizard_item_selection_page)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.item_selection_page = ItemSelectionPage(self.wizard_item_selection_page)
-        self.item_selection_page.setObjectName(u"item_selection_page")
-        sizePolicy1.setHeightForWidth(self.item_selection_page.sizePolicy().hasHeightForWidth())
-        self.item_selection_page.setSizePolicy(sizePolicy1)
-
-        self.verticalLayout_3.addWidget(self.item_selection_page)
-
-        UiItemOptionsWizard.setPage(3, self.wizard_item_selection_page)
-        self.wizard_item_options_page = QWizardPage()
-        self.wizard_item_options_page.setObjectName(u"wizard_item_options_page")
-        self.verticalLayout_5 = QVBoxLayout(self.wizard_item_options_page)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.item_options_page = ItemOptionsPage(self.wizard_item_options_page)
-        self.item_options_page.setObjectName(u"item_options_page")
-        sizePolicy1.setHeightForWidth(self.item_options_page.sizePolicy().hasHeightForWidth())
-        self.item_options_page.setSizePolicy(sizePolicy1)
-
-        self.verticalLayout_5.addWidget(self.item_options_page)
-
-        UiItemOptionsWizard.setPage(4, self.wizard_item_options_page)
         self.wizard_confirm_options_page = QWizardPage()
         self.wizard_confirm_options_page.setObjectName(u"wizard_confirm_options_page")
         UiItemOptionsWizard.setPage(5, self.wizard_confirm_options_page)
@@ -118,8 +79,5 @@ class UiItemOptionsWizard(object):
         self.wizard_start_page.setTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Start a Crafting Project", None))
         self.wizard_start_page.setSubTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Start a new crafting project with the name of your choice", None))
         self.wizard_base_group_page.setTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Select A Base Group", None))
-        self.wizard_base_selection_page.setTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Select a Base Item Type", None))
-        self.wizard_item_selection_page.setTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Select a Base Item", None))
-        self.wizard_item_options_page.setTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Select Item Options", None))
     # retranslateUi
 

@@ -1,9 +1,9 @@
 from PySide6.QtCore import (QCoreApplication, QMetaObject, Qt)
 from PySide6.QtWidgets import (QHBoxLayout, QLabel, QLineEdit,
-                               QSizePolicy, QVBoxLayout, QWidget)
+                               QSizePolicy, QVBoxLayout, QWidget, QWizard, QWizardPage)
 
 
-class WizardStartPage(QWidget):
+class WizardStartPage(QWizardPage):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)
