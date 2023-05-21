@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ExileCraftDeploy
+  labels:
+    app: ExileCraftDeploy
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ExileCraftDeploy
+  template:
+    metadata:
+      labels:
+        app: ExileCraftDeploy
+    spec:
+      containers:
+        - name: ExileCraftDeploy
+          image: exilecraftregistry.azurecr.io/image-workflow-1684642446807:latest
+          ports:
+            - containerPort: 8000
