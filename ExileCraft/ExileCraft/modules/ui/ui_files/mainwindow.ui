@@ -2,22 +2,11 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
   <property name="enabled">
    <bool>true</bool>
-  </property>
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>1239</width>
-    <height>788</height>
-   </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
@@ -34,36 +23,23 @@
   <property name="mouseTracking">
    <bool>true</bool>
   </property>
-  <property name="focusPolicy">
-   <enum>Qt::ClickFocus</enum>
-  </property>
-  <property name="contextMenuPolicy">
-   <enum>Qt::DefaultContextMenu</enum>
-  </property>
   <property name="windowTitle">
    <string>ExileCraft</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/icons/assets/images/vendor.png</normaloff>:/icons/assets/images/vendor.png</iconset>
+   <iconset resource="../assets.qrc">
+    <normaloff>:/crafting_methods/assets/images/crafting_methods/method_crafting_bench.png</normaloff>
+    :/crafting_methods/assets/images/crafting_methods/method_crafting_bench.png
+   </iconset>
   </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
   </property>
   <property name="toolTipDuration">
-   <number>0</number>
+   <number>3</number>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
-  </property>
-  <property name="animated">
-   <bool>true</bool>
-  </property>
-  <property name="tabShape">
-   <enum>QTabWidget::Rounded</enum>
-  </property>
-  <property name="dockNestingEnabled">
-   <bool>true</bool>
   </property>
   <widget class="QWidget" name="crafting_simulator_container">
    <property name="enabled">
@@ -104,6 +80,9 @@
      <number>0</number>
     </property>
     <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="verticalSpacing">
      <number>0</number>
     </property>
     <item row="0" column="0">
@@ -149,7 +128,7 @@
         <number>0</number>
        </property>
        <item row="0" column="0">
-        <widget class="QWidget" name="crafting_methods_container" native="true">
+        <widget class="QFrame" name="crafting_methods_container">
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
@@ -179,7 +158,7 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QWidget" name="common_crafting_methods" native="true">
+           <widget class="QFrame" name="common_crafting_methods">
             <property name="sizePolicy">
              <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
               <horstretch>0</horstretch>
@@ -1214,8 +1193,8 @@
             </layout>
            </widget>
           </item>
-          <item alignment="Qt::AlignTop">
-           <widget class="QWidget" name="crafting_method_group_btns" native="true">
+          <item>
+           <widget class="QFrame" name="crafting_method_group_btns">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
               <horstretch>0</horstretch>
@@ -1224,7 +1203,8 @@
             </property>
             <property name="styleSheet">
              <string notr="true">margin: 0px;
-padding: 0px;</string>
+              padding: 0px;
+             </string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_9">
              <property name="spacing">
@@ -1991,7 +1971,7 @@ QPushButton {
 }</string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="fossil_crafts">
              <property name="enabled">
@@ -10128,7 +10108,7 @@ font-weight: bold;
                      <number>0</number>
                     </property>
                     <item alignment="Qt::AlignHCenter">
-                     <widget class="CustomCursorButton" name="lesser_ember_btn">
+                     <widget class="CustomCursorButton" name="lesser_eldritch_ember_btn">
                       <property name="enabled">
                        <bool>true</bool>
                       </property>
@@ -10201,7 +10181,7 @@ font-weight: bold;
                      </widget>
                     </item>
                     <item>
-                     <widget class="CustomCursorButton" name="greater_ember_btn">
+                     <widget class="CustomCursorButton" name="greater_eldritch_ember_btn">
                       <property name="enabled">
                        <bool>true</bool>
                       </property>
@@ -10277,7 +10257,7 @@ font-weight: bold;
                      </widget>
                     </item>
                     <item>
-                     <widget class="CustomCursorButton" name="grand_ember_btn">
+                     <widget class="CustomCursorButton" name="grand_eldritch_ember_btn">
                       <property name="enabled">
                        <bool>true</bool>
                       </property>
@@ -10353,7 +10333,7 @@ font-weight: bold;
                      </widget>
                     </item>
                     <item>
-                     <widget class="CustomCursorButton" name="exceptional_ember_btn">
+                     <widget class="CustomCursorButton" name="exceptional_eldritch_ember_btn">
                       <property name="enabled">
                        <bool>true</bool>
                       </property>
@@ -11906,7 +11886,7 @@ font-weight: bold;
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QWidget" name="crafting_zone_container" native="true">
+        <widget class="QFrame" name="crafting_zone_container">
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
@@ -11915,8 +11895,9 @@ font-weight: bold;
          </property>
          <property name="styleSheet">
           <string notr="true">QWidget {
-border-image: none;
-}</string>
+           border-image: none;
+           }
+          </string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
@@ -12290,334 +12271,6 @@ magin-bottom: 0px;
                  </widget>
                 </item>
                </layout>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QWidget" name="modpool_widget" native="true">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>110</width>
-              <height>200</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>360</width>
-              <height>360</height>
-             </size>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_5">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QWidget" name="modpool_btns_layout_2" native="true">
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-                <item>
-                 <widget class="QPushButton" name="prefix_btn_2">
-                  <property name="text">
-                   <string>PushButton</string>
-                  </property>
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
-                  <property name="flat">
-                   <bool>false</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="suffix_btn_2">
-                  <property name="text">
-                   <string>PushButton</string>
-                  </property>
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
-                  <property name="flat">
-                   <bool>false</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="implicit_btn_2">
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton {
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(109, 60, 60, 1), stop:1 rgba(136, 75, 75, 255));
-margin: 0px;
-font-family: Open Sans;
-font-size: 14px;
-font-weight: bold;
-text-transform: uppercase;
-box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba (0, 0, 0, 0.31);
-border: 1px solid #000;
-color: #FFF;
-text-shadow: 1px 1px #000;
-padding: 5px 10 px;
-}</string>
-                  </property>
-                  <property name="text">
-                   <string>PushButton</string>
-                  </property>
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
-                  <property name="default">
-                   <bool>false</bool>
-                  </property>
-                  <property name="flat">
-                   <bool>false</bool>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QStackedWidget" name="modpool_container_2">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="autoFillBackground">
-                <bool>false</bool>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::NoFrame</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <widget class="QWidget" name="prefix_container_2">
-                <layout class="QVBoxLayout" name="verticalLayout_35">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="CustomTreeView" name="prefix_tree_view_2">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="focusPolicy">
-                    <enum>Qt::TabFocus</enum>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <property name="verticalScrollBarPolicy">
-                    <enum>Qt::ScrollBarAlwaysOn</enum>
-                   </property>
-                   <property name="sizeAdjustPolicy">
-                    <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
-                   </property>
-                   <property name="alternatingRowColors">
-                    <bool>false</bool>
-                   </property>
-                   <property name="textElideMode">
-                    <enum>Qt::ElideRight</enum>
-                   </property>
-                   <property name="horizontalScrollMode">
-                    <enum>QAbstractItemView::ScrollPerItem</enum>
-                   </property>
-                   <property name="indentation">
-                    <number>10</number>
-                   </property>
-                   <property name="uniformRowHeights">
-                    <bool>true</bool>
-                   </property>
-                   <attribute name="headerCascadingSectionResizes">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="headerMinimumSectionSize">
-                    <number>80</number>
-                   </attribute>
-                   <attribute name="headerStretchLastSection">
-                    <bool>false</bool>
-                   </attribute>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="suffix_container_2">
-                <layout class="QVBoxLayout" name="verticalLayout_37">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="CustomTreeView" name="suffix_tree_view_2">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <property name="verticalScrollBarPolicy">
-                    <enum>Qt::ScrollBarAlwaysOn</enum>
-                   </property>
-                   <property name="sizeAdjustPolicy">
-                    <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
-                   </property>
-                   <property name="alternatingRowColors">
-                    <bool>false</bool>
-                   </property>
-                   <property name="horizontalScrollMode">
-                    <enum>QAbstractItemView::ScrollPerItem</enum>
-                   </property>
-                   <property name="indentation">
-                    <number>10</number>
-                   </property>
-                   <property name="uniformRowHeights">
-                    <bool>true</bool>
-                   </property>
-                   <attribute name="headerCascadingSectionResizes">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="headerMinimumSectionSize">
-                    <number>80</number>
-                   </attribute>
-                   <attribute name="headerStretchLastSection">
-                    <bool>false</bool>
-                   </attribute>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="implicit_container_2">
-                <layout class="QVBoxLayout" name="verticalLayout_38">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="CustomTreeView" name="implicit_tree_view_2">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <property name="verticalScrollBarPolicy">
-                    <enum>Qt::ScrollBarAlwaysOn</enum>
-                   </property>
-                   <property name="sizeAdjustPolicy">
-                    <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
-                   </property>
-                   <property name="alternatingRowColors">
-                    <bool>false</bool>
-                   </property>
-                   <property name="horizontalScrollMode">
-                    <enum>QAbstractItemView::ScrollPerItem</enum>
-                   </property>
-                   <property name="indentation">
-                    <number>10</number>
-                   </property>
-                   <property name="uniformRowHeights">
-                    <bool>true</bool>
-                   </property>
-                   <attribute name="headerCascadingSectionResizes">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="headerMinimumSectionSize">
-                    <number>80</number>
-                   </attribute>
-                   <attribute name="headerStretchLastSection">
-                    <bool>false</bool>
-                   </attribute>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
               </widget>
              </item>
             </layout>
@@ -13533,126 +13186,13 @@ margin: 0px;
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1239</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <widget class="QMenu" name="menuCrafting">
-    <property name="title">
-     <string>Crafting</string>
-    </property>
-    <addaction name="action_start_over"/>
-    <addaction name="separator"/>
-    <addaction name="actionCrafting_Tutorials"/>
-    <addaction name="separator"/>
-    <addaction name="actionPOEDB_TW"/>
-   </widget>
-   <widget class="QMenu" name="menuTrade_Info">
-    <property name="title">
-     <string>Trade Info</string>
-    </property>
-    <addaction name="actionPrice_Checker"/>
-    <addaction name="separator"/>
-    <addaction name="actionPOE_NINJA"/>
-    <addaction name="separator"/>
-    <addaction name="actionPATHOFEXILE_COM_TRADE"/>
-   </widget>
-   <widget class="QMenu" name="menuSettings">
-    <property name="title">
-     <string>Settings</string>
-    </property>
-    <addaction name="actionUI"/>
-    <addaction name="separator"/>
-    <addaction name="actionTrade"/>
-    <addaction name="separator"/>
-    <addaction name="actionCrafting"/>
-   </widget>
-   <addaction name="menuCrafting"/>
-   <addaction name="menuTrade_Info"/>
-   <addaction name="menuSettings"/>
-  </widget>
-  <action name="action_start_over">
-   <property name="text">
-    <string>Start Over</string>
-   </property>
-  </action>
-  <action name="actionPOEDB_TW">
-   <property name="text">
-    <string>POEDB.TW</string>
-   </property>
-  </action>
-  <action name="actionPrice_Checker">
-   <property name="text">
-    <string>Price Checker</string>
-   </property>
-  </action>
-  <action name="actionPOE_NINJA">
-   <property name="icon">
-    <iconset>
-     <normalon>:/images/assets/images/poeninja.png</normalon>
-    </iconset>
-   </property>
-   <property name="text">
-    <string>POE.NINJA</string>
-   </property>
-   <property name="menuRole">
-    <enum>QAction::ApplicationSpecificRole</enum>
-   </property>
-  </action>
-  <action name="actionPATHOFEXILE_COM_TRADE">
-   <property name="text">
-    <string>PATHOFEXILE.COM/TRADE</string>
-   </property>
-  </action>
-  <action name="actionUI">
-   <property name="text">
-    <string>UI</string>
-   </property>
-  </action>
-  <action name="actionTrade">
-   <property name="text">
-    <string>Trade</string>
-   </property>
-  </action>
-  <action name="actionCrafting">
-   <property name="text">
-    <string>Crafting</string>
-   </property>
-  </action>
-  <action name="actionCrafting_Tutorials">
-   <property name="text">
-    <string>Crafting Tutorials</string>
-   </property>
-  </action>
-  <action name="action">
-   <property name="icon">
-    <iconset>
-     <normaloff>assets/images/pencil.png</normaloff>assets/images/pencil.png</iconset>
-   </property>
-   <property name="text">
-    <string>Search for an affix</string>
-   </property>
-  </action>
  </widget>
  <layoutdefault spacing="0" margin="0"/>
  <customwidgets>
   <customwidget>
    <class>CustomCursorButton</class>
    <extends>QPushButton</extends>
-   <header location="global">.customcursorbutton</header>
-  </customwidget>
-  <customwidget>
-   <class>CustomTreeView</class>
-   <extends>QTreeView</extends>
-   <header location="global">.customtreeview</header>
+   <header location="global">..customcursorbutton</header>
   </customwidget>
  </customwidgets>
  <tabstops>
@@ -13789,10 +13329,10 @@ margin: 0px;
   <tabstop>eldritch_exalted_btn</tabstop>
   <tabstop>eldritch_annul_btn</tabstop>
   <tabstop>orb_of_conflict_btn</tabstop>
-  <tabstop>lesser_ember_btn</tabstop>
-  <tabstop>greater_ember_btn</tabstop>
-  <tabstop>grand_ember_btn</tabstop>
-  <tabstop>exceptional_ember_btn</tabstop>
+  <tabstop>lesser_eldritch_ember_btn</tabstop>
+  <tabstop>greater_eldritch_ember_btn</tabstop>
+  <tabstop>grand_eldritch_ember_btn</tabstop>
+  <tabstop>exceptional_eldritch_ember_btn</tabstop>
   <tabstop>lesser_ichor_btn</tabstop>
   <tabstop>greater_icho_btn</tabstop>
   <tabstop>grand_ichor_btn</tabstop>
@@ -13825,34 +13365,130 @@ margin: 0px;
  </resources>
  <connections>
   <connection>
-   <sender>action_start_over</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>resetOptions()</slot>
+   <sender>eldritch_hide_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>eldritch_btns_container</receiver>
+   <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
+     <x>21</x>
+     <y>144</y>
     </hint>
     <hint type="destinationlabel">
-     <x>654</x>
-     <y>356</y>
+     <x>95</x>
+     <y>200</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>actionPOE_NINJA</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>show_browser()</slot>
+   <sender>syndicate_hide_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>crafting_method_pages</receiver>
+   <slot>hide()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
+     <x>17</x>
+     <y>140</y>
     </hint>
     <hint type="destinationlabel">
-     <x>768</x>
-     <y>0</y>
+     <x>915</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>vendor_recipe_hide_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>crafting_method_pages</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>168</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fossil_hide_button</sender>
+   <signal>clicked()</signal>
+   <receiver>crafting_method_pages</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>145</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>132</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>harvest_hide_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>crafting_method_pages</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>93</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>essences_hide_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>crafting_method_pages</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>26</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>catalysts_hide_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>crafting_method_pages</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>18</x>
+     <y>136</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>beast_crafting_hide_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>crafting_method_pages</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>12</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>238</y>
     </hint>
    </hints>
   </connection>
@@ -13896,18 +13532,17 @@ margin: 0px;
   <slot>update_item_stats()</slot>
   <slot>on_influence_button_toggled()</slot>
   <slot>show_wizard()</slot>
-  <slot>show_poe_ninja_browser()</slot>
  </slots>
  <buttongroups>
+  <buttongroup name="crafting_method_group_btns_group"/>
+  <buttongroup name="catalysts_mode_btns_group"/>
+  <buttongroup name="beast_crafting_btns_group"/>
+  <buttongroup name="custom_cursor_btns_group"/>
   <buttongroup name="essence_tier_btns_group"/>
   <buttongroup name="fossil_btns_broup">
    <property name="exclusive">
     <bool>false</bool>
    </property>
   </buttongroup>
-  <buttongroup name="catalysts_mode_btns_group"/>
-  <buttongroup name="beast_crafting_btns_group"/>
-  <buttongroup name="custom_cursor_btns_group"/>
-  <buttongroup name="crafting_method_group_btns_group"/>
  </buttongroups>
 </ui>

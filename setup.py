@@ -21,28 +21,17 @@
 #  SOFTWARE.
 #
 
-import os
-import sys
+from distutils.core import setup
 
-from PySide6.QtWidgets import QApplication
-
-from modules.tray.hotkey_methods import register_hotkey
-from modules.tray.tray_setup import SetupTray
-from modules.ui.main_window.main_window import SplashScreen
-
-basedir = os.path.dirname(__file__)
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    app.setQuitOnLastWindowClosed(False)
-
-    window = SplashScreen()
-    window.show()
-
-    # Set up tray icon
-    tray = SetupTray(app, window)
-
-    # Registers hotkeys
-    register_hotkey(window)
-
-    sys.exit(app.exec())
+setup(
+    name='ExileCraft',
+    version='1.0',
+    packages=['data', 'modules', 'modules.db', 'modules.ui', 'modules.ui.pages', 'modules.ui.slots',
+              'modules.ui.wizard', 'modules.emu', 'modules.tray', 'modules.config', 'modules.parser'],
+    package_dir={'': 'ExileCraft/ExileCraft'},
+    url='https://github.com/jmduea/ExileCraft',
+    license='MIT',
+    author='Jon Duea',
+    author_email='jmduea@gmail.com',
+    description='A Crafting Simulator for the game Path Of Exile'
+)

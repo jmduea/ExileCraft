@@ -1,10 +1,28 @@
-from . import customcursorbutton
-from . import customtreeitem
-from . import customtreemodel
-from . import customtreeview
-from . import main_window
-from . import ui_mainwindow
-from . import assets_rc
+#  MIT License
+#
+#  Copyright (c) 2023 Jon Duea
+#
+#  Permission is hereby granted, free of charge, to any person obtaining a copy
+#  of this software and associated documentation files (the "Software"), to deal
+#  in the Software without restriction, including without limitation the rights
+#  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#  copies of the Software, and to permit persons to whom the Software is
+#  furnished to do so, subject to the following conditions:
+#
+#  The above copyright notice and this permission notice shall be included in all
+#  copies or substantial portions of the Software.
+#
+#  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#  SOFTWARE.
+#
+
+from . import assets_rc, customcursorbutton, customtreeitem, customtreemodel, customtreeview, main_window
+from .main_window import ui_mainwindow
+from .pages import base_selection_page, item_options_page, item_selection_page
 from .slots import buttons
-from .pages import item_options_page, item_selection_page, base_selection_page
 from .wizard import item_options_wizard

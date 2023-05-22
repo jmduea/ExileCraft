@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>modpool_list</class>
  <widget class="QWidget" name="modpool_list">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -110,21 +113,6 @@ border: none;
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
-   <property name="spacing">
-    <number>0</number>
-   </property>
-   <property name="leftMargin">
-    <number>10</number>
-   </property>
-   <property name="topMargin">
-    <number>10</number>
-   </property>
-   <property name="rightMargin">
-    <number>10</number>
-   </property>
-   <property name="bottomMargin">
-    <number>10</number>
-   </property>
    <item>
     <widget class="QFrame" name="modpool_list_frame">
      <property name="palette">
@@ -622,7 +610,7 @@ border: none;
          <number>0</number>
         </property>
         <widget class="QWidget" name="prefix_group_page">
-         <layout class="QVBoxLayout" name="verticalLayout_2">
+         <layout class="QVBoxLayout" name="p">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -635,11 +623,14 @@ border: none;
           <property name="rightMargin">
            <number>0</number>
           </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
           <item>
            <widget class="QTreeView" name="prefix_tree">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
             </property>
@@ -659,7 +650,7 @@ border: none;
              <enum>QAbstractItemView::SelectItems</enum>
             </property>
             <property name="rootIsDecorated">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="uniformRowHeights">
              <bool>true</bool>
@@ -671,7 +662,7 @@ border: none;
              <bool>false</bool>
             </property>
             <property name="headerHidden">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <attribute name="headerDefaultSectionSize">
              <number>47</number>

@@ -1,12 +1,34 @@
-import sqlite3
+#  MIT License
+#
+#  Copyright (c) 2023 Jon Duea
+#
+#  Permission is hereby granted, free of charge, to any person obtaining a copy
+#  of this software and associated documentation files (the "Software"), to deal
+#  in the Software without restriction, including without limitation the rights
+#  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#  copies of the Software, and to permit persons to whom the Software is
+#  furnished to do so, subject to the following conditions:
+#
+#  The above copyright notice and this permission notice shall be included in all
+#  copies or substantial portions of the Software.
+#
+#  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#  SOFTWARE.
+#
+
 import json
+import sqlite3
 
 from ..emu import CraftingProject
 from ..parser import path_utils
 
 rel_path_to_db = "data/exilecraft.db"  # replace this with the correct relative path
 db_path = path_utils.get_abs_path(__file__, rel_path_to_db)
-
 
 
 class DatabaseHandler:
@@ -53,7 +75,6 @@ class DatabaseHandler:
             return result[0]  # Return the base_item_id of the most recently added row
         else:
             return None  # Return None if the table is empty
-
 
     @staticmethod
     def dict_factory(cursor, row):
@@ -112,27 +133,29 @@ class DatabaseHandler:
                 properties_range = ?
             WHERE id = ?
         """, (
-        crafting_project.item_class_id, crafting_project.rarity, crafting_project.name, crafting_project.base_item_id,
-        crafting_project.quality,
-        crafting_project.item_level, crafting_project.sockets, crafting_project.enchant,
-        crafting_project.physical_damage_min, crafting_project.physical_damage_max,
-        crafting_project.cold_damage_min, crafting_project.cold_damage_max, crafting_project.fire_damage_min,
-        crafting_project.fire_damage_max,
-        crafting_project.lightning_damage_min, crafting_project.lightning_damage_max, crafting_project.chaos_damage_min,
-        crafting_project.chaos_damage_max,
-        crafting_project.critical_strike_chance, crafting_project.attacks_per_second,
-        crafting_project.requirements_level, crafting_project.requirements_str,
-        crafting_project.requirements_dex, crafting_project.requirements_int, crafting_project.prefix_modifier_1,
-        crafting_project.prefix_modifier_2,
-        crafting_project.prefix_modifier_3, crafting_project.suffix_modifier_1, crafting_project.suffix_modifier_2,
-        crafting_project.suffix_modifier_3,
-        crafting_project.shaper_item, crafting_project.elder_item, crafting_project.hunter_item,
-        crafting_project.redeemer_item, crafting_project.crusader_item,
-        crafting_project.warlord_item, crafting_project.synthesis_item, crafting_project.implicits,
-        crafting_project.item_tags, crafting_project.properties_armour,
-        crafting_project.properties_evasion, crafting_project.properties_energy_shield,
-        crafting_project.properties_movement_speed, crafting_project.properties_block,
-        crafting_project.properties_range, crafting_project.id))
+            crafting_project.item_class_id, crafting_project.rarity, crafting_project.name,
+            crafting_project.base_item_id,
+            crafting_project.quality,
+            crafting_project.item_level, crafting_project.sockets, crafting_project.enchant,
+            crafting_project.physical_damage_min, crafting_project.physical_damage_max,
+            crafting_project.cold_damage_min, crafting_project.cold_damage_max, crafting_project.fire_damage_min,
+            crafting_project.fire_damage_max,
+            crafting_project.lightning_damage_min, crafting_project.lightning_damage_max,
+            crafting_project.chaos_damage_min,
+            crafting_project.chaos_damage_max,
+            crafting_project.critical_strike_chance, crafting_project.attacks_per_second,
+            crafting_project.requirements_level, crafting_project.requirements_str,
+            crafting_project.requirements_dex, crafting_project.requirements_int, crafting_project.prefix_modifier_1,
+            crafting_project.prefix_modifier_2,
+            crafting_project.prefix_modifier_3, crafting_project.suffix_modifier_1, crafting_project.suffix_modifier_2,
+            crafting_project.suffix_modifier_3,
+            crafting_project.shaper_item, crafting_project.elder_item, crafting_project.hunter_item,
+            crafting_project.redeemer_item, crafting_project.crusader_item,
+            crafting_project.warlord_item, crafting_project.synthesis_item, crafting_project.implicits,
+            crafting_project.item_tags, crafting_project.properties_armour,
+            crafting_project.properties_evasion, crafting_project.properties_energy_shield,
+            crafting_project.properties_movement_speed, crafting_project.properties_block,
+            crafting_project.properties_range, crafting_project.id))
 
         self.conn.commit()
         self.close()
@@ -233,10 +256,12 @@ class DatabaseHandler:
                 print("Inserting Conditions..")
                 if "conditions" in translation_info:
                     for condition in translation_info["condition"]:
-                        self.insert_condition(translation_info_id, condition.get("min"), condition.get("max"), condition.get("negated", False))
+                        self.insert_condition(translation_info_id, condition.get("min"), condition.get("max"),
+                                              condition.get("negated", False))
                 print("inserting formatting info")
                 # Insert formatting info
-                self.insert_formatting_info(translation_info_id, translation_info["string"], translation_info["format"], translation_info["index_handlers"])
+                self.insert_formatting_info(translation_info_id, translation_info["string"], translation_info["format"],
+                                            translation_info["index_handlers"])
 
         # Commit the changes
         self.conn.commit()
@@ -762,6 +787,7 @@ def populate_modifiers_tags_table():
     conn.commit()
     conn.close()
 
+
 # Use this function to store the translations in the SQLite database
 def store_translations(conn, stat_translations):
     cursor = conn.cursor()
@@ -775,14 +801,15 @@ def store_translations(conn, stat_translations):
         for eng in tr['English']:
             # Insert translation entry
             conditions = eng['condition']
-            cursor.execute("INSERT INTO translation (stat_translation_id, condition_min, condition_max, condition_negated, string, format, index_handlers) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                           (stat_translation_id,
-                            ' '.join([str(c.get('min', '')) for c in conditions]),
-                            ' '.join([str(c.get('max', '')) for c in conditions]),
-                            ' '.join([str(int(c.get('negated', False))) for c in conditions]),
-                            eng['string'],
-                            ' '.join(eng['format']),
-                            ' '.join([' '.join(h) for h in eng['index_handlers']])))
+            cursor.execute(
+                "INSERT INTO translation (stat_translation_id, condition_min, condition_max, condition_negated, string, format, index_handlers) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                (stat_translation_id,
+                 ' '.join([str(c.get('min', '')) for c in conditions]),
+                 ' '.join([str(c.get('max', '')) for c in conditions]),
+                 ' '.join([str(int(c.get('negated', False))) for c in conditions]),
+                 eng['string'],
+                 ' '.join(eng['format']),
+                 ' '.join([' '.join(h) for h in eng['index_handlers']])))
     conn.commit()
 
 
@@ -867,7 +894,8 @@ def get_stat_translation(conn, ids, stat_values):
         index_handlers = [handler.split() for handler in index_handlers.split()]
 
         all_conditions_met = True
-        for i, (min_value, max_value, negated, value) in enumerate(zip(condition_min, condition_max, condition_negated, stat_values)):
+        for i, (min_value, max_value, negated, value) in enumerate(
+                zip(condition_min, condition_max, condition_negated, stat_values)):
             condition_met = min_value <= value <= max_value
             if negated:
                 condition_met = not condition_met

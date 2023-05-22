@@ -1,17 +1,41 @@
-from PySide6 import QtCore, QtWidgets
+#  MIT License
+#
+#  Copyright (c) 2023 Jon Duea
+#
+#  Permission is hereby granted, free of charge, to any person obtaining a copy
+#  of this software and associated documentation files (the "Software"), to deal
+#  in the Software without restriction, including without limitation the rights
+#  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#  copies of the Software, and to permit persons to whom the Software is
+#  furnished to do so, subject to the following conditions:
+#
+#  The above copyright notice and this permission notice shall be included in all
+#  copies or substantial portions of the Software.
+#
+#  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#  SOFTWARE.
+#
+
+from PySide6 import QtCore
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QPalette, QColor, QShowEvent
+from PySide6.QtGui import QColor, QPalette
 from PySide6.QtWidgets import QApplication, QGraphicsDropShadowEffect, QMainWindow
 
-from .ui_SplashScreen import Ui_SplashScreen
-from .ui_mainwindow import Ui_MainWindow
-from .customtreemodel import CustomTreeModel
-from .wizard.item_options_wizard import ItemOptionsWizard
-from ..db.ui_updater import UiUpdater
-from ..db.database_handler import DatabaseHandler
-from ..db import item_mods_retriever, item_stats_updater
-from .slots.buttons import ButtonHandler
+from modules.db import item_mods_retriever, item_stats_updater
+from modules.db.database_handler import DatabaseHandler
+from modules.ui.main_window.ui_mainwindow import Ui_MainWindow
+from modules.ui.slots.buttons import ButtonHandler
+from modules.ui.ui_SplashScreen import Ui_SplashScreen
+from modules.ui.wizard.item_options_wizard import ItemOptionsWizard
+
 counter = 0
+
+
 # fossil button index = 0
 # harvest button index = 1
 # essence button index = 2
@@ -21,9 +45,9 @@ counter = 0
 # syndicate craft buttons index = 6
 
 
-class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
-        super(MainWindow, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.setupUi(self)
         with open("modules/ui/assets/stylesheets/main_stylesheet.qss", "r") as f:
             self.setStyleSheet(f.read())
@@ -41,24 +65,26 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setPalette(palette)
         self.setWindowFlags(Qt.WindowStaysOnTopHint)
 
-        # Initialize UiUpdater
-        self.ui_updater = UiUpdater(
-            self.item_properties,
-            self.item_requirements,
-            self.item_implicits,
-            self.item_spacer_3,
-            self
-        )
+        # # Initialize UiUpdater
+        # self.ui_updater = UiUpdater(
+        #     self.item_properties,
+        #     self.item_requirements,
+        #     self.item_implicits,
+        #     self.item_spacer_3,
+        #     self.Modifiers,
+        #     self.item_img_box,
+        #     self.main_window,
+        #     self
+        # )
 
-
-        # Connect the signal to a method that updates the model
-        headers = ["Name", "Level", "Stats", "Tags", "Mods", "Weight"]
-        item_name = "Shabby Jerkin"
-        all_results = self.item_mods_retriever.get_mods_for_item_class(self, item_name)
-        generation_type = 'prefix'
-        self.model = CustomTreeModel(headers, item_name, all_results, generation_type)
-        self.prefix_tree_view2.setModel(self.model)
-        #self.modpool_tabs.clicked.connect(self.update_tree_view)
+        # # Connect the signal to a method that updates the model
+        # headers = ["Name", "Level", "Stats", "Tags", "Mods", "Weight"]
+        # item_name = "Shabby Jerkin"
+        # all_results = self.item_mods_retriever.get_mods_for_item_class(self, item_name)
+        # generation_type = 'prefix'
+        # self.model = CustomTreeModel(headers, item_name, all_results, generation_type)
+        # self.prefix_tree_view2.setModel(self.model)
+        # #self.modpool_tabs.clicked.connect(self.update_tree_view)
 
     def is_prefix_view_active(self):
         """Check if the prefix_tree_view is active.
@@ -218,7 +244,6 @@ class SplashScreen(QMainWindow):
         if counter > 100:
             # Stop Timer
             self.timer.stop()
-
             # Show main window
             self.main = MainWindow()
             self.main.show()

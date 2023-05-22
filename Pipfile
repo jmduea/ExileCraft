@@ -4,8 +4,20 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pysidesix-frameless-window = "*"
+pyside6-fluent-widgets = { extras = ["full"], version = "*" }
+madqt = "*"
 
 [dev-packages]
+sphinx = "7.0.1"
+Nuitka = "1.5.8"
+myst-parser = "*"
 
 [requires]
 python_version = "3.11"
+keyboard = "^0.13.5"
+pytest = "^7.3.1"
+sqlalchemy = "^2.0.15"
+pyside6 = "^6.5.0"
+pyside6-addons = "^6.5.0"
+pyside6-essentials = "^6.5.0"
