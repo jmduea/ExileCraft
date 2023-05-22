@@ -19,7 +19,6 @@ class ModPoolList(QWidget):
         else:
             print("No model set for the prefix tree.")
 
-
 # You can now create an instance of ModPoolList and call update_prefix_tree
 mod_pool_list = ModPoolList()
 mod_pool_list.update_prefix_tree(new_data)

@@ -9,7 +9,6 @@ from .ui_item_options_wizard import UiItemOptionsWizard  # the Python file gener
 from ..pages.wizard_start_page import WizardStartPage
 from ..pages.base_group_page import BaseGroupPage
 
-
 class ItemOptionsWizard(QtWidgets.QWizard):
     def __init__(self, parent=None, *args, **kwargs):
         super(ItemOptionsWizard, self).__init__(parent)
@@ -121,3 +120,4 @@ class ItemOptionsWizard(QtWidgets.QWizard):
         self.addPage(new_page)  # Add the new QWizardPage instance to the wizard
 
         self.nextId()
+

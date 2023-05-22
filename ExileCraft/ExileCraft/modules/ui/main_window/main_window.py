@@ -227,15 +227,14 @@ class SplashScreen(QMainWindow):
         self.ui.app_description_label.setText("<strong>WELCOME</strong> TO MY APPLICATION")
 
         # Change Texts
-        QtCore.QTimer.singleShot(1500,
-                                 lambda: self.ui.app_description_label.setText("<strong>LOADING</strong> DATABASE"))
+        QtCore.QTimer.singleShot(1500, lambda: self.ui.app_description_label.setText("<strong>LOADING</strong> DATABASE"))
         QtCore.QTimer.singleShot(3000,
-                                 lambda: self.ui.app_description_label.setText(
-                                     "<strong>LOADING</strong> USER INTERFACE"))
+                                 lambda: self.ui.app_description_label.setText("<strong>LOADING</strong> USER INTERFACE"))
 
         self.show()
 
     def progress(self):
+
         global counter
 
         # set value to progress bar

@@ -1,115 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>helmet_types</class>
-    <widget class="QWidget" name="helmet_types">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>400</width>
-                <height>300</height>
-            </rect>
+ <class>helmet_types</class>
+ <widget class="QWidget" name="helmet_types">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="helmet_types_container" native="true">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="dex_armour_helmet_btn">
+        <property name="text">
+         <string>Helmet(Dex)</string>
         </property>
-        <property name="windowTitle">
-            <string>Form</string>
+        <attribute name="buttonGroup">
+         <string notr="true">helmet_type_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="dex_int_armour_helmet_btn">
+        <property name="text">
+         <string>Helmet(Dex/Int)</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-                <widget class="QWidget" name="helmet_types_container" native="true">
-                    <layout class="QGridLayout" name="gridLayout">
-                        <property name="leftMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="spacing">
-                            <number>0</number>
-                        </property>
-                        <item row="0" column="2">
-                            <widget class="QPushButton" name="dex_armour_helmet_btn">
-                                <property name="text">
-                                    <string>Helmet(Dex)</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">helmet_type_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="1" column="2">
-                            <widget class="QPushButton" name="dex_int_armour_helmet_btn">
-                                <property name="text">
-                                    <string>Helmet(Dex/Int)</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">helmet_type_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="0" column="1">
-                            <widget class="QPushButton" name="int_armour_helmet_btn">
-                                <property name="text">
-                                    <string>Helmet(Int)</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">helmet_type_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="0" column="0">
-                            <widget class="QPushButton" name="str_armour_helmet_btn">
-                                <property name="text">
-                                    <string>Helmet(Str)</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">helmet_type_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="1" column="0">
-                            <widget class="QPushButton" name="str_int_armour_helmet_btn">
-                                <property name="text">
-                                    <string>Helmet(Str/Int)</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">helmet_type_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="1" column="1">
-                            <widget class="QPushButton" name="str_dex_armour_helmet_btn">
-                                <property name="text">
-                                    <string>Helmet(Str/Dex)</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">helmet_type_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="2" column="1">
-                            <widget class="QPushButton" name="ward_helmet_btn">
-                                <property name="text">
-                                    <string>Helmet(Ward)</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">helmet_type_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                    </layout>
-                </widget>
-            </item>
-        </layout>
+        <attribute name="buttonGroup">
+         <string notr="true">helmet_type_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="int_armour_helmet_btn">
+        <property name="text">
+         <string>Helmet(Int)</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">helmet_type_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="str_armour_helmet_btn">
+        <property name="text">
+         <string>Helmet(Str)</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">helmet_type_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="str_int_armour_helmet_btn">
+        <property name="text">
+         <string>Helmet(Str/Int)</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">helmet_type_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="str_dex_armour_helmet_btn">
+        <property name="text">
+         <string>Helmet(Str/Dex)</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">helmet_type_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="ward_helmet_btn">
+        <property name="text">
+         <string>Helmet(Ward)</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">helmet_type_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <resources/>
-    <connections/>
-    <buttongroups>
-        <buttongroup name="helmet_type_btn_group"/>
-    </buttongroups>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="helmet_type_btn_group"/>
+ </buttongroups>
 </ui>

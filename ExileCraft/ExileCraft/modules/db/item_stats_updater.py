@@ -11,6 +11,8 @@ rel_path_to_db = "data/exilecraft.db"  # replace this with the correct relative 
 db_path = path_utils.get_abs_path(__file__, rel_path_to_db)
 
 
+
+
 def fetch_item_stats(base_item_name):
     conn = sqlite3.connect(db_path)
     c = conn.cursor()

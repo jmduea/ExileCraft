@@ -31,8 +31,7 @@ class UiItemOptionsWizard(object):
         UiItemOptionsWizard.setSizeGripEnabled(False)
         UiItemOptionsWizard.setModal(True)
         UiItemOptionsWizard.setWizardStyle(QWizard.ClassicStyle)
-        UiItemOptionsWizard.setOptions(
-            QWizard.HaveCustomButton1 | QWizard.HaveCustomButton2 | QWizard.HaveCustomButton3 | QWizard.NoBackButtonOnStartPage | QWizard.NoDefaultButton)
+        UiItemOptionsWizard.setOptions(QWizard.HaveCustomButton1|QWizard.HaveCustomButton2|QWizard.HaveCustomButton3|QWizard.NoBackButtonOnStartPage|QWizard.NoDefaultButton)
         UiItemOptionsWizard.setCurrentId(0)
         self.wizard_start_page = QWizardPage()
         self.wizard_start_page.setObjectName(u"wizard_start_page")
@@ -73,16 +72,12 @@ class UiItemOptionsWizard(object):
         self.retranslateUi(UiItemOptionsWizard)
 
         QMetaObject.connectSlotsByName(UiItemOptionsWizard)
-
     # setupUi
 
     def retranslateUi(self, UiItemOptionsWizard):
         UiItemOptionsWizard.setWindowTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Item Options", None))
-        self.wizard_start_page.setTitle(
-            QCoreApplication.translate("UiItemOptionsWizard", u"Start a Crafting Project", None))
-        self.wizard_start_page.setSubTitle(QCoreApplication.translate("UiItemOptionsWizard",
-                                                                      u"Start a new crafting project with the name of your choice",
-                                                                      None))
-        self.wizard_base_group_page.setTitle(
-            QCoreApplication.translate("UiItemOptionsWizard", u"Select A Base Group", None))
+        self.wizard_start_page.setTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Start a Crafting Project", None))
+        self.wizard_start_page.setSubTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Start a new crafting project with the name of your choice", None))
+        self.wizard_base_group_page.setTitle(QCoreApplication.translate("UiItemOptionsWizard", u"Select A Base Group", None))
     # retranslateUi
+

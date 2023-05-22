@@ -1,11 +1,9 @@
 import json
 
-
 def parse_json(file_path):
     with open(file_path, 'r') as file:
         data = json.load(file)
     return data
-
 
 file_path = 'item_classes.json'
 data = parse_json(file_path)

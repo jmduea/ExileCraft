@@ -16,7 +16,6 @@ class ItemOptionsPage(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)
-
     def setupUi(self, item_options_page):
         item_options_page.setObjectName("item_options_page")
         item_options_page.resize(600, 400)
@@ -25,8 +24,7 @@ class ItemOptionsPage(QWidget):
         self.gridLayout_2.setSpacing(0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.item_options_container = QtWidgets.QWidget(item_options_page)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding,
-                                           QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.item_options_container.sizePolicy().hasHeightForWidth())

@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>jewellery_types</class>
-    <widget class="QWidget" name="jewellery_types">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>400</width>
-                <height>300</height>
-            </rect>
+ <class>jewellery_types</class>
+ <widget class="QWidget" name="jewellery_types">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="jewellery_types_container" native="true">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="ring_can_roll_minion_modifiers_btn">
+        <property name="text">
+         <string>Bone Ring</string>
         </property>
-        <property name="windowTitle">
-            <string>Form</string>
+        <attribute name="buttonGroup">
+         <string notr="true">jewellery_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="belt_btn">
+        <property name="text">
+         <string>Belt</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-                <widget class="QWidget" name="jewellery_types_container" native="true">
-                    <layout class="QGridLayout" name="gridLayout">
-                        <property name="leftMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="spacing">
-                            <number>0</number>
-                        </property>
-                        <item row="0" column="2">
-                            <widget class="QPushButton" name="ring_can_roll_minion_modifiers_btn">
-                                <property name="text">
-                                    <string>Bone Ring</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">jewellery_types_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="0" column="1">
-                            <widget class="QPushButton" name="belt_btn">
-                                <property name="text">
-                                    <string>Belt</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">jewellery_types_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="0" column="0">
-                            <widget class="QPushButton" name="amulet_btn">
-                                <property name="text">
-                                    <string>Amulet</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">jewellery_types_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="1" column="2">
-                            <widget class="QPushButton" name="unset_ring_btn">
-                                <property name="text">
-                                    <string>Unset Ring</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">jewellery_types_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                        <item row="1" column="0">
-                            <widget class="QPushButton" name="ring_btn">
-                                <property name="text">
-                                    <string>Ring</string>
-                                </property>
-                                <attribute name="buttonGroup">
-                                    <string notr="true">jewellery_types_btn_group</string>
-                                </attribute>
-                            </widget>
-                        </item>
-                    </layout>
-                </widget>
-            </item>
-        </layout>
+        <attribute name="buttonGroup">
+         <string notr="true">jewellery_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="amulet_btn">
+        <property name="text">
+         <string>Amulet</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">jewellery_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="unset_ring_btn">
+        <property name="text">
+         <string>Unset Ring</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">jewellery_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="ring_btn">
+        <property name="text">
+         <string>Ring</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">jewellery_types_btn_group</string>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <resources/>
-    <connections/>
-    <buttongroups>
-        <buttongroup name="jewellery_types_btn_group"/>
-    </buttongroups>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="jewellery_types_btn_group"/>
+ </buttongroups>
 </ui>

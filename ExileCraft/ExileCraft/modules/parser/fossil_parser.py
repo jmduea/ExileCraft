@@ -27,9 +27,7 @@ for fossil_key, fossil in data.items():
         INSERT INTO fossils (fossil_key, changes_quality, corrupted_essence_chance, enchants, mirrors, name, rolls_lucky,
          rolls_white_sockets)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    """, (
-    fossil_key, fossil['changes_quality'], fossil['corrupted_essence_chance'], fossil['enchants'], fossil['mirrors'],
-    fossil['name'], fossil['rolls_lucky'], fossil['rolls_white_sockets']))
+    """, (fossil_key, fossil['changes_quality'], fossil['corrupted_essence_chance'], fossil['enchants'], fossil['mirrors'], fossil['name'], fossil['rolls_lucky'], fossil['rolls_white_sockets']))
 
     # Get the id of the fossil we just inserted
     fossil_id = c.lastrowid
@@ -48,12 +46,10 @@ for fossil_key, fossil in data.items():
             c.execute(f"INSERT INTO {table} (fossil_id, {table[:-1]}) VALUES (?, ?)", (fossil_id, value))
 
     for weight in fossil['negative_mod_weights']:
-        c.execute("INSERT INTO negative_mod_weights (fossil_id, tag, weight) VALUES (?, ?, ?)",
-                  (fossil_id, weight['tag'], weight['weight']))
+        c.execute("INSERT INTO negative_mod_weights (fossil_id, tag, weight) VALUES (?, ?, ?)", (fossil_id, weight['tag'], weight['weight']))
 
     for weight in fossil['positive_mod_weights']:
-        c.execute("INSERT INTO positive_mod_weights (fossil_id, tag, weight) VALUES (?, ?, ?)",
-                  (fossil_id, weight['tag'], weight['weight']))
+        c.execute("INSERT INTO positive_mod_weights (fossil_id, tag, weight) VALUES (?, ?, ?)", (fossil_id, weight['tag'], weight['weight']))
 
 # Commit changes and close connection
 conn.commit()

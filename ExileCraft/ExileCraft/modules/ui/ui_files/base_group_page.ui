@@ -1,314 +1,314 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>base_group_page</class>
-    <widget class="QWidget" name="base_group_page">
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>419</width>
-                <height>198</height>
-            </rect>
-        </property>
-        <property name="sizePolicy">
-            <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
+ <class>base_group_page</class>
+ <widget class="QWidget" name="base_group_page">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>419</width>
+    <height>198</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Ui_Base_Group_Page</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="base_group_btns_container" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>0</height>
+      </size>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="base_group_btns_row1" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="body_armour_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
             </sizepolicy>
-        </property>
-        <property name="windowTitle">
-            <string>Ui_Base_Group_Page</string>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout">
-            <property name="spacing">
-                <number>0</number>
-            </property>
-            <property name="leftMargin">
-                <number>0</number>
-            </property>
-            <property name="topMargin">
-                <number>0</number>
-            </property>
-            <property name="rightMargin">
-                <number>0</number>
-            </property>
-            <property name="bottomMargin">
-                <number>0</number>
-            </property>
-            <item>
-                <widget class="QWidget" name="base_group_btns_container" native="true">
-                    <property name="minimumSize">
-                        <size>
-                            <width>400</width>
-                            <height>0</height>
-                        </size>
-                    </property>
-                    <layout class="QVBoxLayout" name="verticalLayout_5">
-                        <property name="spacing">
-                            <number>0</number>
-                        </property>
-                        <property name="leftMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                            <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
-                            <number>0</number>
-                        </property>
-                        <item>
-                            <widget class="QWidget" name="base_group_btns_row1" native="true">
-                                <layout class="QHBoxLayout" name="horizontalLayout_3">
-                                    <item>
-                                        <widget class="QPushButton" name="body_armour_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Body Armour</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                    <item>
-                                        <widget class="QPushButton" name="boots_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Boots</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                    <item>
-                                        <widget class="QPushButton" name="helmets_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Helmets</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                    <item>
-                                        <widget class="QPushButton" name="gloves_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Gloves</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                </layout>
-                            </widget>
-                        </item>
-                        <item alignment="Qt::AlignHCenter">
-                            <widget class="QWidget" name="base_group_btns_row2" native="true">
-                                <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_4">
-                                    <item>
-                                        <widget class="QPushButton" name="one_handed_weapons_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>One Handed Weapons</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                    <item>
-                                        <widget class="QPushButton" name="two_handed_weapons_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Two Handed Weapons</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                    <item>
-                                        <widget class="QPushButton" name="offhands_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Offhands</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                </layout>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget class="QWidget" name="base_group_btns_row3" native="true">
-                                <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                </property>
-                                <layout class="QHBoxLayout" name="horizontalLayout_2">
-                                    <item>
-                                        <widget class="QPushButton" name="jewellery_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Jewellery</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                    <item>
-                                        <widget class="QPushButton" name="jewels_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Jewels</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <property name="checked">
-                                                <bool>false</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                    <item>
-                                        <widget class="QPushButton" name="cluster_jewels_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Cluster Jewels</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                    <item>
-                                        <widget class="QPushButton" name="flasks_btn">
-                                            <property name="sizePolicy">
-                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Flasks</string>
-                                            </property>
-                                            <property name="checkable">
-                                                <bool>true</bool>
-                                            </property>
-                                            <attribute name="buttonGroup">
-                                                <string notr="true">base_group_btns_group</string>
-                                            </attribute>
-                                        </widget>
-                                    </item>
-                                </layout>
-                            </widget>
-                        </item>
-                    </layout>
-                </widget>
-            </item>
+           </property>
+           <property name="text">
+            <string>Body Armour</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="boots_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Boots</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="helmets_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Helmets</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="gloves_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Gloves</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
         </layout>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QWidget" name="base_group_btns_row2" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="one_handed_weapons_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>One Handed Weapons</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="two_handed_weapons_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Two Handed Weapons</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="offhands_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Offhands</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="base_group_btns_row3" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="jewellery_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Jewellery</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="jewels_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Jewels</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="cluster_jewels_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Cluster Jewels</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="flasks_btn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Flasks</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">base_group_btns_group</string>
+           </attribute>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <resources/>
-    <connections/>
-    <buttongroups>
-        <buttongroup name="base_group_btns_group"/>
-    </buttongroups>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="base_group_btns_group"/>
+ </buttongroups>
 </ui>

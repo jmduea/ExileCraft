@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <author>Jon Duea</author>
-    <class>UiItemOptionsWizard</class>
-    <widget class="QWizard" name="UiItemOptionsWizard">
-        <property name="windowModality">
-            <enum>Qt::NonModal</enum>
-        </property>
-        <property name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>500</width>
-                <height>253</height>
-            </rect>
+ <author>Jon Duea</author>
+ <class>UiItemOptionsWizard</class>
+ <widget class="QWizard" name="UiItemOptionsWizard">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>253</height>
+   </rect>
   </property>
   <property name="sizePolicy">
    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -39,25 +39,23 @@
    <bool>false</bool>
   </property>
   <property name="modal">
-      <bool>true</bool>
+   <bool>true</bool>
   </property>
   <property name="wizardStyle">
    <enum>QWizard::ClassicStyle</enum>
   </property>
   <property name="options">
-      <set>
-          QWizard::HaveCustomButton1|QWizard::HaveCustomButton2|QWizard::HaveCustomButton3|QWizard::NoBackButtonOnStartPage|QWizard::NoDefaultButton
-      </set>
+   <set>QWizard::HaveCustomButton1|QWizard::HaveCustomButton2|QWizard::HaveCustomButton3|QWizard::NoBackButtonOnStartPage|QWizard::NoDefaultButton</set>
   </property>
   <property name="currentId">
    <number>0</number>
   </property>
   <widget class="QWizardPage" name="wizard_start_page">
    <property name="sizePolicy">
-       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-       </sizepolicy>
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
    <property name="minimumSize">
     <size>
@@ -68,79 +66,79 @@
    <property name="layoutDirection">
     <enum>Qt::LeftToRight</enum>
    </property>
-      <property name="title">
-          <string>Start a Crafting Project</string>
-      </property>
-      <property name="subTitle">
-          <string>Start a new crafting project with the name of your choice</string>
-      </property>
-      <attribute name="pageId">
-          <string notr="true">0</string>
-      </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-              <widget class="WizardStartPage" name="start_page" native="true"/>
-          </item>
-      </layout>
+   <property name="title">
+    <string>Start a Crafting Project</string>
+   </property>
+   <property name="subTitle">
+    <string>Start a new crafting project with the name of your choice</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">0</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="WizardStartPage" name="start_page" native="true"/>
+    </item>
+   </layout>
   </widget>
-        <widget class="QWizardPage" name="wizard_base_group_page">
-            <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                </sizepolicy>
-            </property>
-            <property name="minimumSize">
-                <size>
-                    <width>452</width>
-                    <height>0</height>
-                </size>
-            </property>
-            <property name="title">
-                <string>Select A Base Group</string>
-            </property>
-            <attribute name="pageId">
-                <string notr="true">1</string>
-            </attribute>
-            <layout class="QVBoxLayout" name="verticalLayout">
-                <item>
-                    <widget class="BaseGroupPage" name="base_group_page" native="true">
-                        <property name="sizePolicy">
-                            <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                                <horstretch>0</horstretch>
-                                <verstretch>0</verstretch>
-                            </sizepolicy>
-                        </property>
-                    </widget>
-                </item>
-            </layout>
-        </widget>
+  <widget class="QWizardPage" name="wizard_base_group_page">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>452</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="title">
+    <string>Select A Base Group</string>
+   </property>
+   <attribute name="pageId">
+    <string notr="true">1</string>
+   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="BaseGroupPage" name="base_group_page" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QWizardPage" name="wizard_confirm_options_page">
    <attribute name="pageId">
-       <string notr="true">5</string>
+    <string notr="true">5</string>
    </attribute>
   </widget>
  </widget>
  <customwidgets>
   <customwidget>
-      <class>BaseGroupPage</class>
+   <class>BaseGroupPage</class>
    <extends>QWidget</extends>
-      <header location="global">..pages.base_group_page</header>
+   <header location="global">..pages.base_group_page</header>
    <container>1</container>
   </customwidget>
-     <customwidget>
-         <class>WizardStartPage</class>
-         <extends>QWidget</extends>
-         <header location="global">..pages.wizard_start_page</header>
-         <container>1</container>
-     </customwidget>
+  <customwidget>
+   <class>WizardStartPage</class>
+   <extends>QWidget</extends>
+   <header location="global">..pages.wizard_start_page</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
-    <resources/>
-    <connections/>
-    <slots>
-        <signal>customButton1Clicked(int)</signal>
-        <signal>customButton2Clicked(int)</signal>
-        <slot>store_base_group()</slot>
-        <slot>nextId()</slot>
-    </slots>
+ <resources/>
+ <connections/>
+ <slots>
+  <signal>customButton1Clicked(int)</signal>
+  <signal>customButton2Clicked(int)</signal>
+  <slot>store_base_group()</slot>
+  <slot>nextId()</slot>
+ </slots>
 </ui>
