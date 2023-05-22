@@ -1,0 +1,101 @@
+QMainWindow {
+	background-blend-mode: overlay;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+}
+QLineEdit {
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #444;
+    width: 100%;
+    color: #FFF;
+    font-family: Open Sans;
+    border-image: none;
+}
+
+QToolBox {
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #444;
+    width: 100%;
+    color: #FFF;
+    font-family: Open Sans;
+    border-image: none;
+}
+QGroupBox {
+    border:0px ridge #8f8f91;
+    border-radius: 0px;
+	background-blend-mode: overlay;
+	border-image: none;
+}
+QLabel {
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #444;
+    width: 100%;
+    box-sizing: border-box;
+    color: #FFF;
+    font-family: Open Sans;
+    border-image: none;
+}
+QStackedWidget {
+    border: 0px;
+    border-radius: 0px;
+	background-blend-mode: overlay;
+	border-image: none;
+}
+QPushButton {
+    border: 1px solid #000;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-left-color: rgb(0, 0, 0);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 4px;
+    background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+    border-image: none;
+    color: #FFF;
+    text-shadow: 1px 1px #000;
+    box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+    padding: 0px 10px;
+    margin: 7px;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+
+QPushButton::hover {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                     stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+}
+QPushButton::pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+}
+QPushButton::checked {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                     stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+    border: 1px inset #FFF;
+    box-shadow: none;
+}
+QPushButton::flat {
+    border: none;
+}

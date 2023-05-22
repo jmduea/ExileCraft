@@ -1,9 +1,0 @@
-
-spython:S18549"ORemove this assignment to local variable 'quitAction'; the value is never used.(ò›ÕËüÿÿÿÿ8¯£øÔ‚1
-€python:S117-"]Rename this local variable "checkUpdates" to match the regular expression ^[_a-z][a-z0-9_]*$.(É±°€ÿÿÿÿÿ8¯£øÔ‚1
-~python:S1179"[Rename this local variable "quitAction" to match the regular expression ^[_a-z][a-z0-9_]*$.(ò›ÕËüÿÿÿÿ8¯£øÔ‚1
-xpython:S117)"[Rename this local variable "showWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÙÉçA8¯£øÔ‚1
-spython:S1542"ORename function "SetupTray" to match the regular expression ^[a-z_][a-z0-9_]*$.(Øíˆúÿÿÿÿ8¯£øÔ‚1
-Spython:S1135."4Complete the task associated to this "TODO" comment.(ËüÏ8¯£øÔ‚1
-Xpython:S11352"4Complete the task associated to this "TODO" comment.(æ¥›ûÿÿÿÿ8¯£øÔ‚1
-Xpython:S11356"4Complete the task associated to this "TODO" comment.(œäõ¨ÿÿÿÿÿ8°£øÔ‚1

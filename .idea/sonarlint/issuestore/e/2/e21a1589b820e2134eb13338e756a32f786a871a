@@ -1,23 +1,0 @@
-
-wpython:S1192À"RDefine a constant instead of duplicating this literal u"QPushButton {\n" 11 times.(Ñ†Áùÿÿÿÿ8ÿÄ¬Ü‚1
-{python:S116I"XRename this field "verticalLayout_2" to match the regular expression ^[_a-z][_a-z0-9]*$.(™áçÈùÿÿÿÿ8ÿÄ¬Ü‚1
-vpython:S116R"XRename this field "horizontalLayout" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ñ²íŸ8ÿÄ¬Ü‚1
-ypython:S116A"VRename this field "verticalLayout" to match the regular expression ^[_a-z][_a-z0-9]*$.(ˆŞŒçúÿÿÿÿ8ÿÄ¬Ü‚1
-ypython:S116·"ZRename this field "horizontalLayout_3" to match the regular expression ^[_a-z][_a-z0-9]*$.(á™£ì8ÿÄ¬Ü‚1
-|python:S116±"XRename this field "verticalLayout_5" to match the regular expression ^[_a-z][_a-z0-9]*$.(¦àçÚÿÿÿÿÿ8ÿÄ¬Ü‚1
-upython:S1169"XRename this field "verticalLayout_3" to match the regular expression ^[_a-z][_a-z0-9]*$.(”¼“>8ÿÄ¬Ü‚1
-|python:S116Ş"XRename this field "verticalLayout_7" to match the regular expression ^[_a-z][_a-z0-9]*$.(åŸ‘ãşÿÿÿÿ8ÿÄ¬Ü‚1
-vpython:S116u"XRename this field "verticalLayout_4" to match the regular expression ^[_a-z][_a-z0-9]*$.(¿¥Ç8ÿÄ¬Ü‚1
-wpython:S116Ô"XRename this field "verticalLayout_6" to match the regular expression ^[_a-z][_a-z0-9]*$.(Æ«©š8ÿÄ¬Ü‚1
-ypython:S116ú"ZRename this field "horizontalLayout_4" to match the regular expression ^[_a-z][_a-z0-9]*$.(åÂ¬8ÿÄ¬Ü‚1
-~python:S116"ZRename this field "horizontalLayout_2" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÃÀĞºıÿÿÿÿ8ÿÄ¬Ü‚1
-Œpython:S101"nRename class "Ui_ItemOptionsWizard" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.(äæÜß8ÿÄ¬Ü‚1
-€python:S117"]Rename this parameter "ItemOptionsWizard" to match the regular expression ^[_a-z][a-z0-9_]*$.(©µ·šúÿÿÿÿ8ÿÄ¬Ü‚1
-~python:S117 "[Rename this local variable "sizePolicy" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÇÙÔÃûÿÿÿÿ8ÿÄ¬Ü‚1
-python:S1171"\Rename this local variable "sizePolicy1" to match the regular expression ^[_a-z][a-z0-9_]*$.(× ÿğıÿÿÿÿ8ÿÄ¬Ü‚1
-zpython:S117M"\Rename this local variable "sizePolicy2" to match the regular expression ^[_a-z][a-z0-9_]*$.(”¸›†8ÿÄ¬Ü‚1
-python:S117]"\Rename this local variable "sizePolicy3" to match the regular expression ^[_a-z][a-z0-9_]*$.(Çî¦§øÿÿÿÿ8ÿÄ¬Ü‚1
-€python:S117­"\Rename this local variable "sizePolicy4" to match the regular expression ^[_a-z][a-z0-9_]*$.(Æœ¦Äùÿÿÿÿ8ÿÄ¬Ü‚1
-npython:S100"KRename method "setupUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(©µ·šúÿÿÿÿ8ÿÄ¬Ü‚1
-|python:S117õ"]Rename this parameter "ItemOptionsWizard" to match the regular expression ^[_a-z][a-z0-9_]*$.(Î·ğœ8ÿÄ¬Ü‚1
-ppython:S100õ"QRename method "retranslateUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(Î·ğœ8ÿÄ¬Ü‚1

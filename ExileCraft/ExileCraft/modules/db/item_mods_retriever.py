@@ -20,7 +20,9 @@ def get_mods_for_item_class(self, item_name):
                  with the structure defined in the 'modifiers' table of the 'exilecraft.db' database.
                  Returns an empty list if no modifiers are found or if no item is selected.
         """
-    db_path = path_utils.get_abs_path(__file__)
+    rel_path_to_db = "data/exilecraft.db"  # replace this with the correct relative path
+    db_path = path_utils.get_abs_path(__file__, rel_path_to_db)
+
     print(f"Database Path: {db_path}")
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -34,8 +36,6 @@ def get_mods_for_item_class(self, item_name):
             name = ?
     """, (item_name,))
     item_tags_result = cursor.fetchall()
-    if item_tags_result is None or not item_tags_result:
-        return []
     item_tags_string = item_tags_result[0][0]
 
     item_tags = json.loads(item_tags_string)

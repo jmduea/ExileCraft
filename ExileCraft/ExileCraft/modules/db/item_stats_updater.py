@@ -7,8 +7,8 @@ from PySide6 import QtCore
 
 from ..parser import path_utils
 
-db_path = path_utils.get_abs_path(__file__)
-
+rel_path_to_db = "data/exilecraft.db"  # replace this with the correct relative path
+db_path = path_utils.get_abs_path(__file__, rel_path_to_db)
 
 
 def fetch_item_stats(base_item_name):
@@ -64,6 +64,7 @@ def compute_item_level(item_level):
 
 def extract_mods(implicits_list, mods_data):
     # Connect to the database
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
     # Create lists to store min and max value ranges

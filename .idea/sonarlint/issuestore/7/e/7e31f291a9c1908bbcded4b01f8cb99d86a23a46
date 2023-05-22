@@ -1,131 +1,0 @@
-
-zpython:S1192•"UDefine a constant instead of duplicating this literal u"border-radius: 4px;" 3 times.(Ò¹Ê ıÿÿÿÿ8ÅÇ«Õ‚1
-upython:S1192ü/"PDefine a constant instead of duplicating this literal u"margin: 0px;\n" 3 times.(†À‡©ùÿÿÿÿ8ÅÇ«Õ‚1
-qpython:S1192Ã"QDefine a constant instead of duplicating this literal u"QPushButton {\n" 6 times.(›ï¸â8ÅÇ«Õ‚1
-ppython:S1192Ò-"PDefine a constant instead of duplicating this literal u"margin: 0px;\n" 3 times.(«‚º¾8ÅÇ«Õ‚1
-lpython:S1192õO"LDefine a constant instead of duplicating this literal u"QLabel {\n" 6 times.(ùÃğî8ÅÇ«Õ‚1
-rpython:S1192ãI"MDefine a constant instead of duplicating this literal u"QWidget {\n" 3 times.(ª¦÷şÿÿÿÿ8ÅÇ«Õ‚1
-vpython:S1192"QDefine a constant instead of duplicating this literal u"QPushButton {\n" 4 times.(†¯§åşÿÿÿÿ8ÆÇ«Õ‚1
-qpython:S1192Í("QDefine a constant instead of duplicating this literal u"QPushButton {\n" 4 times.(ÃåèÀ8ÆÇ«Õ‚1
-rpython:S1192¸"RDefine a constant instead of duplicating this literal u"QPushButton {\n" 93 times.(Œ´ÈÛ8ÆÇ«Õ‚1
-qpython:S1192÷("QDefine a constant instead of duplicating this literal u"QPushButton {\n" 3 times.(††¯§8ÆÇ«Õ‚1
-qpython:S1192àO"LDefine a constant instead of duplicating this literal u"QLabel {\n" 6 times.(Æ‚çìşÿÿÿÿ8ÆÇ«Õ‚1
-ipython:S1192ÀT"IDefine a constant instead of duplicating this literal u"Close\n" 6 times.(¯Í¤Ò8ÆÇ«Õ‚1
-vpython:S1192â("QDefine a constant instead of duplicating this literal u"QPushButton {\n" 3 times.(ÿ›ºúÿÿÿÿ8ÆÇ«Õ‚1
-|python:S1192½K"WDefine a constant instead of duplicating this literal u"QPushButton::flat {\n" 3 times.(ÒÜœåûÿÿÿÿ8ÆÇ«Õ‚1
-qpython:S1192&"QDefine a constant instead of duplicating this literal u"QPushButton {\n" 5 times.(ƒÜË8ÇÇ«Õ‚1
-vpython:S1192Œ)"QDefine a constant instead of duplicating this literal u"QPushButton {\n" 3 times.(áéç’ùÿÿÿÿ8ÇÇ«Õ‚1
-qpython:S1192·("QDefine a constant instead of duplicating this literal u"QPushButton {\n" 4 times.(è·Â±8ÇÇ«Õ‚1
-´python:S1192…O"Define a constant instead of duplicating this literal u"C:/Users/spark/source/repos/ExileCraft/ExileCraft/assets/images/item-sep.png" 3 times.(§˜¤üÿÿÿÿ8ÇÇ«Õ‚1
-kpython:S1192Á"KDefine a constant instead of duplicating this literal u"Open Sans" 7 times.( †ÂÇ8ÇÇ«Õ‚1
-wpython:S116ÓI"YRename this field "verticalLayout_20" to match the regular expression ^[_a-z][_a-z0-9]*$.(éĞë$8ÈÇ«Õ‚1
-}python:S116("YRename this field "verticalLayout_40" to match the regular expression ^[_a-z][_a-z0-9]*$.(‘“‘ûÿÿÿÿ8ÈÇ«Õ‚1
-python:S116Ö-"[Rename this field "horizontalLayout_12" to match the regular expression ^[_a-z][_a-z0-9]*$.(³Õ·†ùÿÿÿÿ8ÇÇ«Õ‚1
-tpython:S116øQ"VRename this field "menuTrade_Info" to match the regular expression ^[_a-z][_a-z0-9]*$.(‘š±8ÈÇ«Õ‚1
-}python:S116ËI"YRename this field "verticalLayout_37" to match the regular expression ^[_a-z][_a-z0-9]*$.(„øüìıÿÿÿÿ8ÈÇ«Õ‚1
-}python:S116‡J"YRename this field "verticalLayout_25" to match the regular expression ^[_a-z][_a-z0-9]*$.(·Ã¶ıÿÿÿÿ8ÇÇ«Õ‚1
-tpython:S116¶"URename this field "gridLayout_11" to match the regular expression ^[_a-z][_a-z0-9]*$.(÷õÅ¢8ÇÇ«Õ‚1
-spython:S116Ô"TRename this field "gridLayout_2" to match the regular expression ^[_a-z][_a-z0-9]*$.(â¥×8ÈÇ«Õ‚1
-tpython:S116¼"PRename this field "actionUI" to match the regular expression ^[_a-z][_a-z0-9]*$.(è’¼øúÿÿÿÿ8ÉÇ«Õ‚1
-xpython:S116ß"TRename this field "gridLayout_9" to match the regular expression ^[_a-z][_a-z0-9]*$.(„âÈÙüÿÿÿÿ8ÇÇ«Õ‚1
-xpython:S116Ñ*"YRename this field "verticalLayout_42" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ñí¢Û8ÉÇ«Õ‚1
-wpython:S116‰"YRename this field "verticalLayout_17" to match the regular expression ^[_a-z][_a-z0-9]*$.(Œ ¾p8ÈÇ«Õ‚1
-zpython:S116ÿB"VRename this field "verticalSpacer" to match the regular expression ^[_a-z][_a-z0-9]*$.(ßŞÂÁúÿÿÿÿ8ÈÇ«Õ‚1
-~python:S116¿I"ZRename this field "horizontalLayout_5" to match the regular expression ^[_a-z][_a-z0-9]*$.(–ŒÏûúÿÿÿÿ8ÈÇ«Õ‚1
-ypython:S116¤I"ZRename this field "horizontalLayout_3" to match the regular expression ^[_a-z][_a-z0-9]*$.(´Ì˜¢8ÉÇ«Õ‚1
-rpython:S116¾"SRename this field "actionTrade" to match the regular expression ^[_a-z][_a-z0-9]*$.(Å–á”8ÈÇ«Õ‚1
-zpython:S116ş9"[Rename this field "horizontalLayout_13" to match the regular expression ^[_a-z][_a-z0-9]*$.(¡ğ“Ã8ÉÇ«Õ‚1
-wpython:S116œN"XRename this field "verticalLayout_4" to match the regular expression ^[_a-z][_a-z0-9]*$.(ú•¼õ8ÈÇ«Õ‚1
-wpython:S116š("YRename this field "verticalLayout_41" to match the regular expression ^[_a-z][_a-z0-9]*$.(ç¦Át8ÇÇ«Õ‚1
-ypython:S116•5"[Rename this field "horizontalLayout_11" to match the regular expression ^[_a-z][_a-z0-9]*$.(¸›æ=8ÉÇ«Õ‚1
-wpython:S116©M"XRename this field "verticalLayout_2" to match the regular expression ^[_a-z][_a-z0-9]*$.(…Á˜˜8ÈÇ«Õ‚1
-}python:S116í+"YRename this field "verticalLayout_43" to match the regular expression ^[_a-z][_a-z0-9]*$.(¨¥‘íıÿÿÿÿ8ÉÇ«Õ‚1
-python:S116¹?"[Rename this field "horizontalLayout_15" to match the regular expression ^[_a-z][_a-z0-9]*$.(êğ‚“ıÿÿÿÿ8ÉÇ«Õ‚1
-„python:S116Â"`Rename this field "actionCrafting_Tutorials" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ëê’’ÿÿÿÿÿ8ÇÇ«Õ‚1
-xpython:S116“K"YRename this field "verticalLayout_32" to match the regular expression ^[_a-z][_a-z0-9]*$.(ùÌŠ–8ÇÇ«Õ‚1
-xpython:S116üI"YRename this field "verticalLayout_21" to match the regular expression ^[_a-z][_a-z0-9]*$.(²öëÄ8ÇÇ«Õ‚1
-~python:S116©"ZRename this field "horizontalLayout_9" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÿ„×øÿÿÿÿ8ÉÇ«Õ‚1
-|python:S116§"XRename this field "verticalLayout_9" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ûıú»üÿÿÿÿ8ÈÇ«Õ‚1
-}python:S116ø"YRename this field "verticalLayout_14" to match the regular expression ^[_a-z][_a-z0-9]*$.(ì®ç®úÿÿÿÿ8ÇÇ«Õ‚1
-ypython:S116’%"ZRename this field "horizontalLayout_7" to match the regular expression ^[_a-z][_a-z0-9]*$.(¡…öà8ÈÇ«Õ‚1
-}python:S116¬N"YRename this field "verticalLayout_10" to match the regular expression ^[_a-z][_a-z0-9]*$.(®ÉÒ®úÿÿÿÿ8ÉÇ«Õ‚1
-zpython:S116ˆC"[Rename this field "horizontalLayout_18" to match the regular expression ^[_a-z][_a-z0-9]*$.(²¨ç¤8ÊÇ«Õ‚1
-{python:S116Í"\Rename this field "startCraftingProject" to match the regular expression ^[_a-z][_a-z0-9]*$.(ğ­¡Â8ÈÇ«Õ‚1
-xpython:S116Š"YRename this field "verticalLayout_18" to match the regular expression ^[_a-z][_a-z0-9]*$.(”ÆœÒ8ÇÇ«Õ‚1
-xpython:S116ˆK"YRename this field "verticalLayout_39" to match the regular expression ^[_a-z][_a-z0-9]*$.(˜¨ÌÇ8ÈÇ«Õ‚1
-‚python:S116º"cRename this field "actionPATHOFEXILE_COM_TRADE" to match the regular expression ^[_a-z][_a-z0-9]*$.(”™„¯8ÈÇ«Õ‚1
-zpython:S116´"VRename this field "actionPOEDB_TW" to match the regular expression ^[_a-z][_a-z0-9]*$.(Œ ÷°øÿÿÿÿ8ÉÇ«Õ‚1
-}python:S116Ÿ"YRename this field "verticalLayout_23" to match the regular expression ^[_a-z][_a-z0-9]*$.(ïİëøÿÿÿÿ8ÊÇ«Õ‚1
-xpython:S116“"YRename this field "verticalLayout_13" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ë‚şş8ÇÇ«Õ‚1
-qpython:S116É-"RRename this field "gridLayout" to match the regular expression ^[_a-z][_a-z0-9]*$.(ßŒ“«8ÉÇ«Õ‚1
-spython:S116öQ"TRename this field "menuCrafting" to match the regular expression ^[_a-z][_a-z0-9]*$.(òã½Ş8ÈÇ«Õ‚1
-xpython:S116ñ"YRename this field "verticalLayout_15" to match the regular expression ^[_a-z][_a-z0-9]*$.(¥ßÂ8ÇÇ«Õ‚1
-python:S116¾>"[Rename this field "horizontalLayout_14" to match the regular expression ^[_a-z][_a-z0-9]*$.(éÌõŒùÿÿÿÿ8ÉÇ«Õ‚1
-xpython:S116÷L"YRename this field "verticalLayout_35" to match the regular expression ^[_a-z][_a-z0-9]*$.(š¡È©8ÈÇ«Õ‚1
-}python:S116„"YRename this field "verticalLayout_12" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÆøŸÑşÿÿÿÿ8ÉÇ«Õ‚1
-xpython:S116©"YRename this field "verticalLayout_24" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ëêâ¨8ÊÇ«Õ‚1
-zpython:S116À"VRename this field "actionCrafting" to match the regular expression ^[_a-z][_a-z0-9]*$.(¥ƒˆ“ûÿÿÿÿ8ÇÇ«Õ‚1
-xpython:S116€I"YRename this field "verticalLayout_27" to match the regular expression ^[_a-z][_a-z0-9]*$.(…¾Çğ8ÇÇ«Õ‚1
-wpython:S116×O"XRename this field "verticalLayout_6" to match the regular expression ^[_a-z][_a-z0-9]*$.(˜âÅÉ8ÈÇ«Õ‚1
-xpython:S116ÕJ"YRename this field "verticalLayout_31" to match the regular expression ^[_a-z][_a-z0-9]*$.(¬ƒƒ¯8ÈÇ«Õ‚1
-}python:S116ËL"YRename this field "verticalLayout_34" to match the regular expression ^[_a-z][_a-z0-9]*$.(šïå×ûÿÿÿÿ8ÉÇ«Õ‚1
-zpython:S116¶"[Rename this field "actionPrice_Checker" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÌğİÄ8ÉÇ«Õ‚1
-}python:S116Ù"YRename this field "importItemFromPOE" to match the regular expression ^[_a-z][_a-z0-9]*$.(”şÑßşÿÿÿÿ8ÇÇ«Õ‚1
-}python:S116N"YRename this field "verticalLayout_28" to match the regular expression ^[_a-z][_a-z0-9]*$.(Åî²†ıÿÿÿÿ8ÊÇ«Õ‚1
-wpython:S116”"XRename this field "verticalLayout_7" to match the regular expression ^[_a-z][_a-z0-9]*$.(³…İû8ÈÇ«Õ‚1
-|python:S116˜I"XRename this field "verticalLayout_8" to match the regular expression ^[_a-z][_a-z0-9]*$.(â˜Ôùÿÿÿÿ8ÈÇ«Õ‚1
-ypython:S116"URename this field "gridLayout_10" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÇçĞªùÿÿÿÿ8ÈÇ«Õ‚1
-python:S116ı,"[Rename this field "horizontalLayout_22" to match the regular expression ^[_a-z][_a-z0-9]*$.(ŒÑÍ™şÿÿÿÿ8ÉÇ«Õ‚1
-}python:S116œ%"YRename this field "verticalLayout_45" to match the regular expression ^[_a-z][_a-z0-9]*$.(Úä•ûÿÿÿÿ8ÈÇ«Õ‚1
-wpython:S116ë"YRename this field "verticalLayout_16" to match the regular expression ^[_a-z][_a-z0-9]*$.(Êˆ„8ÉÇ«Õ‚1
-ypython:S116I"ZRename this field "horizontalLayout_4" to match the regular expression ^[_a-z][_a-z0-9]*$.(åÈÚÍ8ÈÇ«Õ‚1
-xpython:S116À"YRename this field "verticalLayout_26" to match the regular expression ^[_a-z][_a-z0-9]*$.(¬úÚ8ÊÇ«Õ‚1
-zpython:S116·E"[Rename this field "horizontalLayout_17" to match the regular expression ^[_a-z][_a-z0-9]*$.(Üåû˜8ÈÇ«Õ‚1
-ypython:S116Ú"ZRename this field "horizontalLayout_8" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ğ—Õ8ÈÇ«Õ‚1
-xpython:S116®?"YRename this field "verticalLayout_29" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ù©ë™8ÊÇ«Õ‚1
-xpython:S116ò9"YRename this field "verticalLayout_22" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ôá¶ 8ÊÇ«Õ‚1
-xpython:S116’C"YRename this field "verticalLayout_36" to match the regular expression ^[_a-z][_a-z0-9]*$.(‹ùòÉ8ÉÇ«Õ‚1
-xpython:S116úQ"TRename this field "menuSettings" to match the regular expression ^[_a-z][_a-z0-9]*$.(È¶„œşÿÿÿÿ8ÉÇ«Õ‚1
-|python:S116ãN"XRename this field "verticalLayout_3" to match the regular expression ^[_a-z][_a-z0-9]*$.(áÃÕ”ûÿÿÿÿ8ÇÇ«Õ‚1
-wpython:S116ÒN"XRename this field "verticalLayout_5" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ÿ€ñ8ÉÇ«Õ‚1
-xpython:S116ã"YRename this field "verticalLayout_38" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ä¥È€8ÈÇ«Õ‚1
-{python:S116²"WRename this field "actionStartOver" to match the regular expression ^[_a-z][_a-z0-9]*$.(¸¢ä½ùÿÿÿÿ8ÇÇ«Õ‚1
-zpython:S116Ú*"[Rename this field "horizontalLayout_20" to match the regular expression ^[_a-z][_a-z0-9]*$.(¤èî¨8ÇÇ«Õ‚1
-}python:S116‘J"YRename this field "verticalLayout_30" to match the regular expression ^[_a-z][_a-z0-9]*$.(Úšºøÿÿÿÿ8ÈÇ«Õ‚1
-|python:S116Ò"XRename this field "horizontalLayout" to match the regular expression ^[_a-z][_a-z0-9]*$.(éŒòôıÿÿÿÿ8ÇÇ«Õ‚1
-wpython:S116›L"YRename this field "verticalLayout_33" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÙºÚ=8ÈÇ«Õ‚1
-python:S116’G"[Rename this field "horizontalLayout_16" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÊñÃùıÿÿÿÿ8ÉÇ«Õ‚1
-python:S116ö+"[Rename this field "horizontalLayout_21" to match the regular expression ^[_a-z][_a-z0-9]*$.(¡‡û”ÿÿÿÿÿ8ÈÇ«Õ‚1
-xpython:S116´"YRename this field "verticalLayout_11" to match the regular expression ^[_a-z][_a-z0-9]*$.(£Ú‘Ä8ÇÇ«Õ‚1
-wpython:S116ô,"YRename this field "verticalLayout_44" to match the regular expression ^[_a-z][_a-z0-9]*$.(„ü8ÉÇ«Õ‚1
-ypython:S116°K"ZRename this field "horizontalLayout_2" to match the regular expression ^[_a-z][_a-z0-9]*$.(Šˆóß8ÈÇ«Õ‚1
-python:S116ÿ/"[Rename this field "horizontalLayout_10" to match the regular expression ^[_a-z][_a-z0-9]*$.(İèÆøÿÿÿÿ8ÇÇ«Õ‚1
-zpython:S116ØM"VRename this field "verticalLayout" to match the regular expression ^[_a-z][_a-z0-9]*$.(›„ôİÿÿÿÿÿ8ÈÇ«Õ‚1
-~python:S116¤("ZRename this field "horizontalLayout_6" to match the regular expression ^[_a-z][_a-z0-9]*$.(¿…Èšşÿÿÿÿ8ÈÇ«Õ‚1
-vpython:S116¸"WRename this field "actionPOE_NINJA" to match the regular expression ^[_a-z][_a-z0-9]*$.(öÅ­±8ÈÇ«Õ‚1
-npython:S116òQ"ORename this field "menuBar" to match the regular expression ^[_a-z][_a-z0-9]*$.(ëŠ°â8ÉÇ«Õ‚1
-wpython:S116Ô"XRename this field "loadSavedProject" to match the regular expression ^[_a-z][_a-z0-9]*$.(ÏÒÀÕ8ÈÇ«Õ‚1
-}python:S116Ã"YRename this field "verticalLayout_19" to match the regular expression ^[_a-z][_a-z0-9]*$.(ŞÇƒáüÿÿÿÿ8ÉÇ«Õ‚1
-Špython:S101 "gRename class "Ui_MainWindow" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.( Ìñıùÿÿÿÿ8ÊÇ«Õ‚1
-ypython:S117!"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÂéÇ´ÿÿÿÿÿ8ÊÇ«Õ‚1
-~python:S117'"[Rename this local variable "sizePolicy" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÇÙÔÃûÿÿÿÿ8ÊÇ«Õ‚1
-€python:S117®"\Rename this local variable "sizePolicy1" to match the regular expression ^[_a-z][a-z0-9_]*$.(õÚäîúÿÿÿÿ8ÊÇ«Õ‚1
-python:S117‡0"]Rename this local variable "sizePolicy10" to match the regular expression ^[_a-z][a-z0-9_]*$.(ĞÎ‚ˆÿÿÿÿÿ8ÊÇ«Õ‚1
-python:S117İC"]Rename this local variable "sizePolicy11" to match the regular expression ^[_a-z][a-z0-9_]*$.(–ÜÂÍøÿÿÿÿ8ÊÇ«Õ‚1
-{python:S117”D"]Rename this local variable "sizePolicy12" to match the regular expression ^[_a-z][a-z0-9_]*$.(¯›È<8ÊÇ«Õ‚1
-|python:S117ŸI"]Rename this local variable "sizePolicy13" to match the regular expression ^[_a-z][a-z0-9_]*$.(Í…ş½8ÊÇ«Õ‚1
-python:S117õM"]Rename this local variable "sizePolicy14" to match the regular expression ^[_a-z][a-z0-9_]*$.(£ Ãÿÿÿÿÿ8ÊÇ«Õ‚1
-|python:S117£N"]Rename this local variable "sizePolicy15" to match the regular expression ^[_a-z][a-z0-9_]*$.(û÷¡¹8ÊÇ«Õ‚1
-|python:S117´N"]Rename this local variable "sizePolicy16" to match the regular expression ^[_a-z][a-z0-9_]*$.(¢ÿ à8ÊÇ«Õ‚1
-|python:S117ıN"]Rename this local variable "sizePolicy17" to match the regular expression ^[_a-z][a-z0-9_]*$.(¹ê¼¦8ÊÇ«Õ‚1
-€python:S117»"\Rename this local variable "sizePolicy2" to match the regular expression ^[_a-z][a-z0-9_]*$.(õÀÕŒûÿÿÿÿ8ÊÇ«Õ‚1
-{python:S117‹"\Rename this local variable "sizePolicy3" to match the regular expression ^[_a-z][a-z0-9_]*$.(é”ûä8ÊÇ«Õ‚1
-{python:S117û"\Rename this local variable "sizePolicy4" to match the regular expression ^[_a-z][a-z0-9_]*$.(ìŞı8ÊÇ«Õ‚1
-€python:S117•"\Rename this local variable "sizePolicy5" to match the regular expression ^[_a-z][a-z0-9_]*$.(ó§Óüÿÿÿÿ8ÊÇ«Õ‚1
-{python:S117­"\Rename this local variable "sizePolicy6" to match the regular expression ^[_a-z][a-z0-9_]*$.(£Ë€­8ÊÇ«Õ‚1
-{python:S117¢"\Rename this local variable "sizePolicy7" to match the regular expression ^[_a-z][a-z0-9_]*$.(Š¸îö8ÊÇ«Õ‚1
-{python:S117»"\Rename this local variable "sizePolicy8" to match the regular expression ^[_a-z][a-z0-9_]*$.(•ıÒ¸8ÊÇ«Õ‚1
-€python:S117†("\Rename this local variable "sizePolicy9" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ä—Àşÿÿÿÿ8ÊÇ«Õ‚1
-npython:S100!"KRename method "setupUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÂéÇ´ÿÿÿÿÿ8ÊÇ«Õ‚1
-zpython:S117£R"VRename this parameter "MainWindow" to match the regular expression ^[_a-z][a-z0-9_]*$.(”«Àşÿÿÿÿ8ÊÇ«Õ‚1
-upython:S100£R"QRename method "retranslateUi" to match the regular expression ^[a-z_][a-z0-9_]*$.(”«Àşÿÿÿÿ8ÊÇ«Õ‚1

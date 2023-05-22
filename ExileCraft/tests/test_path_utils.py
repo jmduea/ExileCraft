@@ -12,7 +12,7 @@ class TestPathUtils(unittest.TestCase):
         self.base_dir = r"ExileCraft"
 
     def test_get_rel_path_to_db(self):
-        rel_path = path_utils.get_rel_path_to_db(self.base_dir)
+        rel_path = path_utils.get_rel_path_to_file(self.base_dir)
         self.assertEqual(rel_path, r"data\exilecraft.db")
 
     def test_get_abs_path(self):

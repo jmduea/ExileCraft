@@ -1,3 +1,4 @@
+import json
 import os
 
 
@@ -8,12 +9,19 @@ def get_base_dir(script_path):
         base_dir = os.path.dirname(base_dir)
     return base_dir
 
-def get_rel_path_to_db(base_dir):
-    """Return the relative path from the base directory to the 'exilecraft.db' file."""
-    return os.path.relpath(r"data/exilecraft.db", base_dir)
 
-def get_abs_path(script_path):
-    """Return the absolute path to the 'exilecraft.db' file."""
+def get_rel_path_to_file(base_dir, dir_path, filename):
+    """Return the relative path from the base directory to the given file."""
+    return os.path.relpath(os.path.join(dir_path, filename), base_dir)
+
+
+def get_abs_path(script_path, rel_path):
+    """Return the absolute path to the given file."""
     base_dir = get_base_dir(script_path)
-    rel_path = get_rel_path_to_db(base_dir)
     return os.path.join(base_dir, rel_path)
+
+
+def parse_json(abs_path):
+    with open(abs_path, 'r') as file:
+        data = json.load(file)
+    return data
