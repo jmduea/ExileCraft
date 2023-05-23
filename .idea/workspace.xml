@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a63e506-7a72-4719-b494-f2a9d299a019" name="Changes" comment="update" />
+    <list default="true" id="6a63e506-7a72-4719-b494-f2a9d299a019" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,38 +115,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
-    &quot;database.data.extractors.current.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;grid.search.filter.rows&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/spark/PycharmProjects/ExileCraft/ExileCraft/ExileCraft/modules/ui/ui_files&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;typescript.add.unambiguous.imports.on.the.fly&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;zielu.gittoolbox.prj.config.selected.tab.id&quot;: &quot;zielu.gittoolbox.config.shared.autoFetch&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "JSON-Groovy.json.groovy",
+    "database.data.extractors.current.id": "JSON-Groovy.json.groovy",
+    "git-widget-placeholder": "main",
+    "grid.search.filter.rows": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/spark/PycharmProjects/ExileCraft/ExileCraft/ExileCraft/modules/ui/ui_files",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "typescript.add.unambiguous.imports.on.the.fly": "true",
+    "vue.rearranger.settings.migration": "true",
+    "zielu.gittoolbox.prj.config.selected.tab.id": "zielu.gittoolbox.config.shared.autoFetch"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;documentdb&quot;,
-      &quot;couchbase_query&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "documentdb",
+      "couchbase_query",
+      "b39e4e35-aab0-47fc-b029-31841ed7f7c0"
     ]
   }
-}</component>
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="ExileCraft" is-module-sdk="true" working-directory="$PROJECT_DIR$">
@@ -175,7 +179,7 @@
       <recent name="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft\docs" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.plugin creator">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ExileCraft" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -208,6 +212,38 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="plugin creator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ExileCraft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -220,8 +256,13 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.plugin creator" />
+      <item itemvalue="Python.main" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plugin creator" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -582,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684806360905</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="update">
+      <created>1684806478606</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1684806478606</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,27 +753,28 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ExileCraft$register_all.coverage" NAME="register_all Coverage Results" MODIFIED="1684657699837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$Python$/Lib/site-packages/MadQt/QtDesignerPlugins" />
     <SUITE FILE_PATH="coverage/ExileCraft$essence_parser.coverage" NAME="essence_parser Coverage Results" MODIFIED="1684426827636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
-    <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool.coverage" NAME="pyside_tool Coverage Results" MODIFIED="1684597248191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Roaming/Python/Python311/site-packages/PySide6/scripts" />
     <SUITE FILE_PATH="coverage/ExileCraft$deploy.coverage" NAME="deploy Coverage Results" MODIFIED="1684617841709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
-    <SUITE FILE_PATH="coverage/ExileCraft$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1684659367115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$Python$/Lib/site-packages/MadQt/Apps/PluginCreator" />
-    <SUITE FILE_PATH="coverage/ExileCraft$test_get_base_item_stats.coverage" NAME="test_get_base_item_stats Coverage Results" MODIFIED="1684363008596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/tests" />
+    <SUITE FILE_PATH="coverage/ExileCraft$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1684807129039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/Custom_Widgets" />
     <SUITE FILE_PATH="coverage/ExileCraft$stat_parser.coverage" NAME="stat_parser Coverage Results" MODIFIED="1684425130921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
     <SUITE FILE_PATH="coverage/ExileCraft$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1684617354388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/qtpy" />
+    <SUITE FILE_PATH="coverage/ExileCraft$custom_widgets.coverage" NAME="custom_widgets Coverage Results" MODIFIED="1684807050443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ExileCraft$splash_screen.coverage" NAME="splash_screen Coverage Results" MODIFIED="1684471740442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/ui" />
+    <SUITE FILE_PATH="coverage/ExileCraft$.coverage" NAME=" Coverage Results" MODIFIED="1684579106542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
+    <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool__1_.coverage" NAME="pyside_tool (1) Coverage Results" MODIFIED="1684629633121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$main__1_.coverage" NAME="plugin creator Coverage Results" MODIFIED="1684807377088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
+    <SUITE FILE_PATH="coverage/ExileCraft$path_utils.coverage" NAME="path_utils Coverage Results" MODIFIED="1684422438824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
+    <SUITE FILE_PATH="coverage/ExileCraft$dad.coverage" NAME="dad Coverage Results" MODIFIED="1684575532875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
+    <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool.coverage" NAME="pyside_tool Coverage Results" MODIFIED="1684597248191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Roaming/Python/Python311/site-packages/PySide6/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$test_get_base_item_stats.coverage" NAME="test_get_base_item_stats Coverage Results" MODIFIED="1684363008596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/tests" />
     <SUITE FILE_PATH="coverage/ExileCraft$as.coverage" NAME="as Coverage Results" MODIFIED="1684803067877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ExileCraft$generate_pyi.coverage" NAME="generate_pyi Coverage Results" MODIFIED="1684628648983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/support" />
     <SUITE FILE_PATH="coverage/ExileCraft$sdsd.coverage" NAME="sdsd Coverage Results" MODIFIED="1684666408479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
     <SUITE FILE_PATH="coverage/ExileCraft$RunApp.coverage" NAME="RunApp Coverage Results" MODIFIED="1684805875986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft" />
     <SUITE FILE_PATH="coverage/ExileCraft$fossil_parser.coverage" NAME="fossil_parser Coverage Results" MODIFIED="1684423880632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
-    <SUITE FILE_PATH="coverage/ExileCraft$.coverage" NAME=" Coverage Results" MODIFIED="1684579106542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
     <SUITE FILE_PATH="coverage/ExileCraft$cli.coverage" NAME="cli Coverage Results" MODIFIED="1684617337429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/qtpy" />
-    <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool__1_.coverage" NAME="pyside_tool (1) Coverage Results" MODIFIED="1684629633121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
     <SUITE FILE_PATH="coverage/ExileCraft$ProjectManager.coverage" NAME="ProjectManager Coverage Results" MODIFIED="1684657681471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$Python$/Lib/site-packages/MadQt/scripts" />
     <SUITE FILE_PATH="coverage/ExileCraft$project.coverage" NAME="project Coverage Results" MODIFIED="1684629569148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
-    <SUITE FILE_PATH="coverage/ExileCraft$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1684805368975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
-    <SUITE FILE_PATH="coverage/ExileCraft$path_utils.coverage" NAME="path_utils Coverage Results" MODIFIED="1684422438824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
     <SUITE FILE_PATH="coverage/ExileCraft$main.coverage" NAME="main Coverage Results" MODIFIED="1684806312184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft" />
-    <SUITE FILE_PATH="coverage/ExileCraft$dad.coverage" NAME="dad Coverage Results" MODIFIED="1684575532875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
     <SUITE FILE_PATH="coverage/ExileCraft$uic.coverage" NAME="uic Coverage Results" MODIFIED="1684629711153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/pyside6_uic_extended" />
   </component>
 </project>

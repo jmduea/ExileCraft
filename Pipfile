@@ -4,10 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pysidesix-frameless-window = "*"
+pyside6-frameless-window = "*"
 pyside6-fluent-widgets = { extras = ["full"], version = "*" }
 madqt = "*"
-qt-pyqt-pyside-custom-widgets = "*"
+pyside6 = "*"
+pyside6-addons = "*"
+pyside6-essentials = "*"
 
 [dev-packages]
 sphinx = "7.0.1"

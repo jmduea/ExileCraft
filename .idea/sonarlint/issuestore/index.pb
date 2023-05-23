@@ -157,3 +157,22 @@ g
 7ExileCraft/ExileCraft/modules/db/get_base_item_stats.py,e\e\eea3a6cf77578024b59671e8df179086a9f5e95d
 f
 6ExileCraft/ExileCraft/data/json/stat_translations.json,b\7\b789e58ae8d57f55b501c2a36a7cbec61861af05
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+^
+.ExileCraft/ExileCraft/data/main/base_items.sql,f\e\fe0ef248b57b1df8cd72d8726e2b01e4fe6a15b6
+M
+ExileCraft/ExileCraft/main.py,c\6\c62360b3fd700ce674e0fc38baa15f35c462f048
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+n
+>ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.py,f\2\f21fd1070263b8737bf5b9432a758e2d2472a230
+\
+,ExileCraft/ExileCraft/modules/ui/__init__.py,a\5\a5922a569d07322b71f4d090d0bf2e28e2da6147
+Z
+*ExileCraft/ExileCraft/data/modpool_list.py,4\7\47b091f2460351fd4bf90ab0fb132d48b0df776f
+A
+custom_widgets.py,5\2\52d53c853d312317850eef46511303c97d9b59f1
+<
+Pipfile.lock,e\5\e563262209b7c2e62d1869582c8134583baa2204
