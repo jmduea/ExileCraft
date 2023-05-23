@@ -172,3 +172,5 @@ n
 >ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.py,f\2\f21fd1070263b8737bf5b9432a758e2d2472a230
 Z
 *ExileCraft/ExileCraft/data/modpool_list.py,4\7\47b091f2460351fd4bf90ab0fb132d48b0df776f
+A
+custom_widgets.py,5\2\52d53c853d312317850eef46511303c97d9b59f1
