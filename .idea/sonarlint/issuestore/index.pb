@@ -1,6 +1,8 @@
 
 b
 2ExileCraft/ExileCraft/modules/ui/slots/__init__.py,f\8\f86ac79e12e4cebec38526e90c29436122e1bf99
+e
+5ExileCraft/ExileCraft/modules/emu/crafting_project.py,1\4\1466e69aa080301f6a9944533ca5ba9e034b8d9e
 ]
 -ExileCraft/ExileCraft/modules/emu/__init__.py,3\0\309f099b892f68bcd6789f4bf75386ce46575467
 \
@@ -9,8 +11,12 @@ i
 9ExileCraft/ExileCraft/modules/ui/wizard/wizard_assets.qrc,6\0\609e65c7020ea982242cc430e95275d9346dceb8
 \
 ,ExileCraft/tests/test_get_base_item_stats.py,c\a\cacefd9ac49b71a93fd93e0de838efd5a2056dfa
+a
+1ExileCraft/ExileCraft/modules/config/constants.py,7\4\746cbdb4d9f952e53dbbffdac2bf99d4614f5f3b
 S
 #ExileCraft/tests/test_path_utils.py,5\4\54e5f2d846e760d45ebf2cc56e3e1027495ffaea
+Y
+)ExileCraft/ExileCraft/modules/__init__.py,5\d\5d88484acc083be2b661ca6890619ce7b40aa35b
 `
 0ExileCraft/ExileCraft/modules/tray/tray_setup.py,8\7\87e0aea0b42dad5a423927fee2101ff13c57b2f6
 a
@@ -115,6 +121,8 @@ f
 6ExileCraft/ExileCraft/modules/ui/customcursorbutton.py,b\5\b5ff681b5e64c76f7df488def16de12180906607
 ]
 -ExileCraft/ExileCraft/modules/ui/assets_rc.py,8\b\8bbece622e2404e03a6ba1980d4d0ebab1ef2b42
+k
+;ExileCraft/ExileCraft/modules/ui/pages/wizard_start_page.py,8\d\8dc21b64a6dbdfd3296811267beb26bf20a52399
 m
 =ExileCraft/ExileCraft/modules/ui/pages/item_selection_page.py,5\c\5c3b8d071ed2769b2d03a3d50b4327db8cbebbee
 k
@@ -123,6 +131,8 @@ m
 =ExileCraft/ExileCraft/modules/ui/pages/base_selection_page.py,2\1\21c01b732db4d414f89ca2bb12e344e44a2e3f07
 i
 9ExileCraft/ExileCraft/modules/ui/pages/base_group_page.py,f\1\f1db5a3951b81241474a48f53ac76203373184e1
+c
+3ExileCraft/ExileCraft/modules/ui/ui_SplashScreen.py,4\4\44d3816f1c488563840902555370387354ce8793
 b
 2ExileCraft/ExileCraft/modules/ui/customtreeitem.py,6\a\6a5111cd81c9945f286c57c72e61ca2e2e4c6b8d
 a
@@ -147,6 +157,9 @@ f
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 ^
 .ExileCraft/ExileCraft/data/main/base_items.sql,f\e\fe0ef248b57b1df8cd72d8726e2b01e4fe6a15b6
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 n
 >ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.py,f\2\f21fd1070263b8737bf5b9432a758e2d2472a230
 \
@@ -155,7 +168,3 @@ Z
 *ExileCraft/ExileCraft/data/modpool_list.py,4\7\47b091f2460351fd4bf90ab0fb132d48b0df776f
 A
 custom_widgets.py,5\2\52d53c853d312317850eef46511303c97d9b59f1
-<
-Pipfile.lock,e\5\e563262209b7c2e62d1869582c8134583baa2204
-7
-Pipfile,1\5\15af4b3d30054104e85f65a444b1db188c5deefb

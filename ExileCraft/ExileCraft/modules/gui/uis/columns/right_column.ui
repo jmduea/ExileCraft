@@ -6,8 +6,8 @@
             <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>229</width>
-                <height>330</height>
+                <width>247</width>
+                <height>510</height>
             </rect>
         </property>
         <property name="windowTitle">
@@ -28,8 +28,18 @@
             </property>
             <item>
                 <widget class="QStackedWidget" name="menus">
+                    <property name="styleSheet">
+                        <string notr="true">QToolTip {
+                            border: 1px solid black;
+                            padding: 2px;
+                            background-color: rgb(68, 68, 68);
+                            opacity: .8;
+                            vertical-align: middle;
+                            }
+                        </string>
+                    </property>
                     <property name="currentIndex">
-                        <number>3</number>
+                        <number>1</number>
                     </property>
                     <widget class="QWidget" name="crafting_methods_menu">
                         <layout class="QGridLayout" name="crafting_methods_layout1">
@@ -63,8 +73,65 @@
                                         <enum>Qt::NoContextMenu</enum>
                                     </property>
                                     <property name="toolTip">
-                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
-                                            color:#8787fe;&quot;&gt;Upgrades a Normal Item to a Magic Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Upgrades a Normal Item
+                                            to a Magic Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -88,6 +155,9 @@
                                     </property>
                                     <property name="checked">
                                         <bool>false</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
                                         <string notr="true">crafting_methods_btn_group</string>
@@ -121,8 +191,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
-                                            color:#8787fe;&quot;&gt;Reforges a Magic Item with new random properties&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Reforges a Magic Item
+                                            with new random properties&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -142,6 +269,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -176,8 +306,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
-                                            color:#8787fe;&quot;&gt;Enchants a Magic Item with a new random property&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Enchants a Magic Item
+                                            with a new random property&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -197,6 +384,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -231,8 +421,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
-                                            color:#8787fe;&quot;&gt;Upgrades a Magic Item to a Rare Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Upgrades a Magic Item
+                                            to a Rare Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -252,6 +499,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -286,8 +536,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
-                                            color:#8787fe;&quot;&gt;Upgrades a Normal Item to a Rare Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Upgrades a Normal Item
+                                            to a Rare Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -307,6 +614,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -341,8 +651,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
-                                            color:#8787fe;&quot;&gt;Reforges a Rare Item with new random modifiers&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Reforges a Rare Item
+                                            with new random modifiers&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -362,6 +729,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -396,7 +766,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Enchants a Rare Item with a new random property</string>
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Enchants a Rare Item
+                                            with a new random property&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
                                         <string/>
@@ -415,6 +844,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -449,7 +881,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Removes all properties from an Item</string>
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Removes all properties
+                                            from an Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
                                         <string/>
@@ -472,6 +963,9 @@
                                     </property>
                                     <property name="checked">
                                         <bool>false</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
                                         <string notr="true">crafting_methods_btn_group</string>
@@ -505,7 +999,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Removes a random modifier from an Item</string>
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Removes a random
+                                            modifier from an Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
                                         <string/>
@@ -524,6 +1077,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -558,7 +1114,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Enchants a Rare Item with a new Crusader modifier</string>
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Enchants a Rare Item
+                                            with a new Crusader modifier&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
                                         <string/>
@@ -577,6 +1192,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -611,7 +1229,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Enchants a Rare Item with a new Hunter modifier</string>
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Enchants a Rare Item
+                                            with a new Hunter modifier&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
                                         <string/>
@@ -630,6 +1307,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -664,7 +1344,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Enchants a Rare Item with a new Redeemer modifier</string>
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Enchants a Rare Item
+                                            with a new Redeemer modifier&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
                                         <string/>
@@ -683,6 +1422,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -717,7 +1459,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Enchants a Rare Item with a new Warlord modifier</string>
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Enchants a Rare Item
+                                            with a new Warlord modifier&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
                                         <string/>
@@ -736,6 +1537,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -770,7 +1574,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Randomises the numeric values of the Implicit properties of an Item
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Randomises the numeric
+                                            values of the Implicit properties of an Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -790,6 +1652,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -824,7 +1689,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Randomises the numeric values of the random properties on an Item
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Randomises the numeric
+                                            values of the random properties on an Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -844,6 +1767,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -878,8 +1804,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Reforges a Rare Item with new random modifiers, including a Veiled
-                                            modifier
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Reforges a Rare Item
+                                            with new random modifiers, including a Veiled modifier&lt;/span&gt;&lt;/p&gt;&lt;p
+                                            align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -899,6 +1883,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -933,9 +1920,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Destroys an Item, applying its' Influence to another of the same Item
-                                            class. The second Item is reforged as a Rare Item with both Influence types
-                                            and new modifiers
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Destroys an Item,
+                                            applying its' Influence to another of the same Item class. The second Item
+                                            is reforged as a Rare Item with both Influence types and new modifiers &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -955,6 +1999,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -989,8 +2036,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Removes one Influenced modifier from an Item with at least two
-                                            Influenced modifiers and upgrades another Influenced modifier
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Removes one Influenced
+                                            modifier from an Item with at least two Influenced modifiers and upgrades
+                                            another Influenced modifier&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -1010,6 +2115,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -1044,8 +2152,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Fractures a random modifier on a Rare Item with at least 4 modifiers,
-                                            locking it in place.
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Fractures a random
+                                            modifier on a Rare Item with at least 4 modifiers, locking it in place.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -1067,13 +2232,16 @@
                                     <property name="checkable">
                                         <bool>true</bool>
                                     </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
                                     <attribute name="buttonGroup">
                                         <string notr="true">crafting_methods_btn_group</string>
                                     </attribute>
                                 </widget>
                             </item>
                             <item row="6" column="1">
-                                <widget class="PyCustomCursorButton" name="locus_btn">
+                                <widget class="PyCustomCursorButton" name="method_double_corrupt_btn">
                                     <property name="sizePolicy">
                                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                             <horstretch>0</horstretch>
@@ -1099,7 +2267,65 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Potently corrupts an Item, modifying it drastically and unpredictably
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Potently corrupts an
+                                            Item, modifying it drastically and unpredictably&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
                                         </string>
                                     </property>
                                     <property name="text">
@@ -1107,7 +2333,9 @@
                                     </property>
                                     <property name="icon">
                                         <iconset resource="../../assets/assets.qrc">
-                                            <normaloff>:/images/images/locus.png</normaloff>:/images/images/locus.png
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_double_corrupt.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_double_corrupt.png
                                         </iconset>
                                     </property>
                                     <property name="iconSize">
@@ -1117,6 +2345,9 @@
                                         </size>
                                     </property>
                                     <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
                                         <bool>true</bool>
                                     </property>
                                     <attribute name="buttonGroup">
@@ -1151,7 +2382,66 @@
                                         <bool>true</bool>
                                     </property>
                                     <property name="toolTip">
-                                        <string>Corrupts an Item, modifying it unpredictably</string>
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Corrupts an Item,
+                                            modifying it unpredictably&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-top-width: 1px;
+                                            border-right-width: 1px;
+                                            border-bottom-width: 1px;
+                                            border-left-width: 1px;
+                                            border-top-style: solid;
+                                            border-right-style: solid;
+                                            border-bottom-style: solid;
+                                            border-left-style: solid;
+                                            border-top-color: rgb(0, 0, 0);
+                                            border-right-color: rgb(0, 0, 0);
+                                            border-bottom-color: rgb(0, 0, 0);
+                                            border-left-color: rgb(0, 0, 0);
+                                            border-image-source: initial;
+                                            border-image-slice: initial;
+                                            border-image-width: initial;
+                                            border-image-outset: initial;
+                                            border-image-repeat: initial;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            text-shadow: 1px 1px #000;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0 y2: 1,
+                                            stop: 0 #2d2d2d, stop: 1 #4b4b4b);
+                                            }
+                                            QPushButton::pressed {
+                                            background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                            stop: 0 #4b4b4b, stop: 1 #2d2d2d);
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
                                         <string/>
@@ -1172,6 +2462,9 @@
                                     <property name="checkable">
                                         <bool>true</bool>
                                     </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
                                     <attribute name="buttonGroup">
                                         <string notr="true">crafting_methods_btn_group</string>
                                     </attribute>
@@ -1181,37 +2474,767 @@
                     </widget>
                     <widget class="QWidget" name="menu_2">
                         <layout class="QVBoxLayout" name="verticalLayout_2">
-                            <property name="spacing">
-                                <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                                <number>5</number>
-                            </property>
-                            <property name="topMargin">
-                                <number>5</number>
-                            </property>
-                            <property name="rightMargin">
-                                <number>5</number>
-                            </property>
-                            <property name="bottomMargin">
-                                <number>5</number>
-                            </property>
                             <item>
-                                <widget class="QLabel" name="label_2">
-                                    <property name="font">
-                                        <font>
-                                            <pointsize>16</pointsize>
-                                        </font>
+                                <widget class="QPushButton" name="method_fossil_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Fossil crafting&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
                                     </property>
                                     <property name="styleSheet">
-                                        <string notr="true">font-size: 16pt</string>
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            padding: 5px 10px;
+                                            cursor: pointer;
+                                            text-shadow: 1px 1px #000;
+                                            vertical-align: top;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30,
+                                            30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                            }
+                                            QPushButton::pressed {
+
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
                                     </property>
                                     <property name="text">
-                                        <string>Menu 2 - Right Menu</string>
+                                        <string>Fossil Crafting</string>
                                     </property>
-                                    <property name="alignment">
-                                        <set>Qt::AlignCenter</set>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_fossil.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_fossil.png
+                                        </iconset>
                                     </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">advanced_crafting_method_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="method_harvest_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Harvest crafting&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            padding: 5px 10px;
+                                            cursor: pointer;
+                                            text-shadow: 1px 1px #000;
+                                            vertical-align: top;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30,
+                                            30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                            }
+                                            QPushButton::pressed {
+
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Harvest Crafting</string>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_harvest.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_harvest.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">advanced_crafting_method_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="method_essence_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Essences&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            padding: 5px 10px;
+                                            cursor: pointer;
+                                            text-shadow: 1px 1px #000;
+                                            vertical-align: top;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30,
+                                            30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                            }
+                                            QPushButton::pressed {
+
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Essence Crafting</string>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_essence.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_essence.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">advanced_crafting_method_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="method_syndicate_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Syndicate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            padding: 5px 10px;
+                                            cursor: pointer;
+                                            text-shadow: 1px 1px #000;
+                                            vertical-align: top;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30,
+                                            30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                            }
+                                            QPushButton::pressed {
+
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Syndicate Crafts</string>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_syndicate.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_syndicate.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">advanced_crafting_method_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="eldritch_method_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Eldritch crafting&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            padding: 5px 10px;
+                                            cursor: pointer;
+                                            text-shadow: 1px 1px #000;
+                                            vertical-align: top;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30,
+                                            30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                            }
+                                            QPushButton::pressed {
+
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Eldritch Currency</string>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_eldritch.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_eldritch.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">advanced_crafting_method_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="method_crafting_bench_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Vendor recipes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            padding: 5px 10px;
+                                            cursor: pointer;
+                                            text-shadow: 1px 1px #000;
+                                            vertical-align: top;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30,
+                                            30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                            }
+                                            QPushButton::pressed {
+
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Crafting Bench</string>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_crafting_bench.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_crafting_bench.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">advanced_crafting_method_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="method_imprint_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Beast crafting&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            padding: 5px 10px;
+                                            cursor: pointer;
+                                            text-shadow: 1px 1px #000;
+                                            vertical-align: top;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30,
+                                            30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                            }
+                                            QPushButton::pressed {
+
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Beast Crafting</string>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_imprint.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_imprint.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">advanced_crafting_method_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="catalyst_method_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span
+                                            style=&quot; font-size:14pt; color:#8787fe;&quot;&gt;Catalysts&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">QPushButton {
+                                            border: 1px solid #000;
+                                            border-radius: 4px;
+                                            background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0, stop: 0
+                                            #1e1e1e, stop: 1 #3c3c3c);
+                                            border-image: none;
+                                            color: #FFF;
+                                            box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-family: Open Sans;
+                                            font-size: 12px;
+                                            font-weight: bold;
+                                            height: 36px;
+                                            line-height: 36px;
+                                            text-align: center;
+                                            margin: 0px;
+                                            padding: 5px 10px;
+                                            cursor: pointer;
+                                            text-shadow: 1px 1px #000;
+                                            vertical-align: top;
+                                            }
+                                            QPushButton::hover {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(30,
+                                            30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                            }
+                                            QPushButton::pressed {
+
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            }
+                                            QPushButton::checked {
+                                            background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(221,
+                                            204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                            color: #332211;
+                                            text-shadow: 1px 1px #FFF;
+                                            box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                            font-weight: bold;
+                                            }
+                                            QPushButton::flat {
+                                            border: none;
+                                            }
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Catalysts</string>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_catalyst.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_catalyst.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="autoExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">advanced_crafting_method_btn_group</string>
+                                    </attribute>
                                 </widget>
                             </item>
                         </layout>
@@ -1317,5 +3340,6 @@
                 <bool>false</bool>
             </property>
         </buttongroup>
+        <buttongroup name="advanced_crafting_method_btn_group"/>
     </buttongroups>
 </ui>

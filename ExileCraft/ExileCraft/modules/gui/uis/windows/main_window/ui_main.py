@@ -16,39 +16,31 @@
 
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
-from modules.gui.core.functions import Functions
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
-from qt_core import *
 
 # IMPORT SETTINGS
 # ///////////////////////////////////////////////////////////////
-from modules.gui.core.json_settings import Settings
 
 # IMPORT THEME COLORS
 # ///////////////////////////////////////////////////////////////
-from modules.gui.core.json_themes import Themes
 
 # IMPORT PY ONE DARK WIDGETS
 # ///////////////////////////////////////////////////////////////
-from modules.gui.widgets import *
-
-# IMPORT SETUP MAIN WINDOW
-# ///////////////////////////////////////////////////////////////
-from .setup_main_window import *
-
-# IMPORT MAIN WINDOW PAGES / AND SIDE BOXES FOR APP
-# ///////////////////////////////////////////////////////////////
-from modules.gui.uis.pages.ui_main_pages import Ui_MainPages
 
 # RIGHT COLUMN
 # ///////////////////////////////////////////////////////////////
 from modules.gui.uis.columns.ui_right_column import Ui_RightColumn
-
+# IMPORT MAIN WINDOW PAGES / AND SIDE BOXES FOR APP
+# ///////////////////////////////////////////////////////////////
+from modules.gui.uis.pages.ui_main_pages import Ui_MainPages
 # CREDITS
 # ///////////////////////////////////////////////////////////////
 from modules.gui.widgets.py_credits_bar.py_credits import PyCredits
+# IMPORT SETUP MAIN WINDOW
+# ///////////////////////////////////////////////////////////////
+from .setup_main_window import *
 
 
 # PY WINDOW
@@ -197,7 +189,7 @@ class UI_MainWindow(object):
             parent,
             logo_width=100,
             app_parent=self.central_widget,
-            logo_image="logo_top_100x22.svg",
+            logo_image="exilecraft.svg",
             bg_color=self.themes["app_color"]["bg_two"],
             div_color=self.themes["app_color"]["bg_three"],
             btn_bg_color=self.themes["app_color"]["bg_two"],

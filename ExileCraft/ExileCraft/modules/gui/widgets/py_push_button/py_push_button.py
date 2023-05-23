@@ -55,7 +55,7 @@ class PyPushButton(QPushButton):
 
         # SET PARAMETRES
         self.setText(text)
-        if parent != None:
+        if parent is not None:
             self.setParent(parent)
         self.setCursor(Qt.PointingHandCursor)
 

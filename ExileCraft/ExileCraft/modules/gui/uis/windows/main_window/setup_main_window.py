@@ -16,34 +16,25 @@
 
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
-import sys
-import os
 
-from modules.gui.core.functions import Functions
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
-from qt_core import *
 
 # IMPORT SETTINGS
 # ///////////////////////////////////////////////////////////////
-from modules.gui.core.json_settings import Settings
 
 # IMPORT THEME COLORS
 # ///////////////////////////////////////////////////////////////
-from modules.gui.core.json_themes import Themes
 
+# MAIN FUNCTIONS
+# ///////////////////////////////////////////////////////////////
+from .functions_main_window import *
 # IMPORT PY ONE DARK WIDGETS
 # ///////////////////////////////////////////////////////////////
-from modules.gui.widgets import *
 from .functions_main_window import MainFunctions
-
 # LOAD UI MAIN
 # ///////////////////////////////////////////////////////////////
 from .ui_main import *
-
-# MAIN FUNCTIONS 
-# ///////////////////////////////////////////////////////////////
-from .functions_main_window import *
 
 
 class SetupMainWindow:
@@ -67,26 +58,26 @@ class SetupMainWindow:
             "is_active": True
         },
         {
-            "btn_icon": "icon_home.svg",
+            "btn_icon": "icon_folder.svg",
             "btn_id": "btn_page_2",
-            "btn_text": "Home",
-            "btn_tooltip": "Home page",
+            "btn_text": "Modpool",
+            "btn_tooltip": "Available Mods",
             "show_top": True,
             "is_active": False
         },
         {
-            "btn_icon": "icon_home.svg",
+            "btn_icon": "icon_send.svg",
             "btn_id": "btn_page_3",
-            "btn_text": "Home",
-            "btn_tooltip": "Home page",
+            "btn_text": "Crafting Simulator",
+            "btn_tooltip": "Simulate Crafting Methods",
             "show_top": True,
             "is_active": False
         },
         {
             "btn_icon": "icon_info.svg",
             "btn_id": "btn_info",
-            "btn_text": "Open Info",
-            "btn_tooltip": "Open Info",
+            "btn_text": "Open Item Info",
+            "btn_tooltip": "Open Item Info",
             "show_top": False,
             "is_active": False
         },
@@ -110,9 +101,9 @@ class SetupMainWindow:
             "is_active": False
         },
         {
-            "btn_icon": "icon_settings.svg",
+            "btn_icon": "icon_more_options.svg",
             "btn_id": "btn_top_settings",
-            "btn_tooltip": "Top settings",
+            "btn_tooltip": "Crafting Methods",
             "is_active": False
         }
     ]
@@ -293,57 +284,6 @@ class SetupMainWindow:
             self.ui.right_column.crafting_methods_menu
         ))
         self.ui.right_column.btn_2_layout.addWidget(self.right_btn_2)
-
-        # PAGES
-        # ///////////////////////////////////////////////////////////////
-
-        # TABLE WIDGETS
-        self.table_widget = PyTableWidget(
-            radius=8,
-            color=self.themes["app_color"]["text_foreground"],
-            selection_color=self.themes["app_color"]["context_color"],
-            bg_color=self.themes["app_color"]["bg_two"],
-            header_horizontal_color=self.themes["app_color"]["dark_two"],
-            header_vertical_color=self.themes["app_color"]["bg_three"],
-            bottom_line_color=self.themes["app_color"]["bg_three"],
-            grid_line_color=self.themes["app_color"]["bg_one"],
-            scroll_bar_bg_color=self.themes["app_color"]["bg_one"],
-            scroll_bar_btn_color=self.themes["app_color"]["dark_four"],
-            context_color=self.themes["app_color"]["context_color"]
-        )
-        self.table_widget.setColumnCount(3)
-        self.table_widget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-        self.table_widget.setSelectionMode(QAbstractItemView.ExtendedSelection)
-        self.table_widget.setSelectionBehavior(QAbstractItemView.SelectRows)
-
-        # Columns / Header
-        self.column_1 = QTableWidgetItem()
-        self.column_1.setTextAlignment(Qt.AlignCenter)
-        self.column_1.setText("NAME")
-
-        self.column_2 = QTableWidgetItem()
-        self.column_2.setTextAlignment(Qt.AlignCenter)
-        self.column_2.setText("NICK")
-
-        self.column_3 = QTableWidgetItem()
-        self.column_3.setTextAlignment(Qt.AlignCenter)
-        self.column_3.setText("PASS")
-
-        # Set column
-        self.table_widget.setHorizontalHeaderItem(0, self.column_1)
-        self.table_widget.setHorizontalHeaderItem(1, self.column_2)
-        self.table_widget.setHorizontalHeaderItem(2, self.column_3)
-
-        for x in range(10):
-            row_number = self.table_widget.rowCount()
-            self.table_widget.insertRow(row_number)  # Insert row
-            self.table_widget.setItem(row_number, 0, QTableWidgetItem(str("Wanderson")))  # Add name
-            self.table_widget.setItem(row_number, 1, QTableWidgetItem(str("vfx_on_fire_" + str(x))))  # Add nick
-            self.pass_text = QTableWidgetItem()
-            self.pass_text.setTextAlignment(Qt.AlignCenter)
-            self.pass_text.setText("12345" + str(x))
-            self.table_widget.setItem(row_number, 2, self.pass_text)  # Add pass
-            self.table_widget.setRowHeight(row_number, 22)
 
     # RESIZE GRIPS AND CHANGE POSITION
     # Resize or change position when window is resized

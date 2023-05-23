@@ -14,22 +14,18 @@
 #
 # ///////////////////////////////////////////////////////////////
 
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
-
 # IMPORT FUNCTIONS
 # ///////////////////////////////////////////////////////////////
 from modules.gui.core.functions import *
-
 # IMPORT SETTINGS
 # ///////////////////////////////////////////////////////////////
 from modules.gui.core.json_settings import Settings
-
+# IMPORT QT CORE
+# ///////////////////////////////////////////////////////////////
+from qt_core import *
 # IMPORT DIV
 # ///////////////////////////////////////////////////////////////
 from .py_div import PyDiv
-
 # IMPORT BUTTON
 # ///////////////////////////////////////////////////////////////
 from .py_title_button import PyTitleButton
@@ -53,7 +49,7 @@ class PyTitleBar(QWidget):
             self,
             parent,
             app_parent,
-            logo_image="logo_top_100x22.svg",
+            logo_image="",
             logo_width=100,
             buttons=None,
             dark_one="#1b1e23",
@@ -143,7 +139,6 @@ class PyTitleBar(QWidget):
 
         # ADD WIDGETS TO TITLE BAR
         # ///////////////////////////////////////////////////////////////
-        self.bg_layout.addWidget(self.top_logo)
         self.bg_layout.addWidget(self.div_1)
         self.bg_layout.addWidget(self.title_label)
         self.bg_layout.addWidget(self.div_2)
@@ -168,7 +163,7 @@ class PyTitleBar(QWidget):
     # Add btns and emit signals
     # ///////////////////////////////////////////////////////////////
     def add_menus(self, parameters):
-        if parameters != None and len(parameters) > 0:
+        if parameters is not None and len(parameters) > 0:
             for parameter in parameters:
                 _btn_icon = Functions.set_svg_icon(parameter['btn_icon'])
                 _btn_id = parameter['btn_id']

@@ -14,7 +14,6 @@
     <file>images/item-header.png</file>
     <file>images/item-header-normal.png</file>
     <file>images/item-sep.png</file>
-    <file>images/locus.png</file>
     <file>images/mirror_sml.png</file>
     <file>images/poeninja.png</file>
     <file>images/redeemer_influence.png</file>
@@ -53,6 +52,7 @@
     <file>images/catalysts/unstable_catalyst.png</file>
   </qresource>
   <qresource prefix="crafting_methods">
+    <file>images/crafting_methods/method_double_corrupt.png</file>
     <file>images/crafting_methods/method_alchemy.png</file>
     <file>images/crafting_methods/method_alteration.png</file>
     <file>images/crafting_methods/method_annul.png</file>
@@ -1093,10 +1093,6 @@
     <file>images/svg_icons/icon_signal.svg</file>
     <file>images/svg_icons/icon_widgets.svg</file>
     <file>images/svg_icons/no_icon.svg</file>
-  </qresource>
-  <qresource prefix="svg_images">
-    <file>images/svg_images/logo_home.svg</file>
-    <file>images/svg_images/logo_top_100x22.svg</file>
   </qresource>
   <qresource prefix="stylesheets">
     <file>stylesheets/landing_page_stylesheet.qss</file>

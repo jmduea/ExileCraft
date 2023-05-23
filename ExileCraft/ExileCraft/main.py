@@ -21,18 +21,15 @@
 #  SOFTWARE.
 #
 # from modules.gui.splash_screen.splash_screen import SplashScreen
-from modules.gui.core.functions import Functions
-from modules.gui.uis.windows.main_window.functions_main_window import *
 import os
 import sys
 
-from qt_core import *
-
 from modules.gui.core.json_settings import Settings
 from modules.gui.uis.windows.main_window import SetupMainWindow, UI_MainWindow
+from modules.gui.uis.windows.main_window.functions_main_window import *
 from modules.tray.hotkey_methods import register_hotkey
 from modules.tray.tray_setup import SetupTray
-from modules.gui.assets import assets_rc
+from qt_core import *
 
 # Adjust QT Font DPI for high scale and 4k monitors
 os.environ["QT_FONT_DPI"] = "96"
@@ -173,9 +170,6 @@ class MainWindow(QMainWindow):
             btn_info = MainFunctions.get_left_menu_btn(self, "btn_info")
             btn_info.set_active_tab(False)
 
-            # DEBUG
-        print(f"Button {btn.objectName()}, clicked!")
-
     # LEFT MENU BTN IS RELEASED
     # Run function when btn is released
     # Check funtion by object name / btn_id
@@ -183,9 +177,6 @@ class MainWindow(QMainWindow):
     def btn_released(self):
         # GET BT CLICKED
         btn = SetupMainWindow.setup_btns(self)
-
-        # DEBUG
-        print(f"Button {btn.objectName()}, released!")
 
     # RESIZE EVENT
     # ///////////////////////////////////////////////////////////////
