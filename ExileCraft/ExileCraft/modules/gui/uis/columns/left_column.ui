@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>LeftColumn</class>
+    <widget class="QWidget" name="LeftColumn">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>208</width>
+                <height>662</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Form</string>
+        </property>
+        <layout class="QVBoxLayout" name="main_pages_layout">
+            <property name="spacing">
+                <number>0</number>
+            </property>
+            <property name="leftMargin">
+                <number>5</number>
+            </property>
+            <property name="topMargin">
+                <number>5</number>
+            </property>
+            <property name="rightMargin">
+                <number>5</number>
+            </property>
+            <property name="bottomMargin">
+                <number>5</number>
+            </property>
+            <item>
+                <widget class="QStackedWidget" name="menus">
+                    <property name="currentIndex">
+                        <number>1</number>
+                    </property>
+                    <widget class="QWidget" name="menu_1">
+                        <layout class="QVBoxLayout" name="verticalLayout">
+                            <property name="spacing">
+                                <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="topMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="rightMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="bottomMargin">
+                                <number>5</number>
+                            </property>
+                            <item>
+                                <widget class="QWidget" name="btn_1_widget" native="true">
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>16777215</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="btn_1_layout">
+                                        <property name="spacing">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="leftMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="topMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="rightMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="bottomMargin">
+                                            <number>0</number>
+                                        </property>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QWidget" name="btn_2_widget" native="true">
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>16777215</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="btn_2_layout">
+                                        <property name="spacing">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="leftMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="topMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="rightMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="bottomMargin">
+                                            <number>0</number>
+                                        </property>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QWidget" name="btn_3_widget" native="true">
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>16777215</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="btn_3_layout">
+                                        <property name="spacing">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="leftMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="topMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="rightMargin">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="bottomMargin">
+                                            <number>0</number>
+                                        </property>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QLabel" name="label_1">
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>16</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">font-size: 16pt</string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Menu 1 - Left Menu</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>Qt::AlignCenter</set>
+                                    </property>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                    <widget class="QWidget" name="menu_2">
+                        <layout class="QVBoxLayout" name="verticalLayout_2">
+                            <property name="spacing">
+                                <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="topMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="rightMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="bottomMargin">
+                                <number>5</number>
+                            </property>
+                            <item>
+                                <widget class="QWidget" name="widget" native="true">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="verticalLayout_3">
+                                        <item>
+                                            <widget class="QLabel" name="label">
+                                                <property name="text">
+                                                    <string>Base Group</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignCenter</set>
+                                                </property>
+                                                <property name="buddy">
+                                                    <cstring>comboBox</cstring>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QComboBox" name="comboBox"/>
+                                        </item>
+                                        <item>
+                                            <widget class="QLabel" name="label_4">
+                                                <property name="text">
+                                                    <string>Base</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignCenter</set>
+                                                </property>
+                                                <property name="buddy">
+                                                    <cstring>comboBox_2</cstring>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QComboBox" name="comboBox_2"/>
+                                        </item>
+                                        <item>
+                                            <widget class="QLabel" name="label_5">
+                                                <property name="text">
+                                                    <string>Base Item</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignCenter</set>
+                                                </property>
+                                                <property name="buddy">
+                                                    <cstring>comboBox_3</cstring>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QComboBox" name="comboBox_3"/>
+                                        </item>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QWidget" name="widget_2" native="true">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="verticalLayout_4">
+                                        <item>
+                                            <widget class="QLabel" name="label_2">
+                                                <property name="text">
+                                                    <string>Item Level (0-100)</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignCenter</set>
+                                                </property>
+                                                <property name="buddy">
+                                                    <cstring>spinBox</cstring>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QSpinBox" name="spinBox">
+                                                <property name="maximum">
+                                                    <number>100</number>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QLabel" name="label_3">
+                                                <property name="text">
+                                                    <string>Item Quality (0-30)</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignCenter</set>
+                                                </property>
+                                                <property name="buddy">
+                                                    <cstring>spinBox_2</cstring>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QSpinBox" name="spinBox_2">
+                                                <property name="maximum">
+                                                    <number>30</number>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </widget>
+                            </item>
+                            <item>
+                                <widget class="QWidget" name="widget_3" native="true">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <layout class="QVBoxLayout" name="verticalLayout_5">
+                                        <item>
+                                            <widget class="QLabel" name="item_influences_label">
+                                                <property name="sizePolicy">
+                                                    <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Set Item Influences (0-2)</string>
+                                                </property>
+                                                <property name="alignment">
+                                                    <set>Qt::AlignCenter</set>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="crusader_btn">
+                                                <property name="styleSheet">
+                                                    <string notr="true">QPushButton {
+                                                        border: 1px solid #000;
+                                                        border-radius: 4px;
+                                                        background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                                        stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                                                        border-image: none;
+                                                        color: #FFF;
+                                                        box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-family: Open Sans;
+                                                        font-size: 12px;
+                                                        font-weight: bold;
+                                                        height: 36px;
+                                                        line-height: 36px;
+                                                        text-align: center;
+                                                        margin: 0px;
+                                                        padding: 5px 10px;
+                                                        cursor: pointer;
+                                                        text-shadow: 1px 1px #000;
+                                                        vertical-align: top;
+                                                        }
+                                                        QPushButton::hover {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                                        }
+                                                        QPushButton::pressed {
+
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        }
+                                                        QPushButton::checked {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        color: #332211;
+                                                        text-shadow: 1px 1px #FFF;
+                                                        box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-weight: bold;
+                                                        }
+                                                        QPushButton::flat {
+                                                        border: none;
+                                                        }
+                                                    </string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Crusader</string>
+                                                </property>
+                                                <property name="icon">
+                                                    <iconset resource="../../assets/assets.qrc">
+                                                        <normaloff>
+                                                            :/influences/images/influences/crusader_influence.png</normaloff>
+                                                        :/influences/images/influences/crusader_influence.png
+                                                    </iconset>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="elder_btn">
+                                                <property name="styleSheet">
+                                                    <string notr="true">QPushButton {
+                                                        border: 1px solid #000;
+                                                        border-radius: 4px;
+                                                        background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                                        stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                                                        border-image: none;
+                                                        color: #FFF;
+                                                        box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-family: Open Sans;
+                                                        font-size: 12px;
+                                                        font-weight: bold;
+                                                        height: 36px;
+                                                        line-height: 36px;
+                                                        text-align: center;
+                                                        margin: 0px;
+                                                        padding: 5px 10px;
+                                                        cursor: pointer;
+                                                        text-shadow: 1px 1px #000;
+                                                        vertical-align: top;
+                                                        }
+                                                        QPushButton::hover {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                                        }
+                                                        QPushButton::pressed {
+
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        }
+                                                        QPushButton::checked {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        color: #332211;
+                                                        text-shadow: 1px 1px #FFF;
+                                                        box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-weight: bold;
+                                                        }
+                                                        QPushButton::flat {
+                                                        border: none;
+                                                        }
+                                                    </string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Elder</string>
+                                                </property>
+                                                <property name="icon">
+                                                    <iconset resource="../../assets/assets.qrc">
+                                                        <normaloff>
+                                                            :/influences/images/influences/elder_influence.png</normaloff>
+                                                        :/influences/images/influences/elder_influence.png
+                                                    </iconset>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="hunter_btn">
+                                                <property name="styleSheet">
+                                                    <string notr="true">QPushButton {
+                                                        border: 1px solid #000;
+                                                        border-radius: 4px;
+                                                        background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                                        stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                                                        border-image: none;
+                                                        color: #FFF;
+                                                        box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-family: Open Sans;
+                                                        font-size: 12px;
+                                                        font-weight: bold;
+                                                        height: 36px;
+                                                        line-height: 36px;
+                                                        text-align: center;
+                                                        margin: 0px;
+                                                        padding: 5px 10px;
+                                                        cursor: pointer;
+                                                        text-shadow: 1px 1px #000;
+                                                        vertical-align: top;
+                                                        }
+                                                        QPushButton::hover {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                                        }
+                                                        QPushButton::pressed {
+
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        }
+                                                        QPushButton::checked {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        color: #332211;
+                                                        text-shadow: 1px 1px #FFF;
+                                                        box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-weight: bold;
+                                                        }
+                                                        QPushButton::flat {
+                                                        border: none;
+                                                        }
+                                                    </string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Hunter</string>
+                                                </property>
+                                                <property name="icon">
+                                                    <iconset resource="../../assets/assets.qrc">
+                                                        <normaloff>
+                                                            :/influences/images/influences/hunter_influence.png</normaloff>
+                                                        :/influences/images/influences/hunter_influence.png
+                                                    </iconset>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="redeemer_btn">
+                                                <property name="styleSheet">
+                                                    <string notr="true">QPushButton {
+                                                        border: 1px solid #000;
+                                                        border-radius: 4px;
+                                                        background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                                        stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                                                        border-image: none;
+                                                        color: #FFF;
+                                                        box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-family: Open Sans;
+                                                        font-size: 12px;
+                                                        font-weight: bold;
+                                                        height: 36px;
+                                                        line-height: 36px;
+                                                        text-align: center;
+                                                        margin: 0px;
+                                                        padding: 5px 10px;
+                                                        cursor: pointer;
+                                                        text-shadow: 1px 1px #000;
+                                                        vertical-align: top;
+                                                        }
+                                                        QPushButton::hover {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                                        }
+                                                        QPushButton::pressed {
+
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        }
+                                                        QPushButton::checked {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        color: #332211;
+                                                        text-shadow: 1px 1px #FFF;
+                                                        box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-weight: bold;
+                                                        }
+                                                        QPushButton::flat {
+                                                        border: none;
+                                                        }
+                                                    </string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Redeemer</string>
+                                                </property>
+                                                <property name="icon">
+                                                    <iconset resource="../../assets/assets.qrc">
+                                                        <normaloff>
+                                                            :/influences/images/influences/redeemer_influence.png</normaloff>
+                                                        :/influences/images/influences/redeemer_influence.png
+                                                    </iconset>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="shaper_btn">
+                                                <property name="styleSheet">
+                                                    <string notr="true">QPushButton {
+                                                        border: 1px solid #000;
+                                                        border-radius: 4px;
+                                                        background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                                        stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                                                        border-image: none;
+                                                        color: #FFF;
+                                                        box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-family: Open Sans;
+                                                        font-size: 12px;
+                                                        font-weight: bold;
+                                                        height: 36px;
+                                                        line-height: 36px;
+                                                        text-align: center;
+                                                        margin: 0px;
+                                                        padding: 5px 10px;
+                                                        cursor: pointer;
+                                                        text-shadow: 1px 1px #000;
+                                                        vertical-align: top;
+                                                        }
+                                                        QPushButton::hover {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                                        }
+                                                        QPushButton::pressed {
+
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        }
+                                                        QPushButton::checked {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        color: #332211;
+                                                        text-shadow: 1px 1px #FFF;
+                                                        box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-weight: bold;
+                                                        }
+                                                        QPushButton::flat {
+                                                        border: none;
+                                                        }
+                                                    </string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Shaper</string>
+                                                </property>
+                                                <property name="icon">
+                                                    <iconset resource="../../assets/assets.qrc">
+                                                        <normaloff>
+                                                            :/influences/images/influences/shaper_influence.png</normaloff>
+                                                        :/influences/images/influences/shaper_influence.png
+                                                    </iconset>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="warlord_btn">
+                                                <property name="styleSheet">
+                                                    <string notr="true">QPushButton {
+                                                        border: 1px solid #000;
+                                                        border-radius: 4px;
+                                                        background-color: qlineargradient(x1: 0, y1: 1, x2: 0, y2: 0,
+                                                        stop: 0 #1e1e1e, stop: 1 #3c3c3c);
+                                                        border-image: none;
+                                                        color: #FFF;
+                                                        box-shadow: inset 0 1px 1px #666, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-family: Open Sans;
+                                                        font-size: 12px;
+                                                        font-weight: bold;
+                                                        height: 36px;
+                                                        line-height: 36px;
+                                                        text-align: center;
+                                                        margin: 0px;
+                                                        padding: 5px 10px;
+                                                        cursor: pointer;
+                                                        text-shadow: 1px 1px #000;
+                                                        vertical-align: top;
+                                                        }
+                                                        QPushButton::hover {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(30, 30, 30, 1), stop:1 rgba(75, 75, 75, 1));
+                                                        }
+                                                        QPushButton::pressed {
+
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        }
+                                                        QPushButton::checked {
+                                                        background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0
+                                                        rgba(221, 204, 153, 1), stop:1 rgba(255, 238, 187, 255));
+                                                        color: #332211;
+                                                        text-shadow: 1px 1px #FFF;
+                                                        box-shadow: inset 0 1px 1px #BBB, 0 1px 2px rgba(0,0,0,0.31);
+                                                        font-weight: bold;
+                                                        }
+                                                        QPushButton::flat {
+                                                        border: none;
+                                                        }
+                                                    </string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Warlord</string>
+                                                </property>
+                                                <property name="icon">
+                                                    <iconset resource="../../assets/assets.qrc">
+                                                        <normaloff>
+                                                            :/influences/images/influences/warlord_influence.png</normaloff>
+                                                        :/influences/images/influences/warlord_influence.png
+                                                    </iconset>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                </widget>
+            </item>
+        </layout>
+    </widget>
+    <resources>
+        <include location="../../assets/assets.qrc"/>
+    </resources>
+    <connections/>
+</ui>

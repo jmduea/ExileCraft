@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>RightColumn</class>
+    <widget class="QWidget" name="RightColumn">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>229</width>
+                <height>330</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Form</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+            <property name="leftMargin">
+                <number>5</number>
+            </property>
+            <property name="topMargin">
+                <number>5</number>
+            </property>
+            <property name="rightMargin">
+                <number>5</number>
+            </property>
+            <property name="bottomMargin">
+                <number>5</number>
+            </property>
+            <item>
+                <widget class="QStackedWidget" name="menus">
+                    <property name="currentIndex">
+                        <number>3</number>
+                    </property>
+                    <widget class="QWidget" name="crafting_methods_menu">
+                        <layout class="QGridLayout" name="crafting_methods_layout1">
+                            <item row="0" column="0">
+                                <widget class="PyCustomCursorButton" name="method_transmute_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>58</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="contextMenuPolicy">
+                                        <enum>Qt::NoContextMenu</enum>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
+                                            color:#8787fe;&quot;&gt;Upgrades a Normal Item to a Magic Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_transmute.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_transmute.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>false</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="0" column="1">
+                                <widget class="PyCustomCursorButton" name="method_alteration_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
+                                            color:#8787fe;&quot;&gt;Reforges a Magic Item with new random properties&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_alteration.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_alteration.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="0" column="2">
+                                <widget class="PyCustomCursorButton" name="method_augmentation_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
+                                            color:#8787fe;&quot;&gt;Enchants a Magic Item with a new random property&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_augmentation.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_augmentation.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="1" column="0">
+                                <widget class="PyCustomCursorButton" name="method_regal_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
+                                            color:#8787fe;&quot;&gt;Upgrades a Magic Item to a Rare Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_regal.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_regal.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="1" column="1">
+                                <widget class="PyCustomCursorButton" name="method_alchemy_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
+                                            color:#8787fe;&quot;&gt;Upgrades a Normal Item to a Rare Item&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_alchemy.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_alchemy.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="1" column="2">
+                                <widget class="PyCustomCursorButton" name="method_chaos_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;
+                                            color:#8787fe;&quot;&gt;Reforges a Rare Item with new random modifiers&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_chaos.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_chaos.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="2" column="0">
+                                <widget class="PyCustomCursorButton" name="method_exalted_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Enchants a Rare Item with a new random property</string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_exalted.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_exalted.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="2" column="1">
+                                <widget class="PyCustomCursorButton" name="method_scour_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Removes all properties from an Item</string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_scour.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_scour.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>false</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="2" column="2">
+                                <widget class="PyCustomCursorButton" name="method_annul_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Removes a random modifier from an Item</string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_annul.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_annul.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="3" column="0">
+                                <widget class="PyCustomCursorButton" name="method_crusader_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Enchants a Rare Item with a new Crusader modifier</string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_crusader.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_crusader.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="3" column="1">
+                                <widget class="PyCustomCursorButton" name="method_hunter_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Enchants a Rare Item with a new Hunter modifier</string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_hunter.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_hunter.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="3" column="2">
+                                <widget class="PyCustomCursorButton" name="method_redeemer_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Enchants a Rare Item with a new Redeemer modifier</string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_redeemer.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_redeemer.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="4" column="0">
+                                <widget class="PyCustomCursorButton" name="method_warlord_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Enchants a Rare Item with a new Warlord modifier</string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_warlord.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_warlord.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="4" column="1">
+                                <widget class="PyCustomCursorButton" name="method_blessed_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Randomises the numeric values of the Implicit properties of an Item
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_blessed.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_blessed.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="4" column="2">
+                                <widget class="PyCustomCursorButton" name="method_divine_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Randomises the numeric values of the random properties on an Item
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_divine.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_divine.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="5" column="0">
+                                <widget class="PyCustomCursorButton" name="method_veiled_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Reforges a Rare Item with new random modifiers, including a Veiled
+                                            modifier
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_veiled.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_veiled.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="5" column="1">
+                                <widget class="PyCustomCursorButton" name="method_woke_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Destroys an Item, applying its' Influence to another of the same Item
+                                            class. The second Item is reforged as a Rare Item with both Influence types
+                                            and new modifiers
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_woke.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_woke.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="5" column="2">
+                                <widget class="PyCustomCursorButton" name="method_maven_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Removes one Influenced modifier from an Item with at least two
+                                            Influenced modifiers and upgrades another Influenced modifier
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_maven.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_maven.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="6" column="0">
+                                <widget class="PyCustomCursorButton" name="method_fracturing_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Fractures a random modifier on a Rare Item with at least 4 modifiers,
+                                            locking it in place.
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_fracturing.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_fracturing.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="6" column="1">
+                                <widget class="PyCustomCursorButton" name="locus_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Potently corrupts an Item, modifying it drastically and unpredictably
+                                        </string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>:/images/images/locus.png</normaloff>:/images/images/locus.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                            <item row="6" column="2">
+                                <widget class="PyCustomCursorButton" name="method_vaal_btn">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>60</width>
+                                            <height>60</height>
+                                        </size>
+                                    </property>
+                                    <property name="cursor">
+                                        <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
+                                    <property name="mouseTracking">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Corrupts an Item, modifying it unpredictably</string>
+                                    </property>
+                                    <property name="text">
+                                        <string/>
+                                    </property>
+                                    <property name="icon">
+                                        <iconset resource="../../assets/assets.qrc">
+                                            <normaloff>
+                                                :/crafting_methods/images/crafting_methods/method_vaal.png</normaloff>
+                                            :/crafting_methods/images/crafting_methods/method_vaal.png
+                                        </iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                        <size>
+                                            <width>30</width>
+                                            <height>30</height>
+                                        </size>
+                                    </property>
+                                    <property name="checkable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <attribute name="buttonGroup">
+                                        <string notr="true">crafting_methods_btn_group</string>
+                                    </attribute>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                    <widget class="QWidget" name="menu_2">
+                        <layout class="QVBoxLayout" name="verticalLayout_2">
+                            <property name="spacing">
+                                <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="topMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="rightMargin">
+                                <number>5</number>
+                            </property>
+                            <property name="bottomMargin">
+                                <number>5</number>
+                            </property>
+                            <item>
+                                <widget class="QLabel" name="label_2">
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>16</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">font-size: 16pt</string>
+                                    </property>
+                                    <property name="text">
+                                        <string>Menu 2 - Right Menu</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>Qt::AlignCenter</set>
+                                    </property>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                    <widget class="QWidget" name="menu_3"/>
+                    <widget class="QWidget" name="menu_4"/>
+                </widget>
+            </item>
+            <item>
+                <widget class="QWidget" name="right_column_btns" native="true">
+                    <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>50</height>
+                        </size>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout">
+                        <item>
+                            <widget class="QWidget" name="btn_2" native="true">
+                                <property name="sizePolicy">
+                                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_3">
+                                    <property name="spacing">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                        <number>0</number>
+                                    </property>
+                                    <item>
+                                        <layout class="QHBoxLayout" name="btn_2_layout"/>
+                                    </item>
+                                </layout>
+                            </widget>
+                        </item>
+                        <item>
+                            <widget class="QWidget" name="btn_1" native="true">
+                                <property name="sizePolicy">
+                                    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <layout class="QVBoxLayout" name="verticalLayout_4">
+                                    <property name="spacing">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="leftMargin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="topMargin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="rightMargin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="bottomMargin">
+                                        <number>0</number>
+                                    </property>
+                                    <item>
+                                        <layout class="QHBoxLayout" name="btn_1_layout"/>
+                                    </item>
+                                </layout>
+                            </widget>
+                        </item>
+                    </layout>
+                </widget>
+            </item>
+        </layout>
+    </widget>
+    <customwidgets>
+        <customwidget>
+            <class>PyCustomCursorButton</class>
+            <extends>QPushButton</extends>
+            <header location="global">...widgets.py_custom_cursor_button</header>
+        </customwidget>
+    </customwidgets>
+    <resources>
+        <include location="../../assets/assets.qrc"/>
+    </resources>
+    <connections/>
+    <buttongroups>
+        <buttongroup name="crafting_methods_btn_group">
+            <property name="exclusive">
+                <bool>false</bool>
+            </property>
+        </buttongroup>
+    </buttongroups>
+</ui>

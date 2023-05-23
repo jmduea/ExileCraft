@@ -1,1 +1,4 @@
 /ExileCraft/.idea/
+__pycache__/
+.git/
+.pyc

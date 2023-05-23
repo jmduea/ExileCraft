@@ -23,7 +23,7 @@ def SetupTray(app, window):
     :return: Returns the initialized QSystemTrayIcon object.
     """
     basedir = os.path.dirname(__file__)
-    icon_path = os.path.join(basedir, '../ui/assets/icons/vendor.ico')
+    icon_path = os.path.join(basedir, '../gui/assets/images/icons/vendor.ico')
 
     icon = QIcon(icon_path)
 
