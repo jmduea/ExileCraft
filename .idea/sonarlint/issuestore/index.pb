@@ -172,7 +172,3 @@ n
 ,ExileCraft/ExileCraft/modules/ui/__init__.py,a\5\a5922a569d07322b71f4d090d0bf2e28e2da6147
 Z
 *ExileCraft/ExileCraft/data/modpool_list.py,4\7\47b091f2460351fd4bf90ab0fb132d48b0df776f
-A
-custom_widgets.py,5\2\52d53c853d312317850eef46511303c97d9b59f1
-<
-Pipfile.lock,e\5\e563262209b7c2e62d1869582c8134583baa2204

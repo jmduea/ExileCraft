@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "94e3c91394a5759cb806edf2047e26221eb03a769a94ca975df4878f408a3658"
+            "sha256": "33abf2252a5cdaa0e3f57911f3ab9340720d7005cdcf4aef31c33608f4f61309"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -11,6 +11,7 @@
             "pyside6-essentials": "^6.5.0",
             "pytest": "^7.3.1",
             "python_version": "3.11",
+            "shiboken6": "^6.5.0",
             "sqlalchemy": "^2.0.15"
         },
         "sources": [
@@ -325,7 +326,7 @@
                 "sha256:73af15fa9f6b7305849116308923d437354ecabefc0546dc514901ec3bae4d89",
                 "sha256:74570273004d2e481e55618150dfaee7ae253027b438066e216b339fae1e999a"
             ],
-            "markers": "python_version < '3.12' and python_version >= '3.7'",
+            "index": "pypi",
             "version": "==6.4.3"
         }
     },

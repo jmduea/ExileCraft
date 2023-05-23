@@ -8,8 +8,14 @@
     <orderEntry type="jdk" jdkName="Pipenv (ExileCraft)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="" />
+  </component>
   <component name="PyDocumentationSettings">
-    <option name="format" value="GOOGLE" />
-    <option name="myDocStringFormat" value="Google" />
+    <option name="renderExternalDocumentation" value="true" />
+  </component>
+  <component name="ReSTService">
+    <option name="DOC_DIR" value="C:\Python311\Lib\site-packages\sphinx" />
+    <option name="TXT_IS_RST" value="true" />
   </component>
 </module>
