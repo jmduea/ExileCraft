@@ -5,8 +5,6 @@ e
 5ExileCraft/ExileCraft/modules/emu/crafting_project.py,1\4\1466e69aa080301f6a9944533ca5ba9e034b8d9e
 ]
 -ExileCraft/ExileCraft/modules/emu/__init__.py,3\0\309f099b892f68bcd6789f4bf75386ce46575467
-\
-,ExileCraft/ExileCraft/modules/db/__init__.py,4\f\4fe1bcb8a577532760e7b5c65ff5fac5ee555223
 i
 9ExileCraft/ExileCraft/modules/ui/wizard/wizard_assets.qrc,6\0\609e65c7020ea982242cc430e95275d9346dceb8
 \
@@ -37,8 +35,6 @@ g
 7ExileCraft/ExileCraft/modules/ui/ui_files/mainwindow.ui,4\6\4671fcbee49ce60cd6647fa5c6573b033f677cf2
 w
 GExileCraft/ExileCraft/modules/ui/assets/stylesheets/main_stylesheet.qss,1\8\18271e7c1cf1943f21229d4ff602f6c9587b0b86
-d
-4ExileCraft/ExileCraft/modules/db/database_handler.py,6\c\6ca5e96200b44174aad95645992f245c30777f07
 [
 +ExileCraft/ExileCraft/modules/ui/assets.qrc,d\4\d4f89a2e04920992eff006fd6d0cd4f97dae6945
 b
@@ -81,8 +77,6 @@ Y
 ,ExileCraft/ExileCraft/data/json/flavour.json,7\0\708e102d9076feee805df0b6cbaf1c66fb0c816b
 ]
 -ExileCraft/ExileCraft/data/json/essences.json,b\7\b71622cdd2d51472731901ae9c4f32d09399e6a8
-c
-3ExileCraft/ExileCraft/modules/parser/stat_parser.py,3\e\3e65d3ce3bda28a53fb17235dcad43098ca4f9a8
 e
 5ExileCraft/ExileCraft/modules/parser/fossil_parser.py,0\f\0ff0d104253356dc56696d390a00283babea08c2
 t
@@ -149,8 +143,6 @@ Y
 )ExileCraft/ExileCraft/data/json/tags.json,3\7\37c380526137a310e3eac9a75eb23ac8d1712feb
 c
 3ExileCraft/ExileCraft/modules/ui/customtreemodel.py,b\d\bd25da133db2567625e35e6a974efce3a4d36056
-g
-7ExileCraft/ExileCraft/modules/db/get_base_item_stats.py,e\e\eea3a6cf77578024b59671e8df179086a9f5e95d
 f
 6ExileCraft/ExileCraft/data/json/stat_translations.json,b\7\b789e58ae8d57f55b501c2a36a7cbec61861af05
 9
@@ -164,7 +156,5 @@ f
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 n
 >ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.py,f\2\f21fd1070263b8737bf5b9432a758e2d2472a230
-Z
-*ExileCraft/ExileCraft/data/modpool_list.py,4\7\47b091f2460351fd4bf90ab0fb132d48b0df776f
 A
 custom_widgets.py,5\2\52d53c853d312317850eef46511303c97d9b59f1

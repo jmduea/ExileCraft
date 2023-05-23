@@ -13,7 +13,6 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
-
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
 
@@ -34,7 +33,6 @@ from .functions_main_window import *
 from .functions_main_window import MainFunctions
 # LOAD UI MAIN
 # ///////////////////////////////////////////////////////////////
-from .ui_main import *
 
 
 class SetupMainWindow:

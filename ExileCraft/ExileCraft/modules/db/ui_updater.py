@@ -1,9 +1,9 @@
 from PySide6 import QtGui
 from PySide6.QtCore import Qt
 
+from constants import ALL_SUBTYPES, SUBTYPE_DISPLAY_NAMES
 from ..db.item_mods_retriever import get_mods_for_item_class
 from ..db.item_stats_updater import update_item_stats
-from ..config.constants import SUBTYPE_DISPLAY_NAMES, ALL_SUBTYPES
 from ..parser.path_utils import get_abs_path
 
 

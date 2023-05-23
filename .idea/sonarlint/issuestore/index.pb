@@ -5,8 +5,6 @@ e
 5ExileCraft/ExileCraft/modules/emu/crafting_project.py,1\4\1466e69aa080301f6a9944533ca5ba9e034b8d9e
 ]
 -ExileCraft/ExileCraft/modules/emu/__init__.py,3\0\309f099b892f68bcd6789f4bf75386ce46575467
-\
-,ExileCraft/ExileCraft/modules/db/__init__.py,4\f\4fe1bcb8a577532760e7b5c65ff5fac5ee555223
 i
 9ExileCraft/ExileCraft/modules/ui/wizard/wizard_assets.qrc,6\0\609e65c7020ea982242cc430e95275d9346dceb8
 \
@@ -37,8 +35,6 @@ GExileCraft/ExileCraft/modules/ui/assets/stylesheets/main_stylesheet.qss,1\8\18
 OExileCraft/ExileCraft/modules/ui/assets/stylesheets/landing_page_stylesheet.qss,3\2\32d666b496290ab1c78b16b0efa15f8f1f082a85
 n
 >ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.ui,f\b\fb791a68adb76daacdd7a5b725e2c596cdb426ef
-d
-4ExileCraft/ExileCraft/modules/db/database_handler.py,6\c\6ca5e96200b44174aad95645992f245c30777f07
 [
 +ExileCraft/ExileCraft/modules/ui/assets.qrc,d\4\d4f89a2e04920992eff006fd6d0cd4f97dae6945
 b
@@ -109,8 +105,6 @@ z
 JExileCraft/ExileCraft/data/json/stat_translations/minion_attack_skill.json,c\4\c486ed6e9fddca1880d52b0def5b349009c8cf01
 s
 CExileCraft/ExileCraft/data/json/stat_translations/advanced_mod.json,0\2\02376ea997e102ae7a3d8590766569b0d83ee417
-c
-3ExileCraft/ExileCraft/modules/parser/stat_parser.py,3\e\3e65d3ce3bda28a53fb17235dcad43098ca4f9a8
 f
 6ExileCraft/ExileCraft/modules/parser/essence_parser.py,0\5\0596ddca0ca26274b3eba9b91a0c75f52b8897b6
 q
@@ -149,8 +143,6 @@ Y
 )ExileCraft/ExileCraft/data/json/tags.json,3\7\37c380526137a310e3eac9a75eb23ac8d1712feb
 c
 3ExileCraft/ExileCraft/modules/ui/customtreemodel.py,b\d\bd25da133db2567625e35e6a974efce3a4d36056
-g
-7ExileCraft/ExileCraft/modules/db/get_base_item_stats.py,e\e\eea3a6cf77578024b59671e8df179086a9f5e95d
 f
 6ExileCraft/ExileCraft/data/json/stat_translations.json,b\7\b789e58ae8d57f55b501c2a36a7cbec61861af05
 9
@@ -164,7 +156,5 @@ n
 >ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.py,f\2\f21fd1070263b8737bf5b9432a758e2d2472a230
 \
 ,ExileCraft/ExileCraft/modules/ui/__init__.py,a\5\a5922a569d07322b71f4d090d0bf2e28e2da6147
-Z
-*ExileCraft/ExileCraft/data/modpool_list.py,4\7\47b091f2460351fd4bf90ab0fb132d48b0df776f
 A
 custom_widgets.py,5\2\52d53c853d312317850eef46511303c97d9b59f1

@@ -16,19 +16,17 @@
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
-from qt_core import *
-
-# IMPORT CLOSE BUTTON
-# ///////////////////////////////////////////////////////////////
-from .py_left_button import *
-
-# IMPORT ICON
-# ///////////////////////////////////////////////////////////////
-from .py_icon import *
 
 # IMPORT LEFT COLUMN
 # ///////////////////////////////////////////////////////////////
 from modules.gui.uis.columns.ui_left_column import Ui_LeftColumn
+# IMPORT ICON
+# ///////////////////////////////////////////////////////////////
+from .py_icon import *
+# IMPORT CLOSE BUTTON
+# ///////////////////////////////////////////////////////////////
+from .py_left_button import *
+from ...uis.columns.combobox_updater import ComboboxUpdater
 
 
 class PyLeftColumn(QWidget):
@@ -79,7 +77,6 @@ class PyLeftColumn(QWidget):
 
         # SETUP UI
         self.setup_ui()
-
         # ADD LEFT COLUMN TO BG FRAME
         self.menus = Ui_LeftColumn()
         self.menus.setupUi(self.content_frame)
@@ -87,6 +84,11 @@ class PyLeftColumn(QWidget):
         # CONNECT SIGNALS
         self.btn_close.clicked.connect(self.btn_clicked)
         self.btn_close.released.connect(self.btn_released)
+
+        self.combobox_updater = ComboboxUpdater(self.menus.base_group_combobox,
+                                                self.menus.base_combobox,
+                                                self.menus.base_item_combobox)
+        self.menus.base_group_combobox.currentIndexChanged.connect(self.combobox_updater.update_base_combobox)
 
     # TITLE LEFT COLUMN EMIT SIGNALS
     # ///////////////////////////////////////////////////////////////
