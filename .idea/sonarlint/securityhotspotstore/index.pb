@@ -119,8 +119,6 @@ f
 6ExileCraft/ExileCraft/modules/parser/essence_parser.py,0\5\0596ddca0ca26274b3eba9b91a0c75f52b8897b6
 q
 AExileCraft/ExileCraft/modules/ui/wizard/ui_item_options_wizard.py,3\a\3ade87e694d633b20361dbe9b4e9b831966d889e
-n
->ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.py,f\2\f21fd1070263b8737bf5b9432a758e2d2472a230
 b
 2ExileCraft/ExileCraft/modules/ui/customtreeview.py,c\4\c4a69566f355d5a8cdc91af6fe6c6969c54278bb
 f
