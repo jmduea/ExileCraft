@@ -7,6 +7,7 @@ name = "pypi"
 pysidesix-frameless-window = "*"
 pyside6-fluent-widgets = { extras = ["full"], version = "*" }
 madqt = "*"
+qt-pyqt-pyside-custom-widgets = "*"
 
 [dev-packages]
 sphinx = "7.0.1"
