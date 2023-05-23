@@ -1,36 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234dfd58-5a5e-4c83-b3ec-484ba2cc4790" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ExileCraft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ExileCraft.iml" afterDir="false" />
+    <list default="true" id="6a63e506-7a72-4719-b494-f2a9d299a019" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/ui/wizard/item_options_wizard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/make.bat" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/docs/make.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/docs/source/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/docs/source/index.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Setup Script" />
+        <option value="Dockerfile" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="pyside6-main-item_options_wizard_implementation" />
+    <option name="OPTIONS">
+      <set>
+        <option value="SQUASH" />
+      </set>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1684800540" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="pyside6-main-item_options_wizard_implementation" />
+                    <option name="lastUsedInstant" value="1684800482" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$Python$/Lib/subprocess.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$ExileCraftPipENV$/Lib/site-packages/PySide6/examples/utils/pyside_config.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$ExileCraftPipENV$/Lib/site-packages/qframelesswindow/titlebar/title_bar_buttons.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$ExileCraftPipENV$/Lib/site-packages/qframelesswindow/windows/c_structures.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$ExileCraftPipENV$/Lib/site-packages/qframelesswindow/windows/window_effect.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2QAkmShTGubXIVmMQtzfWrhxmNQ" />
+  <component name="MigrationScriptOptions">
+    <option name="ignoreImplicitObjects" value="true" />
+    <option name="ignoreSourceCode" value="false" />
+    <option name="optionsStr" value="ConstraintContext=CONSTRAINT_IN_TABLE" />
+  </component>
+  <component name="NamedScopeManager">
+    <order>
+      <scope name="ExileCraft" />
+    </order>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2PvYfCbrW0blwcKeBMCXDLniKFM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,51 +122,123 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;JSON-Groovy.json.groovy&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;grid.search.filter.rows&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/ExileCraft/ExileCraft/ExileCraft/main.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/spark/PycharmProjects/ExileCraft/ExileCraft/ExileCraft/modules/ui/ui_files&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;typescript.add.unambiguous.imports.on.the.fly&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;zielu.gittoolbox.prj.config.selected.tab.id&quot;: &quot;zielu.gittoolbox.config.shared.autoFetch&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;documentdb&quot;,
+      &quot;couchbase_query&quot;
+    ]
   }
 }</component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="ExileCraft" is-module-sdk="true" working-directory="$PROJECT_DIR$">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="ExileCraft" />
+        <option name="myWorkingDirectory" value="$PROJECT_DIR$" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="PyCoverageOptionsProvider">
+    <option name="myUseBundledCoveragePy" value="true" />
+  </component>
+  <component name="PyDebuggerOptionsProvider">
+    <option name="myPyQtBackend" value="pyside6" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\spark\.virtualenvs\ExileCraft-c39WOG9a\Lib\site-packages\PySide6\bin" />
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft\ExileCraft\modules\ui\ui_files" />
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft" />
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft\ExileCraft\data\PyPoE" />
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft\ExileCraft\data" />
+      <recent name="C:\Users\spark\AppData\Local\pypoetry\Cache\virtualenvs\exilecraft-ZwsVxkMn-py3.11\Lib\site-packages\PySide6\bin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft" />
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\docs" />
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\docs\source" />
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft" />
+      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft\docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="RunApp" type="PythonConfigurationType" factoryName="Python">
+  <component name="RunManager" selected="Docker.Dockerfile">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ExileCraft" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\spark\.virtualenvs\ExileCraft-c39WOG9a\Scripts\python.exe" />
-      <option name="SDK_NAME" value="Pipenv (ExileCraft) (2)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExileCraft/ExileCraft" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$Python$/Lib/site-packages/MadQt/Apps/ProjectManager" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <EXTENSION ID="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
-        </ENTRIES>
-      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$Python$/Lib/site-packages/MadQt/Apps/ProjectManager/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ExileCraft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$Python$/Lib/site-packages/MadQt/Apps/PluginCreator" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$Python$/Lib/site-packages/MadQt/Apps/PluginCreator/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ExileCraft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExileCraft/ExileCraft" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExileCraft/ExileCraft/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -93,41 +248,592 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="register_all" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ExileCraft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$Python$/Lib/site-packages/MadQt/QtDesignerPlugins" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$Python$/Lib/site-packages/MadQt/QtDesignerPlugins/register_all.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sdsd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ExileCraft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExileCraft/ExileCraft/data/sdsd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="exilecraft" />
+          <option name="buildCliOptions" value="--no-cache" />
+          <option name="command" value="pip install pipenv" />
+          <option name="containerName" value="ExileCraft" />
+          <option name="contextFolderPath" value="ExileCraft" />
+          <option name="showCommandPreview" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.RunApp" />
+      <item itemvalue="Python.main (1)" />
+      <item itemvalue="Python.main (2)" />
+      <item itemvalue="Python.register_all" />
+      <item itemvalue="Python.sdsd" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sdsd" />
+        <item itemvalue="Python.register_all" />
+        <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SQLScriptSettings">
+    <option name="matrix">
+      <map>
+        <entry key="SQLITE.CreateComplete" value="ConstraintContext=CONSTRAINT_IN_TABLE" />
+      </map>
+    </option>
+    <option name="outputLayout" value="File per object by schema.groovy" />
+    <option name="outputPath" value="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft\ExileCraft\data" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\spark\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="234dfd58-5a5e-4c83-b3ec-484ba2cc4790" name="Changes" comment="" />
-      <created>1684803931253</created>
+      <changelist id="6a63e506-7a72-4719-b494-f2a9d299a019" name="Changes" comment="" />
+      <created>1684339124140</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684803931253</updated>
-      <workItem from="1684803933258" duration="442000" />
-      <workItem from="1684804396347" duration="1639000" />
+      <updated>1684339124140</updated>
+      <workItem from="1684339131702" duration="106000" />
+      <workItem from="1684339270259" duration="1978000" />
+      <workItem from="1684341900689" duration="7259000" />
+      <workItem from="1684360081099" duration="383000" />
+      <workItem from="1684360506875" duration="737000" />
+      <workItem from="1684362981238" duration="4030000" />
+      <workItem from="1684367045421" duration="2321000" />
+      <workItem from="1684369550218" duration="3386000" />
+      <workItem from="1684373684806" duration="447000" />
+      <workItem from="1684374145104" duration="2643000" />
+      <workItem from="1684376844285" duration="3601000" />
+      <workItem from="1684380811235" duration="706000" />
+      <workItem from="1684381538489" duration="48068000" />
+      <workItem from="1684437506014" duration="43327000" />
+      <workItem from="1684572467801" duration="144000" />
+      <workItem from="1684572622894" duration="76000" />
+      <workItem from="1684572709017" duration="57000" />
+      <workItem from="1684572777596" duration="21177000" />
+      <workItem from="1684594033650" duration="357000" />
+      <workItem from="1684594413675" duration="801000" />
+      <workItem from="1684595246064" duration="799000" />
+      <workItem from="1684596066558" duration="10797000" />
+      <workItem from="1684617011226" duration="2859000" />
+      <workItem from="1684625016337" duration="774000" />
+      <workItem from="1684625817971" duration="3777000" />
+      <workItem from="1684631350770" duration="2495000" />
+      <workItem from="1684638760269" duration="634000" />
+      <workItem from="1684639410220" duration="3587000" />
+      <workItem from="1684643926313" duration="7648000" />
+      <workItem from="1684652998616" duration="57000" />
+      <workItem from="1684653065015" duration="258000" />
+      <workItem from="1684653334745" duration="635000" />
+      <workItem from="1684655640947" duration="176000" />
+      <workItem from="1684655829170" duration="853000" />
+      <workItem from="1684656703497" duration="8192000" />
+      <workItem from="1684667617373" duration="973000" />
+      <workItem from="1684781989426" duration="5288000" />
+      <workItem from="1684789101375" duration="1268000" />
+      <workItem from="1684790439365" duration="3459000" />
+      <workItem from="1684793977058" duration="1077000" />
+      <workItem from="1684795355049" duration="3082000" />
+      <workItem from="1684798670727" duration="67000" />
+      <workItem from="1684798750831" duration="34000" />
+      <workItem from="1684798816424" duration="2836000" />
+      <workItem from="1684801704674" duration="383000" />
+      <workItem from="1684802375900" duration="59000" />
+      <workItem from="1684802452054" duration="818000" />
+      <workItem from="1684803305792" duration="7000" />
     </task>
-    <task id="LOCAL-00001" summary="update">
-      <created>1684804195570</created>
+    <task id="LOCAL-00001" summary="pyside6">
+      <created>1684370517489</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1684804195571</updated>
+      <updated>1684370517489</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change exec_ to exec">
+      <created>1684371001268</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684371001268</updated>
+    </task>
+    <task id="LOCAL-00003" summary="remove unused files">
+      <created>1684417215457</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417215457</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add .ui files">
+      <created>1684417281804</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417281804</updated>
+    </task>
+    <task id="LOCAL-00005" summary="renamed, move main_stylesheet to main_stylesheet.qss">
+      <created>1684417353622</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417353622</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update path_utils for flexibility">
+      <created>1684417390457</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417390457</updated>
+    </task>
+    <task id="LOCAL-00007" summary="move to ui_files folder">
+      <created>1684417412141</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417412141</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add functionality to show ItemOptionsWizard">
+      <created>1684417463316</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417463316</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update pages for item options wizard">
+      <created>1684417555779</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417555779</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add poetry.lock, pyproject.toml">
+      <created>1684417586589</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417586589</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add main_stylesheet.qss">
+      <created>1684417607728</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417607728</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update main.py">
+      <created>1684417665725</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417665725</updated>
+    </task>
+    <task id="LOCAL-00013" summary="move landing_page.ui, item_view.ui">
+      <created>1684417690239</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417690239</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update item_stats_updater.py">
+      <created>1684417878465</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417878465</updated>
+    </task>
+    <task id="LOCAL-00015" summary="rename ItemSelection to ItemSelectionPage">
+      <created>1684418006982</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418006982</updated>
+    </task>
+    <task id="LOCAL-00016" summary="move item_options.ui to ui_files">
+      <created>1684418028582</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418028582</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update db_path">
+      <created>1684418094327</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418094327</updated>
+    </task>
+    <task id="LOCAL-00018" summary="item_box_dock.ui, item_info_box.ui moved to ui_files">
+      <created>1684418114937</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418114937</updated>
+    </task>
+    <task id="LOCAL-00019" summary="move harvest_method_stack.ui to ui_files">
+      <created>1684418129799</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418129799</updated>
+    </task>
+    <task id="LOCAL-00020" summary="updata database_handler">
+      <created>1684418235985</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418235985</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update customcursorbutton.py">
+      <created>1684418254289</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418254289</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add base_group_page.py">
+      <created>1684418265321</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418265321</updated>
+    </task>
+    <task id="LOCAL-00023" summary="move available_mods_table.ui to ui_files">
+      <created>1684418279490</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418279490</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update assetts.qrc">
+      <created>1684418289425</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418289425</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update __init__s">
+      <created>1684418309635</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1684418309635</updated>
+    </task>
+    <task id="LOCAL-00026" summary="updates">
+      <created>1684616128815</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1684616128815</updated>
+    </task>
+    <task id="LOCAL-00027" summary="updates">
+      <created>1684616349852</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1684616349852</updated>
+    </task>
+    <task id="LOCAL-00028" summary="updates">
+      <created>1684616473768</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1684616473768</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update">
+      <created>1684790085467</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684790085467</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update">
+      <created>1684791019547</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1684791019547</updated>
+    </task>
+    <task id="LOCAL-00031" summary="u">
+      <created>1684791947822</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1684791947822</updated>
+    </task>
+    <task id="LOCAL-00032" summary="update to prepare for merge to main">
+      <created>1684792287172</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1684792287172</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update">
+      <created>1684792989734</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1684792989734</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update">
+      <created>1684793126674</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1684793126674</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update">
+      <created>1684793186627</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1684793186627</updated>
+    </task>
+    <task id="LOCAL-00036" summary="update">
+      <created>1684794747952</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1684794747952</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update">
+      <created>1684796027301</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1684796027301</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update">
+      <created>1684796176671</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1684796176671</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update">
+      <created>1684799241599</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1684799241599</updated>
+    </task>
+    <task id="LOCAL-00040" summary="update">
+      <created>1684802537175</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1684802537175</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="renamed, move main_stylesheet to main_stylesheet.qss" />
+    <MESSAGE value="update path_utils for flexibility" />
+    <MESSAGE value="move to ui_files folder" />
+    <MESSAGE value="add functionality to show ItemOptionsWizard" />
+    <MESSAGE value="update pages for item options wizard" />
+    <MESSAGE value="add poetry.lock, pyproject.toml" />
+    <MESSAGE value="add main_stylesheet.qss" />
+    <MESSAGE value="update main.py" />
+    <MESSAGE value="move landing_page.ui, item_view.ui" />
+    <MESSAGE value="update item_stats_updater.py" />
+    <MESSAGE value="rename ItemSelection to ItemSelectionPage" />
+    <MESSAGE value="move item_options.ui to ui_files" />
+    <MESSAGE value="item_box_dock.ui, item_info_box.ui moved to ui_files" />
+    <MESSAGE value="move harvest_method_stack.ui to ui_files" />
+    <MESSAGE value="update db_path" />
+    <MESSAGE value="updata database_handler" />
+    <MESSAGE value="update customcursorbutton.py" />
+    <MESSAGE value="add base_group_page.py" />
+    <MESSAGE value="move available_mods_table.ui to ui_files" />
+    <MESSAGE value="update assetts.qrc" />
+    <MESSAGE value="update __init__s" />
+    <MESSAGE value="updates" />
+    <MESSAGE value="u" />
+    <MESSAGE value="update to prepare for merge to main" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/data/PyPoE/__init__.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/data/sdsd.py</url>
+          <line>121</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/data/sdsd.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/data/sdsd.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/data/sdsd.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/data/sdsd.py</url>
+          <line>124</line>
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/data/sdsd.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="237" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/data/sdsd.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="238" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="cur.description" language="Python" />
+        <watch expression="stat_id_values.__len__()" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ExileCraft$RunApp.coverage" NAME="RunApp Coverage Results" MODIFIED="1684805875986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft" />
-    <SUITE FILE_PATH="coverage/ExileCraft$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1684805368975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
+    <SUITE FILE_PATH="coverage/ExileCraft$register_all.coverage" NAME="register_all Coverage Results" MODIFIED="1684657699837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$Python$/Lib/site-packages/MadQt/QtDesignerPlugins" />
+    <SUITE FILE_PATH="coverage/ExileCraft$essence_parser.coverage" NAME="essence_parser Coverage Results" MODIFIED="1684426827636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
+    <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool.coverage" NAME="pyside_tool Coverage Results" MODIFIED="1684597248191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Roaming/Python/Python311/site-packages/PySide6/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$deploy.coverage" NAME="deploy Coverage Results" MODIFIED="1684617841709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1684659367115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$Python$/Lib/site-packages/MadQt/Apps/PluginCreator" />
+    <SUITE FILE_PATH="coverage/ExileCraft$test_get_base_item_stats.coverage" NAME="test_get_base_item_stats Coverage Results" MODIFIED="1684363008596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/tests" />
+    <SUITE FILE_PATH="coverage/ExileCraft$stat_parser.coverage" NAME="stat_parser Coverage Results" MODIFIED="1684425130921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
+    <SUITE FILE_PATH="coverage/ExileCraft$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1684617354388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/qtpy" />
+    <SUITE FILE_PATH="coverage/ExileCraft$splash_screen.coverage" NAME="splash_screen Coverage Results" MODIFIED="1684471740442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/ui" />
+    <SUITE FILE_PATH="coverage/ExileCraft$as.coverage" NAME="as Coverage Results" MODIFIED="1684803067877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ExileCraft$generate_pyi.coverage" NAME="generate_pyi Coverage Results" MODIFIED="1684628648983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/support" />
+    <SUITE FILE_PATH="coverage/ExileCraft$sdsd.coverage" NAME="sdsd Coverage Results" MODIFIED="1684666408479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
+    <SUITE FILE_PATH="coverage/ExileCraft$fossil_parser.coverage" NAME="fossil_parser Coverage Results" MODIFIED="1684423880632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
+    <SUITE FILE_PATH="coverage/ExileCraft$.coverage" NAME=" Coverage Results" MODIFIED="1684579106542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
+    <SUITE FILE_PATH="coverage/ExileCraft$cli.coverage" NAME="cli Coverage Results" MODIFIED="1684617337429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/qtpy" />
+    <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool__1_.coverage" NAME="pyside_tool (1) Coverage Results" MODIFIED="1684629633121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$ProjectManager.coverage" NAME="ProjectManager Coverage Results" MODIFIED="1684657681471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$Python$/Lib/site-packages/MadQt/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$project.coverage" NAME="project Coverage Results" MODIFIED="1684629569148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1684658735878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$Python$/Lib/site-packages/MadQt/Apps/ProjectManager" />
+    <SUITE FILE_PATH="coverage/ExileCraft$path_utils.coverage" NAME="path_utils Coverage Results" MODIFIED="1684422438824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
+    <SUITE FILE_PATH="coverage/ExileCraft$main.coverage" NAME="main Coverage Results" MODIFIED="1684796220123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft" />
+    <SUITE FILE_PATH="coverage/ExileCraft$dad.coverage" NAME="dad Coverage Results" MODIFIED="1684575532875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
+    <SUITE FILE_PATH="coverage/ExileCraft$uic.coverage" NAME="uic Coverage Results" MODIFIED="1684629711153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/pyside6_uic_extended" />
   </component>
 </project>
