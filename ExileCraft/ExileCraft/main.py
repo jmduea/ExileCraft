@@ -20,12 +20,19 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
 
+import os
 import sys
 
-from modules.gui.uis.windows.main_window import *
-from modules.gui.uis.windows.main_window.functions_main_window import *
-from modules.tray.hotkey_methods import *
-from modules.tray.tray_setup import *
+from PySide6 import QtGui
+
+from modules.gui.core.functions import Functions
+from modules.gui.core.json_settings import Settings
+from modules.gui.uis.windows.main_window.functions_main_window import MainFunctions
+from modules.gui.uis.windows.main_window.setup_main_window import SetupMainWindow
+from modules.gui.uis.windows.main_window.ui_mainwindow import UI_MainWindow
+from modules.tray.hotkey_methods import register_hotkey
+from modules.tray.tray_setup import SetupTray
+
 from qt_core import *
 
 # Adjust QT Font DPI for high scale and 4k monitors
@@ -197,6 +204,20 @@ class MainWindow(QMainWindow):
         QApplication.instance().restoreOverrideCursor()
 
     def set_item_view_box_background(self):
+        """
+        Sets the background of the item view box to the image of the currently selected item.
+
+        This method fetches the name of the currently selected item from the base item combo box,
+        modifies the name to match the naming convention of the item images, constructs the path to
+        the image, and then attempts to load and display the image in the item view box.
+
+        If the image fails to load or an error occurs during the process, a message is printed to
+        the console. If the image is loaded successfully, it is displayed in the item view box and
+        is centered and not scaled.
+
+        Raises:
+        Exception: If an error occurs when loading the image.
+        """
         base_item_name = self.ui.left_column.menus.base_item_combobox.currentText()
         base_item = base_item_name.replace(' ', '_').lower()
         image_path = os.path.abspath(
@@ -215,16 +236,52 @@ class MainWindow(QMainWindow):
             print(f"Error loading image: {e}")
 
     def clear_item_view_box_background(self):
+        """
+        Clears the background image of a label widget assigned to the item_img_label attribute of the load_pages object in the current instance of a class.
+
+        Args:
+            self: The current instance of the class where the method is called.
+
+        Returns:
+            None
+        """
         self.ui.load_pages.item_img_label.setPixmap(QPixmap())
 
     def set_item_header_label(self):
+        """
+           Update the item header label in the load_pages object by retrieving the currently selected item from the base_item_combobox object in the left_column object.
+
+           Args:
+               self: The current instance of the class where the method is called.
+
+           Returns:
+               None
+           """
         item_name = self.ui.left_column.menus.base_item_combobox.currentText()
         self.update_item_header_label(item_name)
 
     def update_item_header_label(self, item_name):
+        """
+        Updates the item header label in the load_pages object with the provided item name.
+
+        Args:
+            item_name: The string name of the item to be displayed in the item header label.
+
+        Returns:
+            None
+        """
         self.ui.load_pages.item_header_label.setText(item_name)
 
     def set_item_level(self):
+        """
+            Sets the item level value from the item_level_spinbox object in the left_column object and updates the HTML formatted label to display the item level in the load_pages object.
+
+            Args:
+                self: The current instance of the class where the method is called.
+
+            Returns:
+                None
+            """
         item_level_value = self.ui.left_column.menus.item_level_spinbox.value()
         item_level = str(item_level_value)
         item_html = f'<p align="center"><span style=" font-size:11pt; color:#827a6c;">Item Level: </span>' \
@@ -232,6 +289,15 @@ class MainWindow(QMainWindow):
         self.update_item_level_label(item_html)
 
     def set_item_quality(self):
+        """
+            Sets the item quality value from the item_quality_spinbox object in the left_column object and updates the HTML formatted label to display the item quality percentage in the load_pages object.
+
+            Args:
+                self: The current instance of the class where the method is called.
+
+            Returns:
+                None
+            """
         item_quality_value = self.ui.left_column.menus.item_quality_spinbox.value()
         item_quality = str(item_quality_value)
         quality_html = f'<p align="center"><span style=" font-size:11pt; color:#827a6c;">Quality: </span>' \
@@ -239,9 +305,27 @@ class MainWindow(QMainWindow):
         self.update_item_quality_label(quality_html)
 
     def update_item_level_label(self, item_level):
+        """
+            Updates the item level label in the load_pages object with the provided HTML formatted string.
+
+            Args:
+                item_level: The HTML formatted string to be displayed in the item level label.
+
+            Returns:
+                None
+            """
         self.ui.load_pages.item_level_label.setText(item_level)
 
     def update_item_quality_label(self, quality_html):
+        """
+            Updates the item quality label in the load_pages object with the provided HTML formatted string.
+
+            Args:
+                quality_html: The HTML formatted string to be displayed in the item quality label.
+
+            Returns:
+                None
+            """
         self.ui.load_pages.item_quality_label.setText(quality_html)
 
 
