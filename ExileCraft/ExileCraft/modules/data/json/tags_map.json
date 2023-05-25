@@ -1,0 +1,11 @@
+{
+    "Body Armour": {
+        "Body Armour (dex)": ["armour", "dex_armour"],
+        "Body Armour (dex/int)": ["armour", "dex_int_armour"],
+        "Body Armour (dex/str)": ["armour", "dex_str_armour"],
+        "Body Armour (dex/str/int)": ["armour", "dex_str_int_armour"],
+        "Body Armour (str)": ["armour", "str_armour"],
+        "Body Armour (str/int)": ["armour", "str_int_armour"],
+        "Body Armour (int)": ["armour", "int_armour"]
+    }
+}

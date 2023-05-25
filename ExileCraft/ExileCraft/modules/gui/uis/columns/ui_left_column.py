@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'left_columnvJThOr.ui'
+## Form generated from reading UI file 'left_columneTBPbH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.0
 ##
@@ -20,7 +20,7 @@ class Ui_LeftColumn(object):
     def setupUi(self, LeftColumn):
         if not LeftColumn.objectName():
             LeftColumn.setObjectName(u"LeftColumn")
-        LeftColumn.resize(208, 662)
+        LeftColumn.resize(438, 662)
         self.main_pages_layout = QVBoxLayout(LeftColumn)
         self.main_pages_layout.setSpacing(0)
         self.main_pages_layout.setObjectName(u"main_pages_layout")
@@ -116,67 +116,73 @@ class Ui_LeftColumn(object):
         self.base_group_combobox.addItem("")
         self.base_group_combobox.setObjectName(u"base_group_combobox")
         self.base_group_combobox.setStyleSheet(u"QComboBox {\n"
-                                               "    border: 1px solid gray;\n"
-                                               "    border-radius: 3px;\n"
-                                               "    padding: 1px 18px 1px 3px;\n"
-                                               "    min-width: 6em;\n"
-                                               "	color: black;\n"
-                                               "}\n"
+                                               "                                                        border: 1px solid gray;\n"
+                                               "                                                        border-radius: 3px;\n"
+                                               "                                                        padding: 1px 18px 1px 3px;\n"
+                                               "                                                        min-width: 6em;\n"
+                                               "                                                        color: black;\n"
+                                               "                                                        }\n"
                                                "\n"
-                                               "QComboBox::disabled {\n"
-                                               "	opacity: .5;\n"
-                                               "}\n"
+                                               "                                                        QComboBox::disabled {\n"
+                                               "                                                        opacity: .5;\n"
+                                               "                                                        }\n"
                                                "\n"
-                                               "QComboBox:editable {\n"
-                                               "    background: white;\n"
-                                               "}\n"
+                                               "                                                        QComboBox:editable {\n"
+                                               "                                                        background: white;\n"
+                                               "                                                        }\n"
                                                "\n"
-                                               "QComboBox:!editable, QComboBox::drop-down:editable {\n"
-                                               "     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-                                               "                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
-                                               "                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
-                                               "}\n"
+                                               "                                                        QComboBox:!editable, QComboBox::drop"
+                                               "-down:editable {\n"
+                                               "                                                        background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                               "                                                        stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
+                                               "                                                        stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
+                                               "                                                        }\n"
                                                "\n"
-                                               "/* QComboBox gets the \"on\" state when the popup is open */\n"
-                                               "QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
-                                               "    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-                                               "                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
-                                               "                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
-                                               "}\n"
+                                               "                                                        /* QComboBox gets the \"on\" state when the popup is\n"
+                                               "                                                        open */\n"
+                                               "                                                        QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
+                                               "                                                        background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                               "                                                        stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
+                                               "                                                        stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
+                                               "               "
+                                               "                                         }\n"
                                                "\n"
-                                               "QComboBox:on { /* shift the text when the popup opens */\n"
-                                               "    padding-top: 3px;\n"
-                                               "    padding-left: 4px;\n"
-                                               ""
-                                               "}\n"
+                                               "                                                        QComboBox:on { /* shift the text when the popup opens */\n"
+                                               "                                                        padding-top: 3px;\n"
+                                               "                                                        padding-left: 4px;\n"
+                                               "                                                        }\n"
                                                "\n"
-                                               "QComboBox::drop-down {\n"
-                                               "    subcontrol-origin: padding;\n"
-                                               "    subcontrol-position: top right;\n"
-                                               "    width: 15px;\n"
+                                               "                                                        QComboBox::drop-down {\n"
+                                               "                                                        subcontrol-origin: padding;\n"
+                                               "                                                        subcontrol-position: top right;\n"
+                                               "                                                        width: 15px;\n"
                                                "\n"
-                                               "    border-left-width: 1px;\n"
-                                               "    border-left-color: darkgray;\n"
-                                               "    border-left-style: solid; /* just a single line */\n"
-                                               "    border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
-                                               "    border-bottom-right-radius: 3px;\n"
-                                               "	color: black;\n"
-                                               "}\n"
+                                               "                                                        border-left-width: 1px;\n"
+                                               "                                                        border-left-color: darkgray;\n"
+                                               "                                                        border-left-style: solid; /* just a single line */\n"
+                                               "       "
+                                               "                                                 border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
+                                               "                                                        border-bottom-right-radius: 3px;\n"
+                                               "                                                        color: black;\n"
+                                               "                                                        }\n"
                                                "\n"
-                                               "QComboBox::down-arrow {\n"
-                                               "	image: url(:/images/images/down_arrow.png);\n"
-                                               "}\n"
+                                               "                                                        QComboBox::down-arrow {\n"
+                                               "                                                        image: url(:/images/images/down_arrow.png);\n"
+                                               "                                                        }\n"
                                                "\n"
-                                               "QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
-                                               "    top: 1px;\n"
-                                               "    left: 1px;\n"
-                                               "}\n"
+                                               "                                                        QComboBox::down-arrow:on { /* shift the arrow when popup is open\n"
+                                               "                                                        */\n"
+                                               "                                                        top: 1px;\n"
+                                               "                                                        left: 1px;\n"
+                                               "                                                        }\n"
                                                "\n"
-                                               "QComboBox QAbstractItemView {\n"
-                                               "    border: 2px solid darkgray;\n"
-                                               "    selection-background-color: lightgray;\n"
-                                               "	color: black;\n"
-                                               "}")
+                                               "                      "
+                                               "                                  QComboBox QAbstractItemView {\n"
+                                               "                                                        border: 2px solid darkgray;\n"
+                                               "                                                        selection-background-color: lightgray;\n"
+                                               "                                                        color: black;\n"
+                                               "                                                        }\n"
+                                               "                                                    ")
 
         self.verticalLayout_3.addWidget(self.base_group_combobox)
 
@@ -191,67 +197,73 @@ class Ui_LeftColumn(object):
         self.base_combobox.setObjectName(u"base_combobox")
         self.base_combobox.setEnabled(False)
         self.base_combobox.setStyleSheet(u"QComboBox {\n"
-                                         "    border: 1px solid gray;\n"
-                                         "    border-radius: 3px;\n"
-                                         "    padding: 1px 18px 1px 3px;\n"
-                                         "    min-width: 6em;\n"
-                                         "	color: black;\n"
-                                         "}\n"
+                                         "                                                        border: 1px solid gray;\n"
+                                         "                                                        border-radius: 3px;\n"
+                                         "                                                        padding: 1px 18px 1px 3px;\n"
+                                         "                                                        min-width: 6em;\n"
+                                         "                                                        color: black;\n"
+                                         "                                                        }\n"
                                          "\n"
-                                         "QComboBox::disabled {\n"
-                                         "	opacity: .5;\n"
-                                         "}\n"
+                                         "                                                        QComboBox::disabled {\n"
+                                         "                                                        opacity: .5;\n"
+                                         "                                                        }\n"
                                          "\n"
-                                         "QComboBox:editable {\n"
-                                         "    background: white;\n"
-                                         "}\n"
+                                         "                                                        QComboBox:editable {\n"
+                                         "                                                        background: white;\n"
+                                         "                                                        }\n"
                                          "\n"
-                                         "QComboBox:!editable, QComboBox::drop-down:editable {\n"
-                                         "     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-                                         "                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
-                                         "                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
-                                         "}\n"
+                                         "                                                        QComboBox:!editable, QComboBox::drop"
+                                         "-down:editable {\n"
+                                         "                                                        background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                         "                                                        stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
+                                         "                                                        stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
+                                         "                                                        }\n"
                                          "\n"
-                                         "/* QComboBox gets the \"on\" state when the popup is open */\n"
-                                         "QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
-                                         "    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-                                         "                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
-                                         "                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
-                                         "}\n"
+                                         "                                                        /* QComboBox gets the \"on\" state when the popup is\n"
+                                         "                                                        open */\n"
+                                         "                                                        QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
+                                         "                                                        background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                         "                                                        stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
+                                         "                                                        stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
+                                         "               "
+                                         "                                         }\n"
                                          "\n"
-                                         "QComboBox:on { /* shift the text when the popup opens */\n"
-                                         "    padding-top: 3px;\n"
-                                         "    padding-left: 4px;\n"
-                                         ""
-                                         "}\n"
+                                         "                                                        QComboBox:on { /* shift the text when the popup opens */\n"
+                                         "                                                        padding-top: 3px;\n"
+                                         "                                                        padding-left: 4px;\n"
+                                         "                                                        }\n"
                                          "\n"
-                                         "QComboBox::drop-down {\n"
-                                         "    subcontrol-origin: padding;\n"
-                                         "    subcontrol-position: top right;\n"
-                                         "    width: 15px;\n"
+                                         "                                                        QComboBox::drop-down {\n"
+                                         "                                                        subcontrol-origin: padding;\n"
+                                         "                                                        subcontrol-position: top right;\n"
+                                         "                                                        width: 15px;\n"
                                          "\n"
-                                         "    border-left-width: 1px;\n"
-                                         "    border-left-color: darkgray;\n"
-                                         "    border-left-style: solid; /* just a single line */\n"
-                                         "    border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
-                                         "    border-bottom-right-radius: 3px;\n"
-                                         "	color: black;\n"
-                                         "}\n"
+                                         "                                                        border-left-width: 1px;\n"
+                                         "                                                        border-left-color: darkgray;\n"
+                                         "                                                        border-left-style: solid; /* just a single line */\n"
+                                         "       "
+                                         "                                                 border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
+                                         "                                                        border-bottom-right-radius: 3px;\n"
+                                         "                                                        color: black;\n"
+                                         "                                                        }\n"
                                          "\n"
-                                         "QComboBox::down-arrow {\n"
-                                         "	image: url(:/images/images/down_arrow.png);\n"
-                                         "}\n"
+                                         "                                                        QComboBox::down-arrow {\n"
+                                         "                                                        image: url(:/images/images/down_arrow.png);\n"
+                                         "                                                        }\n"
                                          "\n"
-                                         "QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
-                                         "    top: 1px;\n"
-                                         "    left: 1px;\n"
-                                         "}\n"
+                                         "                                                        QComboBox::down-arrow:on { /* shift the arrow when popup is open\n"
+                                         "                                                        */\n"
+                                         "                                                        top: 1px;\n"
+                                         "                                                        left: 1px;\n"
+                                         "                                                        }\n"
                                          "\n"
-                                         "QComboBox QAbstractItemView {\n"
-                                         "    border: 2px solid darkgray;\n"
-                                         "    selection-background-color: lightgray;\n"
-                                         "	color: black;\n"
-                                         "}")
+                                         "                      "
+                                         "                                  QComboBox QAbstractItemView {\n"
+                                         "                                                        border: 2px solid darkgray;\n"
+                                         "                                                        selection-background-color: lightgray;\n"
+                                         "                                                        color: black;\n"
+                                         "                                                        }\n"
+                                         "                                                    ")
 
         self.verticalLayout_3.addWidget(self.base_combobox)
 
@@ -266,69 +278,76 @@ class Ui_LeftColumn(object):
         self.base_item_combobox.setObjectName(u"base_item_combobox")
         self.base_item_combobox.setEnabled(False)
         self.base_item_combobox.setStyleSheet(u"QComboBox {\n"
-                                              "    border: 1px solid gray;\n"
-                                              "    border-radius: 3px;\n"
-                                              "    padding: 1px 18px 1px 3px;\n"
-                                              "    min-width: 6em;\n"
-                                              "	color: black;\n"
-                                              "}\n"
+                                              "                                                        border: 1px solid gray;\n"
+                                              "                                                        border-radius: 3px;\n"
+                                              "                                                        padding: 1px 18px 1px 3px;\n"
+                                              "                                                        min-width: 6em;\n"
+                                              "                                                        color: black;\n"
+                                              "                                                        }\n"
                                               "\n"
-                                              "QComboBox::disabled {\n"
-                                              "	opacity: .5;\n"
-                                              "}\n"
+                                              "                                                        QComboBox::disabled {\n"
+                                              "                                                        opacity: .5;\n"
+                                              "                                                        }\n"
                                               "\n"
-                                              "QComboBox:editable {\n"
-                                              "    background: white;\n"
-                                              "}\n"
+                                              "                                                        QComboBox:editable {\n"
+                                              "                                                        background: white;\n"
+                                              "                                                        }\n"
                                               "\n"
-                                              "QComboBox:!editable, QComboBox::drop-down:editable {\n"
-                                              "     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-                                              "                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
-                                              "                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
-                                              "}\n"
+                                              "                                                        QComboBox:!editable, QComboBox::drop"
+                                              "-down:editable {\n"
+                                              "                                                        background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                              "                                                        stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
+                                              "                                                        stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
+                                              "                                                        }\n"
                                               "\n"
-                                              "/* QComboBox gets the \"on\" state when the popup is open */\n"
-                                              "QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
-                                              "    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-                                              "                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
-                                              "                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
-                                              "}\n"
+                                              "                                                        /* QComboBox gets the \"on\" state when the popup is\n"
+                                              "                                                        open */\n"
+                                              "                                                        QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
+                                              "                                                        background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                              "                                                        stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
+                                              "                                                        stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
+                                              "               "
+                                              "                                         }\n"
                                               "\n"
-                                              "QComboBox:on { /* shift the text when the popup opens */\n"
-                                              "    padding-top: 3px;\n"
-                                              "    padding-left: 4px;\n"
-                                              ""
-                                              "}\n"
+                                              "                                                        QComboBox:on { /* shift the text when the popup opens */\n"
+                                              "                                                        padding-top: 3px;\n"
+                                              "                                                        padding-left: 4px;\n"
+                                              "                                                        }\n"
                                               "\n"
-                                              "QComboBox::drop-down {\n"
-                                              "    subcontrol-origin: padding;\n"
-                                              "    subcontrol-position: top right;\n"
-                                              "    width: 15px;\n"
+                                              "                                                        QComboBox::drop-down {\n"
+                                              "                                                        subcontrol-origin: padding;\n"
+                                              "                                                        subcontrol-position: top right;\n"
+                                              "                                                        width: 15px;\n"
                                               "\n"
-                                              "    border-left-width: 1px;\n"
-                                              "    border-left-color: darkgray;\n"
-                                              "    border-left-style: solid; /* just a single line */\n"
-                                              "    border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
-                                              "    border-bottom-right-radius: 3px;\n"
-                                              "	color: black;\n"
-                                              "}\n"
+                                              "                                                        border-left-width: 1px;\n"
+                                              "                                                        border-left-color: darkgray;\n"
+                                              "                                                        border-left-style: solid; /* just a single line */\n"
+                                              "       "
+                                              "                                                 border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
+                                              "                                                        border-bottom-right-radius: 3px;\n"
+                                              "                                                        color: black;\n"
+                                              "                                                        }\n"
                                               "\n"
-                                              "QComboBox::down-arrow {\n"
-                                              "	image: url(:/images/images/down_arrow.png);\n"
-                                              "}\n"
+                                              "                                                        QComboBox::down-arrow {\n"
+                                              "                                                        image: url(:/images/images/down_arrow.png);\n"
+                                              "                                                        }\n"
                                               "\n"
-                                              "QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
-                                              "    top: 1px;\n"
-                                              "    left: 1px;\n"
-                                              "}\n"
+                                              "                                                        QComboBox::down-arrow:on { /* shift the arrow when popup is open\n"
+                                              "                                                        */\n"
+                                              "                                                        top: 1px;\n"
+                                              "                                                        left: 1px;\n"
+                                              "                                                        }\n"
                                               "\n"
-                                              "QComboBox QAbstractItemView {\n"
-                                              "    border: 2px solid darkgray;\n"
-                                              "    selection-background-color: lightgray;\n"
-                                              "	color: black;\n"
-                                              "}")
+                                              "                      "
+                                              "                                  QComboBox QAbstractItemView {\n"
+                                              "                                                        border: 2px solid darkgray;\n"
+                                              "                                                        selection-background-color: lightgray;\n"
+                                              "                                                        color: black;\n"
+                                              "                                                        }\n"
+                                              "                                                    ")
 
         self.verticalLayout_3.addWidget(self.base_item_combobox)
+
 
         self.verticalLayout_2.addWidget(self.item_combobox_container)
 
@@ -369,6 +388,7 @@ class Ui_LeftColumn(object):
         self.item_quality_spinbox.setDisplayIntegerBase(10)
 
         self.verticalLayout_4.addWidget(self.item_quality_spinbox)
+
 
         self.verticalLayout_2.addWidget(self.item_level_and_quality_container)
 
@@ -726,6 +746,7 @@ class Ui_LeftColumn(object):
 
         self.verticalLayout_5.addWidget(self.warlord_btn)
 
+
         self.verticalLayout_2.addWidget(self.item_influence_btns_container)
 
         self.menus.addWidget(self.menu_2)
@@ -741,6 +762,8 @@ class Ui_LeftColumn(object):
         # endif // QT_CONFIG(shortcut)
 
         self.retranslateUi(LeftColumn)
+        self.base_item_combobox.currentTextChanged.connect(self.item_level_spinbox.show)
+        self.base_item_combobox.currentTextChanged.connect(self.item_quality_spinbox.show)
 
         self.menus.setCurrentIndex(1)
 
@@ -752,12 +775,12 @@ class Ui_LeftColumn(object):
         self.label_1.setText(QCoreApplication.translate("LeftColumn", u"Menu 1 - Left Menu", None))
         self.base_group_label.setText(QCoreApplication.translate("LeftColumn", u"Base Group", None))
         self.base_group_combobox.setItemText(0, QCoreApplication.translate("LeftColumn", u"Body Armour", None))
-        self.base_group_combobox.setItemText(1, QCoreApplication.translate("LeftColumn", u"Shields", None))
+        self.base_group_combobox.setItemText(1, QCoreApplication.translate("LeftColumn", u"Shield", None))
         self.base_group_combobox.setItemText(2, QCoreApplication.translate("LeftColumn", u"Boots", None))
         self.base_group_combobox.setItemText(3, QCoreApplication.translate("LeftColumn", u"Cluster Jewels", None))
         self.base_group_combobox.setItemText(4, QCoreApplication.translate("LeftColumn", u"Flasks", None))
         self.base_group_combobox.setItemText(5, QCoreApplication.translate("LeftColumn", u"Gloves", None))
-        self.base_group_combobox.setItemText(6, QCoreApplication.translate("LeftColumn", u"Helmets", None))
+        self.base_group_combobox.setItemText(6, QCoreApplication.translate("LeftColumn", u"Helmet", None))
         self.base_group_combobox.setItemText(7, QCoreApplication.translate("LeftColumn", u"Jewellery", None))
         self.base_group_combobox.setItemText(8, QCoreApplication.translate("LeftColumn", u"Jewels", None))
         self.base_group_combobox.setItemText(9, QCoreApplication.translate("LeftColumn", u"Offhands", None))
@@ -781,3 +804,4 @@ class Ui_LeftColumn(object):
         self.shaper_btn.setText(QCoreApplication.translate("LeftColumn", u"Shaper", None))
         self.warlord_btn.setText(QCoreApplication.translate("LeftColumn", u"Warlord", None))
     # retranslateUi
+

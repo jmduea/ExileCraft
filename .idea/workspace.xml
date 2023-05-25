@@ -7,35 +7,199 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a63e506-7a72-4719-b494-f2a9d299a019" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/constants.py" afterDir="false" />
+    <list default="true" id="6a63e506-7a72-4719-b494-f2a9d299a019" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/base_items_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/emu/item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/emu/mods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/database_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/database_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/ui_updater.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/ui_updater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/splash_screen/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/combobox_updater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/splash_screen/splash_screen.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/splash_screen/ui_SplashScreen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/exilecraft.db" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/exilecraft.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/active_skill_types.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/active_skill_types.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/active_skill_types.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/active_skill_types.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/advanced_mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/advanced_mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/base_items.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/base_items.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/base_items.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/base_items.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/characters.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/characters.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/characters.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/characters.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/cluster_jewel_notables.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/cluster_jewel_notables.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/cluster_jewel_notables.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/cluster_jewel_notables.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/cluster_jewels.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/cluster_jewels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/cluster_jewels.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/cluster_jewels.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/cost_types.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/cost_types.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/cost_types.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/cost_types.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/crafting_bench_options.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/crafting_bench_options.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/crafting_bench_options.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/crafting_bench_options.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/default_monster_stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/default_monster_stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/default_monster_stats.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/default_monster_stats.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/essences.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/essences.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/essences.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/essences.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/flavour.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/flavour.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/flavour.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/flavour.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/fossils.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/fossils.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/fossils.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/fossils.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/gem_tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/gem_tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/gem_tags.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/gem_tags.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/gems.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/gems.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/gems.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/gems.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/heist_equipment.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/heist_equipment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/item_classes.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/item_classes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/item_classes.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/item_classes.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/mod_types.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/mod_types.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/mod_types.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/mod_types.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/mods.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/mods.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/mods.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/mods.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/active_skill_gem.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/active_skill_gem.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/active_skill_gem.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/active_skill_gem.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/advanced_mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/advanced_mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/advanced_mod.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/advanced_mod.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/areas.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/areas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/areas.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/areas.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/atlas.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/atlas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/atlas.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/atlas.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/aura_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/aura_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/aura_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/aura_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/banner_aura_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/banner_aura_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/banner_aura_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/banner_aura_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/beam_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/beam_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/beam_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/beam_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/brand_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/brand_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/brand_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/brand_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/buff_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/buff_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/buff_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/buff_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/curse_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/curse_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/curse_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/curse_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/debuff_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/debuff_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/debuff_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/debuff_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/expedition_relic.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/expedition_relic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/expedition_relic.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/expedition_relic.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/heist_equipment.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/heist_equipment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/heist_equipment.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/heist_equipment.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/leaguestone.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/leaguestone.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/leaguestone.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/leaguestone.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/minion_attack_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/minion_attack_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/minion_attack_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/minion_attack_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/minion_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/minion_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/minion_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/minion_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/minion_spell_damage_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/minion_spell_damage_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/minion_spell_damage_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/minion_spell_damage_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/minion_spell_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/minion_spell_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/minion_spell_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/minion_spell_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/monster.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/monster.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/monster.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/monster.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/offering_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/offering_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/offering_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/offering_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/passive_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/passive_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/passive_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/passive_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/passive_skill_aura.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/passive_skill_aura.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/passive_skill_aura.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/passive_skill_aura.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/primordial_altar.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/primordial_altar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/primordial_altar.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/primordial_altar.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/secondary_debuff_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/secondary_debuff_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/secondary_debuff_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/secondary_debuff_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/sentinel.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/sentinel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/sentinel.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/sentinel.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/single_minion_spell_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/single_minion_spell_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/single_minion_spell_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/single_minion_spell_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/strongbox.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/strongbox.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/strongbox.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/strongbox.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/support_gem.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/support_gem.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/support_gem.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/support_gem.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/variable_duration_skill.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/variable_duration_skill.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stat_translations/variable_duration_skill.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stat_translations/variable_duration_skill.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/stats.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/stats.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/tags.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/tags.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/tags.min.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/tags.min.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/json/tags_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/json/tags_map.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/Essence.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/added_mods.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/alias.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/allowed_tags.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/base_items.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/blocked_descriptions.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/crafting_project.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/descriptions.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/essence_modifiers.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/forbidden_tags.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/forced_mods.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/fossils.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/item_classes.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/mod_adds_tags.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/mod_groups.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/mod_implicit_tags.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/modifier_generation_weights.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/modifier_grants_effects.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/modifier_spawn_weights.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/modifier_stats.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/modifiers.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/negative_mod_weights.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/positive_mod_weights.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/resolved_mod_stats.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/sell_price_mods.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/stat_translation.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/stat_translations.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/stats.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/tags.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/main/translation.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/modpool_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/modpool_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/data/ui_modpool_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/ui_modpool_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/db/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/config/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/database_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/db/database_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/get_base_item_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/db/get_base_item_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/item_mods_retriever.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/db/item_mods_retriever.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/item_stats_updater.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/db/item_stats_updater.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/db/ui_updater.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/db/ui_updater.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/assets/images/items/alloyed_spike_shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/assets/images/items/alloyed_spiked_shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/core/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/core/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/combobox_updater.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/combobox_updater.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/left_column.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/left_column.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/ui_left_column.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/ui_left_column.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/ui_right_column.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/ui_right_column.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/base_group_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/base_selection_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/item_options_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/item_selection_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/wizard_start_page.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/main_pages.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/main_pages.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/ui_main_pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/pages/ui_main_pages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/functions_main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/functions_main_window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/setup_main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/setup_main_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/ui_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/ui_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/ui_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/ui_mainwindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_circular_progress/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_circular_progress/py_circular_progress.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_custom_cursor_button/py_custom_cursor_button.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_custom_cursor_button/py_custom_cursor_button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_left_column/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_left_column/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_left_column/py_left_column.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_left_column/py_left_column.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/wizard/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/wizard/base_group_page.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/wizard/item_options_wizard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/wizard/item_options_wizard.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/wizard/ui_item_options_wizard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/wizard/wizard_assets.qrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_left_menu/py_left_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_left_menu/py_left_menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_slider/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_slider/py_slider.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_toggle/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_toggle/py_toggle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_window/py_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/widgets/py_window/py_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/config/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/cluster_jewel_notable_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/cluster_jewel_notable_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/cluster_jewel_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/cluster_jewel_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/crafting_bench_option_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/crafting_bench_option_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/essence_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/essence_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/fossil_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/fossil_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/path_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/path_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser/stat_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser/stat_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/tests/test_get_base_item_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/tests/test_get_base_item_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExileCraft/tests/test_path_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExileCraft/tests/test_path_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +297,7 @@
     </order>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2PvYfCbrW0blwcKeBMCXDLniKFM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -152,7 +316,7 @@
     "git-widget-placeholder": "mainwindow__overhaul",
     "grid.search.filter.rows": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "F:/ExileCraft/ExileCraft/ExileCraft/modules/db",
+    "last_opened_file_path": "F:/ExileCraft/ExileCraft/ExileCraft/modules/emu",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -162,6 +326,7 @@
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "preferences.rainbow.brackets",
+    "two.files.diff.last.used.file": "F:/ExileCraft/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/ui_mainwindow.py",
     "typescript.add.unambiguous.imports.on.the.fly": "true",
     "vue.rearranger.settings.migration": "true",
     "zielu.gittoolbox.prj.config.selected.tab.id": "zielu.gittoolbox.config.shared.autoFetch"
@@ -191,21 +356,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ExileCraft\ExileCraft\ExileCraft\modules\emu" />
       <recent name="F:\ExileCraft\ExileCraft\ExileCraft\modules\db" />
       <recent name="F:\ExileCraft\ExileCraft\ExileCraft\modules\gui\assets\images\svg_images" />
       <recent name="C:\Users\spark\.virtualenvs\ExileCraft-c39WOG9a\Lib\site-packages\PySide6\bin" />
       <recent name="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft\ExileCraft\modules\ui\ui_files" />
-      <recent name="C:\Users\spark\PycharmProjects\ExileCraft" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ExileCraft\ExileCraft\ExileCraft\modules\config" />
+      <recent name="F:\ExileCraft\ExileCraft\ExileCraft\modules\data" />
+      <recent name="F:\ExileCraft\ExileCraft\ExileCraft\modules" />
       <recent name="F:\ExileCraft\ExileCraft\ExileCraft\modules\gui\assets\images\crafting_methods" />
       <recent name="F:\ExileCraft\ExileCraft\ExileCraft\modules\gui\assets\images\svg_icons" />
-      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\ExileCraft" />
-      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\docs" />
-      <recent name="C:\Users\spark\PycharmProjects\ExileCraft\docs\source" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager">
     <configuration name="generate_pyi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ExileCraft" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -214,12 +379,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/support" />
+      <option name="WORKING_DIRECTORY" value="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/support" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/support/generate_pyi.py" />
+      <option name="SCRIPT_NAME" value="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/support/generate_pyi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -268,7 +433,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
+      <option name="WORKING_DIRECTORY" value="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -283,29 +448,7 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
         </ENTRIES>
       </EXTENSION>
-      <option name="SCRIPT_NAME" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pyside_tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ExileCraft" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/scripts/pyside_tool.py" />
+      <option name="SCRIPT_NAME" value="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -322,12 +465,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/QtDesignerPlugins" />
+      <option name="WORKING_DIRECTORY" value="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/QtDesignerPlugins" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/QtDesignerPlugins/register_all.py" />
+      <option name="SCRIPT_NAME" value="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/QtDesignerPlugins/register_all.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -350,6 +493,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../customwidgets/register_framelesswindow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ui_mainwindow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ExileCraft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window/ui_mainwindow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -387,8 +552,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.ui_mainwindow" />
       <item itemvalue="Python.generate_pyi" />
-      <item itemvalue="Python.pyside_tool" />
       <item itemvalue="Python.register_all" />
       <item itemvalue="Python.register_framelesswindow" />
       <item itemvalue="Python.plugin creator" />
@@ -396,11 +561,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.ui_mainwindow" />
         <item itemvalue="Python.register_framelesswindow" />
         <item itemvalue="Python.register_all" />
-        <item itemvalue="Python.generate_pyi" />
-        <item itemvalue="Python.pyside_tool" />
+        <item itemvalue="Python.plugin creator" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -474,6 +639,11 @@
       <workItem from="1684803305792" duration="7000" />
       <workItem from="1684807748740" duration="5004000" />
       <workItem from="1684813514618" duration="47000" />
+      <workItem from="1684861531222" duration="18891000" />
+      <workItem from="1684887059726" duration="10535000" />
+      <workItem from="1684899299761" duration="8791000" />
+      <workItem from="1684914121973" duration="1958000" />
+      <workItem from="1684971246016" duration="12601000" />
     </task>
     <task id="LOCAL-00001" summary="pyside6">
       <created>1684370517489</created>
@@ -790,7 +960,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684852121818</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="update/save">
+      <created>1684860946999</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1684860946999</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -828,7 +1005,6 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="update path_utils for flexibility" />
     <MESSAGE value="move to ui_files folder" />
     <MESSAGE value="add functionality to show ItemOptionsWizard" />
     <MESSAGE value="update pages for item options wizard" />
@@ -853,7 +1029,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="update to use PyOneDark ui" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="update/save" />
+    <option name="LAST_COMMIT_MESSAGE" value="update/save" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -901,19 +1078,34 @@
           <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/combobox_updater.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="260" />
+          <url>file://$USER_HOME$/Documents/GitHub/PyPoE/PyPoE/poe/sim/item.py</url>
+          <line>281</line>
+          <option name="timeStamp" value="391" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/combobox_updater.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="261" />
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/main.py</url>
+          <line>236</line>
+          <option name="timeStamp" value="426" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns/combobox_updater.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="262" />
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/main.py</url>
+          <line>237</line>
+          <option name="timeStamp" value="427" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/main.py</url>
+          <line>238</line>
+          <option name="timeStamp" value="428" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/main.py</url>
+          <line>239</line>
+          <option name="timeStamp" value="429" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExileCraft/ExileCraft/main.py</url>
+          <line>241</line>
+          <option name="timeStamp" value="430" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -926,32 +1118,36 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ExileCraft$register_all.coverage" NAME="register_all Coverage Results" MODIFIED="1684811312195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/QtDesignerPlugins" />
+    <SUITE FILE_PATH="coverage/ExileCraft$register_all.coverage" NAME="register_all Coverage Results" MODIFIED="1684811312195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/QtDesignerPlugins" />
     <SUITE FILE_PATH="coverage/ExileCraft$essence_parser.coverage" NAME="essence_parser Coverage Results" MODIFIED="1684426827636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
+    <SUITE FILE_PATH="coverage/ExileCraft$combobox_updater.coverage" NAME="combobox_updater Coverage Results" MODIFIED="1684987103604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/columns" />
     <SUITE FILE_PATH="coverage/ExileCraft$deploy.coverage" NAME="deploy Coverage Results" MODIFIED="1684617841709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
-    <SUITE FILE_PATH="coverage/ExileCraft$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1684807129039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/Custom_Widgets" />
+    <SUITE FILE_PATH="coverage/ExileCraft$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1684807129039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/Custom_Widgets" />
     <SUITE FILE_PATH="coverage/ExileCraft$stat_parser.coverage" NAME="stat_parser Coverage Results" MODIFIED="1684425130921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
     <SUITE FILE_PATH="coverage/ExileCraft$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1684617354388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/qtpy" />
     <SUITE FILE_PATH="coverage/ExileCraft$custom_widgets.coverage" NAME="custom_widgets Coverage Results" MODIFIED="1684807050443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ExileCraft$splash_screen.coverage" NAME="splash_screen Coverage Results" MODIFIED="1684471740442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/ui" />
-    <SUITE FILE_PATH="coverage/ExileCraft$plugin_creator.coverage" NAME="plugin creator Coverage Results" MODIFIED="1684809290178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
+    <SUITE FILE_PATH="coverage/ExileCraft$plugin_creator.coverage" NAME="plugin creator Coverage Results" MODIFIED="1684809290178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
     <SUITE FILE_PATH="coverage/ExileCraft$.coverage" NAME=" Coverage Results" MODIFIED="1684579106542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
     <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool__1_.coverage" NAME="pyside_tool (1) Coverage Results" MODIFIED="1684629633121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
-    <SUITE FILE_PATH="coverage/ExileCraft$main__1_.coverage" NAME="plugin creator Coverage Results" MODIFIED="1684807377088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
+    <SUITE FILE_PATH="coverage/ExileCraft$main__1_.coverage" NAME="plugin creator Coverage Results" MODIFIED="1684807377088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/Apps/PluginCreator" />
     <SUITE FILE_PATH="coverage/ExileCraft$register_framelesswindow.coverage" NAME="register_framelesswindow Coverage Results" MODIFIED="1684812042009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../customwidgets" />
     <SUITE FILE_PATH="coverage/ExileCraft$path_utils.coverage" NAME="path_utils Coverage Results" MODIFIED="1684422438824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
+    <SUITE FILE_PATH="coverage/ExileCraft$base_items_parser.coverage" NAME="base_items_parser Coverage Results" MODIFIED="1684994190351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser" />
     <SUITE FILE_PATH="coverage/ExileCraft$dad.coverage" NAME="dad Coverage Results" MODIFIED="1684575532875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
-    <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool.coverage" NAME="pyside_tool Coverage Results" MODIFIED="1684810048295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$pyside_tool.coverage" NAME="pyside_tool Coverage Results" MODIFIED="1684810048295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/scripts" />
     <SUITE FILE_PATH="coverage/ExileCraft$test_get_base_item_stats.coverage" NAME="test_get_base_item_stats Coverage Results" MODIFIED="1684363008596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/tests" />
     <SUITE FILE_PATH="coverage/ExileCraft$as.coverage" NAME="as Coverage Results" MODIFIED="1684803067877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ExileCraft$sdsd.coverage" NAME="sdsd Coverage Results" MODIFIED="1684666408479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/data" />
-    <SUITE FILE_PATH="coverage/ExileCraft$generate_pyi.coverage" NAME="generate_pyi Coverage Results" MODIFIED="1684810142947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/support" />
+    <SUITE FILE_PATH="coverage/ExileCraft$generate_pyi.coverage" NAME="generate_pyi Coverage Results" MODIFIED="1684810142947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/PySide6/support" />
     <SUITE FILE_PATH="coverage/ExileCraft$RunApp.coverage" NAME="RunApp Coverage Results" MODIFIED="1684805875986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft" />
     <SUITE FILE_PATH="coverage/ExileCraft$fossil_parser.coverage" NAME="fossil_parser Coverage Results" MODIFIED="1684423880632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/parser" />
     <SUITE FILE_PATH="coverage/ExileCraft$cli.coverage" NAME="cli Coverage Results" MODIFIED="1684617337429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/qtpy" />
-    <SUITE FILE_PATH="coverage/ExileCraft$ProjectManager.coverage" NAME="ProjectManager Coverage Results" MODIFIED="1684810854228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/.virtualenvs/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/scripts" />
+    <SUITE FILE_PATH="coverage/ExileCraft$ProjectManager.coverage" NAME="ProjectManager Coverage Results" MODIFIED="1684810854228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/ExileCraft-c39WOG9a/Lib/site-packages/MadQt/scripts" />
     <SUITE FILE_PATH="coverage/ExileCraft$project.coverage" NAME="project Coverage Results" MODIFIED="1684629569148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/PySide6/scripts" />
-    <SUITE FILE_PATH="coverage/ExileCraft$main.coverage" NAME="main Coverage Results" MODIFIED="1684859646699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft" />
+    <SUITE FILE_PATH="coverage/ExileCraft$item_parser.coverage" NAME="item_parser Coverage Results" MODIFIED="1684986940530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/data/parser" />
+    <SUITE FILE_PATH="coverage/ExileCraft$main.coverage" NAME="main Coverage Results" MODIFIED="1684992435098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft" />
+    <SUITE FILE_PATH="coverage/ExileCraft$ui_mainwindow.coverage" NAME="ui_mainwindow Coverage Results" MODIFIED="1684897273470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ExileCraft/ExileCraft/modules/gui/uis/windows/main_window" />
     <SUITE FILE_PATH="coverage/ExileCraft$uic.coverage" NAME="uic Coverage Results" MODIFIED="1684629711153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$ExileCraftPipENV$/Lib/site-packages/pyside6_uic_extended" />
   </component>
 </project>

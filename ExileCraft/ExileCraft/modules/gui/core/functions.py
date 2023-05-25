@@ -19,8 +19,6 @@
 import os
 
 
-# APP FUNCTIONS
-# ///////////////////////////////////////////////////////////////
 class Functions:
 
     # SET SVG ICON
@@ -41,8 +39,6 @@ class Functions:
         icon = os.path.normpath(os.path.join(path, icon_name))
         return icon
 
-    # SET IMAGE
-    # ///////////////////////////////////////////////////////////////
     def set_image(image_name):
         app_path = os.path.abspath(os.getcwd())
         folder = "modules/gui/assets/images/"

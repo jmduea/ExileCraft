@@ -1,4 +1,5 @@
-from .ui_main import *
+from qt_core import *
+from .ui_mainwindow import *
 
 
 # FUNCTIONS

@@ -19,16 +19,13 @@
 #  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
-#
-# from modules.gui.splash_screen.splash_screen import SplashScreen
-import os
+
 import sys
 
-from modules.gui.core.json_settings import Settings
-from modules.gui.uis.windows.main_window import SetupMainWindow, UI_MainWindow
+from modules.gui.uis.windows.main_window import *
 from modules.gui.uis.windows.main_window.functions_main_window import *
-from modules.tray.hotkey_methods import register_hotkey
-from modules.tray.tray_setup import SetupTray
+from modules.tray.hotkey_methods import *
+from modules.tray.tray_setup import *
 from qt_core import *
 
 # Adjust QT Font DPI for high scale and 4k monitors
@@ -41,11 +38,11 @@ basedir = os.path.dirname(__file__)
 
 class MainWindow(QMainWindow):
     def __init__(self):
-        super().__init__()
-
         # Setup Main Window UI
+        super().__init__()
         self.ui = UI_MainWindow()
         self.ui.setup_ui(self)
+        self.setWindowOpacity(.8)
 
         # Load Settings
         settings = Settings()
@@ -57,6 +54,14 @@ class MainWindow(QMainWindow):
 
         # Show the main window
         self.show()
+
+        self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(self.set_item_header_label)
+        self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(self.set_item_view_box_background)
+        self.ui.left_column.menus.base_group_combobox.currentTextChanged.connect(self.clear_item_view_box_background)
+        self.ui.left_column.menus.base_combobox.currentTextChanged.connect(self.clear_item_view_box_background)
+
+        self.ui.left_column.menus.item_level_spinbox.valueChanged.connect(self.set_item_level)
+        self.ui.left_column.menus.item_quality_spinbox.valueChanged.connect(self.set_item_quality)
 
     def btn_clicked(self):
         # GET BT CLICKED
@@ -179,7 +184,6 @@ class MainWindow(QMainWindow):
         btn = SetupMainWindow.setup_btns(self)
 
     # RESIZE EVENT
-    # ///////////////////////////////////////////////////////////////
     def resizeEvent(self, event):
         SetupMainWindow.resize_grips(self)
 
@@ -191,6 +195,54 @@ class MainWindow(QMainWindow):
 
     def leaveEvent(self, event):
         QApplication.instance().restoreOverrideCursor()
+
+    def set_item_view_box_background(self):
+        base_item_name = self.ui.left_column.menus.base_item_combobox.currentText()
+        base_item = base_item_name.replace(' ', '_').lower()
+        image_path = os.path.abspath(
+            os.path.join('F:', 'modules', 'gui', 'assets', 'images', 'items',
+                         base_item + '.png'))
+        print(image_path)
+        try:
+            pixmap = QtGui.QPixmap(image_path)
+            if pixmap.isNull():
+                print(f"Failed to load image at {image_path}")
+            else:
+                self.ui.load_pages.item_img_label.setPixmap(pixmap)
+                self.ui.load_pages.item_img_label.setAlignment(Qt.AlignCenter)
+                self.ui.load_pages.item_img_label.setScaledContents(False)
+        except Exception as e:
+            print(f"Error loading image: {e}")
+
+    def clear_item_view_box_background(self):
+        self.ui.load_pages.item_img_label.setPixmap(QPixmap())
+
+    def set_item_header_label(self):
+        item_name = self.ui.left_column.menus.base_item_combobox.currentText()
+        self.update_item_header_label(item_name)
+
+    def update_item_header_label(self, item_name):
+        self.ui.load_pages.item_header_label.setText(item_name)
+
+    def set_item_level(self):
+        item_level_value = self.ui.left_column.menus.item_level_spinbox.value()
+        item_level = str(item_level_value)
+        item_html = f'<p align="center"><span style=" font-size:11pt; color:#827a6c;">Item Level: </span>' \
+                    f'<span style=" font-size:11pt; font-weight:bold; color:#fff;">{item_level}</span></p>'
+        self.update_item_level_label(item_html)
+
+    def set_item_quality(self):
+        item_quality_value = self.ui.left_column.menus.item_quality_spinbox.value()
+        item_quality = str(item_quality_value)
+        quality_html = f'<p align="center"><span style=" font-size:11pt; color:#827a6c;">Quality: </span>' \
+                       f'<span style=" font-size:11pt; font-weight:bold; color:#8787fe;">{item_quality}%</span></p>'
+        self.update_item_quality_label(quality_html)
+
+    def update_item_level_label(self, item_level):
+        self.ui.load_pages.item_level_label.setText(item_level)
+
+    def update_item_quality_label(self, quality_html):
+        self.ui.load_pages.item_quality_label.setText(quality_html)
 
 
 if __name__ == "__main__":

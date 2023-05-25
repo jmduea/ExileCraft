@@ -14,22 +14,16 @@
 #
 # ///////////////////////////////////////////////////////////////
 
+from modules.gui.core.functions import Functions
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
 from qt_core import *
-
+from .py_div import PyDiv
 # IMPORT BUTTON AND DIV
 # ///////////////////////////////////////////////////////////////
 from .py_left_menu_button import PyLeftMenuButton
-from .py_div import PyDiv
-
-# IMPORT FUNCTIONS
-# ///////////////////////////////////////////////////////////////
-from modules.gui.core.functions import *
 
 
-# PY LEFT MENU
-# ///////////////////////////////////////////////////////////////
 class PyLeftMenu(QWidget):
     # SIGNALS
     clicked = Signal(object)
@@ -60,9 +54,6 @@ class PyLeftMenu(QWidget):
             toggle_tooltip="Show menu"
     ):
         super().__init__()
-
-        # PROPERTIES
-        # ///////////////////////////////////////////////////////////////
         self._dark_one = dark_one
         self._dark_three = dark_three
         self._dark_four = dark_four

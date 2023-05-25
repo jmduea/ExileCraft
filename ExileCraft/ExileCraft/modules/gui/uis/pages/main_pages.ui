@@ -106,13 +106,25 @@
                                                 </property>
                                             </spacer>
                                         </item>
-                                        <item>
+                                        <item alignment="Qt::AlignTop">
                                             <widget class="QFrame" name="item_info_frame">
                                                 <property name="sizePolicy">
-                                                    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                                                    <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
                                                         <horstretch>0</horstretch>
                                                         <verstretch>0</verstretch>
                                                     </sizepolicy>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>0</width>
+                                                        <height>460</height>
+                                                    </size>
+                                                </property>
+                                                <property name="maximumSize">
+                                                    <size>
+                                                        <width>16777215</width>
+                                                        <height>480</height>
+                                                    </size>
                                                 </property>
                                                 <property name="styleSheet">
                                                     <string notr="true">border-image: none;</string>
@@ -139,7 +151,7 @@
                                                     <property name="bottomMargin">
                                                         <number>0</number>
                                                     </property>
-                                                    <item>
+                                                    <item alignment="Qt::AlignTop">
                                                         <widget class="QFrame" name="item_header_frame">
                                                             <property name="sizePolicy">
                                                                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -244,10 +256,10 @@
                                                             </layout>
                                                         </widget>
                                                     </item>
-                                                    <item>
+                                                    <item alignment="Qt::AlignTop">
                                                         <widget class="QFrame" name="item_affix_frame">
                                                             <property name="sizePolicy">
-                                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                                                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                                                                     <horstretch>0</horstretch>
                                                                     <verstretch>0</verstretch>
                                                                 </sizepolicy>
@@ -263,8 +275,37 @@
                                                                 <enum>QFrame::Raised</enum>
                                                             </property>
                                                             <layout class="QVBoxLayout" name="item_affix_layout">
+                                                                <property name="spacing">
+                                                                    <number>0</number>
+                                                                </property>
+                                                                <property name="leftMargin">
+                                                                    <number>0</number>
+                                                                </property>
+                                                                <property name="topMargin">
+                                                                    <number>0</number>
+                                                                </property>
+                                                                <property name="rightMargin">
+                                                                    <number>0</number>
+                                                                </property>
+                                                                <property name="bottomMargin">
+                                                                    <number>0</number>
+                                                                </property>
+                                                                <item alignment="Qt::AlignTop">
+                                                                    <widget class="QLabel" name="item_quality_label">
+                                                                        <property name="sizePolicy">
+                                                                            <sizepolicy hsizetype="Minimum"
+                                                                                        vsizetype="Minimum">
+                                                                                <horstretch>0</horstretch>
+                                                                                <verstretch>0</verstretch>
+                                                                            </sizepolicy>
+                                                                        </property>
+                                                                        <property name="text">
+                                                                            <string/>
+                                                                        </property>
+                                                                    </widget>
+                                                                </item>
                                                                 <item>
-                                                                    <widget class="QLabel" name="item_properties">
+                                                                    <widget class="QLabel" name="item_properties_label">
                                                                         <property name="sizePolicy">
                                                                             <sizepolicy hsizetype="MinimumExpanding"
                                                                                         vsizetype="Preferred">
@@ -353,7 +394,18 @@
                                                                     </widget>
                                                                 </item>
                                                                 <item>
-                                                                    <widget class="QLabel" name="item_requirements">
+                                                                    <widget class="QLabel" name="item_level_label">
+                                                                        <property name="tabletTracking">
+                                                                            <bool>false</bool>
+                                                                        </property>
+                                                                        <property name="text">
+                                                                            <string/>
+                                                                        </property>
+                                                                    </widget>
+                                                                </item>
+                                                                <item>
+                                                                    <widget class="QLabel"
+                                                                            name="item_requirements_label">
                                                                         <property name="sizePolicy">
                                                                             <sizepolicy hsizetype="MinimumExpanding"
                                                                                         vsizetype="Preferred">
@@ -433,7 +485,7 @@
                                                                     </widget>
                                                                 </item>
                                                                 <item>
-                                                                    <widget class="QLabel" name="item_implicits">
+                                                                    <widget class="QLabel" name="item_implicits_label">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
                                                                         </property>
@@ -527,13 +579,13 @@
                                                             </layout>
                                                         </widget>
                                                     </item>
-                                                    <item>
+                                                    <item alignment="Qt::AlignTop">
                                                         <widget class="QFrame" name="item_mods_frame">
                                                             <property name="enabled">
                                                                 <bool>false</bool>
                                                             </property>
                                                             <property name="sizePolicy">
-                                                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                                                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                                                                     <horstretch>0</horstretch>
                                                                     <verstretch>0</verstretch>
                                                                 </sizepolicy>
@@ -554,8 +606,11 @@
                                                                 <string notr="true">background-color: rgb(0, 0, 0);
                                                                 </string>
                                                             </property>
-                                                            <layout class="QVBoxLayout" name="item_mods_layout">
-                                                                <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                                            <layout class="QVBoxLayout" name="verticalLayout_6">
+                                                                <property name="spacing">
+                                                                    <number>0</number>
+                                                                </property>
+                                                                <item>
                                                                     <widget class="QLabel" name="prefix_info_1">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -600,7 +655,7 @@
                                                                         </property>
                                                                     </widget>
                                                                 </item>
-                                                                <item alignment="Qt::AlignHCenter">
+                                                                <item>
                                                                     <widget class="QLabel" name="prefix_1">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -636,7 +691,7 @@
                                                                         </property>
                                                                     </widget>
                                                                 </item>
-                                                                <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                                                <item>
                                                                     <widget class="QLabel" name="prefix_info_2">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -681,7 +736,7 @@
                                                                         </property>
                                                                     </widget>
                                                                 </item>
-                                                                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                                                                <item>
                                                                     <widget class="QLabel" name="prefix_2">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -717,7 +772,7 @@
                                                                         </property>
                                                                     </widget>
                                                                 </item>
-                                                                <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                                                <item>
                                                                     <widget class="QLabel" name="prefix_info_3">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -762,7 +817,7 @@
                                                                         </property>
                                                                     </widget>
                                                                 </item>
-                                                                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                                                                <item>
                                                                     <widget class="QLabel" name="prefix_3">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -843,7 +898,7 @@
                                                                         </property>
                                                                     </widget>
                                                                 </item>
-                                                                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                                                                <item>
                                                                     <widget class="QLabel" name="suffix_1">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -924,7 +979,7 @@
                                                                         </property>
                                                                     </widget>
                                                                 </item>
-                                                                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                                                                <item>
                                                                     <widget class="QLabel" name="suffix_2">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -1021,7 +1076,7 @@
                                                                         </property>
                                                                     </widget>
                                                                 </item>
-                                                                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                                                                <item alignment="Qt::AlignTop">
                                                                     <widget class="QLabel" name="suffix_3">
                                                                         <property name="enabled">
                                                                             <bool>false</bool>
@@ -1547,8 +1602,8 @@
                                             <rect>
                                                 <x>0</x>
                                                 <y>0</y>
-                                                <width>592</width>
-                                                <height>517</height>
+                                                <width>307</width>
+                                                <height>242</height>
                                             </rect>
                                         </property>
                                         <property name="styleSheet">
@@ -1843,8 +1898,7 @@
                                                                                 </font>
                                                                             </property>
                                                                             <property name="cursor">
-                                                                                <cursorShape>PointingHandCursor
-                                                                                </cursorShape>
+                                                                                <cursorShape>ArrowCursor</cursorShape>
                                                                             </property>
                                                                             <property name="contextMenuPolicy">
                                                                                 <enum>Qt::NoContextMenu</enum>
@@ -2481,8 +2535,7 @@
                                                                                             </font>
                                                                                         </property>
                                                                                         <property name="cursor">
-                                                                                            <cursorShape>
-                                                                                                PointingHandCursor
+                                                                                            <cursorShape>ArrowCursor
                                                                                             </cursorShape>
                                                                                         </property>
                                                                                         <property name="focusPolicy">
@@ -2524,8 +2577,7 @@
                                                                                             </font>
                                                                                         </property>
                                                                                         <property name="cursor">
-                                                                                            <cursorShape>
-                                                                                                PointingHandCursor
+                                                                                            <cursorShape>ArrowCursor
                                                                                             </cursorShape>
                                                                                         </property>
                                                                                         <property name="focusPolicy">
@@ -2570,8 +2622,7 @@
                                                                                             </font>
                                                                                         </property>
                                                                                         <property name="cursor">
-                                                                                            <cursorShape>
-                                                                                                PointingHandCursor
+                                                                                            <cursorShape>ArrowCursor
                                                                                             </cursorShape>
                                                                                         </property>
                                                                                         <property name="focusPolicy">
@@ -2638,11 +2689,6 @@
                                                                                             </property>
                                                                                             <property name="frameShape">
                                                                                                 <enum>QFrame::NoFrame
-                                                                                                </enum>
-                                                                                            </property>
-                                                                                            <property
-                                                                                                    name="frameShadow">
-                                                                                                <enum>QFrame::Plain
                                                                                                 </enum>
                                                                                             </property>
                                                                                             <property

@@ -1,6 +1,6 @@
 import unittest
-import os
-from modules.parser import path_utils
+
+from modules.data.parser import path_utils
 
 
 class TestPathUtils(unittest.TestCase):

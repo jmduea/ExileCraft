@@ -7,7 +7,7 @@
             <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>208</width>
+                <width>438</width>
                 <height>662</height>
             </rect>
         </property>
@@ -293,7 +293,7 @@
                                                 </item>
                                                 <item>
                                                     <property name="text">
-                                                        <string>Shields</string>
+                                                        <string>Shield</string>
                                                     </property>
                                                 </item>
                                                 <item>
@@ -318,7 +318,7 @@
                                                 </item>
                                                 <item>
                                                     <property name="text">
-                                                        <string>Helmets</string>
+                                                        <string>Helmet</string>
                                                     </property>
                                                 </item>
                                                 <item>
@@ -1084,7 +1084,40 @@
     <resources>
         <include location="../../assets/assets.qrc"/>
     </resources>
-    <connections/>
+    <connections>
+        <connection>
+            <sender>base_item_combobox</sender>
+            <signal>currentTextChanged(QString)</signal>
+            <receiver>item_level_spinbox</receiver>
+            <slot>show()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>228</x>
+                    <y>149</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>264</x>
+                    <y>224</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>base_item_combobox</sender>
+            <signal>currentTextChanged(QString)</signal>
+            <receiver>item_quality_spinbox</receiver>
+            <slot>show()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>99</x>
+                    <y>154</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>120</x>
+                    <y>271</y>
+                </hint>
+            </hints>
+        </connection>
+    </connections>
     <slots>
         <slot>update_base_combobox()</slot>
     </slots>

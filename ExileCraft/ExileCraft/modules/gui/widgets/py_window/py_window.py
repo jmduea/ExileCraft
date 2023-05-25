@@ -17,21 +17,13 @@
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
 
+from modules.gui.core.json_settings import Settings
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
 from qt_core import *
-
-# IMPORT SETTINGS
-# ///////////////////////////////////////////////////////////////
-from modules.gui.core.json_settings import Settings
-
-# IMPORT STYLES
-# ///////////////////////////////////////////////////////////////
 from .styles import Styles
 
 
-# PY WINDOW
-# ///////////////////////////////////////////////////////////////
 class PyWindow(QFrame):
     def __init__(
             self,
@@ -67,16 +59,10 @@ class PyWindow(QFrame):
         self.border_color = border_color
         self.enable_shadow = enable_shadow
 
-        # OBJECT NAME
-        # ///////////////////////////////////////////////////////////////   
         self.setObjectName("pod_bg_app")
 
-        # APPLY STYLESHEET
-        # /////////////////////////////////////////////////////////////// 
         self.set_stylesheet()
 
-        # ADD LAYOUT
-        # ///////////////////////////////////////////////////////////////
         if layout == Qt.Vertical:
             # VERTICAL LAYOUT
             self.layout = QHBoxLayout(self)
@@ -86,8 +72,6 @@ class PyWindow(QFrame):
         self.layout.setContentsMargins(margin, margin, margin, margin)
         self.layout.setSpacing(spacing)
 
-        # ADD DROP SHADOW
-        # ///////////////////////////////////////////////////////////////
         if self.settings["custom_title_bar"]:
             if enable_shadow:
                 self.shadow = QGraphicsDropShadowEffect()
@@ -97,8 +81,6 @@ class PyWindow(QFrame):
                 self.shadow.setColor(QColor(0, 0, 0, 160))
                 self.setGraphicsEffect(self.shadow)
 
-    # APPLY AND UPDATE STYLESHEET
-    # ///////////////////////////////////////////////////////////////
     def set_stylesheet(
             self,
             bg_color=None,

@@ -11,22 +11,10 @@
 # There are limitations on Qt licenses if you want to use your products
 # commercially, I recommend reading them on the official website:
 # https://doc.qt.io/qtforpython/licenses.html
-#
-# ///////////////////////////////////////////////////////////////
 
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-
-# IMPORT LEFT COLUMN
-# ///////////////////////////////////////////////////////////////
-from modules.gui.uis.columns.ui_left_column import Ui_LeftColumn
-# IMPORT ICON
-# ///////////////////////////////////////////////////////////////
-from .py_icon import *
-# IMPORT CLOSE BUTTON
-# ///////////////////////////////////////////////////////////////
 from .py_left_button import *
-from ...uis.columns.combobox_updater import ComboboxUpdater
+from ...uis.columns.combobox_updater import *
+from ...uis.columns.ui_left_column import Ui_LeftColumn
 
 
 class PyLeftColumn(QWidget):
@@ -87,11 +75,12 @@ class PyLeftColumn(QWidget):
 
         self.combobox_updater = ComboboxUpdater(self.menus.base_group_combobox,
                                                 self.menus.base_combobox,
-                                                self.menus.base_item_combobox)
+                                                self.menus.base_item_combobox,
+                                                self.menus.item_level_spinbox,
+                                                self.menus.item_quality_spinbox)
         self.menus.base_group_combobox.currentIndexChanged.connect(self.combobox_updater.update_base_combobox)
+        self.menus.base_combobox.currentIndexChanged.connect(self.combobox_updater.get_base_items_for_combobox)
 
-    # TITLE LEFT COLUMN EMIT SIGNALS
-    # ///////////////////////////////////////////////////////////////
     def btn_clicked(self):
         self.clicked.emit(self.btn_close)
 

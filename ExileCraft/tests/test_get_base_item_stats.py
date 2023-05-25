@@ -3,7 +3,7 @@
 
 # Dependencies:
 # pip install pytest-mock
-from ExileCraft.ExileCraft.modules.db import get_base_item_stats
+from modules.data.db import get_base_item_stats
 
 """
 Code Analysis

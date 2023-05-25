@@ -1,5 +1,2 @@
-from .gui import uis
-from . import tray
-from . import emu
-from . import db
-from . import parser
+from modules import emu, gui, tray
+from modules.data import db, parser

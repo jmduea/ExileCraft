@@ -1,5 +1,5 @@
+from modules.data.parser.path_utils import get_abs_path
 from qt_core import *
-from modules.parser.path_utils import get_abs_path
 
 
 class PyCustomCursorButton(QPushButton):
