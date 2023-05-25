@@ -3,6 +3,17 @@ from qt_core import *
 
 
 class PyCustomCursorButton(QPushButton):
+    """
+    Constructs a new PyCustomCursorButton object.
+
+    Args:
+        *args: Variable length argument list.
+        **kwargs: Arbitrary keyword arguments.
+
+    Returns:
+        None
+    """
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setMouseTracking(True)
@@ -13,6 +24,17 @@ class PyCustomCursorButton(QPushButton):
         self._was_checked = False
 
     def _handle_click(self):
+        """
+        Handles the click event for the button.
+
+        If the button was previously checked, it unchecks it. If it was previously unchecked, it checks it.
+
+        Args:
+            None
+
+        Returns:
+            None
+        """
         if self._was_checked:
             # If the button was previously checked, uncheck it
             self.setChecked(False)
@@ -23,8 +45,18 @@ class PyCustomCursorButton(QPushButton):
             self._was_checked = True
 
     def _handle_cursor(self, checked):
+        """
+        Handles the cursor change event for the button.
+
+        If the button is checked, it sets a custom cursor based on the button's object name, otherwise, it restores the original cursor.
+
+        Args:
+            checked: A boolean value indicating whether the button is checked.
+
+        Returns:
+            None
+        """
         if checked:
-            # Set the custom cursor
             custom_cursor_button_name = self.objectName()
             custom_cursor_path = f"modules/gui/assets/images/crafting_methods/" \
                                  f"{custom_cursor_button_name.replace('_btn', '')}.png"
@@ -34,5 +66,4 @@ class PyCustomCursorButton(QPushButton):
             custom_cursor = QCursor(custom_cursor_pixmap)
             QApplication.instance().setOverrideCursor(custom_cursor)
         else:
-            # Restore the original cursor
             QApplication.instance().restoreOverrideCursor()
