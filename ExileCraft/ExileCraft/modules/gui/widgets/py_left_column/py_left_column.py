@@ -12,9 +12,9 @@
 # commercially, I recommend reading them on the official website:
 # https://doc.qt.io/qtforpython/licenses.html
 
+from .py_icon import PyIcon
 from .py_left_button import *
-from ...uis.columns.combobox_updater import *
-from ...uis.columns.ui_left_column import Ui_LeftColumn
+from ...uis.columns.ui_left_column import *
 
 
 class PyLeftColumn(QWidget):
@@ -72,14 +72,6 @@ class PyLeftColumn(QWidget):
         # CONNECT SIGNALS
         self.btn_close.clicked.connect(self.btn_clicked)
         self.btn_close.released.connect(self.btn_released)
-
-        self.combobox_updater = ComboboxUpdater(self.menus.base_group_combobox,
-                                                self.menus.base_combobox,
-                                                self.menus.base_item_combobox,
-                                                self.menus.item_level_spinbox,
-                                                self.menus.item_quality_spinbox)
-        self.menus.base_group_combobox.currentIndexChanged.connect(self.combobox_updater.update_base_combobox)
-        self.menus.base_combobox.currentIndexChanged.connect(self.combobox_updater.get_base_items_for_combobox)
 
     def btn_clicked(self):
         self.clicked.emit(self.btn_close)

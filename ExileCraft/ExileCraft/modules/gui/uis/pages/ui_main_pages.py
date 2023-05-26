@@ -1,601 +1,784 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_pagesaScqFD.ui'
+## Form generated from reading UI file 'main_pagesePzyFt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect,
-                            QSize, Qt)
-from PySide6.QtGui import (QBrush, QColor, QCursor,
-                           QFont, QGradient, QLinearGradient, QPalette, QPixmap)
-from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QFrame,
-                               QHBoxLayout, QLabel, QPushButton,
-                               QScrollArea, QSizePolicy, QSpacerItem, QStackedWidget,
-                               QTreeView, QVBoxLayout, QWidget)
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+                            QMetaObject, QObject, QPoint, QRect,
+                            QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+                           QFont, QFontDatabase, QGradient, QIcon,
+                           QImage, QKeySequence, QLinearGradient, QPainter,
+                           QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QFrame,
+                               QHBoxLayout, QHeaderView, QLabel, QLayout,
+                               QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
+                               QStackedWidget, QTreeView, QVBoxLayout, QWidget)
+from ...assets import assets_rc
 
 
 class Ui_MainPages(object):
-    def setupUi(self, MainPages):
-        if not MainPages.objectName():
-            MainPages.setObjectName(u"MainPages")
-        MainPages.resize(602, 527)
-        MainPages.setMinimumSize(QSize(602, 527))
-        MainPages.setStyleSheet(u"QWidget{\n"
-                                "                border-image: url(:/images/images/emubg.png);\n"
-                                "                }\n"
-                                "\n"
-                                "            ")
+        def setupUi(self, MainPages):
+                if not MainPages.objectName():
+                        MainPages.setObjectName(u"MainPages")
+                MainPages.resize(602, 527)
+                MainPages.setMinimumSize(QSize(602, 527))
+                MainPages.setStyleSheet(u"QWidget{\n"
+                                        "                border-image: url(:/images/images/emubg.png);\n"
+                                        "                }\n"
+                                        "\n"
+                                        "            ")
         self.main_pages_layout = QVBoxLayout(MainPages)
-        self.main_pages_layout.setSpacing(0)
-        self.main_pages_layout.setObjectName(u"main_pages_layout")
-        self.main_pages_layout.setContentsMargins(0, 0, 0, 0)
-        self.pages = QStackedWidget(MainPages)
-        self.pages.setObjectName(u"pages")
-        self.pages.setMinimumSize(QSize(602, 527))
-        self.page_1 = QWidget()
-        self.page_1.setObjectName(u"page_1")
-        self.page_1.setMinimumSize(QSize(592, 517))
-        self.page_1.setStyleSheet(u"font-size: 14pt")
-        self.verticalLayout_5 = QVBoxLayout(self.page_1)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+                self.main_pages_layout.setSpacing(0)
+                self.main_pages_layout.setObjectName(u"main_pages_layout")
+                self.main_pages_layout.setContentsMargins(0, 0, 0, 0)
+                self.pages = QStackedWidget(MainPages)
+                self.pages.setObjectName(u"pages")
+                self.pages.setMinimumSize(QSize(602, 527))
+                self.page_1 = QWidget()
+                self.page_1.setObjectName(u"page_1")
+                self.page_1.setMinimumSize(QSize(592, 517))
+                self.page_1.setStyleSheet(u"font-size: 14pt")
+                self.verticalLayout_12 = QVBoxLayout(self.page_1)
+                self.verticalLayout_12.setSpacing(6)
+                self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+                self.verticalLayout_12.setContentsMargins(9, 9, 9, 9)
+                self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.verticalLayout_5.addItem(self.verticalSpacer_2)
+                self.verticalLayout_12.addItem(self.verticalSpacer)
 
-        self.crafting_zone_container = QFrame(self.page_1)
-        self.crafting_zone_container.setObjectName(u"crafting_zone_container")
-        sizePolicy = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.crafting_zone_container.sizePolicy().hasHeightForWidth())
-        self.crafting_zone_container.setSizePolicy(sizePolicy)
-        self.crafting_zone_container.setStyleSheet(u"QWidget {\n"
-                                                   "                                            border-image: none;\n"
-                                                   "                                            }\n"
-                                                   "                                        ")
-        self.horizontalLayout_4 = QHBoxLayout(self.crafting_zone_container)
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+                self.crafting_zone_container = QFrame(self.page_1)
+                self.crafting_zone_container.setObjectName(u"crafting_zone_container")
+                sizePolicy = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
+                sizePolicy.setHorizontalStretch(0)
+                sizePolicy.setVerticalStretch(0)
+                sizePolicy.setHeightForWidth(self.crafting_zone_container.sizePolicy().hasHeightForWidth())
+                self.crafting_zone_container.setSizePolicy(sizePolicy)
+                self.crafting_zone_container.setStyleSheet(u"QWidget {\n"
+                                                           "                                            border-image: none;\n"
+                                                           "                                            }\n"
+                                                           "                                        ")
+                self.horizontalLayout_3 = QHBoxLayout(self.crafting_zone_container)
+                self.horizontalLayout_3.setSpacing(0)
+                self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+                self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+                self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayout_4.addItem(self.horizontalSpacer_2)
+                self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
 
-        self.item_info_frame = QFrame(self.crafting_zone_container)
-        self.item_info_frame.setObjectName(u"item_info_frame")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Maximum)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.item_info_frame.sizePolicy().hasHeightForWidth())
-        self.item_info_frame.setSizePolicy(sizePolicy1)
-        self.item_info_frame.setMinimumSize(QSize(0, 460))
-        self.item_info_frame.setMaximumSize(QSize(16777215, 480))
-        self.item_info_frame.setStyleSheet(u"border-image: none;")
-        self.item_info_frame.setFrameShape(QFrame.StyledPanel)
-        self.item_info_frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_4 = QVBoxLayout(self.item_info_frame)
-        self.verticalLayout_4.setSpacing(0)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.item_header_frame = QFrame(self.item_info_frame)
-        self.item_header_frame.setObjectName(u"item_header_frame")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.item_header_frame.sizePolicy().hasHeightForWidth())
-        self.item_header_frame.setSizePolicy(sizePolicy2)
-        self.item_header_frame.setMinimumSize(QSize(400, 54))
-        self.item_header_frame.setMaximumSize(QSize(400, 54))
-        self.item_header_frame.setBaseSize(QSize(400, 44))
-        self.item_header_frame.setContextMenuPolicy(Qt.NoContextMenu)
-        self.item_header_layout = QVBoxLayout(self.item_header_frame)
-        self.item_header_layout.setSpacing(0)
-        self.item_header_layout.setObjectName(u"item_header_layout")
-        self.item_header_layout.setContentsMargins(0, 0, 0, 0)
-        self.item_header_label = QLabel(self.item_header_frame)
-        self.item_header_label.setObjectName(u"item_header_label")
-        self.item_header_label.setEnabled(True)
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.item_header_label.sizePolicy().hasHeightForWidth())
-        self.item_header_label.setSizePolicy(sizePolicy3)
-        self.item_header_label.setMinimumSize(QSize(400, 54))
-        self.item_header_label.setMaximumSize(QSize(400, 54))
-        font = QFont()
-        font.setFamilies([u"Open Sans"])
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setKerning(True)
-        self.item_header_label.setFont(font)
-        self.item_header_label.setStyleSheet(u"QLabel {\n"
-                                             "                                                                                background-image:\n"
-                                             "                                                                                url(:/images/images/item-header-normal.png);\n"
-                                             "                                                                                }\n"
-                                             "                                                                            ")
-        self.item_header_label.setTextFormat(Qt.RichText)
-        self.item_header_label.setScaledContents(False)
-        self.item_header_label.setAlignment(Qt.AlignCenter)
-        self.item_header_label.setWordWrap(True)
+                self.item_info_container = QWidget(self.crafting_zone_container)
+                self.item_info_container.setObjectName(u"item_info_container")
+                sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Expanding)
+                sizePolicy1.setHorizontalStretch(0)
+                sizePolicy1.setVerticalStretch(0)
+                sizePolicy1.setHeightForWidth(self.item_info_container.sizePolicy().hasHeightForWidth())
+                self.item_info_container.setSizePolicy(sizePolicy1)
+                self.item_info_container.setMinimumSize(QSize(400, 0))
+                self.item_info_container.setMaximumSize(QSize(400, 16777215))
+                self.item_info_container.setStyleSheet(u"background-color: black;")
+                self.verticalLayout_4 = QVBoxLayout(self.item_info_container)
+                self.verticalLayout_4.setSpacing(0)
+                self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+                self.verticalLayout_4.setSizeConstraint(QLayout.SetDefaultConstraint)
+                self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+                self.item_info_frame = QFrame(self.item_info_container)
+                self.item_info_frame.setObjectName(u"item_info_frame")
+                sizePolicy1.setHeightForWidth(self.item_info_frame.sizePolicy().hasHeightForWidth())
+                self.item_info_frame.setSizePolicy(sizePolicy1)
+                self.item_info_frame.setMinimumSize(QSize(400, 0))
+                self.item_info_frame.setMaximumSize(QSize(400, 16777215))
+                self.item_info_layout = QVBoxLayout(self.item_info_frame)
+                self.item_info_layout.setSpacing(0)
+                self.item_info_layout.setObjectName(u"item_info_layout")
+                self.item_info_layout.setContentsMargins(0, 0, 0, 0)
+                self.item_header_frame = QFrame(self.item_info_frame)
+                self.item_header_frame.setObjectName(u"item_header_frame")
+                sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+                sizePolicy2.setHorizontalStretch(0)
+                sizePolicy2.setVerticalStretch(0)
+                sizePolicy2.setHeightForWidth(self.item_header_frame.sizePolicy().hasHeightForWidth())
+                self.item_header_frame.setSizePolicy(sizePolicy2)
+                self.item_header_layout = QVBoxLayout(self.item_header_frame)
+                self.item_header_layout.setSpacing(0)
+                self.item_header_layout.setObjectName(u"item_header_layout")
+                self.item_header_layout.setContentsMargins(0, 0, 0, 0)
+                self.item_header_label = QLabel(self.item_header_frame)
+                self.item_header_label.setObjectName(u"item_header_label")
+                self.item_header_label.setEnabled(True)
+                sizePolicy2.setHeightForWidth(self.item_header_label.sizePolicy().hasHeightForWidth())
+                self.item_header_label.setSizePolicy(sizePolicy2)
+                self.item_header_label.setMinimumSize(QSize(400, 54))
+                self.item_header_label.setMaximumSize(QSize(400, 54))
+                font = QFont()
+                font.setFamilies([u"Open Sans"])
+                font.setPointSize(14)
+                font.setBold(False)
+                font.setItalic(False)
+                font.setKerning(True)
+                self.item_header_label.setFont(font)
+                self.item_header_label.setStyleSheet(u"QLabel {\n"
+                                                     "                                                                                background-image:\n"
+                                                     "                                                                                url(:/images/images/item-header-normal.png);\n"
+                                                     "                                                                                }\n"
+                                                     "                                                                            ")
+                self.item_header_label.setTextFormat(Qt.RichText)
+                self.item_header_label.setScaledContents(False)
+                self.item_header_label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+                self.item_header_label.setWordWrap(True)
 
-        self.item_header_layout.addWidget(self.item_header_label)
+                self.item_header_layout.addWidget(self.item_header_label, 0, Qt.AlignHCenter | Qt.AlignTop)
 
-        self.verticalLayout_4.addWidget(self.item_header_frame, 0, Qt.AlignTop)
+                self.item_info_layout.addWidget(self.item_header_frame, 0, Qt.AlignTop)
 
-        self.item_affix_frame = QFrame(self.item_info_frame)
-        self.item_affix_frame.setObjectName(u"item_affix_frame")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.item_affix_frame.sizePolicy().hasHeightForWidth())
-        self.item_affix_frame.setSizePolicy(sizePolicy4)
-        self.item_affix_frame.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
-                                            "                                                                ")
-        self.item_affix_frame.setFrameShape(QFrame.StyledPanel)
-        self.item_affix_frame.setFrameShadow(QFrame.Raised)
-        self.item_affix_layout = QVBoxLayout(self.item_affix_frame)
-        self.item_affix_layout.setSpacing(0)
-        self.item_affix_layout.setObjectName(u"item_affix_layout")
-        self.item_affix_layout.setContentsMargins(0, 0, 0, 0)
-        self.item_quality_label = QLabel(self.item_affix_frame)
-        self.item_quality_label.setObjectName(u"item_quality_label")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.item_quality_label.sizePolicy().hasHeightForWidth())
-        self.item_quality_label.setSizePolicy(sizePolicy5)
+                self.item_affix_frame = QFrame(self.item_info_frame)
+                self.item_affix_frame.setObjectName(u"item_affix_frame")
+                sizePolicy3 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+                sizePolicy3.setHorizontalStretch(0)
+                sizePolicy3.setVerticalStretch(0)
+                sizePolicy3.setHeightForWidth(self.item_affix_frame.sizePolicy().hasHeightForWidth())
+                self.item_affix_frame.setSizePolicy(sizePolicy3)
+                self.item_affix_frame.setMinimumSize(QSize(400, 0))
+                self.item_affix_frame.setMaximumSize(QSize(400, 16777215))
+                self.item_properties_layout = QVBoxLayout(self.item_affix_frame)
+                self.item_properties_layout.setSpacing(0)
+                self.item_properties_layout.setObjectName(u"item_properties_layout")
+                self.item_properties_layout.setSizeConstraint(QLayout.SetDefaultConstraint)
+                self.item_properties_layout.setContentsMargins(0, 0, 0, 0)
+                self.item_properties_container = QWidget(self.item_affix_frame)
+                self.item_properties_container.setObjectName(u"item_properties_container")
+                sizePolicy3.setHeightForWidth(self.item_properties_container.sizePolicy().hasHeightForWidth())
+                self.item_properties_container.setSizePolicy(sizePolicy3)
+                self.item_properties_container.setMinimumSize(QSize(400, 0))
+                self.item_properties_container.setMaximumSize(QSize(400, 16777215))
+                self.verticalLayout_11 = QVBoxLayout(self.item_properties_container)
+                self.verticalLayout_11.setSpacing(0)
+                self.verticalLayout_11.setObjectName(u"verticalLayout_11")
+                self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
+                self.item_quality_label = QLabel(self.item_properties_container)
+                self.item_quality_label.setObjectName(u"item_quality_label")
+                sizePolicy4 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Minimum)
+                sizePolicy4.setHorizontalStretch(0)
+                sizePolicy4.setVerticalStretch(0)
+                sizePolicy4.setHeightForWidth(self.item_quality_label.sizePolicy().hasHeightForWidth())
+                self.item_quality_label.setSizePolicy(sizePolicy4)
+                self.item_quality_label.setMinimumSize(QSize(400, 0))
+                self.item_quality_label.setMaximumSize(QSize(400, 30))
+                self.item_quality_label.setAlignment(Qt.AlignCenter)
+                self.item_quality_label.setIndent(0)
 
-        self.item_affix_layout.addWidget(self.item_quality_label, 0, Qt.AlignTop)
+                self.verticalLayout_11.addWidget(self.item_quality_label)
 
-        self.item_properties_label = QLabel(self.item_affix_frame)
-        self.item_properties_label.setObjectName(u"item_properties_label")
-        sizePolicy6 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Preferred)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.item_properties_label.sizePolicy().hasHeightForWidth())
-        self.item_properties_label.setSizePolicy(sizePolicy6)
-        self.item_properties_label.setMinimumSize(QSize(0, 0))
-        self.item_properties_label.setMaximumSize(QSize(16777215, 100))
-        self.item_properties_label.setStyleSheet(u"QLabel{\n"
-                                                 "                                                                                color: #827a6c;\n"
-                                                 "                                                                                padding: 2px 10px;\n"
-                                                 "                                                                                font-size: 14px;\n"
-                                                 "                                                                                line-height: 14px;\n"
-                                                 "                                                                                text-align: center;\n"
-                                                 "                                                                                margin: 0;\n"
+                self.item_properties_label = QLabel(self.item_properties_container)
+                self.item_properties_label.setObjectName(u"item_properties_label")
+                sizePolicy5 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.MinimumExpanding)
+                sizePolicy5.setHorizontalStretch(0)
+                sizePolicy5.setVerticalStretch(0)
+                sizePolicy5.setHeightForWidth(self.item_properties_label.sizePolicy().hasHeightForWidth())
+                self.item_properties_label.setSizePolicy(sizePolicy5)
+                self.item_properties_label.setMinimumSize(QSize(400, 0))
+                self.item_properties_label.setMaximumSize(QSize(400, 400))
+                self.item_properties_label.setStyleSheet(u"QLabel{\n"
+                                                         "                                                                                color: #827a6c;\n"
+                                                         "                                                                                font-size: 14px;\n"
+                                                         "																				padding: 2px 10px;\n"
+                                                         "                                                                                text-align: center;\n"
+                                                         "                                                                                margin-bottom: 5px ;\n"
+                                                         "                                                                                }\n"
+                                                         "                                                                            ")
+                self.item_properties_label.setLineWidth(1)
+                self.item_properties_label.setTextFormat(Qt.RichText)
+                self.item_properties_label.setScaledContents(True)
+                self.item_properties_label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+                self.item_properties_label.setMargin(0)
+                self.item_properties_label.setIndent(0)
+
+                self.verticalLayout_11.addWidget(self.item_properties_label, 0, Qt.AlignTop)
+
+                self.item_spacer_1 = QLabel(self.item_properties_container)
+                self.item_spacer_1.setObjectName(u"item_spacer_1")
+                sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Maximum)
+                sizePolicy6.setHorizontalStretch(0)
+                sizePolicy6.setVerticalStretch(0)
+                sizePolicy6.setHeightForWidth(self.item_spacer_1.sizePolicy().hasHeightForWidth())
+                self.item_spacer_1.setSizePolicy(sizePolicy6)
+                self.item_spacer_1.setMinimumSize(QSize(400, 0))
+                self.item_spacer_1.setMaximumSize(QSize(400, 2))
+                self.item_spacer_1.setBaseSize(QSize(0, 0))
+                self.item_spacer_1.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                border-image: none;\n"
                                                  "                                                                                }\n"
                                                  "                                                                            ")
-        self.item_properties_label.setTextFormat(Qt.RichText)
-        self.item_properties_label.setAlignment(Qt.AlignCenter)
+                self.item_spacer_1.setTextFormat(Qt.RichText)
+                self.item_spacer_1.setPixmap(QPixmap(u":/images/images/item-sep.png"))
+                self.item_spacer_1.setScaledContents(False)
+                self.item_spacer_1.setAlignment(Qt.AlignCenter)
 
-        self.item_affix_layout.addWidget(self.item_properties_label)
+                self.verticalLayout_11.addWidget(self.item_spacer_1)
 
-        self.item_spacer_1 = QLabel(self.item_affix_frame)
-        self.item_spacer_1.setObjectName(u"item_spacer_1")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
-        sizePolicy7.setHeightForWidth(self.item_spacer_1.sizePolicy().hasHeightForWidth())
-        self.item_spacer_1.setSizePolicy(sizePolicy7)
-        self.item_spacer_1.setMaximumSize(QSize(400, 2))
-        self.item_spacer_1.setBaseSize(QSize(0, 0))
-        self.item_spacer_1.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                border-image: none;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.item_spacer_1.setTextFormat(Qt.RichText)
-        self.item_spacer_1.setPixmap(QPixmap(u":/images/images/item-sep.png"))
-        self.item_spacer_1.setScaledContents(False)
-        self.item_spacer_1.setAlignment(Qt.AlignCenter)
+                self.item_properties_layout.addWidget(self.item_properties_container, 0, Qt.AlignVCenter)
 
-        self.item_affix_layout.addWidget(self.item_spacer_1)
+                self.item_requirements_container = QWidget(self.item_affix_frame)
+                self.item_requirements_container.setObjectName(u"item_requirements_container")
+                sizePolicy2.setHeightForWidth(self.item_requirements_container.sizePolicy().hasHeightForWidth())
+                self.item_requirements_container.setSizePolicy(sizePolicy2)
+                self.item_requirements_container.setMinimumSize(QSize(400, 0))
+                self.item_requirements_container.setMaximumSize(QSize(400, 52))
+                self.verticalLayout_13 = QVBoxLayout(self.item_requirements_container)
+                self.verticalLayout_13.setSpacing(0)
+                self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+                self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
+                self.item_level_label = QLabel(self.item_requirements_container)
+                self.item_level_label.setObjectName(u"item_level_label")
+                sizePolicy2.setHeightForWidth(self.item_level_label.sizePolicy().hasHeightForWidth())
+                self.item_level_label.setSizePolicy(sizePolicy2)
+                self.item_level_label.setMinimumSize(QSize(400, 0))
+                self.item_level_label.setMaximumSize(QSize(400, 20))
+                self.item_level_label.setTabletTracking(False)
+                self.item_level_label.setAlignment(Qt.AlignCenter)
+                self.item_level_label.setIndent(0)
 
-        self.item_level_label = QLabel(self.item_affix_frame)
-        self.item_level_label.setObjectName(u"item_level_label")
-        self.item_level_label.setTabletTracking(False)
+                self.verticalLayout_13.addWidget(self.item_level_label)
 
-        self.item_affix_layout.addWidget(self.item_level_label)
+                self.item_requirements_label = QLabel(self.item_requirements_container)
+                self.item_requirements_label.setObjectName(u"item_requirements_label")
+                sizePolicy2.setHeightForWidth(self.item_requirements_label.sizePolicy().hasHeightForWidth())
+                self.item_requirements_label.setSizePolicy(sizePolicy2)
+                self.item_requirements_label.setMinimumSize(QSize(400, 0))
+                self.item_requirements_label.setMaximumSize(QSize(400, 25))
+                self.item_requirements_label.setStyleSheet(u"QLabel{\n"
+                                                           "                                                                                color: #827a6c;\n"
+                                                           "                                                                                padding: 2px 10px;\n"
+                                                           "                                                                                font-size: 14px;\n"
+                                                           "                                                                                line-height: 14px;\n"
+                                                           "                                                                                text-align: center;\n"
+                                                           "                                                                                margin: 0;\n"
+                                                           "                                                                                }\n"
+                                                           "                                                                            ")
+                self.item_requirements_label.setLineWidth(0)
+                self.item_requirements_label.setMidLineWidth(0)
+                self.item_requirements_label.setTextFormat(Qt.RichText)
+                self.item_requirements_label.setScaledContents(False)
+                self.item_requirements_label.setAlignment(Qt.AlignCenter)
+                self.item_requirements_label.setIndent(0)
 
-        self.item_requirements_label = QLabel(self.item_affix_frame)
-        self.item_requirements_label.setObjectName(u"item_requirements_label")
-        sizePolicy6.setHeightForWidth(self.item_requirements_label.sizePolicy().hasHeightForWidth())
-        self.item_requirements_label.setSizePolicy(sizePolicy6)
-        self.item_requirements_label.setMaximumSize(QSize(16777215, 100))
-        self.item_requirements_label.setStyleSheet(u"QLabel{\n"
-                                                   "                                                                                color: #827a6c;\n"
-                                                   "                                                                                padding: 2px 10px;\n"
-                                                   "                                                                                font-size: 14px;\n"
-                                                   "                                                                                line-height: 14px;\n"
-                                                   "                                                                                text-align: center;\n"
-                                                   "                                                                                margin: 0;\n"
-                                                   "                                                                                }\n"
-                                                   "                                                                            ")
-        self.item_requirements_label.setTextFormat(Qt.RichText)
-        self.item_requirements_label.setAlignment(Qt.AlignCenter)
+                self.verticalLayout_13.addWidget(self.item_requirements_label)
 
-        self.item_affix_layout.addWidget(self.item_requirements_label)
+                self.item_spacer_2 = QLabel(self.item_requirements_container)
+                self.item_spacer_2.setObjectName(u"item_spacer_2")
+                sizePolicy6.setHeightForWidth(self.item_spacer_2.sizePolicy().hasHeightForWidth())
+                self.item_spacer_2.setSizePolicy(sizePolicy6)
+                self.item_spacer_2.setMinimumSize(QSize(400, 0))
+                self.item_spacer_2.setMaximumSize(QSize(400, 2))
+                self.item_spacer_2.setBaseSize(QSize(0, 0))
+                self.item_spacer_2.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                border-image: none;\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
+                self.item_spacer_2.setTextFormat(Qt.RichText)
+                self.item_spacer_2.setPixmap(QPixmap(u":/images/images/item-sep.png"))
+                self.item_spacer_2.setScaledContents(False)
+                self.item_spacer_2.setAlignment(Qt.AlignCenter)
 
-        self.item_spacer_2 = QLabel(self.item_affix_frame)
-        self.item_spacer_2.setObjectName(u"item_spacer_2")
-        sizePolicy7.setHeightForWidth(self.item_spacer_2.sizePolicy().hasHeightForWidth())
-        self.item_spacer_2.setSizePolicy(sizePolicy7)
-        self.item_spacer_2.setMaximumSize(QSize(400, 2))
-        self.item_spacer_2.setBaseSize(QSize(0, 0))
-        self.item_spacer_2.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                border-image: none;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.item_spacer_2.setTextFormat(Qt.RichText)
-        self.item_spacer_2.setPixmap(QPixmap(u":/images/images/item-sep.png"))
-        self.item_spacer_2.setScaledContents(False)
-        self.item_spacer_2.setAlignment(Qt.AlignCenter)
+                self.verticalLayout_13.addWidget(self.item_spacer_2, 0, Qt.AlignBottom)
 
-        self.item_affix_layout.addWidget(self.item_spacer_2)
+                self.item_properties_layout.addWidget(self.item_requirements_container, 0, Qt.AlignVCenter)
 
-        self.item_implicits_label = QLabel(self.item_affix_frame)
-        self.item_implicits_label.setObjectName(u"item_implicits_label")
-        self.item_implicits_label.setEnabled(False)
-        sizePolicy6.setHeightForWidth(self.item_implicits_label.sizePolicy().hasHeightForWidth())
-        self.item_implicits_label.setSizePolicy(sizePolicy6)
-        self.item_implicits_label.setMaximumSize(QSize(16777215, 100))
-        self.item_implicits_label.setStyleSheet(u"QLabel{\n"
-                                                "                                                                                color: #8787fe;\n"
-                                                "                                                                                padding: 2px 10px;\n"
-                                                "                                                                                font-size: 14px;\n"
-                                                "                                                                                line-height: 14px;\n"
-                                                "                                                                                text-align: center;\n"
-                                                "                                                                                margin: 0;\n"
-                                                "                                                                                }\n"
-                                                "                                                                            ")
-        self.item_implicits_label.setTextFormat(Qt.RichText)
-        self.item_implicits_label.setAlignment(Qt.AlignCenter)
-        self.item_implicits_label.setWordWrap(True)
+                self.item_implicits_container = QWidget(self.item_affix_frame)
+                self.item_implicits_container.setObjectName(u"item_implicits_container")
+                self.item_implicits_container.setEnabled(False)
+                sizePolicy3.setHeightForWidth(self.item_implicits_container.sizePolicy().hasHeightForWidth())
+                self.item_implicits_container.setSizePolicy(sizePolicy3)
+                self.item_implicits_container.setMinimumSize(QSize(400, 0))
+                self.item_implicits_container.setMaximumSize(QSize(400, 50))
+                self.verticalLayout_18 = QVBoxLayout(self.item_implicits_container)
+                self.verticalLayout_18.setSpacing(0)
+                self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+                self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
+                self.item_implicits_label = QLabel(self.item_implicits_container)
+                self.item_implicits_label.setObjectName(u"item_implicits_label")
+                self.item_implicits_label.setEnabled(False)
+                sizePolicy3.setHeightForWidth(self.item_implicits_label.sizePolicy().hasHeightForWidth())
+                self.item_implicits_label.setSizePolicy(sizePolicy3)
+                self.item_implicits_label.setMinimumSize(QSize(400, 0))
+                self.item_implicits_label.setMaximumSize(QSize(400, 50))
+                self.item_implicits_label.setStyleSheet(u"QLabel{\n"
+                                                        "                                                                                color: #8787fe;\n"
+                                                        "                                                                                padding: 2px 10px;\n"
+                                                        "                                                                                font-size: 14px;\n"
+                                                        "                                                                                line-height: 14px;\n"
+                                                        "                                                                                text-align: center;\n"
+                                                        "                                                                                margin: 0;\n"
+                                                        "                                                                                }\n"
+                                                        "                                                                            ")
+                self.item_implicits_label.setLineWidth(1)
+                self.item_implicits_label.setTextFormat(Qt.RichText)
+                self.item_implicits_label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+                self.item_implicits_label.setWordWrap(True)
 
-        self.item_affix_layout.addWidget(self.item_implicits_label)
+                self.verticalLayout_18.addWidget(self.item_implicits_label)
 
-        self.item_spacer_3 = QLabel(self.item_affix_frame)
-        self.item_spacer_3.setObjectName(u"item_spacer_3")
-        self.item_spacer_3.setEnabled(False)
-        sizePolicy7.setHeightForWidth(self.item_spacer_3.sizePolicy().hasHeightForWidth())
-        self.item_spacer_3.setSizePolicy(sizePolicy7)
-        self.item_spacer_3.setMaximumSize(QSize(400, 2))
-        self.item_spacer_3.setBaseSize(QSize(0, 0))
-        self.item_spacer_3.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                border-image: none;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.item_spacer_3.setTextFormat(Qt.RichText)
-        self.item_spacer_3.setPixmap(QPixmap(u":/images/images/item-sep.png"))
-        self.item_spacer_3.setScaledContents(False)
-        self.item_spacer_3.setAlignment(Qt.AlignCenter)
+                self.item_properties_layout.addWidget(self.item_implicits_container, 0,
+                                                      Qt.AlignHCenter | Qt.AlignVCenter)
 
-        self.item_affix_layout.addWidget(self.item_spacer_3)
+                self.item_spacer_3 = QLabel(self.item_affix_frame)
+                self.item_spacer_3.setObjectName(u"item_spacer_3")
+                self.item_spacer_3.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.item_spacer_3.sizePolicy().hasHeightForWidth())
+                self.item_spacer_3.setSizePolicy(sizePolicy6)
+                self.item_spacer_3.setMinimumSize(QSize(400, 0))
+                self.item_spacer_3.setMaximumSize(QSize(400, 2))
+                self.item_spacer_3.setBaseSize(QSize(0, 0))
+                self.item_spacer_3.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                border-image: none;\n"
+                                                 "																				background-color: rgb(0, 0, 0);\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
+                self.item_spacer_3.setTextFormat(Qt.RichText)
+                self.item_spacer_3.setPixmap(QPixmap(u":/images/images/item-sep.png"))
+                self.item_spacer_3.setScaledContents(False)
+                self.item_spacer_3.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_4.addWidget(self.item_affix_frame, 0, Qt.AlignTop)
+                self.item_properties_layout.addWidget(self.item_spacer_3)
 
-        self.item_mods_frame = QFrame(self.item_info_frame)
-        self.item_mods_frame.setObjectName(u"item_mods_frame")
-        self.item_mods_frame.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.item_mods_frame.sizePolicy().hasHeightForWidth())
-        self.item_mods_frame.setSizePolicy(sizePolicy4)
-        self.item_mods_frame.setMinimumSize(QSize(400, 300))
-        self.item_mods_frame.setMaximumSize(QSize(400, 16777215))
-        self.item_mods_frame.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
-                                           "                                                                ")
-        self.verticalLayout_6 = QVBoxLayout(self.item_mods_frame)
-        self.verticalLayout_6.setSpacing(0)
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.prefix_info_1 = QLabel(self.item_mods_frame)
-        self.prefix_info_1.setObjectName(u"prefix_info_1")
-        self.prefix_info_1.setEnabled(False)
-        self.prefix_info_1.setMinimumSize(QSize(0, 0))
-        font1 = QFont()
-        font1.setFamilies([u"Open Sans"])
-        font1.setBold(False)
-        font1.setItalic(False)
-        self.prefix_info_1.setFont(font1)
-        self.prefix_info_1.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                color: #7f7f7f;\n"
-                                         "                                                                                text-transform: none;\n"
-                                         "                                                                                font-size: 12px;\n"
-                                         "                                                                                padding-bottom: 0px;\n"
-                                         "                                                                                padding-top: 2px;\n"
-                                         "                                                                                padding-right: 10px;\n"
-                                         "                                                                                padding-left: 10px;\n"
-                                         "                                                                                line-height: 14px;\n"
-                                         "                                                                                text-align: center;\n"
-                                         "                                                                                ma"
-                                         "rgin: 0px;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.prefix_info_1.setTextFormat(Qt.RichText)
-        self.prefix_info_1.setAlignment(Qt.AlignCenter)
+                self.item_info_layout.addWidget(self.item_affix_frame, 0, Qt.AlignTop)
 
-        self.verticalLayout_6.addWidget(self.prefix_info_1)
+                self.item_mod_frame = QFrame(self.item_info_frame)
+                self.item_mod_frame.setObjectName(u"item_mod_frame")
+                sizePolicy3.setHeightForWidth(self.item_mod_frame.sizePolicy().hasHeightForWidth())
+                self.item_mod_frame.setSizePolicy(sizePolicy3)
+                self.item_mod_frame.setMinimumSize(QSize(400, 0))
+                self.item_mod_frame.setMaximumSize(QSize(400, 16777215))
+                self.item_mod_layout = QVBoxLayout(self.item_mod_frame)
+                self.item_mod_layout.setSpacing(0)
+                self.item_mod_layout.setObjectName(u"item_mod_layout")
+                self.item_mod_layout.setSizeConstraint(QLayout.SetNoConstraint)
+                self.item_mod_layout.setContentsMargins(0, 0, 0, 0)
+                self.prefix_1_container = QWidget(self.item_mod_frame)
+                self.prefix_1_container.setObjectName(u"prefix_1_container")
+                sizePolicy3.setHeightForWidth(self.prefix_1_container.sizePolicy().hasHeightForWidth())
+                self.prefix_1_container.setSizePolicy(sizePolicy3)
+                self.prefix_1_container.setMinimumSize(QSize(400, 0))
+                self.prefix_1_container.setMaximumSize(QSize(400, 80))
+                self.verticalLayout_5 = QVBoxLayout(self.prefix_1_container)
+                self.verticalLayout_5.setSpacing(0)
+                self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+                self.verticalLayout_5.setSizeConstraint(QLayout.SetNoConstraint)
+                self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+                self.prefix_info_1 = QLabel(self.prefix_1_container)
+                self.prefix_info_1.setObjectName(u"prefix_info_1")
+                self.prefix_info_1.setEnabled(False)
+                sizePolicy7 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+                sizePolicy7.setHorizontalStretch(0)
+                sizePolicy7.setVerticalStretch(0)
+                sizePolicy7.setHeightForWidth(self.prefix_info_1.sizePolicy().hasHeightForWidth())
+                self.prefix_info_1.setSizePolicy(sizePolicy7)
+                self.prefix_info_1.setMinimumSize(QSize(0, 0))
+                font1 = QFont()
+                font1.setFamilies([u"Open Sans"])
+                font1.setBold(False)
+                font1.setItalic(False)
+                self.prefix_info_1.setFont(font1)
+                self.prefix_info_1.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                color: #7f7f7f;\n"
+                                                 "                                                                                text-transform: none;\n"
+                                                 "                                                                                font-size: 12px;\n"
+                                                 "                                                                                padding-bottom: 0px;\n"
+                                                 "                                                                                padding-top: 2px;\n"
+                                                 "                                                                                padding-right: 10px;\n"
+                                                 "                                                                                padding-left: 10px;\n"
+                                                 "                                                                                line-height: 14px;\n"
+                                                 "                                                                                text-align: center;\n"
+                                                 "                                                                                ma"
+                                                 "rgin: 0px;\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
+                self.prefix_info_1.setTextFormat(Qt.RichText)
+                self.prefix_info_1.setAlignment(Qt.AlignCenter)
 
-        self.prefix_1 = QLabel(self.item_mods_frame)
-        self.prefix_1.setObjectName(u"prefix_1")
-        self.prefix_1.setEnabled(False)
-        self.prefix_1.setMinimumSize(QSize(0, 0))
-        self.prefix_1.setStyleSheet(u"QLabel {\n"
-                                    "                                                                                color: #8787fe;\n"
-                                    "                                                                                font-size: 14px;\n"
-                                    "                                                                                padding-bottom: 2px;\n"
-                                    "                                                                                padding-top: 2px;\n"
-                                    "                                                                                padding-right: 10px;\n"
-                                    "                                                                                padding-left: 10px;\n"
-                                    "                                                                                line-height: 14px;\n"
-                                    "                                                                                text-align: center;\n"
-                                    "                                                                                margin: 0px;\n"
-                                    "                                                                                }\n"
-                                    "     "
-                                    "                                                                       ")
-        self.prefix_1.setTextFormat(Qt.RichText)
-        self.prefix_1.setAlignment(Qt.AlignCenter)
+                self.verticalLayout_5.addWidget(self.prefix_info_1, 0, Qt.AlignTop)
 
-        self.verticalLayout_6.addWidget(self.prefix_1)
+                self.prefix_1 = QLabel(self.prefix_1_container)
+                self.prefix_1.setObjectName(u"prefix_1")
+                self.prefix_1.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.prefix_1.sizePolicy().hasHeightForWidth())
+                self.prefix_1.setSizePolicy(sizePolicy6)
+                self.prefix_1.setMinimumSize(QSize(400, 0))
+                self.prefix_1.setMaximumSize(QSize(400, 16777215))
+                self.prefix_1.setStyleSheet(u"QLabel {\n"
+                                            "                                                                                color: #8787fe;\n"
+                                            "                                                                                font-size: 14px;\n"
+                                            "                                                                                padding-bottom: 2px;\n"
+                                            "                                                                                padding-top: 2px;\n"
+                                            "                                                                                padding-right: 10px;\n"
+                                            "                                                                                padding-left: 10px;\n"
+                                            "                                                                                line-height: 14px;\n"
+                                            "                                                                                text-align: center;\n"
+                                            "                                                                                margin: 0px;\n"
+                                            "                                                                                }\n"
+                                            "     "
+                                            "                                                                       ")
+                self.prefix_1.setTextFormat(Qt.RichText)
+                self.prefix_1.setAlignment(Qt.AlignCenter)
 
-        self.prefix_info_2 = QLabel(self.item_mods_frame)
-        self.prefix_info_2.setObjectName(u"prefix_info_2")
-        self.prefix_info_2.setEnabled(False)
-        self.prefix_info_2.setMinimumSize(QSize(0, 0))
-        self.prefix_info_2.setFont(font1)
-        self.prefix_info_2.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                color: #7f7f7f;\n"
-                                         "                                                                                text-transform: none;\n"
-                                         "                                                                                font-size: 12px;\n"
-                                         "                                                                                padding-bottom: 0px;\n"
-                                         "                                                                                padding-top: 2px;\n"
-                                         "                                                                                padding-right: 10px;\n"
-                                         "                                                                                padding-left: 10px;\n"
-                                         "                                                                                line-height: 14px;\n"
-                                         "                                                                                text-align: center;\n"
-                                         "                                                                                ma"
-                                         "rgin: 0px;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.prefix_info_2.setTextFormat(Qt.RichText)
-        self.prefix_info_2.setAlignment(Qt.AlignCenter)
+                self.verticalLayout_5.addWidget(self.prefix_1, 0, Qt.AlignTop)
 
-        self.verticalLayout_6.addWidget(self.prefix_info_2)
+                self.item_mod_layout.addWidget(self.prefix_1_container)
 
-        self.prefix_2 = QLabel(self.item_mods_frame)
-        self.prefix_2.setObjectName(u"prefix_2")
-        self.prefix_2.setEnabled(False)
-        self.prefix_2.setMinimumSize(QSize(0, 0))
-        self.prefix_2.setStyleSheet(u"QLabel {\n"
-                                    "                                                                                color: #8787fe;\n"
-                                    "                                                                                font-size: 14px;\n"
-                                    "                                                                                padding-bottom: 2px;\n"
-                                    "                                                                                padding-top: 2px;\n"
-                                    "                                                                                padding-right: 10px;\n"
-                                    "                                                                                padding-left: 10px;\n"
-                                    "                                                                                line-height: 14px;\n"
-                                    "                                                                                text-align: center;\n"
-                                    "                                                                                margin: 0px;\n"
-                                    "                                                                                }\n"
-                                    "     "
-                                    "                                                                       ")
-        self.prefix_2.setTextFormat(Qt.RichText)
-        self.prefix_2.setAlignment(Qt.AlignCenter)
+                self.prefix_2_container = QWidget(self.item_mod_frame)
+                self.prefix_2_container.setObjectName(u"prefix_2_container")
+                sizePolicy3.setHeightForWidth(self.prefix_2_container.sizePolicy().hasHeightForWidth())
+                self.prefix_2_container.setSizePolicy(sizePolicy3)
+                self.prefix_2_container.setMinimumSize(QSize(400, 0))
+                self.prefix_2_container.setMaximumSize(QSize(400, 80))
+                self.verticalLayout_6 = QVBoxLayout(self.prefix_2_container)
+                self.verticalLayout_6.setSpacing(0)
+                self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+                self.verticalLayout_6.setSizeConstraint(QLayout.SetNoConstraint)
+                self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
+                self.prefix_info_2 = QLabel(self.prefix_2_container)
+                self.prefix_info_2.setObjectName(u"prefix_info_2")
+                self.prefix_info_2.setEnabled(False)
+                sizePolicy7.setHeightForWidth(self.prefix_info_2.sizePolicy().hasHeightForWidth())
+                self.prefix_info_2.setSizePolicy(sizePolicy7)
+                self.prefix_info_2.setMinimumSize(QSize(0, 0))
+                self.prefix_info_2.setFont(font1)
+                self.prefix_info_2.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                color: #7f7f7f;\n"
+                                                 "                                                                                text-transform: none;\n"
+                                                 "                                                                                font-size: 12px;\n"
+                                                 "                                                                                padding-bottom: 0px;\n"
+                                                 "                                                                                padding-top: 2px;\n"
+                                                 "                                                                                padding-right: 10px;\n"
+                                                 "                                                                                padding-left: 10px;\n"
+                                                 "                                                                                line-height: 14px;\n"
+                                                 "                                                                                text-align: center;\n"
+                                                 "                                                                                ma"
+                                                 "rgin: 0px;\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
+                self.prefix_info_2.setTextFormat(Qt.RichText)
+                self.prefix_info_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.prefix_2)
+                self.verticalLayout_6.addWidget(self.prefix_info_2, 0, Qt.AlignTop)
 
-        self.prefix_info_3 = QLabel(self.item_mods_frame)
-        self.prefix_info_3.setObjectName(u"prefix_info_3")
-        self.prefix_info_3.setEnabled(False)
-        self.prefix_info_3.setMinimumSize(QSize(0, 0))
-        self.prefix_info_3.setFont(font1)
-        self.prefix_info_3.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                color: #7f7f7f;\n"
-                                         "                                                                                text-transform: none;\n"
-                                         "                                                                                font-size: 12px;\n"
-                                         "                                                                                padding-bottom: 0px;\n"
-                                         "                                                                                padding-top: 2px;\n"
-                                         "                                                                                padding-right: 10px;\n"
-                                         "                                                                                padding-left: 10px;\n"
-                                         "                                                                                line-height: 14px;\n"
-                                         "                                                                                text-align: center;\n"
-                                         "                                                                                ma"
-                                         "rgin: 0px;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.prefix_info_3.setTextFormat(Qt.RichText)
-        self.prefix_info_3.setAlignment(Qt.AlignCenter)
+                self.prefix_2 = QLabel(self.prefix_2_container)
+                self.prefix_2.setObjectName(u"prefix_2")
+                self.prefix_2.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.prefix_2.sizePolicy().hasHeightForWidth())
+                self.prefix_2.setSizePolicy(sizePolicy6)
+                self.prefix_2.setMinimumSize(QSize(0, 0))
+                self.prefix_2.setMaximumSize(QSize(400, 16777215))
+                self.prefix_2.setStyleSheet(u"QLabel {\n"
+                                            "                                                                                color: #8787fe;\n"
+                                            "                                                                                font-size: 14px;\n"
+                                            "                                                                                padding-bottom: 2px;\n"
+                                            "                                                                                padding-top: 2px;\n"
+                                            "                                                                                padding-right: 10px;\n"
+                                            "                                                                                padding-left: 10px;\n"
+                                            "                                                                                line-height: 14px;\n"
+                                            "                                                                                text-align: center;\n"
+                                            "                                                                                margin: 0px;\n"
+                                            "                                                                                }\n"
+                                            "     "
+                                            "                                                                       ")
+                self.prefix_2.setTextFormat(Qt.RichText)
+                self.prefix_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.prefix_info_3)
+                self.verticalLayout_6.addWidget(self.prefix_2)
 
-        self.prefix_3 = QLabel(self.item_mods_frame)
-        self.prefix_3.setObjectName(u"prefix_3")
-        self.prefix_3.setEnabled(False)
-        self.prefix_3.setMinimumSize(QSize(0, 0))
-        self.prefix_3.setStyleSheet(u"QLabel {\n"
-                                    "                                                                                color: #8787fe;\n"
-                                    "                                                                                font-size: 14px;\n"
-                                    "                                                                                padding-bottom: 2px;\n"
-                                    "                                                                                padding-top: 2px;\n"
-                                    "                                                                                padding-right: 10px;\n"
-                                    "                                                                                padding-left: 10px;\n"
-                                    "                                                                                line-height: 14px;\n"
-                                    "                                                                                text-align: center;\n"
-                                    "                                                                                margin: 0px;\n"
-                                    "                                                                                }\n"
-                                    "     "
-                                    "                                                                       ")
-        self.prefix_3.setTextFormat(Qt.RichText)
-        self.prefix_3.setAlignment(Qt.AlignCenter)
+                self.item_mod_layout.addWidget(self.prefix_2_container, 0, Qt.AlignTop)
 
-        self.verticalLayout_6.addWidget(self.prefix_3)
+                self.prefix_3_container = QWidget(self.item_mod_frame)
+                self.prefix_3_container.setObjectName(u"prefix_3_container")
+                sizePolicy3.setHeightForWidth(self.prefix_3_container.sizePolicy().hasHeightForWidth())
+                self.prefix_3_container.setSizePolicy(sizePolicy3)
+                self.prefix_3_container.setMinimumSize(QSize(400, 0))
+                self.prefix_3_container.setMaximumSize(QSize(400, 80))
+                self.verticalLayout_7 = QVBoxLayout(self.prefix_3_container)
+                self.verticalLayout_7.setSpacing(0)
+                self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+                self.verticalLayout_7.setSizeConstraint(QLayout.SetNoConstraint)
+                self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
+                self.prefix_info_3 = QLabel(self.prefix_3_container)
+                self.prefix_info_3.setObjectName(u"prefix_info_3")
+                self.prefix_info_3.setEnabled(False)
+                sizePolicy7.setHeightForWidth(self.prefix_info_3.sizePolicy().hasHeightForWidth())
+                self.prefix_info_3.setSizePolicy(sizePolicy7)
+                self.prefix_info_3.setMinimumSize(QSize(0, 0))
+                self.prefix_info_3.setFont(font1)
+                self.prefix_info_3.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                color: #7f7f7f;\n"
+                                                 "                                                                                text-transform: none;\n"
+                                                 "                                                                                font-size: 12px;\n"
+                                                 "                                                                                padding-bottom: 0px;\n"
+                                                 "                                                                                padding-top: 2px;\n"
+                                                 "                                                                                padding-right: 10px;\n"
+                                                 "                                                                                padding-left: 10px;\n"
+                                                 "                                                                                line-height: 14px;\n"
+                                                 "                                                                                text-align: center;\n"
+                                                 "                                                                                ma"
+                                                 "rgin: 0px;\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
+                self.prefix_info_3.setTextFormat(Qt.RichText)
+                self.prefix_info_3.setAlignment(Qt.AlignCenter)
 
-        self.suffix_info_1 = QLabel(self.item_mods_frame)
-        self.suffix_info_1.setObjectName(u"suffix_info_1")
-        self.suffix_info_1.setEnabled(False)
-        self.suffix_info_1.setMinimumSize(QSize(0, 0))
-        self.suffix_info_1.setFont(font1)
-        self.suffix_info_1.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                color: #7f7f7f;\n"
-                                         "                                                                                text-transform: none;\n"
-                                         "                                                                                font-size: 12px;\n"
-                                         "                                                                                padding-bottom: 0px;\n"
-                                         "                                                                                padding-top: 2px;\n"
-                                         "                                                                                padding-right: 10px;\n"
-                                         "                                                                                padding-left: 10px;\n"
-                                         "                                                                                line-height: 14px;\n"
-                                         "                                                                                text-align: center;\n"
-                                         "                                                                                ma"
-                                         "rgin: 0px;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.suffix_info_1.setTextFormat(Qt.RichText)
-        self.suffix_info_1.setAlignment(Qt.AlignCenter)
+                self.verticalLayout_7.addWidget(self.prefix_info_3)
 
-        self.verticalLayout_6.addWidget(self.suffix_info_1)
+                self.prefix_3 = QLabel(self.prefix_3_container)
+                self.prefix_3.setObjectName(u"prefix_3")
+                self.prefix_3.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.prefix_3.sizePolicy().hasHeightForWidth())
+                self.prefix_3.setSizePolicy(sizePolicy6)
+                self.prefix_3.setMinimumSize(QSize(0, 0))
+                self.prefix_3.setMaximumSize(QSize(400, 16777215))
+                self.prefix_3.setStyleSheet(u"QLabel {\n"
+                                            "                                                                                color: #8787fe;\n"
+                                            "                                                                                font-size: 14px;\n"
+                                            "                                                                                padding-bottom: 2px;\n"
+                                            "                                                                                padding-top: 2px;\n"
+                                            "                                                                                padding-right: 10px;\n"
+                                            "                                                                                padding-left: 10px;\n"
+                                            "                                                                                line-height: 14px;\n"
+                                            "                                                                                text-align: center;\n"
+                                            "                                                                                margin: 0px;\n"
+                                            "                                                                                }\n"
+                                            "     "
+                                            "                                                                       ")
+                self.prefix_3.setTextFormat(Qt.RichText)
+                self.prefix_3.setAlignment(Qt.AlignCenter)
 
-        self.suffix_1 = QLabel(self.item_mods_frame)
-        self.suffix_1.setObjectName(u"suffix_1")
-        self.suffix_1.setEnabled(False)
-        self.suffix_1.setMinimumSize(QSize(0, 0))
-        self.suffix_1.setStyleSheet(u"QLabel {\n"
-                                    "                                                                                color: #8787fe;\n"
-                                    "                                                                                font-size: 14px;\n"
-                                    "                                                                                padding-bottom: 2px;\n"
-                                    "                                                                                padding-top: 2px;\n"
-                                    "                                                                                padding-right: 10px;\n"
-                                    "                                                                                padding-left: 10px;\n"
-                                    "                                                                                line-height: 14px;\n"
-                                    "                                                                                text-align: center;\n"
-                                    "                                                                                margin: 0px;\n"
-                                    "                                                                                }\n"
-                                    "     "
-                                    "                                                                       ")
-        self.suffix_1.setTextFormat(Qt.RichText)
-        self.suffix_1.setAlignment(Qt.AlignCenter)
+                self.verticalLayout_7.addWidget(self.prefix_3)
 
-        self.verticalLayout_6.addWidget(self.suffix_1)
+                self.item_mod_layout.addWidget(self.prefix_3_container)
 
-        self.suffix_info_2 = QLabel(self.item_mods_frame)
-        self.suffix_info_2.setObjectName(u"suffix_info_2")
-        self.suffix_info_2.setEnabled(False)
-        self.suffix_info_2.setMinimumSize(QSize(0, 0))
-        self.suffix_info_2.setFont(font1)
-        self.suffix_info_2.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                color: #7f7f7f;\n"
-                                         "                                                                                text-transform: none;\n"
-                                         "                                                                                font-size: 12px;\n"
-                                         "                                                                                padding-bottom: 0px;\n"
-                                         "                                                                                padding-top: 2px;\n"
-                                         "                                                                                padding-right: 10px;\n"
-                                         "                                                                                padding-left: 10px;\n"
-                                         "                                                                                line-height: 14px;\n"
-                                         "                                                                                text-align: center;\n"
-                                         "                                                                                ma"
-                                         "rgin: 0px;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.suffix_info_2.setTextFormat(Qt.RichText)
-        self.suffix_info_2.setAlignment(Qt.AlignCenter)
+                self.suffix_2_container = QWidget(self.item_mod_frame)
+                self.suffix_2_container.setObjectName(u"suffix_2_container")
+                sizePolicy3.setHeightForWidth(self.suffix_2_container.sizePolicy().hasHeightForWidth())
+                self.suffix_2_container.setSizePolicy(sizePolicy3)
+                self.suffix_2_container.setMinimumSize(QSize(400, 0))
+                self.suffix_2_container.setMaximumSize(QSize(400, 80))
+                self.verticalLayout_8 = QVBoxLayout(self.suffix_2_container)
+                self.verticalLayout_8.setSpacing(0)
+                self.verticalLayout_8.setObjectName(u"verticalLayout_8")
+                self.verticalLayout_8.setSizeConstraint(QLayout.SetNoConstraint)
+                self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
+                self.suffix_2_info = QLabel(self.suffix_2_container)
+                self.suffix_2_info.setObjectName(u"suffix_2_info")
+                self.suffix_2_info.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.suffix_2_info.sizePolicy().hasHeightForWidth())
+                self.suffix_2_info.setSizePolicy(sizePolicy6)
+                self.suffix_2_info.setMinimumSize(QSize(400, 0))
+                self.suffix_2_info.setMaximumSize(QSize(400, 16777215))
+                self.suffix_2_info.setFont(font1)
+                self.suffix_2_info.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                color: #7f7f7f;\n"
+                                                 "                                                                                text-transform: none;\n"
+                                                 "                                                                                font-size: 12px;\n"
+                                                 "                                                                                padding-bottom: 0px;\n"
+                                                 "                                                                                padding-top: 2px;\n"
+                                                 "                                                                                padding-right: 10px;\n"
+                                                 "                                                                                padding-left: 10px;\n"
+                                                 "                                                                                line-height: 14px;\n"
+                                                 "                                                                                text-align: center;\n"
+                                                 "                                                                                ma"
+                                                 "rgin: 0px;\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
+                self.suffix_2_info.setTextFormat(Qt.RichText)
+                self.suffix_2_info.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.suffix_info_2)
+                self.verticalLayout_8.addWidget(self.suffix_2_info)
 
-        self.suffix_2 = QLabel(self.item_mods_frame)
-        self.suffix_2.setObjectName(u"suffix_2")
-        self.suffix_2.setEnabled(False)
-        self.suffix_2.setMinimumSize(QSize(0, 0))
-        self.suffix_2.setStyleSheet(u"QLabel {\n"
-                                    "                                                                                color: #8787fe;\n"
-                                    "                                                                                font-size: 14px;\n"
-                                    "                                                                                padding-bottom: 2px;\n"
-                                    "                                                                                padding-top: 2px;\n"
-                                    "                                                                                padding-right: 10px;\n"
-                                    "                                                                                padding-left: 10px;\n"
-                                    "                                                                                line-height: 14px;\n"
-                                    "                                                                                text-align: center;\n"
-                                    "                                                                                margin: 0px;\n"
-                                    "                                                                                }\n"
-                                    "     "
-                                    "                                                                       ")
-        self.suffix_2.setTextFormat(Qt.RichText)
-        self.suffix_2.setAlignment(Qt.AlignCenter)
+                self.suffix_2 = QLabel(self.suffix_2_container)
+                self.suffix_2.setObjectName(u"suffix_2")
+                self.suffix_2.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.suffix_2.sizePolicy().hasHeightForWidth())
+                self.suffix_2.setSizePolicy(sizePolicy6)
+                self.suffix_2.setMinimumSize(QSize(400, 0))
+                self.suffix_2.setMaximumSize(QSize(400, 16777215))
+                self.suffix_2.setStyleSheet(u"QLabel {\n"
+                                            "                                                                                color: #8787fe;\n"
+                                            "                                                                                font-size: 14px;\n"
+                                            "                                                                                padding-bottom: 2px;\n"
+                                            "                                                                                padding-top: 2px;\n"
+                                            "                                                                                padding-right: 10px;\n"
+                                            "                                                                                padding-left: 10px;\n"
+                                            "                                                                                line-height: 14px;\n"
+                                            "                                                                                text-align: center;\n"
+                                            "                                                                                margin: 0px;\n"
+                                            "                                                                                }\n"
+                                            "     "
+                                            "                                                                       ")
+                self.suffix_2.setTextFormat(Qt.RichText)
+                self.suffix_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.suffix_2)
+                self.verticalLayout_8.addWidget(self.suffix_2)
 
-        self.suffix_info_3 = QLabel(self.item_mods_frame)
-        self.suffix_info_3.setObjectName(u"suffix_info_3")
-        self.suffix_info_3.setEnabled(False)
-        sizePolicy8 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy8.setHorizontalStretch(0)
-        sizePolicy8.setVerticalStretch(0)
-        sizePolicy8.setHeightForWidth(self.suffix_info_3.sizePolicy().hasHeightForWidth())
-        self.suffix_info_3.setSizePolicy(sizePolicy8)
-        self.suffix_info_3.setMinimumSize(QSize(0, 0))
-        self.suffix_info_3.setMaximumSize(QSize(16777215, 16))
-        self.suffix_info_3.setFont(font1)
-        self.suffix_info_3.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                color: #7f7f7f;\n"
-                                         "                                                                                text-transform: none;\n"
-                                         "                                                                                font-size: 12px;\n"
-                                         "                                                                                padding-bottom: 0px;\n"
-                                         "                                                                                padding-top: 2px;\n"
-                                         "                                                                                padding-right: 10px;\n"
-                                         "                                                                                padding-left: 10px;\n"
-                                         "                                                                                line-height: 14px;\n"
-                                         "                                                                                text-align: center;\n"
-                                         "                                                                                ma"
-                                         "rgin: 0px;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
-        self.suffix_info_3.setLineWidth(1)
-        self.suffix_info_3.setTextFormat(Qt.RichText)
-        self.suffix_info_3.setAlignment(Qt.AlignCenter)
+                self.item_mod_layout.addWidget(self.suffix_2_container)
 
-        self.verticalLayout_6.addWidget(self.suffix_info_3)
+                self.suffix_1_container = QWidget(self.item_mod_frame)
+                self.suffix_1_container.setObjectName(u"suffix_1_container")
+                sizePolicy3.setHeightForWidth(self.suffix_1_container.sizePolicy().hasHeightForWidth())
+                self.suffix_1_container.setSizePolicy(sizePolicy3)
+                self.suffix_1_container.setMinimumSize(QSize(400, 0))
+                self.suffix_1_container.setMaximumSize(QSize(400, 80))
+                self.verticalLayout_9 = QVBoxLayout(self.suffix_1_container)
+                self.verticalLayout_9.setSpacing(0)
+                self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+                self.verticalLayout_9.setSizeConstraint(QLayout.SetNoConstraint)
+                self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
+                self.suffix_1_info = QLabel(self.suffix_1_container)
+                self.suffix_1_info.setObjectName(u"suffix_1_info")
+                self.suffix_1_info.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.suffix_1_info.sizePolicy().hasHeightForWidth())
+                self.suffix_1_info.setSizePolicy(sizePolicy6)
+                self.suffix_1_info.setMinimumSize(QSize(400, 0))
+                self.suffix_1_info.setMaximumSize(QSize(400, 16777215))
+                self.suffix_1_info.setFont(font1)
+                self.suffix_1_info.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                color: #7f7f7f;\n"
+                                                 "                                                                                text-transform: none;\n"
+                                                 "                                                                                font-size: 12px;\n"
+                                                 "                                                                                padding-bottom: 0px;\n"
+                                                 "                                                                                padding-top: 2px;\n"
+                                                 "                                                                                padding-right: 10px;\n"
+                                                 "                                                                                padding-left: 10px;\n"
+                                                 "                                                                                line-height: 14px;\n"
+                                                 "                                                                                text-align: center;\n"
+                                                 "                                                                                ma"
+                                                 "rgin: 0px;\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
+                self.suffix_1_info.setTextFormat(Qt.RichText)
+                self.suffix_1_info.setAlignment(Qt.AlignCenter)
 
-        self.suffix_3 = QLabel(self.item_mods_frame)
-        self.suffix_3.setObjectName(u"suffix_3")
-        self.suffix_3.setEnabled(False)
-        self.suffix_3.setMinimumSize(QSize(0, 0))
-        self.suffix_3.setStyleSheet(u"QLabel {\n"
-                                    "                                                                                color: #8787fe;\n"
-                                    "                                                                                font-size: 14px;\n"
-                                    "                                                                                padding-bottom: 2px;\n"
-                                    "                                                                                padding-top: 2px;\n"
-                                    "                                                                                padding-right: 10px;\n"
-                                    "                                                                                padding-left: 10px;\n"
-                                    "                                                                                line-height: 14px;\n"
-                                    "                                                                                text-align: center;\n"
-                                    "                                                                                margin: 0px;\n"
-                                    "                                                                                }\n"
-                                    "     "
-                                    "                                                                       ")
-        self.suffix_3.setTextFormat(Qt.RichText)
-        self.suffix_3.setAlignment(Qt.AlignCenter)
+                self.verticalLayout_9.addWidget(self.suffix_1_info)
 
-        self.verticalLayout_6.addWidget(self.suffix_3, 0, Qt.AlignTop)
+                self.suffix_1 = QLabel(self.suffix_1_container)
+                self.suffix_1.setObjectName(u"suffix_1")
+                self.suffix_1.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.suffix_1.sizePolicy().hasHeightForWidth())
+                self.suffix_1.setSizePolicy(sizePolicy6)
+                self.suffix_1.setMinimumSize(QSize(400, 0))
+                self.suffix_1.setMaximumSize(QSize(400, 16777215))
+                self.suffix_1.setStyleSheet(u"QLabel {\n"
+                                            "                                                                                color: #8787fe;\n"
+                                            "                                                                                font-size: 14px;\n"
+                                            "                                                                                padding-bottom: 2px;\n"
+                                            "                                                                                padding-top: 2px;\n"
+                                            "                                                                                padding-right: 10px;\n"
+                                            "                                                                                padding-left: 10px;\n"
+                                            "                                                                                line-height: 14px;\n"
+                                            "                                                                                text-align: center;\n"
+                                            "                                                                                margin: 0px;\n"
+                                            "                                                                                }\n"
+                                            "     "
+                                            "                                                                       ")
+                self.suffix_1.setTextFormat(Qt.RichText)
+                self.suffix_1.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_4.addWidget(self.item_mods_frame, 0, Qt.AlignTop)
+                self.verticalLayout_9.addWidget(self.suffix_1)
 
-        self.horizontalLayout_4.addWidget(self.item_info_frame, 0, Qt.AlignTop)
+                self.item_mod_layout.addWidget(self.suffix_1_container)
 
-        self.item_display_frame = QFrame(self.crafting_zone_container)
-        self.item_display_frame.setObjectName(u"item_display_frame")
-        sizePolicy9 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
-        sizePolicy9.setHorizontalStretch(0)
-        sizePolicy9.setVerticalStretch(0)
-        sizePolicy9.setHeightForWidth(self.item_display_frame.sizePolicy().hasHeightForWidth())
-        self.item_display_frame.setSizePolicy(sizePolicy9)
-        self.item_display_frame.setFrameShape(QFrame.StyledPanel)
-        self.item_display_frame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_2 = QVBoxLayout(self.item_display_frame)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.item_view_frame = QFrame(self.item_display_frame)
-        self.item_view_frame.setObjectName(u"item_view_frame")
-        sizePolicy.setHeightForWidth(self.item_view_frame.sizePolicy().hasHeightForWidth())
-        self.item_view_frame.setSizePolicy(sizePolicy)
-        self.item_view_frame.setMinimumSize(QSize(128, 269))
-        self.item_view_frame.setMaximumSize(QSize(145, 269))
+                self.suffix_3_container = QWidget(self.item_mod_frame)
+                self.suffix_3_container.setObjectName(u"suffix_3_container")
+                sizePolicy3.setHeightForWidth(self.suffix_3_container.sizePolicy().hasHeightForWidth())
+                self.suffix_3_container.setSizePolicy(sizePolicy3)
+                self.suffix_3_container.setMinimumSize(QSize(400, 0))
+                self.suffix_3_container.setMaximumSize(QSize(400, 80))
+                self.verticalLayout_10 = QVBoxLayout(self.suffix_3_container)
+                self.verticalLayout_10.setSpacing(0)
+                self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+                self.verticalLayout_10.setSizeConstraint(QLayout.SetNoConstraint)
+                self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
+                self.suffix_3_info = QLabel(self.suffix_3_container)
+                self.suffix_3_info.setObjectName(u"suffix_3_info")
+                self.suffix_3_info.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.suffix_3_info.sizePolicy().hasHeightForWidth())
+                self.suffix_3_info.setSizePolicy(sizePolicy6)
+                self.suffix_3_info.setMinimumSize(QSize(400, 0))
+                self.suffix_3_info.setMaximumSize(QSize(400, 16777215))
+                self.suffix_3_info.setFont(font1)
+                self.suffix_3_info.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                color: #7f7f7f;\n"
+                                                 "                                                                                text-transform: none;\n"
+                                                 "                                                                                font-size: 12px;\n"
+                                                 "                                                                                padding-bottom: 0px;\n"
+                                                 "                                                                                padding-top: 2px;\n"
+                                                 "                                                                                padding-right: 10px;\n"
+                                                 "                                                                                padding-left: 10px;\n"
+                                                 "                                                                                line-height: 14px;\n"
+                                                 "                                                                                text-align: center;\n"
+                                                 "                                                                                ma"
+                                                 "rgin: 0px;\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
+                self.suffix_3_info.setTextFormat(Qt.RichText)
+                self.suffix_3_info.setAlignment(Qt.AlignCenter)
+
+                self.verticalLayout_10.addWidget(self.suffix_3_info)
+
+                self.suffix_3 = QLabel(self.suffix_3_container)
+                self.suffix_3.setObjectName(u"suffix_3")
+                self.suffix_3.setEnabled(False)
+                sizePolicy6.setHeightForWidth(self.suffix_3.sizePolicy().hasHeightForWidth())
+                self.suffix_3.setSizePolicy(sizePolicy6)
+                self.suffix_3.setMinimumSize(QSize(400, 0))
+                self.suffix_3.setMaximumSize(QSize(400, 16777215))
+                self.suffix_3.setStyleSheet(u"QLabel {\n"
+                                            "                                                                                color: #8787fe;\n"
+                                            "                                                                                font-size: 14px;\n"
+                                            "                                                                                padding-bottom: 2px;\n"
+                                            "                                                                                padding-top: 2px;\n"
+                                            "                                                                                padding-right: 10px;\n"
+                                            "                                                                                padding-left: 10px;\n"
+                                            "                                                                                line-height: 14px;\n"
+                                            "                                                                                text-align: center;\n"
+                                            "                                                                                margin: 0px;\n"
+                                            "                                                                                }\n"
+                                            "     "
+                                            "                                                                       ")
+                self.suffix_3.setTextFormat(Qt.RichText)
+                self.suffix_3.setAlignment(Qt.AlignCenter)
+
+                self.verticalLayout_10.addWidget(self.suffix_3)
+
+                self.item_mod_layout.addWidget(self.suffix_3_container)
+
+                self.item_info_layout.addWidget(self.item_mod_frame, 0, Qt.AlignTop)
+
+                self.verticalLayout_4.addWidget(self.item_info_frame, 0, Qt.AlignHCenter)
+
+                self.horizontalLayout_3.addWidget(self.item_info_container, 0, Qt.AlignTop)
+
+                self.horizontalSpacer = QSpacerItem(38, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+                self.horizontalLayout_3.addItem(self.horizontalSpacer)
+
+                self.item_display_frame = QFrame(self.crafting_zone_container)
+                self.item_display_frame.setObjectName(u"item_display_frame")
+                sizePolicy8 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
+                sizePolicy8.setHorizontalStretch(0)
+                sizePolicy8.setVerticalStretch(0)
+                sizePolicy8.setHeightForWidth(self.item_display_frame.sizePolicy().hasHeightForWidth())
+                self.item_display_frame.setSizePolicy(sizePolicy8)
+                self.item_display_frame.setFrameShape(QFrame.StyledPanel)
+                self.item_display_frame.setFrameShadow(QFrame.Raised)
+                self.verticalLayout_2 = QVBoxLayout(self.item_display_frame)
+                self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+                self.item_view_frame = QFrame(self.item_display_frame)
+                self.item_view_frame.setObjectName(u"item_view_frame")
+                sizePolicy.setHeightForWidth(self.item_view_frame.sizePolicy().hasHeightForWidth())
+                self.item_view_frame.setSizePolicy(sizePolicy)
+                self.item_view_frame.setMinimumSize(QSize(128, 269))
+                self.item_view_frame.setMaximumSize(QSize(145, 269))
         self.item_view_frame.setStyleSheet(u"QWidget{\n"
                                            "                                                                    border: 0px;\n"
                                            "                                                                    background-color: none;\n"
@@ -630,30 +813,27 @@ class Ui_MainPages(object):
                                           "                                                                                            opacity: 1;\n"
                                           "                                                                                            }\n"
                                           "                                                                                        ")
-        self.item_img_label.setScaledContents(True)
-        self.item_img_label.setAlignment(Qt.AlignCenter)
+                self.item_img_label.setScaledContents(True)
+                self.item_img_label.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_3.addWidget(self.item_img_label)
+                self.verticalLayout_3.addWidget(self.item_img_label)
 
-        self.item_view_layout.addWidget(self.item_img_frame)
+                self.item_view_layout.addWidget(self.item_img_frame)
 
-        self.crafting_btn_frame = QFrame(self.item_view_frame)
-        self.crafting_btn_frame.setObjectName(u"crafting_btn_frame")
-        sizePolicy10 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
-        sizePolicy10.setHorizontalStretch(0)
-        sizePolicy10.setVerticalStretch(0)
-        sizePolicy10.setHeightForWidth(self.crafting_btn_frame.sizePolicy().hasHeightForWidth())
-        self.crafting_btn_frame.setSizePolicy(sizePolicy10)
-        self.crafting_btn_frame.setFrameShape(QFrame.StyledPanel)
-        self.crafting_btn_frame.setFrameShadow(QFrame.Raised)
-        self.crafting_btn_layout = QVBoxLayout(self.crafting_btn_frame)
-        self.crafting_btn_layout.setSpacing(0)
-        self.crafting_btn_layout.setObjectName(u"crafting_btn_layout")
-        self.crafting_btn_layout.setContentsMargins(0, 0, 0, 0)
-        self.crafting_btn_label = QLabel(self.crafting_btn_frame)
-        self.crafting_btn_label.setObjectName(u"crafting_btn_label")
-        sizePolicy2.setHeightForWidth(self.crafting_btn_label.sizePolicy().hasHeightForWidth())
-        self.crafting_btn_label.setSizePolicy(sizePolicy2)
+                self.crafting_btn_frame = QFrame(self.item_view_frame)
+                self.crafting_btn_frame.setObjectName(u"crafting_btn_frame")
+                sizePolicy7.setHeightForWidth(self.crafting_btn_frame.sizePolicy().hasHeightForWidth())
+                self.crafting_btn_frame.setSizePolicy(sizePolicy7)
+                self.crafting_btn_frame.setFrameShape(QFrame.StyledPanel)
+                self.crafting_btn_frame.setFrameShadow(QFrame.Raised)
+                self.crafting_btn_layout = QVBoxLayout(self.crafting_btn_frame)
+                self.crafting_btn_layout.setSpacing(0)
+                self.crafting_btn_layout.setObjectName(u"crafting_btn_layout")
+                self.crafting_btn_layout.setContentsMargins(0, 0, 0, 0)
+                self.crafting_btn_label = QLabel(self.crafting_btn_frame)
+                self.crafting_btn_label.setObjectName(u"crafting_btn_label")
+                sizePolicy2.setHeightForWidth(self.crafting_btn_label.sizePolicy().hasHeightForWidth())
+                self.crafting_btn_label.setSizePolicy(sizePolicy2)
         self.crafting_btn_label.setMinimumSize(QSize(0, 39))
         self.crafting_btn_label.setMaximumSize(QSize(128, 39))
         self.crafting_btn_label.setCursor(QCursor(Qt.ArrowCursor))
@@ -669,123 +849,126 @@ class Ui_MainPages(object):
                                               "                                                                                        ")
         self.crafting_btn_label.setScaledContents(True)
 
-        self.crafting_btn_layout.addWidget(self.crafting_btn_label)
+                self.crafting_btn_layout.addWidget(self.crafting_btn_label)
 
-        self.item_view_layout.addWidget(self.crafting_btn_frame, 0, Qt.AlignTop)
+                self.item_view_layout.addWidget(self.crafting_btn_frame, 0, Qt.AlignTop)
 
-        self.verticalLayout_2.addWidget(self.item_view_frame)
+                self.verticalLayout_2.addWidget(self.item_view_frame)
 
-        self.item_dps_frame = QFrame(self.item_display_frame)
-        self.item_dps_frame.setObjectName(u"item_dps_frame")
-        sizePolicy8.setHeightForWidth(self.item_dps_frame.sizePolicy().hasHeightForWidth())
-        self.item_dps_frame.setSizePolicy(sizePolicy8)
-        self.item_dps_frame.setFrameShape(QFrame.StyledPanel)
-        self.item_dps_frame.setFrameShadow(QFrame.Raised)
-        self.item_dps_layout = QVBoxLayout(self.item_dps_frame)
-        self.item_dps_layout.setSpacing(6)
-        self.item_dps_layout.setObjectName(u"item_dps_layout")
-        self.item_dps_layout.setContentsMargins(10, 10, 10, 10)
-        self.phys_dps_label = QLabel(self.item_dps_frame)
-        self.phys_dps_label.setObjectName(u"phys_dps_label")
-        sizePolicy11 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Maximum)
-        sizePolicy11.setHorizontalStretch(0)
-        sizePolicy11.setVerticalStretch(0)
-        sizePolicy11.setHeightForWidth(self.phys_dps_label.sizePolicy().hasHeightForWidth())
-        self.phys_dps_label.setSizePolicy(sizePolicy11)
-        self.phys_dps_label.setMinimumSize(QSize(0, 30))
-        self.phys_dps_label.setStyleSheet(u"QLabel {\n"
-                                          "                                                                                border: 1px solid #edc57d;\n"
-                                          "                                                                                background: #000;\n"
-                                          "                                                                                padding: 2px 3px 4px 2px;\n"
-                                          "                                                                                }\n"
-                                          "                                                                            ")
-        self.phys_dps_label.setFrameShape(QFrame.NoFrame)
-        self.phys_dps_label.setFrameShadow(QFrame.Plain)
-        self.phys_dps_label.setLineWidth(0)
-        self.phys_dps_label.setMidLineWidth(0)
-        self.phys_dps_label.setScaledContents(False)
-        self.phys_dps_label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        self.phys_dps_label.setMargin(0)
+                self.item_dps_frame = QFrame(self.item_display_frame)
+                self.item_dps_frame.setObjectName(u"item_dps_frame")
+                sizePolicy9 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+                sizePolicy9.setHorizontalStretch(0)
+                sizePolicy9.setVerticalStretch(0)
+                sizePolicy9.setHeightForWidth(self.item_dps_frame.sizePolicy().hasHeightForWidth())
+                self.item_dps_frame.setSizePolicy(sizePolicy9)
+                self.item_dps_frame.setFrameShape(QFrame.StyledPanel)
+                self.item_dps_frame.setFrameShadow(QFrame.Raised)
+                self.item_dps_layout = QVBoxLayout(self.item_dps_frame)
+                self.item_dps_layout.setSpacing(6)
+                self.item_dps_layout.setObjectName(u"item_dps_layout")
+                self.item_dps_layout.setContentsMargins(10, 10, 10, 10)
+                self.phys_dps_label = QLabel(self.item_dps_frame)
+                self.phys_dps_label.setObjectName(u"phys_dps_label")
+                sizePolicy10 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Maximum)
+                sizePolicy10.setHorizontalStretch(0)
+                sizePolicy10.setVerticalStretch(0)
+                sizePolicy10.setHeightForWidth(self.phys_dps_label.sizePolicy().hasHeightForWidth())
+                self.phys_dps_label.setSizePolicy(sizePolicy10)
+                self.phys_dps_label.setMinimumSize(QSize(0, 30))
+                self.phys_dps_label.setStyleSheet(u"QLabel {\n"
+                                                  "                                                                                border: 1px solid #edc57d;\n"
+                                                  "                                                                                background: #000;\n"
+                                                  "                                                                                padding: 2px 3px 4px 2px;\n"
+                                                  "                                                                                }\n"
+                                                  "                                                                            ")
+                self.phys_dps_label.setFrameShape(QFrame.NoFrame)
+                self.phys_dps_label.setFrameShadow(QFrame.Plain)
+                self.phys_dps_label.setLineWidth(0)
+                self.phys_dps_label.setMidLineWidth(0)
+                self.phys_dps_label.setScaledContents(False)
+                self.phys_dps_label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+                self.phys_dps_label.setMargin(0)
 
-        self.item_dps_layout.addWidget(self.phys_dps_label)
+                self.item_dps_layout.addWidget(self.phys_dps_label)
 
-        self.ele_dps_label = QLabel(self.item_dps_frame)
-        self.ele_dps_label.setObjectName(u"ele_dps_label")
-        sizePolicy10.setHeightForWidth(self.ele_dps_label.sizePolicy().hasHeightForWidth())
-        self.ele_dps_label.setSizePolicy(sizePolicy10)
-        self.ele_dps_label.setMinimumSize(QSize(0, 30))
-        self.ele_dps_label.setStyleSheet(u"QLabel {\n"
-                                         "                                                                                border: 1px solid #edc57d;\n"
-                                         "                                                                                background: #000;\n"
-                                         "                                                                                padding: 2px 3px 4px 2px;\n"
-                                         "                                                                                magin-bottom: 0px;\n"
-                                         "                                                                                }\n"
-                                         "                                                                            ")
+                self.ele_dps_label = QLabel(self.item_dps_frame)
+                self.ele_dps_label.setObjectName(u"ele_dps_label")
+                sizePolicy7.setHeightForWidth(self.ele_dps_label.sizePolicy().hasHeightForWidth())
+                self.ele_dps_label.setSizePolicy(sizePolicy7)
+                self.ele_dps_label.setMinimumSize(QSize(0, 30))
+                self.ele_dps_label.setStyleSheet(u"QLabel {\n"
+                                                 "                                                                                border: 1px solid #edc57d;\n"
+                                                 "                                                                                background: #000;\n"
+                                                 "                                                                                padding: 2px 3px 4px 2px;\n"
+                                                 "                                                                                magin-bottom: 0px;\n"
+                                                 "                                                                                }\n"
+                                                 "                                                                            ")
 
-        self.item_dps_layout.addWidget(self.ele_dps_label)
+                self.item_dps_layout.addWidget(self.ele_dps_label)
 
-        self.total_dps_label = QLabel(self.item_dps_frame)
-        self.total_dps_label.setObjectName(u"total_dps_label")
-        sizePolicy10.setHeightForWidth(self.total_dps_label.sizePolicy().hasHeightForWidth())
-        self.total_dps_label.setSizePolicy(sizePolicy10)
-        self.total_dps_label.setMinimumSize(QSize(0, 30))
-        self.total_dps_label.setStyleSheet(u"QLabel {\n"
-                                           "                                                                                border: 1px solid #edc57d;\n"
-                                           "                                                                                background: #000;\n"
-                                           "                                                                                padding: 2px 3px 4px 2px;\n"
-                                           "                                                                                magin-bottom: 0px;\n"
-                                           "                                                                                }\n"
-                                           "                                                                            ")
+                self.total_dps_label = QLabel(self.item_dps_frame)
+                self.total_dps_label.setObjectName(u"total_dps_label")
+                sizePolicy7.setHeightForWidth(self.total_dps_label.sizePolicy().hasHeightForWidth())
+                self.total_dps_label.setSizePolicy(sizePolicy7)
+                self.total_dps_label.setMinimumSize(QSize(0, 30))
+                self.total_dps_label.setStyleSheet(u"QLabel {\n"
+                                                   "                                                                                border: 1px solid #edc57d;\n"
+                                                   "                                                                                background: #000;\n"
+                                                   "                                                                                padding: 2px 3px 4px 2px;\n"
+                                                   "                                                                                magin-bottom: 0px;\n"
+                                                   "                                                                                }\n"
+                                                   "                                                                            ")
 
-        self.item_dps_layout.addWidget(self.total_dps_label)
+                self.item_dps_layout.addWidget(self.total_dps_label)
 
-        self.affix_total_label = QLabel(self.item_dps_frame)
-        self.affix_total_label.setObjectName(u"affix_total_label")
-        sizePolicy10.setHeightForWidth(self.affix_total_label.sizePolicy().hasHeightForWidth())
-        self.affix_total_label.setSizePolicy(sizePolicy10)
-        self.affix_total_label.setMinimumSize(QSize(0, 30))
-        self.affix_total_label.setStyleSheet(u"QLabel {\n"
-                                             "                                                                                border: 1px solid #edc57d;\n"
-                                             "                                                                                background: #000;\n"
-                                             "                                                                                padding: 2px 3px 4px 2px;\n"
-                                             "                                                                                magin-bottom: 0px;\n"
-                                             "                                                                                }\n"
-                                             "                                                                            ")
+                self.affix_total_label = QLabel(self.item_dps_frame)
+                self.affix_total_label.setObjectName(u"affix_total_label")
+                sizePolicy7.setHeightForWidth(self.affix_total_label.sizePolicy().hasHeightForWidth())
+                self.affix_total_label.setSizePolicy(sizePolicy7)
+                self.affix_total_label.setMinimumSize(QSize(0, 30))
+                self.affix_total_label.setStyleSheet(u"QLabel {\n"
+                                                     "                                                                                border: 1px solid #edc57d;\n"
+                                                     "                                                                                background: #000;\n"
+                                                     "                                                                                padding: 2px 3px 4px 2px;\n"
+                                                     "                                                                                magin-bottom: 0px;\n"
+                                                     "                                                                                }\n"
+                                                     "                                                                            ")
 
-        self.item_dps_layout.addWidget(self.affix_total_label, 0, Qt.AlignTop)
+                self.item_dps_layout.addWidget(self.affix_total_label, 0, Qt.AlignTop)
 
-        self.verticalLayout_2.addWidget(self.item_dps_frame, 0, Qt.AlignVCenter)
+                self.verticalLayout_2.addWidget(self.item_dps_frame, 0, Qt.AlignVCenter)
 
-        self.horizontalLayout_4.addWidget(self.item_display_frame)
+                self.horizontalLayout_3.addWidget(self.item_display_frame)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+                self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayout_4.addItem(self.horizontalSpacer)
+                self.horizontalLayout_3.addItem(self.horizontalSpacer_3)
 
-        self.verticalLayout_5.addWidget(self.crafting_zone_container)
+                self.verticalLayout_12.addWidget(self.crafting_zone_container)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+                self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.verticalLayout_5.addItem(self.verticalSpacer)
+                self.verticalLayout_12.addItem(self.verticalSpacer_2)
 
-        self.pages.addWidget(self.page_1)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.page_2_layout = QVBoxLayout(self.page_2)
-        self.page_2_layout.setSpacing(5)
-        self.page_2_layout.setObjectName(u"page_2_layout")
-        self.page_2_layout.setContentsMargins(5, 5, 5, 5)
-        self.scroll_area = QScrollArea(self.page_2)
-        self.scroll_area.setObjectName(u"scroll_area")
+                self.pages.addWidget(self.page_1)
+                self.page_2 = QWidget()
+                self.page_2.setObjectName(u"page_2")
+                self.page_2_layout = QVBoxLayout(self.page_2)
+                self.page_2_layout.setSpacing(5)
+                self.page_2_layout.setObjectName(u"page_2_layout")
+                self.page_2_layout.setContentsMargins(5, 5, 5, 5)
+                self.scroll_area = QScrollArea(self.page_2)
+                self.scroll_area.setObjectName(u"scroll_area")
         self.scroll_area.setStyleSheet(u"background: transparent;")
         self.scroll_area.setFrameShape(QFrame.NoFrame)
         self.scroll_area.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.scroll_area.setWidgetResizable(True)
         self.contents = QWidget()
-        self.contents.setObjectName(u"contents")
-        self.contents.setGeometry(QRect(0, 0, 307, 242))
-        self.contents.setStyleSheet(u"background: transparent;")
+                self.contents.setObjectName(u"contents")
+                self.contents.setGeometry(QRect(0, 0, 592, 673))
+                self.contents.setStyleSheet(u"background: transparent;")
         self.verticalLayout = QVBoxLayout(self.contents)
         self.verticalLayout.setSpacing(15)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -961,31 +1144,31 @@ class Ui_MainPages(object):
         self.modpool_btns_frame.setFont(font2)
         self.modpool_btns_frame.setCursor(QCursor(Qt.ArrowCursor))
         self.modpool_btns_frame.setContextMenuPolicy(Qt.NoContextMenu)
-        self.modpool_btns_frame.setFrameShape(QFrame.NoFrame)
-        self.modpool_btns_frame.setFrameShadow(QFrame.Plain)
-        self.modpool_btns_frame.setLineWidth(1)
-        self.modpool_btns_frame.setMidLineWidth(1)
-        self.modpool_btn_layout = QHBoxLayout(self.modpool_btns_frame)
-        self.modpool_btn_layout.setSpacing(0)
-        self.modpool_btn_layout.setObjectName(u"modpool_btn_layout")
-        self.modpool_btn_layout.setContentsMargins(0, 0, 0, 0)
-        self.prefix_btn = QPushButton(self.modpool_btns_frame)
-        self.prefix_btn.setObjectName(u"prefix_btn")
-        sizePolicy12 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
-        sizePolicy12.setHorizontalStretch(0)
-        sizePolicy12.setVerticalStretch(0)
-        sizePolicy12.setHeightForWidth(self.prefix_btn.sizePolicy().hasHeightForWidth())
-        self.prefix_btn.setSizePolicy(sizePolicy12)
-        palette1 = QPalette()
-        brush1 = QBrush(QColor(255, 255, 255, 255))
-        brush1.setStyle(Qt.SolidPattern)
-        palette1.setBrush(QPalette.Active, QPalette.WindowText, brush1)
-        gradient = QLinearGradient(0.5, 0, 0.5, 1)
-        gradient.setSpread(QGradient.PadSpread)
-        gradient.setCoordinateMode(QGradient.ObjectBoundingMode)
-        gradient.setColorAt(0, QColor(112, 91, 124, 255))
-        gradient.setColorAt(1, QColor(112, 91, 124, 255))
-        brush2 = QBrush(gradient)
+                self.modpool_btns_frame.setFrameShape(QFrame.NoFrame)
+                self.modpool_btns_frame.setFrameShadow(QFrame.Plain)
+                self.modpool_btns_frame.setLineWidth(1)
+                self.modpool_btns_frame.setMidLineWidth(1)
+                self.modpool_btn_layout = QHBoxLayout(self.modpool_btns_frame)
+                self.modpool_btn_layout.setSpacing(0)
+                self.modpool_btn_layout.setObjectName(u"modpool_btn_layout")
+                self.modpool_btn_layout.setContentsMargins(0, 0, 0, 0)
+                self.prefix_btn = QPushButton(self.modpool_btns_frame)
+                self.prefix_btn.setObjectName(u"prefix_btn")
+                sizePolicy11 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
+                sizePolicy11.setHorizontalStretch(0)
+                sizePolicy11.setVerticalStretch(0)
+                sizePolicy11.setHeightForWidth(self.prefix_btn.sizePolicy().hasHeightForWidth())
+                self.prefix_btn.setSizePolicy(sizePolicy11)
+                palette1 = QPalette()
+                brush1 = QBrush(QColor(255, 255, 255, 255))
+                brush1.setStyle(Qt.SolidPattern)
+                palette1.setBrush(QPalette.Active, QPalette.WindowText, brush1)
+                gradient = QLinearGradient(0.5, 0, 0.5, 1)
+                gradient.setSpread(QGradient.PadSpread)
+                gradient.setCoordinateMode(QGradient.ObjectBoundingMode)
+                gradient.setColorAt(0, QColor(112, 91, 124, 255))
+                gradient.setColorAt(1, QColor(112, 91, 124, 255))
+                brush2 = QBrush(gradient)
         palette1.setBrush(QPalette.Active, QPalette.Button, brush2)
         palette1.setBrush(QPalette.Active, QPalette.Text, brush1)
         palette1.setBrush(QPalette.Active, QPalette.ButtonText, brush1)
@@ -1005,9 +1188,9 @@ class Ui_MainPages(object):
         palette1.setBrush(QPalette.Active, QPalette.Window, brush4)
         brush5 = QBrush(QColor(255, 255, 255, 128))
         brush5.setStyle(Qt.SolidPattern)
-        # if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+                # if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette.Active, QPalette.PlaceholderText, brush5)
-        # endif
+                #endif
         palette1.setBrush(QPalette.Inactive, QPalette.WindowText, brush1)
         gradient3 = QLinearGradient(0.5, 0, 0.5, 1)
         gradient3.setSpread(QGradient.PadSpread)
@@ -1032,9 +1215,9 @@ class Ui_MainPages(object):
         gradient5.setColorAt(1, QColor(112, 91, 124, 255))
         brush8 = QBrush(gradient5)
         palette1.setBrush(QPalette.Inactive, QPalette.Window, brush8)
-        # if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+                #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette.Inactive, QPalette.PlaceholderText, brush5)
-        # endif
+                #endif
         palette1.setBrush(QPalette.Disabled, QPalette.WindowText, brush1)
         gradient6 = QLinearGradient(0.5, 0, 0.5, 1)
         gradient6.setSpread(QGradient.PadSpread)
@@ -1059,48 +1242,49 @@ class Ui_MainPages(object):
         gradient8.setColorAt(1, QColor(112, 91, 124, 255))
         brush11 = QBrush(gradient8)
         palette1.setBrush(QPalette.Disabled, QPalette.Window, brush11)
-        # if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+                #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette.Disabled, QPalette.PlaceholderText, brush5)
-        # endif
+                #endif
         self.prefix_btn.setPalette(palette1)
         font3 = QFont()
         font3.setFamilies([u"Segoe Ui"])
         font3.setPointSize(14)
         font3.setBold(True)
-        self.prefix_btn.setFont(font3)
-        self.prefix_btn.setCursor(QCursor(Qt.ArrowCursor))
-        self.prefix_btn.setFocusPolicy(Qt.NoFocus)
-        self.prefix_btn.setContextMenuPolicy(Qt.NoContextMenu)
-        self.prefix_btn.setCheckable(True)
+                self.prefix_btn.setFont(font3)
+                self.prefix_btn.setCursor(QCursor(Qt.ArrowCursor))
+                self.prefix_btn.setFocusPolicy(Qt.NoFocus)
+                self.prefix_btn.setContextMenuPolicy(Qt.NoContextMenu)
+                self.prefix_btn.setCheckable(True)
 
-        self.modpool_btn_layout.addWidget(self.prefix_btn, 0, Qt.AlignTop)
+                self.modpool_btn_layout.addWidget(self.prefix_btn, 0, Qt.AlignTop)
 
-        self.suffix_btn = QPushButton(self.modpool_btns_frame)
-        self.suffix_btn.setObjectName(u"suffix_btn")
-        sizePolicy12.setHeightForWidth(self.suffix_btn.sizePolicy().hasHeightForWidth())
-        self.suffix_btn.setSizePolicy(sizePolicy12)
-        self.suffix_btn.setFont(font3)
-        self.suffix_btn.setCursor(QCursor(Qt.ArrowCursor))
-        self.suffix_btn.setFocusPolicy(Qt.NoFocus)
-        self.suffix_btn.setContextMenuPolicy(Qt.NoContextMenu)
-        self.suffix_btn.setStyleSheet(u"")
-        self.suffix_btn.setCheckable(True)
+                self.suffix_btn = QPushButton(self.modpool_btns_frame)
+                self.suffix_btn.setObjectName(u"suffix_btn")
+                sizePolicy11.setHeightForWidth(self.suffix_btn.sizePolicy().hasHeightForWidth())
+                self.suffix_btn.setSizePolicy(sizePolicy11)
+                self.suffix_btn.setFont(font3)
+                self.suffix_btn.setCursor(QCursor(Qt.ArrowCursor))
+                self.suffix_btn.setFocusPolicy(Qt.NoFocus)
+                self.suffix_btn.setContextMenuPolicy(Qt.NoContextMenu)
+                self.suffix_btn.setStyleSheet(u"")
+                self.suffix_btn.setCheckable(True)
 
-        self.modpool_btn_layout.addWidget(self.suffix_btn, 0, Qt.AlignTop)
+                self.modpool_btn_layout.addWidget(self.suffix_btn, 0, Qt.AlignTop)
 
-        self.implicit_btn = QPushButton(self.modpool_btns_frame)
-        self.implicit_btn.setObjectName(u"implicit_btn")
-        sizePolicy12.setHeightForWidth(self.implicit_btn.sizePolicy().hasHeightForWidth())
-        self.implicit_btn.setSizePolicy(sizePolicy12)
-        self.implicit_btn.setFont(font3)
-        self.implicit_btn.setCursor(QCursor(Qt.ArrowCursor))
-        self.implicit_btn.setFocusPolicy(Qt.NoFocus)
-        self.implicit_btn.setContextMenuPolicy(Qt.NoContextMenu)
-        self.implicit_btn.setStyleSheet(u"")
-        self.implicit_btn.setCheckable(True)
-        self.implicit_btn.setFlat(False)
+                self.implicit_btn = QPushButton(self.modpool_btns_frame)
+                self.implicit_btn.setObjectName(u"implicit_btn")
+                sizePolicy11.setHeightForWidth(self.implicit_btn.sizePolicy().hasHeightForWidth())
+                self.implicit_btn.setSizePolicy(sizePolicy11)
+                self.implicit_btn.setFont(font3)
+                self.implicit_btn.setCursor(QCursor(Qt.ArrowCursor))
+                self.implicit_btn.setFocusPolicy(Qt.NoFocus)
+                self.implicit_btn.setContextMenuPolicy(Qt.NoContextMenu)
+                self.implicit_btn.setStyleSheet(u"")
+                self.implicit_btn.setCheckable(True)
+                self.implicit_btn.setFlat(False)
 
-        self.modpool_btn_layout.addWidget(self.implicit_btn, 0, Qt.AlignTop)
+                self.modpool_btn_layout.addWidget(self.implicit_btn, 0, Qt.AlignTop)
+
 
         self.modpool_list_layout.addWidget(self.modpool_btns_frame, 0, Qt.AlignTop)
 
@@ -1142,7 +1326,9 @@ class Ui_MainPages(object):
 
         self.modpool_list_layout.addWidget(self.modpool_group_pages)
 
+
         self.horizontalLayout.addWidget(self.modpool_list_frame)
+
 
         self.verticalLayout.addWidget(self.modpool_list)
 
@@ -1163,52 +1349,58 @@ class Ui_MainPages(object):
 
         self.main_pages_layout.addWidget(self.pages)
 
+
         self.retranslateUi(MainPages)
 
         self.pages.setCurrentIndex(0)
         self.modpool_group_pages.setCurrentIndex(0)
 
-        QMetaObject.connectSlotsByName(MainPages)
 
+        QMetaObject.connectSlotsByName(MainPages)
     # setupUi
 
     def retranslateUi(self, MainPages):
-        MainPages.setWindowTitle(QCoreApplication.translate("MainPages", u"Form", None))
-        self.item_header_label.setText("")
-        self.item_quality_label.setText("")
-        self.item_properties_label.setText("")
-        self.item_spacer_1.setText("")
-        self.item_level_label.setText("")
-        self.item_spacer_2.setText("")
-        self.item_implicits_label.setText("")
-        self.item_spacer_3.setText("")
-        self.prefix_info_1.setText(QCoreApplication.translate("MainPages", u"PrefixInfo1", None))
-        self.prefix_1.setText(QCoreApplication.translate("MainPages", u"Prefix1", None))
-        self.prefix_info_2.setText(QCoreApplication.translate("MainPages", u"PrefixInfo2", None))
-        self.prefix_2.setText(QCoreApplication.translate("MainPages", u"Prefix2", None))
-        self.prefix_info_3.setText(QCoreApplication.translate("MainPages", u"PrefixInfo3", None))
-        self.prefix_3.setText(QCoreApplication.translate("MainPages", u"Prefix3", None))
-        self.suffix_info_1.setText(QCoreApplication.translate("MainPages", u"SuffixInfo1", None))
-        self.suffix_1.setText(QCoreApplication.translate("MainPages", u"Suffix1", None))
-        self.suffix_info_2.setText(QCoreApplication.translate("MainPages", u"SuffixInfo2", None))
-        self.suffix_2.setText(QCoreApplication.translate("MainPages", u"Suffix2", None))
-        self.suffix_info_3.setText(QCoreApplication.translate("MainPages", u"SuffixInfo3", None))
-        self.suffix_3.setText(QCoreApplication.translate("MainPages", u"Suffix3", None))
-        self.item_img_label.setText("")
-        self.crafting_btn_label.setText("")
-        self.phys_dps_label.setText(QCoreApplication.translate("MainPages", u"<html><head/><body><p><span\n"
-                                                                            "                                                                                style=\" color:#827a6c;\">pDPS\n"
-                                                                            "                                                                                : </span><span style=\"\n"
-                                                                            "                                                                                color:#8787fe;\">{}</span></p></body></html>\n"
-                                                                            "                                                                            ",
-                                                               None))
-        self.ele_dps_label.setText(QCoreApplication.translate("MainPages", u"<html><head/><body><p\n"
-                                                                           "                                                                                align=\"center\"><span\n"
-                                                                           "                                                                                style=\" color:#827a6c;\">eDPS\n"
-                                                                           "                                                                                : </span><span style=\"\n"
-                                                                           "                                                                                color:#8787fe;\">{}</span></p></body></html>\n"
-                                                                           "                                                                            ",
-                                                              None))
+            MainPages.setWindowTitle(QCoreApplication.translate("MainPages", u"Form", None))
+            self.item_header_label.setText("")
+            self.item_quality_label.setText(QCoreApplication.translate("MainPages",
+                                                                       u"<p align=\"center\"><span style=\" font-size:11pt; color:#827a6c;\">Quality: </span>\n"
+                                                                       "<span style=\" font-size:11pt; font-weight:bold; color:#8787fe;\">0%</span></p>",
+                                                                       None))
+            self.item_spacer_1.setText("")
+            self.item_level_label.setText(QCoreApplication.translate("MainPages",
+                                                                     u"<p align=\"center\"><span style=\" font-size:11pt; color:#827a6c;\">Item Level: </span>\n"
+                                                                     "<span style=\" font-size:11pt; font-weight:bold; color:#fff;\">0</span></p>",
+                                                                     None))
+            self.item_spacer_2.setText("")
+            self.item_implicits_label.setText("")
+            self.item_spacer_3.setText("")
+            self.prefix_info_1.setText(QCoreApplication.translate("MainPages", u"test", None))
+            self.prefix_1.setText(QCoreApplication.translate("MainPages", u"test", None))
+            self.prefix_info_2.setText("")
+            self.prefix_2.setText("")
+            self.prefix_info_3.setText("")
+            self.prefix_3.setText("")
+            self.suffix_2_info.setText("")
+            self.suffix_2.setText("")
+            self.suffix_1_info.setText("")
+            self.suffix_1.setText("")
+            self.suffix_3_info.setText("")
+            self.suffix_3.setText("")
+            self.item_img_label.setText("")
+            self.crafting_btn_label.setText("")
+            self.phys_dps_label.setText(QCoreApplication.translate("MainPages", u"<html><head/><body><p><span\n"
+                                                                                "                                                                                style=\" color:#827a6c;\">pDPS\n"
+                                                                                "                                                                                : </span><span style=\"\n"
+                                                                                "                                                                                color:#8787fe;\">{}</span></p></body></html>\n"
+                                                                                "                                                                            ",
+                                                                   None))
+            self.ele_dps_label.setText(QCoreApplication.translate("MainPages", u"<html><head/><body><p\n"
+                                                                               "                                                                                align=\"center\"><span\n"
+                                                                               "                                                                                style=\" color:#827a6c;\">eDPS\n"
+                                                                               "                                                                                : </span><span style=\"\n"
+                                                                               "                                                                                color:#8787fe;\">{}</span></p></body></html>\n"
+                                                                               "                                                                            ",
+                                                                  None))
         self.total_dps_label.setText(QCoreApplication.translate("MainPages", u"<html><head/><body><p\n"
                                                                              "                                                                                align=\"center\"><span\n"
                                                                              "                                                                                style=\" color:#827a6c;\">pDPS\n"
@@ -1226,3 +1418,4 @@ class Ui_MainPages(object):
         self.suffix_btn.setText(QCoreApplication.translate("MainPages", u"SUFFIXES", None))
         self.implicit_btn.setText(QCoreApplication.translate("MainPages", u"IMPLICITS", None))
     # retranslateUi
+

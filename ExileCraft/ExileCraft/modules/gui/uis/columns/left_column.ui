@@ -571,6 +571,12 @@
                                                 <property name="enabled">
                                                     <bool>false</bool>
                                                 </property>
+                                                <property name="styleSheet">
+                                                    <string notr="true">QSpinBox {
+                                                        color: black;
+                                                        }
+                                                    </string>
+                                                </property>
                                                 <property name="maximum">
                                                     <number>100</number>
                                                 </property>
@@ -598,6 +604,12 @@
                                             <widget class="QSpinBox" name="item_quality_spinbox">
                                                 <property name="enabled">
                                                     <bool>false</bool>
+                                                </property>
+                                                <property name="styleSheet">
+                                                    <string notr="true">QSpinBox {
+                                                        color: black;
+                                                        }
+                                                    </string>
                                                 </property>
                                                 <property name="maximum">
                                                     <number>30</number>

@@ -12,6 +12,7 @@ from modules.gui.core.functions import *
 from modules.gui.core.json_themes import *
 from modules.gui.uis.columns.ui_right_column import *
 from modules.gui.uis.pages import *
+from modules.gui.uis.pages.ui_main_pages import Ui_MainPages
 from modules.gui.widgets import *
 
 

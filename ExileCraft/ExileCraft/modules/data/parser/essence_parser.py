@@ -35,7 +35,7 @@ for essence_id, essence in data.items():
     for item_class, mod in essence.get('mods').items():
         c.execute(
             """
-            INSERT INTO EssenceMods (essence_id, item_class, mod)
+            INSERT INTO essence_modifiers (essence_id, item_class, modifier_id)
             VALUES (?, ?, ?)
             """,
             (

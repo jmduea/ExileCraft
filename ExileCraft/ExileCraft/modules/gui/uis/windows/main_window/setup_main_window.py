@@ -23,7 +23,6 @@ class SetupMainWindow:
     def __init__(self):
         super().__init__()
         self.ui.setup_ui(self)
-
     add_left_menus = [
         {
             "btn_icon": "icon_home.svg",
@@ -240,3 +239,22 @@ class SetupMainWindow:
             self.top_right_grip.setGeometry(self.width() - 20, 5, 15, 15)
             self.bottom_left_grip.setGeometry(5, self.height() - 20, 15, 15)
             self.bottom_right_grip.setGeometry(self.width() - 20, self.height() - 20, 15, 15)
+
+    def setup_comboboxes(self):
+        self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(
+            self.combobox_updater.set_item_header_label)
+        self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(
+            self.combobox_updater.set_item_view_box_background)
+        self.ui.left_column.menus.base_group_combobox.currentTextChanged.connect(
+            self.combobox_updater.clear_item_view_box_background)
+        self.ui.left_column.menus.base_combobox.currentTextChanged.connect(
+            self.combobox_updater.clear_item_view_box_background)
+        self.ui.left_column.menus.item_level_spinbox.valueChanged.connect(
+            self.combobox_updater.set_item_level)
+        self.ui.left_column.menus.item_quality_spinbox.valueChanged.connect(
+            self.combobox_updater.set_item_quality)
+        self.ui.left_column.menus.base_group_combobox.currentIndexChanged.connect(
+            self.combobox_updater.update_base_combobox)
+        self.ui.left_column.menus.base_combobox.currentIndexChanged.connect(
+            self.combobox_updater.get_base_items_for_combobox)
+        self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(self.combobox_updater.update_labels)

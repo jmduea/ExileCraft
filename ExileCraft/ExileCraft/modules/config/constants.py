@@ -78,6 +78,17 @@ ITEM_CLASS_BLACKLIST = {
     "FishingRod",
 }
 
+BASE_ITEM_BLACKLIST = {
+    'Breach Ring',
+    'Ring',
+    'Shadowed Ring',
+    'Tenebrous Ring',
+    'Gloam Ring',
+    'Penumbra Ring',
+    'Dusk Ring',
+    'Unset Amulet',
+
+}
 TAGS_MAP = {
     'Body Armour': {
         "Body Armour (dex)": ["armour", "dex_armour"],
@@ -99,9 +110,6 @@ TAGS_MAP = {
     },
 }
 
-ITEM_CLASS_MAP = {
-    'Flasks': {'HybridFlask', }
-}
 ITEM_CLASS_SUBTYPES = {
     'Body Armour': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
                     "str_dex_int_armour", "str_int_armour"},
@@ -113,18 +121,17 @@ ITEM_CLASS_SUBTYPES = {
                "str_int_armour"},
     'Shield': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour", "str_int_armour"},
     'Jewellery': {"amulet", "belt", "ring"},
-    'One Handed Weapons': {"claw", "weapon_can_roll_minion_modifiers", "attack_dagger", "dagger", "axe", "mace",
+    'One Handed Weapons': {"claw", "attack_dagger", "dagger", "axe", "mace",
                            "sword", "sceptre", "rapier", "wand"},
     'Two Handed Weapons': {"bow", "staff", "two_hand_axe", "two_hand_sword", "warstaff", "two_hand_mace"},
-    'Offhands': {"focus_can_roll_minion_modifiers", "quiver"},
-    'Jewels': {"abyss_jewel_caster", "abyss_jewel_melee", "abyss_jewel_ranged", "abyss_jewel_summoner",
-               "dexjewel",
-               "intjewel", "strjewel"},
-    'Cluster Jewels': {"expansion_jewel_large", "expansion_jewel_medium", "expansion_jewel_small"},
+    'Offhands': {"quiver"},
+    'Jewels': {"abyss_jewel", "jewel"},
     'Flasks': {"hybrid_flask", "life_flask", "mana_flask", "utility_flask"}
 }
 
 SUBTYPE_DISPLAY_NAMES = {
+    "abyss_jewel": "Abyss Jewel",
+    "jewel": "Jewel",
     "focus_can_roll_minion_modifiers": "Bone Spirit Shield",
     "claw": "Claw",
     "weapon_can_roll_minion_modifiers": "Convoking Wand",
@@ -151,7 +158,7 @@ SUBTYPE_DISPLAY_NAMES = {
     "str_dex_armour": "{}(str/dex)",
     "str_dex_int_armour": "{}(str/dex/int)",
     "str_int_armour": "{}(str/int)",
-    "amulet": "Amulet",
+    "amulet": 'Amulet',
     "life_flask": "Life Flask",
     "mana_flask": "Mana Flask",
     "hybrid_flask": "Hybrid Flask",

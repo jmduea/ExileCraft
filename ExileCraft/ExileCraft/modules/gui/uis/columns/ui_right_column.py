@@ -16,7 +16,7 @@ from PySide6.QtWidgets import (QButtonGroup, QGridLayout, QHBoxLayout,
                                QWidget)
 
 from ...widgets.py_custom_cursor_button import PyCustomCursorButton
-
+from ...assets import assets_rc
 
 class Ui_RightColumn(object):
     def setupUi(self, RightColumn):
