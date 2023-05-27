@@ -22,10 +22,10 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget{
-    border-image: url(:/images/images/emubg.png);
-    }
+                border-image: url(:/images/images/emubg.png);
+                }
 
-   </string>
+            </string>
   </property>
   <layout class="QVBoxLayout" name="main_pages_layout">
    <property name="spacing">
@@ -103,9 +103,9 @@
          </property>
          <property name="styleSheet">
           <string notr="true">QWidget {
-           border-image: none;
-           }
-          </string>
+                                            border-image: none;
+                                            }
+                                        </string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <property name="spacing">
@@ -272,10 +272,10 @@
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
-                       background-image:
-                       url(:/images/images/item-header-normal.png);
-                       }
-                      </string>
+                                                                                background-image:
+                                                                                url(:/images/images/item-header-normal.png);
+                                                                                }
+                                                                            </string>
                      </property>
                      <property name="text">
                       <string/>
@@ -393,10 +393,8 @@
                          </size>
                         </property>
                         <property name="text">
-                         <string>&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; color:#827a6c;&quot;&gt;Quality:
-                          &lt;/span&gt;
-                          &lt;span style=&quot; font-size:11pt; font-weight:bold; color:#8787fe;&quot;&gt;0%&lt;/span&gt;&lt;/p&gt;
-                         </string>
+                         <string>&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; color:#827a6c;&quot;&gt;Quality: &lt;/span&gt;
+&lt;span style=&quot; font-size:11pt; font-weight:bold; color:#8787fe;&quot;&gt;0%&lt;/span&gt;&lt;/p&gt;</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
@@ -428,13 +426,13 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel{
-                          color: #827a6c;
-                          font-size: 14px;
-                          padding: 2px 10px;
-                          text-align: center;
-                          margin-bottom: 5px ;
-                          }
-                         </string>
+                                                                                color: #827a6c;
+                                                                                font-size: 14px;
+																				padding: 2px 10px;
+                                                                                text-align: center;
+                                                                                margin-bottom: 5px ;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="lineWidth">
                          <number>1</number>
@@ -484,9 +482,9 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          border-image: none;
-                          }
-                         </string>
+                                                                                border-image: none;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -568,10 +566,8 @@
                          <bool>false</bool>
                         </property>
                         <property name="text">
-                         <string>&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; color:#827a6c;&quot;&gt;Item
-                          Level: &lt;/span&gt;
-                          &lt;span style=&quot; font-size:11pt; font-weight:bold; color:#fff;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;
-                         </string>
+                         <string>&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:11pt; color:#827a6c;&quot;&gt;Item Level: &lt;/span&gt;
+&lt;span style=&quot; font-size:11pt; font-weight:bold; color:#fff;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
@@ -603,14 +599,14 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel{
-                          color: #827a6c;
-                          padding: 2px 10px;
-                          font-size: 14px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0;
-                          }
-                         </string>
+                                                                                color: #827a6c;
+                                                                                padding: 2px 10px;
+                                                                                font-size: 14px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="lineWidth">
                          <number>0</number>
@@ -660,9 +656,9 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          border-image: none;
-                          }
-                         </string>
+                                                                                border-image: none;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -748,14 +744,14 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel{
-                          color: #8787fe;
-                          padding: 2px 10px;
-                          font-size: 14px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0;
-                          }
-                         </string>
+                                                                                color: #8787fe;
+                                                                                padding: 2px 10px;
+                                                                                font-size: 14px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="lineWidth">
                          <number>1</number>
@@ -808,10 +804,10 @@
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel {
-                       border-image: none;
-                       background-color: rgb(0, 0, 0);
-                       }
-                      </string>
+                                                                                border-image: none;
+																				background-color: rgb(0, 0, 0);
+                                                                                }
+                                                                            </string>
                      </property>
                      <property name="text">
                       <string/>
@@ -938,18 +934,18 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #7f7f7f;
-                          text-transform: none;
-                          font-size: 12px;
-                          padding-bottom: 0px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #7f7f7f;
+                                                                                text-transform: none;
+                                                                                font-size: 12px;
+                                                                                padding-bottom: 0px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string>test</string>
@@ -987,17 +983,17 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #8787fe;
-                          font-size: 14px;
-                          padding-bottom: 2px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #8787fe;
+                                                                                font-size: 14px;
+                                                                                padding-bottom: 2px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string>test</string>
@@ -1079,18 +1075,18 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #7f7f7f;
-                          text-transform: none;
-                          font-size: 12px;
-                          padding-bottom: 0px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #7f7f7f;
+                                                                                text-transform: none;
+                                                                                font-size: 12px;
+                                                                                padding-bottom: 0px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1128,17 +1124,17 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #8787fe;
-                          font-size: 14px;
-                          padding-bottom: 2px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #8787fe;
+                                                                                font-size: 14px;
+                                                                                padding-bottom: 2px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1220,18 +1216,18 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #7f7f7f;
-                          text-transform: none;
-                          font-size: 12px;
-                          padding-bottom: 0px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #7f7f7f;
+                                                                                text-transform: none;
+                                                                                font-size: 12px;
+                                                                                padding-bottom: 0px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1269,17 +1265,17 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #8787fe;
-                          font-size: 14px;
-                          padding-bottom: 2px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #8787fe;
+                                                                                font-size: 14px;
+                                                                                padding-bottom: 2px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1367,18 +1363,18 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #7f7f7f;
-                          text-transform: none;
-                          font-size: 12px;
-                          padding-bottom: 0px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #7f7f7f;
+                                                                                text-transform: none;
+                                                                                font-size: 12px;
+                                                                                padding-bottom: 0px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1416,17 +1412,17 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #8787fe;
-                          font-size: 14px;
-                          padding-bottom: 2px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #8787fe;
+                                                                                font-size: 14px;
+                                                                                padding-bottom: 2px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1514,18 +1510,18 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #7f7f7f;
-                          text-transform: none;
-                          font-size: 12px;
-                          padding-bottom: 0px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #7f7f7f;
+                                                                                text-transform: none;
+                                                                                font-size: 12px;
+                                                                                padding-bottom: 0px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1563,17 +1559,17 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #8787fe;
-                          font-size: 14px;
-                          padding-bottom: 2px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #8787fe;
+                                                                                font-size: 14px;
+                                                                                padding-bottom: 2px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1661,18 +1657,18 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #7f7f7f;
-                          text-transform: none;
-                          font-size: 12px;
-                          padding-bottom: 0px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #7f7f7f;
+                                                                                text-transform: none;
+                                                                                font-size: 12px;
+                                                                                padding-bottom: 0px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1710,17 +1706,17 @@
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QLabel {
-                          color: #8787fe;
-                          font-size: 14px;
-                          padding-bottom: 2px;
-                          padding-top: 2px;
-                          padding-right: 10px;
-                          padding-left: 10px;
-                          line-height: 14px;
-                          text-align: center;
-                          margin: 0px;
-                          }
-                         </string>
+                                                                                color: #8787fe;
+                                                                                font-size: 14px;
+                                                                                padding-bottom: 2px;
+                                                                                padding-top: 2px;
+                                                                                padding-right: 10px;
+                                                                                padding-left: 10px;
+                                                                                line-height: 14px;
+                                                                                text-align: center;
+                                                                                margin: 0px;
+                                                                                }
+                                                                            </string>
                         </property>
                         <property name="text">
                          <string/>
@@ -1744,19 +1740,6 @@
              </item>
             </layout>
            </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>38</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
           <item>
            <widget class="QFrame" name="item_display_frame">
@@ -1795,10 +1778,10 @@
                </property>
                <property name="styleSheet">
                 <string notr="true">QWidget{
-                 border: 0px;
-                 background-color: none;
-                 }
-                </string>
+                                                                    border: 0px;
+                                                                    background-color: none;
+                                                                    }
+                                                                </string>
                </property>
                <layout class="QVBoxLayout" name="item_view_layout">
                 <property name="spacing">
@@ -1868,15 +1851,15 @@
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel{
-                       background-image:
-                       url(:/images/images/item_box.png);
-                       opacity: 0.8;
-                       }
-                       QLabel::hover{
-                       background-color:#ffffff;
-                       opacity: 1;
-                       }
-                      </string>
+                                                                                            background-image:
+                                                                                            url(:/images/images/item_box.png);
+                                                                                            opacity: 0.8;
+                                                                                            }
+                                                                                            QLabel::hover{
+                                                                                            background-color:#ffffff;
+                                                                                            opacity: 1;
+                                                                                            }
+                                                                                        </string>
                      </property>
                      <property name="text">
                       <string/>
@@ -1950,14 +1933,14 @@
                      </property>
                      <property name="styleSheet">
                       <string notr="true">QLabel{
-                       background-image:
-                       url(:/images/images/craftbtn.png);
-                       }
-                       QLabel::hover{
-                       background-image:
-                       url(:/images/images/craftbtnov.png);
-                       }
-                      </string>
+                                                                                            background-image:
+                                                                                            url(:/images/images/craftbtn.png);
+                                                                                            }
+                                                                                            QLabel::hover{
+                                                                                            background-image:
+                                                                                            url(:/images/images/craftbtnov.png);
+                                                                                            }
+                                                                                        </string>
                      </property>
                      <property name="text">
                       <string/>
@@ -2019,11 +2002,11 @@
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QLabel {
-                    border: 1px solid #edc57d;
-                    background: #000;
-                    padding: 2px 3px 4px 2px;
-                    }
-                   </string>
+                                                                                border: 1px solid #edc57d;
+                                                                                background: #000;
+                                                                                padding: 2px 3px 4px 2px;
+                                                                                }
+                                                                            </string>
                   </property>
                   <property name="frameShape">
                    <enum>QFrame::NoFrame</enum>
@@ -2039,10 +2022,10 @@
                   </property>
                   <property name="text">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span
-                    style=&quot; color:#827a6c;&quot;&gt;pDPS
-                    : &lt;/span&gt;&lt;span style=&quot;
-                    color:#8787fe;&quot;&gt;{}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                   </string>
+                                                                                style=&quot; color:#827a6c;&quot;&gt;pDPS
+                                                                                : &lt;/span&gt;&lt;span style=&quot;
+                                                                                color:#8787fe;&quot;&gt;{}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                                            </string>
                   </property>
                   <property name="scaledContents">
                    <bool>false</bool>
@@ -2071,20 +2054,20 @@
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QLabel {
-                    border: 1px solid #edc57d;
-                    background: #000;
-                    padding: 2px 3px 4px 2px;
-                    magin-bottom: 0px;
-                    }
-                   </string>
+                                                                                border: 1px solid #edc57d;
+                                                                                background: #000;
+                                                                                padding: 2px 3px 4px 2px;
+                                                                                magin-bottom: 0px;
+                                                                                }
+                                                                            </string>
                   </property>
                   <property name="text">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p
-                    align=&quot;center&quot;&gt;&lt;span
-                    style=&quot; color:#827a6c;&quot;&gt;eDPS
-                    : &lt;/span&gt;&lt;span style=&quot;
-                    color:#8787fe;&quot;&gt;{}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                   </string>
+                                                                                align=&quot;center&quot;&gt;&lt;span
+                                                                                style=&quot; color:#827a6c;&quot;&gt;eDPS
+                                                                                : &lt;/span&gt;&lt;span style=&quot;
+                                                                                color:#8787fe;&quot;&gt;{}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                                            </string>
                   </property>
                  </widget>
                 </item>
@@ -2104,20 +2087,20 @@
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QLabel {
-                    border: 1px solid #edc57d;
-                    background: #000;
-                    padding: 2px 3px 4px 2px;
-                    magin-bottom: 0px;
-                    }
-                   </string>
+                                                                                border: 1px solid #edc57d;
+                                                                                background: #000;
+                                                                                padding: 2px 3px 4px 2px;
+                                                                                magin-bottom: 0px;
+                                                                                }
+                                                                            </string>
                   </property>
                   <property name="text">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p
-                    align=&quot;center&quot;&gt;&lt;span
-                    style=&quot; color:#827a6c;&quot;&gt;pDPS
-                    : &lt;/span&gt;&lt;span style=&quot;
-                    color:#8787fe;&quot;&gt;{}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                   </string>
+                                                                                align=&quot;center&quot;&gt;&lt;span
+                                                                                style=&quot; color:#827a6c;&quot;&gt;pDPS
+                                                                                : &lt;/span&gt;&lt;span style=&quot;
+                                                                                color:#8787fe;&quot;&gt;{}&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                                            </string>
                   </property>
                  </widget>
                 </item>
@@ -2137,19 +2120,19 @@
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QLabel {
-                    border: 1px solid #edc57d;
-                    background: #000;
-                    padding: 2px 3px 4px 2px;
-                    magin-bottom: 0px;
-                    }
-                   </string>
+                                                                                border: 1px solid #edc57d;
+                                                                                background: #000;
+                                                                                padding: 2px 3px 4px 2px;
+                                                                                magin-bottom: 0px;
+                                                                                }
+                                                                            </string>
                   </property>
                   <property name="text">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p
-                    align=&quot;center&quot;&gt;&lt;span
-                    style=&quot; color:#999999;&quot;&gt;P S
-                    C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                   </string>
+                                                                                align=&quot;center&quot;&gt;&lt;span
+                                                                                style=&quot; color:#999999;&quot;&gt;P S
+                                                                                C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                                                            </string>
                   </property>
                  </widget>
                 </item>
@@ -2256,16 +2239,16 @@
             <widget class="QWidget" name="modpool_list" native="true">
              <property name="styleSheet">
               <string notr="true">QWidget {
-               border-image: none;
-               }
+                                                            border-image: none;
+                                                            }
 
-               QStackedWidget &gt; QWidget {
-               background-color: qlineargradient(spread:pad, x1:0, y1:0,
-               x2:1, y2:1, stop:0 rgba(30, 30, 30, 255), stop:1 rgba(75,
-               75, 75, 255));
-               border-left: 1px solid;
-               border-right: 1px solid;
-               border-top: none;
+                                                            QStackedWidget &gt; QWidget {
+                                                            background-color: qlineargradient(spread:pad, x1:0, y1:0,
+                                                            x2:1, y2:1, stop:0 rgba(30, 30, 30, 255), stop:1 rgba(75,
+                                                            75, 75, 255));
+                                                            border-left: 1px solid;
+                                                            border-right: 1px solid;
+                                                            border-top: none;
                                                             border-bottom: none;
                                                             }
                                                             QHeaderView::section {
@@ -2370,16 +2353,16 @@
                                                             QPushButton#implicit_btn::checked {
                                                             background-color: qlineargradient(spread:reflect, x1:0.5,
                                                             y1:0, x2:0.5, y2:0.5, stop:0 rgba(180, 99, 99, 255), stop:1
-               rgba(150, 83, 83, 255));
-               }
+                                                            rgba(150, 83, 83, 255));
+                                                            }
 
-               QFrame#modpool_list_frame {
-               border: none;
-               }
-               QFrame#modpool_btn_frame {
-               border: none;
-               }
-              </string>
+                                                            QFrame#modpool_list_frame {
+                                                            border: none;
+                                                            }
+                                                            QFrame#modpool_btn_frame {
+                                                            border: none;
+                                                            }
+                                                        </string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout">
               <property name="spacing">
@@ -2579,9 +2562,7 @@
                          </colorrole>
                          <colorrole role="Button">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -2619,9 +2600,7 @@
                          </colorrole>
                          <colorrole role="Base">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -2641,9 +2620,7 @@
                          </colorrole>
                          <colorrole role="Window">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -2683,9 +2660,7 @@
                          </colorrole>
                          <colorrole role="Button">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -2723,9 +2698,7 @@
                          </colorrole>
                          <colorrole role="Base">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -2745,9 +2718,7 @@
                          </colorrole>
                          <colorrole role="Window">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -2787,9 +2758,7 @@
                          </colorrole>
                          <colorrole role="Button">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -2827,9 +2796,7 @@
                          </colorrole>
                          <colorrole role="Base">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -2849,9 +2816,7 @@
                          </colorrole>
                          <colorrole role="Window">
                           <brush brushstyle="LinearGradientPattern">
-                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000"
-                                     endy="1.000000000000000" type="LinearGradient" spread="PadSpread"
-                                     coordinatemode="ObjectBoundingMode">
+                           <gradient startx="0.500000000000000" starty="0.000000000000000" endx="0.500000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
                             <gradientstop position="0.000000000000000">
                              <color alpha="255">
                               <red>112</red>
@@ -3073,9 +3038,9 @@
      <widget class="QWidget" name="page_3">
       <property name="styleSheet">
        <string notr="true">QFrame {
-        font-size: 16pt;
-        }
-       </string>
+                                font-size: 16pt;
+                                }
+                            </string>
       </property>
       <layout class="QVBoxLayout" name="page_3_layout"/>
      </widget>

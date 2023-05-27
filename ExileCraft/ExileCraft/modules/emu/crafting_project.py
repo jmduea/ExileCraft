@@ -57,7 +57,7 @@ class CraftingProject:
     """
     def __init__(self, data):
         self.id = data['id']
-        self.item_class_id = data['item_class_id']
+        self.item_class = data['item_class']
         self.rarity = data['rarity']
         self.name = data['name']
         self.base_item_id = data['base_item_id']
@@ -99,12 +99,13 @@ class CraftingProject:
         self.properties_armour = data['properties_armour']
         self.properties_evasion = data['properties_evasion']
         self.properties_energy_shield = data['properties_energy_shield']
+        self.properties_ward = data['properties_ward']
         self.properties_movement_speed = data['properties_movement_speed']
         self.properties_block = data['properties_block']
         self.properties_range = data['properties_range']
 
     def __str__(self):
-        return f"CraftingProject(id={self.id}, item_class_id={self.item_class_id}, rarity={self.rarity}," \
+        return f"CraftingProject(id={self.id}, item_class={self.item_class}, rarity={self.rarity}," \
                f" name={self.name}, base_item_id={self.base_item_id}, quality={self.quality}," \
                f" item_level={self.item_level}, sockets={self.sockets}, enchant={self.enchant}," \
                f" physical_damage_min={self.physical_damage_min}, physical_damage_max={self.physical_damage_max}," \
@@ -124,6 +125,7 @@ class CraftingProject:
                f" synthesis_item={self.synthesis_item}, implicits={self.implicits}, item_tags={self.item_tags}," \
                f" properties_armour={self.properties_armour}, properties_evasion={self.properties_evasion}," \
                f" properties_energy_shield={self.properties_energy_shield}," \
+               f" properties_ward={self.properties_ward}," \
                f" properties_movement_speed={self.properties_movement_speed}," \
                f" properties_block={self.properties_block}, properties_range={self.properties_range})"
 

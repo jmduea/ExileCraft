@@ -47,7 +47,7 @@ import re
 from enum import Enum
 
 # self
-from PyPoE.poe.constants import RARITY, SOCKET_COLOUR
+from modules.config.constants import RARITY, SOCKET_COLOUR
 
 # 3rd-party
 

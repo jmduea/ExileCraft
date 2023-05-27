@@ -1,26 +1,18 @@
-# ///////////////////////////////////////////////////////////////
-#
-# BY: WANDERSON M.PIMENTA
-# PROJECT MADE WITH: Qt Designer and PySide6
-# V: 1.0.0
-#
-# This project can be used freely for all uses, as long as they maintain the
-# respective credits only in the Python scripts, any information in the visual
-# interface (GUI) can be modified without any implication.
-#
-# There are limitations on Qt licenses if you want to use your products
-# commercially, I recommend reading them on the official website:
-# https://doc.qt.io/qtforpython/licenses.html
-#
-# ///////////////////////////////////////////////////////////////
-# IMPORT PACKAGES AND MODULES
-# ///////////////////////////////////////////////////////////////
-
 from .functions_main_window import *
 
 
 class SetupMainWindow:
+    """
+    This class sets up the main window of the application, including the left and right columns,
+    title bar, buttons, and other GUI elements. It also handles the resizing of the window and
+    the updating of comboboxes based on user interaction.
+
+    Attributes:
+        add_left_menus (list): A list of dictionaries, each representing a button to be added to the left menu.
+        add_title_bar_menus (list): A list of dictionaries, each representing a button to be added to the title bar.
+    """
     def __init__(self):
+        """ Initializes the SetupMainWindow class, setting up the UI. """
         super().__init__()
         self.ui.setup_ui(self)
     add_left_menus = [
@@ -82,14 +74,25 @@ class SetupMainWindow:
     ]
 
     def setup_btns(self):
+        """
+        Sets up the buttons for the UI, returning the sender of the button that was clicked.
+
+        Returns:
+            QPushButton: The button that was clicked.
+        """
         if self.ui.title_bar.sender() is not None:
             return self.ui.title_bar.sender()
         elif self.ui.left_menu.sender() is not None:
             return self.ui.left_menu.sender()
         elif self.ui.left_column.sender() is not None:
             return self.ui.left_column.sender()
+        elif self.ui.right_column.sender() is not None:
+            return self.ui.right_column.sender()
+        elif self.ui.load_pages.sender() is not None:
+            return self.ui.load_pages.sender()
 
     def setup_gui(self):
+        """ Sets up the GUI for the application, including the title, custom widgets, and animations. """
         self.setWindowTitle(self.settings["app_name"])
 
         if self.settings["custom_title_bar"]:
@@ -133,24 +136,6 @@ class SetupMainWindow:
         )
         MainFunctions.set_right_column_menu(self, self.ui.right_column.crafting_methods_menu)
 
-        # ///////////////////////////////////////////////////////////////
-        # EXAMPLE CUSTOM WIDGETS
-        # Here are added the custom widgets to pages and columns that
-        # were created using Qt Designer.
-        # This is just an example and should be deleted when creating
-        # your application.
-        #
-        # OBJECTS FOR LOAD PAGES, LEFT AND RIGHT COLUMNS
-        # You can access objects inside Qt Designer projects using
-        # the objects below:
-        #
-        # <OBJECTS>
-        # LEFT COLUMN: self.ui.left_column.menus
-        # RIGHT COLUMN: self.ui.right_column
-        # LOAD PAGES: self.ui.load_pages
-        # </OBJECTS>
-        # ///////////////////////////////////////////////////////////////
-
         settings = Settings()
         self.settings = settings.items
 
@@ -159,37 +144,6 @@ class SetupMainWindow:
 
         # LEFT COLUMN
         # ///////////////////////////////////////////////////////////////
-
-        # BTN 1
-        self.left_btn_1 = PyPushButton(
-            text="Btn 1",
-            radius=8,
-            color=self.themes["app_color"]["text_foreground"],
-            bg_color=self.themes["app_color"]["dark_one"],
-            bg_color_hover=self.themes["app_color"]["dark_three"],
-            bg_color_pressed=self.themes["app_color"]["dark_four"]
-        )
-        self.left_btn_1.setMaximumHeight(40)
-        self.ui.left_column.menus.btn_1_layout.addWidget(self.left_btn_1)
-
-        # BTN 2
-        self.left_btn_2 = PyPushButton(
-            text="Btn With Icon",
-            radius=8,
-            color=self.themes["app_color"]["text_foreground"],
-            bg_color=self.themes["app_color"]["dark_one"],
-            bg_color_hover=self.themes["app_color"]["dark_three"],
-            bg_color_pressed=self.themes["app_color"]["dark_four"]
-        )
-        self.icon = QIcon(Functions.set_svg_icon("icon_settings.svg"))
-        self.left_btn_2.setIcon(self.icon)
-        self.left_btn_2.setMaximumHeight(40)
-        self.ui.left_column.menus.btn_2_layout.addWidget(self.left_btn_2)
-
-        # BTN 3 - Default QPushButton
-        self.left_btn_3 = QPushButton("Default QPushButton")
-        self.left_btn_3.setMaximumHeight(40)
-        self.ui.left_column.menus.btn_3_layout.addWidget(self.left_btn_3)
 
         # RIGHT COLUMN
         # ///////////////////////////////////////////////////////////////
@@ -231,6 +185,7 @@ class SetupMainWindow:
         self.ui.right_column.btn_2_layout.addWidget(self.right_btn_2)
 
     def resize_grips(self):
+        """ Resizes the grips of the window based on the current window size. """
         if self.settings["custom_title_bar"]:
             self.left_grip.setGeometry(5, 10, 10, self.height())
             self.right_grip.setGeometry(self.width() - 15, 10, 10, self.height())
@@ -241,20 +196,37 @@ class SetupMainWindow:
             self.bottom_right_grip.setGeometry(self.width() - 20, self.height() - 20, 15, 15)
 
     def setup_comboboxes(self):
+        """ Sets up the comboboxes in the UI, connecting their signals to the appropriate slots for updating the UI. """
+        # Base group combobox connections
+        self.ui.left_column.menus.base_group_combobox.currentTextChanged.connect(
+            self.combobox_updater.clear_item_view_box_background)
+        self.ui.left_column.menus.base_group_combobox.currentTextChanged.connect(
+            self.combobox_updater.clear_labels)
+        self.ui.left_column.menus.base_group_combobox.currentIndexChanged.connect(
+            self.combobox_updater.update_base_combobox)
+
+        # Base combobox connections
+        self.ui.left_column.menus.base_combobox.currentTextChanged.connect(
+            self.combobox_updater.clear_labels)
+        self.ui.left_column.menus.base_combobox.currentTextChanged.connect(
+            self.combobox_updater.clear_item_view_box_background)
+        self.ui.left_column.menus.base_combobox.currentIndexChanged.connect(
+            self.combobox_updater.get_base_items_for_combobox)
+
+        # Base item combobox connections
         self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(
             self.combobox_updater.set_item_header_label)
         self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(
             self.combobox_updater.set_item_view_box_background)
-        self.ui.left_column.menus.base_group_combobox.currentTextChanged.connect(
-            self.combobox_updater.clear_item_view_box_background)
-        self.ui.left_column.menus.base_combobox.currentTextChanged.connect(
-            self.combobox_updater.clear_item_view_box_background)
-        self.ui.left_column.menus.item_level_spinbox.valueChanged.connect(
+        self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(
+            self.combobox_updater.update_labels)
+
+        # Item level spinbox connections
+        self.ui.left_column.menus.item_level_spinbox.editingFinished.connect(
             self.combobox_updater.set_item_level)
-        self.ui.left_column.menus.item_quality_spinbox.valueChanged.connect(
+
+        # Quality Spinbox connections
+        self.ui.left_column.menus.item_quality_spinbox.editingFinished.connect(
             self.combobox_updater.set_item_quality)
-        self.ui.left_column.menus.base_group_combobox.currentIndexChanged.connect(
-            self.combobox_updater.update_base_combobox)
-        self.ui.left_column.menus.base_combobox.currentIndexChanged.connect(
-            self.combobox_updater.get_base_items_for_combobox)
-        self.ui.left_column.menus.base_item_combobox.currentTextChanged.connect(self.combobox_updater.update_labels)
+        self.ui.left_column.menus.item_quality_spinbox.editingFinished.connect(
+            self.combobox_updater.update_labels)

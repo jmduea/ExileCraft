@@ -27,9 +27,7 @@ class Settings(object):
     # ///////////////////////////////////////////////////////////////
     json_file = r"settings.json"
     app_path = os.path.abspath(os.getcwd())
-    print(app_path)
     settings_path = os.path.normpath(os.path.join(app_path, json_file))
-    print(settings_path)
     if not os.path.isfile(settings_path):
         print(f"WARNING: \"settings.json\" not found! check in the folder {settings_path}")
 

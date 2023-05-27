@@ -1,0 +1,6 @@
+
+lpython:S18549"ORemove this assignment to local variable 'quitAction'; the value is never used.(ò›ÕËüÿÿÿÿ
+lpython:S1542"ORename function "SetupTray" to match the regular expression ^[a-z_][a-z0-9_]*$.(Øíˆúÿÿÿÿ
+Lpython:S1135."4Complete the task associated to this "TODO" comment.(ËüÏ
+Qpython:S11352"4Complete the task associated to this "TODO" comment.(æ¥›ûÿÿÿÿ
+Qpython:S11356"4Complete the task associated to this "TODO" comment.(œäõ¨ÿÿÿÿÿ

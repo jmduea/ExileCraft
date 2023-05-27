@@ -51,7 +51,7 @@ Documentation
 
 # 3rd-party
 
-from PyPoE.poe.constants import MOD_DOMAIN, MOD_GENERATION_TYPE, MOD_STATS_RANGE
+from modules.config.constants import MOD_DOMAIN, MOD_GENERATION_TYPE, MOD_STATS_RANGE
 # self
 from PyPoE.poe.file.dat import DatRecord
 
