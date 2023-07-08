@@ -79,7 +79,7 @@ def _regex_build_from_handler_dict(handler_dict):
     conditionals = []
     for k, v in handler_dict.items():
         conditionals.append(_regex_build_single_re(k, v))
-
+    
     return re.compile('|'.join(conditionals), re.MULTILINE | re.UNICODE)
 
 
@@ -104,20 +104,20 @@ class ItemSocket:
     'colour' : SocketColour
         Colour of the socket
     """
-
+    
     __slots__ = ('index', 'colour')
-
+    
     def __init__(self, index, colour):
         self.index = index
         self.colour = colour
-
+    
     def __repr__(self):
         return 'ItemSocket(%s, %s)' % (self.index, repr(self.colour))
-
+    
     def __eq__(self, other):
         if not isinstance(other, ItemSocket):
             return False
-
+        
         return self.index == other.index and self.colour == other.colour
 
 
@@ -260,22 +260,22 @@ class ItemParser:
         r'^\-{8}$',
         re.UNICODE | re.MULTILINE
     )
-
+    
     _re_split_newline = re.compile(
         '(?:(?:\r|)\n)',
         re.UNICODE
     )
-
+    
     _re_replace = re.compile(
         r' \((augmented|unmet)\)',
         re.UNICODE
     )
-
+    
     _re_rarity = re.compile(
         r'^Rarity: (?P<rarity>.*)$',
         re.UNICODE | re.MULTILINE
     )
-
+    
     _stat_handlers = {
         ItemTypes.ITEM: {
             'map_tier': {
@@ -394,7 +394,7 @@ class ItemParser:
             },
         },
     }
-
+    
     _re_stat_handlers = {
         ItemTypes.ITEM: _regex_build_from_handler_dict(
             _stat_handlers[ItemTypes.ITEM]
@@ -406,7 +406,7 @@ class ItemParser:
             _stat_handlers[ItemTypes.CURRENCY]
         ),
     }
-
+    
     _requirement_handlers = {
         'required_level': {
             're': 'Level',
@@ -425,15 +425,15 @@ class ItemParser:
             'func': int,
         },
     }
-
+    
     _re_requirement_handlers = _regex_build_from_handler_dict(_requirement_handlers)
-
+    
     _re_requirement = re.compile(
         '^Requirements:',
         # No multi line, match start of section
         re.UNICODE
     )
-
+    
     # Uses similar syntax, but is built for each value separately
     _re_singular = {
         'limit': {
@@ -444,36 +444,36 @@ class ItemParser:
             're': 'Item Level',
             'func': int,
         },
-
+        
         'gem_tags': {
             're2': r'^(?P<gem_tags>[^:]+)$',
             'func': lambda s: s.split(', '),
         },
     }
     _regex_update_singular_dict(_re_singular)
-
+    
     _re_sockets = _re_sockets_split = re.compile(
         r'^Sockets: (?P<sockets>.+)$',
         re.UNICODE
     )
-
+    
     _re_sockets_split = re.compile(
         '( |-)',
         re.UNICODE
     )
-
+    
     _re_help_text_item_name = re.compile(
         '(Jewel|Map)',
         re.UNICODE
     )
-
+    
     _re_is_map = re.compile(
         '('
         'Map'
         ')',
         re.UNICODE
     )
-
+    
     _re_is_vaal_fragment = re.compile(
         '('
         'Sacrifice at (Dawn|Midnight|Noon|Dusk)|'
@@ -481,24 +481,24 @@ class ItemParser:
         ')',
         re.UNICODE
     )
-
+    
     _re_is_jewel = re.compile(
         '('
         '(Viridian|Cobalt|Crimson) Jewel'
         ')',
         re.UNICODE
     )
-
+    
     _re_prefix = re.compile(
         '^(?P<prefix>[\S]+) .+$',
         re.UNICODE,
     )
-
+    
     _re_suffix = re.compile(
         '^.+ (?P<suffix>of [\S]+)$',
         re.UNICODE,
     )
-
+    
     def __init__(self, item_info_string):
         """
         Creates a new ItemParser instance and attempts to parse the given
@@ -510,25 +510,25 @@ class ItemParser:
             The complete string to parse
         """
         self._type = None
-
+        
         sections = self._re_split.split(item_info_string)
         if not sections:
             raise ValueError('No description sections found - malformed input?')
-
+        
         current_sec = -len(sections)
-
+        
         def increment_sec(value=True):
             # Python 3 is neat
             nonlocal current_sec
             if value:
                 current_sec += 1
-
+        
         def section(index=None, offset=0):
             return sections[index or (current_sec + offset)].strip('\r\n')
-
+        
         # Header section
         header = self._split(section())
-
+        
         self.base_item_name = header[-1]
         if len(header) == 3:
             self.name = header[1]
@@ -537,21 +537,21 @@ class ItemParser:
         else:
             raise ValueError('Header section is of unsupported length: %s' %
                              len(header))
-
+        
         self.name = self.name
-
+        
         if len(header) != 1:
             rarity = self._re_rarity.match(header[0])
             if rarity is None:
                 raise ValueError('No rarity found in the item header')
-
+            
             rarity = rarity.group('rarity')
             for rarity_const in RARITY:
                 if rarity_const.name_upper == rarity:
                     self.rarity = rarity_const
                     self._type = ItemTypes.ITEM
                     break
-
+            
             if self._type is None:
                 if rarity == 'Gem':
                     self._type = ItemTypes.GEM
@@ -562,31 +562,31 @@ class ItemParser:
             elif self.rarity == RARITY.MAGIC:
                 self.prefix = None
                 self.suffix = None
-
+                
                 match = self._re_suffix.match(self.base_item_name)
                 if match:
                     self.suffix = match.group('suffix')
                     self.base_item_name = self.base_item_name.replace(' ' + self.suffix, '')
-
+                
                 # Can't reliably detect the prefix yet. Will have to do based on
                 # stats
         else:
             # case for MTX items
             self._type = ItemTypes.CURRENCY
-
+        
         is_map = self._re_is_map.search(self.base_item_name)
         is_jewel = self._re_is_jewel.search(self.base_item_name)
         is_vaal_fragment = self._re_is_vaal_fragment.search(self.base_item_name)
-
+        
         increment_sec()
-
+        
         # Base stats sections (not from mods)
         next = section()
         if self._type == ItemTypes.GEM:
             next = self._re_split_newline.split(next, 1)
             self._handle_singular(next[0], 'gem_tags')
             next = next[1]
-
+        
         if self._type in self._stat_handlers:
             increment_sec(
                 self._handle_handlers(
@@ -595,7 +595,7 @@ class ItemParser:
                     self._stat_handlers[self._type]
                 )
             )
-
+        
         # Requirements section
         if self._re_requirement.match(section()):
             increment_sec(
@@ -605,7 +605,7 @@ class ItemParser:
                     self._requirement_handlers,
                 )
             )
-
+        
         # Sockets section
         match = self._re_sockets.match(section())
         if match:
@@ -621,12 +621,12 @@ class ItemParser:
                         if socket_colour.char == char:
                             found = True
                             break
-
+                    
                     if not found:
                         raise ValueError('Unsupported socket colour: %s' % char)
-
+                    
                     self.sockets.append(ItemSocket(i // 2, socket_colour))
-
+                    
                     if last_linked:
                         self.links[-1].append(self.sockets[-1])
                 else:
@@ -643,20 +643,20 @@ class ItemParser:
         else:
             self.sockets = None
             self.links = None
-
+        
         # Limited to section
         increment_sec(self._handle_singular(section(), 'limit'))
-
+        
         # Item level section
         increment_sec(self._handle_singular(section(), 'item_level'))
-
+        
         # Stack size
         # if self._type == ITEM_TYPES.CURRENCY:
         #    increment_sec(self._handle_singular(section(), 'stack_size'))
-
+        
         # stats, flavour text and help text would be here.
         # Below this point we're going backwards
-
+        
         # Corrupted section
         last_sec = -1
         if section(index=last_sec) == 'Corrupted':
@@ -664,12 +664,12 @@ class ItemParser:
             self.is_corrupted = True
         else:
             self.is_corrupted = False
-
+        
         # Help text
         if self._type in (ItemTypes.GEM, ItemTypes.CURRENCY) or is_jewel or is_map or is_vaal_fragment:
             self.help_text = section(index=last_sec)
             last_sec -= 1
-
+        
         # Flavour text
         if (self._type == ItemTypes.ITEM and self.rarity == RARITY.UNIQUE) or is_vaal_fragment:
             self.flavour_text = section(index=last_sec)
@@ -678,7 +678,7 @@ class ItemParser:
             # adjust the pointer so stats parsing works.
             if self.flavour_text != 'Unidentified':
                 last_sec -= 1
-
+        
         # Implicit section & stats section
         # We should be left at between 0 or 2 sections
         remaining = abs((last_sec + 1) - current_sec)
@@ -712,30 +712,30 @@ class ItemParser:
                 self.description = section()
             else:
                 raise ValueError('All sections (%s) should be parsed now.' % remaining)
-
+        
         # Do a final pass on the prefix for magic items
         if self._type == ItemTypes.ITEM and self.rarity == RARITY.MAGIC and (
                 (self.suffix is None and len(self.stats) >= 1) or (self.suffix is not None and len(self.stats) >= 2)):
             match = self._re_prefix.match(self.base_item_name)
             self.prefix = match.group('prefix')
             self.base_item_name = self.base_item_name.replace(self.prefix + ' ', '')
-
+    
     def _split(self, section):
         return self._re_split_newline.split(section)
-
+    
     def _handle_singular(self, string, key):
         match = self._re_singular[key]['re_compiled'].match(string)
         if match:
             setattr(self, key, self._re_singular[key]['func'](match.group(key)))
             return True
-
+        
         setattr(self, key, None)
         return False
-
+    
     def _handle_handlers(self, string, regex, handlers):
         for k in handlers:
             setattr(self, k, None)
-
+        
         found = False
         for match in regex.finditer(string):
             found = True
@@ -746,5 +746,48 @@ class ItemParser:
                     self._re_replace.sub('', match.group(match.lastgroup))
                 )
             )
-
+        
         return found
+
+
+if __name__ == "__main__":
+    item_data = """
+    Item Class: Gloves
+    Rarity: Rare
+    Ghoul Talons
+    Carnal Mitts
+    --------
+    Quality: +20% (augmented)
+    Evasion Rating: 235 (augmented)
+    Energy Shield: 69 (augmented)
+    --------
+    Requirements:
+    Level: 70
+    Str: 79
+    Dex: 43
+    Int: 48
+    --------
+    Sockets: R-R B-G
+    --------
+    Item Level: 83
+    --------
+    Trigger Word of Spite when Hit (enchant)
+    --------
+    Projectiles Pierce an additional Target (implicit)
+    9% increased Attack Speed (implicit)
+    --------
+    +34 to Dexterity
+    Adds 8 to 17 Cold Damage to Attacks
+    +63 to Evasion Rating
+    23% increased Evasion and Energy Shield
+    +27 to maximum Energy Shield
+    +45% to Lightning Resistance
+    Gain 4 Mana per Enemy Killed
+    11% increased Stun and Block Recovery
+    Searing Exarch Item
+    Eater of Worlds Item
+    """
+    
+    item = ItemParser(item_data)
+    
+    print(item.stats)
