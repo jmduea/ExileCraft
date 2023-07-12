@@ -21,101 +21,33 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
 # ##############################################################################
-
 import os
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional
+from typing import List
 
-from sqlalchemy import String, Boolean, ForeignKey, Integer
+from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from modules.data.models.association_models import mod_stats_association
 from modules.data.models.base_model import Base, intpk
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
 target_dir = script_dir.parent / 'json'
 
 
+@dataclass
 class Stat(Base):
     __tablename__ = 'stats'
+    
+    # Table Columns
+    name: Mapped[str] = mapped_column(String(250), unique=True)
+    id: Mapped[intpk] = mapped_column(init=False)
+    is_aliased: Mapped[bool] = False
+    is_local: Mapped[bool] = False
 
-    id: Mapped[intpk]
-    stat: Mapped[str] = mapped_column(String, unique=True)
-    alias: Mapped[str] = mapped_column(String, default='')
-    is_aliased: Mapped[bool] = mapped_column(Boolean, default=False)
-    is_local: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Many-to-Many Relationships
+    mods: Mapped[List["Mod"]] = relationship(default_factory=list, secondary='mod_stat_values',
+                                             back_populates='mod_stats', init=False)
 
-    # Relationships
-    mods = relationship('Mod', secondary=mod_stats_association, back_populates='mod_stats')
-    stat_translations = relationship('StatTranslation', back_populates='stats')
-    stat_values = relationship('StatValue', back_populates='stats')
-
-
-class StatValue(Base):
-    __tablename__ = 'stat_values'
-
-    id: Mapped[intpk]
-    stat_id: Mapped[int] = mapped_column(Integer, ForeignKey('stats.id'))
-    stat_min_value: Mapped[int] = mapped_column(Integer)
-    stat_max_value: Mapped[int] = mapped_column(Integer)
-
-    # Relationships
-    stats = relationship('Stat', back_populates='stat_values')
-
-
-class StatTranslation(Base):
-    __tablename__ = 'stat_translations'
-
-    id: Mapped[intpk]
-    stat_id: Mapped[int] = mapped_column(String, ForeignKey('stats.id'))
-    hidden: Mapped[bool] = mapped_column(Boolean, default=False)
-
-    # Relationships
-    stats = relationship('Stat', back_populates='stat_translations')
-    english_translations = relationship("EnglishTranslation", back_populates='stat_translations')
-
-
-class EnglishTranslation(Base):
-    __tablename__ = 'english_translations'
-
-    id: Mapped[intpk]
-    stat_translation_id: Mapped[int] = mapped_column(Integer, ForeignKey('stat_translations.id'))
-    stat_string: Mapped[str] = mapped_column(String, nullable=False)
-
-    # Relationships
-    stat_translations = relationship('StatTranslation', back_populates='english_translations')
-    conditions = relationship('StatCondition', back_populates='english_translations')
-    formats = relationship('StatFormat', back_populates='english_translations')
-    index_handlers = relationship('StatIndexHandler', back_populates='english_translations')
-
-
-class StatCondition(Base):
-    __tablename__ = 'stat_conditions'
-
-    id: Mapped[intpk]
-    english_translation_id: Mapped[int] = mapped_column(Integer, ForeignKey('english_translations.id'))
-    min: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
-    max: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
-    negated: Mapped[bool] = mapped_column(Boolean, default=False)
-
-    english_translations = relationship("EnglishTranslation", back_populates="conditions")
-
-
-class StatFormat(Base):
-    __tablename__ = 'stat_formats'
-
-    id: Mapped[intpk]
-    english_translation_id: Mapped[int] = mapped_column(Integer, ForeignKey('english_translations.id'))
-    format: Mapped[str] = mapped_column(String, nullable=False)
-
-    english_translations = relationship("EnglishTranslation", back_populates="formats")
-
-
-class StatIndexHandler(Base):
-    __tablename__ = 'stat_index_handlers'
-
-    id: Mapped[intpk]
-    english_translation_id: Mapped[int] = mapped_column(Integer, ForeignKey('english_translations.id'))
-    handler: Mapped[str] = mapped_column(String, nullable=False)
-
-    english_translations = relationship("EnglishTranslation", back_populates="index_handlers")
+    # One-to-Many Relationships
+    mod_stat_values = relationship("ModStatValue", back_populates='stat', init=False)
