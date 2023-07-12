@@ -23,38 +23,46 @@
 # ##############################################################################
 
 import os
+from dataclasses import dataclass
 from pathlib import Path
 from typing import List
 
 from sqlalchemy import String, Integer, ForeignKey
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship, MappedAsDataclass
 
 from modules.data.models.association_models import mod_tags_association, item_tags_association, \
     mod_adds_tags_association, mod_spawn_weights_association, mod_implicit_tags_association, item_class_association, \
     item_class_subtype_association
-from modules.data.models.base_model import Base
+from modules.data.models.base_model import Base, intpk
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
 target_dir = script_dir.parent / 'json'
 
-
+@dataclass
 class Tag(Base):
     __tablename__ = 'tags'
     
+    id: Mapped[intpk] = mapped_column(init=False)
     tag: Mapped[str] = mapped_column(unique=True)
     
     # Relationships
     
     # Relationships with a secondary association table included
-    mods: Mapped[List["Mod"]] = relationship(secondary=mod_tags_association, back_populates='tags')
-    mod_implicit_tags = relationship('Mod', secondary=mod_implicit_tags_association, back_populates='implicit_tags')
-    mod_adds_tags = relationship('Mod', secondary=mod_adds_tags_association, back_populates='added_tags')
-    mod_spawn_weights = relationship('Mod', secondary=mod_spawn_weights_association, back_populates='tag_weights')
+    mods: Mapped[List["Mod"]] = relationship(default_factory=list, secondary=mod_tags_association,
+                                             back_populates='tags',
+                                             init=False)
+    mod_implicit_tags: Mapped["Mod"] = relationship(default=None, secondary=mod_implicit_tags_association,
+                                                    back_populates='implicit_tags', init=False)
+    mod_adds_tags: Mapped["Mod"] = relationship(default=None, secondary=mod_adds_tags_association,
+                                                back_populates='added_tags', init=False)
+    mod_spawn_weights: Mapped["Mod"] = relationship(default=None, secondary=mod_spawn_weights_association,
+                                                    back_populates='tag_weights', init=False)
     
-    items: Mapped[List["Item"]] = relationship(secondary=item_tags_association, back_populates='tags')
-    item_class: Mapped[List["ItemClass"]] = relationship(secondary=item_class_association, back_populates='tags')
-    item_class_subtypes: Mapped[List["ItemClassSubtype"]] = relationship(secondary=item_class_subtype_association,
-                                                                         back_populates='tags')
-    
-    def __repr__(self):
-        return f"Tags(id={self.id!r}, tag={self.tag!r})"
+    items: Mapped[List["Item"]] = relationship(default_factory=list, secondary=item_tags_association,
+                                               back_populates='tags', init=False)
+    item_class: Mapped[List["ItemClass"]] = relationship(default_factory=list, secondary=item_class_association,
+                                                         back_populates='tags',
+                                                         init=False)
+    item_class_subtypes: Mapped[List["ItemClassSubtype"]] = relationship(
+        default_factory=list, secondary=item_class_subtype_association,
+        back_populates='tags', init=False)
