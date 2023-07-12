@@ -80,14 +80,18 @@ class ItemClassSubtypeMixin:
         return relationship('ItemClassSubtype')
 
 
-class InfluencedItemMixin:
-    has_influence: Mapped[bool] = mapped_column(Boolean, default=True)
-    has_crusader_influence: Mapped[bool] = mapped_column(Boolean, default=False)
-    has_hunter_influence: Mapped[bool] = mapped_column(Boolean, default=False)
-    has_redeemer_influence: Mapped[bool] = mapped_column(Boolean, default=False)
-    has_warlord_influence: Mapped[bool] = mapped_column(Boolean, default=False)
-    has_shaper_influence: Mapped[bool] = mapped_column(Boolean, default=False)
-    has_elder_influence: Mapped[bool] = mapped_column(Boolean, default=False)
+@dataclass
+class InfluencedItemMixin(MappedAsDataclass):
+    has_influence: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    has_crusader_influence: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    has_hunter_influence: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    has_redeemer_influence: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    has_warlord_influence: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    has_shaper_influence: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    has_elder_influence: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    is_eater_of_worlds_item: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    is_searing_exarch_item: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
+    is_synthesis_item: Mapped[bool] = mapped_column(deferred=True, deferred_group='influence_flags')
 
 
 class ArmourBaseMixin:
