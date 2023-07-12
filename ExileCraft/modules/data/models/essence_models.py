@@ -31,7 +31,6 @@ from typing import Optional
 from sqlalchemy import String, ForeignKey, Integer, Boolean, event
 from sqlalchemy.orm import Mapped, mapped_column, relationship, Session
 
-from modules.data.models.association_models import essence_mods_association
 from modules.data.models.base_model import Base, intpk
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
