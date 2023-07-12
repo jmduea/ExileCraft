@@ -1,122 +1,150 @@
-# ##############################################################################
-#  MIT License
+#   MIT License
 #
-#  Copyright (c) 2023 Jon Duea
+#   Copyright (c) 2023 Jon Duea
 #
-#  Permission is hereby granted, free of charge, to any person obtaining a copy
-#  of this software and associated documentation files (the "Software"), to deal
-#  in the Software without restriction, including without limitation the rights
-#  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-#  copies of the Software, and to permit persons to whom the Software is
-#  furnished to do so, subject to the following conditions:
+#   Permission is hereby granted, free of charge, to any person obtaining a copy
+#   of this software and associated documentation files (the "Software"), to deal
+#   in the Software without restriction, including without limitation the rights
+#   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#   copies of the Software, and to permit persons to whom the Software is
+#   furnished to do so, subject to the following conditions:
 #
-#  The above copyright notice and this permission notice shall be included in all
-#  copies or substantial portions of the Software.
+#   The above copyright notice and this permission notice shall be included in all
+#   copies or substantial portions of the Software.
 #
-#  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-#  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-#  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-#  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-#  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-#  SOFTWARE.
-# ##############################################################################
-import json
+#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#   SOFTWARE.
+
 import os
-
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional, List
+from typing import List
 
-from sqlalchemy import String, ForeignKey, Integer, Boolean, event
-from sqlalchemy.ext.hybrid import hybrid_method
-from sqlalchemy.orm import Mapped, mapped_column, relationship, Session, joinedload
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from modules.data.models.association_models import mod_tags_association, item_implicits_association, \
-    mod_implicit_tags_association, mod_stats_association, mod_adds_tags_association, mod_spawn_weights_association, \
+    mod_implicit_tags_association, mod_adds_tags_association, mod_spawn_weights_association, \
     fossil_mods_association
-from modules.data.models.base_model import Base, intpk
+from modules.data.models.base_model import Base, intpk, str50
 from modules.data.models.fossil_models import Fossil
-from modules.data.models.stat_models import StatTranslation, Stat
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
 target_dir = script_dir.parent / 'json'
 
+MOD_MAX_STATS = 6
+MOD_STATS_RANGE = range(1, MOD_MAX_STATS + 1)
 
+
+@dataclass
 class Mod(Base):
     __tablename__ = 'mods'
     
     # Table Columns
-    mod: Mapped[str] = mapped_column(String)
-    level_req: Mapped[int] = mapped_column(Integer)
-    name: Mapped[str] = mapped_column(String)
-    is_essence_only: Mapped[bool] = mapped_column(Boolean, default=False)
-    domain_id: Mapped[int] = mapped_column(Integer, ForeignKey('domains.id'))
-    generation_type_id: Mapped[int] = mapped_column(Integer, ForeignKey('generation_types.id'))
-    mod_group_id: Mapped[int] = mapped_column(Integer, ForeignKey('mod_groups.id'))
-    mod_type_id: Mapped[int] = mapped_column(Integer, ForeignKey('mod_types.id'))
+    mod: Mapped[str]
+    level_req: Mapped[int]
+    name: Mapped[str]
+    is_essence_only: Mapped[bool]
+    domain_id: Mapped[int] = mapped_column(ForeignKey('mod_domains.id'), deferred=True, deferred_group='mod_details')
+    generation_type_id: Mapped[int] = mapped_column(ForeignKey('mod_generation_types.id'), deferred=True,
+                                                    deferred_group='mod_details')
+    mod_group_id: Mapped[int] = mapped_column(ForeignKey('mod_groups.id'), deferred=True, deferred_group='mod_details')
+    mod_type_id: Mapped[int] = mapped_column(ForeignKey('mod_types.id'), deferred=True, deferred_group='mod_details')
+    id: Mapped[intpk] = mapped_column(init=False)
     
-    @hybrid_method
-    def get_translation(self):
-        for mod_stat in self.mod_stats:
-            stat_id = mod_stat.stat_id
-            stat_min_value = mod_stat.stat_min_value
-            stat_max_value = mod_stat.stat_max_value
-            
-            stat = Stat.query.get(stat_id)
-            for stat_translation in stat.stat_translations:
-                for english_translation in stat_translation.english_translations:
-                    conditions = english_translation.conditions
-                    formats = english_translation.formats
-                    
-                for value in range(stat_min_value, stat_max_value + 1):
-                    if self.check_conditions(conditions, value):
-                        for format in formats:
-                            yield self.format_translation(format, value)
-                        
-    @hybrid_method
-    def check_conditions(self, conditions, value):
-        for condition in conditions:
-            if (condition.min or float('-inf')) <= value <= (condition.max or float('inf')):
-                return not condition.negated
-        return False
-    
-    @hybrid_method
-    def format_translation(self, translation, value):
-        for format in translation.formats:
-            return format.format.format(value)
-
     # Relationships
-    domain = relationship('Domain', back_populates='mods')  # Many-to-one relationship
-    generation_type = relationship('GenerationType', back_populates='mods')  # Many-to-one relationship
-    mod_groups: Mapped["ModGroup"] = relationship('ModGroup', back_populates='mods', foreign_keys=[mod_group_id])
-    mod_types: Mapped["ModType"] = relationship('ModType', back_populates='mods', foreign_keys=[mod_type_id])
+    domain = relationship("ModDomain", back_populates='mods')
+    generation_type = relationship("ModGenerationType", back_populates='mods')
+    mod_group = relationship("ModGroup", back_populates='mods')
+    mod_type = relationship("ModType", back_populates='mods')
+    translation: Mapped["Translation"] = relationship("Translation", back_populates='mod')
     
-    # Relationships with a secondary association table included
-    items: Mapped[List["Item"]] = relationship(secondary=item_implicits_association, back_populates='item_implicits')
-    implicit_tags = relationship('Tag', secondary=mod_implicit_tags_association, back_populates='mod_implicit_tags')
-    tags = relationship('Tag', secondary=mod_tags_association, back_populates='mods')
-    mod_stats: Mapped[List["Stat"]] = relationship(secondary=mod_stats_association, back_populates='mods')
-    added_tags = relationship('Tag', secondary=mod_adds_tags_association, back_populates='mod_adds_tags')
-    tag_weights = relationship('Tag', secondary=mod_spawn_weights_association, back_populates='mod_spawn_weights')
+    # Many-to-Many Relationships
+    mod_stat_values: Mapped[List["ModStatValue"]] = relationship(default_factory=list, back_populates='mod')
+    items: Mapped[List["Item"]] = relationship(default_factory=list, secondary=item_implicits_association,
+                                               back_populates='item_implicits', lazy='dynamic')
+    implicit_tags: Mapped[List["Tag"]] = relationship(default_factory=list, secondary=mod_implicit_tags_association,
+                                                      back_populates='mod_implicit_tags', lazy='dynamic')
+    tags: Mapped[List["Tag"]] = relationship(default_factory=list, secondary=mod_tags_association,
+                                             back_populates='mods', lazy='dynamic')
+    mod_stats: Mapped[List["Stat"]] = relationship(default_factory=list, secondary='mod_stat_values',
+                                                   back_populates='mods', lazy='dynamic')
+    added_tags: Mapped[List["Tag"]] = relationship(default_factory=list, secondary=mod_adds_tags_association,
+                                                   back_populates='mod_adds_tags', lazy='dynamic')
+    tag_weights: Mapped[List["Tag"]] = relationship(default_factory=list, secondary=mod_spawn_weights_association,
+                                                    back_populates='mod_spawn_weights', lazy='dynamic')
     # essences = relationship('Essences', secondary=essence_mods_association, back_populates='mods')
-    fossils: Mapped["Fossil"] = relationship('Fossil', secondary=fossil_mods_association, back_populates='mods')
+    fossils: Mapped[List["Fossil"]] = relationship(default_factory=list, secondary=fossil_mods_association,
+                                                   back_populates='mods', lazy='dynamic')
 
 
+@dataclass
 class ModType(Base):
     __tablename__ = 'mod_types'
     
-    id: Mapped[intpk]
-    mod_type: Mapped[str] = mapped_column(String(180))
+    # Table Columns
+    mod_type: Mapped[str50]
+    id: Mapped[intpk] = mapped_column(init=False)
     
     # Relationships
-    mods: Mapped[List["Mod"]] = relationship('Mod', back_populates='mod_types', foreign_keys=[Mod.mod_type_id])
+    mods: Mapped[List["Mod"]] = relationship(default_factory=list, back_populates='mod_type', foreign_keys=[
+        Mod.mod_type_id], init=False)
 
 
+@dataclass
+class ModGenerationType(Base):
+    __tablename__ = 'mod_generation_types'
+    
+    # Table Columns
+    id: Mapped[intpk] = mapped_column(init=False)
+    generation_type: Mapped[str] = mapped_column(unique=True)
+    
+    # Relationships
+    mods: Mapped[List["Mod"]] = relationship(default_factory=list, back_populates='generation_type', init=False)
+
+
+@dataclass
+class ModDomain(Base):
+    __tablename__ = 'mod_domains'
+    
+    # Table Columns
+    id: Mapped[intpk] = mapped_column(init=False)
+    domain: Mapped[str] = mapped_column(unique=True)
+    
+    # Relationships
+    mods: Mapped[List["Mod"]] = relationship(default_factory=list, back_populates='domain', init=False)
+    items: Mapped[List["Item"]] = relationship(default_factory=list, back_populates='domain', init=False)
+
+
+@dataclass
 class ModGroup(Base):
     __tablename__ = 'mod_groups'
     
-    id: Mapped[intpk]
-    group: Mapped[str] = mapped_column(String(255))
+    # Table Columns
+    group: Mapped[str50]
+    id: Mapped[intpk] = mapped_column(init=False)
     
     # Relationships
-    mods: Mapped[List["Mod"]] = relationship('Mod', back_populates='mod_groups', foreign_keys=[Mod.mod_group_id])
+    mods: Mapped[List["Mod"]] = relationship(default_factory=list, back_populates='mod_group', foreign_keys=[
+        Mod.mod_group_id], init=False)
+
+
+@dataclass
+class ModStatValue(Base):
+    __tablename__ = 'mod_stat_values'
+    
+    # Table Columns
+    stat_min_value: Mapped[int]
+    stat_max_value: Mapped[int]
+    stat_id: Mapped[int] = mapped_column(ForeignKey('stats.id'))
+    mod_id: Mapped[int] = mapped_column(ForeignKey('mods.id'))
+    id: Mapped[intpk] = mapped_column(init=False)
+    
+    # Relationships
+    mod = relationship("Mod", back_populates='mod_stat_values', init=False)
+    stat = relationship("Stat", back_populates='mod_stat_values', init=False)
