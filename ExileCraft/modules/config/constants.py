@@ -47,7 +47,10 @@ __all__ = [
     'subtype_tags_map',
     'armour_subtypes',
     'ITEM_PROPERTIES',
-    'ITEM_REQUIREMENTS'
+    'ITEM_REQUIREMENTS',
+    'generation_type_blacklist',
+    'ITEM_PROPERTIES_MAP'
+    
 ]
 
 item_types = [
@@ -358,6 +361,44 @@ ITEM_PROPERTIES = [
     ("Attacks Per Second", "attacks_per_second", "#fff")
 ]
 
+ITEM_PROPERTIES_MAP = {
+    'Armour': {
+        'armour_min': 'min',
+        'armour_max': 'max',
+        'evasion_min': 'min',
+        'evasion_max': 'max',
+        'energy_shield_min': 'min',
+        'energy_shield_max': 'max',
+        'ward_min': 'min',
+        'ward_max': 'max',
+        'block': 'block',
+        'movement_penalty': 'movement_speed'
+    },
+    'One Hand Weapon': {
+        'attack_time': 'attack_time',
+        'critical_strike_chance': 'critical_strike_chance',
+        'physical_damage_min': 'physical_damage_min',
+        'physical_damage_max': 'physical_damage_max',
+        'range': 'range'
+    },
+    'Two Hand Weapon': {
+        'attack_time': 'attack_time',
+        'critical_strike_chance': 'critical_strike_chance',
+        'physical_damage_min': 'physical_damage_min',
+        'physical_damage_max': 'physical_damage_max',
+        'range': 'range'
+    },
+    'Flask': {
+        'buff_id': 'id',
+        'buff_stat': 'stat',
+        'implicits': 'implicits',
+        'charges_max': 'charges_max',
+        'charges_per_use': 'charges_per_use',
+        'duration': 'duration',
+        'life_per_use': 'life_per_use',
+        'mana_per_use': 'mana_per_use'
+    }
+}
 ITEM_REQUIREMENTS = [
     ("Requires Level", "level", "#fff"),
     ("STR", "strength", "#fff"),
