@@ -33,15 +33,17 @@ base_dir = get_base_dir(script_path)
 abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'item_classes.min.json'))
 
 
-def insert_item_classes_into_db(db_manager):
+def add_item_classes():
     with open(abs_path_to_json) as json_file:
         data = json.load(json_file)
-        
-    with db_manager.transaction() as session:
-        for item_class, item_data in data.items():
-            if item_class in item_class_whitelist:
-                item_class_dict = {
-                    "name": item_class,
-                    "display_name": item_data.get("name")
-                }
-                db_manager.add_item_classes(item_class_dict, session)
+    
+    item_class_list = []
+    for item_class, item_data in data.items():
+        if item_class in item_class_whitelist:
+            item_class_dict = {
+                "name": item_class,
+                "display_name": item_data.get("name")
+            }
+            item_class_list.append(item_class_dict)
+    return item_class_list
+    
