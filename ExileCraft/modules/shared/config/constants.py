@@ -22,22 +22,21 @@
 #  SOFTWARE.
 # ##############################################################################
 
-from enum import IntEnum, EnumMeta, Enum
+from enum import IntEnum, EnumMeta, Enum, auto
 
 __all__ = [
+    'MOD_DOMAIN',
+    'MOD_GENERATION_TYPE',
     'item_class_whitelist',
     'item_class_map',
     'subtype_display_names',
     'domain_whitelist',
-    'ModDomain',
-    'ModGenerationType',
     'RARITY',
-    'SocketColour',
-    'StatInterpolationTypes',
-    'WORDLISTS',
+    'SOCKET_COLOUR',
+    'STAT_INTERPOLATION_TYPES',
+    'WORD_LISTS',
     'MOD_MAX_STATS',
     'MOD_STATS_RANGE',
-    'PassiveTypes',
     'one_hand_weapon_types',
     'two_hand_weapon_types',
     'armour_types',
@@ -50,8 +49,10 @@ __all__ = [
     'ITEM_REQUIREMENTS',
     'generation_type_blacklist',
     'ITEM_PROPERTIES_MAP'
-    
 ]
+
+MOD_MAX_STATS = 6
+MOD_STATS_RANGE = range(1, MOD_MAX_STATS + 1)
 
 item_types = [
     'Armour',
@@ -406,9 +407,6 @@ ITEM_REQUIREMENTS = [
     ("INT", "intelligence", "#fff")
 ]
 
-MOD_MAX_STATS = 6
-MOD_STATS_RANGE = range(1, MOD_MAX_STATS + 1)
-
 
 class IntEnumMetaOverride(EnumMeta):
     def __getitem__(self, item):
@@ -422,7 +420,243 @@ class IntEnumOverride(IntEnum, metaclass=IntEnumMetaOverride):
     pass
 
 
-class SocketColour(Enum):
+class MOD_DOMAIN(str, Enum):
+    """
+    Representation of mod domains.
+
+    This constant is primarily used in relation to mods.min.json.
+
+    Attributes
+    ----------
+    ITEM
+        Generic item domain (but excluding items that have their own domain)
+    FLASK
+        Flask domain
+    MONSTER
+        Monster domain
+    CHEST
+        Chest domain, i.e. strongboxes or other type of chest-like
+        containers
+    AREA
+        Area domain, i.e. for the various zones of Path of Exile
+    UNKNOWN1
+    UNKNOWN2
+    UNKNOWN3
+    MASTER
+        See CRAFTED
+    CRAFTED
+        Domain for crafted mods (previously MASTER)
+    MISC
+        Miscellaneous domain for jewel stuff, item limits, corruptions, etc
+    ATLAS
+        Atlas domain for modifiers that appear when using a sextant orb on the
+        atlas
+    LEAGUESTONE
+        Leaguestone domain for modifiers that appear on league stones
+    ABYSS_JEWEL
+        Domain for modifiers that appear on Abyss jewels
+    MAP_DEVICE
+        For implicit modifiers that can be applied through the map device
+        For example, vaal fragments or soul flasks
+    DELVE
+        For delve modifiers
+    DELVE_AREA
+        For modifiers appearing on delve areas
+    SYNTHESIS_GLOBALS
+        Synthesis global modifiers for areas
+    SYNTHESIS_BONUS
+        Synthesis modifiers that grant a bonus to other modifiers
+    AFFLICTION_JEWEL
+        Modifiers for the affliction jewels
+    HEIST_AREA
+        TODO
+    HEIST_NPC
+        TODO
+    HEIST_TRINKET
+        TODO
+    UNKNOWN4
+        TODO
+    UNDEFINED
+        TODO
+    """
+    ITEM = 'item'  # Generic item domain (but excluding items that have their own domain)
+    FLASK = 'flask'  # Flask domain
+    MONSTER = 'monster'  # Monster domain
+    CHEST = 'chest'  # Chest domain, i.e. strongboxes or other type of chest-like containers
+    AREA = 'area'  # Area domain, i.e. for the various zones of Path of Exile
+    UNKNOWN = 'unknown1'  # TODO
+    UNKNOWN2 = 'unknown2'  # TODO
+    UNKNOWN3 = 'unknown3'  # TODO
+    CRAFTED = 'crafted'  # Domain for crafted mods (previously MASTER)
+    MISC = 'misc'  # Miscellaneous domain for jewel stuff, item limits, corruptions, etc
+    ATLAS = 'atlas'  # Atlas domain for modifiers that appear when using a sextant orb on the atlas
+    LEAGUESTONE = 'leaguestone'  # Leaguestone domain for modifiers that appear on league stones
+    ABYSS_JEWEL = 'abyss_jewel'  # Domain for modifiers that appear on Abyss jewels
+    MAP_DEVICE = 'map_device'  # For implicit modifiers that can be applied through the map device
+    DELVE = 'delve'  # For delve modifiers
+    DELVE_AREA = 'delve_area'  # For modifiers appearing on delve areas
+    SYNTHESIS_GLOBALS = 'synthesis_globals'  # Synthesis global modifiers for areas
+    SYNTHESIS_BONUS = 'synthesis_bonus'  # Synthesis modifiers that grant a bonus to other modifiers
+    AFFLICTION_JEWEL = 'affliction_jewel'  # Modifiers for the affliction jewels
+    HEIST_AREA = 'heist_area'  # TODO
+    HEIST_NPC = 'heist_npc'  # TODO
+    HEIST_TRINKET = 'heist_trinket'  # TODO
+    UNKNOWN4 = 'unknown4'  # TODO
+    UNDEFINED = 'undefined'  # TODO
+    
+    # Legacy Names
+    MASTER = CRAFTED  # See CRAFTED
+    JEWEL = MISC  # See MISC
+    
+    def __str__(self):
+        return self.value[1]
+    
+
+class MOD_GENERATION_TYPE(Enum):
+    """
+    Representation of mod generation types.
+
+    This constant is primarily used in relation to the Mods class.
+
+    Attributes
+    ----------
+    PREFIX
+        Prefix generation type
+    SUFFIX
+        Suffix generation type
+    UNIQUE
+        Whether the mod is directly given to an entity and not generanted by
+        normal means.
+        Commonly this can be found on unique monsters/items for example, but
+        also as innate/implicit modifiers for example
+    NEMESIS
+        For 'nemesis' mods that can appear on monsters
+    CORRUPTED
+        For mods that are generated though item corruption
+    BLOODLINES
+        For 'bloodlines' mods that can appear on monsters
+    TORMENT
+        For 'torment' mods that can appear on monsters
+    TEMPEST
+        For 'tempest' mods that can appear on areas
+    TALISMAN
+        For 'talisman' mods that can appear on monsters
+    ENCHANTMENT
+        For the ascendancy/labyrinth enchantment mods that can appear on items
+    ESSENCE
+        For 'essence' mods that can appear on monsters
+    BESTIARY
+        For 'bestiary' modifiers that appear on bestiary monsters
+    DELVE_AREA
+        For modifiers that appear on delve areas
+    SYNTHESIS_A
+        TODO
+    SYNTHESIS_GLOBALS
+        TODO
+    SYNTHESIS_BONUS
+        TODO
+    BLIGHT
+        TODO
+    MONSTER_AFFLICTION
+        TODO
+    """
+    PREFIX: str = 'prefix'
+    SUFFIX: str = 'suffix'
+    UNIQUE: str = 'unique'
+    NEMESIS: str = 'nemesis'
+    CORRUPTED: str = 'corrupted'
+    BLOODLINES: str = 'bloodlines'
+    TORMENT: str = 'torment'
+    TEMPEST: str = 'tempest'
+    TALISMAN: str = 'talisman'
+    ENCHANTMENT: str = 'enchantment'
+    ESSENCE: str = 'essence'
+    BESTIARY: str = 'bestiary'
+    DELVE_AREA: str = 'delve_area'
+    SYNTHESIS_A: str = 'synthesis_a'
+    SYNTHESIS_GLOBALS: str = 'synthesis_globals'
+    SYNTHESIS_BONUS: str = 'synthesis_bonus'
+    BLIGHT: str = 'blight'
+    BLIGHT_TOWER: str = 'blight_tower'
+    MONSTER_AFFLICTION: str = 'monster_affliction'
+    ARCHNEMESIS: str = 'archnemesis'
+    SEARING_EXARCH_IMPLICIT: str = 'searing_exarch_implicit'
+    
+
+class WORD_LISTS(IntEnumOverride):
+    """
+    Representation of words lists ( Wordlists.dat )
+
+    This constant is primarily used in relation to Words.dat
+
+    Attributes
+    ----------
+    ITEM_PREFIX
+        Prefix word of a randomly generated item name
+    ITEM_SUFFIX
+        Suffix word of a randomly generated item name; separate from the prefix
+    MONSTER_PREFIX
+        Prefix word of a randomly generated monster name.
+    MONSTER_SUFFIX
+        Suffix word of a randomly generated monster name; composite with the
+        prefix
+    MONSTER_TITLE
+        Title ("the xxx") of a randomly generated monster name
+    UNIQUE_ITEM
+        Name of a unique item
+    STRONGBOX_PREFIX
+        Prefix word of a randomly generated strongbox name
+    STRONGBOX_SUFFIX
+        Suffix word of a randomly generated strongbox name; separate from the
+        prefix
+    ESSENCE
+        Name of an essence
+    """
+    ITEM_PREFIX = 1
+    ITEM_SUFFIX = 2
+    MONSTER_PREFIX = 3
+    MONSTER_SUFFIX = 4
+    MONSTER_TITLE = 5
+    UNIQUE_ITEM = 6
+    STRONGBOX_PREFIX = 7
+    STRONGBOX_SUFFIX = 8
+    ESSENCE = 9
+
+
+class STAT_INTERPOLATION_TYPES(IntEnumOverride):
+    """
+    Representation of stat interpolation types (StatInterpolationTypes.dat)
+
+    Primarily used by GrantedEffects.dat
+
+    Attributes
+    ----------
+    CONSTANT
+        Constant scaling
+    LINEAR
+        Linear scaling
+    EXPONENTIAL
+        Exponential scaling
+
+        .. code-block:: none
+
+            skill_base =
+                (
+                    GameConstants -> SkillDamageBaseEffectiveness +
+                    (GameConstants -> SkillDamageIncrementalEffectiveness * (
+                        MonsterLevel - 1
+                    ))
+                ) *
+                GrantedEffects['BaseEffectiveness'] *
+                (1+GrantedEffects['IncrementalEffectiveness') ** (MonsterLevel - 1)
+
+    """
+    CONSTANT = 1
+    LINEAR = 2
+    EXPONENTIAL = 3
+
+
+class SOCKET_COLOUR(Enum):
     """
     Representation of item socket colours.
 
@@ -495,7 +729,7 @@ class RARITY(Enum, metaclass=IntEnumMetaOverride):
         case starting letter
     name_lower : str
         When accessing a :class:`RARITY` instance (e.x. :attr:`RARITY.NORMAL`)
-        the lower attribute represents the textual representation with an lower
+        the lower attribute represents the textual representation with a lower
         case starting letter
     colour : str
         When accessing a :class:`RARITY` instance (e.x. :attr:`RARITY.NORMAL`)
@@ -508,262 +742,17 @@ class RARITY(Enum, metaclass=IntEnumMetaOverride):
     UNIQUE = (4, 'Unique', 'unique', 'brown')
     ANY = (5, 'Any', 'any', 'any')
     
-    def __new__(cls, id, upper, lower, colour):
+    def __new__(cls, _id, upper, lower, colour):
         obj = object.__new__(cls)
-        obj._value_ = id
-        obj.id = id
+        obj._value_ = _id
+        obj.id = _id
         obj.name_upper = upper
         obj.name_lower = lower
         obj.colour = colour
         return obj
 
 
-class ModDomain(IntEnumOverride):
-    """
-    Representation of mod domains.
-
-    This constant is primarily used in relation to Mods.dat.
-
-    Attributes
-    ----------
-    ITEM
-        Generic item domain (but excluding items that have their own domain)
-    FLASK
-        Flask domain
-    MONSTER
-        Monster domain
-    CHEST
-        Chest domain, i.e. strongboxes or other type of chest-like
-        containers
-    AREA
-        Area domain, i.e. for the various zones of Path of Exile
-    UNKNOWN1
-    UNKNOWN2
-    UNKNOWN3
-    MASTER
-        See CRAFTED
-    CRAFTED
-        domain for crafted mods (previously MASTER)
-    MISC
-        Miscellaneous domain for jewel stuff, item limits, corruptions, etc
-    ATLAS
-        Atlas domain for modifiers that appear when using a sextant orb on the
-        atlas
-    LEAGUESTONE
-        Leaguestone domain for modifiers that appear on league stones
-    ABYSS_JEWEL
-        domain for modifiers that appear on Abyss jewels
-    MAP_DEVICE
-        For implicit modifiers that can be applied through the map device
-        For example, vaal fragments or soul flasks
-    DELVE_FOSSIL
-        For delve modifiers
-    DELVE_AREA
-        For modifiers appearing on delve areas
-    SYNTHESIS_GLOBALS
-        Synthesis global modifiers for areas
-    SYNTHESIS
-        Synthesis modifiers that grant a bonus to other modifiers
-    AFFLICTION_JEWEL
-        Modifiers for the affliction jewels
-    HEIST_AREA
-        TODO
-    HEIST_NPC
-        TODO
-    HEIST_TRINKET
-        TODO
-    UNKNOWN4
-        TODO
-    UNVEILED_MODIFIER
-        TODO
-    UNKNOWN5
-        TODO
-    """
-    ITEM = 1
-    FLASK = 2
-    MONSTER = 3
-    CHEST = 4
-    AREA = 5
-    UNKNOWN1 = 6
-    UNKNOWN2 = 7
-    UNKNOWN3 = 8
-    CRAFTED = 9
-    # Corruptions, item limits, jewel mods, other stuff?
-    MISC = 10
-    ATLAS = 11
-    LEAGUESTONE = 12
-    ABYSS_JEWEL = 13
-    MAP_DEVICE = 14
-    DUMMY = 15
-    DELVE_FOSSIL = 16
-    DELVE_AREA = 17
-    SYNTHESIS_AREA = 18
-    SYNTHESIS_GLOBALS = 19
-    SYNTHESIS = 20
-    AFFLICTION_JEWEL = 21
-    HEIST_AREA = 22
-    HEIST_NPC = 23
-    HEIST_TRINKET = 24
-    UNKNOWN4 = 25
-    UNVEILED_MODIFIER = 26
-    UNKNOWN5 = 27
-    
-    # legacy names
-    MASTER = CRAFTED
-    JEWEL = MISC
-
-
-class ModGenerationType(IntEnumOverride):
-    """
-    Representation of mod generation types.
-
-    This constant is primarily used in relation to Mods.dat.
-
-    Attributes
-    ----------
-    PREFIX
-        Prefix generation type
-    SUFFIX
-        Suffix generation type
-    UNIQUE
-        Whether the mod is directly given to an entity and not generanted by
-        normal means.
-        Commonly this can be found on unique monsters/items for example, but
-        also as innate/implicit modifiers for example
-    NEMESIS
-        For 'nemesis' mods that can appear on monsters
-    CORRUPTED
-        For mods that are generated though item corruption
-    BLOODLINES
-        For 'bloodlines' mods that can appear on monsters
-    TORMENT
-        For 'torment' mods that can appear on monsters
-    TEMPEST
-        For 'tempest' mods that can appear on areas
-    TALISMAN
-        For 'talisman' mods that can appear on monsters
-    ENCHANTMENT
-        For the ascendancy/labyrinth enchantment mods that can appear on items
-    ESSENCE
-        For 'essence' mods that can appear on monsters
-    BESTIARY
-        For 'bestiary' modifiers that appear on bestiary monsters
-    DELVE_AERA
-        For modifiers that appear on delve areas
-    SYNTHESIS_A
-        TODO
-    SYNTHESIS_GLOBALS
-        TODO
-    SYNTHESIS_BONUS
-        TODO
-    BLIGHT
-        TODO
-    MONSTER_AFFLICTION
-        TODO
-    """
-    PREFIX = 1
-    SUFFIX = 2
-    UNIQUE = 3
-    NEMESIS = 4
-    CORRUPTED = 5
-    BLOODLINES = 6
-    TORMENT = 7
-    TEMPEST = 8
-    TALISMAN = 9
-    ENCHANTMENT = 10
-    ESSENCE = 11
-    BESTIARY = 13
-    DELVE_AREA = 14
-    SYNTHESIS_A = 15
-    SYNTHESIS_GLOBALS = 16
-    SYNTHESIS_BONUS = 17
-    BLIGHT = 18
-    BLIGHT_TOWER = 19
-    MONSTER_AFFLICTION = 20
-
-
-class WORDLISTS(IntEnumOverride):
-    """
-    Representation of words lists ( Wordlists.dat )
-
-    This constant is primarily used in relation to Words.dat
-
-    Attributes
-    ----------
-    ITEM_PREFIX
-        Prefix word of a randomly generated item name
-    ITEM_SUFFIX
-        Suffix word of a randomly generated item name; separate from the prefix
-    MONSTER_PREFIX
-        Prefix word of a randomly generated monster name.
-    MONSTER_SUFFIX
-        Suffix word of a randomly generated monster name; composite with the
-        prefix
-    MONSTER_TITLE
-        Title ("the xxx") of a randomly generated monster name
-    UNIQUE_ITEM
-        name of a unique item
-    STRONGBOX_PREFIX
-        Prefix word of a randomly generated strongbox name
-    STRONGBOG_SUFFIX
-        Suffix word of a randomly generated strongbox name; separate from the
-        prefix
-    ESSENCE
-        name of an essence
-    """
-    ITEM_PREFIX = 1
-    ITEM_SUFFIX = 2
-    MONSTER_PREFIX = 3
-    MONSTER_SUFFIX = 4
-    MONSTER_TITLE = 5
-    UNIQUE_ITEM = 6
-    STRONGBOX_PREFIX = 7
-    STRONGBOX_SUFFIX = 8
-    ESSENCE = 9
-
-
-class StatInterpolationTypes(IntEnumOverride):
-    """
-    Representation of stat interpolation types (StatInterpolationTypes.dat)
-
-    Primarily used by GrantedEffects.dat
-
-    Attributes
-    ----------
-    CONSTANT
-        Constant scaling
-    LINEAR
-        Linear scaling
-    EXPONENTIAL
-        Exponential scaling
-
-        .. code-block:: none
-
-            skill_base =
-                (
-                    GameConstants -> SkillDamageBaseEffectiveness +
-                    (GameConstants -> SkillDamageIncrementalEffectiveness * (
-                        MonsterLevel - 1
-                    ))
-                ) *
-                GrantedEffects['BaseEffectiveness'] *
-                (1+GrantedEffects['IncrementalEffectiveness') ** (MonsterLevel - 1)
-
-    """
-    CONSTANT = 1
-    LINEAR = 2
-    EXPONENTIAL = 3
-
-
-class HarvestObjectTypes(IntEnumOverride):
-    NONE = 0
-    WILD = 1
-    VIVID = 2
-    PRIMAL = 3
-
-
-class PassiveTypes(IntEnumOverride):
-    REGULAR1 = 1
-    REGULAR2 = 2
-    NOTABLE = 3
-    KEYSTONE = 4
+class ITEM_TYPES(Enum):
+    ITEM = auto()
+    GEM = auto()
+    CURRENCY = auto()
