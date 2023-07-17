@@ -7,7 +7,7 @@ Overview
 +----------+------------------------------------------------------------------+
 | Version  | 1.0.0a0                                                          |
 +----------+------------------------------------------------------------------+
-| Revision | $Id: cf31b9bbc007842e0328fe9c6b6e4e9b7f55c6df $                  |
+| Revision | $Id$                  |
 +----------+------------------------------------------------------------------+
 | Author   | Omega_K2                                                         |
 +----------+------------------------------------------------------------------+
@@ -51,9 +51,7 @@ Documentation
 
 # 3rd-party
 
-from modules.config.constants import ModDomain, ModGenerationType, MOD_STATS_RANGE
 # self
-from PyPoE.poe.file.dat import DatRecord
 
 # =============================================================================
 # Globals
@@ -68,18 +66,19 @@ __all__ = [
     'get_translation_file_from_domain',
 ]
 
-_translation_map = {
-    ModDomain.MONSTER: 'monster_stat_descriptions.txt',
-    ModDomain.CHEST: 'chest_stat_descriptions.txt',
-    ModDomain.AREA: 'map_stat_descriptions.txt',
-    ModDomain.ATLAS: 'atlas_stat_descriptions.txt',
-    ModDomain.LEAGUESTONE: 'leaguestone_stat_descriptions.txt',
-    ModDomain.DELVE_AREA: 'map_stat_descriptions.txt',
-    ModDomain.MAP_DEVICE: 'map_stat_descriptions.txt',
-    # To properly support zana's innate IIQ
-    ModDomain.CRAFTED: 'map_stat_descriptions.txt',
-}
+from modules.shared.config.constants import MOD_DOMAIN, MOD_GENERATION_TYPE, MOD_STATS_RANGE
 
+_translation_map = {
+    MOD_DOMAIN.MONSTER: 'monster_stat_descriptions.txt',
+    MOD_DOMAIN.CHEST: 'chest_stat_descriptions.txt',
+    MOD_DOMAIN.AREA: 'map_stat_descriptions.txt',
+    MOD_DOMAIN.ATLAS: 'atlas_stat_descriptions.txt',
+    MOD_DOMAIN.LEAGUESTONE: 'leaguestone_stat_descriptions.txt',
+    MOD_DOMAIN.DELVE_AREA: 'map_stat_descriptions.txt',
+    MOD_DOMAIN.MAP_DEVICE: 'map_stat_descriptions.txt',
+    # To properly support zana's innate IIQ
+    MOD_DOMAIN.CRAFTED: 'map_stat_descriptions.txt',
+}
 
 # =============================================================================
 # Classes
@@ -90,7 +89,6 @@ class SpawnChanceCalculator:
     """
     Class to calculate spawn chances.
     """
-
     def __init__(self, mod_list, tags):
         """
         Parameters
@@ -147,10 +145,8 @@ class SpawnChanceCalculator:
 
         Parameters
         ----------
-        mod : DatRecord
+        mod : Mod[object]
             The mod to calculate the spawn weight for.
-        tags : list[str]
-            List of applicable tag identifiers.
 
 
         Returns
@@ -177,8 +173,8 @@ class SpawnChanceCalculator:
 
         Parameters
         ----------
-        mod_or_id : str | DatRecord
-            Id of the mod or the instance of the mod row
+        mod_or_id : str | object
+            ID of the mod or the instance of the mod row
         remove : bool
             Remove the mod from the list once the chance has been calculated
 
@@ -200,7 +196,7 @@ class SpawnChanceCalculator:
             mod = self.get_mod(mod_or_id)
             if mod is None:
                 return 0
-        elif isinstance(mod_or_id, DatRecord):
+        elif isinstance(mod_or_id, dict):
             mod = mod_or_id
         else:
             raise TypeError(
@@ -208,7 +204,7 @@ class SpawnChanceCalculator:
             )
 
         weight = self.get_spawn_weight(mod)
-        chance = weight / self.total_spawn_weight
+        chance = weight/self.total_spawn_weight
 
         if remove:
             mods = []
@@ -238,7 +234,7 @@ def get_translation_file_from_domain(domain):
 
     Parameters
     ----------
-    domain : int
+    domain : ModDomain
         Id of the domain
 
     Returns
@@ -348,12 +344,12 @@ def get_spawn_weight(mod, tags):
 
 
 def generate_spawnable_mod_list(
-        mod_dat_file,
+        mod_data,
         domain,
         generation_type,
         level=1,
         tags=['default', ]
-):
+        ):
     """
     Generates a list of modifiers that can be spawned for the specified
     parameters, i.e. mods that can not spawn will be removed.
@@ -362,11 +358,11 @@ def generate_spawnable_mod_list(
 
     Parameters
     ----------
-    mod_dat_file : `DatFile`
+    mod_data : `DatFile`
 
-    domain : ModDomain
+    domain : MOD_DOMAIN
         The mod domain
-    generation_type : ModGenerationType
+    generation_type : MOD_GENERATION_TYPE
         The mod generation type
     level : int
         The level of object to the mod would be spawned on
@@ -384,19 +380,19 @@ def generate_spawnable_mod_list(
     Raises
     ------
     TypeError
-        if domain is not a valid MOD_DOMAIN constant
-        if generation_type is not a valid MOD_GENERATION_TYPE constant
+        if domain is not a valid ModDomain constant
+        if generation_type is not a valid ModGenerationType constant
     """
-    if not isinstance(domain, ModDomain):
+    if not isinstance(domain, MOD_DOMAIN):
         raise TypeError('domain must be a ModDomain instance.')
 
-    if not isinstance(generation_type, ModGenerationType):
+    if not isinstance(generation_type, MOD_GENERATION_TYPE):
         raise TypeError(
             'generation_type must be a ModGenerationType instance.'
         )
 
     mods = []
-    for mod in mod_dat_file:
+    for mod in mod_data:
         if level < mod['Level']:
             continue
 

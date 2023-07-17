@@ -25,7 +25,6 @@
 import json
 import os
 
-from modules.config.constants import item_class_whitelist
 from modules.data.parser.path_utils import get_abs_path, get_base_dir
 
 script_path = os.path.realpath(__file__)
@@ -33,17 +32,23 @@ base_dir = get_base_dir(script_path)
 abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'item_classes.min.json'))
 
 
-def add_item_classes():
-    with open(abs_path_to_json) as json_file:
-        data = json.load(json_file)
+class ItemClassParser:
     
-    item_class_list = []
-    for item_class, item_data in data.items():
-        if item_class in item_class_whitelist:
+    @staticmethod
+    def create_item_class_list():
+        """Creates a list of item classes from the item_classes.min.json file.
+        Returns:
+           item_class_list (list): A list of item classes.
+        """
+        with open(abs_path_to_json) as json_file:
+            data = json.load(json_file)
+        
+        item_class_list = []
+        for item_class, item_data in data.items():
             item_class_dict = {
                 "name": item_class,
                 "display_name": item_data.get("name")
             }
             item_class_list.append(item_class_dict)
-    return item_class_list
-    
+        return item_class_list
+        

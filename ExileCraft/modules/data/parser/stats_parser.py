@@ -47,14 +47,10 @@ class StatParser:
     def get_all_stats(self):
         data = self._data
         stat_list = []
-        for stat_name, stat_data in data.items():
-            # alias_string = ""
-            # alias = alias_string.join(stats.get("alias"))
-            stats_dict = {
-                "name": stat_name,
-                "is_aliased": stat_data.get("is_aliased", False),
-                "is_local": stat_data.get("is_local", False)
-            }
+        for stat, stat_data in data.items():
+            stats_dict = {"name": str(stat),
+                          "is_aliased": stat_data.get("is_aliased", False),
+                          "is_local": stat_data.get("is_local", False)
+                          }
             stat_list.append(stats_dict)
         return stat_list
-            

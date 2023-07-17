@@ -27,16 +27,16 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List
 
-from sqlalchemy import String, Integer, ForeignKey
-from sqlalchemy.orm import Mapped, mapped_column, relationship, MappedAsDataclass
+from sqlalchemy import ForeignKey, Integer
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from modules.data.models.association_models import mod_tags_association, item_tags_association, \
-    mod_adds_tags_association, mod_spawn_weights_association, mod_implicit_tags_association, item_class_association, \
-    item_class_subtype_association
+from modules.data.models.association_models import item_tags_association, mod_tags_association, \
+    mod_implicit_tags_association, mod_adds_tags_association, mod_tag_weights_association
 from modules.data.models.base_model import Base, intpk
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
 target_dir = script_dir.parent / 'json'
+
 
 @dataclass
 class Tag(Base):
@@ -47,22 +47,29 @@ class Tag(Base):
     
     # Relationships
     
-    # Relationships with a secondary association table included
-    mods: Mapped[List["Mod"]] = relationship(default_factory=list, secondary=mod_tags_association,
-                                             back_populates='tags',
-                                             init=False)
-    mod_implicit_tags: Mapped["Mod"] = relationship(default=None, secondary=mod_implicit_tags_association,
-                                                    back_populates='implicit_tags', init=False)
-    mod_adds_tags: Mapped["Mod"] = relationship(default=None, secondary=mod_adds_tags_association,
-                                                back_populates='added_tags', init=False)
-    mod_spawn_weights: Mapped["Mod"] = relationship(default=None, secondary=mod_spawn_weights_association,
-                                                    back_populates='tag_weights', init=False)
+    items: Mapped[List["Item"]] = relationship("Item", secondary=item_tags_association,
+                                               back_populates='tags', default_factory=list, lazy='selectin')
+    added_by_mods: Mapped[List["Mod"]] = relationship("Mod", secondary=mod_adds_tags_association,
+                                                      back_populates='adds_tags',
+                                                      default_factory=list, lazy='selectin')
+    mod_implicit_tags: Mapped[List["Mod"]] = relationship("Mod", secondary=mod_implicit_tags_association,
+                                                          back_populates='implicit_tags', default_factory=list,
+                                                          lazy='selectin')
+    mod_weights: Mapped[List["TagWeight"]] = relationship("TagWeight", back_populates='tag', default_factory=list,
+                                                          lazy='selectin')
+
+
+@dataclass
+class TagWeight(Base):
+    __tablename__ = 'tag_weights'
     
-    items: Mapped[List["Item"]] = relationship(default_factory=list, secondary=item_tags_association,
-                                               back_populates='tags', init=False)
-    item_class: Mapped[List["ItemClass"]] = relationship(default_factory=list, secondary=item_class_association,
-                                                         back_populates='tags',
-                                                         init=False)
-    item_class_subtypes: Mapped[List["ItemClassSubtype"]] = relationship(
-        default_factory=list, secondary=item_class_subtype_association,
-        back_populates='tags', init=False)
+    # Table columns
+    id: Mapped[intpk] = mapped_column(init=False)
+    mod_id: Mapped[int] = mapped_column(Integer, ForeignKey('mods.id'))
+    tag_id: Mapped[int] = mapped_column(Integer, ForeignKey('tags.id'))
+    tag: Mapped["Tag"] = relationship("Tag", back_populates='mod_weights', lazy='selectin', uselist=False)
+    mod_weight: Mapped["Mod"] = relationship("Mod", back_populates='tag_weights', lazy='selectin', uselist=False)
+    
+    weight: Mapped[int] = mapped_column(Integer, nullable=False, insert_default=0, default=0)
+    
+    

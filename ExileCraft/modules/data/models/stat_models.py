@@ -21,14 +21,16 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
 # ##############################################################################
+
 import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List
 
-from sqlalchemy import String
+from sqlalchemy import String, ForeignKey, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
+from modules.data.models.association_models import mod_stats_association
 from modules.data.models.base_model import Base, intpk
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
@@ -40,14 +42,29 @@ class Stat(Base):
     __tablename__ = 'stats'
     
     # Table Columns
+    is_aliased: Mapped[bool]
+    is_local: Mapped[bool]
     name: Mapped[str] = mapped_column(String(250), unique=True)
     id: Mapped[intpk] = mapped_column(init=False)
-    is_aliased: Mapped[bool] = False
-    is_local: Mapped[bool] = False
+    
+    # Relationships
+    values: Mapped[List["StatValue"]] = relationship("StatValue", back_populates='stat', default_factory=list,
+                                                     lazy='selectin')
 
-    # Many-to-Many Relationships
-    mods: Mapped[List["Mod"]] = relationship(default_factory=list, secondary='mod_stat_values',
-                                             back_populates='mod_stats', init=False)
 
-    # One-to-Many Relationships
-    mod_stat_values = relationship("ModStatValue", back_populates='stat', init=False)
+
+@dataclass
+class StatValue(Base):
+    __tablename__ = 'stat_values'
+    
+    id: Mapped[intpk] = mapped_column(init=False)
+    mod_id: Mapped[int] = mapped_column(ForeignKey('mods.id'), init=False, nullable=False)
+    stat_id: Mapped[int] = mapped_column(ForeignKey('stats.id'), init=False, nullable=False)
+    stat: Mapped["Stat"] = relationship("Stat", back_populates='values', lazy='selectin')
+    mod: Mapped["Mod"] = relationship("Mod", back_populates='stat_values', lazy='selectin')
+    
+    stat_min_value: Mapped[int] = mapped_column(Integer, nullable=False, insert_default=0, default=0)
+    stat_max_value: Mapped[int] = mapped_column(Integer, nullable=False, insert_default=0, default=0)
+    translations: Mapped[List["Translation"]] = relationship("Translation", back_populates='stat_values',
+                                                             default_factory=list, lazy='selectin')
+    

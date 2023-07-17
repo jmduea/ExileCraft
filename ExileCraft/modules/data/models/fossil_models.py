@@ -24,12 +24,9 @@
 
 import os
 from pathlib import Path
-from typing import Optional
 
-from sqlalchemy import String, ForeignKey, Integer, Boolean
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped
 
-from modules.data.models.association_models import fossil_mods_association
 from modules.data.models.base_model import Base, intpk
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
@@ -49,5 +46,5 @@ class Fossil(Base):
     rolls_white_sockets: Mapped[bool]
     
     # Relationships with a secondary association table
-    mods = relationship('Mod', secondary=fossil_mods_association, back_populates='fossils')
+    # mods = relationship('Mod', secondary=fossil_mods_association, back_populates='fossils')
     

@@ -4,8 +4,6 @@
 import pytest
 
 from modules.data.database_manager import DatabaseManager
-from modules.data.models.global_models import Domain, GenerationType
-from modules.data.models.item_models import ItemClass, ItemClassSubtype, Item, ItemProperties
 from modules.data.models.mod_models import Mod, ModType
 from modules.data.models.stat_models import Stat
 from modules.data.models.tag_models import Tag
@@ -52,6 +50,20 @@ Fields:
 - Session: scoped session for interacting with the database
 """
 
+
+# json: dict = "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/Sceptre22":{"domain":"item","drop_level":68,"implicits":["ElementalDamagePercentImplicitSceptreNew22"],"inventory_height":3,"inventory_width":2,"item_class":"Sceptre","name":"Void Sceptre","properties":{"attack_time":800,"critical_strike_chance":620,"physical_damage_max":76,"physical_damage_min":50,"range":11},"release_state":"released","requirements":{"dexterity":0,"intelligence":122,"level":68,"strength":104},"tags":["sceptre","top_tier_base_item_type","sceptre","one_hand_weapon","onehand","weapon","default"],"visual_identity":{"dds_file":"Art/2DItems/Weapons/OneHandWeapons/Scepters/scepter8.dds","id":"Sceptre8"}}
+# item_class_json: dict = {"AbyssJewel": {"name": "Abyss Jewels"}}
+# mod_json_list = ["ElementalDamagePercentImplicitSceptreNew22":{"adds_tags":[],"domain":"item","generation_type":"unique","generation_weights":[],"grants_effects":[],"groups":["ElementalDamagePercent"],"implicit_tags":["elemental_damage","damage","elemental"],"is_essence_only":false,"name":"","required_level":1,"spawn_weights":[],"stats":[{"id":"elemental_damage_+%","max":40,"min":40}],"type":"ElementalDamagePercent"}]
+
+
+#
+# mod_types_json: dict = {"AddedColdDamageWithBows": {"sell_price_types": ["Low"]}}
+# stats_json: dict = {
+#     "attack_minimum_added_cold_damage_with_bows": {"alias": {}, "is_aliased": false, "is_local": false},
+#     "attack_maximum_added_cold_damage_with_bows": {"alias": {}, "is_aliased": false, "is_local": false}
+# }
+#
+# stat_translation_json: dict = {"English":[{"condition":[{"min":1}],"format":["#"],"index_handlers":[[]],"string":"{0}% increased Elemental Damage"},{"condition":[{"max":-1}],"format":["#"],"index_handlers":[["negate"]],"string":"{0}% reduced Elemental Damage"}],"ids":["elemental_damage_+%"]}
 
 class TestDatabaseManager:
     @pytest.fixture

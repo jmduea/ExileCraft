@@ -8,7 +8,6 @@ pyside6 = "==6.5.1.1"
 pyside6-addons = "==6.5.1.1"
 pyside6-essentials = "==6.5.1.1"
 shiboken6 = "==6.5.1.1"
-sqlalchemy = "*"
 keyboard = "==0.13.5"
 nuitka = "==1.7.2"
 pyinstaller = "*"
@@ -17,6 +16,8 @@ altgraph = "==0.17.3"
 jinja2 = "*"
 asyncio = "*"
 aiosqlite = "*"
+sqlalchemy = {extras = ["asyncio"], version = "*"}
+configobj = "*"
 
 [dev-packages]
 sphinx = "7.0.1"

@@ -31,31 +31,36 @@ from modules.data.models.base_model import Base
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
 target_dir = script_dir.parent / 'json'
 
-item_class_association = Table('item_class_association', Base.metadata,
-                               Column('item_class_id', Integer, ForeignKey('item_classes.id')),
-                               Column('tag_id', Integer, ForeignKey('tags.id'))
-                               )
-
-item_class_subtype_association = Table('item_class_subtype_association', Base.metadata,
-                                       Column('item_class_subtype_id', Integer, ForeignKey('item_class_subtypes.id')),
-                                       Column('tag_id', Integer, ForeignKey('tags.id'))
-                                       )
+# item_class_subtype_association = Table('item_class_subtype_association', Base.metadata,
+#                                        Column('item_class_subtype_id', Integer, ForeignKey('item_class_subtypes.id')),
+#                                        Column('tag_id', Integer, ForeignKey('tags.id'))
+#                                        )
 
 item_tags_association = Table('item_tags_association', Base.metadata,
                               Column('item_id', Integer, ForeignKey('items.id')),
                               Column('tag_id', Integer, ForeignKey('tags.id'))
                               )
 
-# association table
 item_implicits_association = Table('item_implicits_association', Base.metadata,
                                    Column('item_id', Integer, ForeignKey('items.id')),
                                    Column('mod_id', Integer, ForeignKey('mods.id'))
                                    )
 
-mod_tags_association = Table('mod_tags_association', Base.metadata,
-                             Column('mod_id', Integer, ForeignKey('mods.id')),
-                             Column('tag_id', Integer, ForeignKey('tags.id'))
-                             )
+mod_types_association = Table('mod_types_association', Base.metadata,
+                              Column('mod_id', Integer, ForeignKey('mods.id')),
+                              Column('mod_type_id', Integer, ForeignKey('mod_types.id'))
+                              )
+
+mod_groups_association = Table('mod_groups_association', Base.metadata,
+                               Column('mod_id', Integer, ForeignKey('mods.id')),
+                               Column('mod_group_id', Integer, ForeignKey('mod_groups.id'))
+                               )
+
+mod_generation_types_association = Table('mod_generation_types_association', Base.metadata,
+                                         Column('mod_id', Integer, ForeignKey('mods.id')),
+                                         Column('generation_type_id', Integer,
+                                                ForeignKey('generation_types.id'))
+                                         )
 
 mod_adds_tags_association = Table('mod_adds_tags_association', Base.metadata,
                                   Column('mod_id', Integer, ForeignKey('mods.id')),
@@ -66,21 +71,3 @@ mod_implicit_tags_association = Table('mod_implicit_tags_association', Base.meta
                                       Column('mod_id', Integer, ForeignKey('mods.id')),
                                       Column('tag_id', Integer, ForeignKey('tags.id'))
                                       )
-
-mod_spawn_weights_association = Table('mod_spawn_weights_association', Base.metadata,
-                                      Column('mod_id', Integer, ForeignKey('mods.id')),
-                                      Column('tag_id', Integer, ForeignKey('tags.id')),
-                                      Column('weight', Integer)
-                                      )
-
-mod_stats_association = Table('mod_stats_association', Base.metadata,
-                              Column('mod_id', Integer, ForeignKey('mods.id')),
-                              Column('stat_id', Integer, ForeignKey('stats.id')),
-                              Column('stat_min_value', Integer),
-                              Column('stat_max_value', Integer)
-                              )
-
-fossil_mods_association = Table('fossil_mods_association', Base.metadata,
-                                Column('mod_id', Integer, ForeignKey('mods.id')),
-                                Column('fossil_id', Integer, ForeignKey('fossils.id'))
-                                )

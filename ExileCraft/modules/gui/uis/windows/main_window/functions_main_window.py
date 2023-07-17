@@ -28,7 +28,7 @@ from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QPushButton
 
 from modules.data import database_manager
-from modules.data.database_manager import DatabaseManager
+from modules.data.database_manager import DatabaseManager, ItemClassManager, ItemManager
 from modules.data.parser import stat_translations_parser, mods_parser
 from .ui_mainwindow import *
 
@@ -258,10 +258,11 @@ class ComboboxUpdater:
         # Get database session
         db_url = database_manager.db_url
         db_manager = DatabaseManager(db_url)
+        item_class_manager = ItemClassManager()
         session = db_manager.get_session()
         
         # Get base item groups from database
-        subtype_display_names = db_manager.get_item_class_subtypes_and_display_names(
+        subtype_display_names = item_class_manager.get_item_class_subtypes_and_display_names(
             session, item_class_name=self.base_group_combobox.currentText())
         
         self.base_combobox.clear()
@@ -280,11 +281,12 @@ class ComboboxUpdater:
         if self.base_combobox.itemText(index) is not None:
             db_url = database_manager.db_url
             db_manager = DatabaseManager(db_url)
+            item_manager = ItemManager()
             session = db_manager.get_session()
             
             self.items_cache = {}
             subtype_display_name = self.base_combobox.currentText()
-            base_items = db_manager.get_base_items_from_subtype_display_name(session, subtype_display_name)
+            base_items = item_manager.get_base_items_from_subtype_display_name(session, subtype_display_name)
             
             self.base_item_combobox.clear()
             self.base_item_combobox.setEnabled(True)
@@ -589,19 +591,20 @@ class ComboboxUpdater:
         Returns:
             str: A string containing the formatted implicit properties, ready to be displayed in the GUI.
         """
-        for implicit in current_item.item_implicits:
-            if implicit == '':
-                return ''
-            else:
-                stat_translation_string = implicit.get_translation()
-                # Format the implicit string
-                implicit_formatted = (
-                    f'<p style="line-height:0.8; padding-bottom:1em;" align="center">'
-                    f'<span style=" font-size:11pt; color:#8787fe;">{stat_translation_string}</span></p>'
-                ) if stat_translation_string else ""
-                
-                return implicit_formatted
-    
+        
+        item_implicits = current_item.get_implicits()
+        if item_implicits == '':
+            return ''
+        else:
+            stat_translation_string = item_implicits.get_stat_translation()
+            # Format the implicit string
+            implicit_formatted = (
+                f'<p style="line-height:0.8; padding-bottom:1em;" align="center">'
+                f'<span style=" font-size:11pt; color:#8787fe;">{stat_translation_string}</span></p>'
+            ) if stat_translation_string else ""
+            
+            return implicit_formatted
+
     def update_implicit_label(self, current_item):
         if current_item:
             implicit_formatted = self.format_implicit_string(current_item)
@@ -624,8 +627,9 @@ class ComboboxUpdater:
         current_item = self.items_cache.get(item_name)
         if current_item is None:
             return
-        self.item_requirements_label.setText(current_item.formatted_requirements)
-        self.item_properties_label.setText(current_item.formatted_properties)
+        self.item_requirements_label.setText(current_item.formatted_requirements())
+        self.item_properties_label.setText(current_item.formatted_properties())
+        self.update_implicit_label(current_item)
         # properties = ["block", "armour", "energy_shield", "evasion", "ward", "physical_damage_min",
         #               "physical_damage_max", "critical_strike_chance", "attacks_per_second"]
         # if any(item_info[prop] and item_info[prop].strip() for prop in properties):

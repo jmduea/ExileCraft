@@ -44,10 +44,8 @@ Documentation
 
 # Python
 import re
-from enum import Enum
 
 # self
-from modules.config.constants import RARITY, SocketColour
 
 # 3rd-party
 
@@ -56,6 +54,8 @@ from modules.config.constants import RARITY, SocketColour
 # =============================================================================
 
 __all__ = ['ItemParser']
+
+from modules.shared.config.constants import ITEM_TYPES, RARITY, SOCKET_COLOUR
 
 
 # =============================================================================
@@ -86,13 +86,6 @@ def _regex_build_from_handler_dict(handler_dict):
 # =============================================================================
 # Classes
 # =============================================================================
-
-
-class ItemTypes(Enum):
-    ITEM = 0
-    GEM = 1
-    CURRENCY = 2
-
 
 class ItemSocket:
     """
@@ -212,7 +205,7 @@ class ItemParser:
         2 element list containing the minimum/maximum chaos damage of the item
         (found on weapons)
     'critical_strike_chance' : float
-        Critical strike chance of the item
+        Critical Strike Chance of the item
         (found on weapons)
     'attacks_per_second' : float
         Attacks per second of the item
@@ -233,17 +226,17 @@ class ItemParser:
     'mana_multiplier' : int
         mana multiplier of the skill gem
     'souls_per_use' : int
-        Souls used when he skill gem is triggered
+        Souls used when the skill gem is triggered
         (found on vaal skill gems)
     'stored_uses' : int
         Number of stored uses
         (found on vaal skills, traps, mines, etc)
     'cooldown_time' : float
         Cooldown in seconds of the skill gem
-        (found on traps, mines, etc)
+        (found on traps, mines, etc.)
     'cast_time' : float
         Cast time in second of the skill gem
-    critical_stike_chance: float
+    'critical_strike_chance': float
         Critical strike chance in percent of the skill gem
     'damage_effectiveness' : int
         Damage effectiveness in percent of the skill gem
@@ -257,7 +250,7 @@ class ItemParser:
 
     """
     _re_split = re.compile(
-        r'^\-{8}$',
+        r'^-{8}$',
         re.UNICODE | re.MULTILINE
     )
     
@@ -277,7 +270,7 @@ class ItemParser:
     )
     
     _stat_handlers = {
-        ItemTypes.ITEM: {
+        ITEM_TYPES.ITEM: {
             'map_tier': {
                 're': 'Map Tier',
                 'func': int,
@@ -337,7 +330,7 @@ class ItemParser:
                 'func': lambda s: s,
             },
         },
-        ItemTypes.GEM: {
+        ITEM_TYPES.GEM: {
             'gem_level': {
                 're': 'Level',
                 'func': int,
@@ -387,7 +380,7 @@ class ItemParser:
                 'func': lambda s: [int(s2.replace('.', '')) for s2 in s.split('/')],
             }
         },
-        ItemTypes.CURRENCY: {
+        ITEM_TYPES.CURRENCY: {
             'stack_size': {
                 're': 'Stack Size',
                 'func': lambda s: [int(s2) for s2 in s.split('/')],
@@ -396,14 +389,14 @@ class ItemParser:
     }
     
     _re_stat_handlers = {
-        ItemTypes.ITEM: _regex_build_from_handler_dict(
-            _stat_handlers[ItemTypes.ITEM]
+        ITEM_TYPES.ITEM: _regex_build_from_handler_dict(
+            _stat_handlers[ITEM_TYPES.ITEM]
         ),
-        ItemTypes.GEM: _regex_build_from_handler_dict(
-            _stat_handlers[ItemTypes.GEM]
+        ITEM_TYPES.GEM: _regex_build_from_handler_dict(
+            _stat_handlers[ITEM_TYPES.GEM]
         ),
-        ItemTypes.CURRENCY: _regex_build_from_handler_dict(
-            _stat_handlers[ItemTypes.CURRENCY]
+        ITEM_TYPES.CURRENCY: _regex_build_from_handler_dict(
+            _stat_handlers[ITEM_TYPES.CURRENCY]
         ),
     }
     
@@ -549,14 +542,14 @@ class ItemParser:
             for rarity_const in RARITY:
                 if rarity_const.name_upper == rarity:
                     self.rarity = rarity_const
-                    self._type = ItemTypes.ITEM
+                    self._type = ITEM_TYPES.ITEM
                     break
             
             if self._type is None:
                 if rarity == 'Gem':
-                    self._type = ItemTypes.GEM
+                    self._type = ITEM_TYPES.GEM
                 elif rarity == 'Currency':
-                    self._type = ItemTypes.CURRENCY
+                    self._type = ITEM_TYPES.CURRENCY
                 else:
                     raise ValueError('Unsupported value for "Rarity": %s' % rarity)
             elif self.rarity == RARITY.MAGIC:
@@ -572,7 +565,7 @@ class ItemParser:
                 # stats
         else:
             # case for MTX items
-            self._type = ItemTypes.CURRENCY
+            self._type = ITEM_TYPES.CURRENCY
         
         is_map = self._re_is_map.search(self.base_item_name)
         is_jewel = self._re_is_jewel.search(self.base_item_name)
@@ -582,7 +575,7 @@ class ItemParser:
         
         # Base stats sections (not from mods)
         next = section()
-        if self._type == ItemTypes.GEM:
+        if self._type == ITEM_TYPES.GEM:
             next = self._re_split_newline.split(next, 1)
             self._handle_singular(next[0], 'gem_tags')
             next = next[1]
@@ -617,7 +610,7 @@ class ItemParser:
             ):
                 if i % 2 == 0:
                     found = False
-                    for socket_colour in SocketColour:
+                    for socket_colour in SOCKET_COLOUR:
                         if socket_colour.char == char:
                             found = True
                             break
@@ -666,12 +659,12 @@ class ItemParser:
             self.is_corrupted = False
         
         # Help text
-        if self._type in (ItemTypes.GEM, ItemTypes.CURRENCY) or is_jewel or is_map or is_vaal_fragment:
+        if self._type in (ITEM_TYPES.GEM, ITEM_TYPES.CURRENCY) or is_jewel or is_map or is_vaal_fragment:
             self.help_text = section(index=last_sec)
             last_sec -= 1
         
         # Flavour text
-        if (self._type == ItemTypes.ITEM and self.rarity == RARITY.UNIQUE) or is_vaal_fragment:
+        if (self._type == ITEM_TYPES.ITEM and self.rarity == RARITY.UNIQUE) or is_vaal_fragment:
             self.flavour_text = section(index=last_sec)
             # Unidentified uniques don't have a flavour text, I think setting
             # "Unidentifed" is appropriate, but still have to make sure not to
@@ -682,7 +675,7 @@ class ItemParser:
         # Implicit section & stats section
         # We should be left at between 0 or 2 sections
         remaining = abs((last_sec + 1) - current_sec)
-        if self._type == ItemTypes.ITEM:
+        if self._type == ITEM_TYPES.ITEM:
             if remaining == 0:
                 self.implicit_stats = []
                 self.stats = []
@@ -700,21 +693,21 @@ class ItemParser:
                     self.stats = self._re_split_newline.split(section())
             else:
                 raise ValueError('Too many sections (%s) left for item stat parsing.' % remaining)
-        elif self._type == ItemTypes.GEM:
+        elif self._type == ITEM_TYPES.GEM:
             if remaining == 0:
                 self.stats = []
             elif remaining == 1:
                 self.stats = self._re_split_newline.split(section())
             else:
                 raise ValueError('Too many sections (%s) left for gem stat parsing.' % remaining)
-        elif self._type == ItemTypes.CURRENCY and remaining:
+        elif self._type == ITEM_TYPES.CURRENCY and remaining:
             if remaining == 1:
                 self.description = section()
             else:
                 raise ValueError('All sections (%s) should be parsed now.' % remaining)
         
         # Do a final pass on the prefix for magic items
-        if self._type == ItemTypes.ITEM and self.rarity == RARITY.MAGIC and (
+        if self._type == ITEM_TYPES.ITEM and self.rarity == RARITY.MAGIC and (
                 (self.suffix is None and len(self.stats) >= 1) or (self.suffix is not None and len(self.stats) >= 2)):
             match = self._re_prefix.match(self.base_item_name)
             self.prefix = match.group('prefix')
@@ -751,43 +744,40 @@ class ItemParser:
 
 
 if __name__ == "__main__":
-    item_data = """
-    Item Class: Gloves
-    Rarity: Rare
-    Ghoul Talons
-    Carnal Mitts
-    --------
-    Quality: +20% (augmented)
-    Evasion Rating: 235 (augmented)
-    Energy Shield: 69 (augmented)
-    --------
-    Requirements:
-    Level: 70
-    Str: 79
-    Dex: 43
-    Int: 48
-    --------
-    Sockets: R-R B-G
-    --------
-    Item Level: 83
-    --------
-    Trigger Word of Spite when Hit (enchant)
-    --------
-    Projectiles Pierce an additional Target (implicit)
-    9% increased Attack Speed (implicit)
-    --------
-    +34 to Dexterity
-    Adds 8 to 17 Cold Damage to Attacks
-    +63 to Evasion Rating
-    23% increased Evasion and Energy Shield
-    +27 to maximum Energy Shield
-    +45% to Lightning Resistance
-    Gain 4 Mana per Enemy Killed
-    11% increased Stun and Block Recovery
-    Searing Exarch Item
-    Eater of Worlds Item
-    """
+    item_data = (
+        "Item Class: Gloves\n"
+        "Rarity: Rare\n"
+        "Ghoul Talons"
+        "Carnal Mitts"
+        "--------"
+        "Quality: +20% (augmented)"
+        "Evasion Rating: 235 (augmented)"
+        "Energy Shield: 69 (augmented)"
+        "--------"
+        "Requirements:"
+        "Level: 70 Str: 79 Dex: 43 Int: 48"
+        "--------"
+        "Sockets: R-R B-G"
+        "--------"
+        "Item Level: 83"
+        "--------"
+        "Trigger Word of Spite when Hit (enchant)"
+        "--------"
+        "Projectiles Pierce an additional Target (implicit)"
+        "9% increased Attack Speed (implicit)"
+        "--------"
+        "+34 to Dexterity"
+        "Adds 8 to 17 Cold Damage to Attacks"
+        "+63 to Evasion Rating"
+        "23% increased Evasion and Energy Shield"
+        "+27 to maximum Energy Shield"
+        "+45% to Lightning Resistance"
+        "Gain 4 Mana per Enemy Killed"
+        "11% increased Stun and Block Recovery"
+        "Searing Exarch Item"
+        "Eater of Worlds Item"
+    )
     
     item = ItemParser(item_data)
     
-    print(item.stats)
+    print(item.base_item_name)

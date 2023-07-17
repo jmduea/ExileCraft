@@ -23,22 +23,21 @@
 import os
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
-from sqlalchemy import ForeignKey
+from sqlalchemy import ForeignKey, String, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from modules.data.models.association_models import mod_tags_association, item_implicits_association, \
-    mod_implicit_tags_association, mod_adds_tags_association, mod_spawn_weights_association, \
-    fossil_mods_association
-from modules.data.models.base_model import Base, intpk, str50
-from modules.data.models.fossil_models import Fossil
+from modules.data.models.association_models import item_implicits_association, mod_tags_association, \
+    mod_stats_association, mod_types_association, mod_groups_association, mod_generation_types_association, \
+    mod_adds_tags_association, mod_implicit_tags_association, mod_tag_weights_association
+from modules.data.models.base_model import Base, intpk
+from modules.data.models.shared_models import Domain
+from modules.data.models.stat_models import StatValue
+from modules.data.models.translation_models import Translation
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
 target_dir = script_dir.parent / 'json'
-
-MOD_MAX_STATS = 6
-MOD_STATS_RANGE = range(1, MOD_MAX_STATS + 1)
 
 
 @dataclass
@@ -46,105 +45,76 @@ class Mod(Base):
     __tablename__ = 'mods'
     
     # Table Columns
-    mod: Mapped[str]
-    level_req: Mapped[int]
-    name: Mapped[str]
-    is_essence_only: Mapped[bool]
-    domain_id: Mapped[int] = mapped_column(ForeignKey('mod_domains.id'), deferred=True, deferred_group='mod_details')
-    generation_type_id: Mapped[int] = mapped_column(ForeignKey('mod_generation_types.id'), deferred=True,
-                                                    deferred_group='mod_details')
-    mod_group_id: Mapped[int] = mapped_column(ForeignKey('mod_groups.id'), deferred=True, deferred_group='mod_details')
-    mod_type_id: Mapped[int] = mapped_column(ForeignKey('mod_types.id'), deferred=True, deferred_group='mod_details')
     id: Mapped[intpk] = mapped_column(init=False)
+    mod_name: Mapped[str] = mapped_column(String(190), nullable=False)
+    name: Mapped[str] = mapped_column(String(180))
+    level_req: Mapped[int] = mapped_column(Integer, nullable=False, insert_default=0, default=0)
+    essence_only: Mapped[bool] = mapped_column(nullable=False, insert_default=False, default=False)
+    domain_id: Mapped[int] = mapped_column(ForeignKey('domains.id'), insert_default=None, default=None)
+    generation_type_id: Mapped[int] = mapped_column(ForeignKey('generation_types.id'), insert_default=None,
+                                                    default=None)
+    mod_type_id: Mapped[int] = mapped_column(ForeignKey('mod_types.id'), insert_default=None, default=None)
+    mod_group_id: Mapped[int] = mapped_column(ForeignKey('mod_groups.id'), insert_default=None, default=None)
     
     # Relationships
-    domain = relationship("ModDomain", back_populates='mods')
-    generation_type = relationship("ModGenerationType", back_populates='mods')
-    mod_group = relationship("ModGroup", back_populates='mods')
-    mod_type = relationship("ModType", back_populates='mods')
-    translation: Mapped["Translation"] = relationship("Translation", back_populates='mod')
-    
-    # Many-to-Many Relationships
-    mod_stat_values: Mapped[List["ModStatValue"]] = relationship(default_factory=list, back_populates='mod')
-    items: Mapped[List["Item"]] = relationship(default_factory=list, secondary=item_implicits_association,
-                                               back_populates='item_implicits', lazy='dynamic')
-    implicit_tags: Mapped[List["Tag"]] = relationship(default_factory=list, secondary=mod_implicit_tags_association,
-                                                      back_populates='mod_implicit_tags', lazy='dynamic')
-    tags: Mapped[List["Tag"]] = relationship(default_factory=list, secondary=mod_tags_association,
-                                             back_populates='mods', lazy='dynamic')
-    mod_stats: Mapped[List["Stat"]] = relationship(default_factory=list, secondary='mod_stat_values',
-                                                   back_populates='mods', lazy='dynamic')
-    added_tags: Mapped[List["Tag"]] = relationship(default_factory=list, secondary=mod_adds_tags_association,
-                                                   back_populates='mod_adds_tags', lazy='dynamic')
-    tag_weights: Mapped[List["Tag"]] = relationship(default_factory=list, secondary=mod_spawn_weights_association,
-                                                    back_populates='mod_spawn_weights', lazy='dynamic')
-    # essences = relationship('Essences', secondary=essence_mods_association, back_populates='mods')
-    fossils: Mapped[List["Fossil"]] = relationship(default_factory=list, secondary=fossil_mods_association,
-                                                   back_populates='mods', lazy='dynamic')
+    domain: Mapped["Domain"] = relationship("Domain", back_populates='mods', uselist=False, default='item')
+    items: Mapped[List["Item"]] = relationship("Item", secondary=item_implicits_association,
+                                               back_populates='implicits', default_factory=list,
+                                               lazy='selectin')
+    stat_values: Mapped[List["StatValue"]] = relationship("StatValue", back_populates='mod',
+                                                          default_factory=list, lazy='selectin')
+    translation: Mapped[List["Translation"]] = relationship("Translation", back_populates='mod', default_factory=list,
+                                                            lazy='selectin')
+    mod_type: Mapped["ModType"] = relationship("ModType", back_populates='mods', default='', lazy='selectin')
+    mod_group: Mapped["ModGroup"] = relationship("ModGroup", back_populates='mods', default='', lazy='selectin')
+    generation_type: Mapped["GenerationType"] = relationship("GenerationType",
+                                                             back_populates='mods', default='', lazy='selectin')
+    adds_tags: Mapped[List["Tag"]] = relationship("Tag", secondary=mod_adds_tags_association,
+                                                  back_populates='added_by_mods',
+                                                  default_factory=list, lazy='selectin')
+    implicit_tags: Mapped[List["Tag"]] = relationship("Tag", secondary=mod_implicit_tags_association,
+                                                      back_populates='mod_implicit_tags', default_factory=list,
+                                                      lazy='selectin')
+    tag_weights: Mapped[List["TagWeight"]] = relationship("TagWeight", back_populates='mod_weight',
+                                                          default_factory=list, lazy='selectin')
 
 
-@dataclass
 class ModType(Base):
     __tablename__ = 'mod_types'
     
     # Table Columns
-    mod_type: Mapped[str50]
+    type: Mapped[str] = mapped_column(String(60), unique=True)
     id: Mapped[intpk] = mapped_column(init=False)
     
     # Relationships
-    mods: Mapped[List["Mod"]] = relationship(default_factory=list, back_populates='mod_type', foreign_keys=[
-        Mod.mod_type_id], init=False)
+    mods: Mapped[List["Mod"]] = relationship("Mod", secondary=mod_types_association, back_populates='mod_type',
+                                             init=False, default_factory=list, lazy='selectin')
 
 
-@dataclass
-class ModGenerationType(Base):
-    __tablename__ = 'mod_generation_types'
+class GenerationType(Base):
+    __tablename__ = 'generation_types'
     
     # Table Columns
-    id: Mapped[intpk] = mapped_column(init=False)
-    generation_type: Mapped[str] = mapped_column(unique=True)
+    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    generation_type: Mapped[str] = mapped_column(String(60), unique=True)
     
     # Relationships
-    mods: Mapped[List["Mod"]] = relationship(default_factory=list, back_populates='generation_type', init=False)
+    mods: Mapped[List["Mod"]] = relationship("Mod", secondary=mod_generation_types_association,
+                                             back_populates='generation_type', default_factory=list, lazy='selectin',
+                                             init=False)
 
 
-@dataclass
-class ModDomain(Base):
-    __tablename__ = 'mod_domains'
-    
-    # Table Columns
-    id: Mapped[intpk] = mapped_column(init=False)
-    domain: Mapped[str] = mapped_column(unique=True)
-    
-    # Relationships
-    mods: Mapped[List["Mod"]] = relationship(default_factory=list, back_populates='domain', init=False)
-    items: Mapped[List["Item"]] = relationship(default_factory=list, back_populates='domain', init=False)
-
-
-@dataclass
 class ModGroup(Base):
     __tablename__ = 'mod_groups'
     
     # Table Columns
-    group: Mapped[str50]
+    group: Mapped[str] = mapped_column(String(60), nullable=False, unique=True)
     id: Mapped[intpk] = mapped_column(init=False)
     
     # Relationships
-    mods: Mapped[List["Mod"]] = relationship(default_factory=list, back_populates='mod_group', foreign_keys=[
-        Mod.mod_group_id], init=False)
-
-
-@dataclass
-class ModStatValue(Base):
-    __tablename__ = 'mod_stat_values'
+    mods: Mapped[List["Mod"]] = relationship("Mod", secondary=mod_groups_association, back_populates='mod_group',
+                                             default_factory=list, lazy='selectin', init=False)
     
-    # Table Columns
-    stat_min_value: Mapped[int]
-    stat_max_value: Mapped[int]
-    stat_id: Mapped[int] = mapped_column(ForeignKey('stats.id'))
-    mod_id: Mapped[int] = mapped_column(ForeignKey('mods.id'))
-    id: Mapped[intpk] = mapped_column(init=False)
-    
-    # Relationships
-    mod = relationship("Mod", back_populates='mod_stat_values', init=False)
-    stat = relationship("Stat", back_populates='mod_stat_values', init=False)
+    def __init__(self, group) -> None:
+        super().__init__()
+        self.group = group if group else None

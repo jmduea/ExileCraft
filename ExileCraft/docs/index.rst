@@ -6,6 +6,15 @@
 Welcome to ExileCraft's documentation!
 ======================================
 
+**ExileCraft** is a crafting simulator for the game Path of Exile. It is
+designed to help players plan out their crafting strategies and to
+understand the probabilities of crafting outcomes.
+
+.. note::
+
+   This documentation and application is a work in progress. If you have any questions
+   or suggestions, please contact me through Discord or Github.
+
 .. toctree::
    :maxdepth: 2
 

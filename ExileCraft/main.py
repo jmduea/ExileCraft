@@ -46,6 +46,7 @@ basedir = os.path.dirname(__file__)
 
 
 class MainWindow(QtWidgets.QMainWindow):
+    """Main Window Class"""
     # Define button names as constants
     BTN_HOME = "btn_home"
     BTN_PAGE_2 = "btn_page_2"
@@ -103,19 +104,23 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.load_pages.item_spacer_3.hide()
     
     def parse_clipboard_text(self):
+        """Parse Clipboard Text"""
         item_info_string = self.clipboard.text()
         print(item_info_string)
         item_parser = ItemParser(item_info_string)
         
     def select_menu_and_load_page(self, btn, page):
+        """Select Menu And Load Page"""
         self.ui.left_menu.select_only_one(btn.objectName())
         MainFunctions.set_page(self, page)
         
     @staticmethod
     def set_button_active(button):
+        """Set Button Active"""
         button.set_active(True)
     
     def btn_clicked(self):
+        """Handle Button Clicks"""
         # GET BT CLICKED
         btn = SetupMainWindow.setup_btns(self)
         
@@ -217,20 +222,24 @@ class MainWindow(QtWidgets.QMainWindow):
     # Check function by object name / btn_id
     # ///////////////////////////////////////////////////////////////
     def btn_released(self):
+        """Run function when btn is released"""
         # GET BT CLICKED
         self.btn = SetupMainWindow.setup_btns(self)
 
     # RESIZE EVENT
     def resizeEvent(self, event):
+        """Event when window is resized"""
         SetupMainWindow.resize_grips(self)
 
     # MOUSE CLICK EVENTS
     # ///////////////////////////////////////////////////////////////
     def mousePressEvent(self, event):
+        """Event when mouse is pressed"""
         # SET DRAG POS WINDOW
         self.dragPos = event.globalPos()
 
     def leaveEvent(self, event):
+        """Event when mouse leaves the window"""
         QtWidgets.QApplication.instance().restoreOverrideCursor()
 
 

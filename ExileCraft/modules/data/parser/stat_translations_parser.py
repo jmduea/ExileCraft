@@ -25,48 +25,73 @@
 import json
 import os
 
-from modules.data.models.stat_models import StatTranslation, EnglishTranslation, StatCondition, StatFormat, \
-    StatIndexHandler
+from modules.data.models.stat_models import Stat
+from modules.data.models.translation_models import Translation, TranslationCondition, TranslationIndexHandler, \
+    TranslationFormat
 from modules.data.parser.path_utils import get_abs_path, get_base_dir
 
 script_path = os.path.realpath(__file__)
 base_dir = get_base_dir(script_path)
-abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'stat_translations.min.json'))
+abs_path_to_json = get_abs_path(base_dir,
+                                os.path.join(r'ExileCraft\modules\data', 'json', 'stat_translations.min.json'))
 
 
-def insert_stat_translations_into_db(db_manager):
+def create_translation_objects(db_manager, mod_id):
     with open(abs_path_to_json, 'r') as f:
         data = json.load(f)
     
     with db_manager.transaction() as session:
-        for entry in data:
-            stat_translation = StatTranslation(stat_id=entry['ids'][0])
-            if 'hidden' in entry:
-                stat_translation.hidden = entry['hidden']
+        for item in data:
+            ids = item['ids']
             
-            for english in entry['English']:
-                english_translation = EnglishTranslation(stat_string=english['string'])
-                english_translation.stat_translation = stat_translation
-                
-                for condition in english['condition']:
-                    stat_condition = StatCondition(min=condition.get('min'), max=condition.get('max'),
-                                                    negated=condition.get('negated', False))
-                    english_translation.conditions.append(stat_condition)
-                
-                for format in english['format']:
-                    stat_format = StatFormat(format=format)
-                    english_translation.formats.append(stat_format)
-                
-                for index_handler in english['index_handlers']:
-                    for handler in index_handler:  # assuming 'index_handlers' is a list of lists
-                        stat_index_handler = StatIndexHandler(handler=handler)
-                        english_translation.index_handlers.append(stat_index_handler)
-                
-                stat_translation.english_translations.append(english_translation)
-            
-            session.add(stat_translation)
-            
-            session.commit()
+            for translation in item['English']:
+                conditions = translation['condition']
+                formats = translation['format']
+                index_handlers = translation['index_handlers']
+                string = translation['string']
+                if 'hidden' in translation:
+                    hidden = True
+                else:
+                    hidden = False
+                    for id_ in ids:
+                        stat_obj = session.query(Stat).filter_by(Stat.name == id_).one()
+                        stat_id = stat_obj.id
+                        translation_dict = {
+                            'mod_id': mod_id,
+                            'stat_id': stat_id,
+                            'string': string,
+                            'hidden': hidden
+                            }
+                        
+                        translation_record = Translation(**translation_dict)
+                        session.add(translation_record)
+                        session.flush()
+                        
+                        translation_obj = session.query(Translation).filter_by(Translation.mod_id == mod_id).first()
+                        translation_id = translation_obj.id
+                        
+                        condition_dict = {
+                            'translation_id': translation_id,
+                            'condition_data': conditions
+                        }
+                        condition_record = TranslationCondition(**condition_dict)
+                        session.add(condition_record)
+                        
+                        format_dict = {
+                            'translation_id': translation_id,
+                            'format_data': formats
+                        }
+                        
+                        format_record = TranslationFormat(**format_dict)
+                        session.add(format_record)
+                        
+                        index_handler_dict = {
+                            'translation_id': translation_id,
+                            'index_handler_data': index_handlers
+                        }
+                        
+                        index_handler_record = TranslationIndexHandler(**index_handler_dict)
+                        session.add(index_handler_record)
 
 
 def find_stat_translation(mod_id):
@@ -120,3 +145,7 @@ def get_stat_translation_string(stat_translation_data, average_stat):
                 (max_condition is not None and average_stat <= max_condition):
             return translation.get('string', '').format(average_stat)
     return ''
+
+
+if __name__ == "__main__":
+    create_translation_objects()
