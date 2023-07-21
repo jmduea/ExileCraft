@@ -26,6 +26,7 @@ import json
 import os
 
 from modules.data.parser.path_utils import get_abs_path, get_base_dir
+from modules.shared.config.constants import item_class_whitelist
 
 script_path = os.path.realpath(__file__)
 base_dir = get_base_dir(script_path)
@@ -45,6 +46,8 @@ class ItemClassParser:
         
         item_class_list = []
         for item_class, item_data in data.items():
+            if item_class not in item_class_whitelist:
+                continue
             item_class_dict = {
                 "name": item_class,
                 "display_name": item_data.get("name")
