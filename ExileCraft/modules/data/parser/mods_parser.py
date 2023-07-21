@@ -48,6 +48,8 @@ class ModParser:
         data = self._data
         mod_data_list = []
         for mod, mod_data in data.items():
+            if mod_data.get("domain") not in domain_whitelist:
+                continue
             mod_data_value = mod_data.get(key, None)
             mod_data_dict = {
                 key: mod_data_value if mod_data_value is not None else None
