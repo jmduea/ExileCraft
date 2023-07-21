@@ -92,6 +92,7 @@ class ItemParser:
                 'item_requirements_dict': item_requirements_dict,
                 'item_properties_dict': item_properties_dict,
                 'item_class_subtype': item_class_subtype,
+                'release_state': item_data.get("release_state")
             }
             if item_data_dict not in item_data_list:
                 item_data_list.append(item_data_dict)
@@ -142,7 +143,7 @@ class ItemParser:
             properties = item_data.get("properties", {})
             for _property, value in properties.items():
                 item_properties_dict[_property] = value
-                return item_properties_dict
+            return item_properties_dict
         else:
             return {}
     
