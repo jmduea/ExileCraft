@@ -48,6 +48,8 @@ class ItemParser:
         data = self.parse_json()
         item_data_list = []
         for item, item_data in data.items():
+            if item_data.get("item_class") not in item_class_whitelist:
+                continue
             item_data_value = item_data.get(key, '')
             item_data_dict = {'metadata_id': item, key: item_data_value}
             if item_data_dict not in item_data_list:
