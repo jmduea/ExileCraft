@@ -58,6 +58,8 @@ class ItemParser:
         data = self.parse_json()
         item_data_list = []
         for metadata_id, item_data in data.items():
+            if item_data.get("domain") not in domain_whitelist:
+                continue
             drop_level = item_data.get("drop_level")
             visual_identity = item_data.get("visual_identity").get("id")
             item_domain = item_data.get("domain")
