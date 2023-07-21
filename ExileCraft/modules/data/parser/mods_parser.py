@@ -94,7 +94,7 @@ class ModParser:
         groups_list = []
         for group in mod_groups_list:
             group_dict = {
-                "group": group["groups"][0]
+                "groups": group["groups"][0]
             }
             if group_dict not in groups_list:
                 groups_list.append(group_dict)
