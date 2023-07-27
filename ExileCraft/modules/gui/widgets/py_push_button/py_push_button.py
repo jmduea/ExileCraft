@@ -13,43 +13,38 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QPushButton
 
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
-
-# STYLE
-# ///////////////////////////////////////////////////////////////
-style = '''
-QPushButton {{
-	border: none;
-    padding-left: 10px;
-    padding-right: 5px;
-    color: {_color};
-	border-radius: {_radius};	
-	background-color: {_bg_color};
-}}
-QPushButton:hover {{
-	background-color: {_bg_color_hover};
-}}
-QPushButton:pressed {{	
-	background-color: {_bg_color_pressed};
-}}
-'''
+style = ('\n'
+         'QPushButton {{\n'
+         '	border: none;\n'
+         '    padding-left: 10px;\n'
+         '    padding-right: 5px;\n'
+         '    color: {_color};\n'
+         '	border-radius: {_radius};	\n'
+         '	background-color: {_bg_color};\n'
+         '}}\n'
+         'QPushButton:hover {{\n'
+         '	background-color: {_bg_color_hover};\n'
+         '}}\n'
+         'QPushButton:pressed {{	\n'
+         '	background-color: {_bg_color_pressed};\n'
+         '}}\n')
 
 
 # PY PUSH BUTTON
 # ///////////////////////////////////////////////////////////////
 class PyPushButton(QPushButton):
     def __init__(
-            self,
-            text,
-            radius,
-            color,
-            bg_color,
-            bg_color_hover,
-            bg_color_pressed,
-            parent=None,
+        self,
+        text,
+        radius,
+        color,
+        bg_color,
+        bg_color_hover,
+        bg_color_pressed,
+        parent=None,
     ):
         super().__init__()
 

@@ -20,23 +20,26 @@
 #   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #   SOFTWARE.
 # ##############################################################################
+from dataclasses import dataclass
 from typing import List
 
-from sqlalchemy import Integer, String
+from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from modules.data.models.base_model import Base, intpk
+from modules.data.models.base_model import Base
 
 
+@dataclass
 class Domain(Base):
-    __tablename__ = "domains"
-    
+
     # Table Columns
-    id: Mapped[intpk] = mapped_column(Integer, primary_key=True, init=False)
     name: Mapped[str] = mapped_column(String(60), unique=True)
-    
+
     # One-to-many Relationships
-    items: Mapped[List["Item"]] = relationship("Item", back_populates="domain",
-                                               default_factory=list, lazy='selectin', init=False)
-    mods: Mapped[List["Mod"]] = relationship("Mod", back_populates="domain", default_factory=list, lazy='selectin',
-                                             init=False)
+    items = relationship("Item", back_populates="domain", default_factory=list,
+                                               init=False, join_depth=1, order_by="Item.drop_level")
+    mods = relationship("Mod", back_populates="domain", default_factory=list,
+                                             init=False, join_depth=1, order_by="Mod.level_req")
+
+    def __repr__(self):
+        return f"<Domain(name='{self.name}')>"

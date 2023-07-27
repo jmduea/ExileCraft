@@ -13,14 +13,9 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
-
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
+from PySide6.QtWidgets import QFrame, QHBoxLayout, QWidget
 
 
-# CUSTOM LEFT MENU
-# ///////////////////////////////////////////////////////////////
 class PyDiv(QWidget):
     def __init__(self, color):
         super().__init__()

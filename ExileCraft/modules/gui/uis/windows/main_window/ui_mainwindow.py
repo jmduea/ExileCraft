@@ -1,27 +1,19 @@
 
-# -*- coding: utf-8 -*-
 
-################################################################################
-## Form generated from reading UI file 'designerZNKIJm.ui'
-##
-## Created by: Qt User Interface Compiler version 6.5.0
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
+from typing import Any, Dict
 
-from typing import Dict, Any
-from PySide6.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QFrame, QHBoxLayout
-from modules.gui.themes import *
-from modules.gui.widgets.py_window import PyWindow
-from modules.gui.widgets.py_left_menu import PyLeftMenu
-from modules.gui.widgets.py_left_column import PyLeftColumn
-from modules.gui.widgets.py_title_bar import PyTitleBar
-from modules.gui.widgets.py_credits_bar import PyCredits
-from modules.gui.core.functions import *
-from modules.gui.core.json_themes import *
+from PySide6.QtWidgets import QFrame, QHBoxLayout, QMainWindow, QVBoxLayout, QWidget
+
+from modules.gui.core.functions import Functions
+from modules.gui.core.json_settings import Settings
+from modules.gui.core.json_themes import Themes
 from modules.gui.uis.columns.ui_right_column import Ui_RightColumn
-from modules.gui.uis.pages import *
 from modules.gui.uis.pages.ui_main_pages import Ui_MainPages
+from modules.gui.widgets.py_credits_bar import PyCredits
+from modules.gui.widgets.py_left_column import PyLeftColumn
+from modules.gui.widgets.py_left_menu import PyLeftMenu
+from modules.gui.widgets.py_title_bar import PyTitleBar
+from modules.gui.widgets.py_window import PyWindow
 
 
 class UI_MainWindow:

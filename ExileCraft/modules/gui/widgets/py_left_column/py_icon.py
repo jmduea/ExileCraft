@@ -13,19 +13,22 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QPainter, QPixmap
+from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
+
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
-from qt_core import *
 
 
 # PY ICON WITH CUSTOM COLORS
 # ///////////////////////////////////////////////////////////////
 class PyIcon(QWidget):
     def __init__(
-            self,
-            icon_path,
-            icon_color
+        self,
+        icon_path,
+        icon_color
     ):
         super().__init__()
 
@@ -54,7 +57,7 @@ class PyIcon(QWidget):
     def set_icon(self, icon_path, icon_color=None):
         # GET COLOR
         color = ""
-        if icon_color != None:
+        if icon_color is not None:
             color = icon_color
         else:
             color = self._icon_color

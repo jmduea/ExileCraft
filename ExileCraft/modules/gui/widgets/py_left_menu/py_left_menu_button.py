@@ -13,22 +13,15 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
-
-# IMPORT PACKAGES AND MODULES
-# ///////////////////////////////////////////////////////////////
 import os
 
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
+from PySide6.QtCore import QEvent, QPoint, QRect, Qt
+from PySide6.QtGui import QColor, QPainter, QPixmap
+from PySide6.QtWidgets import QGraphicsDropShadowEffect, QLabel, QPushButton
 
-# IMPORT FUNCTIONS
-# ///////////////////////////////////////////////////////////////
-from modules.gui.core.functions import *
+from modules.gui.core.functions import Functions
 
 
-# CUSTOM LEFT MENU
-# ///////////////////////////////////////////////////////////////
 class PyLeftMenuButton(QPushButton):
     def __init__(
             self,
@@ -233,7 +226,8 @@ class PyLeftMenuButton(QPushButton):
 
     # DRAW ICON WITH COLORS
     # ///////////////////////////////////////////////////////////////
-    def icon_paint(self, qp, image, rect, color):
+    @staticmethod
+    def icon_paint(qp, image, rect, color):
         icon = QPixmap(image)
         painter = QPainter(icon)
         painter.setCompositionMode(QPainter.CompositionMode_SourceIn)

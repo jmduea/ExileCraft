@@ -13,22 +13,17 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
+from PySide6.QtCore import QSize, Qt, Signal
+from PySide6.QtGui import QCursor
+from PySide6.QtSvgWidgets import QSvgWidget
+from PySide6.QtWidgets import QFrame, QHBoxLayout, QLabel, QVBoxLayout, QWidget
 
-# IMPORT FUNCTIONS
-# ///////////////////////////////////////////////////////////////
-from modules.gui.core.functions import *
-# IMPORT SETTINGS
-# ///////////////////////////////////////////////////////////////
 from modules.gui.core.json_settings import Settings
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
-# IMPORT DIV
-# ///////////////////////////////////////////////////////////////
+
 from .py_div import PyDiv
-# IMPORT BUTTON
-# ///////////////////////////////////////////////////////////////
+
 from .py_title_button import PyTitleButton
+from ...core.functions import Functions
 
 # GLOBALS
 # ///////////////////////////////////////////////////////////////
@@ -108,7 +103,7 @@ class PyTitleBar(QWidget):
 
         # MOVE WINDOW / MAXIMIZE / RESTORE
         # ///////////////////////////////////////////////////////////////
-        def moveWindow(event):
+        def move_window(event):
             # IF MAXIMIZED CHANGE TO NORMAL
             if parent.isMaximized():
                 self.maximize_restore()
@@ -124,11 +119,11 @@ class PyTitleBar(QWidget):
 
         # MOVE APP WIDGETS
         if is_custom_title_bar:
-            self.top_logo.mouseMoveEvent = moveWindow
-            self.div_1.mouseMoveEvent = moveWindow
-            self.title_label.mouseMoveEvent = moveWindow
-            self.div_2.mouseMoveEvent = moveWindow
-            self.div_3.mouseMoveEvent = moveWindow
+            self.top_logo.mouseMoveEvent = move_window
+            self.div_1.mouseMoveEvent = move_window
+            self.title_label.mouseMoveEvent = move_window
+            self.div_2.mouseMoveEvent = move_window
+            self.div_3.mouseMoveEvent = move_window
 
         # MAXIMIZE / RESTORE
         if is_custom_title_bar:

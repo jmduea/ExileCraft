@@ -1,5 +1,7 @@
+from PySide6.QtGui import QCursor, QPixmap
+from PySide6.QtWidgets import QApplication, QPushButton
+
 from modules.data.parser.path_utils import get_abs_path
-from qt_core import *
 
 
 class PyCustomCursorButton(QPushButton):

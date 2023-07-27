@@ -16,11 +16,14 @@
 
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
-import sys
+
+from PySide6.QtCore import QRect, QSize, Qt
+from PySide6.QtGui import QCursor
+from PySide6.QtWidgets import QFrame, QSizeGrip, QWidget
+
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
-from qt_core import *
 
 
 # PY GRIPS

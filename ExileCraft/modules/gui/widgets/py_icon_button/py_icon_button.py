@@ -13,10 +13,13 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
+from PySide6.QtCore import QEvent, QPoint, QRect, Qt
+from PySide6.QtGui import QBrush, QColor, QPainter, QPixmap
+from PySide6.QtWidgets import QGraphicsDropShadowEffect, QLabel, QPushButton
+
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
-from qt_core import *
 
 
 # PY TITLE BUTTON

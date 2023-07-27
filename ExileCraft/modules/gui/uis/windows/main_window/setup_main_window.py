@@ -24,8 +24,11 @@
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon
 
+from modules.gui.core.functions import Functions
+from modules.gui.core.json_settings import Settings
+from modules.gui.core.json_themes import Themes
+from modules.gui.uis.windows.main_window.functions_main_window import MainFunctions
 from modules.gui.widgets import PyGrips, PyPushButton
-from .functions_main_window import *
 
 
 class SetupMainWindow:

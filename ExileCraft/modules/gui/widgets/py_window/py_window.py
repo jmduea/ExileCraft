@@ -13,14 +13,14 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QColor
+from PySide6.QtWidgets import QFrame, QGraphicsDropShadowEffect, QHBoxLayout
 
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
 
 from modules.gui.core.json_settings import Settings
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
 from .styles import Styles
 
 
@@ -63,23 +63,17 @@ class PyWindow(QFrame):
 
         self.set_stylesheet()
 
-        if layout == Qt.Vertical:
-            # VERTICAL LAYOUT
-            self.layout = QHBoxLayout(self)
-        else:
-            # HORIZONTAL LAYOUT
-            self.layout = QHBoxLayout(self)
+        self.layout = QHBoxLayout(self)
         self.layout.setContentsMargins(margin, margin, margin, margin)
         self.layout.setSpacing(spacing)
 
-        if self.settings["custom_title_bar"]:
-            if enable_shadow:
-                self.shadow = QGraphicsDropShadowEffect()
-                self.shadow.setBlurRadius(20)
-                self.shadow.setXOffset(0)
-                self.shadow.setYOffset(0)
-                self.shadow.setColor(QColor(0, 0, 0, 160))
-                self.setGraphicsEffect(self.shadow)
+        if self.settings["custom_title_bar"] and enable_shadow:
+            self.shadow = QGraphicsDropShadowEffect()
+            self.shadow.setBlurRadius(20)
+            self.shadow.setXOffset(0)
+            self.shadow.setYOffset(0)
+            self.shadow.setColor(QColor(0, 0, 0, 160))
+            self.setGraphicsEffect(self.shadow)
 
     def set_stylesheet(
             self,
