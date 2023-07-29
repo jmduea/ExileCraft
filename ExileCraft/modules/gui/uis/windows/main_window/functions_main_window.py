@@ -24,7 +24,7 @@
 import os
 
 from PySide6 import QtGui
-from PySide6.QtCore import QPropertyAnimation, QParallelAnimationGroup, QEasingCurve, Qt
+from PySide6.QtCore import QEasingCurve, QParallelAnimationGroup, QPropertyAnimation, Qt
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QPushButton
 
@@ -164,13 +164,13 @@ class MainFunctions:
         minimum_right = self.ui.settings["right_column_size"]["minimum"]
         maximum_right = self.ui.settings["right_column_size"]["maximum"]
 
-        # Check Left Values        
+        # Check Left Values
         if left_box_width == minimum_left and direction == "left":
             left_width = maximum_left
         else:
             left_width = minimum_left
 
-        # Check Right values        
+        # Check Right values
         if right_box_width == minimum_right and direction == "right":
             right_width = maximum_right
         else:
@@ -183,7 +183,7 @@ class MainFunctions:
         self.left_box.setEndValue(left_width)
         self.left_box.setEasingCurve(QEasingCurve.InOutQuart)
 
-        # ANIMATION RIGHT BOX        
+        # ANIMATION RIGHT BOX
         self.right_box = QPropertyAnimation(self.ui.right_column_frame, b"minimumWidth")
         self.right_box.setDuration(time_animation)
         self.right_box.setStartValue(right_box_width)
@@ -230,12 +230,29 @@ class ComboboxUpdater:
         suffix_3_container (QWidget): A container that holds the suffix 3 label.
     """
 
-    def __init__(self, base_group_combobox, base_combobox, base_item_combobox, item_level_spinbox,
-                 item_quality_spinbox, item_img_label, item_properties_label,
-                 item_requirements_label, item_level_label, item_quality_label,
-                 item_header_label, item_implicits_container, item_implicits_label,
-                 item_spacer_3, prefix_1_container, prefix_2_container, prefix_3_container,
-                 suffix_1_container, suffix_2_container, suffix_3_container):
+    def __init__(
+        self,
+        base_group_combobox,
+        base_combobox,
+        base_item_combobox,
+        item_level_spinbox,
+        item_quality_spinbox,
+        item_img_label,
+        item_properties_label,
+        item_requirements_label,
+        item_level_label,
+        item_quality_label,
+        item_header_label,
+        item_implicits_container,
+        item_implicits_label,
+        item_spacer_3,
+        prefix_1_container,
+        prefix_2_container,
+        prefix_3_container,
+        suffix_1_container,
+        suffix_2_container,
+        suffix_3_container,
+    ):
         super().__init__()
         self.window = PyWindow
         self.base_group_combobox = base_group_combobox
@@ -262,10 +279,14 @@ class ComboboxUpdater:
         self.items_cache = {}
         self.item_class = None
         self.base_item = None
-        self.item_level = self.item_level_spinbox.value() \
-            if self.item_level_spinbox.value() else 0
-        self.item_quality = self.item_quality_spinbox.value() \
-            if self.item_quality_spinbox.value() else 0
+        self.item_level = (
+            self.item_level_spinbox.value() if self.item_level_spinbox.value() else 0
+        )
+        self.item_quality = (
+            self.item_quality_spinbox.value()
+            if self.item_quality_spinbox.value()
+            else 0
+        )
 
     def update_base_combobox(self):
         """
@@ -279,8 +300,11 @@ class ComboboxUpdater:
         session = db_manager.get_session()
 
         # Get base item groups from database
-        subtype_display_names = item_class_manager.get_item_class_subtypes_and_display_names(
-            session, item_class_name=self.base_group_combobox.currentText())
+        subtype_display_names = (
+            item_class_manager.get_item_class_subtypes_and_display_names(
+                session, item_class_name=self.base_group_combobox.currentText()
+            )
+        )
 
         self.base_combobox.clear()
         self.base_combobox.setEnabled(True)
@@ -303,12 +327,17 @@ class ComboboxUpdater:
 
             self.items_cache = {}
             subtype_display_name = self.base_combobox.currentText()
-            base_items = item_manager.get_base_items_from_subtype_display_name(session, subtype_display_name)
+            base_items = item_manager.get_base_items_from_subtype_display_name(
+                session, subtype_display_name
+            )
 
             self.base_item_combobox.clear()
             self.base_item_combobox.setEnabled(True)
 
-            if base_items is not None and self.base_combobox.itemText(index) is not None:
+            if (
+                base_items is not None
+                and self.base_combobox.itemText(index) is not None
+            ):
                 for base_item in base_items:
                     self.base_item_combobox.addItem(base_item.name)
                     self.items_cache[base_item.name] = base_item
@@ -341,10 +370,7 @@ class ComboboxUpdater:
         visual_identity = current_item.visual_identity
 
         current_file_path = "modules/gui/assets/images/items"
-        image_path = os.path.join(
-            current_file_path,
-            visual_identity.name + '.png'
-        )
+        image_path = os.path.join(current_file_path, visual_identity.name + ".png")
 
         try:
             pixmap = QtGui.QPixmap(image_path)
@@ -372,17 +398,17 @@ class ComboboxUpdater:
 
     def set_item_header_label(self):
         """
-        Update the item header label in the load_pages object by retrieving the currently selected item from the
-        base_item_combobox object in the left_column object.
+         Update the item header label in the load_pages object by retrieving the currently selected item from the
+         base_item_combobox object in the left_column object.
 
-       Args:
-           self: The current instance of the class where the method is called.
+        Args:
+            self: The current instance of the class where the method is called.
 
-       Returns:
-           None
-       """
+        Returns:
+            None
+        """
         item_name = self.base_item_combobox.currentText()
-        item_name_str = f'Crafting Project:\n{item_name}'
+        item_name_str = f"Crafting Project:\n{item_name}"
         self.item_header_label.setText(item_name_str)
 
     def set_item_level(self):
@@ -399,11 +425,16 @@ class ComboboxUpdater:
         item_level_value = self.item_level_spinbox.value()
         self.item_level = self.item_level_spinbox.value()
         current_item = self.items_cache.get(self.base_item_combobox.currentText())
-        current_item.item_level = self.item_level
-        item_level = str(item_level_value)
-        item_html = f'<p align="center"><span style=" font-size:11pt; color:#827a6c;">Item Level: </span>' \
-                    f'<span style=" font-size:11pt; font-weight:bold; color:#fff;">{item_level}</span></p>'
-        self.item_level_label.setText(item_html)
+        if current_item:
+            current_item.item_level = self.item_level
+            item_level = str(item_level_value)
+            item_html = (
+                f'<p align="center"><span style=" font-size:11pt; color:#827a6c;">Item Level: </span>'
+                f'<span style=" font-size:11pt; font-weight:bold; color:#fff;">{item_level}</span></p>'
+            )
+            self.item_level_label.setText(item_html)
+        else:
+            return
 
     def set_item_quality(self):
         """
@@ -419,11 +450,16 @@ class ComboboxUpdater:
         item_quality_value = self.item_quality_spinbox.value()
         self.item_quality = self.item_quality_spinbox.value()
         current_item = self.items_cache.get(self.base_item_combobox.currentText())
-        current_item.quality = self.item_quality
-        item_quality = str(item_quality_value)
-        quality_html = f'<p align="center"><span style=" font-size:11pt; color:#827a6c;">Quality: </span>' \
-                       f'<span style=" font-size:11pt; font-weight:bold; color:#8787fe;">{item_quality}%</span></p>'
-        self.item_quality_label.setText(quality_html)
+        if current_item:
+            current_item.quality = self.item_quality
+            item_quality = str(item_quality_value)
+            quality_html = (
+                f'<p align="center"><span style=" font-size:11pt; color:#827a6c;">Quality: </span>'
+                f'<span style=" font-size:11pt; font-weight:bold; color:#8787fe;">{item_quality}%</span></p>'
+            )
+            self.item_quality_label.setText(quality_html)
+        else:
+            return
         # self.item_properties_label.setText(current_item.formatted_properties())
 
     @staticmethod
@@ -443,15 +479,19 @@ class ComboboxUpdater:
 
         item_implicits = current_item.implicit_translation
         if not item_implicits:
-            return ''
+            return ""
         else:
             stat_translation_string = item_implicits[2:-3]
             # Format the implicit string
             implicit_formatted = (
-                f'<p style="line-height:1; padding-bottom:.1em;" align="center">'
-                f'<span style=" font-size:11pt; color:#8787fe;">'
-                f'{stat_translation_string}</span></p>'
-            ) if stat_translation_string else ""
+                (
+                    f'<p style="line-height:1.2; padding-bottom:.05em;" align="center">'
+                    f'<span style=" font-size:10.5pt; color:#8787fe;">'
+                    f"{stat_translation_string}</span></p>"
+                )
+                if stat_translation_string
+                else ""
+            )
 
             return implicit_formatted
 
