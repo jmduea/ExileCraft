@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'main_pagesByMdEJ.ui'
+## Form generated from reading UI file 'main_pagesIXUEMy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -26,8 +26,8 @@ class Ui_MainPages(object):
     def setupUi(self, MainPages):
         if not MainPages.objectName():
             MainPages.setObjectName(u"MainPages")
-        MainPages.resize(1061, 837)
-        MainPages.setMinimumSize(QSize(602, 527))
+        MainPages.resize(691, 890)
+        MainPages.setMinimumSize(QSize(691, 890))
         MainPages.setStyleSheet(u"QWidget{\n"
 "                border-image: url(:/images/images/emubg.png);\n"
 "                }\n"
@@ -42,23 +42,24 @@ class Ui_MainPages(object):
         self.pages.setMinimumSize(QSize(602, 527))
         self.crafting_emu_page = QWidget()
         self.crafting_emu_page.setObjectName(u"crafting_emu_page")
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.crafting_emu_page.sizePolicy().hasHeightForWidth())
+        self.crafting_emu_page.setSizePolicy(sizePolicy)
         self.crafting_emu_page.setMinimumSize(QSize(592, 517))
         self.crafting_emu_page.setStyleSheet(u"font-size: 14pt")
         self.verticalLayout_12 = QVBoxLayout(self.crafting_emu_page)
         self.verticalLayout_12.setSpacing(6)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.verticalLayout_12.setContentsMargins(9, 9, 9, 9)
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_12.addItem(self.verticalSpacer)
-
         self.crafting_emu_container = QFrame(self.crafting_emu_page)
         self.crafting_emu_container.setObjectName(u"crafting_emu_container")
-        sizePolicy = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.crafting_emu_container.sizePolicy().hasHeightForWidth())
-        self.crafting_emu_container.setSizePolicy(sizePolicy)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.crafting_emu_container.sizePolicy().hasHeightForWidth())
+        self.crafting_emu_container.setSizePolicy(sizePolicy1)
         self.crafting_emu_container.setStyleSheet(u"QWidget {\n"
 "                                            border-image: none;\n"
 "                                            }\n"
@@ -73,11 +74,11 @@ class Ui_MainPages(object):
 
         self.item_info_container = QWidget(self.crafting_emu_container)
         self.item_info_container.setObjectName(u"item_info_container")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Expanding)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.item_info_container.sizePolicy().hasHeightForWidth())
-        self.item_info_container.setSizePolicy(sizePolicy1)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Expanding)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.item_info_container.sizePolicy().hasHeightForWidth())
+        self.item_info_container.setSizePolicy(sizePolicy2)
         self.item_info_container.setMinimumSize(QSize(400, 0))
         self.item_info_container.setMaximumSize(QSize(400, 16777215))
         self.item_info_container.setStyleSheet(u"background-color: black;")
@@ -88,8 +89,8 @@ class Ui_MainPages(object):
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.item_info_frame = QFrame(self.item_info_container)
         self.item_info_frame.setObjectName(u"item_info_frame")
-        sizePolicy1.setHeightForWidth(self.item_info_frame.sizePolicy().hasHeightForWidth())
-        self.item_info_frame.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.item_info_frame.sizePolicy().hasHeightForWidth())
+        self.item_info_frame.setSizePolicy(sizePolicy2)
         self.item_info_frame.setMinimumSize(QSize(400, 0))
         self.item_info_frame.setMaximumSize(QSize(400, 16777215))
         self.item_info_layout = QVBoxLayout(self.item_info_frame)
@@ -98,11 +99,11 @@ class Ui_MainPages(object):
         self.item_info_layout.setContentsMargins(0, 0, 0, 0)
         self.item_header_frame = QFrame(self.item_info_frame)
         self.item_header_frame.setObjectName(u"item_header_frame")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.item_header_frame.sizePolicy().hasHeightForWidth())
-        self.item_header_frame.setSizePolicy(sizePolicy2)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.item_header_frame.sizePolicy().hasHeightForWidth())
+        self.item_header_frame.setSizePolicy(sizePolicy3)
         self.item_header_layout = QVBoxLayout(self.item_header_frame)
         self.item_header_layout.setSpacing(0)
         self.item_header_layout.setObjectName(u"item_header_layout")
@@ -110,8 +111,8 @@ class Ui_MainPages(object):
         self.item_header_label = QLabel(self.item_header_frame)
         self.item_header_label.setObjectName(u"item_header_label")
         self.item_header_label.setEnabled(True)
-        sizePolicy2.setHeightForWidth(self.item_header_label.sizePolicy().hasHeightForWidth())
-        self.item_header_label.setSizePolicy(sizePolicy2)
+        sizePolicy3.setHeightForWidth(self.item_header_label.sizePolicy().hasHeightForWidth())
+        self.item_header_label.setSizePolicy(sizePolicy3)
         self.item_header_label.setMinimumSize(QSize(400, 54))
         self.item_header_label.setMaximumSize(QSize(400, 54))
         font = QFont()
@@ -138,11 +139,11 @@ class Ui_MainPages(object):
 
         self.item_affix_frame = QFrame(self.item_info_frame)
         self.item_affix_frame.setObjectName(u"item_affix_frame")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Minimum)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.item_affix_frame.sizePolicy().hasHeightForWidth())
-        self.item_affix_frame.setSizePolicy(sizePolicy3)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Minimum)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.item_affix_frame.sizePolicy().hasHeightForWidth())
+        self.item_affix_frame.setSizePolicy(sizePolicy4)
         self.item_affix_frame.setMinimumSize(QSize(400, 0))
         self.item_affix_frame.setMaximumSize(QSize(400, 16777215))
         self.item_properties_layout = QVBoxLayout(self.item_affix_frame)
@@ -152,8 +153,8 @@ class Ui_MainPages(object):
         self.item_properties_layout.setContentsMargins(0, 0, 0, 0)
         self.item_properties_container = QWidget(self.item_affix_frame)
         self.item_properties_container.setObjectName(u"item_properties_container")
-        sizePolicy3.setHeightForWidth(self.item_properties_container.sizePolicy().hasHeightForWidth())
-        self.item_properties_container.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.item_properties_container.sizePolicy().hasHeightForWidth())
+        self.item_properties_container.setSizePolicy(sizePolicy4)
         self.item_properties_container.setMinimumSize(QSize(400, 0))
         self.item_properties_container.setMaximumSize(QSize(400, 16777215))
         self.verticalLayout_11 = QVBoxLayout(self.item_properties_container)
@@ -162,8 +163,8 @@ class Ui_MainPages(object):
         self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.item_quality_label = QLabel(self.item_properties_container)
         self.item_quality_label.setObjectName(u"item_quality_label")
-        sizePolicy3.setHeightForWidth(self.item_quality_label.sizePolicy().hasHeightForWidth())
-        self.item_quality_label.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.item_quality_label.sizePolicy().hasHeightForWidth())
+        self.item_quality_label.setSizePolicy(sizePolicy4)
         self.item_quality_label.setMinimumSize(QSize(400, 0))
         self.item_quality_label.setMaximumSize(QSize(400, 30))
         self.item_quality_label.setAlignment(Qt.AlignCenter)
@@ -173,11 +174,11 @@ class Ui_MainPages(object):
 
         self.item_properties_label = QLabel(self.item_properties_container)
         self.item_properties_label.setObjectName(u"item_properties_label")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Maximum)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.item_properties_label.sizePolicy().hasHeightForWidth())
-        self.item_properties_label.setSizePolicy(sizePolicy4)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Maximum)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.item_properties_label.sizePolicy().hasHeightForWidth())
+        self.item_properties_label.setSizePolicy(sizePolicy5)
         self.item_properties_label.setMinimumSize(QSize(400, 0))
         self.item_properties_label.setMaximumSize(QSize(400, 400))
         self.item_properties_label.setStyleSheet(u"QLabel{\n"
@@ -196,8 +197,8 @@ class Ui_MainPages(object):
 
         self.item_spacer_1 = QLabel(self.item_properties_container)
         self.item_spacer_1.setObjectName(u"item_spacer_1")
-        sizePolicy4.setHeightForWidth(self.item_spacer_1.sizePolicy().hasHeightForWidth())
-        self.item_spacer_1.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.item_spacer_1.sizePolicy().hasHeightForWidth())
+        self.item_spacer_1.setSizePolicy(sizePolicy5)
         self.item_spacer_1.setMinimumSize(QSize(400, 0))
         self.item_spacer_1.setMaximumSize(QSize(400, 2))
         self.item_spacer_1.setBaseSize(QSize(0, 0))
@@ -217,18 +218,18 @@ class Ui_MainPages(object):
 
         self.item_requirements_container = QWidget(self.item_affix_frame)
         self.item_requirements_container.setObjectName(u"item_requirements_container")
-        sizePolicy2.setHeightForWidth(self.item_requirements_container.sizePolicy().hasHeightForWidth())
-        self.item_requirements_container.setSizePolicy(sizePolicy2)
+        sizePolicy4.setHeightForWidth(self.item_requirements_container.sizePolicy().hasHeightForWidth())
+        self.item_requirements_container.setSizePolicy(sizePolicy4)
         self.item_requirements_container.setMinimumSize(QSize(400, 0))
-        self.item_requirements_container.setMaximumSize(QSize(400, 52))
+        self.item_requirements_container.setMaximumSize(QSize(400, 60))
         self.verticalLayout_13 = QVBoxLayout(self.item_requirements_container)
         self.verticalLayout_13.setSpacing(0)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.item_level_label = QLabel(self.item_requirements_container)
         self.item_level_label.setObjectName(u"item_level_label")
-        sizePolicy2.setHeightForWidth(self.item_level_label.sizePolicy().hasHeightForWidth())
-        self.item_level_label.setSizePolicy(sizePolicy2)
+        sizePolicy3.setHeightForWidth(self.item_level_label.sizePolicy().hasHeightForWidth())
+        self.item_level_label.setSizePolicy(sizePolicy3)
         self.item_level_label.setMinimumSize(QSize(400, 0))
         self.item_level_label.setMaximumSize(QSize(400, 20))
         self.item_level_label.setTabletTracking(False)
@@ -239,8 +240,8 @@ class Ui_MainPages(object):
 
         self.item_requirements_label = QLabel(self.item_requirements_container)
         self.item_requirements_label.setObjectName(u"item_requirements_label")
-        sizePolicy2.setHeightForWidth(self.item_requirements_label.sizePolicy().hasHeightForWidth())
-        self.item_requirements_label.setSizePolicy(sizePolicy2)
+        sizePolicy3.setHeightForWidth(self.item_requirements_label.sizePolicy().hasHeightForWidth())
+        self.item_requirements_label.setSizePolicy(sizePolicy3)
         self.item_requirements_label.setMinimumSize(QSize(400, 0))
         self.item_requirements_label.setMaximumSize(QSize(400, 25))
         self.item_requirements_label.setStyleSheet(u"QLabel{\n"
@@ -263,8 +264,8 @@ class Ui_MainPages(object):
 
         self.item_spacer_2 = QLabel(self.item_requirements_container)
         self.item_spacer_2.setObjectName(u"item_spacer_2")
-        sizePolicy4.setHeightForWidth(self.item_spacer_2.sizePolicy().hasHeightForWidth())
-        self.item_spacer_2.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.item_spacer_2.sizePolicy().hasHeightForWidth())
+        self.item_spacer_2.setSizePolicy(sizePolicy5)
         self.item_spacer_2.setMinimumSize(QSize(400, 0))
         self.item_spacer_2.setMaximumSize(QSize(400, 2))
         self.item_spacer_2.setBaseSize(QSize(0, 0))
@@ -285,8 +286,8 @@ class Ui_MainPages(object):
         self.item_implicits_container = QWidget(self.item_affix_frame)
         self.item_implicits_container.setObjectName(u"item_implicits_container")
         self.item_implicits_container.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.item_implicits_container.sizePolicy().hasHeightForWidth())
-        self.item_implicits_container.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.item_implicits_container.sizePolicy().hasHeightForWidth())
+        self.item_implicits_container.setSizePolicy(sizePolicy5)
         self.item_implicits_container.setMinimumSize(QSize(400, 0))
         self.item_implicits_container.setMaximumSize(QSize(400, 30))
         self.verticalLayout_18 = QVBoxLayout(self.item_implicits_container)
@@ -296,10 +297,13 @@ class Ui_MainPages(object):
         self.item_implicits_label = QLabel(self.item_implicits_container)
         self.item_implicits_label.setObjectName(u"item_implicits_label")
         self.item_implicits_label.setEnabled(False)
-        sizePolicy3.setHeightForWidth(self.item_implicits_label.sizePolicy().hasHeightForWidth())
-        self.item_implicits_label.setSizePolicy(sizePolicy3)
+        sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.MinimumExpanding)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.item_implicits_label.sizePolicy().hasHeightForWidth())
+        self.item_implicits_label.setSizePolicy(sizePolicy6)
         self.item_implicits_label.setMinimumSize(QSize(400, 0))
-        self.item_implicits_label.setMaximumSize(QSize(400, 30))
+        self.item_implicits_label.setMaximumSize(QSize(400, 70))
         self.item_implicits_label.setStyleSheet(u"QLabel{\n"
 "                                                                                color: #8787fe;\n"
 "                                                                                padding: 2px 10px;\n"
@@ -322,8 +326,8 @@ class Ui_MainPages(object):
         self.item_spacer_3 = QLabel(self.item_affix_frame)
         self.item_spacer_3.setObjectName(u"item_spacer_3")
         self.item_spacer_3.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.item_spacer_3.sizePolicy().hasHeightForWidth())
-        self.item_spacer_3.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.item_spacer_3.sizePolicy().hasHeightForWidth())
+        self.item_spacer_3.setSizePolicy(sizePolicy5)
         self.item_spacer_3.setMinimumSize(QSize(400, 0))
         self.item_spacer_3.setMaximumSize(QSize(400, 2))
         self.item_spacer_3.setBaseSize(QSize(0, 0))
@@ -344,8 +348,8 @@ class Ui_MainPages(object):
 
         self.item_mod_frame = QFrame(self.item_info_frame)
         self.item_mod_frame.setObjectName(u"item_mod_frame")
-        sizePolicy1.setHeightForWidth(self.item_mod_frame.sizePolicy().hasHeightForWidth())
-        self.item_mod_frame.setSizePolicy(sizePolicy1)
+        sizePolicy6.setHeightForWidth(self.item_mod_frame.sizePolicy().hasHeightForWidth())
+        self.item_mod_frame.setSizePolicy(sizePolicy6)
         self.item_mod_frame.setMinimumSize(QSize(400, 0))
         self.item_mod_frame.setMaximumSize(QSize(400, 16777215))
         self.item_mod_layout = QVBoxLayout(self.item_mod_frame)
@@ -355,11 +359,11 @@ class Ui_MainPages(object):
         self.item_mod_layout.setContentsMargins(0, 0, 0, 0)
         self.prefix_1_container = QWidget(self.item_mod_frame)
         self.prefix_1_container.setObjectName(u"prefix_1_container")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.prefix_1_container.sizePolicy().hasHeightForWidth())
-        self.prefix_1_container.setSizePolicy(sizePolicy5)
+        sizePolicy7 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.prefix_1_container.sizePolicy().hasHeightForWidth())
+        self.prefix_1_container.setSizePolicy(sizePolicy7)
         self.prefix_1_container.setMinimumSize(QSize(400, 0))
         self.prefix_1_container.setMaximumSize(QSize(400, 80))
         self.verticalLayout_5 = QVBoxLayout(self.prefix_1_container)
@@ -370,11 +374,11 @@ class Ui_MainPages(object):
         self.prefix_info_1 = QLabel(self.prefix_1_container)
         self.prefix_info_1.setObjectName(u"prefix_info_1")
         self.prefix_info_1.setEnabled(False)
-        sizePolicy6 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.prefix_info_1.sizePolicy().hasHeightForWidth())
-        self.prefix_info_1.setSizePolicy(sizePolicy6)
+        sizePolicy8 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        sizePolicy8.setHorizontalStretch(0)
+        sizePolicy8.setVerticalStretch(0)
+        sizePolicy8.setHeightForWidth(self.prefix_info_1.sizePolicy().hasHeightForWidth())
+        self.prefix_info_1.setSizePolicy(sizePolicy8)
         self.prefix_info_1.setMinimumSize(QSize(0, 0))
         font1 = QFont()
         font1.setFamilies([u"Open Sans"])
@@ -403,8 +407,8 @@ class Ui_MainPages(object):
         self.prefix_1 = QLabel(self.prefix_1_container)
         self.prefix_1.setObjectName(u"prefix_1")
         self.prefix_1.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.prefix_1.sizePolicy().hasHeightForWidth())
-        self.prefix_1.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.prefix_1.sizePolicy().hasHeightForWidth())
+        self.prefix_1.setSizePolicy(sizePolicy5)
         self.prefix_1.setMinimumSize(QSize(400, 0))
         self.prefix_1.setMaximumSize(QSize(400, 16777215))
         self.prefix_1.setStyleSheet(u"QLabel {\n"
@@ -430,8 +434,8 @@ class Ui_MainPages(object):
 
         self.prefix_2_container = QWidget(self.item_mod_frame)
         self.prefix_2_container.setObjectName(u"prefix_2_container")
-        sizePolicy5.setHeightForWidth(self.prefix_2_container.sizePolicy().hasHeightForWidth())
-        self.prefix_2_container.setSizePolicy(sizePolicy5)
+        sizePolicy7.setHeightForWidth(self.prefix_2_container.sizePolicy().hasHeightForWidth())
+        self.prefix_2_container.setSizePolicy(sizePolicy7)
         self.prefix_2_container.setMinimumSize(QSize(400, 0))
         self.prefix_2_container.setMaximumSize(QSize(400, 80))
         self.verticalLayout_6 = QVBoxLayout(self.prefix_2_container)
@@ -442,8 +446,8 @@ class Ui_MainPages(object):
         self.prefix_info_2 = QLabel(self.prefix_2_container)
         self.prefix_info_2.setObjectName(u"prefix_info_2")
         self.prefix_info_2.setEnabled(False)
-        sizePolicy6.setHeightForWidth(self.prefix_info_2.sizePolicy().hasHeightForWidth())
-        self.prefix_info_2.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.prefix_info_2.sizePolicy().hasHeightForWidth())
+        self.prefix_info_2.setSizePolicy(sizePolicy8)
         self.prefix_info_2.setMinimumSize(QSize(0, 0))
         self.prefix_info_2.setFont(font1)
         self.prefix_info_2.setStyleSheet(u"QLabel {\n"
@@ -468,8 +472,8 @@ class Ui_MainPages(object):
         self.prefix_2 = QLabel(self.prefix_2_container)
         self.prefix_2.setObjectName(u"prefix_2")
         self.prefix_2.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.prefix_2.sizePolicy().hasHeightForWidth())
-        self.prefix_2.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.prefix_2.sizePolicy().hasHeightForWidth())
+        self.prefix_2.setSizePolicy(sizePolicy5)
         self.prefix_2.setMinimumSize(QSize(0, 0))
         self.prefix_2.setMaximumSize(QSize(400, 16777215))
         self.prefix_2.setStyleSheet(u"QLabel {\n"
@@ -495,8 +499,8 @@ class Ui_MainPages(object):
 
         self.prefix_3_container = QWidget(self.item_mod_frame)
         self.prefix_3_container.setObjectName(u"prefix_3_container")
-        sizePolicy5.setHeightForWidth(self.prefix_3_container.sizePolicy().hasHeightForWidth())
-        self.prefix_3_container.setSizePolicy(sizePolicy5)
+        sizePolicy7.setHeightForWidth(self.prefix_3_container.sizePolicy().hasHeightForWidth())
+        self.prefix_3_container.setSizePolicy(sizePolicy7)
         self.prefix_3_container.setMinimumSize(QSize(400, 0))
         self.prefix_3_container.setMaximumSize(QSize(400, 80))
         self.verticalLayout_7 = QVBoxLayout(self.prefix_3_container)
@@ -507,8 +511,8 @@ class Ui_MainPages(object):
         self.prefix_info_3 = QLabel(self.prefix_3_container)
         self.prefix_info_3.setObjectName(u"prefix_info_3")
         self.prefix_info_3.setEnabled(False)
-        sizePolicy6.setHeightForWidth(self.prefix_info_3.sizePolicy().hasHeightForWidth())
-        self.prefix_info_3.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.prefix_info_3.sizePolicy().hasHeightForWidth())
+        self.prefix_info_3.setSizePolicy(sizePolicy8)
         self.prefix_info_3.setMinimumSize(QSize(0, 0))
         self.prefix_info_3.setFont(font1)
         self.prefix_info_3.setStyleSheet(u"QLabel {\n"
@@ -533,8 +537,8 @@ class Ui_MainPages(object):
         self.prefix_3 = QLabel(self.prefix_3_container)
         self.prefix_3.setObjectName(u"prefix_3")
         self.prefix_3.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.prefix_3.sizePolicy().hasHeightForWidth())
-        self.prefix_3.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.prefix_3.sizePolicy().hasHeightForWidth())
+        self.prefix_3.setSizePolicy(sizePolicy5)
         self.prefix_3.setMinimumSize(QSize(0, 0))
         self.prefix_3.setMaximumSize(QSize(400, 16777215))
         self.prefix_3.setStyleSheet(u"QLabel {\n"
@@ -560,8 +564,8 @@ class Ui_MainPages(object):
 
         self.suffix_2_container = QWidget(self.item_mod_frame)
         self.suffix_2_container.setObjectName(u"suffix_2_container")
-        sizePolicy5.setHeightForWidth(self.suffix_2_container.sizePolicy().hasHeightForWidth())
-        self.suffix_2_container.setSizePolicy(sizePolicy5)
+        sizePolicy7.setHeightForWidth(self.suffix_2_container.sizePolicy().hasHeightForWidth())
+        self.suffix_2_container.setSizePolicy(sizePolicy7)
         self.suffix_2_container.setMinimumSize(QSize(400, 0))
         self.suffix_2_container.setMaximumSize(QSize(400, 80))
         self.verticalLayout_8 = QVBoxLayout(self.suffix_2_container)
@@ -572,8 +576,8 @@ class Ui_MainPages(object):
         self.suffix_2_info = QLabel(self.suffix_2_container)
         self.suffix_2_info.setObjectName(u"suffix_2_info")
         self.suffix_2_info.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.suffix_2_info.sizePolicy().hasHeightForWidth())
-        self.suffix_2_info.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.suffix_2_info.sizePolicy().hasHeightForWidth())
+        self.suffix_2_info.setSizePolicy(sizePolicy5)
         self.suffix_2_info.setMinimumSize(QSize(400, 0))
         self.suffix_2_info.setMaximumSize(QSize(400, 16777215))
         self.suffix_2_info.setFont(font1)
@@ -599,8 +603,8 @@ class Ui_MainPages(object):
         self.suffix_2 = QLabel(self.suffix_2_container)
         self.suffix_2.setObjectName(u"suffix_2")
         self.suffix_2.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.suffix_2.sizePolicy().hasHeightForWidth())
-        self.suffix_2.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.suffix_2.sizePolicy().hasHeightForWidth())
+        self.suffix_2.setSizePolicy(sizePolicy5)
         self.suffix_2.setMinimumSize(QSize(400, 0))
         self.suffix_2.setMaximumSize(QSize(400, 16777215))
         self.suffix_2.setStyleSheet(u"QLabel {\n"
@@ -626,8 +630,8 @@ class Ui_MainPages(object):
 
         self.suffix_1_container = QWidget(self.item_mod_frame)
         self.suffix_1_container.setObjectName(u"suffix_1_container")
-        sizePolicy5.setHeightForWidth(self.suffix_1_container.sizePolicy().hasHeightForWidth())
-        self.suffix_1_container.setSizePolicy(sizePolicy5)
+        sizePolicy7.setHeightForWidth(self.suffix_1_container.sizePolicy().hasHeightForWidth())
+        self.suffix_1_container.setSizePolicy(sizePolicy7)
         self.suffix_1_container.setMinimumSize(QSize(400, 0))
         self.suffix_1_container.setMaximumSize(QSize(400, 80))
         self.verticalLayout_9 = QVBoxLayout(self.suffix_1_container)
@@ -638,8 +642,8 @@ class Ui_MainPages(object):
         self.suffix_1_info = QLabel(self.suffix_1_container)
         self.suffix_1_info.setObjectName(u"suffix_1_info")
         self.suffix_1_info.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.suffix_1_info.sizePolicy().hasHeightForWidth())
-        self.suffix_1_info.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.suffix_1_info.sizePolicy().hasHeightForWidth())
+        self.suffix_1_info.setSizePolicy(sizePolicy5)
         self.suffix_1_info.setMinimumSize(QSize(400, 0))
         self.suffix_1_info.setMaximumSize(QSize(400, 16777215))
         self.suffix_1_info.setFont(font1)
@@ -665,8 +669,8 @@ class Ui_MainPages(object):
         self.suffix_1 = QLabel(self.suffix_1_container)
         self.suffix_1.setObjectName(u"suffix_1")
         self.suffix_1.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.suffix_1.sizePolicy().hasHeightForWidth())
-        self.suffix_1.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.suffix_1.sizePolicy().hasHeightForWidth())
+        self.suffix_1.setSizePolicy(sizePolicy5)
         self.suffix_1.setMinimumSize(QSize(400, 0))
         self.suffix_1.setMaximumSize(QSize(400, 16777215))
         self.suffix_1.setStyleSheet(u"QLabel {\n"
@@ -692,8 +696,8 @@ class Ui_MainPages(object):
 
         self.suffix_3_container = QWidget(self.item_mod_frame)
         self.suffix_3_container.setObjectName(u"suffix_3_container")
-        sizePolicy5.setHeightForWidth(self.suffix_3_container.sizePolicy().hasHeightForWidth())
-        self.suffix_3_container.setSizePolicy(sizePolicy5)
+        sizePolicy7.setHeightForWidth(self.suffix_3_container.sizePolicy().hasHeightForWidth())
+        self.suffix_3_container.setSizePolicy(sizePolicy7)
         self.suffix_3_container.setMinimumSize(QSize(400, 0))
         self.suffix_3_container.setMaximumSize(QSize(400, 80))
         self.verticalLayout_10 = QVBoxLayout(self.suffix_3_container)
@@ -704,8 +708,8 @@ class Ui_MainPages(object):
         self.suffix_3_info = QLabel(self.suffix_3_container)
         self.suffix_3_info.setObjectName(u"suffix_3_info")
         self.suffix_3_info.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.suffix_3_info.sizePolicy().hasHeightForWidth())
-        self.suffix_3_info.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.suffix_3_info.sizePolicy().hasHeightForWidth())
+        self.suffix_3_info.setSizePolicy(sizePolicy5)
         self.suffix_3_info.setMinimumSize(QSize(400, 0))
         self.suffix_3_info.setMaximumSize(QSize(400, 16777215))
         self.suffix_3_info.setFont(font1)
@@ -731,8 +735,8 @@ class Ui_MainPages(object):
         self.suffix_3 = QLabel(self.suffix_3_container)
         self.suffix_3.setObjectName(u"suffix_3")
         self.suffix_3.setEnabled(False)
-        sizePolicy4.setHeightForWidth(self.suffix_3.sizePolicy().hasHeightForWidth())
-        self.suffix_3.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.suffix_3.sizePolicy().hasHeightForWidth())
+        self.suffix_3.setSizePolicy(sizePolicy5)
         self.suffix_3.setMinimumSize(QSize(400, 0))
         self.suffix_3.setMaximumSize(QSize(400, 16777215))
         self.suffix_3.setStyleSheet(u"QLabel {\n"
@@ -765,25 +769,24 @@ class Ui_MainPages(object):
 
         self.horizontalLayout_3.addWidget(self.item_info_container, 0, Qt.AlignTop)
 
-        self.horizontalSpacer = QSpacerItem(38, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_3.addItem(self.horizontalSpacer)
-
         self.item_display_frame = QFrame(self.crafting_emu_container)
         self.item_display_frame.setObjectName(u"item_display_frame")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
-        sizePolicy7.setHeightForWidth(self.item_display_frame.sizePolicy().hasHeightForWidth())
-        self.item_display_frame.setSizePolicy(sizePolicy7)
+        sizePolicy9 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
+        sizePolicy9.setHorizontalStretch(0)
+        sizePolicy9.setVerticalStretch(0)
+        sizePolicy9.setHeightForWidth(self.item_display_frame.sizePolicy().hasHeightForWidth())
+        self.item_display_frame.setSizePolicy(sizePolicy9)
         self.item_display_frame.setFrameShape(QFrame.StyledPanel)
         self.item_display_frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.item_display_frame)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.item_view_frame = QFrame(self.item_display_frame)
         self.item_view_frame.setObjectName(u"item_view_frame")
-        sizePolicy.setHeightForWidth(self.item_view_frame.sizePolicy().hasHeightForWidth())
-        self.item_view_frame.setSizePolicy(sizePolicy)
+        sizePolicy10 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
+        sizePolicy10.setHorizontalStretch(0)
+        sizePolicy10.setVerticalStretch(0)
+        sizePolicy10.setHeightForWidth(self.item_view_frame.sizePolicy().hasHeightForWidth())
+        self.item_view_frame.setSizePolicy(sizePolicy10)
         self.item_view_frame.setMinimumSize(QSize(128, 269))
         self.item_view_frame.setMaximumSize(QSize(145, 269))
         self.item_view_frame.setStyleSheet(u"QWidget{\n"
@@ -806,8 +809,8 @@ class Ui_MainPages(object):
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.item_img_label = QLabel(self.item_img_frame)
         self.item_img_label.setObjectName(u"item_img_label")
-        sizePolicy2.setHeightForWidth(self.item_img_label.sizePolicy().hasHeightForWidth())
-        self.item_img_label.setSizePolicy(sizePolicy2)
+        sizePolicy3.setHeightForWidth(self.item_img_label.sizePolicy().hasHeightForWidth())
+        self.item_img_label.setSizePolicy(sizePolicy3)
         self.item_img_label.setMinimumSize(QSize(128, 228))
         self.item_img_label.setMaximumSize(QSize(128, 228))
         self.item_img_label.setStyleSheet(u"QLabel{\n"
@@ -830,8 +833,8 @@ class Ui_MainPages(object):
 
         self.crafting_btn_frame = QFrame(self.item_view_frame)
         self.crafting_btn_frame.setObjectName(u"crafting_btn_frame")
-        sizePolicy6.setHeightForWidth(self.crafting_btn_frame.sizePolicy().hasHeightForWidth())
-        self.crafting_btn_frame.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.crafting_btn_frame.sizePolicy().hasHeightForWidth())
+        self.crafting_btn_frame.setSizePolicy(sizePolicy8)
         self.crafting_btn_frame.setFrameShape(QFrame.StyledPanel)
         self.crafting_btn_frame.setFrameShadow(QFrame.Raised)
         self.crafting_btn_layout = QVBoxLayout(self.crafting_btn_frame)
@@ -840,8 +843,8 @@ class Ui_MainPages(object):
         self.crafting_btn_layout.setContentsMargins(0, 0, 0, 0)
         self.crafting_btn_label = QLabel(self.crafting_btn_frame)
         self.crafting_btn_label.setObjectName(u"crafting_btn_label")
-        sizePolicy2.setHeightForWidth(self.crafting_btn_label.sizePolicy().hasHeightForWidth())
-        self.crafting_btn_label.setSizePolicy(sizePolicy2)
+        sizePolicy3.setHeightForWidth(self.crafting_btn_label.sizePolicy().hasHeightForWidth())
+        self.crafting_btn_label.setSizePolicy(sizePolicy3)
         self.crafting_btn_label.setMinimumSize(QSize(0, 39))
         self.crafting_btn_label.setMaximumSize(QSize(128, 39))
         self.crafting_btn_label.setCursor(QCursor(Qt.ArrowCursor))
@@ -867,11 +870,11 @@ class Ui_MainPages(object):
 
         self.item_dps_frame = QFrame(self.item_display_frame)
         self.item_dps_frame.setObjectName(u"item_dps_frame")
-        sizePolicy8 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Maximum)
-        sizePolicy8.setHorizontalStretch(0)
-        sizePolicy8.setVerticalStretch(0)
-        sizePolicy8.setHeightForWidth(self.item_dps_frame.sizePolicy().hasHeightForWidth())
-        self.item_dps_frame.setSizePolicy(sizePolicy8)
+        sizePolicy11 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Maximum)
+        sizePolicy11.setHorizontalStretch(0)
+        sizePolicy11.setVerticalStretch(0)
+        sizePolicy11.setHeightForWidth(self.item_dps_frame.sizePolicy().hasHeightForWidth())
+        self.item_dps_frame.setSizePolicy(sizePolicy11)
         self.item_dps_frame.setFrameShape(QFrame.StyledPanel)
         self.item_dps_frame.setFrameShadow(QFrame.Raised)
         self.item_dps_layout = QVBoxLayout(self.item_dps_frame)
@@ -880,11 +883,11 @@ class Ui_MainPages(object):
         self.item_dps_layout.setContentsMargins(10, 10, 10, 10)
         self.phys_dps_label = QLabel(self.item_dps_frame)
         self.phys_dps_label.setObjectName(u"phys_dps_label")
-        sizePolicy9 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Maximum)
-        sizePolicy9.setHorizontalStretch(0)
-        sizePolicy9.setVerticalStretch(0)
-        sizePolicy9.setHeightForWidth(self.phys_dps_label.sizePolicy().hasHeightForWidth())
-        self.phys_dps_label.setSizePolicy(sizePolicy9)
+        sizePolicy12 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Maximum)
+        sizePolicy12.setHorizontalStretch(0)
+        sizePolicy12.setVerticalStretch(0)
+        sizePolicy12.setHeightForWidth(self.phys_dps_label.sizePolicy().hasHeightForWidth())
+        self.phys_dps_label.setSizePolicy(sizePolicy12)
         self.phys_dps_label.setMinimumSize(QSize(0, 30))
         self.phys_dps_label.setStyleSheet(u"QLabel {\n"
 "                                                                                border: 1px solid #edc57d;\n"
@@ -904,8 +907,8 @@ class Ui_MainPages(object):
 
         self.ele_dps_label = QLabel(self.item_dps_frame)
         self.ele_dps_label.setObjectName(u"ele_dps_label")
-        sizePolicy6.setHeightForWidth(self.ele_dps_label.sizePolicy().hasHeightForWidth())
-        self.ele_dps_label.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.ele_dps_label.sizePolicy().hasHeightForWidth())
+        self.ele_dps_label.setSizePolicy(sizePolicy8)
         self.ele_dps_label.setMinimumSize(QSize(0, 30))
         self.ele_dps_label.setStyleSheet(u"QLabel {\n"
 "                                                                                border: 1px solid #edc57d;\n"
@@ -919,8 +922,8 @@ class Ui_MainPages(object):
 
         self.total_dps_label = QLabel(self.item_dps_frame)
         self.total_dps_label.setObjectName(u"total_dps_label")
-        sizePolicy6.setHeightForWidth(self.total_dps_label.sizePolicy().hasHeightForWidth())
-        self.total_dps_label.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.total_dps_label.sizePolicy().hasHeightForWidth())
+        self.total_dps_label.setSizePolicy(sizePolicy8)
         self.total_dps_label.setMinimumSize(QSize(0, 30))
         self.total_dps_label.setStyleSheet(u"QLabel {\n"
 "                                                                                border: 1px solid #edc57d;\n"
@@ -934,8 +937,8 @@ class Ui_MainPages(object):
 
         self.affix_total_label = QLabel(self.item_dps_frame)
         self.affix_total_label.setObjectName(u"affix_total_label")
-        sizePolicy6.setHeightForWidth(self.affix_total_label.sizePolicy().hasHeightForWidth())
-        self.affix_total_label.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.affix_total_label.sizePolicy().hasHeightForWidth())
+        self.affix_total_label.setSizePolicy(sizePolicy8)
         self.affix_total_label.setMinimumSize(QSize(0, 30))
         self.affix_total_label.setStyleSheet(u"QLabel {\n"
 "                                                                                border: 1px solid #edc57d;\n"
@@ -960,18 +963,28 @@ class Ui_MainPages(object):
 
         self.verticalLayout_12.addWidget(self.crafting_emu_container)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_12.addItem(self.verticalSpacer_2)
-
-        self.pages.addWidget(self.crafting_emu_page)
-        self.modpool_page = QWidget()
-        self.modpool_page.setObjectName(u"modpool_page")
-        self.page_2_layout = QVBoxLayout(self.modpool_page)
-        self.page_2_layout.setSpacing(5)
-        self.page_2_layout.setObjectName(u"page_2_layout")
-        self.page_2_layout.setContentsMargins(5, 5, 5, 5)
-        self.modpool_scroll_area = QScrollArea(self.modpool_page)
+        self.modpool_table_frame = QFrame(self.crafting_emu_page)
+        self.modpool_table_frame.setObjectName(u"modpool_table_frame")
+        sizePolicy13 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy13.setHorizontalStretch(0)
+        sizePolicy13.setVerticalStretch(0)
+        sizePolicy13.setHeightForWidth(self.modpool_table_frame.sizePolicy().hasHeightForWidth())
+        self.modpool_table_frame.setSizePolicy(sizePolicy13)
+        self.modpool_table_frame.setMinimumSize(QSize(673, 386))
+        self.modpool_table_frame.setStyleSheet(u"QWidget {\n"
+"                                            border-image: none;\n"
+"                                            }")
+        self.modpool_table_frame.setFrameShape(QFrame.StyledPanel)
+        self.modpool_table_frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout = QVBoxLayout(self.modpool_table_frame)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.modpool_table_container = QWidget(self.modpool_table_frame)
+        self.modpool_table_container.setObjectName(u"modpool_table_container")
+        sizePolicy13.setHeightForWidth(self.modpool_table_container.sizePolicy().hasHeightForWidth())
+        self.modpool_table_container.setSizePolicy(sizePolicy13)
+        self.verticalLayout_15 = QVBoxLayout(self.modpool_table_container)
+        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
+        self.modpool_scroll_area = QScrollArea(self.modpool_table_container)
         self.modpool_scroll_area.setObjectName(u"modpool_scroll_area")
         self.modpool_scroll_area.setStyleSheet(u"background: transparent;")
         self.modpool_scroll_area.setFrameShape(QFrame.NoFrame)
@@ -980,14 +993,18 @@ class Ui_MainPages(object):
         self.modpool_scroll_area.setWidgetResizable(True)
         self.modpool_container = QWidget()
         self.modpool_container.setObjectName(u"modpool_container")
-        self.modpool_container.setGeometry(QRect(0, 0, 307, 276))
+        self.modpool_container.setGeometry(QRect(0, 0, 635, 348))
+        sizePolicy13.setHeightForWidth(self.modpool_container.sizePolicy().hasHeightForWidth())
+        self.modpool_container.setSizePolicy(sizePolicy13)
         self.modpool_container.setStyleSheet(u"background: transparent;")
-        self.verticalLayout = QVBoxLayout(self.modpool_container)
-        self.verticalLayout.setSpacing(15)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(5, 5, 5, 5)
+        self.verticalLayout_16 = QVBoxLayout(self.modpool_container)
+        self.verticalLayout_16.setSpacing(15)
+        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.verticalLayout_16.setContentsMargins(5, 5, 5, 5)
         self.modpool_list = QWidget(self.modpool_container)
         self.modpool_list.setObjectName(u"modpool_list")
+        sizePolicy13.setHeightForWidth(self.modpool_list.sizePolicy().hasHeightForWidth())
+        self.modpool_list.setSizePolicy(sizePolicy13)
         self.modpool_list.setStyleSheet(u"QWidget {\n"
 "                                                            border-image: none;\n"
 "                                                            }\n"
@@ -1167,11 +1184,11 @@ class Ui_MainPages(object):
         self.modpool_btn_layout.setContentsMargins(0, 0, 0, 0)
         self.prefix_btn = QPushButton(self.modpool_btns_frame)
         self.prefix_btn.setObjectName(u"prefix_btn")
-        sizePolicy10 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
-        sizePolicy10.setHorizontalStretch(0)
-        sizePolicy10.setVerticalStretch(0)
-        sizePolicy10.setHeightForWidth(self.prefix_btn.sizePolicy().hasHeightForWidth())
-        self.prefix_btn.setSizePolicy(sizePolicy10)
+        sizePolicy14 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
+        sizePolicy14.setHorizontalStretch(0)
+        sizePolicy14.setVerticalStretch(0)
+        sizePolicy14.setHeightForWidth(self.prefix_btn.sizePolicy().hasHeightForWidth())
+        self.prefix_btn.setSizePolicy(sizePolicy14)
         palette1 = QPalette()
         brush1 = QBrush(QColor(255, 255, 255, 255))
         brush1.setStyle(Qt.SolidPattern)
@@ -1273,8 +1290,8 @@ class Ui_MainPages(object):
 
         self.suffix_btn = QPushButton(self.modpool_btns_frame)
         self.suffix_btn.setObjectName(u"suffix_btn")
-        sizePolicy10.setHeightForWidth(self.suffix_btn.sizePolicy().hasHeightForWidth())
-        self.suffix_btn.setSizePolicy(sizePolicy10)
+        sizePolicy14.setHeightForWidth(self.suffix_btn.sizePolicy().hasHeightForWidth())
+        self.suffix_btn.setSizePolicy(sizePolicy14)
         self.suffix_btn.setFont(font3)
         self.suffix_btn.setCursor(QCursor(Qt.ArrowCursor))
         self.suffix_btn.setFocusPolicy(Qt.NoFocus)
@@ -1286,8 +1303,8 @@ class Ui_MainPages(object):
 
         self.implicit_btn = QPushButton(self.modpool_btns_frame)
         self.implicit_btn.setObjectName(u"implicit_btn")
-        sizePolicy10.setHeightForWidth(self.implicit_btn.sizePolicy().hasHeightForWidth())
-        self.implicit_btn.setSizePolicy(sizePolicy10)
+        sizePolicy14.setHeightForWidth(self.implicit_btn.sizePolicy().hasHeightForWidth())
+        self.implicit_btn.setSizePolicy(sizePolicy14)
         self.implicit_btn.setFont(font3)
         self.implicit_btn.setCursor(QCursor(Qt.ArrowCursor))
         self.implicit_btn.setFocusPolicy(Qt.NoFocus)
@@ -1303,28 +1320,30 @@ class Ui_MainPages(object):
 
         self.modpool_group_pages = QStackedWidget(self.modpool_list_frame)
         self.modpool_group_pages.setObjectName(u"modpool_group_pages")
+        sizePolicy13.setHeightForWidth(self.modpool_group_pages.sizePolicy().hasHeightForWidth())
+        self.modpool_group_pages.setSizePolicy(sizePolicy13)
         self.prefix_group_page = QWidget()
         self.prefix_group_page.setObjectName(u"prefix_group_page")
         self.p = QVBoxLayout(self.prefix_group_page)
         self.p.setSpacing(0)
         self.p.setObjectName(u"p")
         self.p.setContentsMargins(0, 0, 0, 0)
-        self.widget = QWidget(self.prefix_group_page)
-        self.widget.setObjectName(u"widget")
-        self.horizontalLayout_2 = QHBoxLayout(self.widget)
+        self.widget_2 = QWidget(self.prefix_group_page)
+        self.widget_2.setObjectName(u"widget_2")
+        self.horizontalLayout_2 = QHBoxLayout(self.widget_2)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.label_2 = QLabel(self.widget)
+        self.label_2 = QLabel(self.widget_2)
         self.label_2.setObjectName(u"label_2")
 
         self.horizontalLayout_2.addWidget(self.label_2)
 
 
-        self.p.addWidget(self.widget)
+        self.p.addWidget(self.widget_2)
 
         self.prefix_tree = QTreeView(self.prefix_group_page)
         self.prefix_tree.setObjectName(u"prefix_tree")
-        sizePolicy.setHeightForWidth(self.prefix_tree.sizePolicy().hasHeightForWidth())
-        self.prefix_tree.setSizePolicy(sizePolicy)
+        sizePolicy10.setHeightForWidth(self.prefix_tree.sizePolicy().hasHeightForWidth())
+        self.prefix_tree.setSizePolicy(sizePolicy10)
         self.prefix_tree.setFrameShape(QFrame.NoFrame)
         self.prefix_tree.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
         self.prefix_tree.setProperty("showDropIndicator", True)
@@ -1344,12 +1363,12 @@ class Ui_MainPages(object):
         self.modpool_group_pages.addWidget(self.prefix_group_page)
         self.suffix_list_page = QWidget()
         self.suffix_list_page.setObjectName(u"suffix_list_page")
-        self.verticalLayout_16 = QVBoxLayout(self.suffix_list_page)
-        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.verticalLayout_17 = QVBoxLayout(self.suffix_list_page)
+        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.suffix_tree = QTreeView(self.suffix_list_page)
         self.suffix_tree.setObjectName(u"suffix_tree")
-        sizePolicy.setHeightForWidth(self.suffix_tree.sizePolicy().hasHeightForWidth())
-        self.suffix_tree.setSizePolicy(sizePolicy)
+        sizePolicy10.setHeightForWidth(self.suffix_tree.sizePolicy().hasHeightForWidth())
+        self.suffix_tree.setSizePolicy(sizePolicy10)
         self.suffix_tree.setFrameShape(QFrame.NoFrame)
         self.suffix_tree.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
         self.suffix_tree.setProperty("showDropIndicator", True)
@@ -1364,17 +1383,17 @@ class Ui_MainPages(object):
         self.suffix_tree.header().setHighlightSections(False)
         self.suffix_tree.header().setProperty("showSortIndicator", False)
 
-        self.verticalLayout_16.addWidget(self.suffix_tree)
+        self.verticalLayout_17.addWidget(self.suffix_tree)
 
         self.modpool_group_pages.addWidget(self.suffix_list_page)
         self.implicit_list_page = QWidget()
         self.implicit_list_page.setObjectName(u"implicit_list_page")
-        self.verticalLayout_15 = QVBoxLayout(self.implicit_list_page)
-        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
+        self.verticalLayout_19 = QVBoxLayout(self.implicit_list_page)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
         self.implicit_tree = QTreeView(self.implicit_list_page)
         self.implicit_tree.setObjectName(u"implicit_tree")
-        sizePolicy.setHeightForWidth(self.implicit_tree.sizePolicy().hasHeightForWidth())
-        self.implicit_tree.setSizePolicy(sizePolicy)
+        sizePolicy10.setHeightForWidth(self.implicit_tree.sizePolicy().hasHeightForWidth())
+        self.implicit_tree.setSizePolicy(sizePolicy10)
         self.implicit_tree.setFrameShape(QFrame.NoFrame)
         self.implicit_tree.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
         self.implicit_tree.setProperty("showDropIndicator", True)
@@ -1389,7 +1408,7 @@ class Ui_MainPages(object):
         self.implicit_tree.header().setHighlightSections(False)
         self.implicit_tree.header().setProperty("showSortIndicator", False)
 
-        self.verticalLayout_15.addWidget(self.implicit_tree)
+        self.verticalLayout_19.addWidget(self.implicit_tree)
 
         self.modpool_group_pages.addWidget(self.implicit_list_page)
 
@@ -1399,13 +1418,19 @@ class Ui_MainPages(object):
         self.horizontalLayout.addWidget(self.modpool_list_frame)
 
 
-        self.verticalLayout.addWidget(self.modpool_list)
+        self.verticalLayout_16.addWidget(self.modpool_list)
 
         self.modpool_scroll_area.setWidget(self.modpool_container)
 
-        self.page_2_layout.addWidget(self.modpool_scroll_area)
+        self.verticalLayout_15.addWidget(self.modpool_scroll_area)
 
-        self.pages.addWidget(self.modpool_page)
+
+        self.verticalLayout.addWidget(self.modpool_table_container)
+
+
+        self.verticalLayout_12.addWidget(self.modpool_table_frame)
+
+        self.pages.addWidget(self.crafting_emu_page)
         self.crafting_calc_page = QWidget()
         self.crafting_calc_page.setObjectName(u"crafting_calc_page")
         self.crafting_calc_page.setStyleSheet(u"QFrame {\n"
@@ -1420,8 +1445,8 @@ class Ui_MainPages(object):
         self.crafting_calclayout.setContentsMargins(0, 0, 0, 0)
         self.search_bar_frame = QFrame(self.crafting_calc_page)
         self.search_bar_frame.setObjectName(u"search_bar_frame")
-        sizePolicy6.setHeightForWidth(self.search_bar_frame.sizePolicy().hasHeightForWidth())
-        self.search_bar_frame.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.search_bar_frame.sizePolicy().hasHeightForWidth())
+        self.search_bar_frame.setSizePolicy(sizePolicy8)
         self.search_bar_frame.setFrameShape(QFrame.StyledPanel)
         self.search_bar_frame.setFrameShadow(QFrame.Raised)
         self.search_bar_layout = QHBoxLayout(self.search_bar_frame)
@@ -1430,8 +1455,8 @@ class Ui_MainPages(object):
         self.search_bar_layout.setContentsMargins(0, 10, 0, 10)
         self.search_bar = QLineEdit(self.search_bar_frame)
         self.search_bar.setObjectName(u"search_bar")
-        sizePolicy8.setHeightForWidth(self.search_bar.sizePolicy().hasHeightForWidth())
-        self.search_bar.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.search_bar.sizePolicy().hasHeightForWidth())
+        self.search_bar.setSizePolicy(sizePolicy11)
         self.search_bar.setStyleSheet(u"QLineEdit {\n"
 "border-image: none;\n"
 "background-color: black;\n"
@@ -1450,11 +1475,11 @@ class Ui_MainPages(object):
 
         self.reset_btn = QPushButton(self.search_bar_frame)
         self.reset_btn.setObjectName(u"reset_btn")
-        sizePolicy11 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Minimum)
-        sizePolicy11.setHorizontalStretch(0)
-        sizePolicy11.setVerticalStretch(0)
-        sizePolicy11.setHeightForWidth(self.reset_btn.sizePolicy().hasHeightForWidth())
-        self.reset_btn.setSizePolicy(sizePolicy11)
+        sizePolicy15 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Minimum)
+        sizePolicy15.setHorizontalStretch(0)
+        sizePolicy15.setVerticalStretch(0)
+        sizePolicy15.setHeightForWidth(self.reset_btn.sizePolicy().hasHeightForWidth())
+        self.reset_btn.setSizePolicy(sizePolicy15)
         font4 = QFont()
         font4.setBold(True)
         self.reset_btn.setFont(font4)
@@ -1477,8 +1502,8 @@ class Ui_MainPages(object):
 
         self.import_btn = QPushButton(self.search_bar_frame)
         self.import_btn.setObjectName(u"import_btn")
-        sizePolicy11.setHeightForWidth(self.import_btn.sizePolicy().hasHeightForWidth())
-        self.import_btn.setSizePolicy(sizePolicy11)
+        sizePolicy15.setHeightForWidth(self.import_btn.sizePolicy().hasHeightForWidth())
+        self.import_btn.setSizePolicy(sizePolicy15)
         self.import_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "line-height: 36px;\n"
@@ -1498,11 +1523,11 @@ class Ui_MainPages(object):
 
         self.lineEdit = QLineEdit(self.search_bar_frame)
         self.lineEdit.setObjectName(u"lineEdit")
-        sizePolicy12 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy12.setHorizontalStretch(0)
-        sizePolicy12.setVerticalStretch(0)
-        sizePolicy12.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
-        self.lineEdit.setSizePolicy(sizePolicy12)
+        sizePolicy16 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy16.setHorizontalStretch(0)
+        sizePolicy16.setVerticalStretch(0)
+        sizePolicy16.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
+        self.lineEdit.setSizePolicy(sizePolicy16)
         self.lineEdit.setStyleSheet(u"QLineEdit {\n"
 "border-image: none;\n"
 "background-color: black;\n"
@@ -1523,26 +1548,26 @@ class Ui_MainPages(object):
 
         self.label = QLabel(self.crafting_calc_page)
         self.label.setObjectName(u"label")
-        sizePolicy13 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
-        sizePolicy13.setHorizontalStretch(0)
-        sizePolicy13.setVerticalStretch(0)
-        sizePolicy13.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy13)
+        sizePolicy17 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
+        sizePolicy17.setHorizontalStretch(0)
+        sizePolicy17.setVerticalStretch(0)
+        sizePolicy17.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy17)
 
         self.crafting_calclayout.addWidget(self.label)
 
         self.crafting_calc_btns_frame = QFrame(self.crafting_calc_page)
         self.crafting_calc_btns_frame.setObjectName(u"crafting_calc_btns_frame")
-        sizePolicy6.setHeightForWidth(self.crafting_calc_btns_frame.sizePolicy().hasHeightForWidth())
-        self.crafting_calc_btns_frame.setSizePolicy(sizePolicy6)
+        sizePolicy8.setHeightForWidth(self.crafting_calc_btns_frame.sizePolicy().hasHeightForWidth())
+        self.crafting_calc_btns_frame.setSizePolicy(sizePolicy8)
         self.crafting_method_options = QGridLayout(self.crafting_calc_btns_frame)
         self.crafting_method_options.setSpacing(0)
         self.crafting_method_options.setObjectName(u"crafting_method_options")
         self.crafting_method_options.setContentsMargins(0, 0, 0, 0)
         self.fossil_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.fossil_calc_btn.setObjectName(u"fossil_calc_btn")
-        sizePolicy8.setHeightForWidth(self.fossil_calc_btn.sizePolicy().hasHeightForWidth())
-        self.fossil_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.fossil_calc_btn.sizePolicy().hasHeightForWidth())
+        self.fossil_calc_btn.setSizePolicy(sizePolicy11)
         self.fossil_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1562,8 +1587,8 @@ class Ui_MainPages(object):
 
         self.exalt_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.exalt_calc_btn.setObjectName(u"exalt_calc_btn")
-        sizePolicy8.setHeightForWidth(self.exalt_calc_btn.sizePolicy().hasHeightForWidth())
-        self.exalt_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.exalt_calc_btn.sizePolicy().hasHeightForWidth())
+        self.exalt_calc_btn.setSizePolicy(sizePolicy11)
         self.exalt_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1583,8 +1608,8 @@ class Ui_MainPages(object):
 
         self.essences_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.essences_calc_btn.setObjectName(u"essences_calc_btn")
-        sizePolicy8.setHeightForWidth(self.essences_calc_btn.sizePolicy().hasHeightForWidth())
-        self.essences_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.essences_calc_btn.sizePolicy().hasHeightForWidth())
+        self.essences_calc_btn.setSizePolicy(sizePolicy11)
         self.essences_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1604,8 +1629,8 @@ class Ui_MainPages(object):
 
         self.chaos_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.chaos_calc_btn.setObjectName(u"chaos_calc_btn")
-        sizePolicy8.setHeightForWidth(self.chaos_calc_btn.sizePolicy().hasHeightForWidth())
-        self.chaos_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.chaos_calc_btn.sizePolicy().hasHeightForWidth())
+        self.chaos_calc_btn.setSizePolicy(sizePolicy11)
         self.chaos_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1625,8 +1650,8 @@ class Ui_MainPages(object):
 
         self.alch_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.alch_calc_btn.setObjectName(u"alch_calc_btn")
-        sizePolicy8.setHeightForWidth(self.alch_calc_btn.sizePolicy().hasHeightForWidth())
-        self.alch_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.alch_calc_btn.sizePolicy().hasHeightForWidth())
+        self.alch_calc_btn.setSizePolicy(sizePolicy11)
         self.alch_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1646,8 +1671,8 @@ class Ui_MainPages(object):
 
         self.hunter_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.hunter_calc_btn.setObjectName(u"hunter_calc_btn")
-        sizePolicy8.setHeightForWidth(self.hunter_calc_btn.sizePolicy().hasHeightForWidth())
-        self.hunter_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.hunter_calc_btn.sizePolicy().hasHeightForWidth())
+        self.hunter_calc_btn.setSizePolicy(sizePolicy11)
         self.hunter_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1667,8 +1692,8 @@ class Ui_MainPages(object):
 
         self.redeemer_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.redeemer_calc_btn.setObjectName(u"redeemer_calc_btn")
-        sizePolicy8.setHeightForWidth(self.redeemer_calc_btn.sizePolicy().hasHeightForWidth())
-        self.redeemer_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.redeemer_calc_btn.sizePolicy().hasHeightForWidth())
+        self.redeemer_calc_btn.setSizePolicy(sizePolicy11)
         self.redeemer_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1688,8 +1713,8 @@ class Ui_MainPages(object):
 
         self.warlord_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.warlord_calc_btn.setObjectName(u"warlord_calc_btn")
-        sizePolicy8.setHeightForWidth(self.warlord_calc_btn.sizePolicy().hasHeightForWidth())
-        self.warlord_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.warlord_calc_btn.sizePolicy().hasHeightForWidth())
+        self.warlord_calc_btn.setSizePolicy(sizePolicy11)
         self.warlord_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1709,8 +1734,8 @@ class Ui_MainPages(object):
 
         self.annul_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.annul_calc_btn.setObjectName(u"annul_calc_btn")
-        sizePolicy8.setHeightForWidth(self.annul_calc_btn.sizePolicy().hasHeightForWidth())
-        self.annul_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.annul_calc_btn.sizePolicy().hasHeightForWidth())
+        self.annul_calc_btn.setSizePolicy(sizePolicy11)
         self.annul_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1730,8 +1755,8 @@ class Ui_MainPages(object):
 
         self.metacraft_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.metacraft_calc_btn.setObjectName(u"metacraft_calc_btn")
-        sizePolicy8.setHeightForWidth(self.metacraft_calc_btn.sizePolicy().hasHeightForWidth())
-        self.metacraft_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.metacraft_calc_btn.sizePolicy().hasHeightForWidth())
+        self.metacraft_calc_btn.setSizePolicy(sizePolicy11)
         self.metacraft_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1751,8 +1776,8 @@ class Ui_MainPages(object):
 
         self.crusader_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.crusader_calc_btn.setObjectName(u"crusader_calc_btn")
-        sizePolicy8.setHeightForWidth(self.crusader_calc_btn.sizePolicy().hasHeightForWidth())
-        self.crusader_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.crusader_calc_btn.sizePolicy().hasHeightForWidth())
+        self.crusader_calc_btn.setSizePolicy(sizePolicy11)
         self.crusader_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1772,8 +1797,8 @@ class Ui_MainPages(object):
 
         self.regal_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.regal_calc_btn.setObjectName(u"regal_calc_btn")
-        sizePolicy8.setHeightForWidth(self.regal_calc_btn.sizePolicy().hasHeightForWidth())
-        self.regal_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.regal_calc_btn.sizePolicy().hasHeightForWidth())
+        self.regal_calc_btn.setSizePolicy(sizePolicy11)
         self.regal_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1793,8 +1818,8 @@ class Ui_MainPages(object):
 
         self.transmute_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.transmute_calc_btn.setObjectName(u"transmute_calc_btn")
-        sizePolicy8.setHeightForWidth(self.transmute_calc_btn.sizePolicy().hasHeightForWidth())
-        self.transmute_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.transmute_calc_btn.sizePolicy().hasHeightForWidth())
+        self.transmute_calc_btn.setSizePolicy(sizePolicy11)
         self.transmute_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1814,8 +1839,8 @@ class Ui_MainPages(object):
 
         self.aug_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.aug_calc_btn.setObjectName(u"aug_calc_btn")
-        sizePolicy8.setHeightForWidth(self.aug_calc_btn.sizePolicy().hasHeightForWidth())
-        self.aug_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.aug_calc_btn.sizePolicy().hasHeightForWidth())
+        self.aug_calc_btn.setSizePolicy(sizePolicy11)
         self.aug_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1835,8 +1860,8 @@ class Ui_MainPages(object):
 
         self.alt_calc_btn = QPushButton(self.crafting_calc_btns_frame)
         self.alt_calc_btn.setObjectName(u"alt_calc_btn")
-        sizePolicy8.setHeightForWidth(self.alt_calc_btn.sizePolicy().hasHeightForWidth())
-        self.alt_calc_btn.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.alt_calc_btn.sizePolicy().hasHeightForWidth())
+        self.alt_calc_btn.setSizePolicy(sizePolicy11)
         self.alt_calc_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "font-size: 16px;\n"
@@ -1859,8 +1884,8 @@ class Ui_MainPages(object):
 
         self.affix_search_bar_frame = QFrame(self.crafting_calc_page)
         self.affix_search_bar_frame.setObjectName(u"affix_search_bar_frame")
-        sizePolicy4.setHeightForWidth(self.affix_search_bar_frame.sizePolicy().hasHeightForWidth())
-        self.affix_search_bar_frame.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.affix_search_bar_frame.sizePolicy().hasHeightForWidth())
+        self.affix_search_bar_frame.setSizePolicy(sizePolicy5)
         self.affix_search_bar_frame.setFrameShape(QFrame.StyledPanel)
         self.affix_search_bar_frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.affix_search_bar_frame)
@@ -1869,8 +1894,8 @@ class Ui_MainPages(object):
         self.horizontalLayout_4.setContentsMargins(10, 10, 10, 10)
         self.affix_search_bar = QLineEdit(self.affix_search_bar_frame)
         self.affix_search_bar.setObjectName(u"affix_search_bar")
-        sizePolicy8.setHeightForWidth(self.affix_search_bar.sizePolicy().hasHeightForWidth())
-        self.affix_search_bar.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.affix_search_bar.sizePolicy().hasHeightForWidth())
+        self.affix_search_bar.setSizePolicy(sizePolicy11)
         self.affix_search_bar.setStyleSheet(u"QLineEdit {\n"
 "border-image: none;\n"
 "background-color: black;\n"
@@ -1888,11 +1913,11 @@ class Ui_MainPages(object):
 
         self.close_filters_btn = QPushButton(self.affix_search_bar_frame)
         self.close_filters_btn.setObjectName(u"close_filters_btn")
-        sizePolicy14 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
-        sizePolicy14.setHorizontalStretch(0)
-        sizePolicy14.setVerticalStretch(0)
-        sizePolicy14.setHeightForWidth(self.close_filters_btn.sizePolicy().hasHeightForWidth())
-        self.close_filters_btn.setSizePolicy(sizePolicy14)
+        sizePolicy18 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
+        sizePolicy18.setHorizontalStretch(0)
+        sizePolicy18.setVerticalStretch(0)
+        sizePolicy18.setHeightForWidth(self.close_filters_btn.sizePolicy().hasHeightForWidth())
+        self.close_filters_btn.setSizePolicy(sizePolicy18)
         self.close_filters_btn.setFont(font4)
         self.close_filters_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
@@ -1911,8 +1936,8 @@ class Ui_MainPages(object):
 
         self.open_groups_btn = QPushButton(self.affix_search_bar_frame)
         self.open_groups_btn.setObjectName(u"open_groups_btn")
-        sizePolicy14.setHeightForWidth(self.open_groups_btn.sizePolicy().hasHeightForWidth())
-        self.open_groups_btn.setSizePolicy(sizePolicy14)
+        sizePolicy18.setHeightForWidth(self.open_groups_btn.sizePolicy().hasHeightForWidth())
+        self.open_groups_btn.setSizePolicy(sizePolicy18)
         self.open_groups_btn.setStyleSheet(u"QPushButton {\n"
 "border-image: none;\n"
 "vertical-align: middle;\n"
@@ -1931,8 +1956,8 @@ class Ui_MainPages(object):
 
         self.open_groups_label = QLabel(self.affix_search_bar_frame)
         self.open_groups_label.setObjectName(u"open_groups_label")
-        sizePolicy8.setHeightForWidth(self.open_groups_label.sizePolicy().hasHeightForWidth())
-        self.open_groups_label.setSizePolicy(sizePolicy8)
+        sizePolicy11.setHeightForWidth(self.open_groups_label.sizePolicy().hasHeightForWidth())
+        self.open_groups_label.setSizePolicy(sizePolicy11)
 
         self.horizontalLayout_4.addWidget(self.open_groups_label)
 
@@ -1970,7 +1995,7 @@ class Ui_MainPages(object):
         self.retranslateUi(MainPages)
 
         self.pages.setCurrentIndex(0)
-        self.modpool_group_pages.setCurrentIndex(0)
+        self.modpool_group_pages.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainPages)
