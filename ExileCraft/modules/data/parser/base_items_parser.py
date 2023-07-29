@@ -151,7 +151,7 @@ class ItemParser:
             return {}
     
     def get_all_items(self):
-        data = self._data
+        data = self.parse_json()
         item_list = []
         for item, item_data in data.items():
             item_dict = {
