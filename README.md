@@ -8,6 +8,9 @@ ExileCraft is currently in the beginning stages of the development process and l
 <br>
 <br>
 Any and all feedback is welcome and appreciated, users can find information about how they can help the development of this application in the Contributing section (specifically Bug Reports and Feature Suggestions). If you are a developer and would like to contribute to the development of ExileCraft, check out the Code Contributions selection below.
+<br>
+<br>
+NOTE: The current initial release does not accurately reflect the state of development of the application stay tuned for updates!
 ---
 # Planned Features:
 
@@ -38,10 +41,10 @@ If you're a developer and want to contribute to ExileCraft, that's great! Here's
 1. Fork the repository.
 2. Setup your virtual environment
 3. Install the requirements from requirements.txt ('pip install -r requirements.txt')
-3. Create a new branch (`git checkout -b new-feature`).
-4. Make your changes.
-5. Push the branch (`git push origin new-feature`).
-6. [Create a new Pull Request](https://github.com/jmduea/ExileCraft/pulls)
+4. Create a new branch (`git checkout -b new-feature`).
+5. Make your changes.
+6. Push the branch (`git push origin new-feature`).
+7. [Create a new Pull Request](https://github.com/jmduea/ExileCraft/pulls)
 
 Before making a Pull Request, please ensure you have thoroughly read through the CONTRIBUTING.md file for code contribution guidelines.
 
