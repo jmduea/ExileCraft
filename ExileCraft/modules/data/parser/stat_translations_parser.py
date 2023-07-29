@@ -25,9 +25,6 @@
 import json
 import os
 
-from modules.data.models.stat_models import Stat
-from modules.data.models.translation_models import Translation, TranslationCondition, TranslationIndexHandler, \
-    TranslationFormat
 from modules.data.parser.path_utils import get_abs_path, get_base_dir
 
 script_path = os.path.realpath(__file__)
@@ -36,84 +33,34 @@ abs_path_to_json = get_abs_path(base_dir,
                                 os.path.join(r'ExileCraft\modules\data', 'json', 'stat_translations.min.json'))
 
 
-def create_translation_objects(db_manager, mod_id):
-    with open(abs_path_to_json, 'r') as f:
-        data = json.load(f)
-    
-    with db_manager.transaction() as session:
+class StatTranslationParser:
+    def __init__(self):
+        self.abs_path_to_json = abs_path_to_json
+
+    @staticmethod
+    def parse_json():
+        with open(abs_path_to_json) as json_file:
+            _data = json.load(json_file)
+        return _data
+
+    def create_translation_objects(self):
+        data = self.parse_json()
+        translation_list = []
         for item in data:
-            ids = item['ids']
-            
-            for translation in item['English']:
-                conditions = translation['condition']
-                formats = translation['format']
-                index_handlers = translation['index_handlers']
-                string = translation['string']
-                if 'hidden' in translation:
-                    hidden = True
-                else:
-                    hidden = False
-                    for id_ in ids:
-                        stat_obj = session.query(Stat).filter_by(Stat.name == id_).one()
-                        stat_id = stat_obj.id
-                        translation_dict = {
-                            'mod_id': mod_id,
-                            'stat_id': stat_id,
-                            'string': string,
-                            'hidden': hidden
-                            }
-                        
-                        translation_record = Translation(**translation_dict)
-                        session.add(translation_record)
-                        session.flush()
-                        
-                        translation_obj = session.query(Translation).filter_by(Translation.mod_id == mod_id).first()
-                        translation_id = translation_obj.id
-                        
-                        condition_dict = {
-                            'translation_id': translation_id,
-                            'condition_data': conditions
-                        }
-                        condition_record = TranslationCondition(**condition_dict)
-                        session.add(condition_record)
-                        
-                        format_dict = {
-                            'translation_id': translation_id,
-                            'format_data': formats
-                        }
-                        
-                        format_record = TranslationFormat(**format_dict)
-                        session.add(format_record)
-                        
-                        index_handler_dict = {
-                            'translation_id': translation_id,
-                            'index_handler_data': index_handlers
-                        }
-                        
-                        index_handler_record = TranslationIndexHandler(**index_handler_dict)
-                        session.add(index_handler_record)
+            translation_list.append({'ids': item.get('ids', []), 'translations': item.get(
+                'English', []), 'hidden': item.get('hidden', False)})
+        return translation_list
+
+    @staticmethod
+    def find_stat_translation(data, mod_id):
+        for translation in data:
+            if mod_id in translation['ids']:
+                return translation
+
+        return None
 
 
-def find_stat_translation(mod_id):
-    """ Searches through a JSON file of stat translations and returns the translation for a specified mod_id.
-
-    Parameters:
-    mod_id (str): The mod_id to search for.
-
-    Returns:
-    dict: A dictionary containing the stat translation for the specified mod_id, or None if the mod_id was not found.
-    """
-    with open(abs_path_to_json, 'r') as f:
-        data = json.load(f)
-    
-    for translation in data:
-        if mod_id in translation['ids']:
-            return translation
-    
-    return None
-
-
-def get_stat_translation_string(stat_translation_data, average_stat):
+def get_stat_translation_string(_stat_translation_data, average_stat):
     """
     Determines the appropriate translation string for a given stat based on its average value.
 
@@ -125,7 +72,7 @@ def get_stat_translation_string(stat_translation_data, average_stat):
     If no suitable translation is found, an empty string is returned.
 
     Args:
-        stat_translation_data (list): A list of dictionaries, each representing a possible
+        _stat_translation_data (list): A list of dictionaries, each representing a possible
                                       translation. Each dictionary should contain a 'condition'
                                       key (itself a dictionary with 'min' and/or 'max' keys)
                                       and a 'string' key.
@@ -135,11 +82,11 @@ def get_stat_translation_string(stat_translation_data, average_stat):
         str: The appropriate translation string with the average stat value inserted, or an
              empty string if no suitable translation is found.
     """
-    for translation in stat_translation_data:
+    for translation in _stat_translation_data:
         condition = translation.get('condition', [{}])[0]
         min_condition = condition.get('min', None)
         max_condition = condition.get('max', None)
-        
+
         # Check if average_stat meets the condition
         if (min_condition is not None and average_stat >= min_condition) or \
                 (max_condition is not None and average_stat <= max_condition):
@@ -148,4 +95,8 @@ def get_stat_translation_string(stat_translation_data, average_stat):
 
 
 if __name__ == "__main__":
-    create_translation_objects()
+    stat_translation_parser = StatTranslationParser()
+    stat_translation_data = stat_translation_parser.create_translation_objects()
+    for translation_data in stat_translation_data:
+        print(translation_data)
+    print(stat_translation_data)
