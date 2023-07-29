@@ -22,67 +22,67 @@
 #  SOFTWARE.
 # ##############################################################################
 
-from enum import IntEnum, EnumMeta, Enum, auto
+from enum import auto, Enum, EnumMeta, IntEnum
 
 __all__ = [
-    'MOD_DOMAIN',
-    'MOD_GENERATION_TYPE',
-    'item_class_whitelist',
-    'item_class_map',
-    'subtype_display_names',
-    'domain_whitelist',
-    'RARITY',
-    'SOCKET_COLOUR',
-    'STAT_INTERPOLATION_TYPES',
-    'WORD_LISTS',
-    'MOD_MAX_STATS',
-    'MOD_STATS_RANGE',
-    'one_hand_weapon_types',
-    'two_hand_weapon_types',
-    'armour_types',
-    'jewellery_types',
-    'flask_types',
-    'generation_type_whitelist',
-    'subtype_tags_map',
-    'armour_subtypes',
-    'ITEM_PROPERTIES',
-    'ITEM_REQUIREMENTS',
-    'generation_type_blacklist',
-    'ITEM_PROPERTIES_MAP'
+    "MOD_DOMAIN",
+    "MOD_GENERATION_TYPE",
+    "item_class_whitelist",
+    "item_class_map",
+    "subtype_display_names",
+    "domain_whitelist",
+    "RARITY",
+    "SOCKET_COLOUR",
+    "STAT_INTERPOLATION_TYPES",
+    "WORD_LISTS",
+    "MOD_MAX_STATS",
+    "MOD_STATS_RANGE",
+    "one_hand_weapon_types",
+    "two_hand_weapon_types",
+    "armour_types",
+    "jewellery_types",
+    "flask_types",
+    "generation_type_whitelist",
+    "subtype_tags_map",
+    "armour_subtypes",
+    "ITEM_PROPERTIES",
+    "ITEM_REQUIREMENTS",
+    "generation_type_blacklist",
+    "ITEM_PROPERTIES_MAP",
 ]
 
 MOD_MAX_STATS = 6
 MOD_STATS_RANGE = range(1, MOD_MAX_STATS + 1)
 
 item_types = [
-    'Armour',
-    'Jewellery',
-    'One Handed Melee',
-    'Two Handed Melee',
-    'Amulet',
-    'Belt',
-    'Body Armour',
-    'Boots',
-    'Bow',
-    'Claw',
-    'Dagger',
-    'Fishing Rod',
-    'Flask',
-    'Gloves',
-    'Helmet',
-    'Jewel',
-    'One Handed Axe',
-    'One Handed Mace',
-    'One Handed Sword',
-    'Quiver',
-    'Ring',
-    'Sceptre',
-    'Shield',
-    'Staff',
-    'Two Handed Axe',
-    'Two Handed Mace',
-    'Two Handed Sword',
-    'Wand'
+    "Armour",
+    "Jewellery",
+    "One Handed Melee",
+    "Two Handed Melee",
+    "Amulet",
+    "Belt",
+    "Body Armour",
+    "Boots",
+    "Bow",
+    "Claw",
+    "Dagger",
+    "Fishing Rod",
+    "Flask",
+    "Gloves",
+    "Helmet",
+    "Jewel",
+    "One Handed Axe",
+    "One Handed Mace",
+    "One Handed Sword",
+    "Quiver",
+    "Ring",
+    "Sceptre",
+    "Shield",
+    "Staff",
+    "Two Handed Axe",
+    "Two Handed Mace",
+    "Two Handed Sword",
+    "Wand",
 ]
 
 one_hand_weapon_types = {
@@ -94,7 +94,7 @@ one_hand_weapon_types = {
     "Thrusting One Hand Sword",
     "One Hand Axe",
     "One Hand Mace",
-    "Sceptre"
+    "Sceptre",
 }
 
 two_hand_weapon_types = {
@@ -106,9 +106,7 @@ two_hand_weapon_types = {
     "Two Hand Mace",
 }
 
-offhand_types = {
-    "Quiver"
-}
+offhand_types = {"Quiver"}
 
 armour_types = {
     "Gloves",
@@ -118,25 +116,17 @@ armour_types = {
     "Shield",
 }
 
-jewellery_types = {
-    "Amulet": 'amulet',
-    "Ring": 'ring',
-    "Belt": 'belt'
-}
+jewellery_types = {"Amulet": "amulet", "Ring": "ring", "Belt": "belt"}
 
 flask_types = {
-    "LifeFlask": 'life_flask',
-    "ManaFlask": 'mana_flask',
-    "HybridFlask": 'hybrid_flask',
-    "UtilityFlask": 'utility_flask',
-    "UtilityFlaskCritical": 'utility_flask_critical'
+    "LifeFlask": "life_flask",
+    "ManaFlask": "mana_flask",
+    "HybridFlask": "hybrid_flask",
+    "UtilityFlask": "utility_flask",
+    "UtilityFlaskCritical": "utility_flask_critical",
 }
 
-jewel_types = {
-    "Jewel",
-    "AbyssJewel",
-    ""
-}
+jewel_types = {"Jewel", "AbyssJewel", ""}
 
 item_class_whitelist = {
     "LifeFlask",
@@ -170,7 +160,7 @@ item_class_whitelist = {
     "UtilityFlaskCritical",
     "FishingRod",
     "Jewel",
-    "AbyssJewel"
+    "AbyssJewel",
 }
 
 item_class_blacklist = {
@@ -207,7 +197,7 @@ domain_whitelist = [
     "heist_gear",
     "trinket",
     "unveiled_modifier",
-    "misc"
+    "misc",
 ]
 
 generation_type_whitelist = [
@@ -221,7 +211,7 @@ generation_type_whitelist = [
     "exarch_implicit",
     "eater_implicit",
     "flask_enchantment_instilling",
-    "flask_enchantment_enkindling"
+    "flask_enchantment_enkindling",
 ]
 
 generation_type_blacklist = [
@@ -237,47 +227,131 @@ generation_type_blacklist = [
     "scourge_benefit",
     "synthesis_globals",
     "monster_affliction",
-    "archnemesis"
+    "archnemesis",
 ]
 
 armour_subtypes = {
-    'Body Armour': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-                    "str_dex_int_armour", "str_int_armour"},
-    'Boots': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-              "str_int_armour"},
-    'Gloves': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-               "str_int_armour"},
-    'Helmet': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-               "str_int_armour"},
-    'Shield': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour", "str_int_armour"}
+    "Body Armour": {
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_dex_int_armour",
+        "str_int_armour",
+    },
+    "Boots": {
+        "ward_armour",
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_int_armour",
+    },
+    "Gloves": {
+        "ward_armour",
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_int_armour",
+    },
+    "Helmet": {
+        "ward_armour",
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_int_armour",
+    },
+    "Shield": {
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_int_armour",
+    },
 }
 
-jewel_subtypes = {
-    'Jewel': {}
-}
+jewel_subtypes = {"Jewel": {}}
 item_class_map = {
-    'Body Armour': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-                    "str_dex_int_armour", "str_int_armour"},
-    'Boots': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-              "str_int_armour"},
-    'Gloves': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-               "str_int_armour"},
-    'Helmet': {"ward_armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-               "str_int_armour"},
-    'Shield': {"dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour", "str_int_armour"},
-    'Amulet': {"amulet"},
-    'Belt': {"belt"},
-    'Ring': {"ring"},
-    'One Handed Weapons': {"claw", "attack_dagger", "dagger", "axe", "mace",
-                           "sword", "sceptre", "rapier", "wand"},
-    'Two Handed Weapons': {"bow", "staff", "two_hand_axe", "two_hand_sword", "warstaff", "two_hand_mace"},
-    'Offhand': {"quiver", "shield"},
-    'Jewel': {"abyss_jewel", "jewel"},
-    'HybridFlask': {"hybrid_flask"},
-    'LifeFlask': {"life_flask"},
-    'ManaFlask': {"mana_flask"},
-    'UtilityFlask': {"utility_flask"},
-    'UtilityFlaskCritical': {"utility_flask_critical"}
+    "Body Armour": {
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_dex_int_armour",
+        "str_int_armour",
+    },
+    "Boots": {
+        "ward_armour",
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_int_armour",
+    },
+    "Gloves": {
+        "ward_armour",
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_int_armour",
+    },
+    "Helmet": {
+        "ward_armour",
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_int_armour",
+    },
+    "Shield": {
+        "dex_armour",
+        "dex_int_armour",
+        "int_armour",
+        "str_armour",
+        "str_dex_armour",
+        "str_int_armour",
+    },
+    "Amulet": {"amulet"},
+    "Belt": {"belt"},
+    "Ring": {"ring"},
+    "One Handed Weapons": {
+        "claw",
+        "attack_dagger",
+        "dagger",
+        "axe",
+        "mace",
+        "sword",
+        "sceptre",
+        "rapier",
+        "wand",
+    },
+    "Two Handed Weapons": {
+        "bow",
+        "staff",
+        "two_hand_axe",
+        "two_hand_sword",
+        "warstaff",
+        "two_hand_mace",
+    },
+    "Offhand": {"quiver", "shield"},
+    "Jewel": {"abyss_jewel", "jewel"},
+    "HybridFlask": {"hybrid_flask"},
+    "LifeFlask": {"life_flask"},
+    "ManaFlask": {"mana_flask"},
+    "UtilityFlask": {"utility_flask"},
+    "UtilityFlaskCritical": {"utility_flask_critical"},
 }
 
 subtype_display_names = {
@@ -309,7 +383,7 @@ subtype_display_names = {
     "str_dex_armour": "{}(str/dex)",
     "str_dex_int_armour": "{}(str/dex/int)",
     "str_int_armour": "{}(str/int)",
-    "amulet": 'Amulet',
+    "amulet": "Amulet",
     "life_flask": "LifeFlask",
     "mana_flask": "ManaFlask",
     "hybrid_flask": "HybridFlask",
@@ -329,82 +403,92 @@ subtype_display_names = {
     "expansion_jewel_small": "Small Cluster Jewel",
     "expansion_jewel_medium": "Medium Cluster Jewel",
     "expansion_jewel_large": "Large Cluster Jewel",
-    "helmet": "Helmet"
+    "helmet": "Helmet",
 }
 
-reversed_class_names = {v.format(k) if '{}' in v else v: k for k, v in subtype_display_names.items()}
+reversed_class_names = {
+    v.format(k) if "{}" in v else v: k for k, v in subtype_display_names.items()
+}
 
-all_subtypes = {"armour", "dex_armour", "dex_int_armour", "int_armour", "str_armour", "str_dex_armour",
-                "str_dex_int_armour", "str_int_armour"
-                }
+all_subtypes = {
+    "armour",
+    "dex_armour",
+    "dex_int_armour",
+    "int_armour",
+    "str_armour",
+    "str_dex_armour",
+    "str_dex_int_armour",
+    "str_int_armour",
+}
 
-subtype_tags_map = {"(dex)": "dex_armour",
-                    "(dex/int)": "dex_int_armour",
-                    "(int)": "int_armour",
-                    "(str)": "str_armour",
-                    "(str/dex)": "str_dex_armour",
-                    "(str/dex/int)": "str_dex_int_armour",
-                    "(str/int)": "str_int_armour",
-                    "(Ward)": "ward_armour"
-                    }
+subtype_tags_map = {
+    "(dex)": "dex_armour",
+    "(dex/int)": "dex_int_armour",
+    "(int)": "int_armour",
+    "(str)": "str_armour",
+    "(str/dex)": "str_dex_armour",
+    "(str/dex/int)": "str_dex_int_armour",
+    "(str/int)": "str_int_armour",
+    "(Ward)": "ward_armour",
+}
 
 ITEM_PROPERTIES = [
-    ("Quality", "quality", "#8787fe"),
+    # ("Quality", "quality", "#8787fe"),
     ("Block", "block", "#fff"),
-    ("Armour", "average_armour", "#fff"),
-    ("Energy Shield", "average_energy_shield", "#fff"),
-    ("Evasion", "average_evasion", "#fff"),
-    ("Ward", "average_ward", "#fff"),
+    ("Armour", "average_armour", "#8787fe"),
+    ("Energy Shield", "average_energy_shield", "#8787fe"),
+    ("Evasion", "average_evasion", "#8787fe"),
+    ("Ward", "average_ward", "#8787fe"),
     ("Physical Damage", ("physical_damage_min", "physical_damage_max"), "#8787fe"),
     ("Elemental Damage", ("elemental_damage_min", "elemental_damage_max"), "#8787fe"),
     ("Chaos Damage", ("chaos_damage_min", "chaos_damage_max"), "#8787fe"),
-    ("Critical Strike Chance", "critical_strike_chance_percentage", "#fff"),
-    ("Attacks Per Second", "attacks_per_second", "#fff")
+    ("Critical Strike Chance", "critical_strike_chance", "#fff"),
+    ("Attacks Per Second", "attack_time", "#fff"),
 ]
 
 ITEM_PROPERTIES_MAP = {
-    'Armour': {
-        'armour_min': 'min',
-        'armour_max': 'max',
-        'evasion_min': 'min',
-        'evasion_max': 'max',
-        'energy_shield_min': 'min',
-        'energy_shield_max': 'max',
-        'ward_min': 'min',
-        'ward_max': 'max',
-        'block': 'block',
-        'movement_penalty': 'movement_speed'
+    "Armour": {
+        "armour_min": "min",
+        "armour_max": "max",
+        "evasion_min": "min",
+        "evasion_max": "max",
+        "energy_shield_min": "min",
+        "energy_shield_max": "max",
+        "ward_min": "min",
+        "ward_max": "max",
+        "block": "block",
+        "movement_penalty": "movement_speed",
     },
-    'One Hand Weapon': {
-        'attack_time': 'attack_time',
-        'critical_strike_chance': 'critical_strike_chance',
-        'physical_damage_min': 'physical_damage_min',
-        'physical_damage_max': 'physical_damage_max',
-        'range': 'range'
+    "One Hand Weapon": {
+        "attack_time": "attack_time",
+        "critical_strike_chance": "critical_strike_chance",
+        "physical_damage_min": "physical_damage_min",
+        "physical_damage_max": "physical_damage_max",
+        "range": "range",
     },
-    'Two Hand Weapon': {
-        'attack_time': 'attack_time',
-        'critical_strike_chance': 'critical_strike_chance',
-        'physical_damage_min': 'physical_damage_min',
-        'physical_damage_max': 'physical_damage_max',
-        'range': 'range'
+    "Two Hand Weapon": {
+        "attack_time": "attack_time",
+        "critical_strike_chance": "critical_strike_chance",
+        "physical_damage_min": "physical_damage_min",
+        "physical_damage_max": "physical_damage_max",
+        "range": "range",
     },
-    'Flask': {
-        'buff_id': 'id',
-        'buff_stat': 'stat',
-        'implicits': 'implicits',
-        'charges_max': 'charges_max',
-        'charges_per_use': 'charges_per_use',
-        'duration': 'duration',
-        'life_per_use': 'life_per_use',
-        'mana_per_use': 'mana_per_use'
-    }
+    "Flask": {
+        "buff_id": "id",
+        "buff_stat": "stat",
+        "implicits": "implicits",
+        "charges_max": "charges_max",
+        "charges_per_use": "charges_per_use",
+        "duration": "duration",
+        "life_per_use": "life_per_use",
+        "mana_per_use": "mana_per_use",
+    },
 }
 ITEM_REQUIREMENTS = [
     ("Requires Level", "level", "#fff"),
     ("STR", "strength", "#fff"),
     ("DEX", "dexterity", "#fff"),
-    ("INT", "intelligence", "#fff")
+    ("INT", "intelligence", "#fff"),
 ]
 
 
@@ -469,48 +553,53 @@ class MOD_DOMAIN(str, Enum):
     AFFLICTION_JEWEL
         Modifiers for the affliction jewels
     HEIST_AREA
-        TODO
     HEIST_NPC
-        TODO
     HEIST_TRINKET
-        TODO
     UNKNOWN4
-        TODO
     UNDEFINED
-        TODO
     """
-    ITEM = 'item'  # Generic item domain (but excluding items that have their own domain)
-    FLASK = 'flask'  # Flask domain
-    MONSTER = 'monster'  # Monster domain
-    CHEST = 'chest'  # Chest domain, i.e. strongboxes or other type of chest-like containers
-    AREA = 'area'  # Area domain, i.e. for the various zones of Path of Exile
-    UNKNOWN = 'unknown1'  # TODO
-    UNKNOWN2 = 'unknown2'  # TODO
-    UNKNOWN3 = 'unknown3'  # TODO
-    CRAFTED = 'crafted'  # Domain for crafted mods (previously MASTER)
-    MISC = 'misc'  # Miscellaneous domain for jewel stuff, item limits, corruptions, etc
-    ATLAS = 'atlas'  # Atlas domain for modifiers that appear when using a sextant orb on the atlas
-    LEAGUESTONE = 'leaguestone'  # Leaguestone domain for modifiers that appear on league stones
-    ABYSS_JEWEL = 'abyss_jewel'  # Domain for modifiers that appear on Abyss jewels
-    MAP_DEVICE = 'map_device'  # For implicit modifiers that can be applied through the map device
-    DELVE = 'delve'  # For delve modifiers
-    DELVE_AREA = 'delve_area'  # For modifiers appearing on delve areas
-    SYNTHESIS_GLOBALS = 'synthesis_globals'  # Synthesis global modifiers for areas
-    SYNTHESIS_BONUS = 'synthesis_bonus'  # Synthesis modifiers that grant a bonus to other modifiers
-    AFFLICTION_JEWEL = 'affliction_jewel'  # Modifiers for the affliction jewels
-    HEIST_AREA = 'heist_area'  # TODO
-    HEIST_NPC = 'heist_npc'  # TODO
-    HEIST_TRINKET = 'heist_trinket'  # TODO
-    UNKNOWN4 = 'unknown4'  # TODO
-    UNDEFINED = 'undefined'  # TODO
-    
+
+    ITEM = (
+        "item"  # Generic item domain (but excluding items that have their own domain)
+    )
+    FLASK = "flask"  # Flask domain
+    MONSTER = "monster"  # Monster domain
+    CHEST = (
+        "chest"  # Chest domain, i.e. strongboxes or other type of chest-like containers
+    )
+    AREA = "area"  # Area domain, i.e. for the various zones of Path of Exile
+    UNKNOWN = "unknown1"
+    UNKNOWN2 = "unknown2"
+    UNKNOWN3 = "unknown3"
+    CRAFTED = "crafted"  # Domain for crafted mods (previously MASTER)
+    MISC = "misc"  # Miscellaneous domain for jewel stuff, item limits, corruptions, etc
+    ATLAS = (
+        "atlas"  # Atlas domain for modifiers that appear when using a sextant orb on
+    )
+    # the atlas
+    LEAGUESTONE = "leaguestone"  # Leaguestone domain for modifiers that appear on
+    # league stones
+    ABYSS_JEWEL = "abyss_jewel"  # Domain for modifiers that appear on Abyss jewels
+    MAP_DEVICE = "map_device"  # For implicit modifiers that can be applied through the
+    # map
+    # device
+    DELVE = "delve"  # For delve modifiers
+    DELVE_AREA = "delve_area"  # For modifiers appearing on delve areas
+    SYNTHESIS_GLOBALS = "synthesis_globals"  # Synthesis global modifiers for areas
+    SYNTHESIS_BONUS = (
+        "synthesis_bonus"  # Synthesis modifiers that grant a bonus to other modifiers
+    )
+    AFFLICTION_JEWEL = "affliction_jewel"  # Modifiers for the affliction jewels
+    HEIST_AREA = "heist_area"
+    HEIST_NPC = "heist_npc"
+    HEIST_TRINKET = "heist_trinket"
+    UNKNOWN4 = "unknown4"
+    UNDEFINED = "undefined"
+
     # Legacy Names
     MASTER = CRAFTED  # See CRAFTED
     JEWEL = MISC  # See MISC
-    
-    def __str__(self):
-        return self.value[1]
-    
+
 
 class MOD_GENERATION_TYPE(Enum):
     """
@@ -550,38 +639,34 @@ class MOD_GENERATION_TYPE(Enum):
     DELVE_AREA
         For modifiers that appear on delve areas
     SYNTHESIS_A
-        TODO
     SYNTHESIS_GLOBALS
-        TODO
     SYNTHESIS_BONUS
-        TODO
     BLIGHT
-        TODO
     MONSTER_AFFLICTION
-        TODO
     """
-    PREFIX: str = 'prefix'
-    SUFFIX: str = 'suffix'
-    UNIQUE: str = 'unique'
-    NEMESIS: str = 'nemesis'
-    CORRUPTED: str = 'corrupted'
-    BLOODLINES: str = 'bloodlines'
-    TORMENT: str = 'torment'
-    TEMPEST: str = 'tempest'
-    TALISMAN: str = 'talisman'
-    ENCHANTMENT: str = 'enchantment'
-    ESSENCE: str = 'essence'
-    BESTIARY: str = 'bestiary'
-    DELVE_AREA: str = 'delve_area'
-    SYNTHESIS_A: str = 'synthesis_a'
-    SYNTHESIS_GLOBALS: str = 'synthesis_globals'
-    SYNTHESIS_BONUS: str = 'synthesis_bonus'
-    BLIGHT: str = 'blight'
-    BLIGHT_TOWER: str = 'blight_tower'
-    MONSTER_AFFLICTION: str = 'monster_affliction'
-    ARCHNEMESIS: str = 'archnemesis'
-    SEARING_EXARCH_IMPLICIT: str = 'searing_exarch_implicit'
-    
+
+    PREFIX: str = "prefix"
+    SUFFIX: str = "suffix"
+    UNIQUE: str = "unique"
+    NEMESIS: str = "nemesis"
+    CORRUPTED: str = "corrupted"
+    BLOODLINES: str = "bloodlines"
+    TORMENT: str = "torment"
+    TEMPEST: str = "tempest"
+    TALISMAN: str = "talisman"
+    ENCHANTMENT: str = "enchantment"
+    ESSENCE: str = "essence"
+    BESTIARY: str = "bestiary"
+    DELVE_AREA: str = "delve_area"
+    SYNTHESIS_A: str = "synthesis_a"
+    SYNTHESIS_GLOBALS: str = "synthesis_globals"
+    SYNTHESIS_BONUS: str = "synthesis_bonus"
+    BLIGHT: str = "blight"
+    BLIGHT_TOWER: str = "blight_tower"
+    MONSTER_AFFLICTION: str = "monster_affliction"
+    ARCHNEMESIS: str = "archnemesis"
+    SEARING_EXARCH_IMPLICIT: str = "searing_exarch_implicit"
+
 
 class WORD_LISTS(IntEnumOverride):
     """
@@ -612,6 +697,7 @@ class WORD_LISTS(IntEnumOverride):
     ESSENCE
         Name of an essence
     """
+
     ITEM_PREFIX = 1
     ITEM_SUFFIX = 2
     MONSTER_PREFIX = 3
@@ -651,6 +737,7 @@ class STAT_INTERPOLATION_TYPES(IntEnumOverride):
                 (1+GrantedEffects['IncrementalEffectiveness') ** (MonsterLevel - 1)
 
     """
+
     CONSTANT = 1
     LINEAR = 2
     EXPONENTIAL = 3
@@ -683,23 +770,24 @@ class SOCKET_COLOUR(Enum):
         :attr:`SOCKET_COLOUR.BLUE`) the id attribute denotes the integer
         that is sometimes used in the game files to represent the colour
     """
+
     # IDs are from CharacterStarItems.dat->Sockets and game testing
-    R = ('R', 1)
-    G = ('G', 2)
-    B = ('B', 3)
+    R = ("R", 1)
+    G = ("G", 2)
+    B = ("B", 3)
     # I can't actually confirm this id=4, but seems logical
-    W = ('W', 4)
+    W = ("W", 4)
     RED = R
     GREEN = G
     BLUE = B
     WHITE = W
-    
+
     def __new__(cls, char, id):
         obj = object.__new__(cls)
         obj._value_ = char
         obj.char = char
         obj.id = id
-        
+
         return obj
 
 
@@ -736,12 +824,13 @@ class RARITY(Enum, metaclass=IntEnumMetaOverride):
         the colour attribute represents the textual representation of the
         associated colour
     """
-    NORMAL = (1, 'Normal', 'normal', 'white')
-    MAGIC = (2, 'Magic', 'magic', 'blue')
-    RARE = (3, 'Rare', 'rare', 'yellow')
-    UNIQUE = (4, 'Unique', 'unique', 'brown')
-    ANY = (5, 'Any', 'any', 'any')
-    
+
+    NORMAL = (1, "Normal", "normal", "white")
+    MAGIC = (2, "Magic", "magic", "blue")
+    RARE = (3, "Rare", "rare", "yellow")
+    UNIQUE = (4, "Unique", "unique", "brown")
+    ANY = (5, "Any", "any", "any")
+
     def __new__(cls, _id, upper, lower, colour):
         obj = object.__new__(cls)
         obj._value_ = _id
@@ -756,3 +845,13 @@ class ITEM_TYPES(Enum):
     ITEM = auto()
     GEM = auto()
     CURRENCY = auto()
+
+
+class Influence(Enum):
+    SHAPER = 1
+    ELDER = 2
+    CRUSADER = 3
+    HUNTER = 4
+    REDEEMER = 5
+    WARLORD = 6
+    NONE = 7
