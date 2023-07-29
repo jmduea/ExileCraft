@@ -25,13 +25,23 @@
 import os
 from pathlib import Path
 
-from sqlalchemy import ForeignKey, Table, Column, Integer
+from sqlalchemy import Column, ForeignKey, Integer, Table
+
 from modules.data.models.base_model import Base
 
 script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
-target_dir = script_dir.parent / 'json'
+target_dir = script_dir.parent / "json"
 
-item_class_subtype_association = Table('item_class_subtype_association', Base.metadata,
-                                       Column('item_class_subtype_id', Integer, ForeignKey('item_class_subtype.id')),
-                                       Column('tag_id', Integer, ForeignKey('tag.id'))
-                                       )
+item_class_subtype_association = Table(
+    "item_class_subtype_association",
+    Base.metadata,
+    Column("item_class_subtype_id", Integer, ForeignKey("item_class_subtype.id")),
+    Column("tag_id", Integer, ForeignKey("tag.id")),
+)
+
+item_tags_association = Table(
+    "item_tags_association",
+    Base.metadata,
+    Column("item_id", Integer, ForeignKey("item.id")),
+    Column("tag_id", Integer, ForeignKey("tag.id")),
+)
