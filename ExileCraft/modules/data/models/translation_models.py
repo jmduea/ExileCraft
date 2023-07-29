@@ -21,141 +21,242 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
 # ##############################################################################
-from ast import literal_eval
 from dataclasses import dataclass
-from itertools import zip_longest
-from typing import List, Union
+from typing import Any
 
-from sqlalchemy import ForeignKey, PickleType, String
-from sqlalchemy.ext.hybrid import hybrid_property
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy import Boolean
+from sqlalchemy.dialects.sqlite import JSON
+from sqlalchemy.orm import Mapped, mapped_column
 
-from modules.data.models.base_model import Base, intpk
-
-
-class Translation(Base):
-    __tablename__ = 'translations'
-    
-    # Table Columns
-    string: Mapped[str] = mapped_column(String(250))
-    hidden: Mapped[bool] = mapped_column(init=False)
-    stat_id: Mapped[int] = mapped_column(ForeignKey('stat_values.id'), init=False)
-    mod_id: Mapped[int] = mapped_column(ForeignKey('mods.id'), init=False)
-    id: Mapped[intpk] = mapped_column(init=False)
-    
-    # Relationships
-    conditions: Mapped[List["TranslationCondition"]] = relationship("TranslationCondition",
-                                                                    back_populates='translation_conditions')
-    formats: Mapped[List["TranslationFormat"]] = relationship("TranslationFormat", back_populates='translation_formats')
-    index_handlers: Mapped[List["TranslationIndexHandler"]] = relationship("TranslationIndexHandler",
-                                                                           back_populates='translation_index_handlers')
-    mod: Mapped["Mod"] = relationship("Mod", back_populates='translation', init=False)
-    stat_values: Mapped[List["StatValue"]] = relationship("StatValue", back_populates='translations',
-                                                          default_factory=list,
-                                                          init=False)
-    
-    def match_conditions(self, stat):
-        for condition, value in zip_longest(self.conditions, stat.values):
-            min_value = condition.get('min', -float('inf'))
-            max_value = condition.get('max', float('inf'))
-            
-            if not (min_value <= value <= max_value):
-                return False
-        return True
-    
-    def apply_index_handlers(self, values):
-        for handler, value in zip_longest(self.index_handlers, values):
-            if handler:
-                values[values.index(value)] = literal_eval(handler.replace('v', str(value)))
-        
-        return values
-    
-    def format_values(self, values):
-        return [f'+{value}' if value > 0 else f'{value}' if index == '+#' else '' if index == 'ignored' else value for
-                index, value in zip_longest(self.format, values)]
-    
-    def insert_values_into_string(self, values):
-        string = self.string
-        
-        for i, value in enumerate(values):
-            string = string.replace(f'{{{i}}}', str(value))
-        return string
-
-
-class TranslationCondition(Base):
-    __tablename__ = 'translation_conditions'
-    
-    # Table Columns
-    condition_data = mapped_column(PickleType)
-    translation_id: Mapped[int] = mapped_column(ForeignKey('translations.id'), init=False)
-    id: Mapped[intpk] = mapped_column(init=False)
-    
-    # Relationships
-    translation_conditions: Mapped["Translation"] = relationship("Translation", back_populates='conditions',
-                                                                 uselist=False, init=False)
-    
-    @hybrid_property
-    def condition(self):
-        return self.condition_data
-    
-    @condition.setter
-    def condition(self, value: Union[bytes, str]):
-        try:
-            self.condition_data = bytes(value, 'utf-8')
-        except TypeError:
-            raise ValueError("Condition must be a string or bytes object.")
-        except UnicodeDecodeError:
-            raise ValueError("Condition must be a valid utf-8 encoded string")
-
-
-class TranslationFormat(Base):
-    __tablename__ = 'translation_formats'
-    
-    # Table Columns
-    format_data = mapped_column(PickleType)
-    translation_id: Mapped[int] = mapped_column(ForeignKey('translations.id'), init=False)
-    id: Mapped[intpk] = mapped_column(init=False)
-    
-    # Relationships
-    translation_formats: Mapped["Translation"] = relationship("Translation", back_populates='formats', uselist=False,
-                                                              init=False)
-    
-    @hybrid_property
-    def format(self):
-        return self.format_data
-    
-    @format.setter
-    def format(self, value):
-        try:
-            self.format_data = bytes(value, 'utf-8')
-        except TypeError:
-            raise ValueError("Condition must be a string or bytes object.")
-        except UnicodeDecodeError:
-            raise ValueError("Condition must be a valid utf-8 encoded string")
+from modules.data.models.base_model import Base
 
 
 @dataclass
-class TranslationIndexHandler(Base):
-    __tablename__ = 'translation_index_handlers'
-    
+class Translation(Base):
+
     # Table Columns
-    index_handler_data = mapped_column(PickleType)
-    translation_id: Mapped[int] = mapped_column(ForeignKey('translations.id'), init=False)
-    id: Mapped[intpk] = mapped_column(init=False)
-    
-    # Relationships
-    translation_index_handlers: Mapped["Translation"] = relationship("Translation", back_populates='index_handlers',
-                                                                     uselist=False, init=False)
-    
-    @hybrid_property
-    def index_handler(self):
-        return self.index_handler_data
-    
-    @index_handler.setter
-    def index_handler(self, value):
-        try:
-            self.index_handler_data = bytes(value, 'utf-8')
-        except TypeError:
-            raise ValueError("Condition must be a string or bytes object.")
-        except UnicodeDecodeError:
-            raise ValueError("Condition must be a valid utf-8 encoded string")
+    ids = mapped_column(JSON, nullable=False, init=False)
+    translations = mapped_column(JSON, nullable=False, init=False)
+    hidden: Mapped[bool] = mapped_column(Boolean, nullable=False, insert_default=False,
+                                         default=False, init=False)
+    data = mapped_column(JSON, nullable=False, init=False)
+
+    def __init__(self, **kw: Any):
+        super().__init__(**kw)
+        self.ids = self.data.get('ids', [])
+        self.translations = self.data.get('translations', [])
+        self.hidden = self.data.get('hidden', False)
+
+    def get_translation(self, stat_values):
+        for translation in self.translations:
+            conditions = translation['condition']
+            matches = True
+
+            for i, condition in enumerate(conditions):
+                if stat_values.get(self.ids[i]) is None:
+                    matches = False
+                    break
+                stat_min_value = stat_values.get(self.ids[i]).get('min')
+                stat_max_value = stat_values.get(self.ids[i]).get('max')
+                min_value = condition.get('min', float('-inf'))
+                max_value = condition.get('max', float('inf'))
+                negated = condition.get('negated', False)
+
+                if negated:
+                    condition_result = not (min_value <= stat_min_value <= max_value) and not (
+                            min_value <= stat_max_value <= max_value)
+                else:
+                    condition_result = (
+                                min_value <= stat_min_value <= max_value and min_value <=
+                                stat_max_value <= max_value)
+
+                if not condition_result:
+                    matches = False
+                    break
+
+            if matches:
+                formatted_value = self.format_translation(translation, stat_values)
+                if formatted_value is not None:
+                    return formatted_value
+
+        return "Translation not available"
+
+    def format_translation(self, translation, stat_values):
+        string = translation['string']
+        index_handlers = translation['index_handlers']
+        formats = translation['format']
+
+        for i in range(len(index_handlers)):
+            min_value = stat_values.get(self.ids[i]).get('min')
+            max_value = stat_values.get(self.ids[i]).get('max')
+            value = stat_values.get(self.ids[i], 0)
+            if min_value != max_value:
+                for handler in index_handlers[i]:
+                    min_value = apply_index_handler(handler, min_value)
+                    max_value = apply_index_handler(handler, max_value)
+                value = format_range_value(min_value, max_value)
+            if min_value == max_value:
+                value = min_value
+                for handler in index_handlers[i]:
+                    value = apply_index_handler(handler, value)
+
+            formatted_value = apply_format(formats[i], value)
+
+            if formatted_value is not None:
+                string = string.replace("{" + str(i) + "}", formatted_value)
+            else:
+                string = string.replace("{" + str(i) + "}", "")
+
+        return string
+
+
+def apply_index_handler(handler: str, value: float) -> float:
+    # Check if the handler matches any of the quantifier IDs
+    for quantifier in quantifiers:
+        if handler == quantifier.id:
+            # Apply the corresponding handler function and return the result
+            return quantifier.handler(value)
+
+    # If the handler doesn't match any of the quantifier IDs, return the value unchanged
+    return value
+
+
+def apply_format(format_str, value):
+    if format_str == '+#':
+        if isinstance(value, str):
+            return "+" + str(value)
+        elif value >= 0:
+            return "+" + str(value)
+        else:
+            return str(value)
+    elif format_str == 'ignored':
+        return ''
+    elif format_str == '#':
+        return str(value)
+
+
+def format_range_value(min_value, max_value):
+    if min_value >= 0 and max_value >= 0:
+        return f"({min_value}-{max_value})"
+    elif min_value < 0 and max_value < 0:
+        return f"-({abs(min_value)}-{abs(max_value)})"
+    else:
+        return f"({min_value}-{max_value})"
+
+
+class TranslationQuantifier:
+    def __init__(self, id, handler, reverse_handler):
+        self.id = id
+        self.handler = handler
+        self.reverse_handler = reverse_handler
+
+
+quantifiers = [TranslationQuantifier(id='30%_of_value', handler=lambda v: v * 0.3,
+                                     reverse_handler=lambda v: v / 0.3, ),
+               TranslationQuantifier(id='60%_of_value', handler=lambda v: v * 0.6,
+                                     reverse_handler=lambda v: v / 0.6, ),
+               TranslationQuantifier(id='deciseconds_to_seconds', handler=lambda v: v / 10,
+                                     reverse_handler=lambda v: float(v) * 10, ),
+               TranslationQuantifier(id='divide_by_three', handler=lambda v: v / 3,
+                                     reverse_handler=lambda v: float(v) * 3, ),
+               TranslationQuantifier(id='divide_by_five', handler=lambda v: v / 5,
+                                     reverse_handler=lambda v: float(v) * 5, ),
+               TranslationQuantifier(id='divide_by_one_hundred', handler=lambda v: v / 100,
+                                     reverse_handler=lambda v: float(v) * 100, ),
+               TranslationQuantifier(id='divide_by_one_hundred_and_negate',
+                                     handler=lambda v: -v / 100,
+                                     reverse_handler=lambda v: -float(v) * 100, ),
+               TranslationQuantifier(id='divide_by_one_hundred_0dp',
+                                     handler=lambda v: round(v / 100, 0),
+                                     reverse_handler=lambda v: float(v) * 100, ),
+               TranslationQuantifier(id='divide_by_one_hundred_1dp',
+                                     handler=lambda v: round(v / 100, 1),
+                                     reverse_handler=lambda v: float(v) * 100, ),
+               TranslationQuantifier(id='divide_by_one_hundred_2dp',
+                                     handler=lambda v: round(v / 100, 2),
+                                     reverse_handler=lambda v: float(v) * 100, ),
+               TranslationQuantifier(id='divide_by_one_hundred_2dp_if_required',
+                                     handler=lambda v: round(v / 100, 2),
+                                     reverse_handler=lambda v: float(v) * 100, ),
+               TranslationQuantifier(id='divide_by_two_0dp', handler=lambda v: v // 2,
+                                     reverse_handler=lambda v: int(v) * 2, ),
+               TranslationQuantifier(id='divide_by_six', handler=lambda v: v / 6,
+                                     reverse_handler=lambda v: int(v) * 6, ),
+               TranslationQuantifier(id='divide_by_ten_0dp', handler=lambda v: v // 10,
+                                     reverse_handler=lambda v: int(v) * 10, ),
+               TranslationQuantifier(id='divide_by_ten_1dp', handler=lambda v: round(v / 10, 1),
+                                     reverse_handler=lambda v: int(v) * 10, ),
+               TranslationQuantifier(id='divide_by_twelve', handler=lambda v: v / 12,
+                                     reverse_handler=lambda v: int(v) * 12, ),
+               TranslationQuantifier(id='divide_by_fifteen_0dp', handler=lambda v: v // 15,
+                                     reverse_handler=lambda v: int(v) * 15, ),
+               TranslationQuantifier(id='divide_by_twenty_then_double_0dp',
+                                     handler=lambda v: v // 20 * 2,
+                                     reverse_handler=lambda v: int(v) * 20 // 2, ),
+               TranslationQuantifier(id='milliseconds_to_seconds', handler=lambda v: v / 1000,
+                                     reverse_handler=lambda v: float(v) * 1000, ),
+               TranslationQuantifier(id='milliseconds_to_seconds_halved', handler=lambda v: v / 500,
+                                     reverse_handler=lambda v: float(v) * 500, ),
+               TranslationQuantifier(id='milliseconds_to_seconds_0dp',
+                                     handler=lambda v: int(round(v / 1000, 0)),
+                                     reverse_handler=lambda v: float(v) * 1000, ),
+               TranslationQuantifier(id='milliseconds_to_seconds_1dp',
+                                     handler=lambda v: round(v / 1000, 1),
+                                     reverse_handler=lambda v: float(v) * 1000, ),
+               TranslationQuantifier(id='milliseconds_to_seconds_2dp',
+                                     handler=lambda v: round(v / 1000, 2),
+                                     reverse_handler=lambda v: float(v) * 1000, ),
+               TranslationQuantifier(id='milliseconds_to_seconds_2dp_if_required',
+                                     handler=lambda v: round(v / 1000, 2),
+                                     reverse_handler=lambda v: float(v) * 1000, ),
+               TranslationQuantifier(id='multiplicative_damage_modifier', handler=lambda v: v + 100,
+                                     reverse_handler=lambda v: float(v) - 100, ),
+               TranslationQuantifier(id='multiplicative_permyriad_damage_modifier',
+                                     handler=lambda v: v / 100 + 100,
+                                     reverse_handler=lambda v: (float(v) - 100) * 100, ),
+               TranslationQuantifier(id='multiply_by_four', handler=lambda v: v * 4,
+                                     reverse_handler=lambda v: int(v) // 4, ),
+               TranslationQuantifier(id='multiply_by_four_and_', handler=lambda v: v * 4,
+                                     reverse_handler=lambda v: int(v) // 4, ),
+               TranslationQuantifier(id='negate', handler=lambda v: -v,
+                                     reverse_handler=lambda v: -float(v), ),
+               TranslationQuantifier(id='old_leech_percent', handler=lambda v: v / 5,
+                                     reverse_handler=lambda v: float(v) * 5, ),
+               TranslationQuantifier(id='old_leech_permyriad', handler=lambda v: v / 500,
+                                     reverse_handler=lambda v: float(v) * 500, ),
+               TranslationQuantifier(id='per_minute_to_per_second',
+                                     handler=lambda v: round(v / 60, 1),
+                                     reverse_handler=lambda v: float(v) * 60, ),
+               TranslationQuantifier(id='per_minute_to_per_second_0dp',
+                                     handler=lambda v: int(round(v / 60, 0)),
+                                     reverse_handler=lambda v: float(v) * 60, ),
+               TranslationQuantifier(id='per_minute_to_per_second_1dp',
+                                     handler=lambda v: round(v / 60, 1),
+                                     reverse_handler=lambda v: float(v) * 60, ),
+               TranslationQuantifier(id='per_minute_to_per_second_2dp',
+                                     handler=lambda v: round(v / 60, 2),
+                                     reverse_handler=lambda v: float(v) * 60, ),
+               TranslationQuantifier(id='per_minute_to_per_second_2dp_if_required',
+                                     handler=lambda v: round(v / 60, 2) if v % 60 != 0 else v // 60,
+                                     reverse_handler=lambda v: float(v) * 60, ),
+               TranslationQuantifier(id='times_twenty', handler=lambda v: v * 20,
+                                     reverse_handler=lambda v: int(v) // 20, ),
+               TranslationQuantifier(id='times_one_point_five', handler=lambda v: v * 1.5,
+                                     reverse_handler=lambda v: int(v / 1.5), ),
+               TranslationQuantifier(id='double', handler=lambda v: v * 2,
+                                     reverse_handler=lambda v: int(v) // 2, ),
+               TranslationQuantifier(id='negate_and_double', handler=lambda v: -v * 2,
+                                     reverse_handler=lambda v: int(-v) // 2, ),
+               TranslationQuantifier(id='divide_by_four', handler=lambda v: v / 4,
+                                     reverse_handler=lambda v: v * 4, ),
+               TranslationQuantifier(id='divide_by_ten_1dp_if_required',
+                                     handler=lambda v: round(v / 10, 1),
+                                     reverse_handler=lambda v: v * 10, ),
+               TranslationQuantifier(id='divide_by_fifty', handler=lambda v: v / 50,
+                                     reverse_handler=lambda v: v * 50, ),
+               TranslationQuantifier(id='multiply_by_ten', handler=lambda v: v * 10,
+                                     reverse_handler=lambda v: v / 10, ),
+               TranslationQuantifier(id='divide_by_one_thousand', handler=lambda v: v / 1000,
+                                     reverse_handler=lambda v: v * 1000, ),
+               TranslationQuantifier(id='plus_two_hundred', handler=lambda v: v + 200,
+                                     reverse_handler=lambda v: v - 200, )]
