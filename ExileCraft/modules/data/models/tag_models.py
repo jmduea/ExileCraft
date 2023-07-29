@@ -52,6 +52,7 @@ class Tag(Base):
         spawn_weights (Relationship): The relationship to ModSpawnWeight objects.
 
     """
+
     tag: Mapped[str] = mapped_column(unique=True)
 
     # Relationships
