@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebResourcesPaths">
+    <contentEntries>
+      <entry url="file://$PROJECT_DIR$">
+        <entryData>
+          <resourceRoots>
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/beasts" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/catalysts" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/crafting_methods" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/eldritch" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/essences" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/fossils" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/harvest" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/icons" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/influences" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/item_headers" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/items" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/svg_icons" />
+            <path value="file://$PROJECT_DIR$/ExileCraft/modules/gui/assets/images/svg_images" />
+          </resourceRoots>
+        </entryData>
+      </entry>
+    </contentEntries>
+  </component>
+</project>
