@@ -28,7 +28,7 @@ from PySide6.QtGui import QIcon, QAction
 from PySide6.QtWidgets import QSystemTrayIcon, QMenu
 
 
-def SetupTray(app, window):
+def setup_tray(app, window):
     """
     Sets up the system tray icon and its context menu for a given application and window.
 
@@ -62,25 +62,25 @@ def SetupTray(app, window):
         }
     """)
 
-    showWindow = QAction("Show Window")
-    showWindow.triggered.connect(window.show)
-    menu.addAction(showWindow)
+    show_window = QAction("Show Window")
+    show_window.triggered.connect(window.show)
+    menu.addAction(show_window)
 
-    checkUpdates = QAction("Check for Updates")
-    checkUpdates.triggered.connect(lambda: print("Checking for updates..."))  #TODO Replace with actual function
-    menu.addAction(checkUpdates)
+    check_updates = QAction("Check for Updates")
+    check_updates.triggered.connect(lambda: print("Checking for updates..."))  # TODO Replace with actual function
+    menu.addAction(check_updates)
 
     settings = QAction("Settings")
-    settings.triggered.connect(lambda: print("Opening settings..."))  #TODO Replace with actual function
+    settings.triggered.connect(lambda: print("Opening settings..."))  # TODO Replace with actual function
     menu.addAction(settings)
 
     donate = QAction("Donate")
-    donate.triggered.connect(lambda: print("Opening donation page..."))  #TODO Replace with actual function
+    donate.triggered.connect(lambda: print("Opening donation page..."))  # TODO Replace with actual function
     menu.addAction(donate)
 
-    quitAction = QAction("Quit")
-    quitAction.triggered.connect(app.quit)
-    menu.addAction(quitAction)
+    quit_action = QAction("Quit")
+    quit_action.triggered.connect(app.quit)
+    menu.addAction(quit_action)
 
     tray.setContextMenu(menu)
     tray.show()
