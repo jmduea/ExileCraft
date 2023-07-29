@@ -25,29 +25,36 @@
 #  THE
 #  SOFTWARE.
 # ##############################################################################
+"""
 
-import os
+Module: modules.data.models.tag
+
+This module contains the `Tag` class, which represents a tag in the application.
+
+Classes:
+    - Tag
+
+"""
 from dataclasses import dataclass
-from pathlib import Path
 
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from modules.data.models.base_model import Base
 
-script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
-target_dir = script_dir.parent / 'json'
-
 
 @dataclass
 class Tag(Base):
+    """
+    This class represents a Tag in the system.
 
+    Attributes:
+        tag (Mapped[str]): The unique tag associated with the Tag object.
+        spawn_weights (Relationship): The relationship to ModSpawnWeight objects.
+
+    """
     tag: Mapped[str] = mapped_column(unique=True)
 
     # Relationships
-    spawn_weights = relationship("ModSpawnWeight",
-                                 back_populates='tag',
-                                 default_factory=list,
-                                 init=False)
-
-    def __repr__(self):
-        return f"<Tag({self.tag})>"
+    spawn_weights = relationship(
+        "ModSpawnWeight", back_populates="tag", default_factory=list, init=False
+    )
