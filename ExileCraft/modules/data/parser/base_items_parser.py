@@ -39,7 +39,8 @@ class ItemParser:
     def __init__(self):
         self.abs_path_to_json = abs_path_to_json
     
-    def parse_json(self):
+    @staticmethod
+    def parse_json():
         with open(abs_path_to_json) as json_file:
             _data = json.load(json_file)
         return _data
