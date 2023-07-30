@@ -61,7 +61,7 @@ def register_hotkey(window):
     """
     # Register the hotkey using the keyboard library
     keyboard.add_hotkey('ctrl+d', toggle_visibility_cooldown, args=(window,))
-    keyboard.add_hotkey('ctrl+alt+c', window.parse_clipboard_text)
+    # keyboard.add_hotkey('ctrl+alt+c', window.parse_clipboard_text)
 
 
 def toggle_visibility_cooldown(window: object = None):
