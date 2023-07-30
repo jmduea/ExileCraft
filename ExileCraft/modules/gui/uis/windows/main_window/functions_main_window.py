@@ -458,9 +458,9 @@ class ComboboxUpdater:
                 f'<span style=" font-size:11pt; font-weight:bold; color:#8787fe;">{item_quality}%</span></p>'
             )
             self.item_quality_label.setText(quality_html)
+            self.item_properties_label.setText(current_item.formatted_properties())
         else:
             return
-        # self.item_properties_label.setText(current_item.formatted_properties())
 
     @staticmethod
     def format_implicit_string(current_item):
