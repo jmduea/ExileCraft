@@ -257,10 +257,5 @@ class SetupMainWindow:
 
         # Quality Spinbox connections
         self.ui.left_column.menus.item_quality_spinbox.valueChanged.connect(
-            self.combobox_updater.set_item_quality)
-        self.ui.left_column.menus.item_quality_spinbox.valueChanged.connect(
-            self.combobox_updater.update_labels)
-
-    def setup_modpool_list_btns(self):
-        prefix_btn = self.ui.load_pages.modpool_page.prefix_btn
-        pass
+            self.combobox_updater.set_item_quality
+        )
