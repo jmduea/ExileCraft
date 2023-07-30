@@ -236,7 +236,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.dragPos = event.globalPos()
 
     def leaveEvent(self, event):
-        """Event when mouse leaves the window"""
+        """
+        Event when mouse leaves the window
+
+        Used to ensure that when the mouse cursor leaves the window, the cursor is reset to the default cursor.
+        Args:
+            event (QEvent): Event
+        """
         QtWidgets.QApplication.instance().restoreOverrideCursor()
 
 
