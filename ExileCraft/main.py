@@ -249,8 +249,9 @@ class MainWindow(QtWidgets.QMainWindow):
 if __name__ == "__main__":
     app = QApplication()
     # app.setQuitOnLastWindowClosed(False)
+    main_window = MainWindow()
 
-    window = MainWindow()
+    window = main_window.splash_screen
 
     # Set up tray icon
     tray = setup_tray(app, window)
