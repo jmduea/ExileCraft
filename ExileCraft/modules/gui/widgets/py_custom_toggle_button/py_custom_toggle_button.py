@@ -46,15 +46,15 @@ class PyCustomToggleButton(QPushButton):
             if len(checked_buttons) >= 2:
                 least_recently_checked = checked_buttons.pop(0)
                 least_recently_checked.setChecked(False)
-                least_recently_checked.button_unchecked.emit('_'+f'{least_recently_checked.objectName().replace("_btn", "")}')
+                least_recently_checked.button_unchecked.emit(f'{least_recently_checked.objectName().replace("_btn", "")}')
 
             # Add the button to the list of checked buttons
             checked_buttons.append(self)
-            self.button_checked.emit('_'+self.objectName().replace("_btn", ""))
+            self.button_checked.emit(self.objectName().replace("_btn", ""))
         else:
             # Remove the button from the list of checked buttons
             self.parent_widget._checked_buttons.remove(self)
-            self.button_unchecked.emit('_'+self.objectName().replace("_btn", ""))
+            self.button_unchecked.emit(self.objectName().replace("_btn", ""))
 
     @staticmethod
     def get_checked_buttons(parent_widget):
