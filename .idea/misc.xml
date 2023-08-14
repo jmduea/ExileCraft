@@ -3,9 +3,12 @@
   <component name="Black">
     <option name="enabledOnReformat" value="true" />
     <option name="enabledOnSave" value="true" />
-    <option name="sdkUUID" value="9b07f148-db33-4de9-9d77-095f9c0be65a" />
+    <option name="sdkUUID" value="e73eadf1-62a7-465e-b496-3f9141d6ac53" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Pipenv (ExileCraft)" project-jdk-type="Python SDK" />
+  <component name="ProjectResources">
+    <resource url="https://github.com/poe-tool-dev/dat-schema/releases/download/latest/schema.min.json" location="$PROJECT_DIR$/ExileCraft/modules/data/schema/schema.min.json" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (ExileCraft)" project-jdk-type="Python SDK" />
   <component name="PythonCompatibilityInspectionAdvertiser">
     <option name="version" value="3" />
   </component>
