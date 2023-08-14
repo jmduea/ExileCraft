@@ -6,12 +6,12 @@
   "theme_name": "default",
   "custom_title_bar": true,
   "startup_size": [
-    1020,
-    1020
+    1280,
+    1080
   ],
   "minimum_size": [
-    1020,
-    1020
+    1024,
+    768
   ],
   "lef_menu_size": {
     "minimum": 50,
@@ -28,7 +28,7 @@
   },
   "time_animation": 250,
   "font": {
-    "family": "Segoe UI",
+    "family": "fontin-regular",
     "title_size": 10,
     "text_size": 9
   }
