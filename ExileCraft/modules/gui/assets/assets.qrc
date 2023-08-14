@@ -1,9 +1,14 @@
 <RCC>
   <qresource prefix="fonts">
-    <file>fonts/fontin-regular.otf</file>
-    <file>fonts/fontin-smallcaps.otf</file>
+    <file>fonts/fontin-smallcaps.ttf</file>
+    <file>fonts/fontin-regular.ttf</file>
+    <file>fonts/fontin-italic.ttf</file>
+    <file>fonts/fontin-bold.ttf</file>
   </qresource>
   <qresource prefix="images">
+    <file>images/item-header-magic.png</file>
+    <file>images/item_header_rare.png</file>
+    <file>images/shaper_item_box.png</file>
     <file>images/clip.png</file>
     <file>images/craftbtn.png</file>
     <file>images/craftbtnov.png</file>
@@ -181,6 +186,8 @@
     <file>images/item_headers/item_header_normal_elder_warlord.png</file>
   </qresource>
   <qresource prefix="items">
+    <file>images/items/shaper_item_bg_mask.png</file>
+    <file>images/items/shaper_item_bg.png</file>
     <file>images/items/AbyssJewelCaster.png</file>
     <file>images/items/AbyssJewelMelee.png</file>
     <file>images/items/AbyssJewelRanged.png</file>
