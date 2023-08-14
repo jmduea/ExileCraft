@@ -17,9 +17,7 @@ from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt, Signal
 from PySide6.QtWidgets import QFrame, QPushButton, QVBoxLayout, QWidget
 
 from modules.gui.core.functions import Functions
-
 from .py_div import PyDiv
-
 from .py_left_menu_button import PyLeftMenuButton
 
 
@@ -43,7 +41,7 @@ class PyLeftMenu(QWidget):
         context_color="#568af2",
         text_foreground="#8a95aa",
         text_active="#dce1ec",
-        duration_time=500,
+        duration_time=343,
         radius=8,
         minimum_width=50,
         maximum_width=240,
