@@ -1,24 +1,22 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'left_columnoDfehL.ui'
+## Form generated from reading UI file 'left_columnIARVaT.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QButtonGroup, QComboBox, QLabel,
-    QPushButton, QSizePolicy, QSpinBox, QStackedWidget,
-    QVBoxLayout, QWidget)
-from ...assets import assets_rc
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize, Qt)
+from PySide6.QtGui import (QCursor,
+                           QFont, QIcon)
+from PySide6.QtWidgets import (QButtonGroup, QComboBox, QLabel,
+                               QSizePolicy, QSpinBox, QStackedWidget, QVBoxLayout,
+                               QWidget)
+
+from ...widgets.py_custom_toggle_button import PyCustomToggleButton
+
 
 class Ui_LeftColumn(object):
     def setupUi(self, LeftColumn):
@@ -418,7 +416,7 @@ class Ui_LeftColumn(object):
 
         self.verticalLayout_5.addWidget(self.item_influences_label)
 
-        self.crusader_btn = QPushButton(self.item_influence_btns_container)
+        self.crusader_btn = PyCustomToggleButton(self.item_influence_btns_container)
         self.item_influence_btn_group = QButtonGroup(LeftColumn)
         self.item_influence_btn_group.setObjectName(u"item_influence_btn_group")
         self.item_influence_btn_group.setExclusive(False)
@@ -477,7 +475,7 @@ class Ui_LeftColumn(object):
 
         self.verticalLayout_5.addWidget(self.crusader_btn)
 
-        self.elder_btn = QPushButton(self.item_influence_btns_container)
+        self.elder_btn = PyCustomToggleButton(self.item_influence_btns_container)
         self.item_influence_btn_group.addButton(self.elder_btn)
         self.elder_btn.setObjectName(u"elder_btn")
         self.elder_btn.setCursor(QCursor(Qt.PointingHandCursor))
@@ -533,7 +531,7 @@ class Ui_LeftColumn(object):
 
         self.verticalLayout_5.addWidget(self.elder_btn)
 
-        self.hunter_btn = QPushButton(self.item_influence_btns_container)
+        self.hunter_btn = PyCustomToggleButton(self.item_influence_btns_container)
         self.item_influence_btn_group.addButton(self.hunter_btn)
         self.hunter_btn.setObjectName(u"hunter_btn")
         self.hunter_btn.setCursor(QCursor(Qt.PointingHandCursor))
@@ -589,7 +587,7 @@ class Ui_LeftColumn(object):
 
         self.verticalLayout_5.addWidget(self.hunter_btn)
 
-        self.redeemer_btn = QPushButton(self.item_influence_btns_container)
+        self.redeemer_btn = PyCustomToggleButton(self.item_influence_btns_container)
         self.item_influence_btn_group.addButton(self.redeemer_btn)
         self.redeemer_btn.setObjectName(u"redeemer_btn")
         self.redeemer_btn.setCursor(QCursor(Qt.PointingHandCursor))
@@ -645,7 +643,7 @@ class Ui_LeftColumn(object):
 
         self.verticalLayout_5.addWidget(self.redeemer_btn)
 
-        self.shaper_btn = QPushButton(self.item_influence_btns_container)
+        self.shaper_btn = PyCustomToggleButton(self.item_influence_btns_container)
         self.item_influence_btn_group.addButton(self.shaper_btn)
         self.shaper_btn.setObjectName(u"shaper_btn")
         self.shaper_btn.setCursor(QCursor(Qt.PointingHandCursor))
@@ -701,7 +699,7 @@ class Ui_LeftColumn(object):
 
         self.verticalLayout_5.addWidget(self.shaper_btn)
 
-        self.warlord_btn = QPushButton(self.item_influence_btns_container)
+        self.warlord_btn = PyCustomToggleButton(self.item_influence_btns_container)
         self.item_influence_btn_group.addButton(self.warlord_btn)
         self.warlord_btn.setObjectName(u"warlord_btn")
         self.warlord_btn.setCursor(QCursor(Qt.PointingHandCursor))
@@ -797,14 +795,12 @@ class Ui_LeftColumn(object):
         self.base_group_combobox.setItemText(8, QCoreApplication.translate("LeftColumn", u"Flasks", None))
         self.base_group_combobox.setItemText(9, QCoreApplication.translate("LeftColumn", u"Jewellery", None))
         self.base_group_combobox.setItemText(10, QCoreApplication.translate("LeftColumn", u"Jewels", None))
-        
-        self.base_group_combobox.setPlaceholderText(
-            QCoreApplication.translate("LeftColumn", u"Select a Base Group", None))
+
+        self.base_group_combobox.setPlaceholderText(QCoreApplication.translate("LeftColumn", u"Select a Base Group", None))
         self.base_label.setText(QCoreApplication.translate("LeftColumn", u"Base", None))
         self.base_combobox.setPlaceholderText(QCoreApplication.translate("LeftColumn", u"Select a Base", None))
         self.base_item_label.setText(QCoreApplication.translate("LeftColumn", u"Base Item", None))
-        self.base_item_combobox.setPlaceholderText(
-            QCoreApplication.translate("LeftColumn", u"Select a Base Item", None))
+        self.base_item_combobox.setPlaceholderText(QCoreApplication.translate("LeftColumn", u"Select a Base Item", None))
         self.item_level_label.setText(QCoreApplication.translate("LeftColumn", u"Item Level (0-100)", None))
         self.item_quality_label.setText(QCoreApplication.translate("LeftColumn", u"Item Quality (0-30)", None))
         self.item_influences_label.setText(QCoreApplication.translate("LeftColumn", u"Set Item Influences (0-2)", None))

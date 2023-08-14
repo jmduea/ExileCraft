@@ -1,5 +1,3 @@
-
-
 from typing import Any, Dict
 
 from PySide6.QtWidgets import QFrame, QHBoxLayout, QMainWindow, QVBoxLayout, QWidget
@@ -16,11 +14,11 @@ from modules.gui.widgets.py_title_bar import PyTitleBar
 from modules.gui.widgets.py_window import PyWindow
 
 
-class UI_MainWindow:
+class UiMainWindow:
     def setup_ui(self, parent: QMainWindow) -> None:
         if not parent.objectName():
-            parent.setObjectName(u"MainWindow")
-        
+            parent.setObjectName("MainWindow")
+
         try:
             # Load Settings
             settings = Settings()
@@ -28,7 +26,7 @@ class UI_MainWindow:
         except Exception as e:
             print(f"Error loading settings: {e}")
             self.settings = {}
-        
+
         try:
             # Load Theme
             themes = Themes()
@@ -36,47 +34,54 @@ class UI_MainWindow:
         except Exception as e:
             print(f"Error loading themes: {e}")
             self.themes = {}
-        
+
         # Set Initial Parameters
-        parent.resize(self.settings.get("startup_size", [800, 600])[0],
-                      self.settings.get("startup_size", [800, 600])[1])
-        parent.setMinimumSize(self.settings.get("minimum_size", [400, 300])[0],
-                              self.settings.get("minimum_size", [400, 300])[1])
-        
+        parent.resize(
+            self.settings.get("startup_size", [800, 600])[0],
+            self.settings.get("startup_size", [800, 600])[1],
+        )
+        parent.setMinimumSize(
+            self.settings.get("minimum_size", [400, 300])[0],
+            self.settings.get("minimum_size", [400, 300])[1],
+        )
+
         self.central_widget = QWidget()
-        self.central_widget.setStyleSheet(f'''
+        self.central_widget.setStyleSheet(
+            f"""
                     font: {self.settings.get("font", {}).get("text_size", 10)}pt "{self.settings.get("font", {}).get("family", "Arial")}";
                     color: {self.themes.get("app_color", {}).get("text_foreground", "black")};
-                ''')
-        
+                """
+        )
+
         self.central_widget_layout = QVBoxLayout(self.central_widget)
         self.central_widget_layout.setContentsMargins(10, 10, 10, 10)
-        
+
         # Load Py Window Custom Widget
         self.window = PyWindow(
             parent,
             bg_color=self.themes.get("app_color", {}).get("bg_one", "white"),
             border_color=self.themes.get("app_color", {}).get("bg_two", "gray"),
-            text_color=self.themes.get("app_color", {}).get("text_foreground", "black")
+            text_color=self.themes.get("app_color", {}).get("text_foreground", "black"),
         )
-        
+
         # Add Py Window to Central Widget
         self.central_widget_layout.addWidget(self.window)
-        
+
         # Add Left Menu Frame
         left_menu_margin = self.settings.get("left_menu_content_margins", 10)
         left_menu_minimum = self.settings.get("lef_menu_size", {}).get("minimum", 200)
         self.left_menu_frame = QFrame()
-        self.left_menu_frame.setMaximumSize(left_menu_minimum + (left_menu_margin * 2), 17280)
-        self.left_menu_frame.setMinimumSize(left_menu_minimum + (left_menu_margin * 2), 0)
-        
+        self.left_menu_frame.setMaximumSize(
+            left_menu_minimum + (left_menu_margin * 2), 17280
+        )
+        self.left_menu_frame.setMinimumSize(
+            left_menu_minimum + (left_menu_margin * 2), 0
+        )
+
         # Left Menu Layout
         self.left_menu_layout = QHBoxLayout(self.left_menu_frame)
         self.left_menu_layout.setContentsMargins(
-            left_menu_margin,
-            left_menu_margin,
-            left_menu_margin,
-            left_menu_margin
+            left_menu_margin, left_menu_margin, left_menu_margin, left_menu_margin
         )
 
         # Add Custom Left Menu
@@ -89,41 +94,63 @@ class UI_MainWindow:
             bg_one=self.themes.get("app_color", {}).get("bg_one", "white"),
             icon_color=self.themes.get("app_color", {}).get("icon_color", "black"),
             icon_color_hover=self.themes.get("app_color", {}).get("icon_hover", "blue"),
-            icon_color_pressed=self.themes.get("app_color", {}).get("icon_pressed", "red"),
-            icon_color_active=self.themes.get("app_color", {}).get("icon_active", "green"),
-            context_color=self.themes.get("app_color", {}).get("context_color", "yellow"),
-            text_foreground=self.themes.get("app_color", {}).get("text_foreground", "black"),
-            text_active=self.themes.get("app_color", {}).get("text_active", "blue")
+            icon_color_pressed=self.themes.get("app_color", {}).get(
+                "icon_pressed", "red"
+            ),
+            icon_color_active=self.themes.get("app_color", {}).get(
+                "icon_active", "green"
+            ),
+            context_color=self.themes.get("app_color", {}).get(
+                "context_color", "yellow"
+            ),
+            text_foreground=self.themes.get("app_color", {}).get(
+                "text_foreground", "black"
+            ),
+            text_active=self.themes.get("app_color", {}).get("text_active", "blue"),
         )
         self.left_menu_layout.addWidget(self.left_menu)
-        
+
         # Add Left Column
         self.left_column_frame = QFrame()
-        self.left_column_frame.setMaximumWidth(self.settings.get("left_column_size", {}).get("minimum", 200))
-        self.left_column_frame.setMinimumWidth(self.settings.get("left_column_size", {}).get("minimum", 200))
-        self.left_column_frame.setStyleSheet(f"background: {self.themes.get('app_color', {}).get('bg_two', 'gray')}")
-        
+        self.left_column_frame.setMaximumWidth(
+            self.settings.get("left_column_size", {}).get("minimum", 200)
+        )
+        self.left_column_frame.setMinimumWidth(
+            self.settings.get("left_column_size", {}).get("minimum", 200)
+        )
+        self.left_column_frame.setStyleSheet(
+            f"background: {self.themes.get('app_color', {}).get('bg_two', 'gray')}"
+        )
+
         # Add Layout to Left Column
         self.left_column_layout = QVBoxLayout(self.left_column_frame)
         self.left_column_layout.setContentsMargins(0, 0, 0, 0)
-        
+
         # Add custom left menu widget
         self.left_column = PyLeftColumn(
             parent,
             app_parent=self.central_widget,
             text_title="Settings Left Frame",
             text_title_size=self.settings.get("font", {}).get("title_size", 12),
-            text_title_color=self.themes.get('app_color', {}).get('text_foreground', 'black'),
+            text_title_color=self.themes.get("app_color", {}).get(
+                "text_foreground", "black"
+            ),
             icon_path=Functions.set_svg_icon("icon_settings.svg"),
-            dark_one=self.themes.get('app_color', {}).get('dark_one', 'black'),
-            bg_color=self.themes.get('app_color', {}).get('bg_three', 'white'),
-            btn_color=self.themes.get('app_color', {}).get('bg_three', 'white'),
-            btn_color_hover=self.themes.get('app_color', {}).get('bg_two', 'gray'),
-            btn_color_pressed=self.themes.get('app_color', {}).get('bg_one', 'lightgray'),
-            icon_color=self.themes.get('app_color', {}).get('icon_color', 'black'),
-            icon_color_hover=self.themes.get('app_color', {}).get('icon_hover', 'blue'),
-            context_color=self.themes.get('app_color', {}).get('context_color', 'yellow'),
-            icon_color_pressed=self.themes.get('app_color', {}).get('icon_pressed', 'red'),
+            dark_one=self.themes.get("app_color", {}).get("dark_one", "black"),
+            bg_color=self.themes.get("app_color", {}).get("bg_three", "white"),
+            btn_color=self.themes.get("app_color", {}).get("bg_three", "white"),
+            btn_color_hover=self.themes.get("app_color", {}).get("bg_two", "gray"),
+            btn_color_pressed=self.themes.get("app_color", {}).get(
+                "bg_one", "lightgray"
+            ),
+            icon_color=self.themes.get("app_color", {}).get("icon_color", "black"),
+            icon_color_hover=self.themes.get("app_color", {}).get("icon_hover", "blue"),
+            context_color=self.themes.get("app_color", {}).get(
+                "context_color", "yellow"
+            ),
+            icon_color_pressed=self.themes.get("app_color", {}).get(
+                "icon_pressed", "red"
+            ),
             icon_close_path=Functions.set_svg_icon("icon_close.svg"),
         )
         self.left_column_layout.addWidget(self.left_column)
@@ -152,19 +179,31 @@ class UI_MainWindow:
             bg_color=self.themes.get("app_color", {}).get("bg_two", "gray"),
             div_color=self.themes.get("app_color", {}).get("bg_three", "lightgray"),
             btn_bg_color=self.themes.get("app_color", {}).get("bg_two", "gray"),
-            btn_bg_color_hover=self.themes.get("app_color", {}).get("bg_three", "lightgray"),
-            btn_bg_color_pressed=self.themes.get("app_color", {}).get("bg_one", "white"),
+            btn_bg_color_hover=self.themes.get("app_color", {}).get(
+                "bg_three", "lightgray"
+            ),
+            btn_bg_color_pressed=self.themes.get("app_color", {}).get(
+                "bg_one", "white"
+            ),
             icon_color=self.themes.get("app_color", {}).get("icon_color", "black"),
             icon_color_hover=self.themes.get("app_color", {}).get("icon_hover", "blue"),
-            icon_color_pressed=self.themes.get("app_color", {}).get("icon_pressed", "red"),
-            icon_color_active=self.themes.get("app_color", {}).get("icon_active", "green"),
-            context_color=self.themes.get("app_color", {}).get("context_color", "yellow"),
+            icon_color_pressed=self.themes.get("app_color", {}).get(
+                "icon_pressed", "red"
+            ),
+            icon_color_active=self.themes.get("app_color", {}).get(
+                "icon_active", "green"
+            ),
+            context_color=self.themes.get("app_color", {}).get(
+                "context_color", "yellow"
+            ),
             dark_one=self.themes.get("app_color", {}).get("dark_one", "black"),
-            text_foreground=self.themes.get("app_color", {}).get("text_foreground", "black"),
+            text_foreground=self.themes.get("app_color", {}).get(
+                "text_foreground", "black"
+            ),
             radius=8,
             font_family=self.settings.get("font", {}).get("family", "Arial"),
             title_size=self.settings.get("font", {}).get("title_size", 12),
-            is_custom_title_bar=self.settings.get("custom_title_bar", False)
+            is_custom_title_bar=self.settings.get("custom_title_bar", False),
         )
         self.title_bar_layout.addWidget(self.title_bar)
 
@@ -175,33 +214,39 @@ class UI_MainWindow:
         self.content_area_layout = QHBoxLayout(self.content_area_frame)
         self.content_area_layout.setContentsMargins(0, 0, 0, 0)
         self.content_area_layout.setSpacing(0)
-        
+
         # Left Content
         self.content_area_left_frame = QFrame()
-        
+
         # Import Main Pages to Content Area
         self.load_pages = Ui_MainPages()
         self.load_pages.setupUi(self.content_area_left_frame)
-        
+
         # Right Bar
         self.right_column_frame = QFrame()
-        self.right_column_frame.setMinimumWidth(self.settings.get("right_column_size", {}).get("minimum", 200))
-        self.right_column_frame.setMaximumWidth(self.settings.get("right_column_size", {}).get("minimum", 200))
-        
+        self.right_column_frame.setMinimumWidth(
+            self.settings.get("right_column_size", {}).get("minimum", 200)
+        )
+        self.right_column_frame.setMaximumWidth(
+            self.settings.get("right_column_size", {}).get("minimum", 200)
+        )
+
         # Import Right Column
         self.content_area_right_layout = QVBoxLayout(self.right_column_frame)
         self.content_area_right_layout.setContentsMargins(5, 5, 5, 5)
         self.content_area_right_layout.setSpacing(0)
-        
+
         # Right BG
         self.content_area_right_bg_frame = QFrame()
         self.content_area_right_bg_frame.setObjectName("content_area_right_bg_frame")
-        self.content_area_right_bg_frame.setStyleSheet(f'''
+        self.content_area_right_bg_frame.setStyleSheet(
+            f"""
                 #content_area_right_bg_frame {{
                     border-radius: 8px;
                     background-color: {self.themes.get("app_color", {}).get("bg_two", "gray")};
                 }}
-                ''')
+                """
+        )
 
         # Add Bg
         self.content_area_right_layout.addWidget(self.content_area_right_bg_frame)
@@ -230,7 +275,9 @@ class UI_MainWindow:
             version=self.settings.get("version", ""),
             font_family=self.settings.get("font", {}).get("family", "Arial"),
             text_size=self.settings.get("font", {}).get("text_size", 10),
-            text_description_color=self.themes.get("app_color", {}).get("text_description", "gray")
+            text_description_color=self.themes.get("app_color", {}).get(
+                "text_description", "gray"
+            ),
         )
         # Add to Layout
         self.credits_layout.addWidget(self.credits)

@@ -648,7 +648,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="crusader_btn">
+              <widget class="PyCustomToggleButton" name="crusader_btn">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -717,7 +717,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="elder_btn">
+              <widget class="PyCustomToggleButton" name="elder_btn">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -786,7 +786,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="hunter_btn">
+              <widget class="PyCustomToggleButton" name="hunter_btn">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -855,7 +855,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="redeemer_btn">
+              <widget class="PyCustomToggleButton" name="redeemer_btn">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -924,7 +924,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="shaper_btn">
+              <widget class="PyCustomToggleButton" name="shaper_btn">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -993,7 +993,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="warlord_btn">
+              <widget class="PyCustomToggleButton" name="warlord_btn">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
@@ -1070,6 +1070,13 @@
    </item>
   </layout>
  </widget>
+    <customwidgets>
+        <customwidget>
+            <class>PyCustomToggleButton</class>
+            <extends>QPushButton</extends>
+            <header location="global">...widgets.py_custom_toggle_button</header>
+        </customwidget>
+    </customwidgets>
  <resources>
   <include location="../../assets/assets.qrc"/>
  </resources>

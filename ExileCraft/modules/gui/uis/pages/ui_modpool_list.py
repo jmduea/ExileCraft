@@ -39,6 +39,7 @@ from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QButtonGr
                                QWidget)
 
 
+# noinspection SpellCheckingInspection
 class Ui_modpool_list(object):
         def setupUi(self, modpool_list):
                 if not modpool_list.objectName():
