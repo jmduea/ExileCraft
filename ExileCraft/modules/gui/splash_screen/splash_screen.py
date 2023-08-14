@@ -1,4 +1,3 @@
-
 from PySide6 import QtCore
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor
@@ -40,14 +39,22 @@ class SplashScreen(QMainWindow):
         self.ui.app_description_label.setText("<strong>WELCOME</strong> TO EXILECRAFT")
 
         # Change Texts
-        QtCore.QTimer.singleShot(1500, lambda: self.ui.app_description_label.setText("<strong>LOADING</strong> DATABASE"))
-        QtCore.QTimer.singleShot(3000,
-                                 lambda: self.ui.app_description_label.setText("<strong>LOADING</strong> USER INTERFACE"))
+        QtCore.QTimer.singleShot(
+            1500,
+            lambda: self.ui.app_description_label.setText(
+                "<strong>LOADING</strong> DATABASE"
+            ),
+        )
+        QtCore.QTimer.singleShot(
+            3000,
+            lambda: self.ui.app_description_label.setText(
+                "<strong>LOADING</strong> USER INTERFACE"
+            ),
+        )
 
         self.show()
 
     def progress(self):
-
         global counter
 
         # set value to progress bar
@@ -60,5 +67,5 @@ class SplashScreen(QMainWindow):
             # Show main window
             self.close()
             self.parent.show()
-
+            self.parent.window_initialized.emit()
         counter += 1
