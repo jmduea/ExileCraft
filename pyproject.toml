@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "exilecraft"
+version = "0.1.0"
+description = "A GUI overlay crafting emulator for the game Path Of Exile from Grinding Gear Games"
+authors = ["jmduea <jmduea@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+requests = "^2.31.0"
+PySide6 = "^6.5.2"
+keyboard = "^0.13.5"
+pydantic = "^2.1.1"
+fastapi = "^0.101.1"
+uvicorn = "^0.23.2"
+strawberry-graphql = { extras = ["fastapi"], version = "^0.203.3" }
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.14.0"
+Nuitka = "^1.7.10"
+pytest = "^7.4.0"
+pytest-mock = "*"
+black = "^23.7.0"
+sourcery = "^1.7.0"
+sphinx = "^7.1.2"
+pyinstaller = "^5.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

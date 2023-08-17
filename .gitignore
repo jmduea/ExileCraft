@@ -37,3 +37,7 @@ __pycache__/
 /.idea/workspace.xml
 /tests/.pytest_cache/README.md
 /tests/.pytest_cache/.gitignore
+/.pytest_cache
+/.github
+/.github/workflows
+/.github/*

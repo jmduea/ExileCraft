@@ -23,6 +23,46 @@
 # ##################################################################################################
 
 
+import json
+
+from PySide6.QtCore import QSettings
+
+# Define the JSON settings
+settings_json = """
+{
+  "app_name": "ExileCraft",
+  "version": "v1.0.0",
+  "copyright": "By: Jon Duea",
+  "year": 2023,
+  "theme_name": "default",
+  "custom_title_bar": true,
+  "startup_size": [1280, 1080],
+  "minimum_size": [1024, 768],
+  "lef_menu_size": {"minimum": 50, "maximum": 240},
+  "left_menu_content_margins": 3,
+  "left_column_size": {"minimum": 0, "maximum": 240},
+  "right_column_size": {"minimum": 0, "maximum": 240},
+  "time_animation": 250,
+  "font": {"family": "fontin-regular", "title_size": 10, "text_size": 9}
+}
+"""
+
+# Parse the JSON string
+settings_dict = json.loads(settings_json)
+
+
+class ApplicationSettings(QSettings):
+    """ """
+
+
+# Create a QSettings object
+settings = QSettings("Jmduea", "ExileCraft")
+
+# Iterate through the dictionary and store the key-value pairs
+for key, value in settings_dict.items():
+    settings.setValue(key, value)
+
+
 def _write_window_attribute_settings(self):
     """
     Save window attributes as settings.
@@ -37,6 +77,7 @@ def _write_window_attribute_settings(self):
 
     self.settings.endGroup()
 
+
 def _read_and_apply_window_attribute_settings(self):
     """
     Read window attributes from settings,
@@ -48,7 +89,7 @@ def _read_and_apply_window_attribute_settings(self):
     # No need for toPoint, etc. : PySide converts types
     try:
         self.MainWindow.move(self.settings.value("pos"))
-        if self.settings.value("maximized") in 'true':
+        if self.settings.value("maximized") in "true":
             self.MainWindow.showMaximized()
         else:
             self.MainWindow.resize(self.settings.value("size"))

@@ -21,20 +21,15 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
 # ##############################################################################
-
-from enum import auto, Enum, EnumMeta, IntEnum
+from enum import Enum, EnumMeta, IntEnum
 
 __all__ = [
-    "MOD_DOMAIN",
-    "MOD_GENERATION_TYPE",
     "item_class_whitelist",
     "item_class_map",
     "subtype_display_names",
     "domain_whitelist",
     "RARITY",
-    "SOCKET_COLOUR",
     "STAT_INTERPOLATION_TYPES",
-    "WORD_LISTS",
     "MOD_MAX_STATS",
     "MOD_STATS_RANGE",
     "one_hand_weapon_types",
@@ -49,10 +44,138 @@ __all__ = [
     "ITEM_REQUIREMENTS",
     "generation_type_blacklist",
     "ITEM_PROPERTIES_MAP",
+    "INFLUENCE_LIST",
+    "SPAWNABLE_ITEM_MOD_DOMAINS",
+    "SPAWNABLE_ITEM_MOD_GENERATION_TYPES",
+    "IMPLICIT_GENERATION_TYPES",
 ]
 
 MOD_MAX_STATS = 6
 MOD_STATS_RANGE = range(1, MOD_MAX_STATS + 1)
+
+BLACKLISTED_ITEMS = ["Energy Blade"]
+
+INFLUENCE_LIST = ["shaper", "elder", "crusader", "basilisk", "eyrie", "adjudicator"]
+
+SPAWNABLE_ITEM_MOD_DOMAINS = ["item", "crafted"]
+
+SPAWNABLE_ITEM_MOD_GENERATION_TYPES = [
+    "prefix",
+    "suffix",
+    "corrupted",
+    "enchantment",
+    "archnemesis",
+    "searing_exarch_implicit",
+]
+IMPLICIT_GENERATION_TYPES = [
+    "corrupted",
+    "enchantment",
+    "archnemesis",
+    "searing_exarch_implicit",
+]
+
+INFLUENCE_TAGS = {
+    "Amulets": "amulet_{influence}",
+    "Belts": "belt_{influence}",
+    "Body Armour(dex/int)": "body_armour_{influence}",
+    "Body Armour(dex)": "body_armour_{influence}",
+    "Body Armour(int)": "body_armour_{influence}",
+    "Body Armour(str/dex/int)": "body_armour_{influence}",
+    "Body Armour(str/dex)": "body_armour_{influence}",
+    "Body Armour(str/int)": "body_armour_{influence}",
+    "Body Armour(str)": "body_armour_{influence}",
+    "Boots(dex/int)": "boots_{influence}",
+    "Boots(dex)": "boots_{influence}",
+    "Boots(int)": "boots_{influence}",
+    "Boots(str/dex)": "boots_{influence}",
+    "Boots(str/int)": "boots_{influence}",
+    "Boots(str)": "boots_{influence}",
+    "Bows": "bow_{influence}",
+    "Claws": "claw_{influence}",
+    "Daggers": "dagger_{influence}",
+    "Gloves(dex/int)": "gloves_{influence}",
+    "Gloves(dex)": "gloves_{influence}",
+    "Gloves(int)": "gloves_{influence}",
+    "Gloves(str/dex)": "gloves_{influence}",
+    "Gloves(str/int)": "gloves_{influence}",
+    "Gloves(str)": "gloves_{influence}",
+    "Helmet(dex/int)": "helmet_{influence}",
+    "Helmet(dex)": "helmet_{influence}",
+    "Helmet(int)": "helmet_{influence}",
+    "Helmet(str/dex)": "helmet_{influence}",
+    "Helmet(str/int)": "helmet_{influence}",
+    "Helmet(str)": "helmet_{influence}",
+    "One Hand Axes": "axe_{influence}",
+    "One Hand Maces": "mace_{influence}",
+    "One Hand Swords": "sword_{influence}",
+    "Quivers": "quiver_{influence}",
+    "Rings": "ring_{influence}",
+    "Rune Daggers": "rune_dagger_{influence}",
+    "Sceptres": "sceptre_{influence}",
+    "Shields(dex/int)": "shield_{influence}",
+    "Shields(dex)": "shield_{influence}",
+    "Shields(int)": "shield_{influence}",
+    "Shields(str/dex)": "shield_{influence}",
+    "Shields(str/int)": "shield_{influence}",
+    "Shields(str)": "shield_{influence}",
+    "Staves": "staff_{influence}",
+    "Two Hand Axes": "2h_axe_{influence}",
+    "Two Hand Maces": "2h_mace_{influence}",
+    "Two Hand Swords": "2h_sword_{influence}",
+    "Wands": "wand_{influence}",
+    "Warstaves": "warstaff_{influence}",
+}
+
+ITEM_CLASS_SUFFIXES = {
+    "Body Armour": [
+        " (dex)",
+        " (dex/int)",
+        " (int)",
+        " (str)",
+        " (str/dex)",
+        " (str/dex/int)",
+        " (str/int)",
+    ],
+    "Helmet": [
+        " (dex)",
+        " (dex/int)",
+        " (int)",
+        " (str)",
+        " (str/dex)",
+        " (str/dex/int)",
+        " (str/int)",
+        " (ward)",
+    ],
+    "Gloves": [
+        " (dex)",
+        " (dex/int)",
+        " (int)",
+        " (str)",
+        " (str/dex)",
+        " (str/dex/int)",
+        " (str/int)",
+        " (ward)",
+    ],
+    "Boots": [
+        " (dex)",
+        " (dex/int)",
+        " (int)",
+        " (str)",
+        " (str/dex)",
+        " (str/dex/int)",
+        " (str/int)",
+        " (ward)",
+    ],
+    "Shield": [
+        " (dex)",
+        " (dex/int)",
+        " (int)",
+        " (str)",
+        " (str/dex)",
+        " (str/dex/int)",
+        " (str/int)",
+    ],
+}
 
 item_types = [
     "Armour",
@@ -277,7 +400,6 @@ armour_subtypes = {
     },
 }
 
-jewel_subtypes = {"Jewel": {}}
 item_class_map = {
     "Body Armour": {
         "dex_armour",
@@ -422,14 +544,14 @@ all_subtypes = {
 }
 
 subtype_tags_map = {
-    "(dex)": "dex_armour",
-    "(dex/int)": "dex_int_armour",
-    "(int)": "int_armour",
-    "(str)": "str_armour",
-    "(str/dex)": "str_dex_armour",
-    "(str/dex/int)": "str_dex_int_armour",
-    "(str/int)": "str_int_armour",
-    "(Ward)": "ward_armour",
+    "dex": "dex_armour",
+    "dex/int": "dex_int_armour",
+    "int": "int_armour",
+    "str": "str_armour",
+    "str/dex": "str_dex_armour",
+    "str/dex/int": "str_dex_int_armour",
+    "str/int": "str_int_armour",
+    "ward": "ward_armour",
 }
 
 ITEM_PROPERTIES = [
@@ -504,211 +626,6 @@ class IntEnumOverride(IntEnum, metaclass=IntEnumMetaOverride):
     pass
 
 
-class MOD_DOMAIN(str, Enum):
-    """
-    Representation of mod domains.
-
-    This constant is primarily used in relation to mods.min.json.
-
-    Attributes
-    ----------
-    ITEM
-        Generic item domain (but excluding items that have their own domain)
-    FLASK
-        Flask domain
-    MONSTER
-        Monster domain
-    CHEST
-        Chest domain, i.e. strongboxes or other type of chest-like
-        containers
-    AREA
-        Area domain, i.e. for the various zones of Path of Exile
-    UNKNOWN1
-    UNKNOWN2
-    UNKNOWN3
-    MASTER
-        See CRAFTED
-    CRAFTED
-        Domain for crafted mods (previously MASTER)
-    MISC
-        Miscellaneous domain for jewel stuff, item limits, corruptions, etc
-    ATLAS
-        Atlas domain for modifiers that appear when using a sextant orb on the
-        atlas
-    LEAGUESTONE
-        Leaguestone domain for modifiers that appear on league stones
-    ABYSS_JEWEL
-        Domain for modifiers that appear on Abyss jewels
-    MAP_DEVICE
-        For implicit modifiers that can be applied through the map device
-        For example, vaal fragments or soul flasks
-    DELVE
-        For delve modifiers
-    DELVE_AREA
-        For modifiers appearing on delve areas
-    SYNTHESIS_GLOBALS
-        Synthesis global modifiers for areas
-    SYNTHESIS_BONUS
-        Synthesis modifiers that grant a bonus to other modifiers
-    AFFLICTION_JEWEL
-        Modifiers for the affliction jewels
-    HEIST_AREA
-    HEIST_NPC
-    HEIST_TRINKET
-    UNKNOWN4
-    UNDEFINED
-    """
-
-    ITEM = (
-        "item"  # Generic item domain (but excluding items that have their own domain)
-    )
-    FLASK = "flask"  # Flask domain
-    MONSTER = "monster"  # Monster domain
-    CHEST = (
-        "chest"  # Chest domain, i.e. strongboxes or other type of chest-like containers
-    )
-    AREA = "area"  # Area domain, i.e. for the various zones of Path of Exile
-    UNKNOWN = "unknown1"
-    UNKNOWN2 = "unknown2"
-    UNKNOWN3 = "unknown3"
-    CRAFTED = "crafted"  # Domain for crafted mods (previously MASTER)
-    MISC = "misc"  # Miscellaneous domain for jewel stuff, item limits, corruptions, etc
-    ATLAS = (
-        "atlas"  # Atlas domain for modifiers that appear when using a sextant orb on
-    )
-    # the atlas
-    LEAGUESTONE = "leaguestone"  # Leaguestone domain for modifiers that appear on
-    # league stones
-    ABYSS_JEWEL = "abyss_jewel"  # Domain for modifiers that appear on Abyss jewels
-    MAP_DEVICE = "map_device"  # For implicit modifiers that can be applied through the
-    # map
-    # device
-    DELVE = "delve"  # For delve modifiers
-    DELVE_AREA = "delve_area"  # For modifiers appearing on delve areas
-    SYNTHESIS_GLOBALS = "synthesis_globals"  # Synthesis global modifiers for areas
-    SYNTHESIS_BONUS = (
-        "synthesis_bonus"  # Synthesis modifiers that grant a bonus to other modifiers
-    )
-    AFFLICTION_JEWEL = "affliction_jewel"  # Modifiers for the affliction jewels
-    HEIST_AREA = "heist_area"
-    HEIST_NPC = "heist_npc"
-    HEIST_TRINKET = "heist_trinket"
-    UNKNOWN4 = "unknown4"
-    UNDEFINED = "undefined"
-
-    # Legacy Names
-    MASTER = CRAFTED  # See CRAFTED
-    JEWEL = MISC  # See MISC
-
-
-class MOD_GENERATION_TYPE(Enum):
-    """
-    Representation of mod generation types.
-
-    This constant is primarily used in relation to the Mods class.
-
-    Attributes
-    ----------
-    PREFIX
-        Prefix generation type
-    SUFFIX
-        Suffix generation type
-    UNIQUE
-        Whether the mod is directly given to an entity and not generanted by
-        normal means.
-        Commonly this can be found on unique monsters/items for example, but
-        also as innate/implicit modifiers for example
-    NEMESIS
-        For 'nemesis' mods that can appear on monsters
-    CORRUPTED
-        For mods that are generated though item corruption
-    BLOODLINES
-        For 'bloodlines' mods that can appear on monsters
-    TORMENT
-        For 'torment' mods that can appear on monsters
-    TEMPEST
-        For 'tempest' mods that can appear on areas
-    TALISMAN
-        For 'talisman' mods that can appear on monsters
-    ENCHANTMENT
-        For the ascendancy/labyrinth enchantment mods that can appear on items
-    ESSENCE
-        For 'essence' mods that can appear on monsters
-    BESTIARY
-        For 'bestiary' modifiers that appear on bestiary monsters
-    DELVE_AREA
-        For modifiers that appear on delve areas
-    SYNTHESIS_A
-    SYNTHESIS_GLOBALS
-    SYNTHESIS_BONUS
-    BLIGHT
-    MONSTER_AFFLICTION
-    """
-
-    PREFIX: str = "prefix"
-    SUFFIX: str = "suffix"
-    UNIQUE: str = "unique"
-    NEMESIS: str = "nemesis"
-    CORRUPTED: str = "corrupted"
-    BLOODLINES: str = "bloodlines"
-    TORMENT: str = "torment"
-    TEMPEST: str = "tempest"
-    TALISMAN: str = "talisman"
-    ENCHANTMENT: str = "enchantment"
-    ESSENCE: str = "essence"
-    BESTIARY: str = "bestiary"
-    DELVE_AREA: str = "delve_area"
-    SYNTHESIS_A: str = "synthesis_a"
-    SYNTHESIS_GLOBALS: str = "synthesis_globals"
-    SYNTHESIS_BONUS: str = "synthesis_bonus"
-    BLIGHT: str = "blight"
-    BLIGHT_TOWER: str = "blight_tower"
-    MONSTER_AFFLICTION: str = "monster_affliction"
-    ARCHNEMESIS: str = "archnemesis"
-    SEARING_EXARCH_IMPLICIT: str = "searing_exarch_implicit"
-
-
-class WORD_LISTS(IntEnumOverride):
-    """
-    Representation of words lists ( Wordlists.dat )
-
-    This constant is primarily used in relation to Words.dat
-
-    Attributes
-    ----------
-    ITEM_PREFIX
-        Prefix word of a randomly generated item name
-    ITEM_SUFFIX
-        Suffix word of a randomly generated item name; separate from the prefix
-    MONSTER_PREFIX
-        Prefix word of a randomly generated monster name.
-    MONSTER_SUFFIX
-        Suffix word of a randomly generated monster name; composite with the
-        prefix
-    MONSTER_TITLE
-        Title ("the xxx") of a randomly generated monster name
-    UNIQUE_ITEM
-        Name of a unique item
-    STRONGBOX_PREFIX
-        Prefix word of a randomly generated strongbox name
-    STRONGBOX_SUFFIX
-        Suffix word of a randomly generated strongbox name; separate from the
-        prefix
-    ESSENCE
-        Name of an essence
-    """
-
-    ITEM_PREFIX = 1
-    ITEM_SUFFIX = 2
-    MONSTER_PREFIX = 3
-    MONSTER_SUFFIX = 4
-    MONSTER_TITLE = 5
-    UNIQUE_ITEM = 6
-    STRONGBOX_PREFIX = 7
-    STRONGBOX_SUFFIX = 8
-    ESSENCE = 9
-
-
 class STAT_INTERPOLATION_TYPES(IntEnumOverride):
     """
     Representation of stat interpolation types (StatInterpolationTypes.dat)
@@ -741,54 +658,6 @@ class STAT_INTERPOLATION_TYPES(IntEnumOverride):
     CONSTANT = 1
     LINEAR = 2
     EXPONENTIAL = 3
-
-
-class SOCKET_COLOUR(Enum):
-    """
-    Representation of item socket colours.
-
-    In some places in the game files these colours are referenced either by
-    their id or by a character, so make sure to check which and use the
-    according attribute.
-
-    Attributes
-    ----------
-    RED : SocketColour
-        Red sockets usually associated with Strength
-    GREEN : SocketColour
-        Green sockets usually associated with Dexterity
-    BLUE : SocketColour
-        Blue sockets usually associated with Intelligence
-    WHITE : SocketColour
-        White sockets
-    char : str
-        When accessing a :class:`SOCKET_COLOUR` instance (i.e.
-        :attr:`SOCKET_COLOUR.BLUE`) the char attribute denotes the character
-        that is sometimes used in the game files to represent the colour
-    id : int
-        When accessing a :class:`SOCKET_COLOUR` instance (i.e.
-        :attr:`SOCKET_COLOUR.BLUE`) the id attribute denotes the integer
-        that is sometimes used in the game files to represent the colour
-    """
-
-    # IDs are from CharacterStarItems.dat->Sockets and game testing
-    R = ("R", 1)
-    G = ("G", 2)
-    B = ("B", 3)
-    # I can't actually confirm this id=4, but seems logical
-    W = ("W", 4)
-    RED = R
-    GREEN = G
-    BLUE = B
-    WHITE = W
-
-    def __new__(cls, char, id):
-        obj = object.__new__(cls)
-        obj._value_ = char
-        obj.char = char
-        obj.id = id
-
-        return obj
 
 
 class RARITY(Enum, metaclass=IntEnumMetaOverride):
@@ -839,19 +708,3 @@ class RARITY(Enum, metaclass=IntEnumMetaOverride):
         obj.name_lower = lower
         obj.colour = colour
         return obj
-
-
-class ITEM_TYPES(Enum):
-    ITEM = auto()
-    GEM = auto()
-    CURRENCY = auto()
-
-
-class Influence(Enum):
-    SHAPER = 1
-    ELDER = 2
-    CRUSADER = 3
-    HUNTER = 4
-    REDEEMER = 5
-    WARLORD = 6
-    NONE = 7

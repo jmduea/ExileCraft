@@ -21,77 +21,31 @@
 #   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE                  #
 #   SOFTWARE.                                                                                      #
 # ##################################################################################################
-import re
+import strawberry
+from fastapi import FastAPI
+from strawberry.fastapi import GraphQLRouter
 
 
-def snake_case(name):
-    """
-    Parameters
-    ----------
-    name : str
-        The string to be converted from CamelCase to snake_case.
-
-    Returns
-    -------
-    str
-        The converted string in snake_case.
-
-    Examples
-    --------
-    >>> snake_case("CamelCaseExample")
-    'camel_case_example'
-    >>> snake_case("AnotherExampleWithNumbers123")
-    'another_example_with_numbers123'
-    """
-    # Convert CamelCase to snake_case
-    s1 = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", name)
-    return re.sub("([a-z0-9])([A-Z])", r"\1_\2", s1).lower()
+@strawberry.type
+class Query:
+    @strawberry.field
+    def hello(self) -> str:
+        return "Hello World"
 
 
-def round_with_2_decimal_places(value):
-    if value is not None:
-        return round(value, 2)
-    return None
+schema = strawberry.Schema(Query)
+
+app = FastAPI()
 
 
-def round_with_no_decimal_places(value):
-    if value is not None:
-        return round(value)
-    return None
+@app.get("/")
+def index():
+    return {"message": "Welcome to the GraphQL API"}
 
 
-def sort_mods_by_group(mod_list):
-    sorted_mods = {}
-    for mod in mod_list:
-        try:
-            group = mod.group.group
-        except AttributeError:
-            group = None
-        sorted_mods.setdefault(group, []).append(mod)
-    return sorted_mods
+app.add_route("/graphql", GraphQLRouter(schema, debug=True))
 
+if __name__ == "__main__":
+    import uvicorn
 
-def filter_mods_by_generation_type(mod_list, generation_type):
-    prefix_mods = []
-    suffix_mods = []
-    implicit_mods = []
-
-    if generation_type == "prefix":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "prefix":
-                prefix_mods.append(mod)
-        return prefix_mods
-    elif generation_type == "suffix":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "suffix":
-                suffix_mods.append(mod)
-        return suffix_mods
-    elif generation_type == "implicit":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "corrupted":
-                implicit_mods.append(mod)
-            elif mod.generation_type.generation_type == "enchantment":
-                implicit_mods.append(mod)
-            elif mod.generation_type.generation_type == "archnemesis":
-                implicit_mods.append(mod)
-        return implicit_mods
+    uvicorn.run(app, host="localhost", port=8000)

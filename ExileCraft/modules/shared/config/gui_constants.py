@@ -65,3 +65,54 @@ BUTTON_FUNCTIONS = {
     BTN_SETTINGS: "btn_settings_clicked",
     BTN_TOP_SETTINGS: "btn_top_settings_clicked",
 }
+
+# MENU CONSTANTS
+ADD_LEFT_MENUS = [
+    {
+        "btn_icon": "icon_home.svg",
+        "btn_id": "btn_home",
+        "btn_text": "Home",
+        "btn_tooltip": "Home page",
+        "show_top": True,
+        "is_active": True,
+    },
+    {
+        "btn_icon": "icon_send.svg",
+        "btn_id": "btn_page_3",
+        "btn_text": "Crafting Simulator",
+        "btn_tooltip": "Simulate Crafting Methods",
+        "show_top": True,
+        "is_active": False,
+    },
+    {
+        "btn_icon": "icon_info.svg",
+        "btn_id": "btn_info",
+        "btn_text": "Open Item Info",
+        "btn_tooltip": "Open Item Info",
+        "show_top": False,
+        "is_active": False,
+    },
+    {
+        "btn_icon": "icon_settings.svg",
+        "btn_id": "btn_settings",
+        "btn_text": "Open Settings",
+        "btn_tooltip": "Open Settings",
+        "show_top": False,
+        "is_active": False,
+    },
+]
+
+ADD_TITLE_BAR_MENUS = [
+    {
+        "btn_icon": "icon_search.svg",
+        "btn_id": "btn_search",
+        "btn_tooltip": "Search",
+        "is_active": False,
+    },
+    {
+        "btn_icon": "icon_more_options.svg",
+        "btn_id": "btn_top_settings",
+        "btn_tooltip": "Crafting Methods",
+        "is_active": False,
+    },
+]

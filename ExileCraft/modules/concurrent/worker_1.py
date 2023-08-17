@@ -21,77 +21,68 @@
 #   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE                  #
 #   SOFTWARE.                                                                                      #
 # ##################################################################################################
-import re
+import time
+import uuid
+
+from PySide6.QtCore import QRunnable, Slot
+
+from modules.concurrent.worker_signals import WorkerSignals
 
 
-def snake_case(name):
+class Worker(QRunnable):
     """
+    Worker Thread
+
+    Inherits from QRunnable to handle worker thread setup, signals, and wrap-up.
+
     Parameters
     ----------
-    name : str
-        The string to be converted from CamelCase to snake_case.
+    *args : tuple
+     0 or more positional arguments to make available to the run code
+
+    **kwargs : dict, optional
+     Keywords arguments to make available to the run code
+
+    Attributes
+    ----------
+    worker_id : uuid.uuid4()
+     Unique identifier for the worker thread.
+
+    signals : WorkerSignals
+     0 or more signals to make available to the run code
+
+    See Also
+    --------
+    modules.concurrent.worker_signals.WorkerSignals
+     class that holds signals to make avaialable to workers.
 
     Returns
     -------
-    str
-        The converted string in snake_case.
+    result : any
+     May return any value that is returned by the run method.
 
-    Examples
-    --------
-    >>> snake_case("CamelCaseExample")
-    'camel_case_example'
-    >>> snake_case("AnotherExampleWithNumbers123")
-    'another_example_with_numbers123'
+    Raises
+    ------
+    exception : str
+     May raise any exception that is raised by the run method.
     """
-    # Convert CamelCase to snake_case
-    s1 = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", name)
-    return re.sub("([a-z0-9])([A-Z])", r"\1_\2", s1).lower()
 
+    def __init__(self):
+        super().__init__()
+        self.worker_id = uuid.uuid4().hex
+        self.signals = WorkerSignals()
+        self.args = args
+        self.kwargs = kwargs
 
-def round_with_2_decimal_places(value):
-    if value is not None:
-        return round(value, 2)
-    return None
-
-
-def round_with_no_decimal_places(value):
-    if value is not None:
-        return round(value)
-    return None
-
-
-def sort_mods_by_group(mod_list):
-    sorted_mods = {}
-    for mod in mod_list:
+    @Slot()
+    def run(self):
+        """Initialize the worker thread with passed self.args, self.kwargs."""
         try:
-            group = mod.group.group
-        except AttributeError:
-            group = None
-        sorted_mods.setdefault(group, []).append(mod)
-    return sorted_mods
-
-
-def filter_mods_by_generation_type(mod_list, generation_type):
-    prefix_mods = []
-    suffix_mods = []
-    implicit_mods = []
-
-    if generation_type == "prefix":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "prefix":
-                prefix_mods.append(mod)
-        return prefix_mods
-    elif generation_type == "suffix":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "suffix":
-                suffix_mods.append(mod)
-        return suffix_mods
-    elif generation_type == "implicit":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "corrupted":
-                implicit_mods.append(mod)
-            elif mod.generation_type.generation_type == "enchantment":
-                implicit_mods.append(mod)
-            elif mod.generation_type.generation_type == "archnemesis":
-                implicit_mods.append(mod)
-        return implicit_mods
+            for _ in range(self.iterations):
+                time.sleep(0.01)
+        except Exception as e:
+            self.signals.error.emit(e)
+        else:
+            self.signals.finished.emit()
+            self.signals.result.emit(self.result)
+        pass

@@ -24,30 +24,26 @@
 
 import os
 
-from PySide6.QtGui import QIcon, QAction
-from PySide6.QtWidgets import QSystemTrayIcon, QMenu
+from PySide6.QtGui import QAction, QIcon
+from PySide6.QtWidgets import QMenu, QSystemTrayIcon
 
 
 def setup_tray(app, window):
     """
-    Sets up the system tray icon and its context menu for a given application and window.
+    Returns
+    -------
+    PySide6.QtWidgets.QSystemTrayIcon
 
-    This function initializes a QSystemTrayIcon object with an application-specific icon and makes it visible.
-    It then creates a context menu with several QAction objects, each associated with a different function:
-    - "Show Window": shows the application window.
-    - "Check for Updates": placeholder function for checking for updates.
-    - "Settings": placeholder function for opening settings.
-    - "Donate": placeholder function for opening donation page.
-    - "Quit": quits the application.
+    Parameters
+    ----------
+    app : PySide6.QtWidgets.QApplication
+        The application object.
+    window : modules.gui.uis.windows.main_window.main_window.MainWindow
+        The main window object.
 
-    The context menu is then attached to the system tray icon and displayed.
-
-    :param app: A reference to the QApplication object where the system tray is to be set up.
-    :param window: A reference to the QMainWindow object where the system tray is to be set up.
-    :return: Returns the initialized QSystemTrayIcon object.
     """
     basedir = os.path.dirname(__file__)
-    icon_path = os.path.join(basedir, '../gui/assets/images/icons/vendor.ico')
+    icon_path = os.path.join(basedir, "../gui/assets/images/icons/vendor.ico")
 
     icon = QIcon(icon_path)
 
@@ -56,26 +52,34 @@ def setup_tray(app, window):
     tray.setVisible(True)
 
     menu = QMenu()
-    menu.setStyleSheet("""
+    menu.setStyleSheet(
+        """
         QMenu {
             font-size: 14px;
         }
-    """)
+    """
+    )
 
     show_window = QAction("Show Window")
     show_window.triggered.connect(window.show)
     menu.addAction(show_window)
 
     check_updates = QAction("Check for Updates")
-    check_updates.triggered.connect(lambda: print("Checking for updates..."))  # TODO Replace with actual function
+    check_updates.triggered.connect(
+        lambda: print("Checking for updates...")
+    )  # TODO Replace with actual function
     menu.addAction(check_updates)
 
     settings = QAction("Settings")
-    settings.triggered.connect(lambda: print("Opening settings..."))  # TODO Replace with actual function
+    settings.triggered.connect(
+        lambda: print("Opening settings...")
+    )  # TODO Replace with actual function
     menu.addAction(settings)
 
     donate = QAction("Donate")
-    donate.triggered.connect(lambda: print("Opening donation page..."))  # TODO Replace with actual function
+    donate.triggered.connect(
+        lambda: print("Opening donation page...")
+    )  # TODO Replace with actual function
     menu.addAction(donate)
 
     quit_action = QAction("Quit")

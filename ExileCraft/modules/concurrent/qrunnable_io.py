@@ -21,77 +21,59 @@
 #   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE                  #
 #   SOFTWARE.                                                                                      #
 # ##################################################################################################
-import re
+
+import requests
+from PySide6.QtCore import QObject, QRunnable, Signal, Slot
 
 
-def snake_case(name):
+class WorkerSignals(QObject):
     """
+    Defines the signals available from a running worker thread.
+
+    Attributes
+    ----------
+
+    data : Signal(tuple)
+     tuple of (identifier, data)
+
+    """
+
+    data = Signal(tuple)
+
+
+class Worker(QRunnable):
+    """
+    Worker thread that can be used to make requests in the background.
+
+    Inherits from QRunnable to handle worker thread setup, signals and wrap-up.
+
     Parameters
     ----------
-    name : str
-        The string to be converted from CamelCase to snake_case.
 
-    Returns
-    -------
-    str
-        The converted string in snake_case.
+    id : id
+     The id of the worker thread.
 
-    Examples
-    --------
-    >>> snake_case("CamelCaseExample")
-    'camel_case_example'
-    >>> snake_case("AnotherExampleWithNumbers123")
-    'another_example_with_numbers123'
+    url : str
+     The url to retrieve data from.
+
+    Attributes
+    ----------
+
+    signals : WorkerSignals()
+     The signals to be used by the worker thread.
+
     """
-    # Convert CamelCase to snake_case
-    s1 = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", name)
-    return re.sub("([a-z0-9])([A-Z])", r"\1_\2", s1).lower()
 
+    def __init__(self, id, url):
+        super().__init__()
+        self.id = id
+        self.url = url
 
-def round_with_2_decimal_places(value):
-    if value is not None:
-        return round(value, 2)
-    return None
+        self.signals = WorkerSignals()
 
+    @Slot()
+    def run(self):
+        r = requests.get(self.url)
 
-def round_with_no_decimal_places(value):
-    if value is not None:
-        return round(value)
-    return None
-
-
-def sort_mods_by_group(mod_list):
-    sorted_mods = {}
-    for mod in mod_list:
-        try:
-            group = mod.group.group
-        except AttributeError:
-            group = None
-        sorted_mods.setdefault(group, []).append(mod)
-    return sorted_mods
-
-
-def filter_mods_by_generation_type(mod_list, generation_type):
-    prefix_mods = []
-    suffix_mods = []
-    implicit_mods = []
-
-    if generation_type == "prefix":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "prefix":
-                prefix_mods.append(mod)
-        return prefix_mods
-    elif generation_type == "suffix":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "suffix":
-                suffix_mods.append(mod)
-        return suffix_mods
-    elif generation_type == "implicit":
-        for mod in mod_list:
-            if mod.generation_type.generation_type == "corrupted":
-                implicit_mods.append(mod)
-            elif mod.generation_type.generation_type == "enchantment":
-                implicit_mods.append(mod)
-            elif mod.generation_type.generation_type == "archnemesis":
-                implicit_mods.append(mod)
-        return implicit_mods
+        for line in r.text.splitlines():
+            self.signals.data.emit((self.id, line))

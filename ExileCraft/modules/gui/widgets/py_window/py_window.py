@@ -17,27 +17,28 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor
 from PySide6.QtWidgets import QFrame, QGraphicsDropShadowEffect, QHBoxLayout
 
-# IMPORT PACKAGES AND MODULES
-# ///////////////////////////////////////////////////////////////
-
 from modules.gui.core.json_settings import Settings
 from .styles import Styles
 
 
+# IMPORT PACKAGES AND MODULES
+# ///////////////////////////////////////////////////////////////
+
+
 class PyWindow(QFrame):
     def __init__(
-            self,
-            parent,
-            layout=Qt.Vertical,
-            margin=0,
-            spacing=2,
-            bg_color="#2c313c",
-            text_color="#fff",
-            text_font="9pt 'Segoe UI'",
-            border_radius=10,
-            border_size=2,
-            border_color="#343b48",
-            enable_shadow=True
+        self,
+        parent,
+        layout=Qt.Vertical,
+        margin=0,
+        spacing=2,
+        bg_color="#2c313c",
+        text_color="#fff",
+        text_font="14pt 'Segoe UI'",
+        border_radius=10,
+        border_size=2,
+        border_color="#343b48",
+        enable_shadow=True,
     ):
         super().__init__()
 
@@ -76,13 +77,13 @@ class PyWindow(QFrame):
             self.setGraphicsEffect(self.shadow)
 
     def set_stylesheet(
-            self,
-            bg_color=None,
-            border_radius=None,
-            border_size=None,
-            border_color=None,
-            text_color=None,
-            text_font=None
+        self,
+        bg_color=None,
+        border_radius=None,
+        border_size=None,
+        border_color=None,
+        text_color=None,
+        text_font=None,
     ):
         # CHECK BG COLOR
         if bg_color is not None:
@@ -120,11 +121,13 @@ class PyWindow(QFrame):
         else:
             internal_text_font = self.text_font
 
-        self.setStyleSheet(Styles.bg_style.format(
-            _bg_color=internal_bg_color,
-            _border_radius=internal_border_radius,
-            _border_size=internal_border_size,
-            _border_color=internal_border_color,
-            _text_color=internal_text_color,
-            _text_font=internal_text_font
-        ))
+        self.setStyleSheet(
+            Styles.bg_style.format(
+                _bg_color=internal_bg_color,
+                _border_radius=internal_border_radius,
+                _border_size=internal_border_size,
+                _border_color=internal_border_color,
+                _text_color=internal_text_color,
+                _text_font=internal_text_font,
+            )
+        )

@@ -24,22 +24,9 @@
 from dataclasses import dataclass
 from typing import Any
 
-from sqlalchemy import Boolean
-from sqlalchemy.dialects.sqlite import JSON
-from sqlalchemy.orm import Mapped, mapped_column
-
-from modules.data.models.base_model import Base
-
 
 @dataclass
-class Translation(Base):
-
-    # Table Columns
-    ids = mapped_column(JSON, nullable=False, init=False)
-    translations = mapped_column(JSON, nullable=False, init=False)
-    hidden: Mapped[bool] = mapped_column(Boolean, nullable=False, insert_default=False,
-                                         default=False, init=False)
-    data = mapped_column(JSON, nullable=False, init=False)
+class Translation:
 
     def __init__(self, **kw: Any):
         super().__init__(**kw)

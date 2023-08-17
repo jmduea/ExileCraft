@@ -22,11 +22,10 @@
 #   SOFTWARE.                                                                                      #
 # ##################################################################################################
 from PySide6 import QtWidgets
-from PySide6.QtCore import Qt, Signal
+from PySide6.QtCore import Qt, QThreadPool, Signal
 
 from modules.gui.core.functions import Functions
 from modules.gui.core.json_settings import Settings
-from modules.gui.splash_screen import SplashScreen
 from modules.gui.uis.windows.main_window.functions_main_window import (
     ButtonFunctions,
     MainFunctions,
@@ -45,7 +44,7 @@ from modules.shared.config.gui_constants import (
 )
 
 
-class MainWindow(QtWidgets.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow, UiMainWindow):
     """Main Window Class"""
 
     window_initialized = Signal()
@@ -55,6 +54,10 @@ class MainWindow(QtWidgets.QMainWindow):
         super().__init__(*args, **kwargs)
         self.ui = UiMainWindow()
         self.ui.setup_ui(self)
+        self.threadpool = QThreadPool()
+        print(
+            "Multithreading with maximum %d threads" % self.threadpool.maxThreadCount()
+        )
         self.setWindowOpacity(0.8)
 
         # Load Settings
@@ -69,7 +72,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Show the main window
         self.ui.load_pages.item_implicits.hide()
         self.ui.load_pages.item_spacer_3.hide()
-        self.splash_screen = SplashScreen(self)
+        # self.splash_screen = SplashScreen(self)
         self.ui.load_pages.item_img_label.mousePressEvent = (
             self.handle_item_img_label_click
         )

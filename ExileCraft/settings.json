@@ -29,7 +29,7 @@
   "time_animation": 250,
   "font": {
     "family": "fontin-regular",
-    "title_size": 10,
-    "text_size": 9
+    "title_size": 16,
+    "text_size": 14
   }
 }

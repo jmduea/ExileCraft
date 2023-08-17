@@ -24,47 +24,58 @@
 import json
 import os
 
-from modules.data.parser.path_utils import get_abs_path, get_base_dir
+from modules.data.parser.path_utils import (
+    get_abs_path,
+    get_base_dir,
+    MOD_FAMILY_JSON_PATH,
+    MOD_TYPES_JSON_PATH,
+)
 from modules.shared.config.constants import domain_whitelist
 
 script_path = os.path.realpath(__file__)
 base_dir = get_base_dir(script_path)
-abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'mods.min.json'))
+abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'mods.json'))
 
 
 class ModParser:
     def __init__(self):
-        self._data = self.parse_json()
+        super().__init__()
         self.abs_path_to_json = abs_path_to_json
-        self.mod_list = self.get_all_mods()
 
-    def parse_json(self):
-        if not hasattr(self, '_data'):
-            with open(abs_path_to_json) as json_file:
-                self._data = json.load(json_file)
-        return self._data
+    def parse_mods_json(self):
+        with open(abs_path_to_json) as json_file:
+            return json.load(json_file)
+
+    def parse_mod_types_json(self):
+        with open(MOD_TYPES_JSON_PATH) as json_file:
+            return json.load(json_file)
+
+    def parse_mod_family_json(self):
+        with open(MOD_FAMILY_JSON_PATH) as json_file:
+            return json.load(json_file)
 
     def get_all_mod_data_for_key(self, key):
-        data = self._data
         mod_data_list = []
-        for mod, mod_data in data.items():
-            if mod_data.get("domain") not in domain_whitelist:
-                continue
-            if mod_data.get("generation_type") == "<unknown>":
-                continue
-            mod_data_value = mod_data.get(key, None)
-            mod_data_dict = {
-                key: mod_data_value if mod_data_value is not None else None
-            }
-            if mod_data_dict not in mod_data_list:
-                mod_data_list.append(mod_data_dict)
+        for mod_data in self.bounded_data.values():
+            if mod_data not in mod_data_list:
+                mod_data_list.append({key: mod_data.get(key, None)})
         return mod_data_list
+
+    @property
+    def bounded_data(self):
+        return {
+            mod: mod_data
+            for mod, mod_data in self._data.items()
+            if self.is_data_valid(mod_data)
+        }
+
+    @staticmethod
+    def is_data_valid(data):
+        return data.get("domain") in domain_whitelist and data.get("generation_type") != "<unknown>"
 
     @staticmethod
     def get_mod_data_by_key(mod_data, key):
-        mod_data_value = mod_data.get(key)
-        value_dict = {key: mod_data_value}
-        return value_dict
+        return {key: mod_data.get(key)}
 
     def get_all_mod_generation_types(self):
         mod_generation_types_list = self.get_all_mod_data_for_key("generation_type")
@@ -84,29 +95,14 @@ class ModParser:
         mod_domain = mod_data.get("domain")
         return mod_domain
 
-    def get_all_mod_types(self):
-        types_list = self.get_all_mod_data_for_key("type")
-        mod_types_list = []
-        for _type in types_list:
-            if _type not in mod_types_list:
-                mod_types_list.append(_type)
-        return mod_types_list
-
     @staticmethod
     def get_mod_type(mod_data):
         mod_type = mod_data.get("type")
         return mod_type
 
     def get_all_mod_groups(self):
-        mod_groups_list = self.get_all_mod_data_for_key("groups")
-        groups_list = []
-        for group in mod_groups_list:
-            group_dict = {
-                "groups": group["groups"][0]
-            }
-            if group_dict not in groups_list:
-                groups_list.append(group_dict)
-        return groups_list
+        return [{"groups": group["groups"][0]}
+                for group in self.get_all_mod_data_for_key("groups")]
 
     @staticmethod
     def get_mod_group(mod_data):
@@ -115,30 +111,15 @@ class ModParser:
         return group
 
     def get_all_mods(self):
-        data = self._data
-        _mod_list = []
-        for mod, mod_data in data.items():
-            if mod_data.get("domain") not in domain_whitelist:
-                continue
-            if mod_data.get("generation_type") == "<unknown>":
-                continue
-            if mod not in _mod_list:
-                mod_dict = {
-                    'mod_name': mod,
-                    'level_req': mod_data.get("required_level"),
-                    'name': mod_data.get("name"),
-                    'is_essence_only': mod_data.get("is_essence_only"),
-                    'domain': mod_data.get('domain'),
-                    'generation_type': mod_data.get('generation_type'),
-                    'group': mod_data.get('groups')[0],
-                    'mod_type': mod_data.get('type'),
-                    'added_tags_list': self.get_added_tags(mod_data),
-                    'implicit_tags_list': self.get_implicit_tags(mod_data),
-                    'spawn_weights_list': self.get_spawn_weights(mod_data),
-                    'stats_list': self.get_stats(mod_data)
-                }
-                _mod_list.append(mod_dict)
-        return _mod_list
+        return [self.get_mod_data(mod, mod_data)
+                for mod, mod_data in self.bounded_data.items()]
+
+    @staticmethod
+    def extract_weight_data(weight_data):
+        return {
+            "tag": weight_data.get("tag"),
+            "weight": weight_data.get("weight")
+        }
 
     def get_all_mod_dicts(self):
         data = self._data
@@ -152,42 +133,28 @@ class ModParser:
 
     @staticmethod
     def get_added_tags(mod_data):
-        added_tags_list = [tag for tag in mod_data.get("adds_tags", [])]
-        return added_tags_list
+        return mod_data.get("adds_tags", [])
 
     @staticmethod
     def get_implicit_tags(mod_data):
-        implicit_tags_list = [tag for tag in mod_data.get("implicit_tags", [])]
-        return implicit_tags_list
+        return mod_data.get("implicit_tags", [])
 
-    @staticmethod
-    def get_spawn_weights(mod_data):
-        spawn_weights_list = []
-        spawn_weights_data = mod_data.get("spawn_weights", [])
-        for weight_data in spawn_weights_data:
-            tag_dict = {
-                "tag": weight_data.get("tag"),
-                "weight": weight_data.get("weight")
-            }
-            spawn_weights_list.append(tag_dict)
-        return spawn_weights_list
+    def get_spawn_weights(self, mod_data):
+        return [self.extract_weight_data(weight_data)
+                for weight_data in mod_data.get("spawn_weights", [])]
 
     @staticmethod
     def get_stats(mod_data):
-        stats_list = []
-        stats_data = mod_data.get("stats", [])
-        for stat in stats_data:
-            stat_data_dict = {
-                'stat': stat.get("id"),
-                'values': {'min': stat.get("min"), 'max': stat.get("max")},
-                # 'stat_min_value': stat_data.get("min"),
-                # 'stat_max_value': stat_data.get("max")
+        return [
+            {
+                "stat": stat.get("id"),
+                "values": {"min": stat.get("min"), "max": stat.get("max")},
             }
-            stats_list.append(stat_data_dict)
-        return stats_list
+            for stat in mod_data.get("stats", [])
+        ]
 
     def get_mod_data(self, mod, mod_data):
-        mod_dict = {
+        return {
             'mod_name': mod,
             'level_req': mod_data.get("required_level"),
             'name': mod_data.get("name"),
@@ -201,10 +168,9 @@ class ModParser:
             'spawn_weights_list': self.get_spawn_weights(mod_data),
             'stats_list': self.get_stats(mod_data)
         }
-        return mod_dict
 
 
 if __name__ == "__main__":
     mod_parser = ModParser()
-    mod_list = mod_parser.get_all_mods()
+    mod_list = mod_parser.parse_mods_json()
     print(mod_list)

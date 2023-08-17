@@ -23,6 +23,7 @@
 # ##############################################################################
 
 import time
+
 import pytest
 
 from modules.tray import hotkey_methods

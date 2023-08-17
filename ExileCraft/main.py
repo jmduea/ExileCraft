@@ -26,7 +26,6 @@ import os
 import sys
 from pathlib import Path
 
-from PySide6.QtGui import QFont
 from PySide6.QtWidgets import QApplication
 
 from modules.gui.uis.windows.main_window.main_window import MainWindow
@@ -39,18 +38,50 @@ os.environ["QT_FONT_DPI"] = "96"
 
 base_dir = Path(__file__).parent
 
+
+def main():
+    """
+    Runs the main application.
+
+    This method initializes and runs the main application window using PySide6. It also sets up the tray icon and
+    menus, registers hotkeys, and handles any exceptions that occur.
+
+    Returns
+    -------
+    None
+
+    Raises
+    ------
+    Exception
+        If an error occurs during the execution of the main application.
+
+    Example
+    -------
+    >>> main()
+    """
+    try:
+        app = QApplication([])
+        app.setStyle("Fusion")
+        # app.setQuitOnLastWindowClosed(False)
+        main_window = MainWindow()
+
+        # Initialize the splash_screen
+        window = main_window
+        window.show()
+
+        # Set up tray icon and menus
+        tray = setup_tray(app, main_window)
+        if tray is None:
+            print("Tray setup failed")
+            return
+        # Register hotkeys
+        register_hotkey(main_window)
+
+        app.exec()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        sys.exit(1)
+
+
 if __name__ == "__main__":
-    app = QApplication()
-    app.setFont(QFont("fontin-regular", 12))
-    # app.setQuitOnLastWindowClosed(False)
-    main_window = MainWindow()
-
-    window = main_window.splash_screen
-
-    # Set up tray icon
-    tray = setup_tray(app, main_window)
-
-    # Registers hotkeys
-    register_hotkey(main_window)
-
-    sys.exit(app.exec())
+    main()
