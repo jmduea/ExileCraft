@@ -27,14 +27,20 @@ import time
 import pytest
 
 from modules.tray import hotkey_methods
-from modules.tray.hotkey_methods import HOTKEY_DELAY, last_hotkey_trigger_time, toggle_visibility
+from modules.tray.hotkey_methods import (
+    HOTKEY_DELAY,
+    last_hotkey_trigger_time,
+    toggle_visibility,
+)
 
 
 class TestToggleVisibility:
     @pytest.fixture(autouse=True)
     def reset_last_hotkey_trigger_time(self):
         hotkey_methods.last_hotkey_trigger_time = 0
-        print(f"reset_last_hotkey_trigger_time: {hotkey_methods.last_hotkey_trigger_time}")
+        print(
+            f"reset_last_hotkey_trigger_time: {hotkey_methods.last_hotkey_trigger_time}"
+        )
 
     def test_toggle_visibility_visible_window(self, mocker):
         """

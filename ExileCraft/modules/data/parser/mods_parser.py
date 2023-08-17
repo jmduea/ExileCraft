@@ -34,7 +34,9 @@ from modules.shared.config.constants import domain_whitelist
 
 script_path = os.path.realpath(__file__)
 base_dir = get_base_dir(script_path)
-abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'mods.json'))
+abs_path_to_json = get_abs_path(
+    base_dir, os.path.join(r"ExileCraft\modules\data", "json", "mods.json")
+)
 
 
 class ModParser:
@@ -71,7 +73,10 @@ class ModParser:
 
     @staticmethod
     def is_data_valid(data):
-        return data.get("domain") in domain_whitelist and data.get("generation_type") != "<unknown>"
+        return (
+            data.get("domain") in domain_whitelist
+            and data.get("generation_type") != "<unknown>"
+        )
 
     @staticmethod
     def get_mod_data_by_key(mod_data, key):
@@ -101,8 +106,10 @@ class ModParser:
         return mod_type
 
     def get_all_mod_groups(self):
-        return [{"groups": group["groups"][0]}
-                for group in self.get_all_mod_data_for_key("groups")]
+        return [
+            {"groups": group["groups"][0]}
+            for group in self.get_all_mod_data_for_key("groups")
+        ]
 
     @staticmethod
     def get_mod_group(mod_data):
@@ -111,15 +118,14 @@ class ModParser:
         return group
 
     def get_all_mods(self):
-        return [self.get_mod_data(mod, mod_data)
-                for mod, mod_data in self.bounded_data.items()]
+        return [
+            self.get_mod_data(mod, mod_data)
+            for mod, mod_data in self.bounded_data.items()
+        ]
 
     @staticmethod
     def extract_weight_data(weight_data):
-        return {
-            "tag": weight_data.get("tag"),
-            "weight": weight_data.get("weight")
-        }
+        return {"tag": weight_data.get("tag"), "weight": weight_data.get("weight")}
 
     def get_all_mod_dicts(self):
         data = self._data
@@ -140,8 +146,10 @@ class ModParser:
         return mod_data.get("implicit_tags", [])
 
     def get_spawn_weights(self, mod_data):
-        return [self.extract_weight_data(weight_data)
-                for weight_data in mod_data.get("spawn_weights", [])]
+        return [
+            self.extract_weight_data(weight_data)
+            for weight_data in mod_data.get("spawn_weights", [])
+        ]
 
     @staticmethod
     def get_stats(mod_data):
@@ -155,18 +163,18 @@ class ModParser:
 
     def get_mod_data(self, mod, mod_data):
         return {
-            'mod_name': mod,
-            'level_req': mod_data.get("required_level"),
-            'name': mod_data.get("name"),
-            'is_essence_only': mod_data.get("is_essence_only"),
-            'domain': mod_data.get('domain'),
-            'generation_type': mod_data.get('generation_type'),
-            'group': mod_data.get('groups')[0],
-            'type': mod_data.get('type'),
-            'added_tags_list': self.get_added_tags(mod_data),
-            'implicit_tags_list': self.get_implicit_tags(mod_data),
-            'spawn_weights_list': self.get_spawn_weights(mod_data),
-            'stats_list': self.get_stats(mod_data)
+            "mod_name": mod,
+            "level_req": mod_data.get("required_level"),
+            "name": mod_data.get("name"),
+            "is_essence_only": mod_data.get("is_essence_only"),
+            "domain": mod_data.get("domain"),
+            "generation_type": mod_data.get("generation_type"),
+            "group": mod_data.get("groups")[0],
+            "type": mod_data.get("type"),
+            "added_tags_list": self.get_added_tags(mod_data),
+            "implicit_tags_list": self.get_implicit_tags(mod_data),
+            "spawn_weights_list": self.get_spawn_weights(mod_data),
+            "stats_list": self.get_stats(mod_data),
         }
 
 
