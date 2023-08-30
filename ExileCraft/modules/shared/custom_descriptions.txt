@@ -1,0 +1,1308 @@
+// Version 1.0.0a0
+
+// TODO: duplicate
+description
+	1 action_speed_-%
+	2
+	    1|# "{0}% reduced Movement, Cast and Attack Speed"
+	    #|-1 "increased Movement, Cast and Attack Speed" negate 1
+
+description
+	1 active_skill_cast_speed_+%_final
+	2
+		1|# "{0}% more Cast Speed"
+		#|-1 "{0}% less Cast Speed" negate 1
+
+description
+	1 active_skill_cast_speed_+%_final
+	2
+		1|# "{0}% more Cast Speed"
+		#|-1 "{0}% less Cast Speed" negate 1
+
+description
+    1 actor_scale_+%_granted_to_pack_members_on_death
+    2
+		1|# "Grants {0}% increased Character Size to Pack Members on death"
+		#|-1 "Grants {0}% reduced Character Size to Pack Members on death" negate 1
+
+description
+	1 accuracy_rating_per_level
+	1
+		# "+{0} Accuracy Rating per Level"
+
+description
+	1 additional_insanity_effects_while_delirious
+	1
+		1|# "Insanity effects while delirious"
+
+description
+	1 always_cause_elemental_status_ailment
+	1
+		# "Always cause Elemental Status Ailments"
+
+description
+	1 apply_X_random_curses_on_hit
+	2
+		1 "Applies {0} random Curse on hit"
+		# "Applies {0} random Curses on hit"
+
+description
+	1 attack_speed_+%_per_bloodline_speed_charge
+	2
+		1|# "{0}% increased Attack Speed per Bloodline Speed Charge"
+		#|-1 "{0}% reduced Attack Speed per Bloodline Speed Charge" negate 1
+
+description
+	1 base_attacks_poison
+	1
+		1|# "Attacks poison"
+
+description
+	1 base_cast_speed_+%_per_frenzy_charge
+	1
+		# "{0}% increased Cast Speed per Frenzy Charge"
+
+description
+	1 base_critical_strike_multiplier
+	1
+		# "Base Critical Strike Multiplier: {0}"
+
+description
+    1 base_fire_damage_%_of_maximum_life_plus_maximum_ES_taken_per_minute
+    1
+        # "Takes {0} of Maximum Life and Maximum Energy Shield as Fire Damage per second" per_minute_to_per_second 1
+
+description
+    1 base_physical_damage_%_of_maximum_life_taken_per_minute
+    1
+        # "Takes {0} of Maximum Life as Physical Damage per second" per_minute_to_per_second 1
+
+description
+    1 base_monster_will_be_deleted_on_death
+    2
+        1|# "Monster corpse will be removed"
+        0 "Monster corpse will be preserved"
+
+description
+	1 bleeding_moving_damage_%_of_base_override
+	1
+		# "Bleeding while moving deals {0}% of base damage"
+
+description
+    1 bloodlines_animate_guardian_on_death
+    1
+        1|# "Summons Bloodline Animate Guardian on Death"
+
+description
+	1 bloodlines_corrupted_blood_%_average_damage_to_deal_per_minute_per_stack_for_20_pack_members
+	1
+		# "Each Corrupted Blood stack deals {0}% of average Monster Damage per second for every 20 Pack Members" per_minute_to_per_second 1
+
+description
+	1 bloodlines_full_guardian_size_+%_on_death
+	2
+		1|# "Grants Bloodline Animated Guardian {0}% increased Character Size on death"
+		#|-1 "Grants Bloodline Animated Guardian {0}% reduced Character Size on death" negate 1
+
+description
+	1 bloodlines_guardian_attack_speed_+%_on_death
+	2
+		1|# "Grants Bloodline Animated Guardian {0}% increased Attack Speed on death"
+		#|-1 "Grants Bloodline Animated Guardian {0}% reduced Attack Speed on death" negate 1
+
+description
+	1 bloodlines_guardian_damage_+%_on_death
+	2
+		1|# "Grants Bloodline Animated Guardian {0}% increased Damage on death"
+		#|-1 "Grants Bloodline Animated Guardian {0}% reduced Damage on death" negate 1
+
+description
+	1 bloodlines_guardian_movement_speed_+%_on_death
+	2
+		1|# "Grants Bloodline Animated Guardian {0}% increased Movement Speed on death"
+		#|-1 "Grants Bloodline Animated Guardian {0}% reduced Movement on death" negate 1
+
+description
+	1 bloodlines_monster_unholy_might_damage_taken_+%
+	2
+		1|# "Monster takes {0}% increased Damage while Unholy Might is active"
+		#|-1 "Monster takes {0}% reduced Damage while Unholy Might is active" negate 1
+
+description
+	1 bloodlines_monster_unholy_might_duration_ms
+	1
+		# "Unholy Might lasts for {0} seconds" milliseconds_to_seconds 1
+
+description
+	1 bloodlines_shrouded
+	1
+		1|# "Shrouded"
+
+// TODO: Type 1-3 specifics?
+description
+	1 bloodline_summon_blood_monster_on_pack_death
+	1
+		# "Summons Congealed Blood {0} on pack death"
+
+description
+	1 buff_time_passed_-%
+	2
+	    1|# "Effects expire {0}% slower"
+	    #|-1 "Effects expire {0}% faster" negate 1
+
+description
+    1 cannot_be_dominated
+    1
+        # "Can not be dominated"
+
+description
+    1 cannot_be_taunted_when_taunted_ms
+    1
+        # "Can not be taunted for {0} seconds" milliseconds_to_seconds 1
+
+description
+    1 cannot_die
+    2
+        1|# "Can not die"
+        0 "Can die"
+
+description
+    1 cannot_die_and_damage_+%_near_pack_corpse
+    1
+        # "Monster can not die and deals {0}% increased Damage near Pack Corpses"
+
+description
+	1 cast_speed_+%_per_bloodline_speed_charge
+	2
+		1|# "{0}% increased Cast Speed per Bloodline Speed Charge"
+		#|-1 "{0}% reduced Cast Speed per Bloodline Speed Charge" negate 1
+
+description
+    1 cant_possess_this
+    1
+        1|# "Can not be possessed by a Torment Spirit"
+
+description
+    1 cant_touch_this
+    1
+        1|# "Can not be touched by a Torment Spirit"
+
+description
+	1 chance_to_apply_suppression_on_hit_%
+	2
+		100 "Always apply Suppression on hit"
+		#|99 "{0}% Chance to apply Suppression on hit"
+
+description
+    1 chest_delay_drops_until_daemons_finish
+    1
+        1|# "Items will not drop until all Bloodline Daemons are killed."
+
+description
+    1 chest_hidden_item_quantity_+%
+    2
+		1|# "{0}% increased Quantity of Contained Items"
+		#|-1 "{0}% reduced Quantity of Contained Items" negate 1
+
+description
+    1 chest_hidden_item_rarity_+%
+    2
+		1|# "{0}% increased Rarity of Contained Items"
+		#|-1 "{0}% reduced Rarity of Contained Items" negate 1
+
+description
+    1 chest_number_of_additional_spider_uniques_to_drop
+    2
+		1 "Drops {0} additional Spider Unique"
+		# "Drops {0} additional Spider Uniques"
+
+// TODO: More detailed?
+description
+	1 chest_play_warning_sound
+	1
+		1|# "Chest plays warning sound"
+
+// TODO: Maybe mention block
+description
+    1 consecrate_on_block_%_life_regen_per_minute
+    1
+        # "Consecrated Ground regenerates {0}% Life per second" per_minute_to_per_second 1
+
+description
+    1 consecrate_on_block_base_radius
+    1
+        # "Consecrated Ground has a radius of {0}"
+
+description
+    1 consecrate_on_block_duration_ms
+    1
+        1 "Consecrated Ground lasts {0} second" milliseconds_to_seconds_0dp 1
+        # "Consecrated Ground lasts {0} seconds" milliseconds_to_seconds 1
+
+description
+    1 corpse_cannot_be_destroyed
+    1
+        # "Corpse can not be destroyed"
+
+description
+    1 curse_when_hit_%_silence
+    1
+        100 "Applies Silence on hit"
+        1|99 "Has a {0}% Chance to apply Silence on hit"
+
+description
+    1 cyclone_extra_distance
+    1
+        # "Cyclone travels {0} additional units"
+
+description
+	1 damage_+%_per_bloodline_damage_charge
+	2
+		1|# "{0}% increased Damage per Bloodline Damage Charge"
+		#|-1 "{0}% reduced Damage per Bloodline Damage Charge" negate 1
+
+description
+	1 damage_+%_per_10_rampage_stacks
+	1
+		# "{0}% increased Damage per 10 Rampage Stacks"
+
+description
+	1 damage_taken_+%_per_bloodline_damage_charge
+	2
+		1|# "{0}% increased Damage Taken per Bloodline Damage Charge"
+		#|-1 "{0}% reduced Damage Taken per Bloodline Damage Charge" negate 1
+
+description
+    1 desecrate_on_block_%_life_regen_per_minute
+    1
+        # "Desecrated Ground regenerates {0} Life per second" per_minute_to_per_second 1
+
+description
+    1 desecrate_on_block_base_chaos_damage_to_deal_per_minute
+    1
+        # "Desecrated Ground deals {0} Chaos Damage per second" per_minute_to_per_second 1
+
+description
+    1 desecrate_on_block_base_radius
+    1
+        # "Desecrated Ground has a radius of {0}"
+
+description
+    1 desecrate_on_block_duration_ms
+    1
+        1 "Desecrated Ground lasts {0} second" milliseconds_to_seconds_0dp 1
+        # "Desecrated Ground lasts {0} seconds" milliseconds_to_seconds 1
+
+description
+	1 dexterity_per_level
+	1
+		# "+{0} Dexterity per Level"
+
+description
+	1 display_monster_is_apparition
+	1
+		1|# "Apparition"
+
+description
+	1 dual_wield_inherent_attack_speed_+%_final
+	1
+		# "{0}% more Attack Speed while Dual Wielding"
+
+description
+	1 dual_wield_inherent_physical_attack_damage_+%_final
+	1
+		# "{0}% more Attack Physical Damage while Dual Wielding"
+
+description
+	1 dummy_stat_display_nothing
+	1
+		# ""
+
+description
+	1 elemental_damage_taken_%_to_deal_to_attacker
+	1
+		# "{0}% of Elemental Damage taken reflected to Attacker"
+
+description
+	1 enable_movement_skill_animation_skipping
+	1
+		1|# "Movement skill animations can be skipped"
+
+description
+    1 energy_shield_recovery_speed_+%_final_from_map
+    2
+        1|# "Area gives {0}% more Energy Shield Recovery Speed"
+        #|-1 "Area gives {0}% less Energy Shield Recovery Speed" negate 1
+
+description
+	1 evasion_rating_per_level
+	1
+		# "+{0} Evasion Rating per Level" divide_by_one_hundred 1
+
+description
+	1 explode_on_death_%_main_hand_damage_to_deal_as_chaos
+	1
+		# "Explodes on death dealing {0}% of main hand damage as Chaos Damage"
+
+description
+	1 explode_on_death_%_main_hand_damage_to_deal_as_cold
+	1
+		# "Explodes on death dealing {0}% of main hand damage as Cold Damage"
+
+description
+	1 explode_on_death_%_main_hand_damage_to_deal_as_fire
+	1
+		# "Explodes on death dealing {0}% of main hand damage as Fire Damage"
+
+description
+	1 explode_on_death_%_main_hand_damage_to_deal_as_lightning
+	1
+		# "Explodes on death dealing {0}% of main hand damage as Lightning Damage"
+
+description
+    1 emerge_speed_+%
+    2
+		1|# "{0}% increased Emerge Speed"
+		#|-1 "{0}% reduced Emerge Speed" negate 1
+
+// Todo: one for each variation? 1 to 8, 12, 14 to 19
+description
+    1 footstep_effect_variation
+    1
+        # "Uses footstep variation {0}"
+
+description
+	1 from_armour_movement_speed_+%
+	2
+		1|# "{0}% increased Movement Speed"
+		#|-1 "{0}% reduced Movement Speed" negate 1
+
+// TODO: is that for those blood eater stacks or w/e they are called?
+description
+    1 grant_actor_scale_+%_to_aura_owner_on_death
+    2
+		1|# "Grants {0}% increased Character Size to aura owner on death"
+		#|-1 "Grants {0}% reduced Character Size to aura owner on death" negate 1
+
+description
+    1 grant_attack_speed_+%_to_aura_owner_on_death
+    2
+		1|# "Grants {0}% increased Attack Speed to aura owner on death"
+		#|-1 "Grants {0}% reduced Attack Speed to aura owner on death" negate 1
+
+description
+    1 grant_cast_speed_+%_to_aura_owner_on_death
+    2
+		1|# "Grants {0}% increased Cast Speed to aura owner on death"
+		#|-1 "Grants {0}% reduced Cast Speed to aura owner on death" negate 1
+
+description
+    1 grant_damage_reduction_%_to_aura_owner_on_death
+    2
+		1|# "Grants {0}% increased Damage Reduction to aura owner on death"
+		#|-1 "Grants {0}% reduced Damage Reduction to aura owner on death" negate 1
+
+
+description
+	1 ground_tar_on_take_crit_duration_ms
+	2
+	    1 "Tar lasts {0} second" milliseconds_to_seconds 1
+		# "Tar lasts {0} seconds" milliseconds_to_seconds 1
+
+// Yes, actually spelt: monvement
+description
+	1 ground_tar_on_take_crit_monvement_speed_pluspercent
+	1
+	    # "When hit by a Critical Strike, creates patches of Tar reducing Movement Speed by {0}%" negate 1
+
+description
+	1 ignore_skill_weapon_restrictions
+	1
+		1|# "Skill weapon restrictions are ignored"
+
+description
+	1 intelligence_per_level
+	1
+		# "+{0} Intelligence per Level"
+
+description
+	1 impaled_debuff_base_duration_ms
+	2
+	    1 "Impale lasts {0} second" milliseconds_to_seconds 1
+		# "Impale lasts {0} seconds" milliseconds_to_seconds 1
+
+description
+    1 is_chilled
+    1
+        1|# "Chilled"
+
+description
+    1 is_cursed
+    1
+        1|# "Cursed"
+
+description
+    1 is_hidden_monster
+    1
+        1|# "Hidden Monster"
+
+description
+	1 is_player
+	1
+		1|# "Is player"
+
+description
+    1 is_shocked
+    1
+        1|# "Shocked"
+
+description
+    1 item_drop_slots
+    1
+        # "{0} item drop slots"
+
+description
+	1 level
+	1
+		# "Level {0}"
+
+description
+	1 level_1_to_40_life_+%_final
+	2
+		1|# "{0}% more Maximum Life between level 1 and 40"
+		#|-1 "{0}% less Maximum Life between level 1 and 40" negate 1
+
+description
+	1 level_41_to_57_life_+%_final
+	2
+		1|# "{0}% more Maximum Life between level 41 and 57"
+		#|-1 "{0}% less Maximum Life between level 41 and 57" negate 1
+
+description
+	1 level_11_or_lower_life_+%_final
+	2
+		1|# "{0}% more Maximum Life below or equal to level 11"
+		#|-1 "{0}% less Maximum Life below or equal to level 11" negate 1
+
+description
+	1 level_33_or_lower_damage_+%_final
+	2
+		1|# "{0}% more Damage below or equal to level 33"
+		#|-1 "{0}% less Damage below or equal to level 33" negate 1
+
+description
+	1 level_33_or_lower_life_+%_final
+	2
+		1|# "{0}% more Maximum Life below or equal to level 33"
+		#|-1 "{0}% less Maximum Life below or equal to level 33" negate 1
+
+description
+    1 life_recovery_speed_+%_final_from_map
+    2
+        1|# "Area gives {0}% more Life Recovery Speed"
+        #|-1 "Area gives {0}% less Life Recovery Speed" negate 1
+
+description
+    1 local_level_requirement_+
+    2
+        1|# "Level Requirement increased by {0}"
+        #|-1 "Level Requirement reduced by {0}" negate 1
+
+description
+    1 local_six_linked_sockets
+    1
+        # "Item has 6 Sockets and is fully linked"
+
+description
+    1 local_six_linked_white_sockets
+    1
+        # "Item has 6 White Sockets and is fully linked"
+
+description
+    1 local_unique_item_limit
+    1
+        # "Limited to {0}"
+
+description
+	1 local_unique_tabula_rasa_no_requirement_or_energy_shield
+	1
+		# "Item has no level requirement and Energy Shield"
+
+description
+    1 mana_recovery_speed_+%_final_from_map
+    2
+        1|# "Area gives {0}% more Mana Recovery Speed"
+        #|-1 "Area gives {0}% less Mana Recovery Speed" negate 1
+
+description
+	1 map_aoe_daemons_per_100_tiles
+	1
+		# "%s% Demons per 100 Tiles"
+
+description
+    1 map_bosses_have_phylacteral_link
+    1
+        # "Map bosses have Phylacteral Link"
+
+description
+	1 map_disable_chest_drop_scaling
+	2
+		1|# "Chest drop scaling is disabled."
+		0 "Chest drop scaling is enabled."
+
+// TODO: No masters or no missions
+description
+	1 map_disable_missions
+	1
+		# "Area does not contain Masters"
+
+description
+	1 map_display_two_bosses
+	1
+		# "Area contains two Bosses"
+
+description
+	1 map_ground_effect_patches_per_100_tiles
+	1
+		# "{0} patches with Ground Effect per 100 tiles"
+
+description
+	1 map_ground_effect_radius
+	1
+		# "Ground Effect has a radius of {0}"
+
+description
+	1 map_has_weather
+	1
+		# "Area has weather effects"
+
+description
+	1 map_hidden_experience_gain_+%
+	2
+		1|# "Area grants {0}% increased Experience gain"
+		#|-1 "Area grants {0}% reduced Experience gain" negate 1
+
+description
+	1 map_hidden_magic_pack_mod_rules
+	1
+		# "Magic Monster Packs each have a Bloodline Mod"
+
+description
+	1 map_hidden_monster_life_+%_final
+	2
+		1|# "{0}% more Maximum Life"
+		#|-1 "{0}% less Maximum Life" negate 1
+
+description
+	1 map_hidden_monsters_%_physical_damage_to_add_as_chaos
+	1
+		# "Monsters deal {0}% extra Damage as Chaos"
+
+description
+	1 map_hidden_monsters_%_physical_damage_to_add_as_cold
+	1
+		# "Monsters deal {0}% extra Damage as Cold"
+
+description
+	1 map_hidden_monsters_%_physical_damage_to_add_as_fire
+	1
+		# "Monsters deal {0}% extra Damage as Fire"
+
+description
+	1 map_hidden_monsters_%_physical_damage_to_add_as_lightning
+	1
+		# "Monsters deal {0}% extra Damage as Lightning"
+
+description
+	1 map_hidden_monsters_additional_cold_resistance
+	1
+		# "+{0}% Monster Cold Resistance"
+
+description
+	1 map_hidden_monsters_additional_fire_resistance
+	1
+		# "+{0}% Monster Fire Resistance"
+
+description
+	1 map_hidden_monsters_additional_lightning_resistance
+	1
+		# "+{0}% Monster Lightning Resistance"
+
+description
+	1 map_hidden_monsters_poison_on_hit
+	1
+		# "Monsters Poison on Hit"
+
+description
+	1 map_hidden_num_extra_invasion_bosses
+	2
+		1 "Area is inhabited by {0} additional Invasion Boss"
+		2|# "Area is inhabited by {0} additional Invasion Bosses"
+
+description
+	1 map_hidden_packs_are_totems
+	1
+		# "Area contains many Totems"
+
+description
+	1 map_hidden_rare_monsters_have_nemesis_mod
+	1
+		# "Rare Monsters each have a Nemesis Mod"
+
+description
+	1 map_hidden_spawn_extra_exiles
+	2
+		1 "Area is inhabited by {0} additional Rogue Exile"
+		2|# "Area is inhabited by {0} additional Rogue Exiles"
+
+description
+	1 map_hidden_spawn_extra_torment_spirits
+	2
+		1 "Area is haunted by {0} additional Tormented Spirit"
+		2|# "Area is haunted by {0} additional Tormented Spirits"
+
+description
+	1 map_ignore_extra_monster_rarity_bias
+	1
+		# "Extra monsters ignore rarity bias"
+
+description
+	1 map_items_have_random_quality
+	1
+		# "Area drops items with random Quality"
+
+description
+    1 map_max_warband_rank
+    1
+        # "Warbands have a maximum tier of {0}"
+
+description
+    1 map_monsters_drop_ground_fire_on_death_duration_ms
+    2
+        1 "Monsters create Burning Ground for {0} second on death" milliseconds_to_seconds 1
+        # "Monsters create Burning Ground for {0} seconds on death" milliseconds_to_seconds 1
+
+description
+    1 map_monsters_drop_ground_fire_on_death_%_max_damage_to_deal_per_minute
+    1
+        1 "Burning Ground deals {0}% Fire Damage per second" per_minute_to_per_second 1
+
+description
+	1 map_no_exiles
+	1
+		# "Area does not contain Rogue Exiles"
+
+description
+	1 map_no_strongboxes
+	1
+		# "Area does not contain Strongboxes"
+
+description
+	1 map_num_initial_wave_monsters
+	1
+		# "{0} Monsters on first wave"
+
+description
+	1 map_override_extra_monster_min_level
+	1
+		# "Extra monsters have their level increased by {0}"
+
+description
+    1 map_set_league_category
+    29
+        0 "Standard"
+        1 "Hardcore"
+        2 "Anarchy"
+        3 "Onslaught"
+        4 "???"
+        5 "Domination"
+        6 "Nemesis"
+        7 "Ambush"
+        8 "Invasion"
+        9 "Rampage"
+        10 "Beyond"
+        11 "Torment"
+        12 "Bloodlines"
+        13 "Warbands"
+        14 "Tempest"
+        15 "???"
+        16 "???"
+        17 "Talisman"
+        18 "Perandus"
+        19 "Prophecy"
+        20 "Essence"
+        21 "Breach"
+        22 "Legacy"
+        23 "Harbinger"
+        24 "Abyss"
+        25 "Bestiary"
+        26 "Incursion"
+        27 "Delve"
+        # "League {0}"
+
+description
+	1 map_side_area_chance_+%
+	2
+		1|# "Area has a {0}% Chance to contain a Vaal Area"
+		0 "Area can not contain Vaal Areas"
+
+description
+    1 map_spawn_warband_chaos
+    1
+        # "Area contains Chaos Warbands"
+
+description
+    1 map_spawn_warband_fire
+    1
+        # "Area contains Fire Warbands"
+
+description
+    1 map_spawn_warbands
+    1
+        # "Area contains Warbands"
+
+description
+	1 map_storm_buff_duration_+%
+	2
+		1|# "Buffs applied by Tempests have {0}% increased Duration"
+		#|-1 "Buffs applied by Tempests have {0}% reduced Duration" negate 1
+
+description
+	1 map_storm_buff_duration_+%_on_low_life_target
+	2
+		1|# "Buffs applied by Tempests on targets with Low Life have {0}% increased Duration"
+		#|-1 "Buffs applied by Tempests on targets with Low Life have {0}% reduced Duration" negate 1
+
+description
+	1 map_storm_delay_+%_final
+	2
+		1|# "Tempests have {0}% more Delay"
+		#|-1 "Tempests have {0}% less Delay" negate 1
+
+description
+	1 map_storm_duration_+%_final
+	2
+		1|# "Tempests have {0}% more Duration"
+		#|-1 "Tempests have {0}% less Duration" negate 1
+
+// TODO: the exact tempest id?  1 to 52, 1 to 59
+description
+    1 map_summon_exploding_buff_storms
+    1
+        # "Area contains Tempests"
+
+description
+    1 map_summon_runic_circles
+    1
+        # "Area contains Tempests"
+
+description
+    1 map_tempest_fish_school_size_+%
+    1
+        1|# "{0}% increased Fish School size"
+
+description
+	1 map_tempest_ground_effect_patches_per_100_tiles
+	1
+		# "{0} patches with a Tempest Ground Effect per 100 tiles"
+
+description
+	1 map_tempest_ground_effect_radius
+	1
+		# "Tempest Ground Effect has a radius of {0}"
+
+description
+    1 map_tempest_random_monster_drops_map
+    1
+        # "A random Monster drops a map item"
+
+description
+    1 map_tempest_random_monster_drops_vaal_fragment
+    1
+        # "A random Monster drops a Vaal Fragment"
+
+description
+    1 map_tempest_random_monster_drops_unique
+    1
+        1|# "A random Monster drops an Unique item"
+
+description
+	1 map_undead_monsters_get_up_after_X_seconds
+	1
+		# "Undead Monsters resurrect after {0} seconds"
+
+description
+	1 map_wave_monster_increment
+	1
+		# "{0} additional Monsters per wave"
+
+description
+	1 max_azurite_debuff_stacks
+	1
+		# "Can have up to {0} Azurite Stacks"
+
+description
+	1 max_corrupted_blood_rain_stacks
+	1
+		# "Can have up to {0} Corrupted Blood Rain Stacks"
+
+description
+	1 max_corrupted_blood_stacks
+	1
+		# "Can have up to {0} Corrupted Blood Stacks"
+
+description
+	1 max_delve_degen_stacks
+	1
+		# "Can have up to {0} Darkness Stacks"
+
+description
+	1 max_fire_beam_stacks
+	1
+		# "Can have up to {0} Fire Beam Stacks"
+
+description
+	1 max_frost_nova_stacks
+	1
+		# "Can have up to {0} Frost Nova Stacks"
+
+description
+	1 max_fuse_arrow_orbs
+	1
+		# "Can have up to {0} Explosive Arrow Stacks"
+
+description
+	1 max_rampage_stacks
+	1
+		# "Can have up to {0} Rampage Stacks"
+
+description
+	1 max_talisman_degen_stacks
+	1
+		# "Can have up to {0} Talisman degen Stacks"
+
+description
+	1 max_viper_strike_orbs
+	1
+		# "Can have up to {0} Viper Strike Orbs"
+
+description
+	1 maximum_bloodline_damage_charges
+	1
+		# "Can have up to {0} Bloodline Damage Charges"
+
+description
+	1 maximum_bloodline_speed_charges
+	1
+		# "Can have up to {0} Bloodline Speed Charges"
+
+description
+	1 maximum_dodge_chance_%
+	1
+		# "Can have up to {0}% Dodge Chance"
+
+description
+	1 maximum_life_%_to_add_to_maximum_energy_shield
+	1
+		# "{0}% of Maximum Life is added to Maximum Energy Shield"
+
+description
+	1 maximum_life_+%_granted_to_pack_members_on_death
+	2
+		1|# "Grants {0}% increased Maximum Life to Pack Members on death"
+		#|-1 "Grants {0}% reduced Maximum Life to Pack Members on death" negate 1
+
+description
+	1 maximum_righteous_charges
+	1
+		# "Can have up to {0} Righteous Charges"
+
+description
+	1 maximum_spell_dodge_chance_%
+	1
+		# "Can have up to {0}% Spell Dodge Chance"
+
+description
+	1 melee_hit_damage_stun_multiplier_+%
+	1
+		# "Melee Damage counts as {0}% more for Stuns"
+
+description
+	1 minion_damage_+%_per_10_rampage_stacks
+	1
+		# "Minions deal {0}% increased Damage per 10 Rampage Stacks"
+
+description
+	1 minion_damage_taken_+%_from_guillotine_traps_final
+	2
+		1|# "Minions take {0}% more Damage from Guillotine Traps"
+		#|-1  "Minions take {0}% less Damage from Guillotine Traps" negate 1
+
+description
+	1 minion_damage_taken_+%_from_spike_traps_final
+	2
+		1|# "Minions take {0}% more Damage from Spike Traps"
+		#|-1  "Minions take {0}% less Damage from Spike Traps" negate 1
+
+description
+	1 minions_have_labyrinth_trap_degen_effect_+%
+	2
+		1|# "Minions take {0}% more Damage over Time by Labyrinth Traps"
+		#|-1  "Minions take {0}% less Damage over Time by Labyrinth Traps" negate 1
+
+description
+	1 minion_movement_velocity_+%_per_10_rampage_stacks
+	1
+		# "Minions gain {0}% increased Movement Speed per 10 Rampage Stacks"
+
+description
+    1 monster_additional_quantity_of_dropped_items_in_cruel_+%
+    2
+        1|# "{0}% increased Quantity of Items dropped by this Monster in Cruel difficulty"
+        #|-1 "{0}% reduced Quantity of Items dropped by this Monster in Cruel difficulty" negate 1
+
+description
+    1 monster_additional_rarity_of_dropped_items_in_cruel_+%
+    2
+        1|# "{0}% increased Rarity of Items dropped by this Monster in Cruel difficulty"
+        #|-1 "{0}% reduced Rarity of Items dropped by this Monster in Cruel difficulty" negate 1
+
+description
+    1 monster_additional_quantity_of_dropped_items_in_merciless_+%
+    2
+        1|# "{0}% increased Quantity of Items dropped by this Monster in Merciless difficulty"
+        #|-1 "{0}% reduced Quantity of Items dropped by this Monster in Merciless difficulty" negate 1
+
+description
+    1 monster_additional_rarity_of_dropped_items_in_merciless_+%
+    2
+        1|# "{0}% increased Rarity of Items dropped by this Monster in Merciless difficulty"
+        #|-1 "{0}% reduced Rarity of Items dropped by this Monster in Merciless difficulty" negate 1
+
+description
+	1 monster_base_type_attack_cast_speed_+%_and_damage_-%_final
+	1
+		# "Monster has {0}% more Attack Speed, {0}% more Cast Speed and {0}% less Damage"
+
+description
+	1 monster_bleeding_damage_+%_final
+	2
+		1|# "Monsters deal {0}% more Bleeding Damage"
+		#|-1  "Monsters deal {0}% less Bleeding Damage" negate 1
+
+description
+    1 monster_chance_to_not_flee_%
+    2
+        100 "Monster does not flee."
+        #|99 "Monster has a {0}% chance not to flee."
+
+no_description map_debug_disable_nonboss_monsters
+
+description
+    1 monster_do_not_fracture
+    1
+        # "Monster does not fracture"
+
+description
+    1 monster_drop_additional_currency_items
+    2
+        1 "Monster drops {0} additional Currency Item"
+        # "Monster drops {0} additional Currency Items"
+
+description
+    1 monster_drop_additional_map_items
+    2
+        1 "Monster drops {0} additional Map"
+        # "Monster drops {0} additional Maps"
+
+description
+    1 monster_drop_additional_portal_scrolls
+    2
+        1 "Monster drops {0} additional Portal Scroll"
+        # "Monster drops {0} additional Portal Scrolls"
+
+description
+    1 monster_drop_additional_rare_items
+    2
+        1 "Monster drops {0} additional Rare Item"
+        # "Monster drops {0} additional Rare Items"
+
+description
+    1 monster_drop_additional_rings_amulets
+    2
+        1 "Monster drops {0} additional Ring or Amulet"
+        # "Monster drops {0} additional Rings or Amulets"
+
+description
+    1 monster_drop_additional_unique_items
+    2
+        1 "Monster drops {0} additional Unique Item"
+        # "Monster drops {0} additional Unique Items"
+
+description
+    1 monster_drop_additional_vaal_items
+    2
+        1 "Monster drops {0} additional Vaal Item"
+        # "Monster drops {0} additional Vaal Items"
+
+description
+    1 monster_drop_additional_wisdom_scrolls
+    2
+        1 "Monster drops {0} additional Wisdom Scroll"
+        # "Monster drops {0} additional wisdom Scrolls"
+
+description
+    1 monster_drop_higher_level_gear
+    2
+        1 "Monster drops gear {0} level above its own level"
+        # "Monster drops gear {0} levels above its own level"
+
+description
+    1 monster_dropped_item_quantity_+%
+    2
+        1|# "{0}% increased Quantity of Items dropped by this Monster"
+        #|-1 "{0}% reduced Quantity of Items dropped by this Monster" negate 1
+
+description
+    1 monster_dropped_item_rarity_+%
+    2
+        1|# "{0}% increased Rarity of Items dropped by this Monster"
+        #|-1 "{0}% reduced Rarity of Items dropped by this Monster" negate 1
+
+description
+	1 monster_ground_effect_on_death_base_duration_ms
+	2
+	    1 "On death ground effects lasts {0} second" milliseconds_to_seconds 1
+		# "On death ground effects lasts {0} seconds" milliseconds_to_seconds 1
+
+description
+	1 monster_ground_fire_on_death_base_area_of_effect_radius
+	1
+	    # "Monster creates Burning Ground with radius of {0} on death"
+
+description
+	1 monster_ground_poison_on_death_base_area_of_effect_radius
+	1
+	    # "Monster creates a Poison Cloud with radius of {0} on death"
+
+// Yes, actually spelt: monvement
+description
+	1 monster_ground_tar_on_death_monvement_speed_pluspercent
+	1
+	    # "Monster creates Tar on death reducing Movement Speed by {0}%" negate 1
+
+description
+	1 monster_ignite_damage_+%_final
+	2
+		1|# "Monsters deal {0}% more Ignite Damage"
+		#|-1  "Monsters deal {0}% less Ignite Damage" negate 1
+
+description
+    1 monster_is_possessed
+    1
+        1|# "Monster is possessed by a Torment Spirit"
+
+description
+    1 monster_no_beyond_portal
+    1
+        # "Monster does not create Beyond portals"
+
+description
+    1 monster_no_drops_or_experience
+    1
+        # "Monster does not drop items and does not grant Experience"
+
+description
+    1 monster_no_map_drops
+    1
+        # "Monster does not drop Maps"
+
+description
+	1 monster_penalty_against_minions_damage_+%_final_vs_player_minions
+	2
+		1|# "Monster deals {0}% more Damage against Minions"
+		#|-1 "Monster deals {0}% less Damage against Minions" negate 1
+
+description
+	1 monster_poison_damage_+%_final
+	2
+		1|# "Monsters deal {0}% more Poison Damage"
+		#|-1  "Monsters deal {0}% less Poison Damage" negate 1
+
+description
+	1 monster_rarity_attack_cast_speed_+%_and_damage_-%_final
+	1
+		# "Monster has {0}% more Attack Speed, {0}% more Cast Speed and {0}% less Damage"
+
+description
+    1 monster_rarity_damage_+%_final
+    1
+        1|# "Monster deals {0}% more Damage"
+        #|-1 "Monster deals {0}% less Damage" negate 1
+
+description
+	1 monster_reverse_point_blank_damage_-%_at_minimum_range
+	1
+		# "Deals up to {0}% less Damage at minimum Range" negate 1
+
+description
+    1 monster_share_charges_with_pack
+    1
+        # "Monster shares Charges with its pack"
+
+// TODO: Type 1-5 specifics?
+// BloodLinesGhostTotemStormCall
+// BloodLinesGhostTotemIncinerateSpiralLightning
+// BloodLinesGhostTotemBallLightning
+// BloodLinesGhostTotemSummonSkeletons
+// BloodLinesGhostTotemLightningWarp
+description
+	1 monster_spawn_bloodlines_ghost_totem_on_death
+	1
+		# "Summons Bloodlines Totem {0} on death"
+
+description
+    1 monster_spawns_X_monsters_on_death
+    1
+        1 "Monster spawns {0} Monsters on death"
+
+no_description monster_rarity_attack_cast_speed_+%_and_damage_-%_final
+
+description
+    1 monster_slain_experience_+%
+    2
+        1|# "Monster gives {0}% increased Experience on death"
+        #|-1 "Monster gives {0}% reduced Experience on death" negate 1
+
+// This is only present as curse description, but we need it here
+description
+    1 monster_slain_flask_charges_granted_+%
+    2
+        1|# "Monster gives {0}% increased Flask Charges on death"
+        #|-1 "Monster gives {0}% reduced Flask Charges on death" negate 1
+
+description
+	1 movement_speed_+%_per_bloodline_speed_charge
+	2
+		1|# "{0}% increased Movement Speed per Bloodline Speed Charge"
+		#|-1 "{0}% reduced Movement Speed per Bloodline Speed Charge" negate 1
+
+description
+	1 movement_velocity_+%_per_10_rampage_stacks
+	1
+		# "{0}% increased Movement Speed per 20 Rampage Stacks"
+
+description
+	1 movement_velocity_+%_per_ten_levels
+	2
+		1|# "{0}% increased Movement Speed for every 10 Levels"
+		#|-1 "{0}% reduced Movement Speed for every 10 Levels" negate 1
+
+description
+    1 non_physical_hit_damage_stun_multiplier_+%
+    1
+        1|# "Monster non-physical Daamge counts as {0}% more for Stun"
+        #|-1 "Monster non-physical Daamge counts as {0}% less for Stun" negate 1
+
+description
+	1 object_inherent_damage_+%_final_per_frenzy_charge
+	1
+		# "{0}% more Damage per Frenzy Charge"
+
+description
+	1 object_inherent_melee_hit_stun_duration_+%_final
+	2
+		1|# "Melee hits have {0}% more Stun Duration"
+		#|-1 "Melee hits have {0}% less Stun Duration"
+
+description
+	1 physical_damage_taken_%_to_deal_to_attacker
+	1
+		# "{0}% of Physical Damage taken reflected to Attacker"
+
+description
+	1 play_jack_the_axe_sounds
+	1
+		1|# "Plays Jack the Axe sounds"
+
+description
+	1 projectile_speed_variation_+%
+	1
+		# "{0}% increased Projectile Speed Variation"
+
+description
+	1 pvp_shield_damage_+%_final
+	2
+		1|# "{0}% more Shield Damage in PvP"
+		#|-1 "{0}% less Shield Damage in PvP" negate 1
+
+description
+	1 remove_charges_on_hit_%
+	1
+		100 "Always removes Charges on Hit"
+		#|99 "Has a {0}% Chance to remove Charges on Hit"
+
+description
+	1 remove_flask_effects_on_hit_%
+	1
+		# "Has a {0}% Chance to remove Flask Effects on Hit"
+
+description
+	1 removes_%_mana_on_hit
+	1
+		# "Removes {0}% of Mana on Hit"
+
+description
+	1 scale_melee_range_to_actor_scale
+	1
+		# "Melee range scaled by model size"
+
+// TODO: Name variations?
+description
+	1 skill_art_variation
+	1
+		# "Uses Skill Art Variation {0}"
+
+description
+	1 soul_is_consumed_on_death
+	1
+		1|# "Soul is consumed on death"
+
+description
+	1 sound_on_kill_wolf_call
+	1
+		# "Plays Wolf Call sound on Kill"
+
+description
+    1 sound_on_rare_kill_ice_whisper
+    1
+        1|# "Plays Whispering Ice sound on killing a rare Monster"
+
+description
+	1 strength_per_level
+	1
+		# "+{0} Strength per Level"
+
+// TODO: 1-3 variations
+description
+	1 totem_art_variation
+	1
+		# "Uses Totem Art Variation {0}"
+
+description
+	1 use_goddess_player_audio
+	1
+		1|# "Uses goddess player audio"
+
+//
+// Explicitly override
+//
+description
+    1 maximum_physical_damage_reduction_%
+    1
+        1|# "{0}% to maximum Physical Damage Reduction"
+
+description
+    1 movement_velocity_cap
+    1
+        # "Movement Speed is capped at {0}"

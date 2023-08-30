@@ -23,22 +23,26 @@
 # ##############################################################################
 
 import json
+import logging
 import os
 
 from modules.data.parser.path_utils import get_abs_path, get_base_dir
 script_path = os.path.realpath(__file__)
 base_dir = get_base_dir(script_path)
-abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'tags.min.json'))
+ABS_PATH_TO_JSON = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'tags.min.json'))
 
 
-def insert_tags_into_db(db_manager):
-    tag_dict = {}
-    with open(abs_path_to_json) as json_file:
-        data = json.load(json_file)
-        
-    with db_manager.transaction() as session:
-        # Iterate through the items
-        for tag in data:
-            tag_dict = {'tag': tag}
-            db_manager.add_or_update_tag(tag_dict, session)
+class TagsParser:
+    @staticmethod
+    def create_tags_list():
+        try:
+            with open(ABS_PATH_TO_JSON) as tag_file:
+                try:
+                    tag_data = json.load(tag_file)
+                except json.JSONDecodeError as e:
+                    raise ValueError(f'Invalid Json: {e}')
+        except Exception as e:
+            logging.error(f'Error opening/reading JSON file:{e}')
+        tags_list = [tag for tag in tag_data]
+        return tags_list
     

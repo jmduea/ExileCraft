@@ -1,0 +1,605 @@
+[
+  {
+    "_rid": 0,
+    "Id": "Gloves",
+    "Name": "Gloves",
+    "StyleFlag": 2,
+    "Group": 0,
+    "Unknown5": [
+      1,
+      2
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 1,
+    "Id": "Boots",
+    "Name": "Boots",
+    "StyleFlag": 2,
+    "Group": 0,
+    "Unknown5": [
+      1,
+      2
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 2,
+    "Id": "BodyArmours",
+    "Name": "Body Armours",
+    "StyleFlag": 2,
+    "Group": 0,
+    "Unknown5": [
+      1,
+      2
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 3,
+    "Id": "Helmets",
+    "Name": "Helmets",
+    "StyleFlag": 2,
+    "Group": 0,
+    "Unknown5": [
+      1,
+      2
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 4,
+    "Id": "Claws",
+    "Name": "Claws",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 5,
+    "Id": "Daggers",
+    "Name": "Daggers",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 6,
+    "Id": "Wands",
+    "Name": "Wands",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 7,
+    "Id": "OneHandSwords",
+    "Name": "One Hand Swords",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 8,
+    "Id": "ThrustingOneHandSwords",
+    "Name": "Thrusting One Hand Swords",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 9,
+    "Id": "OneHandAxes",
+    "Name": "One Hand Axes",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 10,
+    "Id": "OneHandMaces",
+    "Name": "One Hand Maces",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 11,
+    "Id": "Sceptres",
+    "Name": "Sceptres",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 12,
+    "Id": "RuneDaggers",
+    "Name": "Rune Daggers",
+    "StyleFlag": 2,
+    "Group": 1,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 13,
+    "Id": "Bows",
+    "Name": "Bows",
+    "StyleFlag": 2,
+    "Group": 2,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 14,
+    "Id": "Staves",
+    "Name": "Staves",
+    "StyleFlag": 2,
+    "Group": 2,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 15,
+    "Id": "TwoHandSwords",
+    "Name": "Two Hand Swords",
+    "StyleFlag": 2,
+    "Group": 2,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 16,
+    "Id": "TwoHandAxes",
+    "Name": "Two Hand Axes",
+    "StyleFlag": 2,
+    "Group": 2,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 17,
+    "Id": "TwoHandMaces",
+    "Name": "Two Hand Maces",
+    "StyleFlag": 2,
+    "Group": 2,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 18,
+    "Id": "Warstaves",
+    "Name": "Warstaves",
+    "StyleFlag": 2,
+    "Group": 2,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 19,
+    "Id": "Quivers",
+    "Name": "Quivers",
+    "StyleFlag": 2,
+    "Group": 3,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 20,
+    "Id": "Shields",
+    "Name": "Shields",
+    "StyleFlag": 2,
+    "Group": 3,
+    "Unknown5": [
+      1,
+      2
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 21,
+    "Id": "Amulets",
+    "Name": "Amulets",
+    "StyleFlag": 2,
+    "Group": 4,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 22,
+    "Id": "Rings",
+    "Name": "Rings",
+    "StyleFlag": 2,
+    "Group": 4,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 23,
+    "Id": "Belts",
+    "Name": "Belts",
+    "StyleFlag": 2,
+    "Group": 4,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 24,
+    "Id": "Talismans",
+    "Name": "Talismans",
+    "StyleFlag": 2,
+    "Group": 4,
+    "Unknown5": [
+      4
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 25,
+    "Id": "Trinkets",
+    "Name": "Trinkets",
+    "StyleFlag": 2,
+    "Group": 4,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 26,
+    "Id": "ActiveSkillGems",
+    "Name": "Active Skill Gems",
+    "StyleFlag": 3,
+    "Group": 5,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 27,
+    "Id": "SupportSkillGems",
+    "Name": "Support Skill Gems",
+    "StyleFlag": 3,
+    "Group": 5,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 28,
+    "Id": "LifeFlasks",
+    "Name": "Life Flasks",
+    "StyleFlag": 2,
+    "Group": 6,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 29,
+    "Id": "ManaFlasks",
+    "Name": "Mana Flasks",
+    "StyleFlag": 2,
+    "Group": 6,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 30,
+    "Id": "HybridFlasks",
+    "Name": "Hybrid Flasks",
+    "StyleFlag": 2,
+    "Group": 6,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 31,
+    "Id": "UtilityFlasks",
+    "Name": "Utility Flasks",
+    "StyleFlag": 2,
+    "Group": 6,
+    "Unknown5": [
+      1
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 32,
+    "Id": "Leaguestones",
+    "Name": "Leaguestones",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": true
+  },
+  {
+    "_rid": 33,
+    "Id": "Maps",
+    "Name": "Maps",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [
+      3
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 34,
+    "Id": "Jewels",
+    "Name": "Jewels",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 35,
+    "Id": "AbyssJewels",
+    "Name": "Abyss Jewels",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 36,
+    "Id": "MapFragments",
+    "Name": "Map Fragments",
+    "StyleFlag": 0,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 37,
+    "Id": "MiscMapItems",
+    "Name": "Misc Map Items",
+    "StyleFlag": 0,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 38,
+    "Id": "Currency",
+    "Name": "Currency",
+    "StyleFlag": 0,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 39,
+    "Id": "DivinationCards",
+    "Name": "Divination Cards",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 40,
+    "Id": "UniqueFragments",
+    "Name": "Pieces",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 41,
+    "Id": "Essence",
+    "Name": "Essences",
+    "StyleFlag": 0,
+    "Group": 7,
+    "Unknown5": [
+      3
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 42,
+    "Id": "Delve",
+    "Name": "Delve Items",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 43,
+    "Id": "Scarab",
+    "Name": "Scarabs",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 44,
+    "Id": "Incubators",
+    "Name": "Incubators",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 45,
+    "Id": "Oils",
+    "Name": "Oils",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 46,
+    "Id": "MetamorphOrgans",
+    "Name": "Organs",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 47,
+    "Id": "HeistItems",
+    "Name": "Heist Items",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 48,
+    "Id": "ExpeditionItems",
+    "Name": "Expedition Items",
+    "StyleFlag": 0,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 49,
+    "Id": "ScourgeCurrency",
+    "Name": "Scourge Currency",
+    "StyleFlag": 0,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 50,
+    "Id": "Sentinel",
+    "Name": "Sentinel ",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 51,
+    "Id": "MemoryLine",
+    "Name": "Memories",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": false,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 52,
+    "Id": "Microtransactions",
+    "Name": "Microtransactions",
+    "StyleFlag": 4,
+    "Group": 7,
+    "Unknown5": [],
+    "Unknown6": true,
+    "IsDisabled": false
+  },
+  {
+    "_rid": 53,
+    "Id": "Relics",
+    "Name": "Relics",
+    "StyleFlag": 1,
+    "Group": 7,
+    "Unknown5": [
+      5
+    ],
+    "Unknown6": false,
+    "IsDisabled": false
+  }
+]

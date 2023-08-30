@@ -13,10 +13,11 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
+from PySide6.QtWidgets import QFrame, QHBoxLayout, QWidget
+
 
 # IMPORT QT CORE
 # ///////////////////////////////////////////////////////////////
-from qt_core import *
 
 
 # CUSTOM LEFT MENU

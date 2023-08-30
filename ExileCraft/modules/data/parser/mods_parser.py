@@ -21,207 +21,164 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
 # ##############################################################################
-
 import json
 import os
 
-from modules.config.constants import domain_whitelist, generation_type_blacklist
-from modules.data.models.association_models import mod_adds_tags_association, mod_implicit_tags_association, \
-    mod_spawn_weights_association, mod_tags_association, mod_stats_association
-from modules.data.models.global_models import Domain, GenerationType
-from modules.data.models.mod_models import Mod, ModType, ModGroup
-from modules.data.models.stat_models import Stat, StatValue
-from modules.data.models.tag_models import Tag
-from modules.data.parser.path_utils import get_abs_path, get_base_dir
+from modules.data.parser.path_utils import (
+    get_abs_path,
+    get_base_dir,
+    MOD_FAMILY_JSON_PATH,
+    MOD_TYPES_JSON_PATH,
+)
+from modules.shared.config.constants import domain_whitelist
 
 script_path = os.path.realpath(__file__)
 base_dir = get_base_dir(script_path)
-abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'mods.min.json'))
+abs_path_to_json = get_abs_path(
+    base_dir, os.path.join(r"ExileCraft\modules\data", "json", "mods.json")
+)
 
 
-def insert_mods_into_db(db_manager):
-    # Load the JSON file
-    with open(abs_path_to_json) as json_file:
-        data = json.load(json_file)
-    
-    # Start a new transaction
-    with db_manager.transaction() as session:
-        # Iterate through the items
-        for mod, item_data in data.items():
-            if item_data.get("domain") not in domain_whitelist:
+class ModParser:
+    def __init__(self):
+        super().__init__()
+        self.abs_path_to_json = abs_path_to_json
+
+    def parse_mods_json(self):
+        with open(abs_path_to_json) as json_file:
+            return json.load(json_file)
+
+    def parse_mod_types_json(self):
+        with open(MOD_TYPES_JSON_PATH) as json_file:
+            return json.load(json_file)
+
+    def parse_mod_family_json(self):
+        with open(MOD_FAMILY_JSON_PATH) as json_file:
+            return json.load(json_file)
+
+    def get_all_mod_data_for_key(self, key):
+        mod_data_list = []
+        for mod_data in self.bounded_data.values():
+            if mod_data not in mod_data_list:
+                mod_data_list.append({key: mod_data.get(key, None)})
+        return mod_data_list
+
+    @property
+    def bounded_data(self):
+        return {
+            mod: mod_data
+            for mod, mod_data in self._data.items()
+            if self.is_data_valid(mod_data)
+        }
+
+    @staticmethod
+    def is_data_valid(data):
+        return (
+            data.get("domain") in domain_whitelist
+            and data.get("generation_type") != "<unknown>"
+        )
+
+    @staticmethod
+    def get_mod_data_by_key(mod_data, key):
+        return {key: mod_data.get(key)}
+
+    def get_all_mod_generation_types(self):
+        mod_generation_types_list = self.get_all_mod_data_for_key("generation_type")
+        return mod_generation_types_list
+
+    @staticmethod
+    def get_mod_generation_type(mod_data):
+        mod_generation_type = mod_data.get("generation_type")
+        return mod_generation_type
+
+    def get_all_mod_domains(self):
+        mod_domains_list = self.get_all_mod_data_for_key("domain")
+        return mod_domains_list
+
+    @staticmethod
+    def get_mod_domain(mod_data):
+        mod_domain = mod_data.get("domain")
+        return mod_domain
+
+    @staticmethod
+    def get_mod_type(mod_data):
+        mod_type = mod_data.get("type")
+        return mod_type
+
+    def get_all_mod_groups(self):
+        return [
+            {"groups": group["groups"][0]}
+            for group in self.get_all_mod_data_for_key("groups")
+        ]
+
+    @staticmethod
+    def get_mod_group(mod_data):
+        mod_group = mod_data.get("groups")
+        group = mod_group[0]
+        return group
+
+    def get_all_mods(self):
+        return [
+            self.get_mod_data(mod, mod_data)
+            for mod, mod_data in self.bounded_data.items()
+        ]
+
+    @staticmethod
+    def extract_weight_data(weight_data):
+        return {"tag": weight_data.get("tag"), "weight": weight_data.get("weight")}
+
+    def get_all_mod_dicts(self):
+        data = self._data
+        mod_dicts = {}
+        for mod, mod_data in data.items():
+            if mod_data.get("domain") not in domain_whitelist:
                 continue
-            if item_data.get("generation_type") in generation_type_blacklist:
-                continue
-            added_tags = []
-            for tag in item_data.get("adds_tags"):
-                if item_data.get("adds_tags") is not None:
-                    tag_record = session.query(Tag).filter_by(tag=tag).first()
-                    if not tag_record:
-                        tag_record = Tag(tag=tag)
-                        session.add(tag_record)
-                        session.commit()
-                    added_tags.append(tag_record.id)
-                else:
-                    added_tags = None
-                    
-            implicit_tags = []
-            for tag in item_data.get("implicit_tags"):
-                if item_data.get("implicit_tags") is not None:
-                    implicit_tag_record = session.query(Tag).filter_by(tag=tag).first()
-                    if not implicit_tag_record:
-                        implicit_tag_record = Tag(tag=tag)
-                        session.add(implicit_tag_record)
-                        session.commit()
-                    implicit_tags.append(implicit_tag_record.id)
-                else:
-                    implicit_tags = None
-                    
-            spawn_weights = []
-            spawn_weights_data = item_data.get("spawn_weights", [])
-            for weight_data in spawn_weights_data:
-                if spawn_weights_data:
-                    tag = weight_data.get("tag")
-                    spawn_weight_tag_record = session.query(Tag).filter_by(tag=tag).first()
-                    if not spawn_weight_tag_record:
-                        spawn_weight_tag_record = Tag(tag=tag)
-                        session.add(spawn_weight_tag_record)
-                        session.commit()
-                    weight = weight_data.get("weight")
-                    tag_id = spawn_weight_tag_record.id
-                    spawn_weights.append({
-                        "tag_id": tag_id,
-                        "weight": weight
-                    })
-                else:
-                    spawn_weights = None
-                
-            stats = []
-            stats_data = item_data.get("stats", [])
-            for stat_data in stats_data:
-                if stats_data:
-                    stat = stat_data.get("id")
-                    stat_record = session.query(Stat).filter_by(stat=stat).first()
-                    if not stat_record:
-                        stat_record = Stat(stat=stat)
-                        session.add(stat_record)
-                        session.commit()
-                    stat_id = stat_record.id
-                    stat_min_value = stat_data.get("min")
-                    stat_max_value = stat_data.get("max")
-                    stats.append({
-                        "stat_id": stat_id,
-                        "stat_min_value": stat_min_value,
-                        "stat_max_value": stat_max_value
-                    })
-                else:
-                    stats = None
-                
-            domain = item_data.get("domain")
-            domain_obj = session.query(Domain).filter_by(domain=domain).first()
-            if not domain_obj:
-                domain_obj = Domain(domain=item_data.get("domain"))
-                session.add(domain_obj)
-                session.commit()
-            domain_id = domain_obj.id
-            
-            generation_type = item_data.get("generation_type")
-            generation_type_obj = session.query(GenerationType).filter_by(generation_type=generation_type).first()
-            if not generation_type_obj:
-                generation_type_obj = GenerationType(generation_type=generation_type)
-                session.add(generation_type_obj)
-                session.commit()
-            generation_type_id = generation_type_obj.id
-            
-            group = item_data.get("groups")
-            group_obj = session.query(ModGroup).filter_by(group=group[0]).first()
-            if not group_obj:
-                group_obj = ModGroup(group=group[0])
-                session.add(group_obj)
-                session.commit()
-            mod_group_id = group_obj.id
-            
-            mod_type = item_data.get("type")
-            mod_type_obj = session.query(ModType).filter_by(mod_type=mod_type).first()
-            if not mod_type_obj:
-                mod_type_obj = ModType(mod_type=mod_type)
-                session.add(mod_type_obj)
-                session.commit()
-            mod_type_id = mod_type_obj.id
-            
-            mod_obj = Mod(
-                mod=mod,
-                level_req=item_data.get("required_level"),
-                name=item_data.get("name"),
-                is_essence_only=item_data.get("is_essence_only"),
-                domain_id=domain_id,
-                generation_type_id=generation_type_id,
-                mod_group_id=mod_group_id,
-                mod_type_id=mod_type_id
-            )
-            session.add(mod_obj)
-            session.flush()
-            
-            mod_id = mod_obj.id
-            
-            # generation_weight = item_data.get("generation_weights")
-            # generation_weight_obj = session.query(GenerationWeights).filter_by(generation_weight=
-            #                                                                    generation_weight[0]).first()
-            # if not generation_weight_obj:
-            #     generation_weight_obj = GenerationWeights(generation_weight=generation_weight)
-            #     session.add(generation_weight_obj)
-            #     session.commit()
-            # generation_weight_id = generation_weight_obj.id
-            
-            # granted_effect = item_data.get("grants_effects")
-            # granted_effect_obj = session.query(GrantsEffects).filter_by(granted_effect=granted_effect).first()
-            # if not granted_effect_obj:
-            #     granted_effect_obj = GrantsEffects(granted_effect=granted_effect)
-            #     session.add(granted_effect_obj)
-            #     session.commit()
-            # grants_effects_id = granted_effect_obj.id
-            
-            for tag_id in added_tags:
-                session.execute(mod_adds_tags_association.insert().values(
-                    mod_id=mod_id,
-                    tag_id=tag_id,
-                ))
-            session.commit()
-            
-            for tag_id in implicit_tags:
-                session.execute(mod_implicit_tags_association.insert().values(
-                    mod_id=mod_id,
-                    tag_id=tag_id,
-                ))
-            session.commit()
-            
-            if spawn_weights:
-                for weight_data in spawn_weights:
-                    tag_id = weight_data.get("tag_id")
-                    weight = weight_data.get("weight")
-                    
-                    session.execute(mod_tags_association.insert().values(
-                        mod_id=mod_id,
-                        tag_id=tag_id
-                    ))
-                    
-                    session.execute(mod_spawn_weights_association.insert().values(
-                        mod_id=mod_id,
-                        tag_id=tag_id,
-                        weight=weight
-                    ))
-                session.commit()
-            
-            if stats:
-                for stat_data in stats:
-                    stat_id = stat_data.get("stat_id")
-                    stat_min_value = stat_data.get("stat_min_value")
-                    stat_max_value = stat_data.get("stat_max_value")
-                    
-                    session.execute(mod_stats_association.insert().values(
-                        mod_id=mod_id,
-                        stat_id=stat_id,
-                        stat_min_value=stat_min_value,
-                        stat_max_value=stat_max_value
-                    ))
-                session.commit()
-                
+            mod_dict = self.get_mod_data(mod, mod_data)
+            mod_dicts.update(mod_dict)
+        return mod_dicts
+
+    @staticmethod
+    def get_added_tags(mod_data):
+        return mod_data.get("adds_tags", [])
+
+    @staticmethod
+    def get_implicit_tags(mod_data):
+        return mod_data.get("implicit_tags", [])
+
+    def get_spawn_weights(self, mod_data):
+        return [
+            self.extract_weight_data(weight_data)
+            for weight_data in mod_data.get("spawn_weights", [])
+        ]
+
+    @staticmethod
+    def get_stats(mod_data):
+        return [
+            {
+                "stat": stat.get("id"),
+                "values": {"min": stat.get("min"), "max": stat.get("max")},
+            }
+            for stat in mod_data.get("stats", [])
+        ]
+
+    def get_mod_data(self, mod, mod_data):
+        return {
+            "mod_name": mod,
+            "level_req": mod_data.get("required_level"),
+            "name": mod_data.get("name"),
+            "is_essence_only": mod_data.get("is_essence_only"),
+            "domain": mod_data.get("domain"),
+            "generation_type": mod_data.get("generation_type"),
+            "group": mod_data.get("groups")[0],
+            "type": mod_data.get("type"),
+            "added_tags_list": self.get_added_tags(mod_data),
+            "implicit_tags_list": self.get_implicit_tags(mod_data),
+            "spawn_weights_list": self.get_spawn_weights(mod_data),
+            "stats_list": self.get_stats(mod_data),
+        }
+
+
+if __name__ == "__main__":
+    mod_parser = ModParser()
+    mod_list = mod_parser.parse_mods_json()
+    print(mod_list)

@@ -22,8 +22,9 @@
 #  SOFTWARE.
 # ##############################################################################
 
-import keyboard
 import time
+
+import keyboard
 
 # Define the minimum delay between hotkey triggers
 HOTKEY_DELAY = 1.0
@@ -32,13 +33,23 @@ last_hotkey_trigger_time = 0
 
 def toggle_visibility(window=None):
     """
-    Toggles the visibility of a window based on its current state.
+    Parameters
+    ----------
+    window : PyQt5.QtWidgets.QMainWindow or None
+        The window to toggle visibility. If None, no action will be performed.
 
-    If the window is currently visible, it will be hidden. If the window is hidden,
-    it will be shown, activated, and raised to the top.
+    Return
+    ------
+    None
+        This method does not return anything.
 
-    Args:
-        window: Optional reference to the window object. If not provided, the function will have no effect.
+    Raises
+    ------
+    None
+
+    Description
+    -----------
+    This method toggles the visibility of a PyQt5.QtWidgets.QMainWindow window. If the window is currently visible, it will be hidden. If it is hidden, it will be activated, brought to the front, and shown. The method keeps track of the last time the toggle is triggered to avoid rapid toggling.
     """
     global last_hotkey_trigger_time
     current_time = time.time()
@@ -54,27 +65,33 @@ def toggle_visibility(window=None):
 
 def register_hotkey(window):
     """
-    Register hotkeys to the application window instance.
-    
-    Args:
-        window: A reference to the window object.
+    Registers a hotkey for toggling the visibility cooldown on a specified window.
+
+    Parameters
+    ----------
+    window : modules.gui.uis.windows.main_window.main_window.MainWindow
+        The window on which to toggle the visibility cooldown.
+
+    Returns
+    -------
+    None
+
     """
     # Register the hotkey using the keyboard library
-    keyboard.add_hotkey('ctrl+d', toggle_visibility_cooldown, args=(window,))
-    keyboard.add_hotkey('ctrl+alt+c', window.parse_clipboard_text)
+    keyboard.add_hotkey("ctrl+d", toggle_visibility_cooldown, args=(window,))
+    # keyboard.add_hotkey('ctrl+alt+c', window.parse_clipboard_text)
 
 
 def toggle_visibility_cooldown(window: object = None):
     """
-    Adds a cooldown period to the toggle_visibility function.
-    
-    The objective of the toggle_visibility_cooldown function is to add a cooldown period to the toggle_visibility
-    function, which toggles the visibility of a window based on its current state. This is achieved by checking the
-    time elapsed since the last hotkey trigger and only executing the toggle_visibility function if the elapsed time
-    is greater than or equal to the HOTKEY_DELAY.
-    
-    Args:
-        window: A reference to the window object
+    Parameters
+    ----------
+    window : object, optional
+        The window object on which the visibility will be toggled. If not provided, the default window will be used.
+
+    Returns
+    -------
+    None
     """
     global last_hotkey_trigger_time
     current_time = time.time()

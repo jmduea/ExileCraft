@@ -1,0 +1,42 @@
+[
+  {
+    "_rid": 0,
+    "Id": "Armour",
+    "Name": "Armour"
+  },
+  {
+    "_rid": 1,
+    "Id": "OneHandedWeapon",
+    "Name": "One Handed Weapons"
+  },
+  {
+    "_rid": 2,
+    "Id": "TwoHandedWeapon",
+    "Name": "Two Handed Weapons"
+  },
+  {
+    "_rid": 3,
+    "Id": "OffhandEquipment",
+    "Name": "Off-hand"
+  },
+  {
+    "_rid": 4,
+    "Id": "Jewellery",
+    "Name": "Jewellery"
+  },
+  {
+    "_rid": 5,
+    "Id": "SkillGems",
+    "Name": "Gems"
+  },
+  {
+    "_rid": 6,
+    "Id": "Flasks",
+    "Name": "Flasks"
+  },
+  {
+    "_rid": 7,
+    "Id": "Other",
+    "Name": "Other"
+  }
+]

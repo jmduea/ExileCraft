@@ -32,22 +32,24 @@ base_dir = get_base_dir(script_path)
 abs_path_to_json = get_abs_path(base_dir, os.path.join(r'ExileCraft\modules\data', 'json', 'stats.min.json'))
 
 
-def insert_stats_into_db(db_manager):
-    # Load the JSON file
-    with open(abs_path_to_json) as json_file:
-        stats = json.load(json_file)
+class StatParser:
+    def __init__(self):
+        self._data = self.parse_json()
+        self.abs_path_to_json = abs_path_to_json
     
-    with db_manager.transaction() as session:
-        for stat, stats in stats.items():
-            alias_string = ""
-            alias = alias_string.join(stats.get("alias"))
-            
-            stats_dict = {
-                "stat": stat,
-                "alias": alias,
-                "is_aliased": stats.get("is_aliased"),
-                "is_local": stats.get("is_local")
-            }
-            
-            db_manager.add_or_update_stat(stats_dict, session)
-            
+    def parse_json(self):
+        if not hasattr(self, '_data'):
+            with open(abs_path_to_json) as json_file:
+                self._data = json.load(json_file)
+        return self._data
+    
+    def get_all_stats(self):
+        data = self._data
+        stat_list = []
+        for stat, stat_data in data.items():
+            stats_dict = {"name": str(stat),
+                          "is_aliased": stat_data.get("is_aliased", False),
+                          "is_local": stat_data.get("is_local", False)
+                          }
+            stat_list.append(stats_dict)
+        return stat_list

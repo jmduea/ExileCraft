@@ -11,10 +11,12 @@
 # There are limitations on Qt licenses if you want to use your products
 # commercially, I recommend reading them on the official website:
 # https://doc.qt.io/qtforpython/licenses.html
+from PySide6.QtCore import Qt, Signal
+from PySide6.QtWidgets import QFrame, QHBoxLayout, QLabel, QVBoxLayout, QWidget
 
 from .py_icon import PyIcon
-from .py_left_button import *
-from ...uis.columns.ui_left_column import *
+from .py_left_button import PyLeftButton
+from ...uis.columns.ui_left_column import Ui_LeftColumn
 
 
 class PyLeftColumn(QWidget):
@@ -23,24 +25,24 @@ class PyLeftColumn(QWidget):
     released = Signal(object)
 
     def __init__(
-            self,
-            parent,
-            app_parent,
-            text_title,
-            text_title_size,
-            text_title_color,
-            dark_one,
-            bg_color,
-            btn_color,
-            btn_color_hover,
-            btn_color_pressed,
-            icon_path,
-            icon_color,
-            icon_color_hover,
-            icon_color_pressed,
-            context_color,
-            icon_close_path,
-            radius=8
+        self,
+        parent,
+        app_parent,
+        text_title,
+        text_title_size,
+        text_title_color,
+        dark_one,
+        bg_color,
+        btn_color,
+        btn_color_hover,
+        btn_color_pressed,
+        icon_path,
+        icon_color,
+        icon_color_hover,
+        icon_color_pressed,
+        context_color,
+        icon_close_path,
+        radius=8
     ):
         super().__init__()
 

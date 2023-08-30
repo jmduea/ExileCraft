@@ -16,11 +16,10 @@
 
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
-import sys
 
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
+from PySide6.QtCore import QRect, QSize, Qt
+from PySide6.QtGui import QCursor
+from PySide6.QtWidgets import QFrame, QSizeGrip, QWidget
 
 
 # PY GRIPS
@@ -34,6 +33,9 @@ class PyGrips(QWidget):
         self.parent = parent
         self.setParent(parent)
         self.wi = Widgets()
+        valid_positions = ["top_left", "top_right", "bottom_left", "bottom_right", "top", "bottom", "left", "right"]
+        if position not in valid_positions:
+            raise ValueError(f"Invalid position: {position}. Must be one of {valid_positions}.")
 
         # SHOW TOP LEFT GRIP
         # ///////////////////////////////////////////////////////////////
@@ -49,7 +51,7 @@ class PyGrips(QWidget):
 
         # SHOW TOP RIGHT GRIP
         # ///////////////////////////////////////////////////////////////
-        if position == "top_right":
+        elif position == "top_right":
             self.wi.top_right(self)
             grip = QSizeGrip(self.wi.top_right_grip)
             grip.setFixedSize(self.wi.top_right_grip.size())
@@ -61,7 +63,7 @@ class PyGrips(QWidget):
 
         # SHOW BOTTOM LEFT GRIP
         # ///////////////////////////////////////////////////////////////
-        if position == "bottom_left":
+        elif position == "bottom_left":
             self.wi.bottom_left(self)
             grip = QSizeGrip(self.wi.bottom_left_grip)
             grip.setFixedSize(self.wi.bottom_left_grip.size())
@@ -73,7 +75,7 @@ class PyGrips(QWidget):
 
         # SHOW BOTTOM RIGHT GRIP
         # ///////////////////////////////////////////////////////////////
-        if position == "bottom_right":
+        elif position == "bottom_right":
             self.wi.bottom_right(self)
             grip = QSizeGrip(self.wi.bottom_right_grip)
             grip.setFixedSize(self.wi.bottom_right_grip.size())
@@ -85,7 +87,7 @@ class PyGrips(QWidget):
 
         # SHOW TOP GRIP
         # ///////////////////////////////////////////////////////////////
-        if position == "top":
+        elif position == "top":
             self.wi.top(self)
             self.setGeometry(0, 5, self.parent.width(), 10)
             self.setMaximumHeight(10)

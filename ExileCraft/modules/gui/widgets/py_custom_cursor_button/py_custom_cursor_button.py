@@ -1,5 +1,7 @@
+from PySide6.QtGui import QCursor, QPixmap
+from PySide6.QtWidgets import QApplication, QPushButton
+
 from modules.data.parser.path_utils import get_abs_path
-from qt_core import *
 
 
 class PyCustomCursorButton(QPushButton):
@@ -16,10 +18,10 @@ class PyCustomCursorButton(QPushButton):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.parent_widget = self.parent()
         self.setMouseTracking(True)
         self.setCheckable(True)
         self.setAutoExclusive(False)
-        self.toggled.connect(self._handle_cursor)
         self.clicked.connect(self._handle_click)
         self._was_checked = False
 
@@ -36,10 +38,19 @@ class PyCustomCursorButton(QPushButton):
             # If the button was previously checked, uncheck it
             self.setChecked(False)
             self._was_checked = False
+            self._handle_cursor(False)
         else:
+            # Uncheck all other buttons that are siblings of this button
+            if self.parent_widget is not None:
+                for sibling_widget in self.parent_widget.children():
+                    if isinstance(sibling_widget, PyCustomCursorButton) and sibling_widget.isChecked():
+                        sibling_widget.setChecked(False)
+                        sibling_widget._was_checked = False
+                        sibling_widget._handle_cursor(False)
             # If the button was previously unchecked, check it
             self.setChecked(True)
             self._was_checked = True
+            self._handle_cursor(True)
 
     def _handle_cursor(self, checked):
         """

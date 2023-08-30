@@ -13,45 +13,39 @@
 # https://doc.qt.io/qtforpython/licenses.html
 #
 # ///////////////////////////////////////////////////////////////
+from PySide6.QtWidgets import QLineEdit
 
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
-
-# STYLE
-# ///////////////////////////////////////////////////////////////
-style = '''
-QLineEdit {{
-	background-color: {_bg_color};
-	border-radius: {_radius}px;
-	border: {_border_size}px solid transparent;
-	padding-left: 10px;
-    padding-right: 10px;
-	selection-color: {_selection_color};
-	selection-background-color: {_context_color};
-    color: {_color};
-}}
-QLineEdit:focus {{
-	border: {_border_size}px solid {_context_color};
-    background-color: {_bg_color_active};
-}}
-'''
+style = ('\n'
+         'QLineEdit {{\n'
+         '	background-color: {_bg_color};\n'
+         '	border-radius: {_radius}px;\n'
+         '	border: {_border_size}px solid transparent;\n'
+         '	padding-left: 10px;\n'
+         '    padding-right: 10px;\n'
+         '	selection-color: {_selection_color};\n'
+         '	selection-background-color: {_context_color};\n'
+         '    color: {_color};\n'
+         '}}\n'
+         'QLineEdit:focus {{\n'
+         '	border: {_border_size}px solid {_context_color};\n'
+         '    background-color: {_bg_color_active};\n'
+         '}}\n')
 
 
 # PY PUSH BUTTON
 # ///////////////////////////////////////////////////////////////
 class PyLineEdit(QLineEdit):
     def __init__(
-            self,
-            text="",
-            place_holder_text="",
-            radius=8,
-            border_size=2,
-            color="#FFF",
-            selection_color="#FFF",
-            bg_color="#333",
-            bg_color_active="#222",
-            context_color="#00ABE8"
+        self,
+        text="",
+        place_holder_text="",
+        radius=8,
+        border_size=2,
+        color="#FFF",
+        selection_color="#FFF",
+        bg_color="#333",
+        bg_color_active="#222",
+        context_color="#00ABE8"
     ):
         super().__init__()
 
@@ -74,14 +68,14 @@ class PyLineEdit(QLineEdit):
 
     # SET STYLESHEET
     def set_stylesheet(
-            self,
-            radius,
-            border_size,
-            color,
-            selection_color,
-            bg_color,
-            bg_color_active,
-            context_color
+        self,
+        radius,
+        border_size,
+        color,
+        selection_color,
+        bg_color,
+        bg_color_active,
+        context_color
     ):
         # APPLY STYLESHEET
         style_format = style.format(
