@@ -25,17 +25,9 @@ import glob
 import json
 import os
 
-from modules.data.models.item_models import Item
-from modules.shared.config.constants import (
-    BLACKLISTED_ITEMS,
-    item_class_whitelist,
-)
+from modules.shared.config.constants import BLACKLISTED_ITEMS, item_class_whitelist
 
-GENERATION_TYPE_BLACKLIST = [
-    "<unknown>",
-    "scourge_detriment",
-    "scourge_benefit",
-]
+GENERATION_TYPE_BLACKLIST = ["<unknown>", "scourge_detriment", "scourge_benefit"]
 
 MOD_DOMAIN_BLACKLIST = [
     "monster",
@@ -168,9 +160,6 @@ class GlobalCache:
                 print(f"Error loading {json_file}: {e}")
                 continue
 
-        # After all data has been loaded, match stats with their translations
-        self.match_stats_with_translations()
-
         return self.cache
 
     def build_cache_for_domain(self, mod_id, mod_data):
@@ -208,82 +197,83 @@ class GlobalCache:
             )
             current_generation.setdefault(mod_group, {})[mod_id] = mod_data
 
-    def build_tags_cache(self, mod_id, mod_data):
-        spawn_weights = mod_data.get("spawn_weights", [])
-        for weight_dict in spawn_weights:
-            weight = weight_dict["weight"]
-            if weight > 0:
-                tag = weight_dict["tag"]
-                self.cache["tags_cache"].setdefault(tag, {})[mod_id] = mod_data
-
-    def load_mods(self, mods_data):
-        self.cache["mods"] = {}
-        self.cache["tags_cache"] = {}
-
-        for mod_id, mod_data in mods_data.items():
-            if "Watchstone" in mod_id:
-                continue
-            self.build_cache_for_domain(mod_id, mod_data)
-            self.build_tags_cache(mod_id, mod_data)
-
-    def process_stats(self, domain, generation_type, group, group_data):
-        if not isinstance(group_data, dict):
-            print(
-                f"Unexpected data type in domain: {domain}, generation_type: {generation_type}, group: {group}"
-            )
-            return
-        for stat in group_data.get("stats", []):
-            if stat:
-                stat_id = stat.get("id")
-                if stat_id in self.cache["stat_translations"]:
-                    stat_translation = self.cache["stat_translations"][stat_id]
-                    stat["stat_translation"] = stat_translation
-
-    def match_stats_with_translations(self):
-        try:
-            for domain, domain_data in self.cache["mods"].items():
-                for generation_type, generation_type_data in domain_data.items():
-                    for mod_id, mod_data in generation_type_data.items():
-                        if generation_type in ["implicit", "enchantment", "eldritch"]:
-                            self.process_stats(
-                                domain, generation_type, mod_id, mod_data
-                            )
-
-                    for mod_group, mod_group_data in generation_type_data.items():
-                        self.process_stats(
-                            domain, generation_type, mod_group, mod_group_data
-                        )
-
-        except Exception as e:
-            print(f"Error matching stats with translations: {e}")
-
-    def associate_mods_with_items(self):
-        for item_key, item_data in self.cache.get("base_items.min", {}).items():
-            domain = item_data.get("domain")
-            if domain in self.cache["mods"]:
-                domain_cache = self.cache["mods"][domain]
-                item_data["associated_mods"] = {}
-                for cache_key, cache_value in domain_cache.items():
-                    if filtered_cache_value := {
-                        mod_id: mod
-                        for mod_id, mod in cache_value.items()
-                        if any(
-                            weight.get("tag") in item_data.get("tags", [])
-                            for weight in mod.get("spawn_weights", [])
-                            if weight.get("weight", 0) > 0
-                        )
-                    }:
-                        item_data["associated_mods"][cache_key] = filtered_cache_value
-
-    def get_data(self, key):
-        if key not in self.cache:
-            raise KeyError(f"Key: {key} does not exist in the cache.")
-        return self.cache[key]
-
-    @property
-    def cache(self):
-        return self._cache
-
+    #
+    #     def build_tags_cache(self, mod_id, mod_data):
+    #         spawn_weights = mod_data.get("spawn_weights", [])
+    #         for weight_dict in spawn_weights:
+    #             weight = weight_dict["weight"]
+    #             if weight > 0:
+    #                 tag = weight_dict["tag"]
+    #                 self.cache["tags_cache"].setdefault(tag, {})[mod_id] = mod_data
+    #
+    #     def load_mods(self, mods_data):
+    #         self.cache["mods"] = {}
+    #         self.cache["tags_cache"] = {}
+    #
+    #         for mod_id, mod_data in mods_data.items():
+    #             if "Watchstone" in mod_id:
+    #                 continue
+    #             self.build_cache_for_domain(mod_id, mod_data)
+    #             self.build_tags_cache(mod_id, mod_data)
+    #
+    #     def process_stats(self, domain, generation_type, group, group_data):
+    #         if not isinstance(group_data, dict):
+    #             print(
+    #                 f"Unexpected data type in domain: {domain}, generation_type: {generation_type}, group: {group}"
+    #             )
+    #             return
+    #         for stat in group_data.get("stats", []):
+    #             if stat:
+    #                 stat_id = stat.get("id")
+    #                 if stat_id in self.cache["stat_translations"]:
+    #                     stat_translation = self.cache["stat_translations"][stat_id]
+    #                     stat["stat_translation"] = stat_translation
+    #
+    #     def match_stats_with_translations(self):
+    #         try:
+    #             for domain, domain_data in self.cache["mods"].items():
+    #                 for generation_type, generation_type_data in domain_data.items():
+    #                     for mod_id, mod_data in generation_type_data.items():
+    #                         if generation_type in ["implicit", "enchantment", "eldritch"]:
+    #                             self.process_stats(
+    #                                 domain, generation_type, mod_id, mod_data
+    #                             )
+    #
+    #                     for mod_group, mod_group_data in generation_type_data.items():
+    #                         self.process_stats(
+    #                             domain, generation_type, mod_group, mod_group_data
+    #                         )
+    #
+    #         except Exception as e:
+    #             print(f"Error matching stats with translations: {e}")
+    #
+    #     def associate_mods_with_items(self):
+    #         for item_key, item_data in self.cache.get("base_items.min", {}).items():
+    #             domain = item_data.get("domain")
+    #             if domain in self.cache["mods"]:
+    #                 domain_cache = self.cache["mods"][domain]
+    #                 item_data["associated_mods"] = {}
+    #                 for cache_key, cache_value in domain_cache.items():
+    #                     if filtered_cache_value := {
+    #                         mod_id: mod
+    #                         for mod_id, mod in cache_value.items()
+    #                         if any(
+    #                             weight.get("tag") in item_data.get("tags", [])
+    #                             for weight in mod.get("spawn_weights", [])
+    #                             if weight.get("weight", 0) > 0
+    #                         )
+    #                     }:
+    #                         item_data["associated_mods"][cache_key] = filtered_cache_value
+    #
+    #     def get_data(self, key):
+    #         if key not in self.cache:
+    #             raise KeyError(f"Key: {key} does not exist in the cache.")
+    #         return self.cache[key]
+    #
+    #     @property
+    #     def cache(self):
+    #         return self._cache
+    #
     def should_include(self, key, value):
         return (
             value.get("item_class") in item_class_whitelist
@@ -304,27 +294,29 @@ class GlobalCache:
             and value.get("name") not in BLACKLISTED_ITEMS
         )
 
-    def get_associated_mods(self, item: Item):
-        item_data = item.data
-        if not item_data:
-            return {}
 
-        domain = item_data.get("domain")
-        associated_mods = {}
-
-        if domain in self.cache["mods"]:
-            domain_cache = self.cache["mods"][domain]
-            for cache_key, cache_value in domain_cache.items():
-                if filtered_cache_value := {
-                    mod_id: mod
-                    for mod_id, mod in cache_value.items()
-                    if mod.get("required_level", 0) <= item.item_level
-                    if any(
-                        weight.get("tag") in item_data.get("tags", [])
-                        for weight in mod.get("spawn_weights", [])
-                        if weight.get("weight", 0) > 0
-                    )
-                }:
-                    associated_mods[cache_key] = filtered_cache_value
-
-        return associated_mods
+#
+#     def get_associated_mods(self, item: Item):
+#         item_data = item.data
+#         if not item_data:
+#             return {}
+#
+#         domain = item_data.get("domain")
+#         associated_mods = {}
+#
+#         if domain in self.cache["mods"]:
+#             domain_cache = self.cache["mods"][domain]
+#             for cache_key, cache_value in domain_cache.items():
+#                 if filtered_cache_value := {
+#                     mod_id: mod
+#                     for mod_id, mod in cache_value.items()
+#                     if mod.get("required_level", 0) <= item.item_level
+#                     if any(
+#                         weight.get("tag") in item_data.get("tags", [])
+#                         for weight in mod.get("spawn_weights", [])
+#                         if weight.get("weight", 0) > 0
+#                     )
+#                 }:
+#                     associated_mods[cache_key] = filtered_cache_value
+#
+#         return associated_mods

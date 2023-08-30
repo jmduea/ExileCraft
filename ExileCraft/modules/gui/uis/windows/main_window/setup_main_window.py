@@ -180,6 +180,7 @@ class SetupMainWindow:
         self.gui_updater = GUIUpdater(self)
         self.mods_widget = ModsWidget(self)
         self.ui.load_pages.mod_widget_layout.addWidget(self.mods_widget)
+        self.gui_updater.mods_widget = self.mods_widget
 
     def resize_grips(self):
         """Resizes the grips of the window based on the current window size."""

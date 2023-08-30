@@ -180,6 +180,7 @@
     <file>images/influences/warlord_influence.png</file>
   </qresource>
   <qresource prefix="item_headers">
+      <file>images/item_headers/Item-ui-header-single.png</file>
     <file>images/item_headers/item_header_normal_elder.png</file>
     <file>images/item_headers/item_header_normal_elder_crusader.png</file>
     <file>images/item_headers/item_header_normal_elder_hunter.png</file>

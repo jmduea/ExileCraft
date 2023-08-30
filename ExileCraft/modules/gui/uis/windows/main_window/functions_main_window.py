@@ -36,8 +36,9 @@ from PySide6.QtCore import (
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QMainWindow, QPushButton
 
-from modules import CACHE
+from modules import BASE_ITEMS_CACHE
 from modules.data.models.item_models import Item, ITEM_RARITY
+from modules.data.web.mod_requests import get_mod_stat_text_raw_by_id
 from modules.gui.core.functions import Functions
 from modules.gui.uis.windows.main_window.ui_mainwindow import UiMainWindow
 from modules.shared.config.constants import ITEM_CLASS_SUFFIXES, subtype_tags_map
@@ -278,6 +279,7 @@ class ButtonFunctions:
 
 
 class GUIUpdater(QObject):
+    item_class_selected = Signal(str)
     item_changed = Signal(bool)
 
     def __init__(self, parent: QMainWindow):
@@ -285,13 +287,9 @@ class GUIUpdater(QObject):
         if not parent.objectName():
             parent.setObjectName("MainWindow")
         self.ui = parent.ui
-
-        self.global_cache = CACHE
-        self.cache = self.global_cache.cache
-        self.items_cache = self.cache.get("base_items.min")
-        self.mods_cache = self.cache.get("mods")
-        self.tags_cache = self.cache.get("tags_cache")
-        self.base_item_cache = {}
+        self.mods_widget = None
+        self.base_item_cache = BASE_ITEMS_CACHE.cache
+        self.item_cache = None
         self.item_level = 0
         self.item_class = None
         self.current_item = None
@@ -356,12 +354,12 @@ class GUIUpdater(QObject):
         if not isinstance(search_strings, list):
             search_strings = [search_strings]
         matching_keys = [
-            k for k in self.items_cache.keys() for s in search_strings if s in k
+            k for k in self.base_item_cache.keys() for s in search_strings if s in k
         ]
         item_classes = [
-            self.items_cache[k]["item_class"]
+            self.base_item_cache[k]["item_class"]
             for k in matching_keys
-            if "item_class" in self.items_cache[k]
+            if "item_class" in self.base_item_cache[k]
         ]
         unique_item_classes = list(set(item_classes))
 
@@ -377,7 +375,7 @@ class GUIUpdater(QObject):
 
     def update_base_item_combobox(self, index):
         subtype_display_name = self.ui.left_column.menus.base_combobox.currentText()
-        self.base_item_cache = {}
+        self.item_cache = {}
         if subtype_display_name is not None:
             # Extracting subtype and item_class from display name
             subtype = re.findall(r"\((.*?)\)", subtype_display_name)
@@ -388,7 +386,7 @@ class GUIUpdater(QObject):
 
             # Extracting item_class from display name
             item_class = re.sub(r" \((.*?)\)", "", subtype_display_name)
-
+            self.mods_widget.update_mod_tabs(subtype_display_name)
             # Fetching corresponding tag
             subtype_tag = subtype_tags_map.get(subtype, None)
 
@@ -396,13 +394,13 @@ class GUIUpdater(QObject):
                 # Fetching matching items from cache
                 matching_items = [
                     item
-                    for item in self.items_cache.values()
+                    for item in self.base_item_cache.values()
                     if subtype_tag in item["tags"] and item["item_class"] == item_class
                 ]
             else:
                 matching_items = [
                     item
-                    for item in self.items_cache.values()
+                    for item in self.base_item_cache.values()
                     if item["item_class"] == item_class
                 ]
 
@@ -413,7 +411,7 @@ class GUIUpdater(QObject):
             if matching_items:
                 for item in matching_items:
                     base_item_dict = {item["name"]: item}
-                    self.base_item_cache.update(base_item_dict)
+                    self.item_cache.update(base_item_dict)
                     self.ui.left_column.menus.base_item_combobox.addItem(item["name"])
 
         self.ui.left_column.menus.item_level_spinbox.setEnabled(True)
@@ -425,17 +423,11 @@ class GUIUpdater(QObject):
         """
         item_name = self.ui.left_column.menus.base_item_combobox.currentText()
         if item_name != "":
-            self.current_item = Item(
-                self.base_item_cache.get(item_name),
-                self.mods_cache[self.base_item_cache.get(item_name)["domain"]],
-                self.tags_cache,
-            )
+            self.current_item = Item(self.item_cache.get(item_name))
             self.ui.left_column.menus.item_level_spinbox.setValue(0)
             self.set_item_level()
             self.set_item_quality()
             self.set_item_influences()
-            self.item_changed.emit(True)
-            print(self.item_changed.emit(True))
 
     def set_item_influences(self):
         if self.influences is not None:
@@ -637,11 +629,15 @@ class GUIUpdater(QObject):
             str: A string containing the formatted implicit properties, ready to be displayed in the GUI.
         """
 
-        item_implicits = current_item.implicit_translation
+        item_implicits = current_item.implicits
         if not item_implicits:
             return ""
         else:
-            stat_translation_strings = item_implicits.split("\n")
+            stat_translation_strings = ""
+            for implicit in item_implicits:
+                translation_string = get_mod_stat_text_raw_by_id(implicit)
+                split_strings = translation_string.split("&lt;br&gt;")
+                stat_translation_strings = split_strings
 
             # Format each implicit string
             implicit_formatted_list = [

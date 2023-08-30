@@ -60,13 +60,14 @@ def main():
     >>> main()
     """
     try:
-        app = QApplication([])
+        app = QApplication(sys.argv)
         app.setStyle("Fusion")
         # app.setQuitOnLastWindowClosed(False)
+
         main_window = MainWindow()
 
-        # Initialize the splash_screen
-        window = main_window
+        # Initialize the splash_screen # TODO: change this nonsense
+        window = main_window.splash_screen
         window.show()
 
         # Set up tray icon and menus

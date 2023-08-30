@@ -11,9 +11,8 @@ requests = "^2.31.0"
 PySide6 = "^6.5.2"
 keyboard = "^0.13.5"
 pydantic = "^2.1.1"
-fastapi = "^0.101.1"
-uvicorn = "^0.23.2"
-strawberry-graphql = { extras = ["fastapi"], version = "^0.203.3" }
+httpx = "^0.24.1"
+bs4 = "^0.0.1"
 
 [tool.poetry.group.dev.dependencies]
 ipython = "^8.14.0"
@@ -24,6 +23,7 @@ black = "^23.7.0"
 sourcery = "^1.7.0"
 sphinx = "^7.1.2"
 pyinstaller = "^5.13.0"
+auto-py-to-exe = "^2.37.0"
 
 [build-system]
 requires = ["poetry-core"]

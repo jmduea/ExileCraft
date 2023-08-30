@@ -40,6 +40,18 @@ GROUP_BY_MOD_GROUPS = "mods.mod_groups"
 
 
 def get_mod_stat_text_raw(mod_id: str) -> str:
+    """
+    Parameters
+    ----------
+    mod_id : str
+        The ID of the mod for which to retrieve the raw stat text.
+
+    Returns
+    -------
+    str
+        The raw stat text of the specified mod. If an error occurs or the mod is not found, None is returned.
+
+    """
     where = f"mods.id='{mod_id}'"
     query_url = (
         f"{BASE_URL}&tables={MOD_TABLE}&fields={MOD_STAT_TEXT_RAW_FIELDS}&where={where}"
@@ -57,6 +69,22 @@ def get_mod_stat_text_raw(mod_id: str) -> str:
 
 
 def get_mod_stat_text_raw_by_groups(mod_groups_key: str) -> dict:
+    """
+    Parameters
+    ----------
+    mod_groups_key : str
+        The key to search for in the mod groups. It is used to narrow down the search results.
+
+    Returns
+    -------
+    dict
+        A dictionary containing the grouped statistics of the matching mod groups. The key of each entry in the dictionary represents the mod group, and the value is a list of stat text raw for that mod group.
+
+    Raises
+    ------
+    None
+
+    """
     where = f"mods.mod_groups LIKE '%{mod_groups_key}%'"
     query_url = (
         f"{BASE_URL}&tables={MOD_TABLE}&fields={MOD_GROUPS_STAT_TEXT_RAW_FIELDS}&where={where}&group_by"

@@ -24,7 +24,7 @@
    <string notr="true">QStackedWidget#pages QWidget#crafting_emu_page, #crafting_calc_page {
                 border-image: url(:/images/images/emubg.png);
                 }
-    QWidget.mod_widget_layout {
+       QWidget#mod_widget_layout {
     font-weight: bold;
     font: 14px;
     }
@@ -53,6 +53,9 @@
        <width>602</width>
        <height>527</height>
       </size>
+     </property>
+        <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -87,17 +90,17 @@
         <number>0</number>
        </property>
        <property name="spacing">
-        <number>0</number>
+           <number>9</number>
        </property>
        <item row="1" column="3">
-        <layout class="QVBoxLayout" name="right_layout_spacer" stretch="">
+           <layout class="QVBoxLayout" name="right_layout_spacer">
          <property name="spacing">
           <number>0</number>
          </property>
         </layout>
        </item>
        <item row="1" column="0">
-        <layout class="QVBoxLayout" name="left_layout_spacer" stretch="">
+           <layout class="QVBoxLayout" name="left_layout_spacer">
          <property name="spacing">
           <number>0</number>
          </property>
@@ -569,6 +572,12 @@
               <height>16777215</height>
              </size>
             </property>
+               <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+               </property>
             <layout class="QVBoxLayout" name="item_info_layout">
              <property name="spacing">
               <number>0</number>
@@ -668,7 +677,7 @@
                </layout>
               </widget>
              </item>
-             <item alignment="Qt::AlignTop">
+                <item>
               <widget class="QFrame" name="item_affix_frame">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
@@ -688,7 +697,7 @@
                  <height>16777215</height>
                 </size>
                </property>
-               <layout class="QVBoxLayout" name="item_affix_layout" stretch="4,2,0,2">
+                  <layout class="QVBoxLayout" name="item_affix_layout">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -707,12 +716,12 @@
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item alignment="Qt::AlignVCenter">
+                      <item>
                  <widget class="QWidget" name="item_properties" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
                     <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
+                       <verstretch>10</verstretch>
                    </sizepolicy>
                   </property>
                   <property name="minimumSize">
@@ -771,7 +780,7 @@
                      </property>
                     </widget>
                    </item>
-                   <item alignment="Qt::AlignTop">
+                      <item>
                     <widget class="QLabel" name="item_properties_label">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
@@ -864,12 +873,12 @@
                   </layout>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignVCenter">
+                      <item>
                  <widget class="QWidget" name="item_requirements" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
                     <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
+                       <verstretch>2</verstretch>
                    </sizepolicy>
                   </property>
                   <property name="minimumSize">
@@ -903,7 +912,7 @@
                    <item>
                     <widget class="QLabel" name="item_level_label">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -934,7 +943,7 @@
                    <item>
                     <widget class="QLabel" name="item_requirements_label">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1034,15 +1043,15 @@
                   </layout>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                      <item alignment="Qt::AlignHCenter">
                  <widget class="QWidget" name="item_implicits" native="true">
                   <property name="enabled">
                    <bool>false</bool>
                   </property>
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
                     <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
+                          <verstretch>5</verstretch>
                    </sizepolicy>
                   </property>
                   <property name="minimumSize">
@@ -1079,7 +1088,7 @@
                       <bool>false</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1183,12 +1192,12 @@
                </layout>
               </widget>
              </item>
-             <item alignment="Qt::AlignTop">
+                <item>
               <widget class="QFrame" name="item_mod_frame">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                  <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
+                       <verstretch>10</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
@@ -1264,10 +1273,10 @@
                    <item alignment="Qt::AlignTop">
                     <widget class="QLabel" name="prefix_info_1">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1312,10 +1321,10 @@
                    <item alignment="Qt::AlignTop">
                     <widget class="QLabel" name="prefix_1_stat_text">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1357,7 +1366,7 @@
                   </layout>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignTop">
+                   <item>
                  <widget class="QWidget" name="prefix_2" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -1399,10 +1408,10 @@
                    <item alignment="Qt::AlignTop">
                     <widget class="QLabel" name="prefix_info_2">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1450,10 +1459,10 @@
                    <item>
                     <widget class="QLabel" name="prefix_2_stat_text">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1540,10 +1549,10 @@
                    <item>
                     <widget class="QLabel" name="prefix_info_3">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1591,10 +1600,10 @@
                    <item>
                     <widget class="QLabel" name="prefix_3_stat_text">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1681,10 +1690,10 @@
                    <item>
                     <widget class="QLabel" name="suffix_2_info">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1738,10 +1747,10 @@
                    <item>
                     <widget class="QLabel" name="suffix_2_stat_text">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1828,10 +1837,10 @@
                    <item>
                     <widget class="QLabel" name="suffix_1_info">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1885,10 +1894,10 @@
                    <item>
                     <widget class="QLabel" name="suffix_1_stat_text">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -1975,10 +1984,10 @@
                    <item>
                     <widget class="QLabel" name="suffix_3_info">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -2032,10 +2041,10 @@
                    <item>
                     <widget class="QLabel" name="suffix_3_stat_text">
                      <property name="enabled">
-                      <bool>false</bool>
+                         <bool>true</bool>
                      </property>
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
@@ -2094,6 +2103,9 @@
          <property name="spacing">
           <number>0</number>
          </property>
+            <property name="topMargin">
+                <number>0</number>
+            </property>
         </layout>
        </item>
        <item row="0" column="0" colspan="4">
@@ -2324,8 +2336,8 @@ font-size: 16px;
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <layout class="QGridLayout" name="crafting_method_options" rowstretch="5,5,5,5"
-                   columnstretch="10,10,10,10,10">
+              <layout class="QGridLayout" name="crafting_method_options" rowstretch="5,5,5,5"
+                      columnstretch="10,10,10,10,10">
             <property name="leftMargin">
              <number>0</number>
             </property>
@@ -3075,7 +3087,7 @@ border: 1px solid #00e120;
  </widget>
  <resources>
   <include location="../../assets/assets.qrc"/>
-  <include location="../../../../../../../../Users/spark/assets/assets.qrc"/>
+     <include location="../../assets/assets.qrc"/>
  </resources>
  <connections/>
 </ui>

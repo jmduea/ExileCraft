@@ -28,17 +28,17 @@ from typing import Dict, List, Optional, Union
 
 from jinja2 import Template
 
-from modules.shared.config.constants import (
-    ITEM_PROPERTIES,
-    ITEM_REQUIREMENTS,
-)
-from modules.shared.config.global_functions import (
-    round_with_2_decimal_places,
-)
+from modules.shared.config.constants import ITEM_PROPERTIES, ITEM_REQUIREMENTS
+from modules.shared.config.global_functions import round_with_2_decimal_places
 from modules.shared.config.global_functions import round_with_no_decimal_places
 
 
 class DOMAIN(enum.Enum):
+    """
+    Enumeration representing different domains.
+    Each domain has a unique ID, name, and code.
+    """
+
     ITEM = (1, "Item", "item")
     FLASK = (2, "Flask", "flask")
     MONSTER = (3, "Monster", "monster")
@@ -72,6 +72,62 @@ class DOMAIN(enum.Enum):
 
 
 class ITEM_CATEGORY(enum.Enum):
+    """
+    The `ITEM_CATEGORY` class is an enumeration that represents different categories of items in a game. Each item category has a unique identifier, a name, and a code.
+
+    Attributes:
+        - identifier (int): The unique identifier for the item category.
+        - name (str): The name of the item category.
+        - code (str): The code representing the item category.
+
+    Enum Values:
+        - MAP: Represents a map item category.
+        - CAPTURED_BEAST: Represents a captured beast item category.
+        - METAMORPH_SAMPLE: Represents a metamorph sample item category.
+        - HELMET: Represents a helmet item category.
+        - BODY_ARMOUR: Represents a body armour item category.
+        - GLOVES: Represents a gloves item category.
+        - BOOTS: Represents a boots item category.
+        - SHIELD: Represents a shield item category.
+        - AMULET: Represents an amulet item category.
+        - BELT: Represents a belt item category.
+        - RING: Represents a ring item category.
+        - FLASK: Represents a flask item category.
+        - ABYSS_JEWEL: Represents an abyss jewel item category.
+        - JEWEL: Represents a jewel item category.
+        - QUIVER: Represents a quiver item category.
+        - CLAW: Represents a claw item category.
+        - BOW: Represents a bow item category.
+        - SCEPTRE: Represents a sceptre item category.
+        - WAND: Represents a wand item category.
+        - FISHING_ROD: Represents a fishing rod item category.
+        - STAFF: Represents a staff item category.
+        - WARSTAFF: Represents a warstaff item category.
+        - DAGGER: Represents a dagger item category.
+        - RUNE_DAGGER: Represents a rune dagger item category.
+        - ONE_HANDED_AXE: Represents a one-handed axe item category.
+        - TWO_HANDED_AXE: Represents a two-handed axe item category.
+        - ONE_HANDED_MACE: Represents a one-handed mace item category.
+        - TWO_HANDED_MACE: Represents a two-handed mace item category.
+        - ONE_HANDED_SWORD: Represents a one-handed sword item category.
+        - TWO_HANDED_SWORD: Represents a two-handed sword item category.
+        - CLUSTER_JEWEL: Represents a cluster jewel item category.
+        - HEIST_BLUEPRINT: Represents a heist blueprint item category.
+        - HEIST_CONTRACT: Represents a heist contract item category.
+        - HEIST_TOOL: Represents a heist tool item category.
+        - HEIST_BROOCH: Represents a heist brooch item category.
+        - HEIST_GEAR: Represents a heist gear item category.
+        - HEIST_CLOAK: Represents a heist cloak item category.
+        - TRINKET: Represents a trinket item category.
+        - INVITATION: Represents an invitation item category.
+        - GEM: Represents a gem item category.
+        - CURRENCY: Represents a currency item category.
+        - DIVINATION_CARD: Represents a divination card item category.
+        - VOIDSTONE: Represents a voidstone item category.
+        - SENTINEL: Represents a sentinel item category.
+        - MEMORY_LINE: Represents a memory line item category.
+    """
+
     MAP = (1, "Map", "map")
     CAPTURED_BEAST = (2, "Captured Beast", "captured_beast")
     METAMORPH_SAMPLE = (3, "Metamorph Sample", "metamorph_sample")
@@ -120,6 +176,26 @@ class ITEM_CATEGORY(enum.Enum):
 
 
 class ITEM_RARITY(enum.Enum):
+    """
+    This class represents the different rarities of an item. It is an enumeration with four possible values: NORMAL, MAGIC, RARE, and UNIQUE.
+
+    Each item rarity has a display name and a code name associated with it. The display name is a human-readable string that describes the rarity, while the code name is a machine-readable string that can be used for identification or serialization.
+
+    Attributes:
+        NORMAL: Represents the normal rarity.
+        MAGIC: Represents the magic rarity.
+        RARE: Represents the rare rarity.
+        UNIQUE: Represents the unique rarity.
+
+    Example usage:
+        >>> rarity = ITEM_RARITY.MAGIC
+        >>> print(rarity)
+        ITEM_RARITY.MAGIC
+
+        >>> print(rarity.value)
+        ('Magic', 'magic')
+    """
+
     NORMAL = ("Normal", "normal")
     MAGIC = ("Magic", "magic")
     RARE = ("Rare", "rare")
@@ -127,6 +203,19 @@ class ITEM_RARITY(enum.Enum):
 
 
 class INFLUENCE_TYPES(enum.Enum):
+    """
+    Enum defining different types of influence.
+
+    Attributes:
+        SHAPER: Influence type Shaper, with aliases "shaper".
+        ELDER: Influence type Elder, with aliases "elder".
+        CRUSADER: Influence type Crusader, with aliases "crusader".
+        WARLORD: Influence type Warlord, with aliases "warlord" and "adjudicator".
+        HUNTER: Influence type Hunter, with aliases "hunter" and "basilisk".
+        REDEEMER: Influence type Redeemer, with aliases "redeemer" and "eyrie".
+        NONE: No influence type, with aliases "none".
+    """
+
     SHAPER = ("Shaper", "shaper")
     ELDER = ("Elder", "elder")
     CRUSADER = ("Crusader", "crusader")
@@ -137,6 +226,32 @@ class INFLUENCE_TYPES(enum.Enum):
 
 
 class ITEM_CLASS_FLAGS(enum.Enum):
+    """
+    The ITEM_CLASS_FLAGS class is an enumeration that represents the different flags that can be associated with an item in a game. Each flag describes a specific category or classification of the item.
+
+    Attributes:
+        WEAPON: Represents an item that is classified as a weapon.
+        ONE_HAND: Represents an item that can be wielded with one hand.
+        MELEE: Represents a weapon that is designed for close combat.
+        OFF_HAND: Represents an item that is meant to be used in the off hand, typically paired with a main weapon.
+        FLASK: Represents an item that is a consumable flask.
+        ARMOUR: Represents an item that provides protection or defense.
+        JEWELLERY: Represents an item that is classified as jewellery.
+        CURRENCY: Represents an item that serves as a form of currency.
+
+    Example Usage:
+        item_flag = ITEM_CLASS_FLAGS.WEAPON
+        print(item_flag.value)  # Output: "Weapon, weapon"
+        print(item_flag.name)   # Output: "WEAPON"
+
+    Notes:
+        - The ITEM_CLASS_FLAGS enumeration can be used to categorize items and determine their properties or requirements.
+        - Each flag is represented as a string value.
+        - It is recommended to use the value attribute to get the string representation of a flag.
+        - The name attribute can be used to get the name of a flag (e.g., "WEAPON").
+
+    """
+
     WEAPON = "Weapon, weapon"
     ONE_HAND = "One Hand, one hand"
     MELEE = "Melee, melee"
@@ -149,15 +264,48 @@ class ITEM_CLASS_FLAGS(enum.Enum):
 
 @dataclass
 class Item:
+    """
+    Class representing an item in the game.
+
+    Attributes:
+        data (dict): The data dictionary of the item.
+        rarity (ITEM_RARITY): The rarity of the item.
+        influences (List[INFLUENCE_TYPES]): The influences on the item.
+        quality (int): The quality of the item.
+        item_level (int): The item level of the item.
+        drop_level (int): The drop level of the item.
+        domain (str): The domain of the item.
+        implicits (List): The implicits of the item.
+        item_class (str): The item class of the item.
+        name (str): The name of the item.
+        release_state (str): The release state of the item.
+        tags (set): The tags of the item.
+        visual_identity (str): The visual identity of the item.
+        prefix1 (Optional[Mod]): The first prefix mod of the item.
+        prefix2 (Optional[Mod]): The second prefix mod of the item.
+        prefix3 (Optional[Mod]): The third prefix mod of the item.
+        suffix1 (Optional[Mod]): The first suffix mod of the item.
+        suffix2 (Optional[Mod]): The second suffix mod of the item.
+        suffix3 (Optional[Mod]): The third suffix mod of the item.
+
+    Methods:
+        set_influences(self, influence1, influence2) -> List[INFLUENCE_TYPES]: Sets the influences of the item.
+        get_influence_enum(self, influence_value) -> INFLUENCE_TYPES: Returns the influence enum for a given value.
+        add_influence(self, influence_value): Adds an influence to the item.
+        remove_influence(self, influence_value): Removes an influence from the item.
+        get_requirements(self) -> dict: Returns the requirements of the item.
+        formatted_requirements(self) -> str: Returns the formatted requirements of the item.
+        get_properties(self) -> dict: Returns the properties of the item.
+        formatted_properties(self) -> str: Returns the formatted properties of the item.
+        get_property_value(cls, item_obj, attrs) -> Optional[Union[Any, List[Any]]]: Returns the value of a property from the item properties.
+        get_requirement_value(cls, item_requirements, attr) -> Optional[Any]: Returns the value of a requirement from the item requirements.
+    """
+
     data: dict
-    mods_cache: dict
-    tags_cache: dict
 
     def __init__(
         self,
         data: dict,
-        mods_cache: dict,
-        tags_cache: dict,
         influence1: Optional[str] = None,
         influence2: Optional[str] = None,
     ):
@@ -174,8 +322,6 @@ class Item:
         self.release_state: str = self.data.get("release_state")
         self.tags: set = self.data.get("tags")
         self.visual_identity = self.data.get("visual_identity").get("id")
-        self.mods_cache = mods_cache
-        self.tags_cache = tags_cache
         self.prefix1: Optional[Mod] = None
         self.prefix2: Optional[Mod] = None
         self.prefix3: Optional[Mod] = None
@@ -186,22 +332,35 @@ class Item:
     @property
     def rarity(self):
         """
-        Gets the rarity of the item.
+
+        This method calculates the rarity of an item.
+
+        Parameters:
+            - item (Item): An instance of the Item class.
 
         Returns:
-            ITEM_RARITY: The rarity of the item.
+            - float: The calculated rarity of the item.
+
+        Example usage:
+            item = Item()
+            item_rarity = item.rarity()
+
         """
         return self._rarity
 
     @rarity.setter
     def rarity(self, value: ITEM_RARITY):
         """
-        Sets the rarity of the item.
+        Parameters
+        ----------
+        value : ITEM_RARITY
+            The rarity value to be set for the item.
 
-        Args:
-            value (ITEM_RARITY): The rarity of the item.
-        Returns:
-            None
+        Raises
+        ------
+        ValueError
+            If the provided rarity value is not valid.
+
         """
         if value in ITEM_RARITY:
             self._rarity = value
@@ -212,6 +371,21 @@ class Item:
 
     @property
     def open_prefixes(self):
+        """
+
+        Calculates the number of open prefix slots for an item.
+
+        Parameters:
+        ----------
+        self : Item
+            The item for which to calculate the number of open prefix slots.
+
+        Returns:
+        -------
+        int
+            The number of open prefix slots for the item.
+
+        """
         if self.rarity == ITEM_RARITY.MAGIC:
             total_prefix_slots = 1
         elif self.rarity == ITEM_RARITY.RARE:
@@ -226,6 +400,23 @@ class Item:
 
     @property
     def open_suffixes(self):
+        """
+
+        open_suffixes method
+
+        Calculates the number of open suffix slots on an item based on its rarity.
+
+        Parameters:
+            None
+
+        Returns:
+            int: The number of open suffix slots on the item.
+
+        Example:
+            item = Item(rarity=ITEM_RARITY.RARE, suffix1="suffix1", suffix2="suffix2")
+            open_suffixes = item.open_suffixes()
+
+        """
         if self.rarity == ITEM_RARITY.MAGIC:
             total_suffix_slots = 1
         elif self.rarity == ITEM_RARITY.RARE:
@@ -239,6 +430,23 @@ class Item:
         return total_suffix_slots - used_suffix_slots
 
     def set_influences(self, influence1, influence2):
+        """
+        Set influences for an Item.
+
+        Parameters
+        ----------
+        influence1 : Union[None, None, None, None, Dict[str, Dict[str, Dict[str, List]]], None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+            The first influence to be set. Can be None if no influence is applicable.
+        influence2 : Union[None, None, None, None, Dict[str, Dict[str, Dict[str, List[str]]]], None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+            The second influence to be set. Can be None if no influence is applicable.
+
+        Returns
+        -------
+        List[Union[List]], List[Union[List[modules.data.models.item_models.INFLUENCE_TYPES]]]
+            A list of influences that have been set for the Item. Each influence is represented as an enum from the
+            'modules.data.models.item_models.INFLUENCE_TYPES' enumeration.
+
+        """
         influences = []
         if influence1:
             influences.append(self.get_influence_enum(influence1))
@@ -247,6 +455,16 @@ class Item:
         return influences
 
     def get_influence_enum(self, influence_value):
+        """
+        Returns
+        -------
+        modules.data.models.item_models.INFLUENCE_TYPES: The enum value representing the influence type.
+
+        Parameters
+        ----------
+        influence_value : Union[list_iterator, Dict[str, Dict[str, Dict[str, List]]], Dict[str, Dict[str, Dict[str, List[str]]]], str]: The value to match against the influence types.
+
+        """
         return next(
             (
                 influence
@@ -257,139 +475,180 @@ class Item:
         )
 
     def add_influence(self, influence_value):
+        """
+        Returns
+        -------
+        None
+
+        Parameters
+        ----------
+        influence_value : Union[list_iterator, str]
+            The value representing the influence to be added.
+            It can be a list iterator or a string.
+
+        """
         influence_enum = self.get_influence_enum(influence_value)
         if influence_enum not in self.influences:
             self.influences.append(influence_enum)
 
     def remove_influence(self, influence_value):
+        """
+        Removes the specified influence from the item.
+
+        Parameters
+        ----------
+        influence_value : str
+            The value of the influence to be removed.
+
+        Returns
+        -------
+        None
+        """
         influence_enum = self.get_influence_enum(influence_value)
         if influence_enum in self.influences:
             self.influences.remove(influence_enum)
 
     @property
-    def explicit_mods_dict(self):
-        return {**self.applicable_prefix_mods, **self.applicable_suffix_mods}
-
-    @property
-    def applicable_mods(self):
-        applicable_mods = {}
-        for tag in self.tags:
-            if tag in self.tags_cache:
-                for mod_id, mod_data in self.tags_cache[tag].items():
-                    if mod_data["domain"] != self.domain:
-                        continue
-                    if mod_data["required_level"] > self.item_level:
-                        continue
-
-                    # Check if the tag exists in spawn_weights and if its weight is 0
-                    spawn_weight_for_tag = next(
-                        (
-                            weight_dict["weight"]
-                            for weight_dict in mod_data["spawn_weights"]
-                            if weight_dict["tag"] == tag
-                        ),
-                        None,
-                    )
-                    if spawn_weight_for_tag is None or spawn_weight_for_tag == 0:
-                        continue
-
-                    applicable_mods[mod_id] = mod_data
-
-        return applicable_mods
-
-    def implict_mods_list(self, applicable_mods):
-        return {
-            mod_id: mod_data
-            for mod_id, mod_data in applicable_mods.items()
-            if mod_data.get("generation_type") in ["unique", "corrupted"]
-        }
-
-    def get_spawn_chance_for_implicit(self, mod_or_id, remove=True):
-        calculator = SpawnChanceCalculator(self.applicable_implicit_mods, self.tags)
-        return calculator.spawn_chance(mod_or_id, remove)
-
-    @property
-    def applicable_implicit_mods(self):
-        return self.implict_mods_list(self.applicable_mods)
-
-    def suffix_mods_list(self, applicable_mods):
-        return {
-            mod_id: mod_data
-            for mod_id, mod_data in applicable_mods.items()
-            if mod_data["generation_type"] == "suffix"
-        }
-
-    @property
-    def applicable_suffix_mods(self):
-        return self.suffix_mods_list(self.applicable_mods)
-
-    def prefix_mods_list(self, applicable_mods):
-        return {
-            mod_id: mod_data
-            for mod_id, mod_data in applicable_mods.items()
-            if mod_data.get("generation_type") == "prefix"
-        }
-
-    @property
-    def applicable_prefix_mods(self):
-        return self.prefix_mods_list(self.applicable_mods)
-
-    @property
-    def implicits_mods(self):
-        implicit_mods = []
-        implicits_dict = self.mods_cache.get("implicit", {})
-        for implicit in self.implicits:
-            mod_data = implicits_dict.get(implicit)
-            if mod_data:
-                implicit_mods.append(Mod.from_dict(mod_data))
-        return implicit_mods
-
-    @property
-    def implicit_translation(self):
-        translations = []
-        for mod in self.implicits_mods:
-            string = mod.translation_string
-            if string:
-                translations.append(string)
-        translation_string = "\n".join(translations)
-        return translation_string
-
-    @property
     def requirements(self):
+        """
+
+        This method returns the requirements of an item.
+
+        Parameters:
+        - data: Dict[str, Union[str, int, List[Dict[str, Union[str, int]]]]]
+            A dictionary containing the data of the item.
+
+        Returns:
+        - Optional[List[Dict[str, Union[str, float, int, None]]]]:
+            The requirements of the item. If there are no requirements, None is returned.
+
+        """
         return self.data.get("requirements", None)
 
     @property
     def properties(self):
+        """
+        Gets the properties of the item.
+
+        Returns:
+            Union[Dict[str, Union[str, int, float]], None]: A dictionary containing the properties of the item. If the item does not have any properties, None is returned.
+        """
         return self.data.get("properties", None)
 
     @property
     def quality(self):
+        """
+        Calculate the quality of an item based on its properties.
+
+        Parameters:
+            item (Item): The item for which to calculate the quality.
+            properties (Dict[str, Union[int, float]]): The properties of the item.
+
+        Returns:
+            Optional"""
         return self._quality
 
     @quality.setter
     def quality(self, value):
+        """
+        Parameters
+        ----------
+        value : Union[int, float]
+            The value to set as the quality of the item. It can be either an integer or a float.
+
+        """
         self._quality = value
 
     @property
     def item_level(self):
+        """
+        Calculate and return the item level of an Item.
+
+        Parameters:
+        - None
+
+        Returns:
+        - The item level as an integer.
+
+        Example usage:
+        ```
+        item = Item()
+        level = item.item_level()
+        print(level)
+        ```
+        """
         return self._item_level
 
     @item_level.setter
     def item_level(self, value):
+        """
+        Parameters
+        ----------
+        value : Union[int, float]
+            The level of the item. It can be either an integer or a float.
+
+        """
         self._item_level = value
 
     @property
     def range(self):
+        """
+        Method Name: range
+        Parameters:
+            - self: Item
+        Returns:
+            - range: Optional[Union[int, float]]
+
+        Description:
+            This method returns the range of an item by checking the "range" property in the item's properties dictionary. If the property exists, the range value is returned; otherwise, None is returned.
+
+            The range value can be either an integer or a float. If the item has no range property, the return value will be None.
+
+            Example usage:
+                # Create an item
+                item = Item()
+
+                # Access the range property
+                item_range = item.range
+        """
         if self.properties:
             return self.properties.get("range", None)
 
     @property
     def physical_damage(self):
+        """
+        Calculate the physical damage of an item.
+
+        Args:
+            self (Item): The item.
+
+        Returns:
+            Union[int, None]: The physical damage of the item if it has the "physical_damage_min" property,
+            or None if the property is not found.
+
+        Example:
+            item = Item()
+            damage = item.physical_damage
+        """
         if self.properties:
             return self.properties.get("physical_damage_min", None)
 
     @property
     def physical_damage_min(self):
+        """
+        Get the minimum physical damage of an item.
+
+        Parameters:
+        - None
+
+        Returns:
+        - Union[float, None]: The minimum physical damage of the item if it has physical damage, else None.
+
+        Example Usage:
+        item = Item()
+        min_damage = item.physical_damage_min()
+        print(min_damage)
+        """
         if self.physical_damage:
             return round(
                 self.properties.get("physical_damage_min", 0)
@@ -401,6 +660,28 @@ class Item:
 
     @property
     def physical_damage_max(self):
+        """
+
+        Calculate the maximum physical damage of an item.
+
+        Parameters:
+        - self (Item): The item object.
+
+        Returns:
+        - Union[float, None]: The maximum physical damage of the item, rounded to 2 decimal places. Returns None if the item doesn't have physical damage.
+
+        Example:
+        ```
+        item = Item()
+        item.physical_damage = True
+        item.quality = 10
+        item.properties = {"physical_damage_max": 50}
+
+        result = item.physical_damage_max()
+        print(result)  # Output: 55.0
+        ```
+
+        """
         if self.physical_damage:
             return round(
                 self.properties.get("physical_damage_max", 0)
@@ -412,6 +693,26 @@ class Item:
 
     @property
     def average_physical_damage(self):
+        """
+
+        Calculate the average physical damage of an item.
+
+        Parameters:
+        - self (Item): The item object.
+
+        Returns:
+        - Union[float, None]: The average physical damage of the item. If the item does not have both minimum and maximum physical damage values, returns None.
+
+
+        Example Usage:
+        ```
+        item = Item()
+        item.physical_damage_min = 10
+        item.physical_damage_max = 20
+        avg_physical_damage = item.average_physical_damage()
+        print(avg_physical_damage)  # Output: 15.0
+        ```
+        """
         if self.physical_damage_min and self.physical_damage_max:
             return (self.physical_damage_min + self.physical_damage_max) / 2
         else:
@@ -419,6 +720,24 @@ class Item:
 
     @property
     def physical_damage_range(self):
+        """
+
+        Calculates the range of physical damage for an item.
+
+        Parameters:
+        - None
+
+        Returns:
+        - A float value representing the range of physical damage for the item. Returns None if the item's minimum and maximum physical damage values are not set.
+
+        Example usage:
+            item = Item()
+            damage_range = item.physical_damage_range
+
+        Notes:
+        - This method assumes that the item's `physical_damage_min` and `physical_damage_max` properties have been set.
+
+        """
         if self.physical_damage_min and self.physical_damage_max:
             return self.physical_damage_max - self.physical_damage_min
         else:
@@ -426,6 +745,17 @@ class Item:
 
     @property
     def critical_strike_chance(self):
+        """
+
+        Calculate the critical strike chance of an item.
+
+        Parameters:
+            self (Item): The item object.
+
+        Returns:
+            Optional[float]: The critical strike chance of the item as a decimal (e.g. 0.05 for 5% chance). Returns None if the item has no critical strike chance properties.
+
+        """
         if self.properties:
             return round_with_2_decimal_places(
                 self.properties.get("critical_strike_chance", 0) / 100
@@ -435,6 +765,24 @@ class Item:
 
     @property
     def attack_time(self):
+        """
+        Calculates the attack time of an Item.
+
+        Parameters:
+        - self (Item): The item for which to calculate the attack time.
+
+        Returns:
+        - Optional[float]: The attack time of the item in milliseconds. Returns None if the attack time is not defined in the item properties.
+
+        Example usage:
+            item = Item(...)
+            attack_time = item.attack_time
+
+        Note:
+        - The attack time is calculated as the inverse of the attack time property defined in the item properties, rounded to 2 decimal places.
+        - If the attack time property is not defined in the item properties, None is returned.
+
+        """
         if self.properties:
             return (
                 round_with_2_decimal_places(
@@ -448,11 +796,29 @@ class Item:
 
     @property
     def armour(self):
+        """Get the armour value of the item.
+
+        Returns:
+            Union[int, None]: The armour value of the item. Returns None if the item has no armour property.
+        """
         if self.properties:
             return self.properties.get("armour", None)
 
     @property
     def armour_min(self):
+        """
+        Get the minimum armour value of an item.
+
+        Parameters:
+            self (Item): The item object.
+
+        Returns:
+            Optional[Union[float, int]]: The minimum armour value of the item. Returns None if the item has no armour value.
+
+        Example:
+            item = Item()
+            min_armour = item.armour_min()
+        """
         if self.armour:
             return self.armour.get("min", None)
         else:
@@ -460,6 +826,17 @@ class Item:
 
     @property
     def armour_max(self):
+        """
+
+        Calculate the maximum armor value for an item.
+
+        Parameters:
+        - self (Item): The item for which to calculate the maximum armor value.
+
+        Returns:
+        - Union[float, None]: The maximum armor value if it exists, otherwise None.
+
+        """
         if self.armour:
             return self.armour.get("max", None)
         else:
@@ -467,6 +844,17 @@ class Item:
 
     @property
     def average_armour(self):
+        """
+
+        Calculate the average armour of an item.
+
+        Parameters:
+        - self: The item object.
+
+        Returns:
+        - The average armour of the item, rounded to 0 decimal places. If either the minimum or maximum armour is missing, returns None.
+
+        """
         if self.armour_min and self.armour_max:
             return round_with_no_decimal_places(
                 ((self.armour_min + self.armour_max) / 2) * ((100 + self.quality) / 100)
@@ -476,6 +864,15 @@ class Item:
 
     @property
     def armour_range(self):
+        """
+        Calculate the range of armor for an item.
+
+        Parameters:
+            None
+
+        Returns:
+            Union[float, None]: The range of armor for the item if both the minimum and maximum armor values are provided. None otherwise.
+        """
         if self.armour_min and self.armour_max:
             return self.armour_max - self.armour_min
         else:
@@ -483,21 +880,71 @@ class Item:
 
     @property
     def evasion(self):
+        """
+        Calculate the evasion value of an item.
+
+        Parameters:
+            self (Item): The item object.
+
+        Returns:
+            float or None: The calculated evasion value of the item if it has the "evasion" property,
+            otherwise None.
+
+        Example:
+            item = Item()
+            evasion_value = item.evasion()
+        """
         if self.properties:
             return self.properties.get("evasion", None)
 
     @property
     def evasion_min(self):
+        """
+        This method returns the minimum evasion value for an item.
+
+        Parameters:
+            self (Item): The item object.
+
+        Returns:
+            int: The minimum evasion value for the item.
+        """
         if self.evasion:
             return self.evasion.get("min", 0)
 
     @property
     def evasion_max(self):
+        """
+        Returns the maximum evasion value for the item.
+
+        If the item has an evasion attribute, it returns the maximum value specified in the attribute.
+        Otherwise, it returns 0.
+
+        Returns:
+            Optional[int]: The maximum evasion value for the item, or None if the item does not have an evasion attribute.
+        """
         if self.evasion:
             return self.evasion.get("max", 0)
 
     @property
     def average_evasion(self):
+        """
+        Calculate the average evasion for an item.
+
+        Parameters:
+        - self (Item): The item.
+
+        Returns:
+        - Union[float, None]: The average evasion of the item. It returns `None` if the item doesn't have a minimum and maximum evasion value.
+
+        Example:
+            item = Item()
+            item.evasion_min = 10
+            item.evasion_max = 20
+            item.quality = 50
+            avg_evasion = item.average_evasion
+            print(avg_evasion)  # Output: 15.0
+
+        """
         if self.evasion_min and self.evasion_max:
             return round_with_no_decimal_places(
                 ((self.evasion_min + self.evasion_max) / 2)
@@ -508,6 +955,23 @@ class Item:
 
     @property
     def evasion_range(self):
+        """
+        Calculate the evasion range of an item.
+
+        Parameters:
+            self (Item): The item object.
+
+        Returns:
+            float: The range of evasion for the item. If evasion_min and evasion_max are both provided, it returns the difference between them. Otherwise, it returns None.
+
+        Example:
+            >>> item = Item(evasion_min=10, evasion_max=20)
+            >>> item.evasion_range()
+            10
+            >>> item = Item(evasion_min=None, evasion_max=20)
+            >>> item.evasion_range()
+            None
+        """
         if self.evasion_min and self.evasion_max:
             return self.evasion_max - self.evasion_min
         else:
@@ -515,21 +979,78 @@ class Item:
 
     @property
     def energy_shield(self):
+        """
+        Calculates the energy shield value of an item.
+
+        Parameters:
+        - self (Item): The item object for which to calculate the energy shield value.
+
+        Returns:
+        - int or None: The calculated energy shield value of the item, or None if the item has no energy shield property.
+
+        Example Usage:
+            item = Item()
+            shield_value = item.energy_shield()
+            print(shield_value)
+        """
         if self.properties:
             return self.properties.get("energy_shield", None)
 
     @property
     def energy_shield_min(self):
+        """
+        Calculate the minimum value of an item's energy shield.
+
+        Parameters:
+            self (Item): The item instance.
+
+        Returns:
+            Optional[Union[float, int]]: The minimum value of the item's energy shield if it exists, otherwise None.
+
+        """
         if self.energy_shield:
             return self.energy_shield.get("min", None)
 
     @property
     def energy_shield_max(self):
+        """Calculate the maximum energy shield for an item.
+
+        This method calculates the maximum value of the energy shield property for an item. If the item has an energy shield property, the maximum value is returned. Otherwise, `None` is returned.
+
+        Args:
+            self (Item): The item for which to calculate the maximum energy shield.
+
+        Returns:
+            Union[float, None]: The maximum energy shield value, or `None` if the item has no energy shield property.
+
+        """
         if self.energy_shield:
             return self.energy_shield.get("max", None)
 
     @property
     def average_energy_shield(self):
+        """
+        Calculate the average energy shield of an item.
+
+        Parameters:
+            None
+
+        Returns:
+            Union[int, None]: The average energy shield value of the item, rounded to the nearest whole number. If the energy shield values are not specified (energy_shield_min and energy_shield_max), returns None.
+
+        Example:
+            >>> item = Item()
+            >>> item.energy_shield_min = 10
+            >>> item.energy_shield_max = 20
+            >>> item.quality = 10
+            >>> item.average_energy_shield
+            31
+
+            >>> item.energy_shield_min = None
+            >>> item.energy_shield_max = None
+            >>> item.average_energy_shield
+            None
+        """
         if self.energy_shield_min and self.energy_shield_max:
             return round_with_no_decimal_places(
                 ((self.energy_shield_min + self.energy_shield_max) / 2)
@@ -540,6 +1061,15 @@ class Item:
 
     @property
     def energy_shield_range(self):
+        """
+        Calculates the range of an item's energy shield based on its minimum and maximum energy shield values.
+
+        Parameters:
+            None
+
+        Returns:
+            Union[float, None]: The range of the item's energy shield if both minimum and maximum values are provided. None if either the minimum or maximum value is missing.
+        """
         if self.energy_shield_min and self.energy_shield_max:
             return self.energy_shield_max - self.energy_shield_min
         else:
@@ -547,21 +1077,78 @@ class Item:
 
     @property
     def ward(self):
+        """
+        This method is a property accessor for the 'ward' attribute of the Item class.
+
+        Parameters:
+            None
+
+        Returns:
+            Optional[str]: The value of the 'ward' attribute if it exists, otherwise None.
+
+        Example usage:
+            item = Item(...)
+            ward = item.ward
+        """
         if self.properties:
             return self.properties.get("ward", None)
 
     @property
     def ward_min(self):
+        """
+        Calculate the minimum ward value for an item.
+
+        Parameters:
+        - None
+
+        Returns:
+        - The minimum ward value (float)
+        """
         if self.ward:
             return self.ward.get("min", 0)
 
     @property
     def ward_max(self):
+        """
+
+        Calculate the maximum value for wards in an Item.
+
+        Parameters:
+        - None
+
+        Returns:
+        - int: The maximum value for wards in the Item.
+
+        Example usage:
+        >>> item = Item()
+        >>> item.ward_max
+        0
+
+        """
         if self.ward:
             return self.ward.get("max", 0)
 
     @property
     def average_ward(self):
+        """
+        Calculate the average ward of an Item.
+
+        This method calculates the average ward of an Item based on the ward_min, ward_max, and quality attributes of the Item object.
+
+        Parameters:
+            None
+
+        Returns:
+            Optional[float]: The average ward of the Item as a floating-point number. If either ward_min or ward_max is missing, or both, or if the quality attribute is missing, None is returned.
+
+        Example usage:
+            item = Item()
+            item.ward_min = 10
+            item.ward_max = 20
+            item.quality = 50
+            result = item.average_ward
+
+        """
         if self.ward_min and self.ward_max:
             return round_with_no_decimal_places(
                 ((self.ward_min + self.ward_max) / 2) * ((100 + self.quality) / 100)
@@ -571,6 +1158,7 @@ class Item:
 
     @property
     def ward_range(self):
+        """ """
         if self.ward_min and self.ward_max:
             return self.ward_max - self.ward_min
         else:
@@ -578,6 +1166,7 @@ class Item:
 
     @property
     def block(self):
+        """ """
         if self.properties:
             return round_with_2_decimal_places(self.properties.get("block", None))
         else:
