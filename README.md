@@ -1,3 +1,11 @@
+# This application is no longer being actively developed, and I may or may not start working on it again at some point in the future if I find the time outside of work and school.
+
+
+
+
+
+
+
 # ExileCraft
 
 ExileCraft is an open-source crafting helper application designed for the popular online action RPG, Path of Exile. The application is built using Python, SQLite, and PyQt5, offering a rich, user-friendly GUI for users to simulate crafting projects and draws it's inspiration heavily from the popular/invaluable web application [Craft of Exile](https://www.craftofexile.com/).
