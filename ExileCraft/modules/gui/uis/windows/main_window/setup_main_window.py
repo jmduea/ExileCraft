@@ -36,10 +36,7 @@ from modules.gui.uis.windows.main_window.functions_main_window import (
 from modules.gui.uis.windows.main_window.ui_mainwindow import UiMainWindow
 from modules.gui.widgets import PyGrips, PyPushButton
 from modules.gui.widgets.py_mods_tab_widget import ModsWidget
-from modules.shared.config.gui_constants import (
-    ADD_LEFT_MENUS,
-    ADD_TITLE_BAR_MENUS,
-)
+from modules.shared.config.gui_constants import ADD_LEFT_MENUS, ADD_TITLE_BAR_MENUS
 
 
 class SetupMainWindow:
